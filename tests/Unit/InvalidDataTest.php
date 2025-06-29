@@ -18,6 +18,19 @@ final class InvalidDataTest extends TestCase
 		iterator_to_array($client->availableExchanges());
 	}
 
+	public function testStrictModeExceptionUrl(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/bad-data.json');
+
+		try {
+			iterator_to_array($client->availableExchanges());
+
+			$this->fail('Expected UnexpectedResponseContentException to be thrown');
+		} catch (UnexpectedResponseContentException $e) {
+			$this->assertSame('https://financialmodelingprep.com/stable/available-exchanges', $e->url);
+		}
+	}
+
 	public function testNoStrictMode(): void
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/bad-data.json', $handler = new TestUnexpectedResponseContentExceptionHandler())
