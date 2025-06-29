@@ -1,0 +1,1752 @@
+[
+  {
+    "symbol": "001570.KS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 18:06:09"
+  },
+  {
+    "symbol": "000850.KS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 18:06:14"
+  },
+  {
+    "symbol": "000810.KS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 18:06:08"
+  },
+  {
+    "symbol": "WS",
+    "calendarYear": 2024,
+    "period": "Q4",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-27 16:06:24"
+  },
+  {
+    "symbol": "WS",
+    "calendarYear": 2024,
+    "period": "FY",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-27 16:06:24"
+  },
+  {
+    "symbol": "AEMD",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 16:06:17"
+  },
+  {
+    "symbol": "AEMD",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 16:06:17"
+  },
+  {
+    "symbol": "001070.KS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 16:06:37"
+  },
+  {
+    "symbol": "000490.KS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 15:06:00"
+  },
+  {
+    "symbol": "001755.KS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 14:06:21"
+  },
+  {
+    "symbol": "6826.HK",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 13:06:15"
+  },
+  {
+    "symbol": "FOXO",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 13:06:26"
+  },
+  {
+    "symbol": "FTIIW",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-27 13:06:07"
+  },
+  {
+    "symbol": "IHT",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-27 10:06:47"
+  },
+  {
+    "symbol": "IHT",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-01-31",
+    "dateAdded": "2025-06-27 10:06:47"
+  },
+  {
+    "symbol": "6049.T",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-27 10:06:04"
+  },
+  {
+    "symbol": "000050.KS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 16:06:39"
+  },
+  {
+    "symbol": "AELIY",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 16:06:14"
+  },
+  {
+    "symbol": "ABIT",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 16:06:59"
+  },
+  {
+    "symbol": "ABBB",
+    "calendarYear": 2024,
+    "period": "Q3",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 16:06:30"
+  },
+  {
+    "symbol": "ZUMZ",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:40"
+  },
+  {
+    "symbol": "ZIM",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:39"
+  },
+  {
+    "symbol": "ZEPP",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:37"
+  },
+  {
+    "symbol": "YSG",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:33"
+  },
+  {
+    "symbol": "YRD",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:31"
+  },
+  {
+    "symbol": "YQ",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:29"
+  },
+  {
+    "symbol": "YMM",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:28"
+  },
+  {
+    "symbol": "YI",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:26"
+  },
+  {
+    "symbol": "YEXT",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:24"
+  },
+  {
+    "symbol": "YALA",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:23"
+  },
+  {
+    "symbol": "XYF",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:21"
+  },
+  {
+    "symbol": "XWEL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:19"
+  },
+  {
+    "symbol": "XNET",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:18"
+  },
+  {
+    "symbol": "XELB",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:14"
+  },
+  {
+    "symbol": "WOR",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:05"
+  },
+  {
+    "symbol": "WOR",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:05"
+  },
+  {
+    "symbol": "WGO",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:58"
+  },
+  {
+    "symbol": "WDH",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:56"
+  },
+  {
+    "symbol": "WAVE",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:55"
+  },
+  {
+    "symbol": "VSAT",
+    "calendarYear": 2024,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:52"
+  },
+  {
+    "symbol": "VSAT",
+    "calendarYear": 2024,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:50"
+  },
+  {
+    "symbol": "VRNT",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:50"
+  },
+  {
+    "symbol": "VRA",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:49"
+  },
+  {
+    "symbol": "VNCE",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:47"
+  },
+  {
+    "symbol": "VIVK",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:45"
+  },
+  {
+    "symbol": "USEA",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:42"
+  },
+  {
+    "symbol": "UNFI",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:40"
+  },
+  {
+    "symbol": "UCL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:35"
+  },
+  {
+    "symbol": "TUYA",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:27"
+  },
+  {
+    "symbol": "TRNS",
+    "calendarYear": 2024,
+    "period": "Q4",
+    "date": "2025-03-29",
+    "dateAdded": "2025-06-26 13:06:23"
+  },
+  {
+    "symbol": "TRNS",
+    "calendarYear": 2024,
+    "period": "FY",
+    "date": "2025-03-29",
+    "dateAdded": "2025-06-26 13:06:23"
+  },
+  {
+    "symbol": "TOUR",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:19"
+  },
+  {
+    "symbol": "TLYS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:15"
+  },
+  {
+    "symbol": "TITN",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:13"
+  },
+  {
+    "symbol": "TIGR",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:09"
+  },
+  {
+    "symbol": "THR",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:05"
+  },
+  {
+    "symbol": "THR",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:04"
+  },
+  {
+    "symbol": "THO",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:03"
+  },
+  {
+    "symbol": "THCH",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:00"
+  },
+  {
+    "symbol": "TH",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:56"
+  },
+  {
+    "symbol": "TGI",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:53"
+  },
+  {
+    "symbol": "TGI",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:52"
+  },
+  {
+    "symbol": "TATT",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:51"
+  },
+  {
+    "symbol": "SZZL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:46"
+  },
+  {
+    "symbol": "SYTA",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:44"
+  },
+  {
+    "symbol": "SY",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:41"
+  },
+  {
+    "symbol": "SWVL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:39"
+  },
+  {
+    "symbol": "SUUN",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:34"
+  },
+  {
+    "symbol": "STRM",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:33"
+  },
+  {
+    "symbol": "STI",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:31"
+  },
+  {
+    "symbol": "STG",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:28"
+  },
+  {
+    "symbol": "SPWH",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:26"
+  },
+  {
+    "symbol": "SOTK",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-02-28",
+    "dateAdded": "2025-06-26 13:06:22"
+  },
+  {
+    "symbol": "SOTK",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-02-28",
+    "dateAdded": "2025-06-26 13:06:21"
+  },
+  {
+    "symbol": "SOPA",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:17"
+  },
+  {
+    "symbol": "SOHU",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:13"
+  },
+  {
+    "symbol": "SNT",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:08"
+  },
+  {
+    "symbol": "SNOA",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:07"
+  },
+  {
+    "symbol": "SNOA",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:07"
+  },
+  {
+    "symbol": "SMWB",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:00"
+  },
+  {
+    "symbol": "SMTC",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-27",
+    "dateAdded": "2025-06-26 13:06:58"
+  },
+  {
+    "symbol": "SLGL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:51"
+  },
+  {
+    "symbol": "SKY",
+    "calendarYear": 2024,
+    "period": "Q4",
+    "date": "2025-03-29",
+    "dateAdded": "2025-06-26 13:06:46"
+  },
+  {
+    "symbol": "SKY",
+    "calendarYear": 2024,
+    "period": "FY",
+    "date": "2025-03-29",
+    "dateAdded": "2025-06-26 13:06:45"
+  },
+  {
+    "symbol": "SJ",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:42"
+  },
+  {
+    "symbol": "SIG",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:37"
+  },
+  {
+    "symbol": "SIFY",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:35"
+  },
+  {
+    "symbol": "SIFY",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:35"
+  },
+  {
+    "symbol": "SHIP",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:33"
+  },
+  {
+    "symbol": "SFL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:28"
+  },
+  {
+    "symbol": "SENEA",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:25"
+  },
+  {
+    "symbol": "SENEA",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:24"
+  },
+  {
+    "symbol": "SCS",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-05-30",
+    "dateAdded": "2025-06-26 13:06:24"
+  },
+  {
+    "symbol": "SB",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:22"
+  },
+  {
+    "symbol": "RVYL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:20"
+  },
+  {
+    "symbol": "RSVR",
+    "calendarYear": 2024,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:17"
+  },
+  {
+    "symbol": "RSVR",
+    "calendarYear": 2024,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:17"
+  },
+  {
+    "symbol": "RSLS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:16"
+  },
+  {
+    "symbol": "RSKD",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:12"
+  },
+  {
+    "symbol": "RRGB",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-04-20",
+    "dateAdded": "2025-06-26 13:06:07"
+  },
+  {
+    "symbol": "RLX",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:59"
+  },
+  {
+    "symbol": "RFIL",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:55"
+  },
+  {
+    "symbol": "REX",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:54"
+  },
+  {
+    "symbol": "REVG",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:52"
+  },
+  {
+    "symbol": "RERE",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:49"
+  },
+  {
+    "symbol": "REBN",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:41"
+  },
+  {
+    "symbol": "RDCM",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:38"
+  },
+  {
+    "symbol": "RAMP",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:32"
+  },
+  {
+    "symbol": "RAMP",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:31"
+  },
+  {
+    "symbol": "QFIN",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:29"
+  },
+  {
+    "symbol": "QD",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:25"
+  },
+  {
+    "symbol": "PYPD",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:24"
+  },
+  {
+    "symbol": "PXS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:19"
+  },
+  {
+    "symbol": "PVH",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-04",
+    "dateAdded": "2025-06-26 13:06:18"
+  },
+  {
+    "symbol": "PSHG",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:14"
+  },
+  {
+    "symbol": "PSFE",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:12"
+  },
+  {
+    "symbol": "PRPH",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:10"
+  },
+  {
+    "symbol": "PRE",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:06"
+  },
+  {
+    "symbol": "POWW",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:01"
+  },
+  {
+    "symbol": "POWW",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:00"
+  },
+  {
+    "symbol": "POET",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:56"
+  },
+  {
+    "symbol": "PNRG",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:54"
+  },
+  {
+    "symbol": "PLUS",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:51"
+  },
+  {
+    "symbol": "PLUS",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:51"
+  },
+  {
+    "symbol": "PLCE",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:47"
+  },
+  {
+    "symbol": "PLAO",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:44"
+  },
+  {
+    "symbol": "PLAB",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-05-04",
+    "dateAdded": "2025-06-26 13:06:42"
+  },
+  {
+    "symbol": "PL",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:37"
+  },
+  {
+    "symbol": "PHVS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:35"
+  },
+  {
+    "symbol": "PHR",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:28"
+  },
+  {
+    "symbol": "PHI",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:25"
+  },
+  {
+    "symbol": "PAYX",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:20"
+  },
+  {
+    "symbol": "PAYX",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:19"
+  },
+  {
+    "symbol": "PAX",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:18"
+  },
+  {
+    "symbol": "PAGS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:13"
+  },
+  {
+    "symbol": "OXM",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:09"
+  },
+  {
+    "symbol": "OTRK",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:04"
+  },
+  {
+    "symbol": "OOMA",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:01"
+  },
+  {
+    "symbol": "ONCY",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:57"
+  },
+  {
+    "symbol": "ODC",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:54"
+  },
+  {
+    "symbol": "OCFT",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:50"
+  },
+  {
+    "symbol": "OCC",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:49"
+  },
+  {
+    "symbol": "NWTG",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:46"
+  },
+  {
+    "symbol": "NVGS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:43"
+  },
+  {
+    "symbol": "NOAH",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:42"
+  },
+  {
+    "symbol": "NNOX",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:41"
+  },
+  {
+    "symbol": "NNDM",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:39"
+  },
+  {
+    "symbol": "NMM",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:37"
+  },
+  {
+    "symbol": "NIU",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:36"
+  },
+  {
+    "symbol": "NGL",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:34"
+  },
+  {
+    "symbol": "NGL",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:33"
+  },
+  {
+    "symbol": "NESR",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:32"
+  },
+  {
+    "symbol": "NCNO",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:30"
+  },
+  {
+    "symbol": "NAT",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:29"
+  },
+  {
+    "symbol": "NAOV",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:25"
+  },
+  {
+    "symbol": "MULN",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:21"
+  },
+  {
+    "symbol": "MU",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-05-29",
+    "dateAdded": "2025-06-26 13:06:20"
+  },
+  {
+    "symbol": "MOV",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:14"
+  },
+  {
+    "symbol": "MOMO",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:12"
+  },
+  {
+    "symbol": "MLKN",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:59"
+  },
+  {
+    "symbol": "MLKN",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:58"
+  },
+  {
+    "symbol": "MLAB",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:57"
+  },
+  {
+    "symbol": "MLAB",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:55"
+  },
+  {
+    "symbol": "MESA",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:53"
+  },
+  {
+    "symbol": "MDXH",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:49"
+  },
+  {
+    "symbol": "MDIA",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:43"
+  },
+  {
+    "symbol": "MAYS",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:42"
+  },
+  {
+    "symbol": "MANU",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:38"
+  },
+  {
+    "symbol": "MAMA",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:31"
+  },
+  {
+    "symbol": "M",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:30"
+  },
+  {
+    "symbol": "LZB",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-04-26",
+    "dateAdded": "2025-06-26 13:06:24"
+  },
+  {
+    "symbol": "LZB",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-04-26",
+    "dateAdded": "2025-06-26 13:06:23"
+  },
+  {
+    "symbol": "LX",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:22"
+  },
+  {
+    "symbol": "LWLG",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:20"
+  },
+  {
+    "symbol": "LVO",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:19"
+  },
+  {
+    "symbol": "LVO",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:18"
+  },
+  {
+    "symbol": "LOVE",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-05-04",
+    "dateAdded": "2025-06-26 13:06:17"
+  },
+  {
+    "symbol": "LMNR",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:15"
+  },
+  {
+    "symbol": "LE",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-02",
+    "dateAdded": "2025-06-26 13:06:07"
+  },
+  {
+    "symbol": "LAKE",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:04"
+  },
+  {
+    "symbol": "KRNT",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:01"
+  },
+  {
+    "symbol": "KMDA",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:57"
+  },
+  {
+    "symbol": "KIRK",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:51"
+  },
+  {
+    "symbol": "KFY",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:50"
+  },
+  {
+    "symbol": "KFY",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:50"
+  },
+  {
+    "symbol": "KEN",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:47"
+  },
+  {
+    "symbol": "KBH",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:45"
+  },
+  {
+    "symbol": "KARO",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-02-28",
+    "dateAdded": "2025-06-26 13:06:43"
+  },
+  {
+    "symbol": "KARO",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-02-28",
+    "dateAdded": "2025-06-26 13:06:43"
+  },
+  {
+    "symbol": "JRSH",
+    "calendarYear": 2024,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:40"
+  },
+  {
+    "symbol": "JRSH",
+    "calendarYear": 2024,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:39"
+  },
+  {
+    "symbol": "JOYY",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:38"
+  },
+  {
+    "symbol": "JILL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:35"
+  },
+  {
+    "symbol": "JG",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:30"
+  },
+  {
+    "symbol": "JFIN",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:28"
+  },
+  {
+    "symbol": "JEF",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:19"
+  },
+  {
+    "symbol": "ISPC",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:06"
+  },
+  {
+    "symbol": "IRS",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:05"
+  },
+  {
+    "symbol": "IREN",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:03"
+  },
+  {
+    "symbol": "IQ",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:01"
+  },
+  {
+    "symbol": "INVZ",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:59"
+  },
+  {
+    "symbol": "IMTX",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:57"
+  },
+  {
+    "symbol": "IMAB",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:55"
+  },
+  {
+    "symbol": "IHS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:53"
+  },
+  {
+    "symbol": "IGT",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:50"
+  },
+  {
+    "symbol": "IDT",
+    "calendarYear": 2025,
+    "period": "Q3",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:49"
+  },
+  {
+    "symbol": "ICG",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:47"
+  },
+  {
+    "symbol": "ICCM",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:45"
+  },
+  {
+    "symbol": "HUIZ",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:43"
+  },
+  {
+    "symbol": "HEPA",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:41"
+  },
+  {
+    "symbol": "HCTI",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:38"
+  },
+  {
+    "symbol": "GSL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:34"
+  },
+  {
+    "symbol": "GRVY",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:33"
+  },
+  {
+    "symbol": "GRRR",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:30"
+  },
+  {
+    "symbol": "GOTU",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:28"
+  },
+  {
+    "symbol": "GOGL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:26"
+  },
+  {
+    "symbol": "GLSI",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:24"
+  },
+  {
+    "symbol": "GLOB",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:23"
+  },
+  {
+    "symbol": "GLNG",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:20"
+  },
+  {
+    "symbol": "GLMD",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:16"
+  },
+  {
+    "symbol": "GLBS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:10"
+  },
+  {
+    "symbol": "GIS",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-05-25",
+    "dateAdded": "2025-06-26 13:06:07"
+  },
+  {
+    "symbol": "GIS",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-05-25",
+    "dateAdded": "2025-06-26 13:06:05"
+  },
+  {
+    "symbol": "GILT",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:04"
+  },
+  {
+    "symbol": "GHM",
+    "calendarYear": 2024,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:58"
+  },
+  {
+    "symbol": "GHM",
+    "calendarYear": 2024,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:55"
+  },
+  {
+    "symbol": "GEF",
+    "calendarYear": 2025,
+    "period": "Q2",
+    "date": "2025-04-30",
+    "dateAdded": "2025-06-26 13:06:54"
+  },
+  {
+    "symbol": "GDST",
+    "calendarYear": 2024,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:50"
+  },
+  {
+    "symbol": "GDST",
+    "calendarYear": 2024,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:46"
+  },
+  {
+    "symbol": "GCO",
+    "calendarYear": 2026,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:45"
+  },
+  {
+    "symbol": "GB",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:43"
+  },
+  {
+    "symbol": "GB",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:42"
+  },
+  {
+    "symbol": "GASS",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:41"
+  },
+  {
+    "symbol": "GAMB",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:37"
+  },
+  {
+    "symbol": "FNGR",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-02-28",
+    "dateAdded": "2025-06-26 13:06:31"
+  },
+  {
+    "symbol": "FNGR",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-02-28",
+    "dateAdded": "2025-06-26 13:06:31"
+  },
+  {
+    "symbol": "FL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-05-03",
+    "dateAdded": "2025-06-26 13:06:30"
+  },
+  {
+    "symbol": "FINV",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:28"
+  },
+  {
+    "symbol": "FENG",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:20"
+  },
+  {
+    "symbol": "FDX",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:18"
+  },
+  {
+    "symbol": "FDX",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-05-31",
+    "dateAdded": "2025-06-26 13:06:18"
+  },
+  {
+    "symbol": "EYEN",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:17"
+  },
+  {
+    "symbol": "EVTV",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:16"
+  },
+  {
+    "symbol": "EVTL",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:15"
+  },
+  {
+    "symbol": "EVLV",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:13"
+  },
+  {
+    "symbol": "EVAX",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:11"
+  },
+  {
+    "symbol": "ESEA",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:09"
+  },
+  {
+    "symbol": "ENS",
+    "calendarYear": 2025,
+    "period": "Q4",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:05"
+  },
+  {
+    "symbol": "ENS",
+    "calendarYear": 2025,
+    "period": "FY",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:05"
+  },
+  {
+    "symbol": "ELTK",
+    "calendarYear": 2025,
+    "period": "Q1",
+    "date": "2025-03-31",
+    "dateAdded": "2025-06-26 13:06:53"
+  }
+]

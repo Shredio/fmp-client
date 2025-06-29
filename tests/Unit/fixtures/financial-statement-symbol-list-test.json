@@ -1,0 +1,20 @@
+[
+  {
+    "symbol": "HALB",
+    "companyName": "Halberd Corporation",
+    "tradingCurrency": "USD",
+    "reportingCurrency": "USD"
+  },
+  {
+    "symbol": "BHUDEVI.BO",
+    "companyName": "Bhudevi Infra Projects Ltd.",
+    "tradingCurrency": "INR",
+    "reportingCurrency": null
+  },
+  {
+    "symbol": "SUMXF",
+    "companyName": "Supremex Inc.",
+    "tradingCurrency": "USD",
+    "reportingCurrency": "CAD"
+  }
+]

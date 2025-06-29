@@ -1,0 +1,9254 @@
+[
+  {
+    "symbol": "AEDAUD",
+    "price": 0.41687,
+    "change": -0.000036340187,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDBHD",
+    "price": 0.10238,
+    "change": -0.000184743653,
+    "volume": 91
+  },
+  {
+    "symbol": "AEDCAD",
+    "price": 0.37284,
+    "change": 0.000543753538,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDCHF",
+    "price": 0.21752,
+    "change": -0.000312510926,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDDKK",
+    "price": 1.78509,
+    "change": -0.08548359,
+    "volume": 91
+  },
+  {
+    "symbol": "AEDEUR",
+    "price": 0.23232,
+    "change": -0.00055648626,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDGBP",
+    "price": 0.19846,
+    "change": 0.000621382,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDILS",
+    "price": 1.00285,
+    "change": 0.0049642,
+    "volume": 1186
+  },
+  {
+    "symbol": "AEDINR",
+    "price": 23.27139,
+    "change": -0.02061021,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDJOD",
+    "price": 0.19306,
+    "change": -0.000160689481,
+    "volume": 90
+  },
+  {
+    "symbol": "AEDJPY",
+    "price": 39.38149,
+    "change": -0.73082,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDKWD",
+    "price": 0.08328605,
+    "change": -0.0001209537,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDNOK",
+    "price": 2.74551,
+    "change": 0.00481165,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDNZD",
+    "price": 0.4497,
+    "change": 0.0007713715,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDOMR",
+    "price": 0.10453,
+    "change": 0.0001739398,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDPKR",
+    "price": 77.23819,
+    "change": 0.04018646,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDQAR",
+    "price": 0.99115,
+    "change": 0.00485044,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDSAR",
+    "price": 1.0211,
+    "change": 0.00380279,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDSEK",
+    "price": 2.58325,
+    "change": 0.00114844,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDSGD",
+    "price": 0.34751,
+    "change": 0.0009154511,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDUSD",
+    "price": 0.27229,
+    "change": 0.0003840776,
+    "volume": 0
+  },
+  {
+    "symbol": "AEDZAR",
+    "price": 4.85534,
+    "change": -0.00595523,
+    "volume": 0
+  },
+  {
+    "symbol": "AFNEUR",
+    "price": 0.01210675,
+    "change": -0.000064322653,
+    "volume": 0
+  },
+  {
+    "symbol": "AFNGBP",
+    "price": 0.01034225,
+    "change": -0.000031304293,
+    "volume": 0
+  },
+  {
+    "symbol": "AFNUSD",
+    "price": 0.01418983,
+    "change": -0.0000704219,
+    "volume": 0
+  },
+  {
+    "symbol": "ALLEUR",
+    "price": 0.01018592,
+    "change": -0.000127612653,
+    "volume": 0
+  },
+  {
+    "symbol": "ALLGBP",
+    "price": 0.00870137,
+    "change": -0.000020832594,
+    "volume": 0
+  },
+  {
+    "symbol": "ALLUSD",
+    "price": 0.0119385,
+    "change": 0.0000374953,
+    "volume": 0
+  },
+  {
+    "symbol": "AMDEUR",
+    "price": 0.00222005,
+    "change": -0.000001579488,
+    "volume": 0
+  },
+  {
+    "symbol": "AMDGBP",
+    "price": 0.00189649,
+    "change": 0.000001148239,
+    "volume": 0
+  },
+  {
+    "symbol": "AMDUSD",
+    "price": 0.00260203,
+    "change": 6.404e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "ARSAUD",
+    "price": 0.00129324,
+    "change": 0.000009235,
+    "volume": 3225
+  },
+  {
+    "symbol": "ARSBRL",
+    "price": 0.00436,
+    "change": -0.00005,
+    "volume": 0
+  },
+  {
+    "symbol": "ARSCAD",
+    "price": 0.00115665,
+    "change": 0.0000093474,
+    "volume": 805933
+  },
+  {
+    "symbol": "ARSCHF",
+    "price": 0.0006747933,
+    "change": 0.0000026933,
+    "volume": 677633
+  },
+  {
+    "symbol": "ARSCLP",
+    "price": 0.79435,
+    "change": 0.00774988,
+    "volume": 576
+  },
+  {
+    "symbol": "ARSCOP",
+    "price": 3.45586,
+    "change": 0.04985706,
+    "volume": 268
+  },
+  {
+    "symbol": "ARSEUR",
+    "price": 0.00068,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "ARSGBP",
+    "price": 0.0006156717,
+    "change": 0.0000066717,
+    "volume": 0
+  },
+  {
+    "symbol": "ARSHKD",
+    "price": 0.00663186,
+    "change": 0.0000319615,
+    "volume": 37784
+  },
+  {
+    "symbol": "ARSJPY",
+    "price": 0.12217,
+    "change": 0.00317022,
+    "volume": 0
+  },
+  {
+    "symbol": "ARSMXN",
+    "price": 0.01590012,
+    "change": 0.0000514242,
+    "volume": 806207
+  },
+  {
+    "symbol": "ARSPEN",
+    "price": 0.00299843,
+    "change": 0.0000144272,
+    "volume": 27
+  },
+  {
+    "symbol": "ARSSGD",
+    "price": 0.00107804,
+    "change": 0.0000074397,
+    "volume": 605220
+  },
+  {
+    "symbol": "ARSUSD",
+    "price": 0.0008447172,
+    "change": 0.0000037172,
+    "volume": 0
+  },
+  {
+    "symbol": "ARSXAG",
+    "price": 0.0000287498,
+    "change": 0.000001053449,
+    "volume": 1259
+  },
+  {
+    "symbol": "ARSXAU",
+    "price": 2.886e-7,
+    "change": -2.5442e-8,
+    "volume": 1259
+  },
+  {
+    "symbol": "ARSZAR",
+    "price": 0.01506237,
+    "change": 0.0000230669,
+    "volume": 1050984
+  },
+  {
+    "symbol": "AUDAED",
+    "price": 2.39881,
+    "change": 0.0002090937,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDARS",
+    "price": 773.25464,
+    "change": -4.85596,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDBGN",
+    "price": 1.08997,
+    "change": -0.00560715,
+    "volume": 2
+  },
+  {
+    "symbol": "AUDBRL",
+    "price": 3.58338,
+    "change": -0.0007178145,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDCAD",
+    "price": 0.89389,
+    "change": 0.0013047,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDCHF",
+    "price": 0.521,
+    "change": -0.00184,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDCLP",
+    "price": 614.23474,
+    "change": 4.42474,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDCNH",
+    "price": 4.68255,
+    "change": 0.000052358,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDCNY",
+    "price": 4.68424,
+    "change": -0.00825518,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDCZK",
+    "price": 13.78308,
+    "change": -0.04391879,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDDKK",
+    "price": 4.15744,
+    "change": -0.0115564,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDEUR",
+    "price": 0.55729,
+    "change": -0.00236556,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDFJD",
+    "price": 1.46463,
+    "change": 0.0004273926,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDGBP",
+    "price": 0.47615,
+    "change": -0.000687956145,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDHKD",
+    "price": 5.12768,
+    "change": -0.00702079,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDHUF",
+    "price": 222.32375,
+    "change": -0.94625,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDIDR",
+    "price": 10602.42379,
+    "change": -0.77621,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDILS",
+    "price": 2.21212,
+    "change": -0.00538438,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDINR",
+    "price": 55.82362,
+    "change": -0.24138,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDJPY",
+    "price": 94.50903,
+    "change": 0.02202561,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDKRW",
+    "price": 891.02066,
+    "change": 3.79066,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDLTL",
+    "price": 1.85495,
+    "change": 0.01092729,
+    "volume": 123045
+  },
+  {
+    "symbol": "AUDMAD",
+    "price": 5.89777,
+    "change": -0.00862739,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDMXN",
+    "price": 12.29484,
+    "change": -0.06685508,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDMYR",
+    "price": 2.76168,
+    "change": -0.00721787,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDNOK",
+    "price": 6.582,
+    "change": -0.011,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDNZD",
+    "price": 1.07776,
+    "change": -0.00378878,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDPGK",
+    "price": 2.66472,
+    "change": 0.02241836,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDPHP",
+    "price": 36.95206,
+    "change": -0.14594,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDPKR",
+    "price": 185.27966,
+    "change": -0.39234,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDPLN",
+    "price": 2.36518,
+    "change": -0.00431889,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDSEK",
+    "price": 6.19672,
+    "change": -0.01608014,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDSGD",
+    "price": 0.8308,
+    "change": -0.00317967,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDTHB",
+    "price": 21.22726,
+    "change": -0.01773838,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDTRY",
+    "price": 26.07577,
+    "change": 0.00146507,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDTWD",
+    "price": 19.0106,
+    "change": -0.05539711,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDUSD",
+    "price": 0.65325,
+    "change": -0.0014541,
+    "volume": 0
+  },
+  {
+    "symbol": "AUDXAG",
+    "price": 0.01954372,
+    "change": 0.000966371117,
+    "volume": 2520
+  },
+  {
+    "symbol": "AUDXAU",
+    "price": 0.0001961841,
+    "change": -0.000014343545,
+    "volume": 2522
+  },
+  {
+    "symbol": "AUDZAR",
+    "price": 11.64705,
+    "change": -0.03929349,
+    "volume": 0
+  },
+  {
+    "symbol": "AWGGBP",
+    "price": 0.40718,
+    "change": 0.00461817,
+    "volume": 0
+  },
+  {
+    "symbol": "AWGUSD",
+    "price": 0.55866,
+    "change": 0.0000936179,
+    "volume": 0
+  },
+  {
+    "symbol": "BAMEUR",
+    "price": 0.51129,
+    "change": 0.00348692,
+    "volume": 0
+  },
+  {
+    "symbol": "BAMGBP",
+    "price": 0.43677,
+    "change": 0.000910525006,
+    "volume": 0
+  },
+  {
+    "symbol": "BAMUSD",
+    "price": 0.59926,
+    "change": 0.0007842579,
+    "volume": 0
+  },
+  {
+    "symbol": "BBDBMD",
+    "price": 0.5,
+    "change": -0.00814999,
+    "volume": 4
+  },
+  {
+    "symbol": "BBDEUR",
+    "price": 0.4266,
+    "change": -0.00111622,
+    "volume": 0
+  },
+  {
+    "symbol": "BBDGBP",
+    "price": 0.36405,
+    "change": 0.00037,
+    "volume": 0
+  },
+  {
+    "symbol": "BBDUSD",
+    "price": 0.5,
+    "change": 0.00004,
+    "volume": 0
+  },
+  {
+    "symbol": "BDTEUR",
+    "price": 0.00697699,
+    "change": 0.000006118319,
+    "volume": 0
+  },
+  {
+    "symbol": "BDTGBP",
+    "price": 0.00596013,
+    "change": 0.0000231275,
+    "volume": 0
+  },
+  {
+    "symbol": "BDTJPY",
+    "price": 1.18269,
+    "change": 0.0088922,
+    "volume": 0
+  },
+  {
+    "symbol": "BDTUSD",
+    "price": 0.00817745,
+    "change": 0.0000614469,
+    "volume": 0
+  },
+  {
+    "symbol": "BGNAUD",
+    "price": 0.921,
+    "change": 0.03835806,
+    "volume": 123355
+  },
+  {
+    "symbol": "BGNCAD",
+    "price": 0.82056,
+    "change": 0.00349519,
+    "volume": 0
+  },
+  {
+    "symbol": "BGNCNY",
+    "price": 4.25729,
+    "change": 0.24136,
+    "volume": 59
+  },
+  {
+    "symbol": "BGNDKK",
+    "price": 3.81818,
+    "change": 0.01826844,
+    "volume": 25
+  },
+  {
+    "symbol": "BGNEUR",
+    "price": 0.51129,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "BGNGBP",
+    "price": 0.43677,
+    "change": 0.00217332,
+    "volume": 0
+  },
+  {
+    "symbol": "BGNUSD",
+    "price": 0.59926,
+    "change": 0.00156413,
+    "volume": 0
+  },
+  {
+    "symbol": "BHDAED",
+    "price": 9.76729,
+    "change": 0.01759278,
+    "volume": 91
+  },
+  {
+    "symbol": "BHDEUR",
+    "price": 2.26915,
+    "change": 0.00494773,
+    "volume": 0
+  },
+  {
+    "symbol": "BHDGBP",
+    "price": 1.93843,
+    "change": 0.01262932,
+    "volume": 0
+  },
+  {
+    "symbol": "BHDPKR",
+    "price": 754.40755,
+    "change": 3.09755,
+    "volume": 0
+  },
+  {
+    "symbol": "BHDUSD",
+    "price": 2.65957,
+    "change": 0.01347447,
+    "volume": 0
+  },
+  {
+    "symbol": "BIFEUR",
+    "price": 0.00028658,
+    "change": -0.000004998343,
+    "volume": 0
+  },
+  {
+    "symbol": "BIFGBP",
+    "price": 0.0002448122,
+    "change": -0.000003705393,
+    "volume": 0
+  },
+  {
+    "symbol": "BIFUSD",
+    "price": 0.0003358886,
+    "change": -0.0000011114,
+    "volume": 0
+  },
+  {
+    "symbol": "BMDBBD",
+    "price": 2,
+    "change": 0.03207711,
+    "volume": 4
+  },
+  {
+    "symbol": "BMDCAD",
+    "price": 1.37287,
+    "change": 0.00357176,
+    "volume": 0
+  },
+  {
+    "symbol": "BMDEUR",
+    "price": 0.8532,
+    "change": -0.00267173,
+    "volume": 0
+  },
+  {
+    "symbol": "BMDGBP",
+    "price": 0.7286,
+    "change": -0.000422380987,
+    "volume": 0
+  },
+  {
+    "symbol": "BMDKYD",
+    "price": 0.83047,
+    "change": -0.000519414091,
+    "volume": 1
+  },
+  {
+    "symbol": "BMDUSD",
+    "price": 1,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "BNDEUR",
+    "price": 0.66854,
+    "change": -0.00327759,
+    "volume": 0
+  },
+  {
+    "symbol": "BNDGBP",
+    "price": 0.5711,
+    "change": -0.00114313,
+    "volume": 0
+  },
+  {
+    "symbol": "BNDUSD",
+    "price": 0.78357,
+    "change": -0.00185477,
+    "volume": 0
+  },
+  {
+    "symbol": "BOBEUR",
+    "price": 0.12352,
+    "change": -0.00210445,
+    "volume": 0
+  },
+  {
+    "symbol": "BOBGBP",
+    "price": 0.10552,
+    "change": 0.000073235125,
+    "volume": 0
+  },
+  {
+    "symbol": "BOBUSD",
+    "price": 0.14478,
+    "change": 0.0000970209,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLARS",
+    "price": 215.78905,
+    "change": -1.15575,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLAUD",
+    "price": 0.27907,
+    "change": 0.000055890636,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLCAD",
+    "price": 0.24959,
+    "change": 0.000469994005,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLCHF",
+    "price": 0.14561,
+    "change": -0.000355357861,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLCLP",
+    "price": 171.41201,
+    "change": 1.58201,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLCOP",
+    "price": 745.73612,
+    "change": 9.43612,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLEUR",
+    "price": 0.15552,
+    "change": -0.0002481668,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLGBP",
+    "price": 0.13286,
+    "change": -0.000084628332,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLHKD",
+    "price": 1.43108,
+    "change": 0.00118311,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLJPY",
+    "price": 26.363,
+    "change": 0.03799529,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLKRW",
+    "price": 248.65354,
+    "change": 1.25354,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLMXN",
+    "price": 3.43107,
+    "change": -0.01342726,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLPEN",
+    "price": 0.63548,
+    "change": 0.00367782,
+    "volume": 3412
+  },
+  {
+    "symbol": "BRLRSD",
+    "price": 17.53587,
+    "change": -1.04211,
+    "volume": 60
+  },
+  {
+    "symbol": "BRLRUB",
+    "price": 14.2717,
+    "change": -0.08129758,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLSEK",
+    "price": 1.72929,
+    "change": -0.00180641,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLSGD",
+    "price": 0.23263,
+    "change": 0.0006491735,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLUSD",
+    "price": 0.18228,
+    "change": 0.0001807269,
+    "volume": 0
+  },
+  {
+    "symbol": "BRLXAG",
+    "price": 0.00526619,
+    "change": 0.000174285743,
+    "volume": 1213
+  },
+  {
+    "symbol": "BRLXAU",
+    "price": 0.0000528632,
+    "change": -0.000004873187,
+    "volume": 1251
+  },
+  {
+    "symbol": "BRLZAR",
+    "price": 3.25029,
+    "change": -0.00110612,
+    "volume": 0
+  },
+  {
+    "symbol": "BSDEUR",
+    "price": 0.8532,
+    "change": -0.000188405362,
+    "volume": 0
+  },
+  {
+    "symbol": "BSDGBP",
+    "price": 0.72885,
+    "change": 0.00162959,
+    "volume": 0
+  },
+  {
+    "symbol": "BSDUSD",
+    "price": 1,
+    "change": 0.0029,
+    "volume": 0
+  },
+  {
+    "symbol": "BTNEUR",
+    "price": 0.01020937,
+    "change": -0.000487305904,
+    "volume": 1
+  },
+  {
+    "symbol": "BTNGBP",
+    "price": 0.00881258,
+    "change": 0.000030754496,
+    "volume": 1
+  },
+  {
+    "symbol": "BWPCHF",
+    "price": 0.05999015,
+    "change": -0.000063421682,
+    "volume": 0
+  },
+  {
+    "symbol": "BWPEUR",
+    "price": 0.06407242,
+    "change": 0.0000624231,
+    "volume": 0
+  },
+  {
+    "symbol": "BWPGBP",
+    "price": 0.05473415,
+    "change": 0.0001301463,
+    "volume": 0
+  },
+  {
+    "symbol": "BWPUSD",
+    "price": 0.0725,
+    "change": -0.0002,
+    "volume": 0
+  },
+  {
+    "symbol": "BWPZAR",
+    "price": 1.33907,
+    "change": 0.02086732,
+    "volume": 0
+  },
+  {
+    "symbol": "BZDEUR",
+    "price": 0.42353,
+    "change": -0.000217971731,
+    "volume": 0
+  },
+  {
+    "symbol": "BZDGBP",
+    "price": 0.3618,
+    "change": 0.000660112588,
+    "volume": 0
+  },
+  {
+    "symbol": "BZDUSD",
+    "price": 0.4964,
+    "change": 0.0008506366,
+    "volume": 0
+  },
+  {
+    "symbol": "CADAED",
+    "price": 2.68208,
+    "change": -0.00391724,
+    "volume": 0
+  },
+  {
+    "symbol": "CADARS",
+    "price": 864.56774,
+    "change": -6.41396,
+    "volume": 0
+  },
+  {
+    "symbol": "CADAUD",
+    "price": 1.1187,
+    "change": -0.0004,
+    "volume": 0
+  },
+  {
+    "symbol": "CADBGN",
+    "price": 1.21869,
+    "change": -0.00441325,
+    "volume": 0
+  },
+  {
+    "symbol": "CADBMD",
+    "price": 0.7284,
+    "change": -0.0019,
+    "volume": 0
+  },
+  {
+    "symbol": "CADBRL",
+    "price": 4.00654,
+    "change": -0.00755875,
+    "volume": 0
+  },
+  {
+    "symbol": "CADCHF",
+    "price": 0.5834,
+    "change": -0.00246552,
+    "volume": 97472
+  },
+  {
+    "symbol": "CADCNY",
+    "price": 5.2374,
+    "change": -0.01739603,
+    "volume": 0
+  },
+  {
+    "symbol": "CADCOP",
+    "price": 2987.82252,
+    "change": 25.02252,
+    "volume": 0
+  },
+  {
+    "symbol": "CADCZK",
+    "price": 15.41072,
+    "change": -0.0922845,
+    "volume": 0
+  },
+  {
+    "symbol": "CADDKK",
+    "price": 4.64839,
+    "change": -0.02160683,
+    "volume": 0
+  },
+  {
+    "symbol": "CADEUR",
+    "price": 0.6231,
+    "change": -0.00366599,
+    "volume": 0
+  },
+  {
+    "symbol": "CADGBP",
+    "price": 0.5324,
+    "change": -0.0008,
+    "volume": 0
+  },
+  {
+    "symbol": "CADHKD",
+    "price": 5.73888,
+    "change": -0.01485901,
+    "volume": 0
+  },
+  {
+    "symbol": "CADHUF",
+    "price": 248.5778,
+    "change": -1.4222,
+    "volume": 0
+  },
+  {
+    "symbol": "CADIDR",
+    "price": 11854.4565,
+    "change": -11.9435,
+    "volume": 0
+  },
+  {
+    "symbol": "CADILS",
+    "price": 2.47334,
+    "change": -0.00945722,
+    "volume": 0
+  },
+  {
+    "symbol": "CADINR",
+    "price": 62.41579,
+    "change": -0.34521,
+    "volume": 0
+  },
+  {
+    "symbol": "CADISK",
+    "price": 88.51411,
+    "change": -0.32489,
+    "volume": 0
+  },
+  {
+    "symbol": "CADJPY",
+    "price": 105.698,
+    "change": -0.17812,
+    "volume": 0
+  },
+  {
+    "symbol": "CADKRW",
+    "price": 996.24066,
+    "change": -2.76034,
+    "volume": 0
+  },
+  {
+    "symbol": "CADKWD",
+    "price": 0.22338,
+    "change": -0.000519931,
+    "volume": 0
+  },
+  {
+    "symbol": "CADKYD",
+    "price": 0.5968,
+    "change": -0.0016,
+    "volume": 0
+  },
+  {
+    "symbol": "CADMXN",
+    "price": 13.74673,
+    "change": -0.09296556,
+    "volume": 0
+  },
+  {
+    "symbol": "CADMYR",
+    "price": 3.08781,
+    "change": -0.00909278,
+    "volume": 0
+  },
+  {
+    "symbol": "CADNOK",
+    "price": 7.3621,
+    "change": -0.07284424,
+    "volume": 0
+  },
+  {
+    "symbol": "CADNZD",
+    "price": 1.20715,
+    "change": -0.00419671,
+    "volume": 0
+  },
+  {
+    "symbol": "CADPEN",
+    "price": 2.59234,
+    "change": -0.00685655,
+    "volume": 0
+  },
+  {
+    "symbol": "CADPKR",
+    "price": 207.15921,
+    "change": -0.72679,
+    "volume": 0
+  },
+  {
+    "symbol": "CADPLN",
+    "price": 2.64448,
+    "change": -0.00671633,
+    "volume": 0
+  },
+  {
+    "symbol": "CADRUB",
+    "price": 57.18016,
+    "change": -0.50084,
+    "volume": 0
+  },
+  {
+    "symbol": "CADSAR",
+    "price": 2.73868,
+    "change": -0.00461781,
+    "volume": 0
+  },
+  {
+    "symbol": "CADSEK",
+    "price": 6.92849,
+    "change": -0.02871388,
+    "volume": 0
+  },
+  {
+    "symbol": "CADSGD",
+    "price": 0.9321,
+    "change": -0.0009,
+    "volume": 0
+  },
+  {
+    "symbol": "CADTHB",
+    "price": 23.73397,
+    "change": -0.0740261,
+    "volume": 0
+  },
+  {
+    "symbol": "CADTRY",
+    "price": 29.15503,
+    "change": -0.03726632,
+    "volume": 0
+  },
+  {
+    "symbol": "CADTWD",
+    "price": 21.25555,
+    "change": -0.1669,
+    "volume": 0
+  },
+  {
+    "symbol": "CADUSD",
+    "price": 0.73094,
+    "change": -0.0021272,
+    "volume": 0
+  },
+  {
+    "symbol": "CADVND",
+    "price": 18986.51411,
+    "change": -150.88589,
+    "volume": 0
+  },
+  {
+    "symbol": "CADXAG",
+    "price": 0.02230668,
+    "change": 0.00183585,
+    "volume": 931
+  },
+  {
+    "symbol": "CADXAU",
+    "price": 0.0002239192,
+    "change": -0.000008196301,
+    "volume": 1221
+  },
+  {
+    "symbol": "CADZAR",
+    "price": 13.02244,
+    "change": -0.05606351,
+    "volume": 0
+  },
+  {
+    "symbol": "CDFEUR",
+    "price": 0.000293106,
+    "change": -0.000004506847,
+    "volume": 0
+  },
+  {
+    "symbol": "CDFGBP",
+    "price": 0.000250387,
+    "change": -0.000003273962,
+    "volume": 0
+  },
+  {
+    "symbol": "CDFUSD",
+    "price": 0.0003435374,
+    "change": -0.00000531034,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFAED",
+    "price": 4.5973,
+    "change": 0.00659548,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFARS",
+    "price": 1481.93539,
+    "change": -4.00951,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFAUD",
+    "price": 1.91939,
+    "change": 0.00675478,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFBRL",
+    "price": 6.86752,
+    "change": 0.01671887,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFBWP",
+    "price": 16.6694,
+    "change": 0.01740431,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFCAD",
+    "price": 1.71408,
+    "change": 0.00721337,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFCLP",
+    "price": 1177.1752,
+    "change": 12.9152,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFCNY",
+    "price": 8.97731,
+    "change": 0.02271195,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFCZK",
+    "price": 26.41515,
+    "change": -0.05178168,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFDKK",
+    "price": 7.98658,
+    "change": 0.00701025,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFEUR",
+    "price": 1.06805,
+    "change": -0.001218,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFGBP",
+    "price": 0.91239,
+    "change": 0.0013899,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFHKD",
+    "price": 9.83961,
+    "change": 0.0183611,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFHUF",
+    "price": 426.08141,
+    "change": -0.81859,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFIDR",
+    "price": 20319.44731,
+    "change": 80.64731,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFILS",
+    "price": 4.2395,
+    "change": -0.00840875,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFINR",
+    "price": 106.98546,
+    "change": -0.10254,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFISK",
+    "price": 151.71997,
+    "change": 0.09996545,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFJPY",
+    "price": 181.32365,
+    "change": 0.72043,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFKRW",
+    "price": 1707.63287,
+    "change": 12.26287,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFMXN",
+    "price": 23.56296,
+    "change": -0.05464323,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFMYR",
+    "price": 5.29274,
+    "change": 0.00943831,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFNOK",
+    "price": 12.65502,
+    "change": 0.03991114,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFNZD",
+    "price": 2.06954,
+    "change": 0.00384752,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFPKR",
+    "price": 355.08677,
+    "change": 0.76477,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFPLN",
+    "price": 4.53285,
+    "change": 0.00144776,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFRON",
+    "price": 5.42818,
+    "change": 0.00607715,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFRSD",
+    "price": 125.4116,
+    "change": 0.2033,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFRUB",
+    "price": 98.01119,
+    "change": -0.45381,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFSEK",
+    "price": 11.92037,
+    "change": 0.02835146,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFSGD",
+    "price": 1.59949,
+    "change": 0.00433742,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFSZL",
+    "price": 22.32145,
+    "change": 0.01555456,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFTHB",
+    "price": 40.68185,
+    "change": 0.08685091,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFTRY",
+    "price": 49.97396,
+    "change": 0.15176,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFTWD",
+    "price": 36.43364,
+    "change": -0.07435507,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFUSD",
+    "price": 1.25182,
+    "change": 0.0001891325,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFUZS",
+    "price": 15820.05014,
+    "change": 117.78014,
+    "volume": 0
+  },
+  {
+    "symbol": "CHFZAR",
+    "price": 22.37136,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "CLPARS",
+    "price": 1.25889,
+    "change": -0.0110789,
+    "volume": 114
+  },
+  {
+    "symbol": "CLPAUD",
+    "price": 0.00162804,
+    "change": -0.0000049579,
+    "volume": 3225
+  },
+  {
+    "symbol": "CLPBRL",
+    "price": 0.0058339,
+    "change": -0.000007103,
+    "volume": 0
+  },
+  {
+    "symbol": "CLPCHF",
+    "price": 0.0008494912,
+    "change": -0.0000050088,
+    "volume": 677633
+  },
+  {
+    "symbol": "CLPCNY",
+    "price": 0.00762615,
+    "change": -0.0000348523,
+    "volume": 1072
+  },
+  {
+    "symbol": "CLPCOP",
+    "price": 4.35055,
+    "change": 0.0215477,
+    "volume": 268
+  },
+  {
+    "symbol": "CLPEUR",
+    "price": 0.0009072984,
+    "change": -0.0000067016,
+    "volume": 0
+  },
+  {
+    "symbol": "CLPGBP",
+    "price": 0.0007750636,
+    "change": -0.0000029364,
+    "volume": 0
+  },
+  {
+    "symbol": "CLPJPY",
+    "price": 0.1538,
+    "change": -0.0006710011,
+    "volume": 0
+  },
+  {
+    "symbol": "CLPMXN",
+    "price": 0.02001652,
+    "change": -0.0001319751,
+    "volume": 806207
+  },
+  {
+    "symbol": "CLPPEN",
+    "price": 0.00377469,
+    "change": -0.0000183066,
+    "volume": 27
+  },
+  {
+    "symbol": "CLPUSD",
+    "price": 0.00106341,
+    "change": -0.000005593,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHAUD",
+    "price": 0.21356,
+    "change": -0.000002387974,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHEUR",
+    "price": 0.11902,
+    "change": -0.000433582946,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHGBP",
+    "price": 0.10167,
+    "change": -0.000083054509,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHHKD",
+    "price": 1.09515,
+    "change": -0.0001456232,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHIDR",
+    "price": 2264.24031,
+    "change": -0.35969,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHINR",
+    "price": 11.92162,
+    "change": -0.02937752,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHJPY",
+    "price": 20.17461,
+    "change": 0.01861428,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHKRW",
+    "price": 190.28525,
+    "change": 1.05525,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHPHP",
+    "price": 7.89144,
+    "change": -0.0047644,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHSEK",
+    "price": 1.32336,
+    "change": -0.00748537,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHTHB",
+    "price": 4.53327,
+    "change": 0.00386733,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHTWD",
+    "price": 4.05988,
+    "change": -0.01321952,
+    "volume": 0
+  },
+  {
+    "symbol": "CNHUSD",
+    "price": 0.13949,
+    "change": -0.0001733573,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYAUD",
+    "price": 0.21348,
+    "change": 0.00448158,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYBGN",
+    "price": 0.23269,
+    "change": -0.0005549132,
+    "volume": 2
+  },
+  {
+    "symbol": "CNYCAD",
+    "price": 0.19093,
+    "change": 0.00103429,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYCHF",
+    "price": 0.11139,
+    "change": 0.0000919184,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYCLP",
+    "price": 131.1278,
+    "change": 0.6414,
+    "volume": 506
+  },
+  {
+    "symbol": "CNYDKK",
+    "price": 0.88754,
+    "change": -0.00193429,
+    "volume": 401756
+  },
+  {
+    "symbol": "CNYEUR",
+    "price": 0.11897,
+    "change": -0.0002279591,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYGBP",
+    "price": 0.10163,
+    "change": 0.0000423839,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYHKD",
+    "price": 1.09476,
+    "change": -0.0001413131,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYIDR",
+    "price": 2263.42222,
+    "change": -3.63741,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYINR",
+    "price": 11.91732,
+    "change": -0.03718492,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYJPY",
+    "price": 20.16733,
+    "change": 0.039325,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYKRW",
+    "price": 190.2165,
+    "change": 0.6985,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYMYR",
+    "price": 0.58957,
+    "change": -0.000645974272,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYNZD",
+    "price": 0.23029,
+    "change": 0.00429278,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYPLN",
+    "price": 0.50492,
+    "change": -0.0004873928,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYSGD",
+    "price": 0.17796,
+    "change": 0.0004580846,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYTHB",
+    "price": 4.53163,
+    "change": -0.00317058,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYTWD",
+    "price": 4.05841,
+    "change": -0.0166864,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYUSD",
+    "price": 0.13944,
+    "change": -0.0000477773,
+    "volume": 0
+  },
+  {
+    "symbol": "CNYXAG",
+    "price": 0.00422788,
+    "change": 0.000147408895,
+    "volume": 1195
+  },
+  {
+    "symbol": "CNYXAU",
+    "price": 0.0000424405,
+    "change": -0.000003827093,
+    "volume": 1250
+  },
+  {
+    "symbol": "CNYZAR",
+    "price": 2.48643,
+    "change": -0.00457036,
+    "volume": 0
+  },
+  {
+    "symbol": "COPARS",
+    "price": 0.28936,
+    "change": -0.00435618,
+    "volume": 114
+  },
+  {
+    "symbol": "COPBRL",
+    "price": 0.00134096,
+    "change": -0.0000110431,
+    "volume": 0
+  },
+  {
+    "symbol": "COPCAD",
+    "price": 0.0003346919,
+    "change": -0.0000023081,
+    "volume": 805933
+  },
+  {
+    "symbol": "COPCLP",
+    "price": 0.22986,
+    "change": -0.00114388,
+    "volume": 410
+  },
+  {
+    "symbol": "COPDKK",
+    "price": 0.00155578,
+    "change": -0.0000190505,
+    "volume": 401756
+  },
+  {
+    "symbol": "COPEUR",
+    "price": 0.0002085481,
+    "change": -0.0000020519,
+    "volume": 0
+  },
+  {
+    "symbol": "COPGBP",
+    "price": 0.0001781531,
+    "change": -0.0000011769,
+    "volume": 0
+  },
+  {
+    "symbol": "COPMXN",
+    "price": 0.00460092,
+    "change": -0.0000539793,
+    "volume": 806207
+  },
+  {
+    "symbol": "COPPEN",
+    "price": 0.0008710063,
+    "change": -0.000029535513,
+    "volume": 2
+  },
+  {
+    "symbol": "COPUSD",
+    "price": 0.0002444306,
+    "change": -0.0000025694,
+    "volume": 0
+  },
+  {
+    "symbol": "COPZAR",
+    "price": 0.0043585,
+    "change": -0.000058656,
+    "volume": 1050984
+  },
+  {
+    "symbol": "CRCEUR",
+    "price": 0.00169054,
+    "change": 0.000009815336,
+    "volume": 0
+  },
+  {
+    "symbol": "CRCGBP",
+    "price": 0.00144415,
+    "change": 0.0000161547,
+    "volume": 0
+  },
+  {
+    "symbol": "CRCUSD",
+    "price": 0.00198142,
+    "change": 0.0000194171,
+    "volume": 0
+  },
+  {
+    "symbol": "CUPEUR",
+    "price": 0.0355536,
+    "change": -0.000071626758,
+    "volume": 0
+  },
+  {
+    "symbol": "CUPGBP",
+    "price": 0.03039052,
+    "change": 0.000030447723,
+    "volume": 0
+  },
+  {
+    "symbol": "CUPUSD",
+    "price": 0.038,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "CVEEUR",
+    "price": 0.00906906,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "CVEUSD",
+    "price": 0.01062899,
+    "change": 0.0000019973,
+    "volume": 0
+  },
+  {
+    "symbol": "CYPZAR",
+    "price": 33.79532,
+    "change": -0.10794,
+    "volume": 55582
+  },
+  {
+    "symbol": "CZKAUD",
+    "price": 0.07255272,
+    "change": 0.0004107177,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKCAD",
+    "price": 0.06488991,
+    "change": 0.000386269344,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKCHF",
+    "price": 0.03785707,
+    "change": 0.0000740661,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKDKK",
+    "price": 0.30163,
+    "change": 0.0003338321,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKEUR",
+    "price": 0.04043321,
+    "change": -0.000006780759,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKGBP",
+    "price": 0.03454024,
+    "change": 0.000053797397,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKJPY",
+    "price": 6.85396,
+    "change": 0.03636003,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKMXN",
+    "price": 0.91491,
+    "change": 0.04488349,
+    "volume": 38495
+  },
+  {
+    "symbol": "CZKNOK",
+    "price": 0.47783,
+    "change": 0.0012529,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKNZD",
+    "price": 0.07826608,
+    "change": 0.000147183239,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKPLN",
+    "price": 0.1716,
+    "change": 0.00025007731,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKSEK",
+    "price": 0.44959,
+    "change": 0.000211254593,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKUSD",
+    "price": 0.04739009,
+    "change": 0.0000796897,
+    "volume": 0
+  },
+  {
+    "symbol": "CZKZAR",
+    "price": 0.85753,
+    "change": 0.06555314,
+    "volume": 72260
+  },
+  {
+    "symbol": "DJFEUR",
+    "price": 0.00479108,
+    "change": -0.000004849549,
+    "volume": 0
+  },
+  {
+    "symbol": "DJFGBP",
+    "price": 0.0040928,
+    "change": 0.0000108039,
+    "volume": 0
+  },
+  {
+    "symbol": "DJFUSD",
+    "price": 0.00561543,
+    "change": -0.000066387,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKAED",
+    "price": 0.5602,
+    "change": 0.02627076,
+    "volume": 91
+  },
+  {
+    "symbol": "DKKAUD",
+    "price": 0.24053,
+    "change": 0.000666751778,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKBGN",
+    "price": 0.2619,
+    "change": 0.000748994201,
+    "volume": 25
+  },
+  {
+    "symbol": "DKKCAD",
+    "price": 0.21513,
+    "change": 0.0013181,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKCHF",
+    "price": 0.12521,
+    "change": -0.00011,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKCNY",
+    "price": 1.11538,
+    "change": 0.06243502,
+    "volume": 1365
+  },
+  {
+    "symbol": "DKKCOP",
+    "price": 653.27987,
+    "change": 62.49837,
+    "volume": 1
+  },
+  {
+    "symbol": "DKKCZK",
+    "price": 3.31528,
+    "change": -0.00367324,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKEUR",
+    "price": 0.13405,
+    "change": 0.000016170958,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKGBP",
+    "price": 0.11451,
+    "change": 0.000256390438,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKHKD",
+    "price": 1.23348,
+    "change": 0.0054786,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKHUF",
+    "price": 53.47607,
+    "change": -0.03392974,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKINR",
+    "price": 13.42739,
+    "change": 0.00129115,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKISK",
+    "price": 19.04187,
+    "change": 0.0178718,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKJPY",
+    "price": 22.72278,
+    "change": 0.09678272,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKMXN",
+    "price": 2.95731,
+    "change": -0.00820222,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKMYR",
+    "price": 0.67339,
+    "change": 0.02847609,
+    "volume": 128
+  },
+  {
+    "symbol": "DKKNOK",
+    "price": 1.58414,
+    "change": 0.00185806,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKNZD",
+    "price": 0.25947,
+    "change": 0.00109381,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKPHP",
+    "price": 8.69358,
+    "change": 0.36594,
+    "volume": 14730
+  },
+  {
+    "symbol": "DKKPKR",
+    "price": 44.56577,
+    "change": 0.11477,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKPLN",
+    "price": 0.5689,
+    "change": 0.00113275,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKRUB",
+    "price": 12.54748,
+    "change": -0.0003561745,
+    "volume": 55903
+  },
+  {
+    "symbol": "DKKSEK",
+    "price": 1.49051,
+    "change": -0.000823274365,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKSGD",
+    "price": 0.20051,
+    "change": 0.0009076474,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKTHB",
+    "price": 5.10584,
+    "change": 0.06584476,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKTRY",
+    "price": 6.27207,
+    "change": -0.07311061,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKTWD",
+    "price": 4.94643,
+    "change": 0.14988,
+    "volume": 27302
+  },
+  {
+    "symbol": "DKKUAH",
+    "price": 6.30049,
+    "change": 0.29794,
+    "volume": 2
+  },
+  {
+    "symbol": "DKKUSD",
+    "price": 0.15711,
+    "change": 0.0002697537,
+    "volume": 0
+  },
+  {
+    "symbol": "DKKZAR",
+    "price": 2.80149,
+    "change": 0.00529204,
+    "volume": 0
+  },
+  {
+    "symbol": "DOPEUR",
+    "price": 0.01431758,
+    "change": -0.000059947653,
+    "volume": 0
+  },
+  {
+    "symbol": "DOPGBP",
+    "price": 0.01223085,
+    "change": 0.0000188529,
+    "volume": 0
+  },
+  {
+    "symbol": "DOPUSD",
+    "price": 0.01678104,
+    "change": -0.0000359579,
+    "volume": 0
+  },
+  {
+    "symbol": "DZDEUR",
+    "price": 0.00660493,
+    "change": 0.000033941292,
+    "volume": 0
+  },
+  {
+    "symbol": "DZDGBP",
+    "price": 0.00564229,
+    "change": 0.0000497936,
+    "volume": 0
+  },
+  {
+    "symbol": "DZDUSD",
+    "price": 0.00774137,
+    "change": 0.000002271622,
+    "volume": 0
+  },
+  {
+    "symbol": "EGPEUR",
+    "price": 0.01661,
+    "change": -0.00011,
+    "volume": 0
+  },
+  {
+    "symbol": "EGPGBP",
+    "price": 0.0146659,
+    "change": 0.000068745186,
+    "volume": 0
+  },
+  {
+    "symbol": "EGPJPY",
+    "price": 2.91021,
+    "change": 0.03721389,
+    "volume": 0
+  },
+  {
+    "symbol": "EGPPKR",
+    "price": 5.70775,
+    "change": 0.04474788,
+    "volume": 0
+  },
+  {
+    "symbol": "EGPUSD",
+    "price": 0.01965,
+    "change": 0.00002,
+    "volume": 0
+  },
+  {
+    "symbol": "EGPZAR",
+    "price": 0.3588,
+    "change": 0.00310029,
+    "volume": 0
+  },
+  {
+    "symbol": "ETBEUR",
+    "price": 0.00630169,
+    "change": -0.00003194637,
+    "volume": 0
+  },
+  {
+    "symbol": "ETBGBP",
+    "price": 0.00538325,
+    "change": 0.0000642489,
+    "volume": 0
+  },
+  {
+    "symbol": "ETBUSD",
+    "price": 0.00738595,
+    "change": 0.0000169548,
+    "volume": 0
+  },
+  {
+    "symbol": "EURAED",
+    "price": 4.30439,
+    "change": 0.01028579,
+    "volume": 0
+  },
+  {
+    "symbol": "EURAFN",
+    "price": 82.59852,
+    "change": 0.43452,
+    "volume": 0
+  },
+  {
+    "symbol": "EURALL",
+    "price": 98.17475,
+    "change": 1.21475,
+    "volume": 0
+  },
+  {
+    "symbol": "EURAMD",
+    "price": 450.44025,
+    "change": 0.22025,
+    "volume": 0
+  },
+  {
+    "symbol": "EURARS",
+    "price": 1387.51613,
+    "change": -3.15537,
+    "volume": 0
+  },
+  {
+    "symbol": "EURAUD",
+    "price": 1.79438,
+    "change": 0.00758447,
+    "volume": 388462
+  },
+  {
+    "symbol": "EURBAM",
+    "price": 1.95583,
+    "change": -0.01343,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBBD",
+    "price": 2.34412,
+    "change": 0.00611752,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBDT",
+    "price": 143.3282,
+    "change": -0.1288,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBGN",
+    "price": 1.95583,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBHD",
+    "price": 0.44069,
+    "change": -0.0004659065,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBIF",
+    "price": 3489.42703,
+    "change": 59.78703,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBMD",
+    "price": 1.17206,
+    "change": 0.00365876,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBND",
+    "price": 1.4958,
+    "change": 0.00729753,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBOB",
+    "price": 8.09561,
+    "change": 0.11561,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBRL",
+    "price": 6.42997,
+    "change": 0.02186536,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBSD",
+    "price": 1.17206,
+    "change": -0.0000412406,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBTN",
+    "price": 97.94925,
+    "change": 4.46225,
+    "volume": 1
+  },
+  {
+    "symbol": "EURBWP",
+    "price": 15.60734,
+    "change": -0.00556143,
+    "volume": 0
+  },
+  {
+    "symbol": "EURBZD",
+    "price": 2.36111,
+    "change": 0.00101454,
+    "volume": 0
+  },
+  {
+    "symbol": "EURCAD",
+    "price": 1.60487,
+    "change": 0.00938688,
+    "volume": 285673
+  },
+  {
+    "symbol": "EURCDF",
+    "price": 3411.73546,
+    "change": 51.64546,
+    "volume": 0
+  },
+  {
+    "symbol": "EURCHF",
+    "price": 0.93629,
+    "change": 0.00106652,
+    "volume": 270630
+  },
+  {
+    "symbol": "EURCLP",
+    "price": 1102.17328,
+    "change": 12.38328,
+    "volume": 0
+  },
+  {
+    "symbol": "EURCNH",
+    "price": 8.4023,
+    "change": 0.03049925,
+    "volume": 0
+  },
+  {
+    "symbol": "EURCNY",
+    "price": 8.40534,
+    "change": 0.01973618,
+    "volume": 0
+  },
+  {
+    "symbol": "EURCOP",
+    "price": 4795.05741,
+    "change": 62.56741,
+    "volume": 0
+  },
+  {
+    "symbol": "EURCRC",
+    "price": 591.52552,
+    "change": -3.48448,
+    "volume": 0
+  },
+  {
+    "symbol": "EURCUP",
+    "price": 28.12655,
+    "change": 0.0565502,
+    "volume": 0
+  },
+  {
+    "symbol": "EURCVE",
+    "price": 110.265,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "EURCZK",
+    "price": 24.73215,
+    "change": 0.00414693,
+    "volume": 156041
+  },
+  {
+    "symbol": "EURDJF",
+    "price": 208.72105,
+    "change": 0.19105,
+    "volume": 0
+  },
+  {
+    "symbol": "EURDKK",
+    "price": 7.4598,
+    "change": -0.0009,
+    "volume": 0
+  },
+  {
+    "symbol": "EURDOP",
+    "price": 69.84422,
+    "change": 0.28822,
+    "volume": 0
+  },
+  {
+    "symbol": "EURDZD",
+    "price": 151.40196,
+    "change": -0.78204,
+    "volume": 0
+  },
+  {
+    "symbol": "EUREGP",
+    "price": 58.24766,
+    "change": -0.14734,
+    "volume": 0
+  },
+  {
+    "symbol": "EURETB",
+    "price": 158.68751,
+    "change": -0.33949,
+    "volume": 0
+  },
+  {
+    "symbol": "EURFJD",
+    "price": 2.6281,
+    "change": 0.00890465,
+    "volume": 0
+  },
+  {
+    "symbol": "EURGBP",
+    "price": 0.85425,
+    "change": 0.00247435,
+    "volume": 218251
+  },
+  {
+    "symbol": "EURGHS",
+    "price": 12.09953,
+    "change": 0.04472947,
+    "volume": 0
+  },
+  {
+    "symbol": "EURGNF",
+    "price": 10154.73615,
+    "change": 4.73615,
+    "volume": 0
+  },
+  {
+    "symbol": "EURGTQ",
+    "price": 9.01292,
+    "change": 0.0299237,
+    "volume": 0
+  },
+  {
+    "symbol": "EURGYD",
+    "price": 245.18121,
+    "change": 0.96121,
+    "volume": 0
+  },
+  {
+    "symbol": "EURHKD",
+    "price": 9.20181,
+    "change": 0.0245248,
+    "volume": 89275
+  },
+  {
+    "symbol": "EURHNL",
+    "price": 30.62696,
+    "change": 0.05895545,
+    "volume": 0
+  },
+  {
+    "symbol": "EURHRK",
+    "price": 7.5345,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "EURHTG",
+    "price": 153.85119,
+    "change": -1.97981,
+    "volume": 0
+  },
+  {
+    "symbol": "EURHUF",
+    "price": 398.68,
+    "change": -0.51,
+    "volume": 0
+  },
+  {
+    "symbol": "EURIDR",
+    "price": 19024.82464,
+    "change": 87.82464,
+    "volume": 0
+  },
+  {
+    "symbol": "EURILS",
+    "price": 3.96939,
+    "change": 0.00958592,
+    "volume": 0
+  },
+  {
+    "symbol": "EURINR",
+    "price": 100.16904,
+    "change": -0.01206041,
+    "volume": 0
+  },
+  {
+    "symbol": "EURIQD",
+    "price": 1535.79317,
+    "change": 3.29317,
+    "volume": 0
+  },
+  {
+    "symbol": "EURISK",
+    "price": 142.05336,
+    "change": 0.07535868,
+    "volume": 0
+  },
+  {
+    "symbol": "EURJMD",
+    "price": 187.89306,
+    "change": 0.15106,
+    "volume": 0
+  },
+  {
+    "symbol": "EURJOD",
+    "price": 0.83099,
+    "change": 0.00268966,
+    "volume": 0
+  },
+  {
+    "symbol": "EURJPY",
+    "price": 169.51315,
+    "change": 0.68315,
+    "volume": 554622
+  },
+  {
+    "symbol": "EURKES",
+    "price": 151.65594,
+    "change": 0.28294,
+    "volume": 0
+  },
+  {
+    "symbol": "EURKHR",
+    "price": 4694.36201,
+    "change": 10.06201,
+    "volume": 0
+  },
+  {
+    "symbol": "EURKRW",
+    "price": 1598.83364,
+    "change": 14.13364,
+    "volume": 0
+  },
+  {
+    "symbol": "EURKWD",
+    "price": 0.3585,
+    "change": 0.0009752746,
+    "volume": 0
+  },
+  {
+    "symbol": "EURKYD",
+    "price": 0.97429,
+    "change": 0.01284889,
+    "volume": 0
+  },
+  {
+    "symbol": "EURKZT",
+    "price": 608.20297,
+    "change": 0.66956,
+    "volume": 0
+  },
+  {
+    "symbol": "EURLAK",
+    "price": 25245.34751,
+    "change": 128.06751,
+    "volume": 0
+  },
+  {
+    "symbol": "EURLBP",
+    "price": 105332.12859,
+    "change": 545.72859,
+    "volume": 0
+  },
+  {
+    "symbol": "EURLKR",
+    "price": 351.42077,
+    "change": 0.39777,
+    "volume": 0
+  },
+  {
+    "symbol": "EURLRD",
+    "price": 234.5003,
+    "change": 0.5873,
+    "volume": 0
+  },
+  {
+    "symbol": "EURLSL",
+    "price": 20.89928,
+    "change": 0.05787704,
+    "volume": 0
+  },
+  {
+    "symbol": "EURLYD",
+    "price": 6.36354,
+    "change": 0.02623567,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMAD",
+    "price": 10.58287,
+    "change": -0.0047409,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMDL",
+    "price": 19.652,
+    "change": -0.032,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMGA",
+    "price": 5188.27385,
+    "change": -2.32615,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMKD",
+    "price": 61.54871,
+    "change": 0.10271,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMMK",
+    "price": 2459.28427,
+    "change": 3.90427,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMOP",
+    "price": 9.47787,
+    "change": 0.01856924,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMUR",
+    "price": 52.91059,
+    "change": 0.20559,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMVR",
+    "price": 18.10908,
+    "change": 0.03907917,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMWK",
+    "price": 2032.98099,
+    "change": 4.32499,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMXN",
+    "price": 22.06168,
+    "change": -0.03012117,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMYR",
+    "price": 4.95552,
+    "change": 0.00791954,
+    "volume": 0
+  },
+  {
+    "symbol": "EURMZN",
+    "price": 74.66538,
+    "change": 0.33038,
+    "volume": 0
+  },
+  {
+    "symbol": "EURNAD",
+    "price": 20.89928,
+    "change": 0.07927704,
+    "volume": 0
+  },
+  {
+    "symbol": "EURNGN",
+    "price": 1808.51414,
+    "change": 5.61414,
+    "volume": 0
+  },
+  {
+    "symbol": "EURNIO",
+    "price": 43.12774,
+    "change": 0.29674,
+    "volume": 0
+  },
+  {
+    "symbol": "EURNOK",
+    "price": 11.81774,
+    "change": 0.03709135,
+    "volume": 150940
+  },
+  {
+    "symbol": "EURNPR",
+    "price": 160.34559,
+    "change": -0.36741,
+    "volume": 0
+  },
+  {
+    "symbol": "EURNZD",
+    "price": 1.93569,
+    "change": 0.00420819,
+    "volume": 176154
+  },
+  {
+    "symbol": "EUROMR",
+    "price": 0.44995,
+    "change": -0.0005755946,
+    "volume": 0
+  },
+  {
+    "symbol": "EURPAB",
+    "price": 1.17206,
+    "change": 0.00365876,
+    "volume": 0
+  },
+  {
+    "symbol": "EURPEN",
+    "price": 4.16037,
+    "change": 0.00696615,
+    "volume": 0
+  },
+  {
+    "symbol": "EURPGK",
+    "price": 4.78153,
+    "change": 0.04352926,
+    "volume": 0
+  },
+  {
+    "symbol": "EURPHP",
+    "price": 66.3062,
+    "change": 0.02620339,
+    "volume": 0
+  },
+  {
+    "symbol": "EURPKR",
+    "price": 332.46295,
+    "change": 0.65195,
+    "volume": 0
+  },
+  {
+    "symbol": "EURPLN",
+    "price": 4.2379,
+    "change": -0.0007,
+    "volume": 0
+  },
+  {
+    "symbol": "EURPYG",
+    "price": 9337.9554,
+    "change": -0.7646,
+    "volume": 0
+  },
+  {
+    "symbol": "EURQAR",
+    "price": 4.26629,
+    "change": 0.00739388,
+    "volume": 0
+  },
+  {
+    "symbol": "EURRON",
+    "price": 5.08233,
+    "change": 0.01062911,
+    "volume": 0
+  },
+  {
+    "symbol": "EURRSD",
+    "price": 117.42119,
+    "change": 0.54209,
+    "volume": 0
+  },
+  {
+    "symbol": "EURRUB",
+    "price": 91.76655,
+    "change": -0.38545,
+    "volume": 0
+  },
+  {
+    "symbol": "EURRWF",
+    "price": 1685.33037,
+    "change": 4.71037,
+    "volume": 0
+  },
+  {
+    "symbol": "EURSAR",
+    "price": 4.39522,
+    "change": 0.00952035,
+    "volume": 0
+  },
+  {
+    "symbol": "EURSCR",
+    "price": 17.383,
+    "change": 0.3376,
+    "volume": 0
+  },
+  {
+    "symbol": "EURSDG",
+    "price": 703.82719,
+    "change": 3.01069,
+    "volume": 0
+  },
+  {
+    "symbol": "EURSEK",
+    "price": 11.1193,
+    "change": 0.00809791,
+    "volume": 95787
+  },
+  {
+    "symbol": "EURSGD",
+    "price": 1.4925,
+    "change": 0.00302,
+    "volume": 0
+  },
+  {
+    "symbol": "EURSLL",
+    "price": 26605.76,
+    "change": 2.62,
+    "volume": 0
+  },
+  {
+    "symbol": "EURSOS",
+    "price": 667.86082,
+    "change": -1.19918,
+    "volume": 0
+  },
+  {
+    "symbol": "EURSVC",
+    "price": 10.25551,
+    "change": 0.03351414,
+    "volume": 0
+  },
+  {
+    "symbol": "EURSZL",
+    "price": 20.89928,
+    "change": 0.03447704,
+    "volume": 0
+  },
+  {
+    "symbol": "EURTHB",
+    "price": 38.08987,
+    "change": 0.15587,
+    "volume": 0
+  },
+  {
+    "symbol": "EURTJS",
+    "price": 11.55145,
+    "change": 0.04245291,
+    "volume": 0
+  },
+  {
+    "symbol": "EURTND",
+    "price": 3.37857,
+    "change": 0.0027718,
+    "volume": 0
+  },
+  {
+    "symbol": "EURTRY",
+    "price": 46.78995,
+    "change": 0.12575,
+    "volume": 54272
+  },
+  {
+    "symbol": "EURTTD",
+    "price": 7.95825,
+    "change": -0.0234507,
+    "volume": 0
+  },
+  {
+    "symbol": "EURTWD",
+    "price": 34.11233,
+    "change": -0.05467766,
+    "volume": 0
+  },
+  {
+    "symbol": "EURTZS",
+    "price": 3090.96941,
+    "change": 22.33941,
+    "volume": 0
+  },
+  {
+    "symbol": "EURUAH",
+    "price": 48.8618,
+    "change": -0.03450084,
+    "volume": 0
+  },
+  {
+    "symbol": "EURUGX",
+    "price": 4216.17263,
+    "change": 11.77263,
+    "volume": 0
+  },
+  {
+    "symbol": "EURUSD",
+    "price": 1.17206,
+    "change": 0.00205766,
+    "volume": 293609
+  },
+  {
+    "symbol": "EURUYU",
+    "price": 47.12582,
+    "change": -0.04018139,
+    "volume": 0
+  },
+  {
+    "symbol": "EURUZS",
+    "price": 14812.09971,
+    "change": 82.25971,
+    "volume": 0
+  },
+  {
+    "symbol": "EURVND",
+    "price": 30470.82769,
+    "change": -66.17231,
+    "volume": 0
+  },
+  {
+    "symbol": "EURXAF",
+    "price": 655.957,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "EURXAG",
+    "price": 0.03521792,
+    "change": 0.00313445,
+    "volume": 2269
+  },
+  {
+    "symbol": "EURXAU",
+    "price": 0.0003535266,
+    "change": -0.000010063489,
+    "volume": 2474
+  },
+  {
+    "symbol": "EURXOF",
+    "price": 655.957,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "EURXPF",
+    "price": 119.33,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "EURYER",
+    "price": 284.09261,
+    "change": 0.70261,
+    "volume": 0
+  },
+  {
+    "symbol": "EURZAR",
+    "price": 20.89928,
+    "change": 0.04544704,
+    "volume": 184128
+  },
+  {
+    "symbol": "EURZMW",
+    "price": 27.83559,
+    "change": 0.10389,
+    "volume": 0
+  },
+  {
+    "symbol": "FJDAUD",
+    "price": 0.68277,
+    "change": 0.00535253,
+    "volume": 0
+  },
+  {
+    "symbol": "FJDEUR",
+    "price": 0.3805,
+    "change": 0.00300141,
+    "volume": 0
+  },
+  {
+    "symbol": "FJDGBP",
+    "price": 0.32505,
+    "change": 0.00288084,
+    "volume": 0
+  },
+  {
+    "symbol": "FJDUSD",
+    "price": 0.44597,
+    "change": 0.000933285585,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPAED",
+    "price": 5.03876,
+    "change": -0.01582591,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPAFN",
+    "price": 96.69078,
+    "change": 0.28878,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPALL",
+    "price": 114.92449,
+    "change": -0.15551,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPAMD",
+    "price": 527.29055,
+    "change": -0.41945,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPARS",
+    "price": 1624.24238,
+    "change": -7.62912,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPAUD",
+    "price": 2.10017,
+    "change": 0.00303,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPAWG",
+    "price": 2.45593,
+    "change": -0.02847435,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBAM",
+    "price": 2.28952,
+    "change": -0.00478284,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBBD",
+    "price": 2.7419,
+    "change": -0.0027,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBDT",
+    "price": 167.78165,
+    "change": -0.53235,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBGN",
+    "price": 2.28952,
+    "change": -0.00178284,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBHD",
+    "price": 0.51588,
+    "change": -0.00111841,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBIF",
+    "price": 4084.76354,
+    "change": 60.88354,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBMD",
+    "price": 1.3725,
+    "change": 0.000795196267,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBND",
+    "price": 1.751,
+    "change": 0.00349784,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBOB",
+    "price": 9.47682,
+    "change": -0.00658182,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBRL",
+    "price": 7.52699,
+    "change": 0.00479162,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBSD",
+    "price": 1.37203,
+    "change": -0.0032745,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBTN",
+    "price": 113.44158,
+    "change": 1.95509,
+    "volume": 1
+  },
+  {
+    "symbol": "GBPBWP",
+    "price": 18.27013,
+    "change": -0.02616943,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPBZD",
+    "price": 2.76395,
+    "change": -0.00525209,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPCAD",
+    "price": 1.8763,
+    "change": 0.00359,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPCDF",
+    "price": 3993.81689,
+    "change": 51.52689,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPCHF",
+    "price": 1.09603,
+    "change": -0.0016722,
+    "volume": 141442
+  },
+  {
+    "symbol": "GBPCLP",
+    "price": 1290.21675,
+    "change": 11.07675,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPCNH",
+    "price": 9.83583,
+    "change": 0.00802842,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPCNY",
+    "price": 9.83938,
+    "change": 0.0006834873,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPCOP",
+    "price": 5613.14951,
+    "change": 59.34951,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPCRC",
+    "price": 692.4466,
+    "change": -5.6734,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPCUP",
+    "price": 32.905,
+    "change": -0.033,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPCZK",
+    "price": 28.95174,
+    "change": -0.04516352,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPDJF",
+    "price": 244.33127,
+    "change": -0.31873,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPDKK",
+    "price": 8.73282,
+    "change": -0.01959678,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPDOP",
+    "price": 81.76045,
+    "change": 0.15145,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPDZD",
+    "price": 177.23288,
+    "change": -1.57802,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPEGP",
+    "price": 68.18538,
+    "change": -0.33782,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPETB",
+    "price": 185.76143,
+    "change": -0.81357,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPEUR",
+    "price": 1.17061,
+    "change": -0.00340053,
+    "volume": 83309
+  },
+  {
+    "symbol": "GBPFJD",
+    "price": 3.07649,
+    "change": 0.00188962,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPGHS",
+    "price": 14.16385,
+    "change": 0.02024877,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPGNF",
+    "price": 11887.25128,
+    "change": -28.32872,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPGTQ",
+    "price": 10.55063,
+    "change": 0.00963245,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPGYD",
+    "price": 287.01195,
+    "change": 0.46195,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPHKD",
+    "price": 10.764,
+    "change": -0.01,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPHNL",
+    "price": 35.85227,
+    "change": -0.01373266,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPHRK",
+    "price": 8.466,
+    "change": -0.006,
+    "volume": null
+  },
+  {
+    "symbol": "GBPHTG",
+    "price": 180.09997,
+    "change": -2.73303,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPHUF",
+    "price": 466.99707,
+    "change": -1.75293,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPIDR",
+    "price": 22270.67917,
+    "change": 49.44917,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPILS",
+    "price": 4.64661,
+    "change": -0.00639105,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPINR",
+    "price": 117.25903,
+    "change": -0.31547,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPIQD",
+    "price": 1797.81721,
+    "change": 1.31721,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPISK",
+    "price": 166.2893,
+    "change": -0.2607,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPJMD",
+    "price": 219.94978,
+    "change": -0.44622,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPJOD",
+    "price": 0.97277,
+    "change": 0.000766082,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPJPY",
+    "price": 198.39,
+    "change": 0.195,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPKES",
+    "price": 177.5302,
+    "change": 0.3202,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPKHR",
+    "price": 5495.27432,
+    "change": -0.82568,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPKMF",
+    "price": 575.90312,
+    "change": -0.94688,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPKRW",
+    "price": 1871.6131,
+    "change": -8.08615,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPKWD",
+    "price": 0.41966,
+    "change": 0.0010587,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPKYD",
+    "price": 1.1234,
+    "change": -0.0012,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPKZT",
+    "price": 711.96942,
+    "change": 1.44942,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPLAK",
+    "price": 29552.495,
+    "change": 84.195,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPLBP",
+    "price": 123303.00475,
+    "change": 359.90475,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPLKR",
+    "price": 411.37721,
+    "change": 0.19721,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPLRD",
+    "price": 274.50875,
+    "change": 0.05635348,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPLSL",
+    "price": 24.46493,
+    "change": 0.02893478,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPLYD",
+    "price": 7.44923,
+    "change": 0.01542826,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMAD",
+    "price": 12.38843,
+    "change": 0.00643157,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMDL",
+    "price": 23.007,
+    "change": -0.089,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMGA",
+    "price": 6073.45322,
+    "change": -16.64678,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMKD",
+    "price": 72.04963,
+    "change": -0.09037122,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMMK",
+    "price": 2878.86654,
+    "change": -2.01346,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMOP",
+    "price": 11.0949,
+    "change": 0.00690306,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMUR",
+    "price": 61.93775,
+    "change": 0.09874958,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMVR",
+    "price": 21.1987,
+    "change": -0.01430304,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMWK",
+    "price": 2379.83099,
+    "change": -0.31901,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMXN",
+    "price": 25.82566,
+    "change": -0.10614,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPMYR",
+    "price": 5.80099,
+    "change": -0.00401166,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPNGN",
+    "price": 2117.06751,
+    "change": 1.77751,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPNIO",
+    "price": 50.22,
+    "change": -0.053,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPNOK",
+    "price": 13.8235,
+    "change": -0.01216003,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPNPR",
+    "price": 187.7024,
+    "change": -0.6576,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPNZD",
+    "price": 2.26409,
+    "change": -0.00309,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPOMR",
+    "price": 0.52672,
+    "change": -0.0009781828,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPPAB",
+    "price": 1.3703,
+    "change": -0.0014,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPPEN",
+    "price": 4.87017,
+    "change": -0.00302739,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPPGK",
+    "price": 5.59731,
+    "change": 0.0413133,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPPHP",
+    "price": 77.61881,
+    "change": -0.15419,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPPKR",
+    "price": 389.18497,
+    "change": -0.11803,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPPLN",
+    "price": 4.96813,
+    "change": 0.0009671635,
+    "volume": 63301
+  },
+  {
+    "symbol": "GBPPYG",
+    "price": 10931.11831,
+    "change": -25.68169,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPQAR",
+    "price": 4.99417,
+    "change": -0.00282717,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPRON",
+    "price": 5.94943,
+    "change": -0.00406692,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPRSD",
+    "price": 137.4546,
+    "change": 0.3286,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPRUB",
+    "price": 107.42298,
+    "change": -0.71302,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPRWF",
+    "price": 1972.86717,
+    "change": 1.04717,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPSAR",
+    "price": 5.1451,
+    "change": 0.0006956382,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPSCR",
+    "price": 20.3448,
+    "change": 0.3397,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPSEK",
+    "price": 13.01638,
+    "change": -0.02222161,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPSGD",
+    "price": 1.7485,
+    "change": -0.00128128,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPSLL",
+    "price": 31144.47,
+    "change": -68.04,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPSOS",
+    "price": 781.80557,
+    "change": -2.98443,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPSVC",
+    "price": 11.989,
+    "change": -0.012,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPSZL",
+    "price": 24.46493,
+    "change": -0.05809475,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPTHB",
+    "price": 44.58844,
+    "change": 0.01443964,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPTND",
+    "price": 3.955,
+    "change": -0.00590488,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPTRY",
+    "price": 56.24297,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPTTD",
+    "price": 9.31602,
+    "change": -0.04888156,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPTWD",
+    "price": 39.93229,
+    "change": -0.15471,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPTZS",
+    "price": 3618.32445,
+    "change": 18.01445,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPUAH",
+    "price": 57.19819,
+    "change": -0.16921,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPUGX",
+    "price": 4935.50032,
+    "change": 2.40032,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPUSD",
+    "price": 1.37203,
+    "change": -0.0008841965,
+    "volume": 280493
+  },
+  {
+    "symbol": "GBPUYU",
+    "price": 55.16603,
+    "change": -0.17397,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPVND",
+    "price": 36496.35036,
+    "change": 666.80036,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPXAF",
+    "price": 767.87083,
+    "change": -1.88917,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPXAG",
+    "price": 0.04078353,
+    "change": 0.00243997,
+    "volume": 961
+  },
+  {
+    "symbol": "GBPXAU",
+    "price": 0.0004093939,
+    "change": -0.00002487891,
+    "volume": 1166
+  },
+  {
+    "symbol": "GBPXCD",
+    "price": 3.7019,
+    "change": -0.0038,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPXPF",
+    "price": 139.69111,
+    "change": -0.23889,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPYER",
+    "price": 332.56209,
+    "change": 0.35209,
+    "volume": 0
+  },
+  {
+    "symbol": "GBPZAR",
+    "price": 24.46493,
+    "change": 0.00425478,
+    "volume": 93555
+  },
+  {
+    "symbol": "GBPZMW",
+    "price": 32.58466,
+    "change": 0.05695709,
+    "volume": 0
+  },
+  {
+    "symbol": "GELUSD",
+    "price": 0.36851,
+    "change": 0.00016287,
+    "volume": 0
+  },
+  {
+    "symbol": "GHSEUR",
+    "price": 0.0778,
+    "change": -0.0011,
+    "volume": 0
+  },
+  {
+    "symbol": "GHSGBP",
+    "price": 0.07060228,
+    "change": 0.0003022788,
+    "volume": 0
+  },
+  {
+    "symbol": "GHSUSD",
+    "price": 0.09686813,
+    "change": -0.0001538729,
+    "volume": 0
+  },
+  {
+    "symbol": "GHSZAR",
+    "price": 1.678,
+    "change": -0.016,
+    "volume": 0
+  },
+  {
+    "symbol": "GMDUSD",
+    "price": 0.01449275,
+    "change": 0.00020704,
+    "volume": 0
+  },
+  {
+    "symbol": "GNFEUR",
+    "price": 0.0000984762,
+    "change": -4.5967e-8,
+    "volume": 0
+  },
+  {
+    "symbol": "GNFGBP",
+    "price": 0.0000841237,
+    "change": 1.99963e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "GNFUSD",
+    "price": 0.0001154199,
+    "change": -4.6838e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "GTQEUR",
+    "price": 0.11095,
+    "change": -0.00040678661,
+    "volume": 0
+  },
+  {
+    "symbol": "GTQGBP",
+    "price": 0.09478105,
+    "change": -0.00011361902,
+    "volume": 0
+  },
+  {
+    "symbol": "GTQUSD",
+    "price": 0.13004,
+    "change": -0.000047985,
+    "volume": 0
+  },
+  {
+    "symbol": "GYDEUR",
+    "price": 0.00407862,
+    "change": -0.000016555792,
+    "volume": 0
+  },
+  {
+    "symbol": "GYDGBP",
+    "price": 0.00348418,
+    "change": -0.000005982355,
+    "volume": 0
+  },
+  {
+    "symbol": "GYDUSD",
+    "price": 0.00478038,
+    "change": 0.0000303776,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDARS",
+    "price": 138.62848,
+    "change": 1.41287,
+    "volume": 1372
+  },
+  {
+    "symbol": "HKDAUD",
+    "price": 0.19502,
+    "change": 0.00042,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDBRL",
+    "price": 0.69877,
+    "change": 0.0009014379,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDCAD",
+    "price": 0.17425,
+    "change": 0.00045,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDCHF",
+    "price": 0.10163,
+    "change": -0.00019,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDCNH",
+    "price": 0.91311,
+    "change": 0.00104328,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDCNY",
+    "price": 0.91344,
+    "change": 0.0008433113,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDDKK",
+    "price": 0.81072,
+    "change": -0.00361692,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDEUR",
+    "price": 0.10867,
+    "change": -0.000290413992,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDGBP",
+    "price": 0.09290227,
+    "change": 0.000162266815,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDIDR",
+    "price": 2067.50788,
+    "change": 5.80788,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDINR",
+    "price": 10.88579,
+    "change": -0.02840825,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDJPY",
+    "price": 18.4265,
+    "change": -0.0543723,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDKRW",
+    "price": 173.75199,
+    "change": 1.50199,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDMXN",
+    "price": 2.39754,
+    "change": -0.0103043,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDMYR",
+    "price": 0.53854,
+    "change": -0.000152804,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDNZD",
+    "price": 0.21009,
+    "change": -0.00004,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDPKR",
+    "price": 36.13015,
+    "change": 0.00815039,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDPLN",
+    "price": 0.46122,
+    "change": -0.0003418218,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDSEK",
+    "price": 1.20838,
+    "change": -0.00550589,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDSGD",
+    "price": 0.16249,
+    "change": 0.00024,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDTHB",
+    "price": 4.13939,
+    "change": 0.00358658,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDTWD",
+    "price": 3.70713,
+    "change": -0.02004032,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDUSD",
+    "price": 0.12739,
+    "change": -0.0000146,
+    "volume": 0
+  },
+  {
+    "symbol": "HKDXAG",
+    "price": 0.00398554,
+    "change": 0.000182891279,
+    "volume": 2512
+  },
+  {
+    "symbol": "HKDXAU",
+    "price": 0.0000400077,
+    "change": -0.000003082598,
+    "volume": 2517
+  },
+  {
+    "symbol": "HKDZAR",
+    "price": 2.27121,
+    "change": -0.00738747,
+    "volume": 0
+  },
+  {
+    "symbol": "HNLEUR",
+    "price": 0.03265098,
+    "change": -0.00006618375,
+    "volume": 0
+  },
+  {
+    "symbol": "HNLGBP",
+    "price": 0.02789224,
+    "change": 0.000008347224,
+    "volume": 0
+  },
+  {
+    "symbol": "HNLUSD",
+    "price": 0.03826886,
+    "change": 0.0000048629,
+    "volume": 0
+  },
+  {
+    "symbol": "HRKEUR",
+    "price": 0.13272,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "HRKGBP",
+    "price": 0.11812,
+    "change": 0.000083654063,
+    "volume": null
+  },
+  {
+    "symbol": "HRKUSD",
+    "price": 0.14264,
+    "change": 0.00108835,
+    "volume": null
+  },
+  {
+    "symbol": "HTGEUR",
+    "price": 0.00649979,
+    "change": 0.000082496652,
+    "volume": 0
+  },
+  {
+    "symbol": "HTGGBP",
+    "price": 0.00555247,
+    "change": 0.000082909812,
+    "volume": 0
+  },
+  {
+    "symbol": "HTGUSD",
+    "price": 0.00761813,
+    "change": 0.0001131328,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFAUD",
+    "price": 0.00449795,
+    "change": 0.000019063029,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFCAD",
+    "price": 0.00402289,
+    "change": 0.0000228854,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFCHF",
+    "price": 0.00234697,
+    "change": 0.000004500338,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFDKK",
+    "price": 0.01869995,
+    "change": 0.000011857317,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFEUR",
+    "price": 0.00250828,
+    "change": 0.000003204543,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFGBP",
+    "price": 0.00214134,
+    "change": 0.000008007767,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFJPY",
+    "price": 0.42491,
+    "change": 0.00260497,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFNZD",
+    "price": 0.00485215,
+    "change": 0.000013750577,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFPLN",
+    "price": 0.01063845,
+    "change": 0.000015639016,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFUSD",
+    "price": 0.00293797,
+    "change": 0.0000091164,
+    "volume": 0
+  },
+  {
+    "symbol": "HUFZAR",
+    "price": 0.05248391,
+    "change": 0.00287141,
+    "volume": 52620
+  },
+  {
+    "symbol": "IDRAUD",
+    "price": 0.0000943181,
+    "change": 3.181e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRCAD",
+    "price": 0.0000843565,
+    "change": 3.565e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRCHF",
+    "price": 0.0000492139,
+    "change": 2.139e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRCNH",
+    "price": 0.0004416492,
+    "change": 7.0113e-8,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRCNY",
+    "price": 0.0004418089,
+    "change": 8.089e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IDREUR",
+    "price": 0.0000525629,
+    "change": -4.371e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRGBP",
+    "price": 0.0000449021,
+    "change": -9.79e-8,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRHKD",
+    "price": 0.0004836741,
+    "change": -3.259e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRINR",
+    "price": 0.00526518,
+    "change": -0.0000198246,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRJPY",
+    "price": 0.0089101,
+    "change": 0.000015103,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRKRW",
+    "price": 0.08403934,
+    "change": 0.0003333365,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRMYR",
+    "price": 0.0002604765,
+    "change": -5.235e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRNZD",
+    "price": 0.0001017454,
+    "change": -2.546e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRSGD",
+    "price": 0.0000786235,
+    "change": -3.765e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRTHB",
+    "price": 0.00200211,
+    "change": -0.000001886,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRTWD",
+    "price": 0.00179304,
+    "change": -0.0000029569,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRUSD",
+    "price": 0.0000616068,
+    "change": -3.932e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IDRZAR",
+    "price": 0.00109853,
+    "change": -0.0000034733,
+    "volume": 0
+  },
+  {
+    "symbol": "ILSAED",
+    "price": 0.99689,
+    "change": -0.00522927,
+    "volume": 1186
+  },
+  {
+    "symbol": "ILSAUD",
+    "price": 0.45206,
+    "change": 0.00109765,
+    "volume": 0
+  },
+  {
+    "symbol": "ILSCAD",
+    "price": 0.40431,
+    "change": 0.00154006,
+    "volume": 0
+  },
+  {
+    "symbol": "ILSCHF",
+    "price": 0.23588,
+    "change": 0.000466919,
+    "volume": 0
+  },
+  {
+    "symbol": "ILSEUR",
+    "price": 0.25193,
+    "change": -0.00060986997,
+    "volume": 0
+  },
+  {
+    "symbol": "ILSGBP",
+    "price": 0.21521,
+    "change": 0.000295599268,
+    "volume": 0
+  },
+  {
+    "symbol": "ILSJOD",
+    "price": 0.19246,
+    "change": -0.00102366,
+    "volume": 1181
+  },
+  {
+    "symbol": "ILSJPY",
+    "price": 42.70513,
+    "change": -0.12142,
+    "volume": 0
+  },
+  {
+    "symbol": "ILSNOK",
+    "price": 2.86086,
+    "change": -0.05366734,
+    "volume": 154608
+  },
+  {
+    "symbol": "ILSPLN",
+    "price": 1.06919,
+    "change": 0.0004041632,
+    "volume": 0
+  },
+  {
+    "symbol": "ILSSEK",
+    "price": 2.80126,
+    "change": -0.04126015,
+    "volume": 0
+  },
+  {
+    "symbol": "ILSUSD",
+    "price": 0.29527,
+    "change": 0.0006845797,
+    "volume": 0
+  },
+  {
+    "symbol": "ILSZAR",
+    "price": 5.13334,
+    "change": 0.14559,
+    "volume": 137285
+  },
+  {
+    "symbol": "INRAED",
+    "price": 0.04297122,
+    "change": 0.0001472196,
+    "volume": 0
+  },
+  {
+    "symbol": "INRAUD",
+    "price": 0.01791356,
+    "change": 0.0001135637,
+    "volume": 0
+  },
+  {
+    "symbol": "INRCAD",
+    "price": 0.01602159,
+    "change": 0.000131586,
+    "volume": 0
+  },
+  {
+    "symbol": "INRCHF",
+    "price": 0.00934707,
+    "change": 0.000047065,
+    "volume": 0
+  },
+  {
+    "symbol": "INRCNH",
+    "price": 0.0838812,
+    "change": 0.000206193824,
+    "volume": 0
+  },
+  {
+    "symbol": "INRCNY",
+    "price": 0.08391152,
+    "change": 0.0007115181,
+    "volume": 0
+  },
+  {
+    "symbol": "INRDKK",
+    "price": 0.07447463,
+    "change": 0.000016684748,
+    "volume": 0
+  },
+  {
+    "symbol": "INREUR",
+    "price": 0.00998312,
+    "change": 0.0000051246,
+    "volume": 0
+  },
+  {
+    "symbol": "INRGBP",
+    "price": 0.00852813,
+    "change": 0.0000301276,
+    "volume": 0
+  },
+  {
+    "symbol": "INRHKD",
+    "price": 0.09186286,
+    "change": 0.0004628634,
+    "volume": 0
+  },
+  {
+    "symbol": "INRIDR",
+    "price": 189.92719,
+    "change": 0.24586,
+    "volume": 0
+  },
+  {
+    "symbol": "INRJPY",
+    "price": 1.69227,
+    "change": 0.00877086,
+    "volume": 0
+  },
+  {
+    "symbol": "INRKRW",
+    "price": 15.96136,
+    "change": 0.11136,
+    "volume": 0
+  },
+  {
+    "symbol": "INRMYR",
+    "price": 0.04947157,
+    "change": 0.0004715689,
+    "volume": 0
+  },
+  {
+    "symbol": "INRNOK",
+    "price": 0.1226,
+    "change": -0.000324031556,
+    "volume": 24231
+  },
+  {
+    "symbol": "INRNZD",
+    "price": 0.0189,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "INRPKR",
+    "price": 3.31902,
+    "change": 0.01141907,
+    "volume": 0
+  },
+  {
+    "symbol": "INRSEK",
+    "price": 0.11101,
+    "change": 0.000098785959,
+    "volume": 0
+  },
+  {
+    "symbol": "INRSGD",
+    "price": 0.01493273,
+    "change": 0.000102733,
+    "volume": 0
+  },
+  {
+    "symbol": "INRTHB",
+    "price": 0.38026,
+    "change": 0.0015559,
+    "volume": 0
+  },
+  {
+    "symbol": "INRTWD",
+    "price": 0.34055,
+    "change": 0.0005476464,
+    "volume": 0
+  },
+  {
+    "symbol": "INRUSD",
+    "price": 0.01170081,
+    "change": 0.0000328086,
+    "volume": 0
+  },
+  {
+    "symbol": "INRXAG",
+    "price": 0.0003596309,
+    "change": 0.000019211162,
+    "volume": 1255
+  },
+  {
+    "symbol": "INRXAU",
+    "price": 0.0000036082,
+    "change": -2.47871e-7,
+    "volume": 1257
+  },
+  {
+    "symbol": "INRZAR",
+    "price": 0.20864,
+    "change": 0.000370086,
+    "volume": 0
+  },
+  {
+    "symbol": "IQDEUR",
+    "price": 0.0006511293,
+    "change": -0.00000144183,
+    "volume": 0
+  },
+  {
+    "symbol": "IQDGBP",
+    "price": 0.0005562301,
+    "change": -5.62773e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "IQDUSD",
+    "price": 0.0007631618,
+    "change": 0.0000041618,
+    "volume": 0
+  },
+  {
+    "symbol": "ISKCAD",
+    "price": 0.01129763,
+    "change": 0.000041316592,
+    "volume": 0
+  },
+  {
+    "symbol": "ISKCHF",
+    "price": 0.00659109,
+    "change": 0.0000210903,
+    "volume": 0
+  },
+  {
+    "symbol": "ISKDKK",
+    "price": 0.05251585,
+    "change": 0.0001458456,
+    "volume": 0
+  },
+  {
+    "symbol": "ISKEUR",
+    "price": 0.00703961,
+    "change": 0.0000286083,
+    "volume": 0
+  },
+  {
+    "symbol": "ISKGBP",
+    "price": 0.00601362,
+    "change": 0.000024616,
+    "volume": 0
+  },
+  {
+    "symbol": "ISKJPY",
+    "price": 1.19331,
+    "change": 0.00169509,
+    "volume": 0
+  },
+  {
+    "symbol": "ISKNOK",
+    "price": 0.08319227,
+    "change": 0.000121992445,
+    "volume": 0
+  },
+  {
+    "symbol": "ISKSEK",
+    "price": 0.0782755,
+    "change": 0.000563347419,
+    "volume": 0
+  },
+  {
+    "symbol": "ISKUSD",
+    "price": 0.00825083,
+    "change": 0.0000168345,
+    "volume": 0
+  },
+  {
+    "symbol": "JMDEUR",
+    "price": 0.00532218,
+    "change": -0.000004282351,
+    "volume": 0
+  },
+  {
+    "symbol": "JMDGBP",
+    "price": 0.00454649,
+    "change": 0.0000144923,
+    "volume": 0
+  },
+  {
+    "symbol": "JMDUSD",
+    "price": 0.0062379,
+    "change": 0.0000129034,
+    "volume": 0
+  },
+  {
+    "symbol": "JODAED",
+    "price": 5.17983,
+    "change": 0.00430782,
+    "volume": 90
+  },
+  {
+    "symbol": "JODEUR",
+    "price": 1.20338,
+    "change": 0.00258441,
+    "volume": 0
+  },
+  {
+    "symbol": "JODGBP",
+    "price": 1.028,
+    "change": -0.00102195,
+    "volume": 0
+  },
+  {
+    "symbol": "JODILS",
+    "price": 5.19599,
+    "change": 0.03081901,
+    "volume": 1189
+  },
+  {
+    "symbol": "JODUSD",
+    "price": 1.41044,
+    "change": -0.0000627645,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYAED",
+    "price": 0.02539264,
+    "change": 0.000462637,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYARS",
+    "price": 8.1853,
+    "change": -0.047136,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYAUD",
+    "price": 0.010581,
+    "change": -0.000002466509,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYBDT",
+    "price": 0.84553,
+    "change": -0.00328147,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYBRL",
+    "price": 0.03793196,
+    "change": 0.0001019569,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYCAD",
+    "price": 0.009454,
+    "change": 0.000009,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYCHF",
+    "price": 0.005515,
+    "change": -0.0000219993,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYCLP",
+    "price": 6.50199,
+    "change": 0.05169291,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYCNH",
+    "price": 0.04956724,
+    "change": -0.000045775856,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYCNY",
+    "price": 0.04958516,
+    "change": -0.0000048418,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYCZK",
+    "price": 0.1459,
+    "change": -0.0003989448,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYDKK",
+    "price": 0.04400869,
+    "change": -0.000188247172,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYEGP",
+    "price": 0.34362,
+    "change": -0.00170264,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYEUR",
+    "price": 0.00589925,
+    "change": -0.000023870429,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYGBP",
+    "price": 0.00504058,
+    "change": -0.00000495932,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYHKD",
+    "price": 0.05426967,
+    "change": 0.00015966597,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYHUF",
+    "price": 2.35341,
+    "change": -0.01451674,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYIDR",
+    "price": 112.23215,
+    "change": 0.09214858,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYILS",
+    "price": 0.02341639,
+    "change": 0.0000663898,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYINR",
+    "price": 0.59092,
+    "change": -0.00217805,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYISK",
+    "price": 0.83801,
+    "change": -0.00119208,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYKRW",
+    "price": 9.43192,
+    "change": 0.0659153,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYMXN",
+    "price": 0.13015,
+    "change": -0.000905707943,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYMYR",
+    "price": 0.02923384,
+    "change": -0.0000161639,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYNGN",
+    "price": 10.66887,
+    "change": 0.00327246,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYNOK",
+    "price": 0.06963,
+    "change": 0.000124,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYNZD",
+    "price": 0.01141526,
+    "change": -0.000018735508,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYPHP",
+    "price": 0.39116,
+    "change": 0.0016567,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYPKR",
+    "price": 1.96128,
+    "change": -0.0005187691,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYPLN",
+    "price": 0.02503667,
+    "change": -0.000099065658,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYRSD",
+    "price": 0.6927,
+    "change": -0.000103349,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYRUB",
+    "price": 0.54135,
+    "change": -0.0002463995,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYSAR",
+    "price": 0.02592849,
+    "change": 0.0004484925,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYSEK",
+    "price": 0.06559549,
+    "change": 0.00030549,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYSGD",
+    "price": 0.00882106,
+    "change": -0.000005839702,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYTHB",
+    "price": 0.2247,
+    "change": 0.00230156,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYTRY",
+    "price": 0.27603,
+    "change": 0.0001244822,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYTWD",
+    "price": 0.20124,
+    "change": 0.00143708,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYUSD",
+    "price": 0.00691491,
+    "change": -0.000012263,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYVND",
+    "price": 179.75495,
+    "change": -0.52505,
+    "volume": 0
+  },
+  {
+    "symbol": "JPYXAG",
+    "price": 0.000215862,
+    "change": 0.000015967145,
+    "volume": 2520
+  },
+  {
+    "symbol": "JPYXAU",
+    "price": 0.0000021669,
+    "change": -9.9959e-8,
+    "volume": 2527
+  },
+  {
+    "symbol": "JPYZAR",
+    "price": 0.12329,
+    "change": -0.000395830772,
+    "volume": 0
+  },
+  {
+    "symbol": "KESEUR",
+    "price": 0.00659387,
+    "change": 0.0000278728,
+    "volume": 0
+  },
+  {
+    "symbol": "KESGBP",
+    "price": 0.00563284,
+    "change": -0.000013363971,
+    "volume": 0
+  },
+  {
+    "symbol": "KESUSD",
+    "price": 0.00772841,
+    "change": 0.0000384064,
+    "volume": 0
+  },
+  {
+    "symbol": "KESZAR",
+    "price": 0.13781,
+    "change": -0.0002048251,
+    "volume": 0
+  },
+  {
+    "symbol": "KHREUR",
+    "price": 0.0002130215,
+    "change": -4.66683e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "KHRGBP",
+    "price": 0.0001819745,
+    "change": 1.7369e-8,
+    "volume": 0
+  },
+  {
+    "symbol": "KHRUSD",
+    "price": 0.0002496737,
+    "change": -3.8883e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "KMFGBP",
+    "price": 0.0017364,
+    "change": 0.000002790177,
+    "volume": 0
+  },
+  {
+    "symbol": "KMFUSD",
+    "price": 0.00238239,
+    "change": 1.324e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWAUD",
+    "price": 0.00112231,
+    "change": -0.000004795057,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWBRL",
+    "price": 0.00402166,
+    "change": -0.000020377187,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWCAD",
+    "price": 0.00100377,
+    "change": 0.0000027735,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWCHF",
+    "price": 0.000585606,
+    "change": -0.000004235745,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWCNH",
+    "price": 0.00525527,
+    "change": -0.000029306328,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWCNY",
+    "price": 0.00525717,
+    "change": -0.0000148325,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWEUR",
+    "price": 0.0006254559,
+    "change": -0.000005578365,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWGBP",
+    "price": 0.0005342985,
+    "change": 0.0000022985,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWHKD",
+    "price": 0.00575533,
+    "change": -0.000050185539,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWIDR",
+    "price": 11.89919,
+    "change": -0.04281039,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWINR",
+    "price": 0.06265132,
+    "change": -0.000419679,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWJPY",
+    "price": 0.10602,
+    "change": -0.000746160365,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWMYR",
+    "price": 0.00309946,
+    "change": -0.0000095409,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWNZD",
+    "price": 0.00121069,
+    "change": -0.000007932822,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWRUB",
+    "price": 0.05790866,
+    "change": -0.00142068,
+    "volume": 1367
+  },
+  {
+    "symbol": "KRWSEK",
+    "price": 0.00695463,
+    "change": -0.0000463691,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWSGD",
+    "price": 0.0009355555,
+    "change": 5.555e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWTHB",
+    "price": 0.02382353,
+    "change": -0.0001214653,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWTWD",
+    "price": 0.02133576,
+    "change": -0.0001992401,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWUSD",
+    "price": 0.0007330711,
+    "change": -0.00000458783,
+    "volume": 0
+  },
+  {
+    "symbol": "KRWXAG",
+    "price": 0.0000217598,
+    "change": 0.000001443128,
+    "volume": 1258
+  },
+  {
+    "symbol": "KRWXAU",
+    "price": 2.184e-7,
+    "change": -1.1966e-8,
+    "volume": 1259
+  },
+  {
+    "symbol": "KRWZAR",
+    "price": 0.01307158,
+    "change": -0.000096713756,
+    "volume": 0
+  },
+  {
+    "symbol": "KWDAED",
+    "price": 12.00681,
+    "change": 0.01741183,
+    "volume": 0
+  },
+  {
+    "symbol": "KWDCAD",
+    "price": 4.47668,
+    "change": 0.01039554,
+    "volume": 0
+  },
+  {
+    "symbol": "KWDEUR",
+    "price": 2.78944,
+    "change": -0.00286295,
+    "volume": 0
+  },
+  {
+    "symbol": "KWDGBP",
+    "price": 2.38289,
+    "change": 0.01988874,
+    "volume": 0
+  },
+  {
+    "symbol": "KWDPKR",
+    "price": 927.38448,
+    "change": -0.34552,
+    "volume": 0
+  },
+  {
+    "symbol": "KWDSAR",
+    "price": 12.22791,
+    "change": 0.03975132,
+    "volume": 144
+  },
+  {
+    "symbol": "KWDUSD",
+    "price": 3.26938,
+    "change": 0.00238412,
+    "volume": 0
+  },
+  {
+    "symbol": "KYDBMD",
+    "price": 1.20596,
+    "change": 0.00921022,
+    "volume": 1
+  },
+  {
+    "symbol": "KYDCAD",
+    "price": 1.6756,
+    "change": 0.00448022,
+    "volume": 0
+  },
+  {
+    "symbol": "KYDEUR",
+    "price": 1.02638,
+    "change": -0.01371672,
+    "volume": 0
+  },
+  {
+    "symbol": "KYDGBP",
+    "price": 0.89015,
+    "change": 0.000949836266,
+    "volume": 0
+  },
+  {
+    "symbol": "KYDUSD",
+    "price": 1.21951,
+    "change": 0.000412195122,
+    "volume": 0
+  },
+  {
+    "symbol": "KZTEUR",
+    "price": 0.00164419,
+    "change": -0.000001812,
+    "volume": 0
+  },
+  {
+    "symbol": "KZTGBP",
+    "price": 0.001377,
+    "change": -0.000004,
+    "volume": 0
+  },
+  {
+    "symbol": "KZTUSD",
+    "price": 0.00192708,
+    "change": -0.000003939,
+    "volume": 0
+  },
+  {
+    "symbol": "LAKEUR",
+    "price": 0.0000396113,
+    "change": -2.01976e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "LAKGBP",
+    "price": 0.0000338381,
+    "change": -9.7016e-8,
+    "volume": 0
+  },
+  {
+    "symbol": "LAKUSD",
+    "price": 0.0000464267,
+    "change": -1.93347e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "LBPEUR",
+    "price": 0.0000094938,
+    "change": -4.945e-8,
+    "volume": 0
+  },
+  {
+    "symbol": "LBPGBP",
+    "price": 0.000007639999,
+    "change": 9.999000000000512e-9,
+    "volume": 0
+  },
+  {
+    "symbol": "LBPUSD",
+    "price": 0.0000111273,
+    "change": -4.5884e-8,
+    "volume": 0
+  },
+  {
+    "symbol": "LKREUR",
+    "price": 0.00284559,
+    "change": 0.0000065916,
+    "volume": 0
+  },
+  {
+    "symbol": "LKRGBP",
+    "price": 0.00243086,
+    "change": 0.000003859,
+    "volume": 0
+  },
+  {
+    "symbol": "LKRUSD",
+    "price": 0.0033352,
+    "change": 0.0000052006,
+    "volume": 0
+  },
+  {
+    "symbol": "LKRZAR",
+    "price": 0.05947081,
+    "change": 0.0003228078,
+    "volume": 0
+  },
+  {
+    "symbol": "LRDEUR",
+    "price": 0.00426439,
+    "change": -0.000010743385,
+    "volume": 0
+  },
+  {
+    "symbol": "LRDGBP",
+    "price": 0.00364287,
+    "change": -7.50631e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "LRDUSD",
+    "price": 0.00499811,
+    "change": 1.12e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "LSLEUR",
+    "price": 0.04784855,
+    "change": -0.000025603339,
+    "volume": 0
+  },
+  {
+    "symbol": "LSLGBP",
+    "price": 0.04087483,
+    "change": 0.00004016754,
+    "volume": 0
+  },
+  {
+    "symbol": "LSLUSD",
+    "price": 0.05608131,
+    "change": -0.0000946936,
+    "volume": 0
+  },
+  {
+    "symbol": "LTLAUD",
+    "price": 0.5391,
+    "change": -0.00312545,
+    "volume": 122701
+  },
+  {
+    "symbol": "LYDEUR",
+    "price": 0.15715,
+    "change": -0.000653053168,
+    "volume": 0
+  },
+  {
+    "symbol": "LYDGBP",
+    "price": 0.13424,
+    "change": -0.000287657354,
+    "volume": 0
+  },
+  {
+    "symbol": "LYDUSD",
+    "price": 0.18418,
+    "change": -0.0009227735,
+    "volume": 0
+  },
+  {
+    "symbol": "MADAUD",
+    "price": 0.16956,
+    "change": 0.00024766727,
+    "volume": 0
+  },
+  {
+    "symbol": "MADEUR",
+    "price": 0.09449231,
+    "change": 0.0000423115,
+    "volume": 0
+  },
+  {
+    "symbol": "MADGBP",
+    "price": 0.08072047,
+    "change": 0.0002904685,
+    "volume": 0
+  },
+  {
+    "symbol": "MADUSD",
+    "price": 0.11075,
+    "change": -0.0000478686,
+    "volume": 0
+  },
+  {
+    "symbol": "MADZAR",
+    "price": 2.03864,
+    "change": 0.20121,
+    "volume": 1
+  },
+  {
+    "symbol": "MDLEUR",
+    "price": 0.05088541,
+    "change": 0.000074979766,
+    "volume": 0
+  },
+  {
+    "symbol": "MDLGBP",
+    "price": 0.04346503,
+    "change": 0.00016186692,
+    "volume": 0
+  },
+  {
+    "symbol": "MDLUSD",
+    "price": 0.05977286,
+    "change": 0.00017811,
+    "volume": 0
+  },
+  {
+    "symbol": "MGAEUR",
+    "price": 0.0001927423,
+    "change": 7.5209e-8,
+    "volume": 0
+  },
+  {
+    "symbol": "MGAGBP",
+    "price": 0.000164651,
+    "change": 4.41995e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "MGAUSD",
+    "price": 0.000221,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "MKDEUR",
+    "price": 0.01624729,
+    "change": -0.000064854789,
+    "volume": 0
+  },
+  {
+    "symbol": "MKDGBP",
+    "price": 0.01387932,
+    "change": 0.000059322,
+    "volume": 0
+  },
+  {
+    "symbol": "MKDUSD",
+    "price": 0.01904278,
+    "change": -0.0000959712,
+    "volume": 0
+  },
+  {
+    "symbol": "MMKEUR",
+    "price": 0.0004066224,
+    "change": -6.63123e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "MMKGBP",
+    "price": 0.0003473589,
+    "change": 2.30692e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "MMKUSD",
+    "price": 0.000436,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "MOPEUR",
+    "price": 0.10551,
+    "change": -0.00020935641,
+    "volume": 0
+  },
+  {
+    "symbol": "MOPGBP",
+    "price": 0.09013148,
+    "change": -0.000080521196,
+    "volume": 0
+  },
+  {
+    "symbol": "MOPUSD",
+    "price": 0.12369,
+    "change": -0.000007648191,
+    "volume": 0
+  },
+  {
+    "symbol": "MUREUR",
+    "price": 0.01889981,
+    "change": -0.0000301926,
+    "volume": 0
+  },
+  {
+    "symbol": "MURGBP",
+    "price": 0.01614524,
+    "change": -0.0000027573,
+    "volume": 0
+  },
+  {
+    "symbol": "MURUSD",
+    "price": 0.02215168,
+    "change": -0.0000063152,
+    "volume": 0
+  },
+  {
+    "symbol": "MVREUR",
+    "price": 0.05522092,
+    "change": -0.00011942381,
+    "volume": 0
+  },
+  {
+    "symbol": "MVRGBP",
+    "price": 0.04717271,
+    "change": 0.000031806537,
+    "volume": 0
+  },
+  {
+    "symbol": "MVRUSD",
+    "price": 0.06472216,
+    "change": -0.0001286818,
+    "volume": 0
+  },
+  {
+    "symbol": "MWKEUR",
+    "price": 0.0004918885,
+    "change": -0.000001049182,
+    "volume": 0
+  },
+  {
+    "symbol": "MWKGBP",
+    "price": 0.0004201979,
+    "change": 0.0000041979,
+    "volume": 0
+  },
+  {
+    "symbol": "MWKUSD",
+    "price": 0.000537,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "MWKZAR",
+    "price": 0.01028011,
+    "change": -0.000026932528,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNARS",
+    "price": 62.89259,
+    "change": 0.05927029,
+    "volume": 114
+  },
+  {
+    "symbol": "MXNAUD",
+    "price": 0.0813349,
+    "change": 0.0006949015,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNBRL",
+    "price": 0.29145,
+    "change": 0.00113614,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNCAD",
+    "price": 0.07274455,
+    "change": 0.0009945492,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNCHF",
+    "price": 0.0424395,
+    "change": 0.00009819081,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNCLP",
+    "price": 49.95872,
+    "change": 0.47322,
+    "volume": 6499
+  },
+  {
+    "symbol": "MXNCOP",
+    "price": 217.3478,
+    "change": 3.3588,
+    "volume": 268
+  },
+  {
+    "symbol": "MXNCZK",
+    "price": 1.12105,
+    "change": 0.00316275,
+    "volume": 702503
+  },
+  {
+    "symbol": "MXNDKK",
+    "price": 0.33815,
+    "change": 0.0009352659,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNEUR",
+    "price": 0.04532747,
+    "change": 0.0005674661,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNGBP",
+    "price": 0.03872119,
+    "change": 0.000158493933,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNHKD",
+    "price": 0.41709,
+    "change": 0.00178495,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNJPY",
+    "price": 7.6836,
+    "change": 0.05310141,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNNZD",
+    "price": 0.08773984,
+    "change": 0.000273734216,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNPEN",
+    "price": 0.18858,
+    "change": 0.0009358558,
+    "volume": 27
+  },
+  {
+    "symbol": "MXNPLN",
+    "price": 0.19237,
+    "change": 0.0006314924,
+    "volume": 366738
+  },
+  {
+    "symbol": "MXNSGD",
+    "price": 0.06780071,
+    "change": 0.000345266022,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNUSD",
+    "price": 0.05312645,
+    "change": 0.0001154277,
+    "volume": 0
+  },
+  {
+    "symbol": "MXNXAG",
+    "price": 0.0015325,
+    "change": 0.000062144916,
+    "volume": 1247
+  },
+  {
+    "symbol": "MXNXAU",
+    "price": 0.0000153756,
+    "change": -0.000001296374,
+    "volume": 1258
+  },
+  {
+    "symbol": "MXNZAR",
+    "price": 0.94731,
+    "change": 0.00034157533,
+    "volume": 0
+  },
+  {
+    "symbol": "MXVUSD",
+    "price": 0.45133,
+    "change": 0.0009273231,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRAUD",
+    "price": 0.3621,
+    "change": 0.00139815,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRCAD",
+    "price": 0.32385,
+    "change": 0.00175442,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRCHF",
+    "price": 0.18894,
+    "change": 0.0001381152,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRCNY",
+    "price": 1.69616,
+    "change": 0.0017564,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRDKK",
+    "price": 1.48524,
+    "change": -0.06361313,
+    "volume": 128
+  },
+  {
+    "symbol": "MYREUR",
+    "price": 0.2018,
+    "change": -0.0002448114,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRGBP",
+    "price": 0.17238,
+    "change": 0.0001844183,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRHKD",
+    "price": 1.85688,
+    "change": 0.00108195,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRIDR",
+    "price": 3839.11808,
+    "change": 1.41808,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRINR",
+    "price": 20.21363,
+    "change": -0.04236976,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRJPY",
+    "price": 34.20694,
+    "change": 0.07393736,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRKRW",
+    "price": 322.63694,
+    "change": 1.48694,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRNZD",
+    "price": 0.39061,
+    "change": 0.0008125643,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRPKR",
+    "price": 67.08942,
+    "change": 0.0754242,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRSGD",
+    "price": 0.30184,
+    "change": 0.000844744,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRTHB",
+    "price": 7.68635,
+    "change": 0.00435223,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRTWD",
+    "price": 6.8837,
+    "change": -0.0229958,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRUSD",
+    "price": 0.23652,
+    "change": 0.0004158184,
+    "volume": 0
+  },
+  {
+    "symbol": "MYRZAR",
+    "price": 4.21737,
+    "change": -0.00452645,
+    "volume": 0
+  },
+  {
+    "symbol": "MZNEUR",
+    "price": 0.01339309,
+    "change": -0.000061334942,
+    "volume": 0
+  },
+  {
+    "symbol": "MZNUSD",
+    "price": 0.01569749,
+    "change": -0.0001102916,
+    "volume": 0
+  },
+  {
+    "symbol": "NADEUR",
+    "price": 0.04784855,
+    "change": -0.000182194573,
+    "volume": 0
+  },
+  {
+    "symbol": "NADUSD",
+    "price": 0.05608131,
+    "change": -0.0000672376,
+    "volume": 0
+  },
+  {
+    "symbol": "NADZAR",
+    "price": 1,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "NGNEUR",
+    "price": 0.0005529401,
+    "change": 0.0000029401,
+    "volume": 0
+  },
+  {
+    "symbol": "NGNGBP",
+    "price": 0.0004723515,
+    "change": 0.0000043515,
+    "volume": 0
+  },
+  {
+    "symbol": "NGNJPY",
+    "price": 0.09373062,
+    "change": 0.0003506172,
+    "volume": 0
+  },
+  {
+    "symbol": "NGNUSD",
+    "price": 0.00061,
+    "change": 0.000002,
+    "volume": 0
+  },
+  {
+    "symbol": "NGNZAR",
+    "price": 0.01178966,
+    "change": 0.000027766891,
+    "volume": 137254
+  },
+  {
+    "symbol": "NIOEUR",
+    "price": 0.02318693,
+    "change": -0.000162276697,
+    "volume": 0
+  },
+  {
+    "symbol": "NIOGBP",
+    "price": 0.01991239,
+    "change": 0.00002099251,
+    "volume": 0
+  },
+  {
+    "symbol": "NIOUSD",
+    "price": 0.02730428,
+    "change": 0.000004277,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKAED",
+    "price": 0.36423,
+    "change": 0.0002908345,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKAUD",
+    "price": 0.15142,
+    "change": 0.00026,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKCAD",
+    "price": 0.13583,
+    "change": 0.00133081,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKCHF",
+    "price": 0.07902,
+    "change": -0.00025,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKCZK",
+    "price": 2.0928,
+    "change": -0.00550188,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKDKK",
+    "price": 0.63126,
+    "change": -0.000741282,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKEUR",
+    "price": 0.08461854,
+    "change": -0.000266421258,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKGBP",
+    "price": 0.07234058,
+    "change": 0.000063579448,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKILS",
+    "price": 0.34955,
+    "change": 0.00671363,
+    "volume": 1370
+  },
+  {
+    "symbol": "NOKINR",
+    "price": 8.15965,
+    "change": 0.02434997,
+    "volume": 24231
+  },
+  {
+    "symbol": "NOKISK",
+    "price": 12.02035,
+    "change": -0.01765242,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKJPY",
+    "price": 14.36163,
+    "change": -0.02562141,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKNZD",
+    "price": 0.16331,
+    "change": -0.000680882107,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKPLN",
+    "price": 0.35912,
+    "change": -0.0002051781,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKRUB",
+    "price": 7.80603,
+    "change": -0.26671,
+    "volume": 1413
+  },
+  {
+    "symbol": "NOKSEK",
+    "price": 0.9409,
+    "change": -0.0001112632,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKSGD",
+    "price": 0.12663,
+    "change": 0.000129745865,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKUSD",
+    "price": 0.09944806,
+    "change": 0.00004725,
+    "volume": 0
+  },
+  {
+    "symbol": "NOKZAR",
+    "price": 1.76847,
+    "change": -0.0003337236,
+    "volume": 0
+  },
+  {
+    "symbol": "NPREUR",
+    "price": 0.00623653,
+    "change": 0.000014180065,
+    "volume": 0
+  },
+  {
+    "symbol": "NPRGBP",
+    "price": 0.00532758,
+    "change": 0.000018035935,
+    "volume": 0
+  },
+  {
+    "symbol": "NPRUSD",
+    "price": 0.00730958,
+    "change": 0.000021579,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDAED",
+    "price": 2.2237,
+    "change": 0.0001979104,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDAUD",
+    "price": 0.92785,
+    "change": 0.00325036,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDCAD",
+    "price": 0.8284,
+    "change": 0.00287,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDCHF",
+    "price": 0.4832,
+    "change": -0.0009,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDCNY",
+    "price": 4.3423,
+    "change": 0.00329862,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDCZK",
+    "price": 12.77693,
+    "change": -0.02407291,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDDKK",
+    "price": 3.85395,
+    "change": -0.01631512,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDEUR",
+    "price": 0.51661,
+    "change": -0.00112556,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDGBP",
+    "price": 0.44168,
+    "change": 0.000601975465,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDHKD",
+    "price": 4.75986,
+    "change": 0.000906080011,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDHUF",
+    "price": 206.09429,
+    "change": -0.58571,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDIDR",
+    "price": 9828.45517,
+    "change": 21.45517,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDINR",
+    "price": 51.74854,
+    "change": -0.12246,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDJPY",
+    "price": 87.602,
+    "change": 0.14354,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDKRW",
+    "price": 825.97685,
+    "change": 5.37685,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDMXN",
+    "price": 11.39733,
+    "change": -0.03566912,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDMYR",
+    "price": 2.56008,
+    "change": -0.0024185,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDNOK",
+    "price": 6.12332,
+    "change": 0.02542374,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDPHP",
+    "price": 34.25459,
+    "change": -0.04441108,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDPKR",
+    "price": 171.75439,
+    "change": -0.07660617,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDPLN",
+    "price": 2.19252,
+    "change": -0.000475259,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDSEK",
+    "price": 5.91366,
+    "change": 0.17596,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDSGD",
+    "price": 0.7718,
+    "change": 0.00106,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDTHB",
+    "price": 19.67769,
+    "change": 0.05168816,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDTRY",
+    "price": 24.17225,
+    "change": -0.00324534,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDTWD",
+    "price": 17.62284,
+    "change": -0.06531399,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDUSD",
+    "price": 0.60584,
+    "change": 0.0001468,
+    "volume": 0
+  },
+  {
+    "symbol": "NZDZAR",
+    "price": 10.79682,
+    "change": -0.01515966,
+    "volume": 0
+  },
+  {
+    "symbol": "OMRAED",
+    "price": 9.56627,
+    "change": 0.03417103,
+    "volume": 0
+  },
+  {
+    "symbol": "OMREUR",
+    "price": 2.22245,
+    "change": 0.0083474,
+    "volume": 0
+  },
+  {
+    "symbol": "OMRGBP",
+    "price": 1.89854,
+    "change": 0.00913537,
+    "volume": 0
+  },
+  {
+    "symbol": "OMRPKR",
+    "price": 738.88143,
+    "change": 2.73143,
+    "volume": 0
+  },
+  {
+    "symbol": "OMRUSD",
+    "price": 2.60484,
+    "change": 0.01213895,
+    "volume": 0
+  },
+  {
+    "symbol": "OMRZAR",
+    "price": 49.12186,
+    "change": 1.65892,
+    "volume": 137306
+  },
+  {
+    "symbol": "PABEUR",
+    "price": 0.8532,
+    "change": -0.00267173,
+    "volume": 0
+  },
+  {
+    "symbol": "PABGBP",
+    "price": 0.72977,
+    "change": 0.0018972,
+    "volume": 0
+  },
+  {
+    "symbol": "PABUSD",
+    "price": 1,
+    "change": 0.0004,
+    "volume": 0
+  },
+  {
+    "symbol": "PENARS",
+    "price": 333.50818,
+    "change": -1.13954,
+    "volume": 114
+  },
+  {
+    "symbol": "PENBRL",
+    "price": 1.54553,
+    "change": 0.00253472,
+    "volume": 20716
+  },
+  {
+    "symbol": "PENCAD",
+    "price": 0.38575,
+    "change": 0.00149816,
+    "volume": 805933
+  },
+  {
+    "symbol": "PENCLP",
+    "price": 264.92218,
+    "change": 1.47038,
+    "volume": 384
+  },
+  {
+    "symbol": "PENCOP",
+    "price": 1152.55659,
+    "change": 12.19759,
+    "volume": 268
+  },
+  {
+    "symbol": "PENEUR",
+    "price": 0.2353,
+    "change": -0.0014,
+    "volume": 0
+  },
+  {
+    "symbol": "PENGBP",
+    "price": 0.20533,
+    "change": 0.0005715315,
+    "volume": 0
+  },
+  {
+    "symbol": "PENMXN",
+    "price": 5.30282,
+    "change": -0.00534076,
+    "volume": 806207
+  },
+  {
+    "symbol": "PENUSD",
+    "price": 0.28172,
+    "change": 0.000090098,
+    "volume": 0
+  },
+  {
+    "symbol": "PGKAUD",
+    "price": 0.37527,
+    "change": -0.00325561,
+    "volume": 0
+  },
+  {
+    "symbol": "PGKEUR",
+    "price": 0.20914,
+    "change": -0.00193032,
+    "volume": 0
+  },
+  {
+    "symbol": "PGKGBP",
+    "price": 0.17866,
+    "change": -0.00109286,
+    "volume": 0
+  },
+  {
+    "symbol": "PGKUSD",
+    "price": 0.24512,
+    "change": 0.00152216,
+    "volume": 0
+  },
+  {
+    "symbol": "PHPAUD",
+    "price": 0.02706209,
+    "change": 0.0001320905,
+    "volume": 0
+  },
+  {
+    "symbol": "PHPCNH",
+    "price": 0.12672,
+    "change": 0.000076460039,
+    "volume": 0
+  },
+  {
+    "symbol": "PHPDKK",
+    "price": 0.11503,
+    "change": -0.00463659,
+    "volume": 14729
+  },
+  {
+    "symbol": "PHPEUR",
+    "price": 0.01508155,
+    "change": -0.00001849265,
+    "volume": 0
+  },
+  {
+    "symbol": "PHPGBP",
+    "price": 0.01288348,
+    "change": 0.0000674756,
+    "volume": 0
+  },
+  {
+    "symbol": "PHPJPY",
+    "price": 2.55652,
+    "change": 0.00992017,
+    "volume": 0
+  },
+  {
+    "symbol": "PHPNZD",
+    "price": 0.024,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "PHPUSD",
+    "price": 0.01767646,
+    "change": 0.0000764571,
+    "volume": 0
+  },
+  {
+    "symbol": "PHPZAR",
+    "price": 0.31519,
+    "change": -0.000572816501,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRAED",
+    "price": 0.01245,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRAUD",
+    "price": 0.00539725,
+    "change": 0.0000622464,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRBHD",
+    "price": 0.00132554,
+    "change": -0.000005252449,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRCAD",
+    "price": 0.00482721,
+    "change": 0.0000682052,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRCHF",
+    "price": 0.00281621,
+    "change": 0.0000442131,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRDKK",
+    "price": 0.02243875,
+    "change": -0.000060465028,
+    "volume": 0
+  },
+  {
+    "symbol": "PKREGP",
+    "price": 0.1752,
+    "change": -0.00154045,
+    "volume": 0
+  },
+  {
+    "symbol": "PKREUR",
+    "price": 0.00300785,
+    "change": 0.0000338539,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRGBP",
+    "price": 0.00256947,
+    "change": 0.0000044723,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRHKD",
+    "price": 0.02767771,
+    "change": -0.00000662832,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRINR",
+    "price": 0.30129,
+    "change": -0.0002661601,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRJPY",
+    "price": 0.50987,
+    "change": 0.00267078,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRKWD",
+    "price": 0.00103,
+    "change": -0.00005115121,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRMYR",
+    "price": 0.01490548,
+    "change": -0.00001900322,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRNZD",
+    "price": 0.00582227,
+    "change": 0.000002426398,
+    "volume": 0
+  },
+  {
+    "symbol": "PKROMR",
+    "price": 0.0013534,
+    "change": -0.000005113972,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRQAR",
+    "price": 0.01234,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRSAR",
+    "price": 0.01322018,
+    "change": -0.000010657638,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRSGD",
+    "price": 0.00449914,
+    "change": 0.0000541405,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRTHB",
+    "price": 0.11457,
+    "change": -0.000091728888,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRTWD",
+    "price": 0.1026,
+    "change": -0.00042945386,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRUSD",
+    "price": 0.00352538,
+    "change": 0.0000393816,
+    "volume": 0
+  },
+  {
+    "symbol": "PKRZAR",
+    "price": 0.06286197,
+    "change": -0.0001040273,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNAUD",
+    "price": 0.4228,
+    "change": 0.000770639473,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNCAD",
+    "price": 0.37815,
+    "change": 0.000957963006,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNCHF",
+    "price": 0.22061,
+    "change": -0.000070484226,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNCNY",
+    "price": 1.9805,
+    "change": 0.0019099,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNCZK",
+    "price": 5.8275,
+    "change": -0.00850494,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNDKK",
+    "price": 1.75777,
+    "change": 0.00306967,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNEUR",
+    "price": 0.23597,
+    "change": 0.000038969506,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNGBP",
+    "price": 0.20128,
+    "change": -0.000039192166,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNHKD",
+    "price": 2.16817,
+    "change": 0.0016057,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNHUF",
+    "price": 93.99861,
+    "change": -0.13839,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNILS",
+    "price": 0.93528,
+    "change": -0.000353677808,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNJPY",
+    "price": 39.94142,
+    "change": 0.15742,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNMXN",
+    "price": 5.36093,
+    "change": 0.15113,
+    "volume": 43418
+  },
+  {
+    "symbol": "PLNNOK",
+    "price": 2.78455,
+    "change": 0.00158998,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNNZD",
+    "price": 0.4561,
+    "change": 0.000098843271,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNRUB",
+    "price": 21.62243,
+    "change": -0.09726946,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNSEK",
+    "price": 2.61998,
+    "change": -0.03536033,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNSGD",
+    "price": 0.35245,
+    "change": 0.000383170494,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNTRY",
+    "price": 11.33787,
+    "change": 0.03843345,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNUSD",
+    "price": 0.27617,
+    "change": 0.000189270459,
+    "volume": 0
+  },
+  {
+    "symbol": "PLNZAR",
+    "price": 4.92438,
+    "change": 0.00407773,
+    "volume": 0
+  },
+  {
+    "symbol": "PYGEUR",
+    "price": 0.0001070898,
+    "change": 8.399932110409012e-9,
+    "volume": 0
+  },
+  {
+    "symbol": "PYGGBP",
+    "price": 0.0000914819,
+    "change": 2.14127e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "PYGUSD",
+    "price": 0.000122,
+    "change": 0.000001,
+    "volume": 0
+  },
+  {
+    "symbol": "QARAED",
+    "price": 1.00893,
+    "change": 0.00422857,
+    "volume": 0
+  },
+  {
+    "symbol": "QAREUR",
+    "price": 0.2344,
+    "change": 0.0001554794,
+    "volume": 0
+  },
+  {
+    "symbol": "QARGBP",
+    "price": 0.20023,
+    "change": 0.0003533587,
+    "volume": 0
+  },
+  {
+    "symbol": "QARPKR",
+    "price": 77.92781,
+    "change": 0.05481312,
+    "volume": 0
+  },
+  {
+    "symbol": "QARUSD",
+    "price": 0.27473,
+    "change": 0.0004352747,
+    "volume": 0
+  },
+  {
+    "symbol": "QARZAR",
+    "price": 5.19645,
+    "change": 0.18151,
+    "volume": 55582
+  },
+  {
+    "symbol": "RONCHF",
+    "price": 0.18422,
+    "change": -0.000206480351,
+    "volume": 0
+  },
+  {
+    "symbol": "RONEUR",
+    "price": 0.19676,
+    "change": 0.0001401821,
+    "volume": 0
+  },
+  {
+    "symbol": "RONGBP",
+    "price": 0.16808,
+    "change": 0.000114820163,
+    "volume": 0
+  },
+  {
+    "symbol": "RONUSD",
+    "price": 0.23061,
+    "change": -0.0000287651,
+    "volume": 0
+  },
+  {
+    "symbol": "RONZAR",
+    "price": 4.32727,
+    "change": 0.34324,
+    "volume": 13171
+  },
+  {
+    "symbol": "RSDBRL",
+    "price": 0.05703398,
+    "change": 0.00320682,
+    "volume": 60
+  },
+  {
+    "symbol": "RSDCHF",
+    "price": 0.00797374,
+    "change": -0.000037234045,
+    "volume": 0
+  },
+  {
+    "symbol": "RSDEUR",
+    "price": 0.00851635,
+    "change": -0.000046854948,
+    "volume": 0
+  },
+  {
+    "symbol": "RSDGBP",
+    "price": 0.00727513,
+    "change": 0.0000081295,
+    "volume": 0
+  },
+  {
+    "symbol": "RSDJPY",
+    "price": 1.44363,
+    "change": 0.000215355243,
+    "volume": 0
+  },
+  {
+    "symbol": "RSDUSD",
+    "price": 0.00998166,
+    "change": 0.0000396632,
+    "volume": 0
+  },
+  {
+    "symbol": "RUBBRL",
+    "price": 0.07006873,
+    "change": 0.0005087255,
+    "volume": 0
+  },
+  {
+    "symbol": "RUBCAD",
+    "price": 0.01748858,
+    "change": 0.000144032625,
+    "volume": 0
+  },
+  {
+    "symbol": "RUBCHF",
+    "price": 0.01020292,
+    "change": 0.0000929171,
+    "volume": 0
+  },
+  {
+    "symbol": "RUBDKK",
+    "price": 0.07970773,
+    "change": 0.0000322757,
+    "volume": 44
+  },
+  {
+    "symbol": "RUBEUR",
+    "price": 0.01089722,
+    "change": 0.0000862166,
+    "volume": 0
+  },
+  {
+    "symbol": "RUBGBP",
+    "price": 0.00930899,
+    "change": 0.0000819948,
+    "volume": 0
+  },
+  {
+    "symbol": "RUBJPY",
+    "price": 1.84722,
+    "change": 0.01632148,
+    "volume": 0
+  },
+  {
+    "symbol": "RUBKRW",
+    "price": 17.26857,
+    "change": 0.41513,
+    "volume": 1367
+  },
+  {
+    "symbol": "RUBNOK",
+    "price": 0.12814,
+    "change": 0.00426717,
+    "volume": 3552
+  },
+  {
+    "symbol": "RUBPLN",
+    "price": 0.04624827,
+    "change": 0.0006182697,
+    "volume": 0
+  },
+  {
+    "symbol": "RUBSEK",
+    "price": 0.12117,
+    "change": 0.000462053258,
+    "volume": 0
+  },
+  {
+    "symbol": "RUBUSD",
+    "price": 0.01275917,
+    "change": 0.0001051705,
+    "volume": 0
+  },
+  {
+    "symbol": "RUBXAG",
+    "price": 0.0003757601,
+    "change": 0.000033336563,
+    "volume": 1254
+  },
+  {
+    "symbol": "RUBXAU",
+    "price": 0.000003772,
+    "change": -1.10655e-7,
+    "volume": 1258
+  },
+  {
+    "symbol": "RWFEUR",
+    "price": 0.0005933555,
+    "change": -0.000001673627,
+    "volume": 0
+  },
+  {
+    "symbol": "RWFGBP",
+    "price": 0.0005068765,
+    "change": -2.74327e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "RWFUSD",
+    "price": 0.000656,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "RWFZAR",
+    "price": 0.01329386,
+    "change": 0.000492167826,
+    "volume": 2
+  },
+  {
+    "symbol": "SARAED",
+    "price": 0.97933,
+    "change": 0.0007133333,
+    "volume": 0
+  },
+  {
+    "symbol": "SARCAD",
+    "price": 0.36514,
+    "change": 0.000614640281,
+    "volume": 0
+  },
+  {
+    "symbol": "SAREUR",
+    "price": 0.22752,
+    "change": -0.000493893432,
+    "volume": 0
+  },
+  {
+    "symbol": "SARGBP",
+    "price": 0.19436,
+    "change": -0.000026281806,
+    "volume": 0
+  },
+  {
+    "symbol": "SARJPY",
+    "price": 38.56761,
+    "change": 0.09461051,
+    "volume": 0
+  },
+  {
+    "symbol": "SARKWD",
+    "price": 0.08178009,
+    "change": -0.000266723293,
+    "volume": 144
+  },
+  {
+    "symbol": "SARPKR",
+    "price": 75.64193,
+    "change": 0.0519306,
+    "volume": 0
+  },
+  {
+    "symbol": "SARUSD",
+    "price": 0.26667,
+    "change": 0.0000284467,
+    "volume": 0
+  },
+  {
+    "symbol": "SARXAG",
+    "price": 0.00824172,
+    "change": 0.000367079902,
+    "volume": 1183
+  },
+  {
+    "symbol": "SARXAU",
+    "price": 0.0000827321,
+    "change": -0.000006555209,
+    "volume": 1242
+  },
+  {
+    "symbol": "SCREUR",
+    "price": 0.05752747,
+    "change": -0.00113939,
+    "volume": 0
+  },
+  {
+    "symbol": "SCRGBP",
+    "price": 0.04915261,
+    "change": -0.00079039098,
+    "volume": 0
+  },
+  {
+    "symbol": "SCRUSD",
+    "price": 0.06913566,
+    "change": 0.0005256609,
+    "volume": 0
+  },
+  {
+    "symbol": "SDGEUR",
+    "price": 0.0014208,
+    "change": -0.000006105779,
+    "volume": 0
+  },
+  {
+    "symbol": "SDGUSD",
+    "price": 0.00166527,
+    "change": -0.0000047417,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKAED",
+    "price": 0.38711,
+    "change": -0.00032222056,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKAUD",
+    "price": 0.16138,
+    "change": 0.0005956992,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKBRL",
+    "price": 0.57827,
+    "change": 0.000603426377,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKCAD",
+    "price": 0.14433,
+    "change": 0.00173167,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKCHF",
+    "price": 0.08389,
+    "change": -0.0002,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKCNH",
+    "price": 0.75565,
+    "change": 0.00425016,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKCZK",
+    "price": 2.22425,
+    "change": -0.00104563,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKDKK",
+    "price": 0.67091,
+    "change": 0.0003703683,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKEUR",
+    "price": 0.08993374,
+    "change": -0.000065544206,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKGBP",
+    "price": 0.07682629,
+    "change": 0.000130934572,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKHKD",
+    "price": 0.82755,
+    "change": 0.00375358,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKILS",
+    "price": 0.35698,
+    "change": 0.0051817,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKINR",
+    "price": 9.00858,
+    "change": -0.00442406,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKISK",
+    "price": 12.77539,
+    "change": -0.09261077,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKJPY",
+    "price": 15.24495,
+    "change": 0.05095052,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKKRW",
+    "price": 143.78908,
+    "change": 0.95234,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKNOK",
+    "price": 1.06281,
+    "change": 0.000125664967,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKNZD",
+    "price": 0.1691,
+    "change": -0.00518586,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKPLN",
+    "price": 0.38168,
+    "change": 0.00508275,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKRUB",
+    "price": 8.25291,
+    "change": -0.03579115,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKSGD",
+    "price": 0.13452,
+    "change": 0.000334097733,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKTWD",
+    "price": 3.06785,
+    "change": -0.00897907,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKUSD",
+    "price": 0.10541,
+    "change": 0.000094247053,
+    "volume": 0
+  },
+  {
+    "symbol": "SEKZAR",
+    "price": 1.87955,
+    "change": 0.00615006,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDAED",
+    "price": 2.87765,
+    "change": 0.0006527014,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDARS",
+    "price": 927.60959,
+    "change": -5.34141,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDAUD",
+    "price": 1.19986,
+    "change": 0.00079,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDBRL",
+    "price": 4.29869,
+    "change": -0.0003130169,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDCAD",
+    "price": 1.07285,
+    "change": 0.0010349,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDCHF",
+    "price": 0.6252,
+    "change": -0.0017,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDCNY",
+    "price": 5.6193,
+    "change": -0.00289924,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDDKK",
+    "price": 4.98734,
+    "change": -0.01735905,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDEUR",
+    "price": 0.67002,
+    "change": -0.00135849,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDGBP",
+    "price": 0.57192,
+    "change": 0.000418787532,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDHKD",
+    "price": 6.15422,
+    "change": -0.00910332,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDIDR",
+    "price": 12718.85018,
+    "change": -0.46282,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDINR",
+    "price": 66.96698,
+    "change": -0.27902,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDJPY",
+    "price": 113.365,
+    "change": 0.075,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDKRW",
+    "price": 1068.88373,
+    "change": -0.63499,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDMXN",
+    "price": 14.74911,
+    "change": -0.0754923,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDMYR",
+    "price": 3.31296,
+    "change": -0.00423855,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDNOK",
+    "price": 7.8972,
+    "change": -0.0081,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDNZD",
+    "price": 1.289,
+    "change": -0.0023,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDPKR",
+    "price": 222.26468,
+    "change": -0.15532,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDPLN",
+    "price": 2.83731,
+    "change": -0.00308801,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDSEK",
+    "price": 7.43369,
+    "change": -0.01850813,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDTHB",
+    "price": 25.46459,
+    "change": -0.02481138,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDTRY",
+    "price": 31.28094,
+    "change": 0.00583686,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDTWD",
+    "price": 22.80545,
+    "change": -0.11655,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDUSD",
+    "price": 0.78394,
+    "change": -0.00158255,
+    "volume": 0
+  },
+  {
+    "symbol": "SGDZAR",
+    "price": 13.972,
+    "change": -0.13238,
+    "volume": 0
+  },
+  {
+    "symbol": "SHPUSD",
+    "price": 1.37203,
+    "change": -0.00103505,
+    "volume": 0
+  },
+  {
+    "symbol": "SLLEUR",
+    "price": 0.000037585846,
+    "change": -3.744016849607996e-9,
+    "volume": 0
+  },
+  {
+    "symbol": "SLLGBP",
+    "price": 0.000032108429,
+    "change": 6.9962e-8,
+    "volume": 0
+  },
+  {
+    "symbol": "SLLUSD",
+    "price": 0.00004,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "SOSEUR",
+    "price": 0.00149732,
+    "change": 0.000002616716,
+    "volume": 0
+  },
+  {
+    "symbol": "SOSGBP",
+    "price": 0.00127909,
+    "change": 0.000004782986,
+    "volume": 0
+  },
+  {
+    "symbol": "SOSUSD",
+    "price": 0.00175494,
+    "change": 0.0000089446,
+    "volume": 0
+  },
+  {
+    "symbol": "SVCEUR",
+    "price": 0.09750852,
+    "change": -0.000319694257,
+    "volume": 0
+  },
+  {
+    "symbol": "SVCGBP",
+    "price": 0.08340979,
+    "change": 0.000083402842,
+    "volume": 0
+  },
+  {
+    "symbol": "SVCUSD",
+    "price": 0.11429,
+    "change": 0.000035715,
+    "volume": 0
+  },
+  {
+    "symbol": "SZLCHF",
+    "price": 0.04479995,
+    "change": -0.000031240361,
+    "volume": 0
+  },
+  {
+    "symbol": "SZLEUR",
+    "price": 0.04784855,
+    "change": -0.000079065038,
+    "volume": 0
+  },
+  {
+    "symbol": "SZLGBP",
+    "price": 0.04087483,
+    "change": 0.000096832,
+    "volume": 0
+  },
+  {
+    "symbol": "SZLUSD",
+    "price": 0.05608131,
+    "change": -0.0000662936,
+    "volume": 0
+  },
+  {
+    "symbol": "SZLZAR",
+    "price": 1,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "THBAUD",
+    "price": 0.04710923,
+    "change": 0.0000393336,
+    "volume": 0
+  },
+  {
+    "symbol": "THBCAD",
+    "price": 0.04213369,
+    "change": 0.000131006128,
+    "volume": 0
+  },
+  {
+    "symbol": "THBCHF",
+    "price": 0.0234,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "THBCNH",
+    "price": 0.22059,
+    "change": -0.000188347133,
+    "volume": 0
+  },
+  {
+    "symbol": "THBCNY",
+    "price": 0.22067,
+    "change": 0.0005711777,
+    "volume": 0
+  },
+  {
+    "symbol": "THBDKK",
+    "price": 0.19585,
+    "change": -0.00255872,
+    "volume": 0
+  },
+  {
+    "symbol": "THBEUR",
+    "price": 0.0262537,
+    "change": -0.000107874968,
+    "volume": 0
+  },
+  {
+    "symbol": "THBGBP",
+    "price": 0.02242734,
+    "change": 0.0000473378,
+    "volume": 0
+  },
+  {
+    "symbol": "THBHKD",
+    "price": 0.24158,
+    "change": 0.00138169,
+    "volume": 0
+  },
+  {
+    "symbol": "THBIDR",
+    "price": 499.47205,
+    "change": 0.56205,
+    "volume": 0
+  },
+  {
+    "symbol": "THBINR",
+    "price": 2.62981,
+    "change": -0.00789205,
+    "volume": 0
+  },
+  {
+    "symbol": "THBJPY",
+    "price": 4.45035,
+    "change": 0.00654736,
+    "volume": 0
+  },
+  {
+    "symbol": "THBKRW",
+    "price": 41.9753,
+    "change": 0.21293,
+    "volume": 0
+  },
+  {
+    "symbol": "THBMYR",
+    "price": 0.1301,
+    "change": 0.0000407252,
+    "volume": 0
+  },
+  {
+    "symbol": "THBNZD",
+    "price": 0.05081898,
+    "change": -0.000133839791,
+    "volume": 0
+  },
+  {
+    "symbol": "THBPKR",
+    "price": 8.72838,
+    "change": 0.00648275,
+    "volume": 0
+  },
+  {
+    "symbol": "THBSGD",
+    "price": 0.03927022,
+    "change": 0.000038225624,
+    "volume": 0
+  },
+  {
+    "symbol": "THBTWD",
+    "price": 0.89557,
+    "change": -0.00419115,
+    "volume": 0
+  },
+  {
+    "symbol": "THBUSD",
+    "price": 0.03077088,
+    "change": -0.0000552625,
+    "volume": 0
+  },
+  {
+    "symbol": "THBXAU",
+    "price": 0.0000092498,
+    "change": -6.93523e-7,
+    "volume": 1731
+  },
+  {
+    "symbol": "THBZAR",
+    "price": 0.54868,
+    "change": -0.00171664,
+    "volume": 0
+  },
+  {
+    "symbol": "TJSEUR",
+    "price": 0.08639383,
+    "change": -0.000496952034,
+    "volume": 0
+  },
+  {
+    "symbol": "TJSUSD",
+    "price": 0.10097,
+    "change": 0.00000102,
+    "volume": 0
+  },
+  {
+    "symbol": "TMTUSD",
+    "price": 0.29762,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "TNDEUR",
+    "price": 0.29598,
+    "change": 0.0003430542,
+    "volume": 0
+  },
+  {
+    "symbol": "TNDGBP",
+    "price": 0.25284,
+    "change": 0.0006448125,
+    "volume": 0
+  },
+  {
+    "symbol": "TNDUSD",
+    "price": 0.34691,
+    "change": 0.0007895312,
+    "volume": 0
+  },
+  {
+    "symbol": "TNDZAR",
+    "price": 5.9308,
+    "change": -0.00699889,
+    "volume": 7
+  },
+  {
+    "symbol": "TRYAUD",
+    "price": 0.03834979,
+    "change": -0.000002154816,
+    "volume": 0
+  },
+  {
+    "symbol": "TRYCAD",
+    "price": 0.03429939,
+    "change": 0.0000437859,
+    "volume": 0
+  },
+  {
+    "symbol": "TRYCHF",
+    "price": 0.02001042,
+    "change": 0.0001904202,
+    "volume": 0
+  },
+  {
+    "symbol": "TRYDKK",
+    "price": 0.15944,
+    "change": 0.00183707,
+    "volume": 0
+  },
+  {
+    "symbol": "TRYEUR",
+    "price": 0.0209,
+    "change": -0.000529704142,
+    "volume": 0
+  },
+  {
+    "symbol": "TRYGBP",
+    "price": 0.01778,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "TRYJPY",
+    "price": 3.62285,
+    "change": -0.00163457,
+    "volume": 3114
+  },
+  {
+    "symbol": "TRYNZD",
+    "price": 0.04136974,
+    "change": 0.00000555348,
+    "volume": 0
+  },
+  {
+    "symbol": "TRYPLN",
+    "price": 0.0882,
+    "change": -0.0003,
+    "volume": 0
+  },
+  {
+    "symbol": "TRYSGD",
+    "price": 0.03196835,
+    "change": 0.000498352,
+    "volume": 0
+  },
+  {
+    "symbol": "TRYUSD",
+    "price": 0.02504937,
+    "change": -0.0001146351,
+    "volume": 0
+  },
+  {
+    "symbol": "TRYXAG",
+    "price": 0.0008124956,
+    "change": 0.000007413924,
+    "volume": 1247
+  },
+  {
+    "symbol": "TRYXAU",
+    "price": 0.000008156,
+    "change": -9.72251e-7,
+    "volume": 2505
+  },
+  {
+    "symbol": "TRYZAR",
+    "price": 0.44666,
+    "change": 0.00146169,
+    "volume": 0
+  },
+  {
+    "symbol": "TTDEUR",
+    "price": 0.12566,
+    "change": 0.000366044494,
+    "volume": 0
+  },
+  {
+    "symbol": "TTDGBP",
+    "price": 0.10734,
+    "change": 0.0009719945,
+    "volume": 0
+  },
+  {
+    "symbol": "TTDUSD",
+    "price": 0.14728,
+    "change": 0.0007259541,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDAUD",
+    "price": 0.05260222,
+    "change": 0.0003422244,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDCAD",
+    "price": 0.04704653,
+    "change": 0.0003665327,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDCHF",
+    "price": 0.02744716,
+    "change": 0.0001171578,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDCNH",
+    "price": 0.24631,
+    "change": 0.00361267,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDCNY",
+    "price": 0.2464,
+    "change": 0.0014017,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDDKK",
+    "price": 0.20216,
+    "change": -0.00613671,
+    "volume": 27296
+  },
+  {
+    "symbol": "TWDEUR",
+    "price": 0.02931491,
+    "change": 0.0000469128,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDGBP",
+    "price": 0.02504239,
+    "change": 0.000096648891,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDHKD",
+    "price": 0.26975,
+    "change": 0.0014504,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDIDR",
+    "price": 557.71108,
+    "change": 2.26108,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDINR",
+    "price": 2.93645,
+    "change": -0.00115334,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDJPY",
+    "price": 4.96926,
+    "change": 0.02796311,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDKRW",
+    "price": 46.86967,
+    "change": 0.44867,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDMYR",
+    "price": 0.14527,
+    "change": 0.0008706233,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDNZD",
+    "price": 0.05674453,
+    "change": 0.0002095307,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDPKR",
+    "price": 9.74612,
+    "change": 0.04012247,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDSEK",
+    "price": 0.32596,
+    "change": 0.0009512488,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDSGD",
+    "price": 0.04384917,
+    "change": 0.000222963473,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDTHB",
+    "price": 1.1166,
+    "change": 0.00520118,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDUSD",
+    "price": 0.0343588,
+    "change": 0.0000617174,
+    "volume": 0
+  },
+  {
+    "symbol": "TWDZAR",
+    "price": 0.61266,
+    "change": 0.0006604845,
+    "volume": 0
+  },
+  {
+    "symbol": "TZSEUR",
+    "price": 0.0003235231,
+    "change": -0.0000018769,
+    "volume": 0
+  },
+  {
+    "symbol": "TZSGBP",
+    "price": 0.000276371,
+    "change": -0.00000138286,
+    "volume": 0
+  },
+  {
+    "symbol": "TZSUSD",
+    "price": 0.0003791881,
+    "change": 0.0000021881,
+    "volume": 0
+  },
+  {
+    "symbol": "TZSZAR",
+    "price": 0.00708163,
+    "change": 0.000172705605,
+    "volume": 137119
+  },
+  {
+    "symbol": "UAHDKK",
+    "price": 0.15878,
+    "change": -0.00560912,
+    "volume": 2
+  },
+  {
+    "symbol": "UAHEUR",
+    "price": 0.02046589,
+    "change": 0.000014315119,
+    "volume": 0
+  },
+  {
+    "symbol": "UAHGBP",
+    "price": 0.01748307,
+    "change": 0.000102071,
+    "volume": 0
+  },
+  {
+    "symbol": "UAHUSD",
+    "price": 0.02398722,
+    "change": 0.0000602207,
+    "volume": 0
+  },
+  {
+    "symbol": "UGXEUR",
+    "price": 0.0002371819,
+    "change": -1.081e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "UGXGBP",
+    "price": 0.0002026137,
+    "change": 4.4371e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "UGXUSD",
+    "price": 0.0002779912,
+    "change": -6.4573e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "UGXZAR",
+    "price": 0.00495693,
+    "change": -0.0000090689,
+    "volume": 0
+  },
+  {
+    "symbol": "USDAED",
+    "price": 3.6725,
+    "change": 0.0006,
+    "volume": 0
+  },
+  {
+    "symbol": "USDAFN",
+    "price": 70.47302,
+    "change": 0.34802,
+    "volume": 0
+  },
+  {
+    "symbol": "USDALL",
+    "price": 83.76265,
+    "change": -0.02735002,
+    "volume": 0
+  },
+  {
+    "symbol": "USDAMD",
+    "price": 384.31541,
+    "change": -0.09458663,
+    "volume": 0
+  },
+  {
+    "symbol": "USDARS",
+    "price": 1183.82813,
+    "change": -4.17187,
+    "volume": 0
+  },
+  {
+    "symbol": "USDAUD",
+    "price": 1.5308,
+    "change": 0.0034,
+    "volume": 0
+  },
+  {
+    "symbol": "USDAWG",
+    "price": 1.79,
+    "change": -0.000300011315,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBAM",
+    "price": 1.66871,
+    "change": -0.00218673,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBBD",
+    "price": 2,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBDT",
+    "price": 122.28756,
+    "change": -0.19244,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBGN",
+    "price": 1.66871,
+    "change": -0.00364673,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBHD",
+    "price": 0.376,
+    "change": -0.0011,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBIF",
+    "price": 2977.17756,
+    "change": 58.16756,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBMD",
+    "price": 1,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBND",
+    "price": 1.27621,
+    "change": 0.00301377,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBOB",
+    "price": 6.90717,
+    "change": 0.04717349,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBRL",
+    "price": 5.48604,
+    "change": 0.00724352,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBSD",
+    "price": 1,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBWP",
+    "price": 13.31617,
+    "change": 0.02227417,
+    "volume": 0
+  },
+  {
+    "symbol": "USDBZD",
+    "price": 2.0145,
+    "change": 0.01430185,
+    "volume": 0
+  },
+  {
+    "symbol": "USDCAD",
+    "price": 1.3681,
+    "change": 0.00397,
+    "volume": 0
+  },
+  {
+    "symbol": "USDCDF",
+    "price": 2910.89114,
+    "change": 44.31114,
+    "volume": 0
+  },
+  {
+    "symbol": "USDCHF",
+    "price": 0.79884,
+    "change": -0.0001207661,
+    "volume": 194333
+  },
+  {
+    "symbol": "USDCLP",
+    "price": 940.37374,
+    "change": 4.92374,
+    "volume": 158
+  },
+  {
+    "symbol": "USDCNH",
+    "price": 7.16884,
+    "change": 0.00889816,
+    "volume": 141023
+  },
+  {
+    "symbol": "USDCNY",
+    "price": 7.17143,
+    "change": 0.004829,
+    "volume": 0
+  },
+  {
+    "symbol": "USDCOP",
+    "price": 4091.1408,
+    "change": 42.0008,
+    "volume": 0
+  },
+  {
+    "symbol": "USDCRC",
+    "price": 504.6893,
+    "change": 1.1193,
+    "volume": 0
+  },
+  {
+    "symbol": "USDCUP",
+    "price": 24,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "USDCVE",
+    "price": 94.08231,
+    "change": -0.01768619,
+    "volume": 0
+  },
+  {
+    "symbol": "USDCZK",
+    "price": 21.10146,
+    "change": -0.0355435,
+    "volume": 246607
+  },
+  {
+    "symbol": "USDDJF",
+    "price": 178.08071,
+    "change": 2.08071,
+    "volume": 0
+  },
+  {
+    "symbol": "USDDKK",
+    "price": 6.36491,
+    "change": -0.01094681,
+    "volume": 173901
+  },
+  {
+    "symbol": "USDDOP",
+    "price": 59.59105,
+    "change": 0.29105,
+    "volume": 0
+  },
+  {
+    "symbol": "USDDZD",
+    "price": 129.17608,
+    "change": -0.03791653,
+    "volume": 0
+  },
+  {
+    "symbol": "USDEGP",
+    "price": 49.69688,
+    "change": -0.15312,
+    "volume": 0
+  },
+  {
+    "symbol": "USDETB",
+    "price": 135.39211,
+    "change": 0.19211,
+    "volume": 0
+  },
+  {
+    "symbol": "USDEUR",
+    "price": 0.8532,
+    "change": -0.00150046,
+    "volume": 0
+  },
+  {
+    "symbol": "USDFJD",
+    "price": 2.2423,
+    "change": -0.00470231,
+    "volume": 0
+  },
+  {
+    "symbol": "USDGBP",
+    "price": 0.72885,
+    "change": 0.0004694255,
+    "volume": 0
+  },
+  {
+    "symbol": "USDGEL",
+    "price": 2.7136,
+    "change": -0.0012,
+    "volume": 0
+  },
+  {
+    "symbol": "USDGHS",
+    "price": 10.32331,
+    "change": 0.02331304,
+    "volume": 0
+  },
+  {
+    "symbol": "USDGMD",
+    "price": 69,
+    "change": -1,
+    "volume": 0
+  },
+  {
+    "symbol": "USDGNF",
+    "price": 8664.01626,
+    "change": 35.01626,
+    "volume": 0
+  },
+  {
+    "symbol": "USDGTQ",
+    "price": 7.68982,
+    "change": 0.0063224,
+    "volume": 0
+  },
+  {
+    "symbol": "USDGYD",
+    "price": 209.1885,
+    "change": 1.3985,
+    "volume": 0
+  },
+  {
+    "symbol": "USDHKD",
+    "price": 7.8497,
+    "change": 0.0009,
+    "volume": 0
+  },
+  {
+    "symbol": "USDHNL",
+    "price": 26.1309,
+    "change": 0.04950445,
+    "volume": 0
+  },
+  {
+    "symbol": "USDHRK",
+    "price": 7.0105,
+    "change": -0.0539,
+    "volume": null
+  },
+  {
+    "symbol": "USDHTG",
+    "price": 131.26576,
+    "change": 0.58576,
+    "volume": 0
+  },
+  {
+    "symbol": "USDHUF",
+    "price": 340.37054,
+    "change": -1.05946,
+    "volume": 47268
+  },
+  {
+    "symbol": "USDIDR",
+    "price": 16231.97172,
+    "change": 3.97172,
+    "volume": 0
+  },
+  {
+    "symbol": "USDILS",
+    "price": 3.38668,
+    "change": -0.0007217392,
+    "volume": 0
+  },
+  {
+    "symbol": "USDINR",
+    "price": 85.46418,
+    "change": -0.16582,
+    "volume": 0
+  },
+  {
+    "symbol": "USDIQD",
+    "price": 1310.33804,
+    "change": 1.33804,
+    "volume": 0
+  },
+  {
+    "symbol": "USDISK",
+    "price": 121.19986,
+    "change": -0.50014,
+    "volume": 0
+  },
+  {
+    "symbol": "USDJMD",
+    "price": 160.31027,
+    "change": 0.67757,
+    "volume": 0
+  },
+  {
+    "symbol": "USDJOD",
+    "price": 0.709,
+    "change": 0.001,
+    "volume": 0
+  },
+  {
+    "symbol": "USDJPY",
+    "price": 144.615,
+    "change": 0.256,
+    "volume": 0
+  },
+  {
+    "symbol": "USDKES",
+    "price": 129.39278,
+    "change": 0.10278,
+    "volume": 0
+  },
+  {
+    "symbol": "USDKHR",
+    "price": 4005.22753,
+    "change": 6.22753,
+    "volume": 0
+  },
+  {
+    "symbol": "USDKMF",
+    "price": 419.74666,
+    "change": -0.02333963,
+    "volume": 0
+  },
+  {
+    "symbol": "USDKRW",
+    "price": 1364.12413,
+    "change": 8.48407,
+    "volume": 0
+  },
+  {
+    "symbol": "USDKWD",
+    "price": 0.30587,
+    "change": 0.0006780051,
+    "volume": 0
+  },
+  {
+    "symbol": "USDKYD",
+    "price": 0.82,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "USDKZT",
+    "price": 518.9185,
+    "change": 1.0585,
+    "volume": 0
+  },
+  {
+    "symbol": "USDLAK",
+    "price": 21539.319,
+    "change": 89.319,
+    "volume": 0
+  },
+  {
+    "symbol": "USDLBP",
+    "price": 89869.32417,
+    "change": 369.32417,
+    "volume": 0
+  },
+  {
+    "symbol": "USDLKR",
+    "price": 299.83204,
+    "change": -0.07795944,
+    "volume": 0
+  },
+  {
+    "symbol": "USDLRD",
+    "price": 200.07555,
+    "change": 1.16775,
+    "volume": 0
+  },
+  {
+    "symbol": "USDLSL",
+    "price": 17.83125,
+    "change": 0.00125366,
+    "volume": 0
+  },
+  {
+    "symbol": "USDLYD",
+    "price": 5.42937,
+    "change": 0.02706574,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMAD",
+    "price": 9.0293,
+    "change": 0.00390096,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMDL",
+    "price": 16.73,
+    "change": -0.05,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMGA",
+    "price": 4426.63289,
+    "change": 4.99289,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMKD",
+    "price": 52.51333,
+    "change": 0.26333,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMMK",
+    "price": 2098.26022,
+    "change": 4.58032,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMOP",
+    "price": 8.0849,
+    "change": 0.000499897736,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMUR",
+    "price": 45.14329,
+    "change": 0.24329,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMVR",
+    "price": 15.45066,
+    "change": 0.0306581,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMWK",
+    "price": 1734.53845,
+    "change": 17.51555,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMXN",
+    "price": 18.82301,
+    "change": -0.04098577,
+    "volume": 75158
+  },
+  {
+    "symbol": "USDMXV",
+    "price": 2.21568,
+    "change": -0.00456172,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMYR",
+    "price": 4.22805,
+    "change": 0.00204702,
+    "volume": 0
+  },
+  {
+    "symbol": "USDMZN",
+    "price": 63.70447,
+    "change": 0.44447,
+    "volume": 0
+  },
+  {
+    "symbol": "USDNAD",
+    "price": 17.83125,
+    "change": 0.02135366,
+    "volume": 0
+  },
+  {
+    "symbol": "USDNGN",
+    "price": 1543.02344,
+    "change": 2.68344,
+    "volume": 0
+  },
+  {
+    "symbol": "USDNIO",
+    "price": 36.6243,
+    "change": -0.000001176779,
+    "volume": 0
+  },
+  {
+    "symbol": "USDNOK",
+    "price": 10.0555,
+    "change": -0.00478,
+    "volume": 0
+  },
+  {
+    "symbol": "USDNPR",
+    "price": 136.80678,
+    "change": -0.32152,
+    "volume": 0
+  },
+  {
+    "symbol": "USDNZD",
+    "price": 1.6506,
+    "change": -0.000400050653,
+    "volume": 0
+  },
+  {
+    "symbol": "USDOMR",
+    "price": 0.3839,
+    "change": -0.00109911,
+    "volume": 0
+  },
+  {
+    "symbol": "USDPAB",
+    "price": 1,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "USDPEN",
+    "price": 3.54962,
+    "change": 0.00182251,
+    "volume": 0
+  },
+  {
+    "symbol": "USDPGK",
+    "price": 4.0796,
+    "change": 0.03789859,
+    "volume": 0
+  },
+  {
+    "symbol": "USDPHP",
+    "price": 56.57242,
+    "change": 0.00342255,
+    "volume": 0
+  },
+  {
+    "symbol": "USDPKR",
+    "price": 283.65724,
+    "change": 0.18724,
+    "volume": 0
+  },
+  {
+    "symbol": "USDPLN",
+    "price": 3.62102,
+    "change": -0.00248337,
+    "volume": 97777
+  },
+  {
+    "symbol": "USDPYG",
+    "price": 7967.1393,
+    "change": 11.2993,
+    "volume": 0
+  },
+  {
+    "symbol": "USDQAR",
+    "price": 3.64,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "USDRON",
+    "price": 4.33624,
+    "change": 0.000540802714,
+    "volume": 0
+  },
+  {
+    "symbol": "USDRSD",
+    "price": 100.1837,
+    "change": 0.1429,
+    "volume": 0
+  },
+  {
+    "symbol": "USDRUB",
+    "price": 78.375,
+    "change": -0.3723,
+    "volume": 0
+  },
+  {
+    "symbol": "USDRWF",
+    "price": 1437.9231,
+    "change": 10.1031,
+    "volume": 0
+  },
+  {
+    "symbol": "USDSAR",
+    "price": 3.75,
+    "change": -0.000400073928,
+    "volume": 0
+  },
+  {
+    "symbol": "USDSCR",
+    "price": 14.46432,
+    "change": 0.26512,
+    "volume": 0
+  },
+  {
+    "symbol": "USDSDG",
+    "price": 600.50504,
+    "change": 1.70504,
+    "volume": 0
+  },
+  {
+    "symbol": "USDSEK",
+    "price": 9.48698,
+    "change": -0.00849009,
+    "volume": 94008
+  },
+  {
+    "symbol": "USDSGD",
+    "price": 1.2756,
+    "change": 0.00257,
+    "volume": 0
+  },
+  {
+    "symbol": "USDSHP",
+    "price": 0.72885,
+    "change": 0.0005494255,
+    "volume": 0
+  },
+  {
+    "symbol": "USDSLL",
+    "price": 22653.2,
+    "change": -31.6,
+    "volume": 0
+  },
+  {
+    "symbol": "USDSOS",
+    "price": 569.81854,
+    "change": 1.81854,
+    "volume": 0
+  },
+  {
+    "symbol": "USDSVC",
+    "price": 8.75,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "USDSZL",
+    "price": 17.83125,
+    "change": 0.02105366,
+    "volume": 0
+  },
+  {
+    "symbol": "USDTHB",
+    "price": 32.49826,
+    "change": 0.05826012,
+    "volume": 22551
+  },
+  {
+    "symbol": "USDTJS",
+    "price": 9.85569,
+    "change": -0.04870563,
+    "volume": 0
+  },
+  {
+    "symbol": "USDTMT",
+    "price": 3.36,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "USDTND",
+    "price": 2.8826,
+    "change": -0.00220408,
+    "volume": 0
+  },
+  {
+    "symbol": "USDTRY",
+    "price": 39.92116,
+    "change": 0.18186,
+    "volume": 7961
+  },
+  {
+    "symbol": "USDTTD",
+    "price": 6.78997,
+    "change": 0.02127468,
+    "volume": 0
+  },
+  {
+    "symbol": "USDTWD",
+    "price": 29.10463,
+    "change": -0.05237357,
+    "volume": 0
+  },
+  {
+    "symbol": "USDTZS",
+    "price": 2637.2137,
+    "change": 18.2137,
+    "volume": 0
+  },
+  {
+    "symbol": "USDUAH",
+    "price": 41.68886,
+    "change": 0.0268648,
+    "volume": 0
+  },
+  {
+    "symbol": "USDUGX",
+    "price": 3597.23657,
+    "change": 8.33657,
+    "volume": 0
+  },
+  {
+    "symbol": "USDUYU",
+    "price": 40.20773,
+    "change": -0.05827301,
+    "volume": 0
+  },
+  {
+    "symbol": "USDUZS",
+    "price": 12637.67673,
+    "change": 56.26673,
+    "volume": 0
+  },
+  {
+    "symbol": "USDVND",
+    "price": 25997.69631,
+    "change": -102.30369,
+    "volume": 0
+  },
+  {
+    "symbol": "USDXAF",
+    "price": 559.66221,
+    "change": -0.65779,
+    "volume": 0
+  },
+  {
+    "symbol": "USDXAG",
+    "price": 0.03090643,
+    "change": 0.00136748,
+    "volume": 3245
+  },
+  {
+    "symbol": "USDXAU",
+    "price": 0.0003073128,
+    "change": 0.000006316502,
+    "volume": 239185
+  },
+  {
+    "symbol": "USDXDR",
+    "price": 0.72813,
+    "change": 0.000173591541,
+    "volume": 0
+  },
+  {
+    "symbol": "USDXOF",
+    "price": 559.66221,
+    "change": -0.65779,
+    "volume": 0
+  },
+  {
+    "symbol": "USDXPF",
+    "price": 101.81379,
+    "change": 0.31379,
+    "volume": 0
+  },
+  {
+    "symbol": "USDYER",
+    "price": 242.38769,
+    "change": 0.36769,
+    "volume": 0
+  },
+  {
+    "symbol": "USDZAC",
+    "price": 1780.11,
+    "change": -4.29,
+    "volume": 0
+  },
+  {
+    "symbol": "USDZAR",
+    "price": 17.83125,
+    "change": -0.00440634,
+    "volume": 98169
+  },
+  {
+    "symbol": "USDZMW",
+    "price": 23.74931,
+    "change": 0.14931,
+    "volume": 0
+  },
+  {
+    "symbol": "UYUEUR",
+    "price": 0.02121979,
+    "change": 0.0000257905,
+    "volume": 1410
+  },
+  {
+    "symbol": "UYUGBP",
+    "price": 0.0181271,
+    "change": 0.0001000984,
+    "volume": 0
+  },
+  {
+    "symbol": "UYUUSD",
+    "price": 0.02487084,
+    "change": 0.0000708414,
+    "volume": 0
+  },
+  {
+    "symbol": "UZSCHF",
+    "price": 0.0000632109,
+    "change": -4.7416e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "UZSEUR",
+    "price": 0.0000675124,
+    "change": -3.77138e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "UZSUSD",
+    "price": 0.0000791285,
+    "change": -3.5385e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "VNDCAD",
+    "price": 0.000052669,
+    "change": 4.12567e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "VNDEUR",
+    "price": 0.0000328183,
+    "change": -1.817e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "VNDGBP",
+    "price": 0.0000274,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "VNDJPY",
+    "price": 0.00556313,
+    "change": 0.000032129,
+    "volume": 0
+  },
+  {
+    "symbol": "VNDUSD",
+    "price": 0.0000384649,
+    "change": 4.649e-7,
+    "volume": 0
+  },
+  {
+    "symbol": "XAFEUR",
+    "price": 0.00152449,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "XAFGBP",
+    "price": 0.0013023,
+    "change": 0.000003196185,
+    "volume": 0
+  },
+  {
+    "symbol": "XAFUSD",
+    "price": 0.00178679,
+    "change": 0.0000020977,
+    "volume": 0
+  },
+  {
+    "symbol": "XAGARS",
+    "price": 34782.86006,
+    "change": -1322.97994,
+    "volume": 1259
+  },
+  {
+    "symbol": "XAGAUD",
+    "price": 55.11741,
+    "change": -0.86847,
+    "volume": 217917
+  },
+  {
+    "symbol": "XAGBRL",
+    "price": 189.89043,
+    "change": -6.49957,
+    "volume": 1213
+  },
+  {
+    "symbol": "XAGCAD",
+    "price": 49.29607,
+    "change": -0.69817,
+    "volume": 219466
+  },
+  {
+    "symbol": "XAGCNY",
+    "price": 258.18346,
+    "change": -4.42654,
+    "volume": 0
+  },
+  {
+    "symbol": "XAGEUR",
+    "price": 30.71661,
+    "change": -0.60574,
+    "volume": 221710
+  },
+  {
+    "symbol": "XAGGBP",
+    "price": 26.2398,
+    "change": -0.45892,
+    "volume": 262719
+  },
+  {
+    "symbol": "XAGHKD",
+    "price": 282.64858,
+    "change": -5.06504,
+    "volume": 115335
+  },
+  {
+    "symbol": "XAGINR",
+    "price": 3076.85359,
+    "change": -62.14641,
+    "volume": 0
+  },
+  {
+    "symbol": "XAGJPY",
+    "price": 5206.86966,
+    "change": -85.33034,
+    "volume": 151298
+  },
+  {
+    "symbol": "XAGKRW",
+    "price": 45956.38233,
+    "change": -3264.27767,
+    "volume": 1258
+  },
+  {
+    "symbol": "XAGMXN",
+    "price": 652.25946,
+    "change": -27.85054,
+    "volume": 1247
+  },
+  {
+    "symbol": "XAGRUB",
+    "price": 2661.27251,
+    "change": -259.08749,
+    "volume": 1254
+  },
+  {
+    "symbol": "XAGSAR",
+    "price": 121.33396,
+    "change": -5.65604,
+    "volume": 1183
+  },
+  {
+    "symbol": "XAGTRY",
+    "price": 1437.22871,
+    "change": -20.06129,
+    "volume": 785744
+  },
+  {
+    "symbol": "XAGUSD",
+    "price": 36.00167,
+    "change": -0.63433,
+    "volume": 261563
+  },
+  {
+    "symbol": "XAGZAR",
+    "price": 641.955,
+    "change": -11.945,
+    "volume": 0
+  },
+  {
+    "symbol": "XAUARS",
+    "price": 3465043.93085,
+    "change": 280758.73085,
+    "volume": 1259
+  },
+  {
+    "symbol": "XAUAUD",
+    "price": 5012.23761,
+    "change": -71.01839,
+    "volume": 370229
+  },
+  {
+    "symbol": "XAUBRL",
+    "price": 18916.75073,
+    "change": 1596.65073,
+    "volume": 1251
+  },
+  {
+    "symbol": "XAUCAD",
+    "price": 4482.85987,
+    "change": -56.41813,
+    "volume": 372742
+  },
+  {
+    "symbol": "XAUCNY",
+    "price": 23478.54809,
+    "change": -395.10191,
+    "volume": 0
+  },
+  {
+    "symbol": "XAUEUR",
+    "price": 2793.29078,
+    "change": -50.65322,
+    "volume": 367548
+  },
+  {
+    "symbol": "XAUGBP",
+    "price": 2386.18081,
+    "change": -37.95619,
+    "volume": 404929
+  },
+  {
+    "symbol": "XAUHKD",
+    "price": 25703.34447,
+    "change": -419.90153,
+    "volume": 266797
+  },
+  {
+    "symbol": "XAUINR",
+    "price": 279801.25515,
+    "change": -5513.94485,
+    "volume": 0
+  },
+  {
+    "symbol": "XAUJPY",
+    "price": 473499.50978,
+    "change": -7012.49022,
+    "volume": 423550
+  },
+  {
+    "symbol": "XAUKRW",
+    "price": 4578142.32137,
+    "change": 237220.22137,
+    "volume": 1259
+  },
+  {
+    "symbol": "XAUMXN",
+    "price": 64977.62643,
+    "change": 4996.72643,
+    "volume": 1258
+  },
+  {
+    "symbol": "XAURUB",
+    "price": 265114.08628,
+    "change": 7558.38628,
+    "volume": 1258
+  },
+  {
+    "symbol": "XAUSAR",
+    "price": 12087.20335,
+    "change": 887.40335,
+    "volume": 1242
+  },
+  {
+    "symbol": "XAUTHB",
+    "price": 106396.07914,
+    "change": -1153.73086,
+    "volume": 1296258
+  },
+  {
+    "symbol": "XAUTRY",
+    "price": 130697.9305,
+    "change": -1635.2595,
+    "volume": 1296258
+  },
+  {
+    "symbol": "XAUUSD",
+    "price": 3273.90093,
+    "change": -54.14407,
+    "volume": 0
+  },
+  {
+    "symbol": "XAUZAR",
+    "price": 58377.75795,
+    "change": -960.24205,
+    "volume": 0
+  },
+  {
+    "symbol": "XCDGBP",
+    "price": 0.27013,
+    "change": 0.000277005668,
+    "volume": 0
+  },
+  {
+    "symbol": "XDRUSD",
+    "price": 1.37338,
+    "change": -0.0003275017,
+    "volume": 0
+  },
+  {
+    "symbol": "XOFEUR",
+    "price": 0.001525,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "XOFUSD",
+    "price": 0.00178679,
+    "change": 0.00000209764,
+    "volume": 0
+  },
+  {
+    "symbol": "XPFEUR",
+    "price": 0.00838012,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "XPFGBP",
+    "price": 0.00715865,
+    "change": 0.000012221142,
+    "volume": 0
+  },
+  {
+    "symbol": "XPFUSD",
+    "price": 0.00982185,
+    "change": -0.0000303646,
+    "volume": 0
+  },
+  {
+    "symbol": "YEREUR",
+    "price": 0.00351998,
+    "change": -0.000008976176,
+    "volume": 0
+  },
+  {
+    "symbol": "YERGBP",
+    "price": 0.00300696,
+    "change": -0.000004093256,
+    "volume": 0
+  },
+  {
+    "symbol": "YERUSD",
+    "price": 0.00412562,
+    "change": -0.000006267826,
+    "volume": 0
+  },
+  {
+    "symbol": "ZACUSD",
+    "price": 0.00056176307,
+    "change": 0.00000135057,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARAED",
+    "price": 0.20596,
+    "change": 0.0007385978,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARARS",
+    "price": 66.39063,
+    "change": 0.33783,
+    "volume": 114
+  },
+  {
+    "symbol": "ZARAUD",
+    "price": 0.08585869,
+    "change": 0.0002886864,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARBRL",
+    "price": 0.30766,
+    "change": 0.0008244874,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARBWP",
+    "price": 0.74679,
+    "change": -0.00911156,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARCAD",
+    "price": 0.07679055,
+    "change": 0.000329177506,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARCHF",
+    "price": 0.0447,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARCNY",
+    "price": 0.40218,
+    "change": 0.0009231072,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARCOP",
+    "price": 229.43652,
+    "change": 3.89952,
+    "volume": 268
+  },
+  {
+    "symbol": "ZARCYP",
+    "price": 0.0295899,
+    "change": 0.000121419107,
+    "volume": 55583
+  },
+  {
+    "symbol": "ZARCZK",
+    "price": 1.1834,
+    "change": 0.00845805,
+    "volume": 702503
+  },
+  {
+    "symbol": "ZARDKK",
+    "price": 0.35695,
+    "change": -0.000675563013,
+    "volume": 0
+  },
+  {
+    "symbol": "ZAREGP",
+    "price": 2.78707,
+    "change": -0.00796426,
+    "volume": 0
+  },
+  {
+    "symbol": "ZAREUR",
+    "price": 0.04784855,
+    "change": -0.000104276996,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARGBP",
+    "price": 0.04087483,
+    "change": -0.000007109869,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARGHS",
+    "price": 0.57894,
+    "change": 0.00247488,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARHKD",
+    "price": 0.44029,
+    "change": 0.00142748,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARHUF",
+    "price": 19.08842,
+    "change": 0.10492,
+    "volume": 323350
+  },
+  {
+    "symbol": "ZARIDR",
+    "price": 910.31018,
+    "change": 3.53018,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARILS",
+    "price": 0.18993,
+    "change": 0.0005733412,
+    "volume": 134093
+  },
+  {
+    "symbol": "ZARINR",
+    "price": 4.79294,
+    "change": -0.00185719,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARJPY",
+    "price": 8.11096,
+    "change": 0.02595743,
+    "volume": 14980
+  },
+  {
+    "symbol": "ZARKES",
+    "price": 7.25652,
+    "change": 0.05251622,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARKRW",
+    "price": 76.50186,
+    "change": 0.56186,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARLKR",
+    "price": 16.81497,
+    "change": -0.19617,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARMAD",
+    "price": 0.50638,
+    "change": 0.00456301,
+    "volume": 64611
+  },
+  {
+    "symbol": "ZARMWK",
+    "price": 97.27518,
+    "change": 0.24418,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARMXN",
+    "price": 1.05562,
+    "change": -0.0003807656,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARMYR",
+    "price": 0.23711,
+    "change": 0.0007144002,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARNAD",
+    "price": 1,
+    "change": 0.00977,
+    "volume": 7942
+  },
+  {
+    "symbol": "ZARNGN",
+    "price": 85.0244,
+    "change": 0.14342,
+    "volume": 136727
+  },
+  {
+    "symbol": "ZARNOK",
+    "price": 0.56546,
+    "change": 0.000106686933,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARNZD",
+    "price": 0.09261986,
+    "change": 0.0001298639,
+    "volume": 0
+  },
+  {
+    "symbol": "ZAROMR",
+    "price": 0.0203577,
+    "change": -0.000711374216,
+    "volume": 137306
+  },
+  {
+    "symbol": "ZARPHP",
+    "price": 3.17266,
+    "change": 0.00195536,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARPKR",
+    "price": 15.90787,
+    "change": 0.03016858,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARPLN",
+    "price": 0.20307,
+    "change": -0.000168296759,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARQAR",
+    "price": 0.19247,
+    "change": -0.00693006,
+    "volume": 55582
+  },
+  {
+    "symbol": "ZARRON",
+    "price": 0.24318,
+    "change": 0.00215005,
+    "volume": 24157
+  },
+  {
+    "symbol": "ZARRWF",
+    "price": 80.64061,
+    "change": 1.25381,
+    "volume": 19
+  },
+  {
+    "symbol": "ZARSEK",
+    "price": 0.53204,
+    "change": 0.00464223,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARSGD",
+    "price": 0.07157174,
+    "change": 0.0006717354,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARSZL",
+    "price": 1,
+    "change": 0,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARTHB",
+    "price": 1.82254,
+    "change": 0.00568433,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARTND",
+    "price": 0.16166,
+    "change": 0.00126487,
+    "volume": 21
+  },
+  {
+    "symbol": "ZARTRY",
+    "price": 2.23883,
+    "change": 0.02932586,
+    "volume": 65046
+  },
+  {
+    "symbol": "ZARTWD",
+    "price": 1.63223,
+    "change": -0.00176154,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARTZS",
+    "price": 141.21545,
+    "change": -3.52492,
+    "volume": 137119
+  },
+  {
+    "symbol": "ZARUGX",
+    "price": 201.73773,
+    "change": 2.19473,
+    "volume": 17
+  },
+  {
+    "symbol": "ZARUSD",
+    "price": 0.05608131,
+    "change": 0.0000138584,
+    "volume": 0
+  },
+  {
+    "symbol": "ZARXAG",
+    "price": 0.00163505,
+    "change": 0.000017184412,
+    "volume": 1241
+  },
+  {
+    "symbol": "ZARXAU",
+    "price": 0.0000164045,
+    "change": -0.000001921796,
+    "volume": 1256
+  },
+  {
+    "symbol": "ZARZMW",
+    "price": 1.33189,
+    "change": 0.00539225,
+    "volume": 0
+  },
+  {
+    "symbol": "ZMWEUR",
+    "price": 0.03592524,
+    "change": 0.0003652372,
+    "volume": 0
+  },
+  {
+    "symbol": "ZMWGBP",
+    "price": 0.03068929,
+    "change": 0.0004592903,
+    "volume": 0
+  },
+  {
+    "symbol": "ZMWUSD",
+    "price": 0.04210649,
+    "change": 0.0003164889,
+    "volume": 0
+  },
+  {
+    "symbol": "ZMWZAR",
+    "price": 0.75081,
+    "change": 0.00121149,
+    "volume": 0
+  }
+]

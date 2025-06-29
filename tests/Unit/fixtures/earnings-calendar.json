@@ -1,0 +1,92 @@
+[
+  {
+    "symbol": "WOW.AX",
+    "date": "2021-01-02",
+    "epsActual": 0.898,
+    "epsEstimated": 0.726,
+    "revenueActual": 35845000000,
+    "revenueEstimated": 35718396000,
+    "lastUpdated": "2025-06-17"
+  },
+  {
+    "symbol": "HLFGY",
+    "date": "2021-01-02",
+    "epsActual": 0.2586,
+    "epsEstimated": null,
+    "revenueActual": 1509881000,
+    "revenueEstimated": null,
+    "lastUpdated": "2025-04-25"
+  },
+  {
+    "symbol": "0R0V.L",
+    "date": "2021-01-02",
+    "epsActual": -143.4771,
+    "epsEstimated": null,
+    "revenueActual": 86998000,
+    "revenueEstimated": null,
+    "lastUpdated": "2025-04-14"
+  },
+  {
+    "symbol": "0KHE.L",
+    "date": "2021-01-02",
+    "epsActual": 3.38,
+    "epsEstimated": null,
+    "revenueActual": 1354606000,
+    "revenueEstimated": null,
+    "lastUpdated": "2025-04-25"
+  },
+  {
+    "symbol": "UNIR",
+    "date": "2021-01-02",
+    "epsActual": -0.06015,
+    "epsEstimated": null,
+    "revenueActual": 16689962,
+    "revenueEstimated": null,
+    "lastUpdated": "2024-03-13"
+  },
+  {
+    "symbol": "92IP.L",
+    "date": "2021-01-02",
+    "epsActual": -0.0731,
+    "epsEstimated": null,
+    "revenueActual": 27550000,
+    "revenueEstimated": null,
+    "lastUpdated": "2025-06-17"
+  },
+  {
+    "symbol": "HFG.L",
+    "date": "2021-01-02",
+    "epsActual": 0.2586,
+    "epsEstimated": null,
+    "revenueActual": 1509881000,
+    "revenueEstimated": 1177000000,
+    "lastUpdated": "2025-06-17"
+  },
+  {
+    "symbol": "EDVGF",
+    "date": "2021-01-02",
+    "epsActual": 0.1154,
+    "epsEstimated": null,
+    "revenueActual": 4883352045,
+    "revenueEstimated": null,
+    "lastUpdated": "2025-06-17"
+  },
+  {
+    "symbol": "HLTFF",
+    "date": "2021-01-02",
+    "epsActual": 0.3522,
+    "epsEstimated": null,
+    "revenueActual": 2056262392,
+    "revenueEstimated": 1608899387,
+    "lastUpdated": "2025-06-17"
+  },
+  {
+    "symbol": "0J8Z.L",
+    "date": "2021-01-02",
+    "epsActual": 1.75,
+    "epsEstimated": null,
+    "revenueActual": 953000000,
+    "revenueEstimated": null,
+    "lastUpdated": "2025-04-25"
+  }
+]

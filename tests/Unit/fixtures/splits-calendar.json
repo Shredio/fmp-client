@@ -1,0 +1,62 @@
+[
+  {
+    "symbol": "TNPV.TA",
+    "date": "2021-01-10",
+    "numerator": 1,
+    "denominator": 10
+  },
+  {
+    "symbol": "IPCALAB.BO",
+    "date": "2021-01-10",
+    "numerator": 2,
+    "denominator": 1
+  },
+  {
+    "symbol": "TUI1.DE",
+    "date": "2021-01-08",
+    "numerator": 199,
+    "denominator": 125
+  },
+  {
+    "symbol": "TUI.L",
+    "date": "2021-01-08",
+    "numerator": 1589,
+    "denominator": 1000
+  },
+  {
+    "symbol": "TUIFF",
+    "date": "2021-01-08",
+    "numerator": 199,
+    "denominator": 125
+  },
+  {
+    "symbol": "KCC.V",
+    "date": "2021-01-08",
+    "numerator": 1,
+    "denominator": 3
+  },
+  {
+    "symbol": "0HX7.L",
+    "date": "2021-01-08",
+    "numerator": 1,
+    "denominator": 7
+  },
+  {
+    "symbol": "8193.HK",
+    "date": "2021-01-08",
+    "numerator": 151,
+    "denominator": 100
+  },
+  {
+    "symbol": "GPO.CN",
+    "date": "2021-01-08",
+    "numerator": 1,
+    "denominator": 2
+  },
+  {
+    "symbol": "8292.HK",
+    "date": "2021-01-08",
+    "numerator": 1,
+    "denominator": 10
+  }
+]

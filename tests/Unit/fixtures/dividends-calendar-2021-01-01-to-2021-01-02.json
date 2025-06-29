@@ -1,0 +1,156 @@
+[
+  {
+    "symbol": "UBN",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 2.429906542056075,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "HEOL",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 0.0021996615905245345,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "ANVV",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 13000000.000000002,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "CCCI",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 43333.333333333336,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "GFGY",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 0.007222222222222222,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "HLBYL",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 0,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "LKCRU",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.08,
+    "dividend": 0.08,
+    "yield": 4.571428571428571,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "PMAH",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 65000,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "5072.KL",
+    "date": "2021-01-01",
+    "recordDate": "2021-01-04",
+    "paymentDate": "2021-01-25",
+    "declarationDate": "",
+    "adjDividend": 0.003,
+    "dividend": 0.003,
+    "yield": 0.6521739130434783,
+    "frequency": "Annual"
+  },
+  {
+    "symbol": "AGA",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 0.35135135135135137,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "CONE",
+    "date": "2021-01-01",
+    "recordDate": "2021-01-04",
+    "paymentDate": "2021-01-08",
+    "declarationDate": "2020-10-28",
+    "adjDividend": 0.51,
+    "dividend": 0.51,
+    "yield": 2.761449077238551,
+    "frequency": "Quarterly"
+  },
+  {
+    "symbol": "SBV",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 0.0010483870967741937,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "SDSYA",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 4.193548387096775,
+    "frequency": "Monthly"
+  },
+  {
+    "symbol": "FXIT.ME",
+    "date": "2021-01-01",
+    "recordDate": "",
+    "paymentDate": "",
+    "declarationDate": "",
+    "adjDividend": 0.13,
+    "dividend": 0.13,
+    "yield": 0.10112167349462246,
+    "frequency": "Monthly"
+  }
+]

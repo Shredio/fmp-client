@@ -1,0 +1,892 @@
+[
+  {
+    "exchange": "ASX",
+    "name": "Australian Stock Exchange",
+    "openingHour": "10:00 AM +10:00",
+    "closingHour": "04:00 PM +10:00",
+    "timezone": "Australia/Sydney",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "BSE",
+    "name": "Bombay Stock Exchange",
+    "openingHour": "09:15 AM +05:30",
+    "closingHour": "03:30 PM +05:30",
+    "timezone": "Asia/Kolkata",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "B3",
+    "name": "Brazil Stock Exchange",
+    "openingHour": "10:00 AM -03:00",
+    "closingHour": "04:55 PM -03:00",
+    "timezone": "America/Sao_Paulo",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "FSX",
+    "name": "Frankfurt Stock Exchange",
+    "openingHour": "08:00 AM +02:00",
+    "closingHour": "10:00 PM +02:00",
+    "timezone": "Europe/Berlin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "HKSE",
+    "name": "Hong Kong Stock Exchange",
+    "openingHour": "09:30 AM +08:00",
+    "closingHour": "04:00 PM +08:00",
+    "timezone": "Hongkong",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "JSE",
+    "name": "Johannesburg Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:00 PM +02:00",
+    "timezone": "Africa/Johannesburg",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "KRX",
+    "name": "Korea Exchange",
+    "openingHour": "09:30 AM +09:00",
+    "closingHour": "03:30 PM +09:00",
+    "timezone": "Asia/Seoul",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "LSE",
+    "name": "London Stock Exchange",
+    "openingHour": "08:00 AM +01:00",
+    "closingHour": "04:30 PM +01:00",
+    "timezone": "Europe/London",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "NYSE",
+    "name": "New York Stock Exchange",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/New_York",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "SSX",
+    "name": "Sydney Stock Exchange",
+    "openingHour": "10:00 AM +10:00",
+    "closingHour": "04:00 PM +10:00",
+    "timezone": "Australia/Sydney",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "SZSE",
+    "name": "Shenzhen Stock Exchange",
+    "openingHour": "09:30 AM +08:00",
+    "closingHour": "11:30 AM +08:00",
+    "openingAdditional": "01:00 PM +08:00",
+    "closingAdditional": "03:00 PM +08:00",
+    "timezone": "Asia/Shanghai",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "SIX",
+    "name": "Swiss Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Zurich",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "TSE",
+    "name": "Tokyo Stock Exchange",
+    "openingHour": "09:00 AM +09:00",
+    "closingHour": "11:30 AM +09:00",
+    "openingAdditional": "12:30 PM +09:00",
+    "closingAdditional": "03:30 PM +09:00",
+    "timezone": "Asia/Tokyo",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "TSX",
+    "name": "Toronto Stock Exchange",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/Toronto",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "AMEX",
+    "name": "New York Stock Exchange Arca",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/New_York",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "AMS",
+    "name": "Amsterdam Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Amsterdam",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "AQS",
+    "name": "Aquis Exchange",
+    "openingHour": "08:00 AM +01:00",
+    "closingHour": "04:30 PM +01:00",
+    "timezone": "Europe/London",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "ASE",
+    "name": "American Stock Exchange",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/New_York",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "BER",
+    "name": "Berlin Stock Exchange",
+    "openingHour": "08:00 AM +02:00",
+    "closingHour": "10:00 PM +02:00",
+    "timezone": "Europe/Berlin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "BRU",
+    "name": "Euronext Brussels Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Brussels",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "BTS",
+    "name": "BitShares Exchange",
+    "openingHour": "12:00 AM +01:00",
+    "closingHour": "12:00 AM +01:00",
+    "timezone": "Europe/London",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "BUD",
+    "name": "Budapest Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:00 PM +02:00",
+    "timezone": "Europe/Budapest",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "BUE",
+    "name": "Buenos Aires Stock Exchange",
+    "openingHour": "11:00 AM -03:00",
+    "closingHour": "05:00 PM -03:00",
+    "timezone": "America/Argentina/Buenos_Aires",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "EGX",
+    "name": "Egyptian Stock Exchange",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "02:15 PM +03:00",
+    "timezone": "Africa/Cairo",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "CNQ",
+    "name": "Canada Trading and Quotation System",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/Toronto",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "CME",
+    "name": "Chicago Mercantile Exchange",
+    "openingHour": "09:30 AM -05:00",
+    "closingHour": "04:00 PM -05:00",
+    "timezone": "America/Chicago",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "CPH",
+    "name": "NASDAQ Copenhagen",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:00 PM +02:00",
+    "timezone": "Europe/Copenhagen",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "DFM",
+    "name": "Dubai Financial Market",
+    "openingHour": "10:00 AM +04:00",
+    "closingHour": "02:45 PM +04:00",
+    "timezone": "Asia/Dubai",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "QE",
+    "name": "Qatar Stock Exchange",
+    "openingHour": "09:30 AM +03:00",
+    "closingHour": "01:00 PM +03:00",
+    "timezone": "Asia/Qatar",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "DUS",
+    "name": "Dusseldorf Stock Exchange",
+    "openingHour": "08:00 AM +02:00",
+    "closingHour": "10:00 PM +02:00",
+    "timezone": "Europe/Berlin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "EBS",
+    "name": "Swiss Electronic Bourse",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Zurich",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "PAR",
+    "name": "Euronext Paris",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Paris",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "EURONEXT",
+    "name": "Euronext",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Paris",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "DUB",
+    "name": "Euronext Dublin",
+    "openingHour": "08:00 AM +01:00",
+    "closingHour": "04:30 PM +01:00",
+    "timezone": "Europe/Dublin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "HAM",
+    "name": "Hamburg Stock Exchange",
+    "openingHour": "08:00 AM +02:00",
+    "closingHour": "10:00 PM +02:00",
+    "timezone": "Europe/Berlin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "HEL",
+    "name": "NASDAQ Helsinki",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "06:30 PM +03:00",
+    "timezone": "Europe/Helsinki",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "ICE",
+    "name": "Iceland Stock Exchange",
+    "openingHour": "09:30 AM +00:00",
+    "closingHour": "03:30 PM +00:00",
+    "timezone": "Atlantic/Reykjavik",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "IOB",
+    "name": "London Stock Exchange International Order Book",
+    "openingHour": "08:00 AM +01:00",
+    "closingHour": "04:35 PM +01:00",
+    "timezone": "Europe/London",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "ISE",
+    "name": "Irish Stock Exchange",
+    "openingHour": "08:00 AM +01:00",
+    "closingHour": "04:30 PM +01:00",
+    "timezone": "Europe/Dublin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "BIST",
+    "name": "Borsa Istanbul Stock Exchange",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "06:00 PM +03:00",
+    "timezone": "Asia/Istanbul",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "IDX",
+    "name": "Indonesia Stock Exchange",
+    "openingHour": "09:00 AM +07:00",
+    "closingHour": "12:00 PM +07:00",
+    "openingAdditional": "01:30 PM +07:00",
+    "closingAdditional": "03:00 PM +07:00",
+    "timezone": "Asia/Jakarta",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "KLSE",
+    "name": "Bursa Malaysia Exchange",
+    "openingHour": "09:30 AM +08:00",
+    "closingHour": "12:30 PM +08:00",
+    "openingAdditional": "02:30 PM +08:00",
+    "closingAdditional": "04:50 PM +08:00",
+    "timezone": "Asia/Kuala_Lumpur",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "KSC",
+    "name": "Korea Stock Exchange",
+    "openingHour": "09:00 AM +09:00",
+    "closingHour": "03:30 PM +09:00",
+    "timezone": "Asia/Seoul",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "LIS",
+    "name": "EURONEXT Lisbon Exchange",
+    "openingHour": "08:00 AM +01:00",
+    "closingHour": "04:30 PM +01:00",
+    "timezone": "Europe/Lisbon",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "MCX",
+    "name": "Multi Commodity Exchange of India",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "06:40 PM +03:00",
+    "timezone": "Europe/Moscow",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "BMV",
+    "name": "Mexican Stock Exchange",
+    "openingHour": "07:30 AM -06:00",
+    "closingHour": "02:00 PM -06:00",
+    "timezone": "America/Mexico_City",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "MIL",
+    "name": "Milan Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Rome",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "XMUN",
+    "name": "Borse Muenchen",
+    "openingHour": "08:00 AM +02:00",
+    "closingHour": "10:00 PM +02:00",
+    "timezone": "Europe/Berlin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "NASDAQ",
+    "name": "NASDAQ Global Market",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/New_York",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "NSE",
+    "name": "National Stock Exchange of India",
+    "openingHour": "09:15 AM +05:30",
+    "closingHour": "03:30 PM +05:30",
+    "timezone": "Asia/Kolkata",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "NZE",
+    "name": "New Zealand Stock Exchange",
+    "openingHour": "10:00 AM +12:00",
+    "closingHour": "04:45 PM +12:00",
+    "timezone": "Pacific/Auckland",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "OSE",
+    "name": "Oslo Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "04:20 PM +02:00",
+    "timezone": "Europe/Oslo",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "OTC",
+    "name": "OTC Markets US",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/New_York",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "PSE",
+    "name": "Prague Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "04:10 PM +02:00",
+    "timezone": "Europe/Prague",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "XSAU",
+    "name": "Saudi Stock Exchange",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "03:20 PM +03:00",
+    "timezone": "Asia/Riyadh",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "SET",
+    "name": "Securities Exchange of Thailand",
+    "openingHour": "10:00 AM +07:00",
+    "closingHour": "12:30 PM +07:00",
+    "openingAdditional": "02:00 PM +07:00",
+    "closingAdditional": "04:40 PM +07:00",
+    "timezone": "Asia/Bangkok",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "SSE",
+    "name": "Shanghai Stock Exchange",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/Santiago",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "STO",
+    "name": "Stockholm Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Stockholm",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "STU",
+    "name": "Stuttgart Stock Exchange",
+    "openingHour": "08:00 AM +02:00",
+    "closingHour": "10:00 PM +02:00",
+    "timezone": "Europe/Berlin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "TWSE",
+    "name": "Taiwan Stock Exchange",
+    "openingHour": "09:00 AM +08:00",
+    "closingHour": "01:30 PM +08:00",
+    "timezone": "Asia/Taipei",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "TLV",
+    "name": "Tel Aviv Stock Exchange",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "05:15 PM +03:00",
+    "timezone": "Asia/Tel_Aviv",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "TWO",
+    "name": "Taiwan OTC Exchange",
+    "openingHour": "09:00 AM +08:00",
+    "closingHour": "01:30 PM +08:00",
+    "timezone": "Asia/Taipei",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "WBAG",
+    "name": "Vienna Stock Exchnage",
+    "openingHour": "08:55 AM +02:00",
+    "closingHour": "05:35 PM +02:00",
+    "timezone": "Europe/Vienna",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "WSE",
+    "name": "Warsaw Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "04:50 PM +02:00",
+    "timezone": "Europe/Warsaw",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "XETRA",
+    "name": "Deutsche Borse Xetra",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Berlin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "DOH",
+    "name": "Doha Exchange",
+    "openingHour": "09:30 AM +03:00",
+    "closingHour": "01:15 PM +03:00",
+    "timezone": "Asia/Qatar",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "FKA",
+    "name": "Fukuoka Stock Exchange",
+    "openingHour": "09:00 AM +09:00",
+    "closingHour": "11:30 AM +09:00",
+    "openingAdditional": "12:30 PM +09:00",
+    "closingAdditional": "03:30 PM +09:00",
+    "timezone": "Asia/Tokyo",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "IST",
+    "name": "Borsa Istanbul",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "06:00 PM +03:00",
+    "timezone": "Europe/Istanbul",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "JKT",
+    "name": "Jakarta Stock Exchange",
+    "openingHour": "09:30 AM +07:00",
+    "closingHour": "11:30 AM +07:00",
+    "openingAdditional": "01:30 PM +07:00",
+    "closingAdditional": "03:00 PM +07:00",
+    "timezone": "Asia/Jakarta",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "JNB",
+    "name": "Johannesburg Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:00 PM +02:00",
+    "timezone": "Africa/Johannesburg",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "JPX",
+    "name": "Japan Exchange Group",
+    "openingHour": "09:00 AM +09:00",
+    "closingHour": "11:30 AM +09:00",
+    "openingAdditional": "12:30 PM +09:00",
+    "closingAdditional": "03:30 PM +09:00",
+    "timezone": "Asia/Tokyo",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "KLS",
+    "name": "Kuala Lumpur Stock Exchange",
+    "openingHour": "09:30 AM +08:00",
+    "closingHour": "12:30 PM +08:00",
+    "openingAdditional": "02:30 PM +08:00",
+    "closingAdditional": "05:00 PM +08:00",
+    "timezone": "Asia/Kuala_Lumpur",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "KOE",
+    "name": "Korea Exchange",
+    "openingHour": "09:30 AM +09:00",
+    "closingHour": "03:30 PM +09:00",
+    "timezone": "Asia/Seoul",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "KOSDAQ",
+    "name": "Korea Exchange",
+    "openingHour": "09:30 AM +09:00",
+    "closingHour": "03:30 PM +09:00",
+    "timezone": "Asia/Seoul",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "KUW",
+    "name": "Kuwait Stock Exchange",
+    "openingHour": "CLOSED",
+    "closingHour": "CLOSED",
+    "timezone": "Asia/Kuwait",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "MEX",
+    "name": "Bolsa Mexicana de Valores",
+    "openingHour": "07:30 AM -06:00",
+    "closingHour": "02:00 PM -06:00",
+    "timezone": "America/Mexico_City",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "NEO",
+    "name": "NEO Exchange",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/Toronto",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "PRA",
+    "name": "Prague Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "04:10 PM +02:00",
+    "timezone": "Europe/Prague",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "SAU",
+    "name": "Saudi Stock Exchange",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "03:20 PM +03:00",
+    "timezone": "Asia/Riyadh",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "SGO",
+    "name": "Santiago Stock Exchange",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/Santiago",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "SHH",
+    "name": "Shanghai Stock Exchange",
+    "openingHour": "09:30 AM +08:00",
+    "closingHour": "11:30 AM +08:00",
+    "openingAdditional": "01:00 PM +08:00",
+    "closingAdditional": "03:00 PM +08:00",
+    "timezone": "Asia/Shanghai",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "SHZ",
+    "name": "Shenzhen Stock Exchange",
+    "openingHour": "09:30 AM +08:00",
+    "closingHour": "11:30 AM +08:00",
+    "openingAdditional": "01:00 PM +08:00",
+    "closingAdditional": "03:00 PM +08:00",
+    "timezone": "Asia/Shanghai",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "TAI",
+    "name": "Taipei Exchange",
+    "openingHour": "09:00 AM +08:00",
+    "closingHour": "01:30 PM +08:00",
+    "timezone": "Asia/Taipei",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "TAL",
+    "name": "NASDAQ Tallinn",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "03:55 PM +03:00",
+    "timezone": "Europe/Tallinn",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "VIE",
+    "name": "Vienna Stock Exchnage",
+    "openingHour": "08:55 AM +02:00",
+    "closingHour": "05:35 PM +02:00",
+    "timezone": "Europe/Vienna",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "ATH",
+    "name": "Athens Stock Exchange",
+    "openingHour": "10:15 AM +03:00",
+    "closingHour": "05:20 PM +03:00",
+    "timezone": "Europe/Athens",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "YHD",
+    "name": "Placeholder Default Delisted",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/New_York",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "MCE",
+    "name": "Bolsa de Madrid",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:00 PM +02:00",
+    "timezone": "Europe/Madrid",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "PNK",
+    "name": "OTC Markets US Pink Slips",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/New_York",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "SAO",
+    "name": "São Paulo Stock Exchange",
+    "openingHour": "10:00 AM -03:00",
+    "closingHour": "04:55 PM -03:00",
+    "timezone": "America/Sao_Paulo",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "MUN",
+    "name": "Munich Stock Exchange",
+    "openingHour": "08:00 AM +02:00",
+    "closingHour": "10:00 PM +02:00",
+    "timezone": "Europe/Berlin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "FGI",
+    "name": "Financial Times Stock Exchange",
+    "openingHour": "08:00 AM +01:00",
+    "closingHour": "04:30 PM +01:00",
+    "timezone": "Europe/London",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "ETF",
+    "name": "Chicago Board Options Exchange",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/New_York",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "CBOE",
+    "name": "Chicago Board Options Exchange",
+    "openingHour": "09:30 AM -05:00",
+    "closingHour": "04:00 PM -05:00",
+    "timezone": "America/Chicago",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "ICEF",
+    "name": "ICE Futures",
+    "openingHour": "08:00 PM -05:00",
+    "closingHour": "05:00 PM -05:00",
+    "timezone": "America/Chicago",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "MOEX",
+    "name": "Moscow Stock Exchange",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "06:40 PM +03:00",
+    "timezone": "Europe/Moscow",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "SGX",
+    "name": "Singapore Exchange",
+    "openingHour": "09:00 AM +08:00",
+    "closingHour": "12:00 PM +08:00",
+    "openingAdditional": "01:00 PM +08:00",
+    "closingAdditional": "05:00 PM +08:00",
+    "timezone": "Asia/Singapore",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "NIM",
+    "name": "Nasdaq GIDS",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/New_York",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "CSE",
+    "name": "Canadian Securities Exchange",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/Toronto",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "TSXV",
+    "name": "TSX Venture Exchange",
+    "openingHour": "09:30 AM -04:00",
+    "closingHour": "04:00 PM -04:00",
+    "timezone": "America/Toronto",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "BME",
+    "name": "Spanish Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Madrid",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "CAI",
+    "name": "Cairo Stock Exchange",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "02:15 PM +03:00",
+    "timezone": "Africa/Cairo",
+    "isMarketOpen": false
+  },
+  {
+    "exchange": "DXE",
+    "name": "CBOE Europe DXE",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Berlin",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "NGM",
+    "name": "Nordic Growth Market",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Stockholm",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "OMXSTO",
+    "name": "Stockholm Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "05:30 PM +02:00",
+    "timezone": "Europe/Stockholm",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "OSL",
+    "name": "Oslo Stock Exchange",
+    "openingHour": "09:00 AM +02:00",
+    "closingHour": "04:20 PM +02:00",
+    "timezone": "Europe/Oslo",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "RIS",
+    "name": "Riga Stock Exchange",
+    "openingHour": "10:00 AM +03:00",
+    "closingHour": "04:00 PM +03:00",
+    "timezone": "Europe/Riga",
+    "isMarketOpen": true
+  },
+  {
+    "exchange": "SES",
+    "name": "Singapore Exchange",
+    "openingHour": "09:00 AM +08:00",
+    "closingHour": "12:00 PM +08:00",
+    "openingAdditional": "01:00 PM +08:00",
+    "closingAdditional": "05:00 PM +08:00",
+    "timezone": "Asia/Singapore",
+    "isMarketOpen": false
+  }
+]

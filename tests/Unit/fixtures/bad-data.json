@@ -1,0 +1,18 @@
+[
+	{
+		"exchange": "AMEX",
+		"name": "New York Stock Exchange Arca",
+		"countryName": "United States of America",
+		"countryCode": "US",
+		"symbolSuffix": "N/A",
+		"delay": "Real-time"
+	},
+	{
+		"exchange": "AMS",
+		"name": null,
+		"countryName": "Netherlands",
+		"countryCode": "NL",
+		"symbolSuffix": ".AS",
+		"delay": "Real-time"
+	}
+]
