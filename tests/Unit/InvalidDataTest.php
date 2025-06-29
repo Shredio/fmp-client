@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use Shredio\FmpClient\Exception\InvalidArgumentException;
-use Tests\Mock\TestInvalidArgumentHandler;
+use Shredio\FmpClient\Exception\UnexpectedResponseContentException;
+use Tests\Mock\TestUnexpectedResponseContentExceptionHandler;
 use Tests\TestCase;
 
 final class InvalidDataTest extends TestCase
@@ -13,14 +13,14 @@ final class InvalidDataTest extends TestCase
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/bad-data.json');
 
-		$this->expectException(InvalidArgumentException::class);
+		$this->expectException(UnexpectedResponseContentException::class);
 		$this->expectExceptionMessage('The name of available exchange in AMS must be a non-empty-string. Got: NULL');
 		iterator_to_array($client->availableExchanges());
 	}
 
 	public function testNoStrictMode(): void
 	{
-		$client = $this->createClient(__DIR__ . '/fixtures/bad-data.json', $handler = new TestInvalidArgumentHandler())
+		$client = $this->createClient(__DIR__ . '/fixtures/bad-data.json', $handler = new TestUnexpectedResponseContentExceptionHandler())
 			->withStrictMode(false);
 
 		$exchanges = iterator_to_array($client->availableExchanges());

@@ -10,7 +10,7 @@ use Shredio\FmpClient\Calendar\FmpCalendarPaginator;
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Enum\PeriodQuery;
 use Shredio\FmpClient\Enum\TimeInterval;
-use Shredio\FmpClient\Exception\InvalidArgumentHandler;
+use Shredio\FmpClient\Exception\UnexpectedResponseContentExceptionHandler;
 use Shredio\FmpClient\Mapper\FmpPayloadMapper;
 use Shredio\FmpClient\Payload\AnalystEstimate;
 use Shredio\FmpClient\Payload\AvailableExchange;
@@ -54,7 +54,7 @@ final readonly class FmpClient
 		private HttpClientInterface $httpClient,
 		#[SensitiveParameter]
 		private string $secret,
-		private ?InvalidArgumentHandler $invalidArgumentHandler = null,
+		private ?UnexpectedResponseContentExceptionHandler $invalidArgumentHandler = null,
 		private bool $strictMode = false,
 	)
 	{
@@ -627,7 +627,7 @@ final readonly class FmpClient
 			try {
 				return $fn();
 			} catch (InvalidArgumentException $exception) {
-				throw new Exception\InvalidArgumentException(
+				throw new Exception\UnexpectedResponseContentException(
 					$exception->getMessage(),
 					$exception->getCode(),
 					$exception,
@@ -639,7 +639,7 @@ final readonly class FmpClient
 			return $fn();
 		} catch (InvalidArgumentException $exception) {
 			$this->invalidArgumentHandler?->handle(
-				new Exception\InvalidArgumentException(
+				new Exception\UnexpectedResponseContentException(
 					$exception->getMessage(),
 					$exception->getCode(),
 					$exception,
