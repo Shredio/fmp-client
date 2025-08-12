@@ -40,7 +40,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function availableExchange(mixed $data): AvailableExchange
 	{
-		$validator = new FmpValidator('available exchange');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$exchange = $validator->getNonEmptyStringInArray($data, 'exchange');
@@ -72,7 +72,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function exchangeMarketHours(mixed $data): ExchangeMarketHours
 	{
-		$validator = new FmpValidator('exchange market hours');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$exchange = $validator->getNonEmptyStringInArray($data, 'exchange');
@@ -104,7 +104,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function index(mixed $data): Index
 	{
-		$validator = new FmpValidator('index');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -128,7 +128,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function cryptocurrency(mixed $data): Cryptocurrency
 	{
-		$validator = new FmpValidator('cryptocurrency');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -156,7 +156,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function stock(mixed $data): Stock
 	{
-		$validator = new FmpValidator('stock');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -176,7 +176,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function companyProfile(mixed $data, bool $isCsv = false): CompanyProfile
 	{
-		$validator = new FmpValidator('company profile');
+		$validator = $this->createValidator(__FUNCTION__);
 		
 		if ($isCsv) {
 			$validator = $validator->withCsvFormat();
@@ -268,7 +268,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function analystEstimate(mixed $data): AnalystEstimate
 	{
-		$validator = new FmpValidator('analyst estimate');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -328,7 +328,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function balanceSheetStatement(mixed $data, bool $isCsv = false): BalanceSheetStatement
 	{
-		$validator = new FmpValidator('balance sheet statement');
+		$validator = $this->createValidator(__FUNCTION__);
 		
 		if ($isCsv) {
 			$validator = $validator->withCsvFormat();
@@ -417,7 +417,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function dividend(mixed $data): Dividend
 	{
-		$validator = new FmpValidator('dividend');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -451,7 +451,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function earningsCalendar(mixed $data): EarningsCalendarItem
 	{
-		$validator = new FmpValidator('earnings calendar');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -481,7 +481,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function splitsCalendar(mixed $data): SplitsCalendarItem
 	{
-		$validator = new FmpValidator('splits calendar');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -505,7 +505,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function incomeStatement(mixed $data, bool $isCsv = false): IncomeStatement
 	{
-		$validator = new FmpValidator('income statement');
+		$validator = $this->createValidator(__FUNCTION__);
 		
 		if ($isCsv) {
 			$validator = $validator->withCsvFormat();
@@ -572,7 +572,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function cashFlowStatement(mixed $data, bool $isCsv = false): CashFlowStatement
 	{
-		$validator = new FmpValidator('cash flow statement');
+		$validator = $this->createValidator(__FUNCTION__);
 		
 		if ($isCsv) {
 			$validator = $validator->withCsvFormat();
@@ -647,7 +647,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function latestFinancialStatement(mixed $data): LatestFinancialStatement
 	{
-		$validator = new FmpValidator('latest financial statement');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -673,7 +673,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function financialStatementSymbol(mixed $data): FinancialStatementSymbol
 	{
-		$validator = new FmpValidator('financial statement symbol');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -697,7 +697,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function eodBulkQuote(mixed $data, bool $isCsv = false): EodQuote
 	{
-		$validator = new FmpValidator('eod bulk quote');
+		$validator = $this->createValidator(__FUNCTION__);
 		
 		if ($isCsv) {
 			$validator = $validator->withCsvFormat();
@@ -754,7 +754,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function batchExchangeQuote(mixed $data): BatchExchangeQuote
 	{
-		$validator = new FmpValidator('batch exchange quote');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -778,7 +778,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function batchForexQuote(mixed $data): BatchForexQuote
 	{
-		$validator = new FmpValidator('batch forex quote');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -802,7 +802,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function batchExchangeDetailedQuote(mixed $data): BatchExchangeDetailedQuote
 	{
-		$validator = new FmpValidator('batch exchange detailed quote');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -852,7 +852,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function historicalPriceEod(mixed $data): HistoricalPriceEod
 	{
-		$validator = new FmpValidator('historical price eod');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -888,7 +888,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function historicalChart(mixed $data): HistoricalChart
 	{
-		$validator = new FmpValidator('historical chart');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 
@@ -914,7 +914,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function keyMetrics(mixed $data): KeyMetrics
 	{
-		$validator = new FmpValidator('key metrics');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -982,7 +982,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function keyMetricsTtm(mixed $data, bool $isCsv = false): KeyMetricsTtm
 	{
-		$validator = new FmpValidator('key metrics ttm');
+		$validator = $this->createValidator(__FUNCTION__);
 		
 		if ($isCsv) {
 			$validator = $validator->withCsvFormat();
@@ -1045,7 +1045,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function ratios(mixed $data): Ratios
 	{
-		$validator = new FmpValidator('ratios');
+		$validator = $this->createValidator(__FUNCTION__);
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -1130,7 +1130,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function ratiosTtm(mixed $data, bool $isCsv = false): RatiosTtm
 	{
-		$validator = new FmpValidator('ratios ttm');
+		$validator = $this->createValidator(__FUNCTION__);
 		
 		if ($isCsv) {
 			$validator = $validator->withCsvFormat();
@@ -1209,7 +1209,7 @@ final readonly class FmpPayloadMapper
 	 */
 	public function scores(mixed $data, bool $isCsv = false): Scores
 	{
-		$validator = new FmpValidator('scores');
+		$validator = $this->createValidator(__FUNCTION__);
 		
 		if ($isCsv) {
 			$validator = $validator->withCsvFormat();
@@ -1235,6 +1235,14 @@ final readonly class FmpPayloadMapper
 			totalLiabilities: $this->toIntegerOrNull($validator->getNumericOrNullInArray($data, 'totalLiabilities')),
 			revenue: $this->toIntegerOrNull($validator->getNumericOrNullInArray($data, 'revenue')),
 		);
+	}
+
+	private function createValidator(string $method): FmpValidator
+	{
+		$humanReadableName = preg_replace('/([A-Z])/', ' $1', $method) ?? '';
+		$humanReadableName = strtolower(trim($humanReadableName));
+
+		return new FmpValidator($humanReadableName);
 	}
 
 }
