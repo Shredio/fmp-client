@@ -7,18 +7,22 @@ use Webmozart\Assert\InvalidArgumentException;
 
 final readonly class FmpValidator
 {
+	private ValidationStrategy $strategy;
 
 	public function __construct(
 		private string $name,
 		private ?string $context = null,
-		private bool $isCsv = false,
+		bool $isCsv = false,
 	)
 	{
+		$this->strategy = $isCsv 
+			? new CsvValidationStrategy() 
+			: new JsonValidationStrategy();
 	}
 
 	public function withContext(string $context): self
 	{
-		return new self($this->name, $context, $this->isCsv);
+		return new self($this->name, $context, $this->strategy instanceof CsvValidationStrategy);
 	}
 
 	public function withCsvFormat(): self
@@ -97,20 +101,7 @@ final readonly class FmpValidator
 	public function getIntOrNullInArray(array $value, string $key): ?int
 	{
 		$val = $this->getValueFromArray($value, $key);
-		
-		if ($val === null || ($this->isCsv && $val === '')) {
-			return null;
-		}
-		
-		if ($this->isCsv) {
-			Assert::nullOrIntegerish($val, sprintf('The %s must be an integerish or null. Got: %%s', $this->getPath($key)));
-
-			return (int) $val;
-		}
-
-		Assert::nullOrInteger($val, sprintf('The %s must be an integer or null. Got: %%s', $this->getPath($key)));
-
-		return $val;
+		return $this->strategy->validateInt($val, $this->getPath($key));
 	}
 
 	/**
@@ -121,16 +112,7 @@ final readonly class FmpValidator
 	public function getIntInArray(array $value, string $key): int
 	{
 		$val = $this->getValueFromArray($value, $key);
-		
-		if ($this->isCsv) {
-			Assert::integerish($val, sprintf('The %s must be an integerish. Got: %%s', $this->getPath($key)));
-
-			return (int) $val;
-		}
-
-		Assert::integer($val, sprintf('The %s must be an integer. Got: %%s', $this->getPath($key)));
-
-		return $val;
+		return $this->strategy->validateRequiredInt($val, $this->getPath($key));
 	}
 
 	/**
@@ -141,14 +123,7 @@ final readonly class FmpValidator
 	public function getNumericInArray(array $value, string $key): int|float
 	{
 		$val = $this->getValueFromArray($value, $key);
-		
-		Assert::numeric($val, sprintf('The %s must be numeric. Got: %%s', $this->getPath($key)));
-
-		if (is_string($val)) {
-			return str_contains($val, '.') ? (float) $val : (int) $val;
-		}
-
-		return $val;
+		return $this->strategy->validateRequiredNumeric($val, $this->getPath($key));
 	}
 
 	/**
@@ -159,18 +134,7 @@ final readonly class FmpValidator
 	public function getNumericOrNullInArray(array $value, string $key): int|float|null
 	{
 		$val = $this->getValueFromArray($value, $key);
-		
-		if ($val === null || ($this->isCsv && $val === '')) {
-			return null;
-		}
-		
-		Assert::numeric($val, sprintf('The %s must be numeric or null. Got: %%s', $this->getPath($key)));
-
-		if (is_string($val)) {
-			return str_contains($val, '.') ? (float) $val : (int) $val;
-		}
-
-		return $val;
+		return $this->strategy->validateNumeric($val, $this->getPath($key));
 	}
 
 	/**
@@ -181,10 +145,7 @@ final readonly class FmpValidator
 	public function getFloatInArray(array $value, string $key): float
 	{
 		$val = $this->getValueFromArray($value, $key);
-		
-		Assert::numeric($val, sprintf('The %s must be numeric. Got: %%s', $this->getPath($key)));
-
-		return (float) $val;
+		return $this->strategy->validateFloat($val, $this->getPath($key));
 	}
 
 	/**
@@ -195,9 +156,7 @@ final readonly class FmpValidator
 	public function getBoolInArray(array $value, string $key): bool
 	{
 		$val = $this->getValueFromArray($value, $key);
-		Assert::boolean($val, sprintf('The %s must be a boolean. Got: %%s', $this->getPath($key)));
-
-		return $val;
+		return $this->strategy->validateRequiredBool($val, $this->getPath($key));
 	}
 
 	/**
@@ -208,18 +167,7 @@ final readonly class FmpValidator
 	public function getBoolOrNullInArray(array $value, string $key): ?bool
 	{
 		$val = $this->getValueFromArray($value, $key);
-		
-		if ($val === null || ($this->isCsv && $val === '')) {
-			return null;
-		}
-		
-		if ($this->isCsv && is_string($val)) {
-			return filter_var($val, FILTER_VALIDATE_BOOL);
-		}
-		
-		Assert::nullOrBoolean($val, sprintf('The %s must be a boolean or null. Got: %%s', $this->getPath($key)));
-
-		return $val;
+		return $this->strategy->validateBool($val, $this->getPath($key));
 	}
 
 	/**
