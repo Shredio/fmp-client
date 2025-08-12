@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use DateTimeImmutable;
-use Shredio\FmpClient\Payload\DividendsCalendarItem;
+use Shredio\FmpClient\Payload\Dividend;
 use Tests\TestCase;
 
 final class DividendsCalendarTest extends TestCase
@@ -21,7 +21,7 @@ final class DividendsCalendarTest extends TestCase
 		$this->assertNotEmpty($dividends);
 		$this->assertCount(14, $dividends);
 
-		$expectedFirstDividend = new DividendsCalendarItem(
+		$expectedFirstDividend = new Dividend(
 			symbol: 'UBN',
 			date: '2021-01-01',
 			recordDate: null,
@@ -35,7 +35,7 @@ final class DividendsCalendarTest extends TestCase
 
 		$this->assertSame($expectedFirstDividend->toArray(), $dividends[0]->toArray());
 
-		$expectedSecondDividend = new DividendsCalendarItem(
+		$expectedSecondDividend = new Dividend(
 			symbol: 'HEOL',
 			date: '2021-01-01',
 			recordDate: null,
@@ -49,7 +49,7 @@ final class DividendsCalendarTest extends TestCase
 
 		$this->assertSame($expectedSecondDividend->toArray(), $dividends[1]->toArray());
 
-		$expectedDividendWithDates = new DividendsCalendarItem(
+		$expectedDividendWithDates = new Dividend(
 			symbol: '5072.KL',
 			date: '2021-01-01',
 			recordDate: '2021-01-04',
@@ -63,7 +63,7 @@ final class DividendsCalendarTest extends TestCase
 
 		$this->assertSame($expectedDividendWithDates->toArray(), $dividends[8]->toArray());
 
-		$expectedQuarterlyDividend = new DividendsCalendarItem(
+		$expectedQuarterlyDividend = new Dividend(
 			symbol: 'CONE',
 			date: '2021-01-01',
 			recordDate: '2021-01-04',

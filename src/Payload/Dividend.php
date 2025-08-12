@@ -2,7 +2,7 @@
 
 namespace Shredio\FmpClient\Payload;
 
-final readonly class DividendsCalendarItem
+final readonly class Dividend
 {
     public function __construct(
         public string $symbol,

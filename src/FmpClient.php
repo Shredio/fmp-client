@@ -21,7 +21,7 @@ use Shredio\FmpClient\Payload\BatchForexQuote;
 use Shredio\FmpClient\Payload\CashFlowStatement;
 use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
-use Shredio\FmpClient\Payload\DividendsCalendarItem;
+use Shredio\FmpClient\Payload\Dividend;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
@@ -266,7 +266,7 @@ final readonly class FmpClient
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/dividends-calendar
-	 * @return iterable<int, DividendsCalendarItem>
+	 * @return iterable<int, Dividend>
 	 */
 	public function dividendsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
 	{
@@ -286,7 +286,7 @@ final readonly class FmpClient
 			]);
 
 			foreach ($values as $item) {
-				$object = $this->safeInvoke(fn() => $this->mapper->dividendsCalendar($item), $url);
+				$object = $this->safeInvoke(fn() => $this->mapper->dividend($item), $url);
 				if ($object !== null) {
 					$lastStringDate = $object->date;
 					$count++;
@@ -294,6 +294,22 @@ final readonly class FmpClient
 				}
 			}
 		} while ($paginator->next($count, $lastStringDate, $logger));
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/dividends
+	 * @return iterable<int, Dividend>
+	 */
+	public function dividends(string $symbol): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/dividends', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/dividends', ['symbol' => $symbol]) as $item) {
+			$object = $this->safeInvoke(fn() => $this->mapper->dividend($item), $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
 	}
 
 	/**

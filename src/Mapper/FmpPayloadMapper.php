@@ -12,7 +12,7 @@ use Shredio\FmpClient\Payload\BatchForexQuote;
 use Shredio\FmpClient\Payload\CashFlowStatement;
 use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
-use Shredio\FmpClient\Payload\DividendsCalendarItem;
+use Shredio\FmpClient\Payload\Dividend;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
@@ -415,9 +415,9 @@ final readonly class FmpPayloadMapper
 	/**
 	 * @throws InvalidArgumentException
 	 */
-	public function dividendsCalendar(mixed $data): DividendsCalendarItem
+	public function dividend(mixed $data): Dividend
 	{
-		$validator = new FmpValidator('dividends calendar');
+		$validator = new FmpValidator('dividend');
 
 		$data = $validator->getArray($data);
 		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
@@ -433,7 +433,7 @@ final readonly class FmpPayloadMapper
 		$yield = $validator->getFloatInArray($data, 'yield');
 		$frequency = $validator->getNonEmptyStringInArray($data, 'frequency');
 
-		return new DividendsCalendarItem(
+		return new Dividend(
 			symbol: $symbol,
 			date: $date,
 			recordDate: $recordDate,
