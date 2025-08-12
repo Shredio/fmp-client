@@ -38,6 +38,7 @@ When implementing new FMP API endpoints:
 4. Add endpoint method to `FmpClient`, add `@see` annotation to the method docblock containing the endpoint URL without an API key (query parameter `apikey`).
 5. Create test fixtures in `tests/Unit/fixtures/`, save **full** response body from the API to the `tests/Unit/fixtures`.
 6. Write comprehensive tests covering both success and error cases
+7. Update README.md with the new endpoint documentation
 
 ### Payload Classes
 
