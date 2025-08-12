@@ -7,6 +7,9 @@ use Shredio\FmpClient\Enum\Period;
 final readonly class BalanceSheetStatement
 {
 
+	/**
+	 * @param non-empty-string $symbol
+	 */
 	public function __construct(
 		public string $symbol,
 		public string $date,

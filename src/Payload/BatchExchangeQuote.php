@@ -5,6 +5,9 @@ namespace Shredio\FmpClient\Payload;
 final readonly class BatchExchangeQuote
 {
 
+	/**
+	 * @param non-empty-string $symbol
+	 */
 	public function __construct(
 		public string $symbol,
 		public float|null $price = null,

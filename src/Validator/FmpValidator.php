@@ -44,6 +44,7 @@ final readonly class FmpValidator
 
 	/**
 	 * @param mixed[] $value
+	 * @return non-empty-string
 	 *
 	 * @throws InvalidArgumentException
 	 */
