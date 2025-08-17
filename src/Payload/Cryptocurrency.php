@@ -20,7 +20,7 @@ final readonly class Cryptocurrency
 	}
 
 	/**
-	 * @return array{symbol: string, name: string, exchange: string, icoDate: string|null, circulatingSupply: int|float|null, totalSupply: int|float|null}
+	 * @return array{symbol: non-empty-string, name: string, exchange: string, icoDate: string|null, circulatingSupply: int|float|null, totalSupply: int|float|null}
 	 */
 	public function toArray(): array
 	{

@@ -18,7 +18,7 @@ final readonly class Index
 	}
 
 	/**
-	 * @return array{symbol: string, name: string, exchange: string, currency: string}
+	 * @return array{symbol: non-empty-string, name: string, exchange: string, currency: string}
 	 */
 	public function toArray(): array
 	{

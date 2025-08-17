@@ -31,7 +31,7 @@ final readonly class BatchExchangeDetailedQuote
 	}
 
 	/**
-	 * @return array{symbol: string, name: string, exchange: string, price: float|null, changePercentage: float|null, change: float|null, volume: int|float|null, dayLow: float|null, dayHigh: float|null, yearHigh: float|null, yearLow: float|null, marketCap: int|null, priceAvg50: float|null, priceAvg200: float|null, open: float|null, previousClose: float|null, timestamp: int|null}
+	 * @return array{symbol: non-empty-string, name: string, exchange: string, price: float|null, changePercentage: float|null, change: float|null, volume: int|float|null, dayLow: float|null, dayHigh: float|null, yearHigh: float|null, yearLow: float|null, marketCap: int|null, priceAvg50: float|null, priceAvg200: float|null, open: float|null, previousClose: float|null, timestamp: int|null}
 	 */
 	public function toArray(): array
 	{

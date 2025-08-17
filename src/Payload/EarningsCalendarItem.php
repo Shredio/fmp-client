@@ -21,7 +21,7 @@ final readonly class EarningsCalendarItem
 	}
 
 	/**
-	 * @return array{symbol: string, date: string, epsActual: float, epsEstimated: float|null, revenueActual: int, revenueEstimated: int|null, lastUpdated: string}
+	 * @return array{symbol: non-empty-string, date: string, epsActual: float, epsEstimated: float|null, revenueActual: int, revenueEstimated: int|null, lastUpdated: string}
 	 */
 	public function toArray(): array
 	{

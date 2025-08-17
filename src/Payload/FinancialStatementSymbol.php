@@ -18,7 +18,7 @@ final readonly class FinancialStatementSymbol
 	}
 
 	/**
-	 * @return array{symbol: string, companyName: string, tradingCurrency: string, reportingCurrency: string|null}
+	 * @return array{symbol: non-empty-string, companyName: string, tradingCurrency: string, reportingCurrency: string|null}
 	 */
 	public function toArray(): array
 	{

@@ -18,7 +18,7 @@ final readonly class BatchExchangeQuote
 	}
 
 	/**
-	 * @return array{symbol: string, price: float|null, change: float|null, volume: int|float|null}
+	 * @return array{symbol: non-empty-string, price: float|null, change: float|null, volume: int|float|null}
 	 */
 	public function toArray(): array
 	{

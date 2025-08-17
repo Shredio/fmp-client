@@ -18,7 +18,7 @@ final readonly class SplitsCalendarItem
 	}
 
 	/**
-	 * @return array{symbol: string, date: string, numerator: int, denominator: int}
+	 * @return array{symbol: non-empty-string, date: string, numerator: int, denominator: int}
 	 */
 	public function toArray(): array
 	{

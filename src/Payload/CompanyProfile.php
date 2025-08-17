@@ -50,7 +50,7 @@ final readonly class CompanyProfile
 	}
 
 	/**
-	 * @return array{symbol: string, price: float|null, marketCap: int|null, beta: float|null, lastDividend: float|null, range: string|null, change: float|null, changePercentage: float|null, volume: int|float|null, averageVolume: int|float|null, companyName: string|null, currency: string|null, cik: string|null, isin: string|null, cusip: string|null, exchangeFullName: string|null, exchange: string|null, industry: string|null, website: string|null, description: string|null, ceo: string|null, sector: string|null, country: string|null, fullTimeEmployees: string|null, phone: string|null, address: string|null, city: string|null, state: string|null, zip: string|null, image: string|null, ipoDate: string|null, defaultImage: bool|null, isEtf: bool|null, isActivelyTrading: bool|null, isAdr: bool|null, isFund: bool|null}
+	 * @return array{symbol: non-empty-string, price: float|null, marketCap: int|null, beta: float|null, lastDividend: float|null, range: string|null, change: float|null, changePercentage: float|null, volume: int|float|null, averageVolume: int|float|null, companyName: string|null, currency: string|null, cik: string|null, isin: string|null, cusip: string|null, exchangeFullName: string|null, exchange: string|null, industry: string|null, website: string|null, description: string|null, ceo: string|null, sector: string|null, country: string|null, fullTimeEmployees: string|null, phone: string|null, address: string|null, city: string|null, state: string|null, zip: string|null, image: string|null, ipoDate: string|null, defaultImage: bool|null, isEtf: bool|null, isActivelyTrading: bool|null, isAdr: bool|null, isFund: bool|null}
 	 */
 	public function toArray(): array
 	{

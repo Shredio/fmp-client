@@ -25,7 +25,7 @@ final readonly class Scores
 	}
 
 	/**
-	 * @return array{symbol: string, reportedCurrency: string, altmanZScore: float|null, piotroskiScore: int|null, workingCapital: int|null, totalAssets: int|null, retainedEarnings: int|null, ebit: int|null, marketCap: int|null, totalLiabilities: int|null, revenue: int|null}
+	 * @return array{symbol: non-empty-string, reportedCurrency: string, altmanZScore: float|null, piotroskiScore: int|null, workingCapital: int|null, totalAssets: int|null, retainedEarnings: int|null, ebit: int|null, marketCap: int|null, totalLiabilities: int|null, revenue: int|null}
 	 */
 	public function toArray(): array
 	{

@@ -24,7 +24,7 @@ final readonly class HistoricalPriceEod
 	}
 
 	/**
-	 * @return array{symbol: string, date: string, open: float, high: float, low: float, close: float, volume: int, change: float, changePercent: float, vwap: float}
+	 * @return array{symbol: non-empty-string, date: string, open: float, high: float, low: float, close: float, volume: int, change: float, changePercent: float, vwap: float}
 	 */
 	public function toArray(): array
 	{

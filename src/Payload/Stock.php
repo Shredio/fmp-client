@@ -16,7 +16,7 @@ final readonly class Stock
 	}
 
 	/**
-	 * @return array{symbol: string, companyName: string|null}
+	 * @return array{symbol: non-empty-string, companyName: string|null}
 	 */
 	public function toArray(): array
 	{

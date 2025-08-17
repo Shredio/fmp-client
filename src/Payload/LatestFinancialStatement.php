@@ -19,7 +19,7 @@ final readonly class LatestFinancialStatement
 	}
 
 	/**
-	 * @return array{symbol: string, calendarYear: int, period: string, date: string, dateAdded: string}
+	 * @return array{symbol: non-empty-string, calendarYear: int, period: string, date: string, dateAdded: string}
 	 */
 	public function toArray(): array
 	{

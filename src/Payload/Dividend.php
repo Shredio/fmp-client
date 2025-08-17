@@ -20,7 +20,7 @@ final readonly class Dividend
     ) {}
 
     /**
-     * @return array{symbol: string, date: string, recordDate: string|null, paymentDate: string|null, declarationDate: string|null, adjDividend: float, dividend: float, yield: float, frequency: string}
+     * @return array{symbol: non-empty-string, date: string, recordDate: string|null, paymentDate: string|null, declarationDate: string|null, adjDividend: float, dividend: float, yield: float, frequency: string}
      */
     public function toArray(): array
     {

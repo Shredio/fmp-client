@@ -22,7 +22,7 @@ final readonly class EodQuote
 	}
 
 	/**
-	 * @return array{symbol: string, date: string, open: float, low: float, high: float, close: float, adjClose: float, volume: float}
+	 * @return array{symbol: non-empty-string, date: string, open: float, low: float, high: float, close: float, adjClose: float, volume: float}
 	 */
 	public function toArray(): array
 	{

@@ -18,7 +18,7 @@ final readonly class BatchForexQuote
 	}
 
 	/**
-	 * @return array{symbol: string, price: float, change: float, volume: int|float|null}
+	 * @return array{symbol: non-empty-string, price: float, change: float, volume: int|float|null}
 	 */
 	public function toArray(): array
 	{
