@@ -3,6 +3,7 @@
 namespace Shredio\FmpClient\Mapper;
 
 use Shredio\FmpClient\Enum\Period;
+use Shredio\FmpClient\Payload\ActivelyTrading;
 use Shredio\FmpClient\Payload\AnalystEstimate;
 use Shredio\FmpClient\Payload\AvailableExchange;
 use Shredio\FmpClient\Payload\BalanceSheetStatement;
@@ -64,6 +65,26 @@ final readonly class FmpPayloadMapper
 			countryCode: $countryCode,
 			symbolSuffix: $symbolSuffix === 'N/A' ? null : $symbolSuffix,
 			delay: $delay,
+		);
+	}
+
+	/**
+	 * @throws InvalidArgumentException
+	 */
+	public function activelyTradingCompany(mixed $data): ActivelyTrading
+	{
+		$validator = $this->createValidator(__FUNCTION__);
+
+		$data = $validator->getArray($data);
+		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
+
+		$validator = $validator->withContext($symbol);
+
+		$name = $validator->getNonEmptyStringInArray($data, 'name');
+
+		return new ActivelyTrading(
+			symbol: $symbol,
+			name: $name,
 		);
 	}
 

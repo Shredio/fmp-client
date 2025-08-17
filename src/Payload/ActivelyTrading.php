@@ -1,0 +1,30 @@
+<?php declare(strict_types = 1);
+
+namespace Shredio\FmpClient\Payload;
+
+final readonly class ActivelyTrading
+{
+
+	/**
+	 * @param non-empty-string $symbol
+	 * @param non-empty-string $name
+	 */
+	public function __construct(
+		public string $symbol,
+		public string $name,
+	)
+	{
+	}
+
+	/**
+	 * @return array{symbol: string, name: string}
+	 */
+	public function toArray(): array
+	{
+		return [
+			'symbol' => $this->symbol,
+			'name' => $this->name,
+		];
+	}
+
+}

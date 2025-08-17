@@ -12,6 +12,7 @@ use Shredio\FmpClient\Enum\PeriodQuery;
 use Shredio\FmpClient\Enum\TimeInterval;
 use Shredio\FmpClient\Exception\UnexpectedResponseContentExceptionHandler;
 use Shredio\FmpClient\Mapper\FmpPayloadMapper;
+use Shredio\FmpClient\Payload\ActivelyTrading;
 use Shredio\FmpClient\Payload\AnalystEstimate;
 use Shredio\FmpClient\Payload\AvailableExchange;
 use Shredio\FmpClient\Payload\BalanceSheetStatement;
@@ -156,6 +157,22 @@ final readonly class FmpClient
 
 		foreach ($this->requestJson('stable/stock-list') as $item) {
 			$object = $this->safeInvoke(fn() => $this->mapper->stock($item), $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/actively-trading-list
+	 * @return iterable<int, ActivelyTrading>
+	 */
+	public function activelyTradingList(): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/actively-trading-list');
+
+		foreach ($this->requestJson('stable/actively-trading-list') as $item) {
+			$object = $this->safeInvoke(fn() => $this->mapper->activelyTradingCompany($item), $url);
 			if ($object !== null) {
 				yield $object;
 			}
