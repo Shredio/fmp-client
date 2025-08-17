@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2025-08-15",
+    "companyName": "USBC, Inc. Common Stock",
+    "oldSymbol": "KNW",
+    "newSymbol": "USBC"
+  },
+  {
+    "date": "2025-08-15",
+    "companyName": "Vyome Holdings, Inc. Common Stock",
+    "oldSymbol": "RSLS",
+    "newSymbol": "HIND"
+  },
+  {
+    "date": "2025-08-13",
+    "companyName": "New Era Energy & Digital, Inc. Common Stock",
+    "oldSymbol": "NEHC",
+    "newSymbol": "NUAI"
+  },
+  {
+    "date": "2025-08-13",
+    "companyName": "New Era Energy & Digital, Inc. Warrants",
+    "oldSymbol": "NEHCW",
+    "newSymbol": "NUAIW"
+  },
+  {
+    "date": "2025-08-13",
+    "companyName": "RideNow Group, Inc. Class B Common Stock",
+    "oldSymbol": "RMBL",
+    "newSymbol": "RDNW"
+  }
+]

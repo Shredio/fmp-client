@@ -30,6 +30,7 @@ use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\Scores;
 use Shredio\FmpClient\Payload\SplitsCalendarItem;
 use Shredio\FmpClient\Payload\Stock;
+use Shredio\FmpClient\Payload\SymbolChange;
 use Shredio\FmpClient\Validator\FmpValidator;
 use Webmozart\Assert\InvalidArgumentException;
 
@@ -189,6 +190,30 @@ final readonly class FmpPayloadMapper
 		return new Stock(
 			symbol: $symbol,
 			companyName: $companyName,
+		);
+	}
+
+	/**
+	 * @throws InvalidArgumentException
+	 */
+	public function symbolChange(mixed $data): SymbolChange
+	{
+		$validator = $this->createValidator(__FUNCTION__);
+
+		$data = $validator->getArray($data);
+		$date = $validator->getNonEmptyStringInArray($data, 'date');
+
+		$validator = $validator->withContext($date);
+
+		$companyName = $validator->getNonEmptyStringInArray($data, 'companyName');
+		$oldSymbol = $validator->getNonEmptyStringInArray($data, 'oldSymbol');
+		$newSymbol = $validator->getNonEmptyStringInArray($data, 'newSymbol');
+
+		return new SymbolChange(
+			date: $date,
+			companyName: $companyName,
+			oldSymbol: $oldSymbol,
+			newSymbol: $newSymbol,
 		);
 	}
 

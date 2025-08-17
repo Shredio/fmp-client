@@ -17,7 +17,7 @@ final readonly class ActivelyTrading
 	}
 
 	/**
-	 * @return array{symbol: string, name: string}
+	 * @return array{symbol: non-empty-string, name: non-empty-string}
 	 */
 	public function toArray(): array
 	{

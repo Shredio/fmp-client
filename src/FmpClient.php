@@ -39,6 +39,7 @@ use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\Scores;
 use Shredio\FmpClient\Payload\SplitsCalendarItem;
 use Shredio\FmpClient\Payload\Stock;
+use Shredio\FmpClient\Payload\SymbolChange;
 use Shredio\FmpClient\Promise\FmpPromise;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
@@ -173,6 +174,22 @@ final readonly class FmpClient
 
 		foreach ($this->requestJson('stable/actively-trading-list') as $item) {
 			$object = $this->safeInvoke(fn() => $this->mapper->activelyTradingCompany($item), $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/symbol-change
+	 * @return iterable<int, SymbolChange>
+	 */
+	public function symbolChangeList(): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/symbol-change');
+
+		foreach ($this->requestJson('stable/symbol-change') as $item) {
+			$object = $this->safeInvoke(fn() => $this->mapper->symbolChange($item), $url);
 			if ($object !== null) {
 				yield $object;
 			}

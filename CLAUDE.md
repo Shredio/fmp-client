@@ -46,9 +46,10 @@ All payload classes in `src/Payload/` must include:
 
 - **Constructor**: All properties as readonly constructor parameters
 - **toArray() method**: Returns all properties as associative array with complete `@return array{ ... }` type annotation
-  - Example: `@return array{symbol: string, name: string, price: float|null}`
+  - Example: `@return array{symbol: non-empty-string, name: string, price: float|null}`
   - Include all properties with their exact types (including `|null` for nullable properties)
   - Use proper type annotations: `string`, `int`, `float`, `bool`, `string|null`, `int|null`, etc.
+  - **Important**: If constructor parameters are typed as `non-empty-string`, the `toArray()` return type should also use `non-empty-string` (not just `string`)
 
 When creating tests for payload classes:
 - Use `assertSame()` with `toArray()` methods for payload comparisons
