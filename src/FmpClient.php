@@ -34,6 +34,7 @@ use Shredio\FmpClient\Payload\Index;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
+use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\Scores;
@@ -190,6 +191,22 @@ final readonly class FmpClient
 
 		foreach ($this->requestJson('stable/symbol-change') as $item) {
 			$object = $this->safeInvoke(fn() => $this->mapper->symbolChange($item), $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/news/press-releases-latest
+	 * @return iterable<int, PressRelease>
+	 */
+	public function pressReleasesLatest(int $limit, int $page = 0): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/news/press-releases-latest', ['page' => $page, 'limit' => $limit]);
+
+		foreach ($this->requestJson('stable/news/press-releases-latest', ['page' => $page, 'limit' => $limit]) as $item) {
+			$object = $this->safeInvoke(fn() => $this->mapper->pressRelease($item), $url);
 			if ($object !== null) {
 				yield $object;
 			}

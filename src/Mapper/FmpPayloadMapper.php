@@ -27,6 +27,7 @@ use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
+use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\Scores;
 use Shredio\FmpClient\Payload\SplitsCalendarItem;
 use Shredio\FmpClient\Payload\Stock;
@@ -1247,6 +1248,34 @@ final readonly class FmpPayloadMapper
 			debtToMarketCap: $this->toFloatOrNull($validator->getNumericOrNullInArray($data, 'debtToMarketCapTTM')),
 			effectiveTaxRate: $this->toFloatOrNull($validator->getNumericOrNullInArray($data, 'effectiveTaxRateTTM')),
 			enterpriseValueMultiple: $this->toFloatOrNull($validator->getNumericOrNullInArray($data, 'enterpriseValueMultipleTTM')),
+		);
+	}
+
+	/**
+	 * @throws InvalidArgumentException
+	 */
+	public function pressRelease(mixed $data): PressRelease
+	{
+		$validator = $this->createValidator(__FUNCTION__);
+		$data = $validator->getArray($data);
+		$symbol = $validator->getNonEmptyStringInArray($data, 'symbol');
+		$validator = $validator->withContext($symbol);
+		$publishedDate = $validator->getNonEmptyStringInArray($data, 'publishedDate');
+		$publisher = $validator->getNonEmptyStringInArray($data, 'publisher');
+		$title = $validator->getNonEmptyStringInArray($data, 'title');
+		$image = $validator->getStringOrNullInArray($data, 'image');
+		$site = $validator->getNonEmptyStringInArray($data, 'site');
+		$text = $validator->getNonEmptyStringInArray($data, 'text');
+		$url = $validator->getNonEmptyStringInArray($data, 'url');
+		return new PressRelease(
+			symbol: $symbol,
+			publishedDate: $publishedDate,
+			publisher: $publisher,
+			title: $title,
+			image: $image,
+			site: $site,
+			text: $text,
+			url: $url,
 		);
 	}
 
