@@ -49,6 +49,8 @@ use Webmozart\Assert\InvalidArgumentException;
 final readonly class FmpClient
 {
 
+	public const int MaxDividendsLimit = 1000;
+
 	private Parser\LargeResponseParser $largeResponseParser;
 
 	private FmpPayloadMapper $mapper;
@@ -349,13 +351,14 @@ final readonly class FmpClient
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/dividends
+	 * @param int<1, 1000>|null $limit
 	 * @return iterable<int, Dividend>
 	 */
-	public function dividends(string $symbol): iterable
+	public function dividends(string $symbol, ?int $limit = null): iterable
 	{
-		$url = $this->buildUrlWithoutApiKey('stable/dividends', ['symbol' => $symbol]);
+		$url = $this->buildUrlWithoutApiKey('stable/dividends', ['symbol' => $symbol, 'limit' => $limit]);
 
-		foreach ($this->requestJson('stable/dividends', ['symbol' => $symbol]) as $item) {
+		foreach ($this->requestJson('stable/dividends', ['symbol' => $symbol, 'limit' => $limit]) as $item) {
 			$object = $this->safeInvoke(fn() => $this->mapper->dividend($item), $url);
 			if ($object !== null) {
 				yield $object;
