@@ -40,6 +40,7 @@ use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\Scores;
 use Shredio\FmpClient\Payload\SplitsCalendarItem;
 use Shredio\FmpClient\Payload\Stock;
+use Shredio\FmpClient\Payload\StockNews;
 use Shredio\FmpClient\Payload\SymbolChange;
 use Shredio\FmpClient\Promise\FmpPromise;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
@@ -50,6 +51,7 @@ final readonly class FmpClient
 {
 
 	public const int MaxDividendsLimit = 1000;
+	public const int MaxStockNewsLimit = 250;
 
 	private Parser\LargeResponseParser $largeResponseParser;
 
@@ -209,6 +211,23 @@ final readonly class FmpClient
 
 		foreach ($this->requestJson('stable/news/press-releases-latest', ['page' => $page, 'limit' => $limit]) as $item) {
 			$object = $this->safeInvoke(fn() => $this->mapper->pressRelease($item), $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/news/stock-latest
+	 * @param int<1, 250> $limit
+	 * @return iterable<int, StockNews>
+	 */
+	public function stockNewsLatest(int $limit, int $page = 0): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/news/stock-latest', ['page' => $page, 'limit' => $limit]);
+
+		foreach ($this->requestJson('stable/news/stock-latest', ['page' => $page, 'limit' => $limit]) as $item) {
+			$object = $this->safeInvoke(fn() => $this->mapper->stockNews($item), $url);
 			if ($object !== null) {
 				yield $object;
 			}
