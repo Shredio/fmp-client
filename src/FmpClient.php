@@ -880,7 +880,7 @@ final readonly class FmpClient
 	/**
 	 * @param array<string, scalar|null> $query
 	 */
-	private function request(string $path, array $query = []): ResponseInterface
+	public function request(string $path, array $query = []): ResponseInterface
 	{
 		$query['apikey'] = $this->secret;
 
