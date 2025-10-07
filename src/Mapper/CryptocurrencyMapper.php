@@ -28,8 +28,8 @@ final readonly class CryptocurrencyMapper extends Type
 		$schema = $ts->arrayShape(
 			[
 			'symbol' => $ts->nonEmptyString(),
-			'name' => $ts->string(),
-			'exchange' => $ts->string(),
+			'name' => $ts->nonEmptyString(),
+			'exchange' => $ts->nonEmptyString(),
 			'icoDate' => $ts->optional($ts->nullable($ts->nonEmptyString())),
 			'circulatingSupply' => $ts->optional($ts->nullable($ts->union([$ts->int(), $ts->float()]))),
 			'totalSupply' => $ts->optional($ts->nullable($ts->union([$ts->int(), $ts->float()]))),

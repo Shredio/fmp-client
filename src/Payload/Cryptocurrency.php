@@ -10,6 +10,8 @@ final readonly class Cryptocurrency
 
 	/**
 	 * @param non-empty-string $symbol
+	 * @param non-empty-string $name
+	 * @param non-empty-string $exchange
 	 * @param non-empty-string|null $icoDate
 	 */
 	public function __construct(
