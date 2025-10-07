@@ -10,6 +10,9 @@ final readonly class Index
 
 	/**
 	 * @param non-empty-string $symbol
+	 * @param non-empty-string $name
+	 * @param non-empty-string $exchange
+	 * @param non-empty-string $currency
 	 */
 	public function __construct(
 		public string $symbol,

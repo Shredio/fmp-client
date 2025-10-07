@@ -28,9 +28,9 @@ final readonly class IndexMapper extends Type
 		$schema = $ts->arrayShape(
 			[
 			'symbol' => $ts->nonEmptyString(),
-			'name' => $ts->string(),
-			'exchange' => $ts->string(),
-			'currency' => $ts->string(),
+			'name' => $ts->nonEmptyString(),
+			'exchange' => $ts->nonEmptyString(),
+			'currency' => $ts->nonEmptyString(),
 		],
 			identifier: 'symbol',
 		);
