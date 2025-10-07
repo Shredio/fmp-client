@@ -63,7 +63,7 @@ final class IncomeStatementTest extends TestCase
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/income-statement-bulk.csv');
 
-		$statements = iterator_to_array($client->incomeStatementBulk('2024'));
+		$statements = iterator_to_array($client->incomeStatementBulk(2024));
 
 		$this->assertNotEmpty($statements);
 		$this->assertSame((new IncomeStatement(

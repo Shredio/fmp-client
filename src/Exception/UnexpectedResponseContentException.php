@@ -9,7 +9,7 @@ final class UnexpectedResponseContentException extends \InvalidArgumentException
 
 	public function __construct(
 		string $message,
-		Throwable $previous,
+		?Throwable $previous,
 		public readonly string $url,
 	)
 	{

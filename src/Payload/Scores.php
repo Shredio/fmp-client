@@ -2,6 +2,9 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+
+#[CompileObjectMapper(identifier: 'symbol')]
 final readonly class Scores
 {
 
@@ -15,8 +18,8 @@ final readonly class Scores
 		public int|null $piotroskiScore = null,
 		public int|null $workingCapital = null,
 		public int|null $totalAssets = null,
-		public int|null $retainedEarnings = null,
-		public int|null $ebit = null,
+		public int|float|null $retainedEarnings = null,
+		public int|float|null $ebit = null,
 		public int|null $marketCap = null,
 		public int|null $totalLiabilities = null,
 		public int|null $revenue = null,
@@ -25,7 +28,7 @@ final readonly class Scores
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, reportedCurrency: string, altmanZScore: float|null, piotroskiScore: int|null, workingCapital: int|null, totalAssets: int|null, retainedEarnings: int|null, ebit: int|null, marketCap: int|null, totalLiabilities: int|null, revenue: int|null}
+	 * @return array{symbol: non-empty-string, reportedCurrency: string, altmanZScore: float|null, piotroskiScore: int|null, workingCapital: int|null, totalAssets: int|null, retainedEarnings: float|null, ebit: float|null, marketCap: int|null, totalLiabilities: int|null, revenue: int|null}
 	 */
 	public function toArray(): array
 	{

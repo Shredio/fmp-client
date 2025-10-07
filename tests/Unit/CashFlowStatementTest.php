@@ -71,7 +71,7 @@ final class CashFlowStatementTest extends TestCase
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/cash-flow-statement-bulk.csv');
 
-		$statements = iterator_to_array($client->cashFlowStatementBulk('2024'));
+		$statements = iterator_to_array($client->cashFlowStatementBulk(2024));
 
 		$this->assertNotEmpty($statements);
 		$this->assertSame((new CashFlowStatement(

@@ -5,3 +5,4 @@ parameters:
 
 includes:
     - vendor/phpstan/phpstan-webmozart-assert/extension.neon
+    - vendor/shredio/type-schema/extension.neon

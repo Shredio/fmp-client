@@ -11,7 +11,36 @@ use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Enum\PeriodQuery;
 use Shredio\FmpClient\Enum\TimeInterval;
 use Shredio\FmpClient\Exception\UnexpectedResponseContentExceptionHandler;
-use Shredio\FmpClient\Mapper\FmpPayloadMapper;
+use Shredio\FmpClient\Mapper\ActivelyTradingMapper;
+use Shredio\FmpClient\Mapper\AnalystEstimateMapper;
+use Shredio\FmpClient\Mapper\AvailableExchangeMapper;
+use Shredio\FmpClient\Mapper\BalanceSheetStatementMapper;
+use Shredio\FmpClient\Mapper\BatchExchangeDetailedQuoteMapper;
+use Shredio\FmpClient\Mapper\BatchExchangeQuoteMapper;
+use Shredio\FmpClient\Mapper\BatchForexQuoteMapper;
+use Shredio\FmpClient\Mapper\CashFlowStatementMapper;
+use Shredio\FmpClient\Mapper\CompanyProfileMapper;
+use Shredio\FmpClient\Mapper\CryptocurrencyMapper;
+use Shredio\FmpClient\Mapper\DividendMapper;
+use Shredio\FmpClient\Mapper\EarningsCalendarItemMapper;
+use Shredio\FmpClient\Mapper\EodQuoteMapper;
+use Shredio\FmpClient\Mapper\ExchangeMarketHoursMapper;
+use Shredio\FmpClient\Mapper\FinancialStatementSymbolMapper;
+use Shredio\FmpClient\Mapper\HistoricalChartMapper;
+use Shredio\FmpClient\Mapper\HistoricalPriceEodMapper;
+use Shredio\FmpClient\Mapper\IncomeStatementMapper;
+use Shredio\FmpClient\Mapper\IndexMapper;
+use Shredio\FmpClient\Mapper\KeyMetricsMapper;
+use Shredio\FmpClient\Mapper\KeyMetricsTtmMapper;
+use Shredio\FmpClient\Mapper\LatestFinancialStatementMapper;
+use Shredio\FmpClient\Mapper\PressReleaseMapper;
+use Shredio\FmpClient\Mapper\RatiosMapper;
+use Shredio\FmpClient\Mapper\RatiosTtmMapper;
+use Shredio\FmpClient\Mapper\ScoresMapper;
+use Shredio\FmpClient\Mapper\SplitsCalendarItemMapper;
+use Shredio\FmpClient\Mapper\StockMapper;
+use Shredio\FmpClient\Mapper\StockNewsMapper;
+use Shredio\FmpClient\Mapper\SymbolChangeMapper;
 use Shredio\FmpClient\Payload\ActivelyTrading;
 use Shredio\FmpClient\Payload\AnalystEstimate;
 use Shredio\FmpClient\Payload\AvailableExchange;
@@ -43,6 +72,20 @@ use Shredio\FmpClient\Payload\Stock;
 use Shredio\FmpClient\Payload\StockNews;
 use Shredio\FmpClient\Payload\SymbolChange;
 use Shredio\FmpClient\Promise\FmpPromise;
+use Shredio\TypeSchema\Config\TypeConfig;
+use Shredio\TypeSchema\Conversion\ConfigurableConversionStrategy;
+use Shredio\TypeSchema\Conversion\ConversionStrategyFactory;
+use Shredio\TypeSchema\Conversion\Converter\Array\LenientArrayConverter;
+use Shredio\TypeSchema\Conversion\Converter\Bool\StrictBoolConverter;
+use Shredio\TypeSchema\Conversion\Converter\Null\LenientNullConverter;
+use Shredio\TypeSchema\Conversion\Converter\Number\JsonNumberConverter;
+use Shredio\TypeSchema\Conversion\Converter\String\StrictStringConverter;
+use Shredio\TypeSchema\Conversion\Object\LenientObjectSupervisor;
+use Shredio\TypeSchema\Error\ErrorElement;
+use Shredio\TypeSchema\Error\TypeSchemaErrorFormatter;
+use Shredio\TypeSchema\Exception\AssertException;
+use Shredio\TypeSchema\Types\Type;
+use Shredio\TypeSchema\TypeSchemaProcessor;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 use Webmozart\Assert\InvalidArgumentException;
@@ -55,7 +98,11 @@ final readonly class FmpClient
 
 	private Parser\LargeResponseParser $largeResponseParser;
 
-	private FmpPayloadMapper $mapper;
+	private TypeSchemaProcessor $schemaProcessor;
+
+	private TypeConfig $csvTypeConfig;
+
+	private TypeConfig $jsonTypeConfig;
 
 	public function __construct(
 		private HttpClientInterface $httpClient,
@@ -66,7 +113,16 @@ final readonly class FmpClient
 	)
 	{
 		$this->largeResponseParser = new Parser\LargeResponseParser();
-		$this->mapper = new FmpPayloadMapper();
+		$this->schemaProcessor = TypeSchemaProcessor::createDefault();
+		$this->csvTypeConfig = new TypeConfig(ConversionStrategyFactory::lenient());
+		$this->jsonTypeConfig = new TypeConfig(new ConfigurableConversionStrategy(
+			new StrictStringConverter(),
+			new JsonNumberConverter(),
+			new StrictBoolConverter(),
+			new LenientNullConverter(),
+			new LenientArrayConverter(),
+			new LenientObjectSupervisor(),
+		));
 	}
 
 	public function withStrictMode(bool $strictMode): self
@@ -98,7 +154,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/available-exchanges');
 
 		foreach ($this->requestJson('stable/available-exchanges') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->availableExchange($item), $url);
+			$object = $this->map(new AvailableExchangeMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -114,7 +170,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/all-exchange-market-hours');
 
 		foreach ($this->requestJson('stable/all-exchange-market-hours') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->exchangeMarketHours($item), $url);
+			$object = $this->map(new ExchangeMarketHoursMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -130,7 +186,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/index-list');
 
 		foreach ($this->requestJson('stable/index-list') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->index($item), $url);
+			$object = $this->map(new IndexMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -146,7 +202,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/cryptocurrency-list');
 
 		foreach ($this->requestJson('stable/cryptocurrency-list') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->cryptocurrency($item), $url);
+			$object = $this->map(new CryptocurrencyMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -162,7 +218,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/stock-list');
 
 		foreach ($this->requestJson('stable/stock-list') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->stock($item), $url);
+			$object = $this->map(new StockMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -178,7 +234,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/actively-trading-list');
 
 		foreach ($this->requestJson('stable/actively-trading-list') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->activelyTradingCompany($item), $url);
+			$object = $this->map(new ActivelyTradingMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -194,7 +250,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/symbol-change');
 
 		foreach ($this->requestJson('stable/symbol-change') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->symbolChange($item), $url);
+			$object = $this->map(new SymbolChangeMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -210,7 +266,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/news/press-releases-latest', ['page' => $page, 'limit' => $limit]);
 
 		foreach ($this->requestJson('stable/news/press-releases-latest', ['page' => $page, 'limit' => $limit]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->pressRelease($item), $url);
+			$object = $this->map(new PressReleaseMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -227,7 +283,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/news/stock-latest', ['page' => $page, 'limit' => $limit]);
 
 		foreach ($this->requestJson('stable/news/stock-latest', ['page' => $page, 'limit' => $limit]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->stockNews($item), $url);
+			$object = $this->map(new StockNewsMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -243,7 +299,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/profile', ['symbol' => $symbols]);
 
 		foreach ($this->requestJson('stable/profile', ['symbol' => $symbols]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->companyProfile($item, false), $url);
+			$object = $this->map(new CompanyProfileMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -266,7 +322,7 @@ final readonly class FmpClient
 			$url = $this->buildUrlWithoutApiKey('stable/profile-bulk', ['part' => $part]);
 
 			foreach ($this->processCsvResponse($response) as $item) {
-				$object = $this->safeInvoke(fn () => $this->mapper->companyProfile($item, true), $url);
+				$object = $this->map(new CompanyProfileMapper(), $item, $url, true);
 				if ($object !== null) {
 					yield $object;
 				}
@@ -287,7 +343,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/balance-sheet-statement', ['symbol' => $symbol]);
 
 		foreach ($this->requestJson('stable/balance-sheet-statement', ['symbol' => $symbol]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->balanceSheetStatement($item), $url);
+			$object = $this->map(new BalanceSheetStatementMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -298,12 +354,12 @@ final readonly class FmpClient
 	 * @see https://financialmodelingprep.com/stable/balance-sheet-statement-bulk
 	 * @return iterable<int, BalanceSheetStatement>
 	 */
-	public function balanceSheetStatementBulk(string $year, Period $period = Period::FY): iterable
+	public function balanceSheetStatementBulk(int $year, Period $period = Period::FY): iterable
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/balance-sheet-statement-bulk', ['year' => $year, 'period' => $period->value]);
 
 		foreach ($this->requestCsv('stable/balance-sheet-statement-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->balanceSheetStatement($item, true), $url);
+			$object = $this->map(new BalanceSheetStatementMapper(), $item, $url, true);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -329,7 +385,7 @@ final readonly class FmpClient
 			'page' => $page,
 			'limit' => $limit,
 		]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->analystEstimate($item), $url);
+			$object = $this->map(new AnalystEstimateMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -358,7 +414,7 @@ final readonly class FmpClient
 			]);
 
 			foreach ($values as $item) {
-				$object = $this->safeInvoke(fn() => $this->mapper->dividend($item), $url);
+				$object = $this->map(new DividendMapper(), $item, $url);
 				if ($object !== null) {
 					$lastStringDate = $object->date;
 					$count++;
@@ -378,7 +434,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/dividends', ['symbol' => $symbol, 'limit' => $limit]);
 
 		foreach ($this->requestJson('stable/dividends', ['symbol' => $symbol, 'limit' => $limit]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->dividend($item), $url);
+			$object = $this->map(new DividendMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -407,7 +463,7 @@ final readonly class FmpClient
 			]);
 
 			foreach ($values as $item) {
-				$object = $this->safeInvoke(fn() => $this->mapper->earningsCalendar($item), $url);
+				$object = $this->map(new EarningsCalendarItemMapper(), $item, $url);
 				if ($object !== null) {
 					$lastStringDate = $object->date;
 					$count++;
@@ -439,7 +495,7 @@ final readonly class FmpClient
 			]);
 
 			foreach ($values as $item) {
-				$object = $this->safeInvoke(fn() => $this->mapper->splitsCalendar($item), $url);
+				$object = $this->map(new SplitsCalendarItemMapper(), $item, $url);
 				if ($object !== null) {
 					$lastStringDate = $object->date;
 					$count++;
@@ -458,7 +514,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/latest-financial-statements', ['page' => $page, 'limit' => $limit]);
 
 		foreach ($this->requestJson('stable/latest-financial-statements', ['page' => $page, 'limit' => $limit]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->latestFinancialStatement($item), $url);
+			$object = $this->map(new LatestFinancialStatementMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -474,7 +530,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/income-statement', ['symbol' => $symbol]);
 
 		foreach ($this->requestJson('stable/income-statement', ['symbol' => $symbol]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->incomeStatement($item), $url);
+			$object = $this->map(new IncomeStatementMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -485,12 +541,12 @@ final readonly class FmpClient
 	 * @see https://financialmodelingprep.com/stable/income-statement-bulk
 	 * @return iterable<int, IncomeStatement>
 	 */
-	public function incomeStatementBulk(string $year, Period $period = Period::FY): iterable
+	public function incomeStatementBulk(int $year, Period $period = Period::FY): iterable
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/income-statement-bulk', ['year' => $year, 'period' => $period->value]);
 
 		foreach ($this->requestCsv('stable/income-statement-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->incomeStatement($item, true), $url);
+			$object = $this->map(new IncomeStatementMapper(), $item, $url, true);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -506,7 +562,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/cash-flow-statement', ['symbol' => $symbol]);
 
 		foreach ($this->requestJson('stable/cash-flow-statement', ['symbol' => $symbol]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->cashFlowStatement($item), $url);
+			$object = $this->map(new CashFlowStatementMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -517,12 +573,12 @@ final readonly class FmpClient
 	 * @see https://financialmodelingprep.com/stable/cash-flow-statement-bulk
 	 * @return iterable<int, CashFlowStatement>
 	 */
-	public function cashFlowStatementBulk(string $year, Period $period = Period::FY): iterable
+	public function cashFlowStatementBulk(int $year, Period $period = Period::FY): iterable
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/cash-flow-statement-bulk', ['year' => $year, 'period' => $period->value]);
 
 		foreach ($this->requestCsv('stable/cash-flow-statement-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->cashFlowStatement($item, true), $url);
+			$object = $this->map(new CashFlowStatementMapper(), $item, $url, true);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -538,7 +594,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/eod-bulk', ['date' => $date->format('Y-m-d')]);
 
 		foreach ($this->requestCsv('stable/eod-bulk', ['date' => $date->format('Y-m-d')]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->eodBulkQuote($item, true), $url);
+			$object = $this->map(new EodQuoteMapper(), $item, $url, true);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -554,7 +610,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/financial-statement-symbol-list');
 
 		foreach ($this->requestJson('stable/financial-statement-symbol-list') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->financialStatementSymbol($item), $url);
+			$object = $this->map(new FinancialStatementSymbolMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -570,7 +626,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/batch-exchange-quote', ['exchange' => $exchange]);
 
 		foreach ($this->requestJson('stable/batch-exchange-quote', ['exchange' => $exchange]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->batchExchangeQuote($item), $url);
+			$object = $this->map(new BatchExchangeQuoteMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -586,7 +642,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/batch-exchange-quote', ['exchange' => $exchange, 'short' => 'false']);
 
 		foreach ($this->requestJson('stable/batch-exchange-quote', ['exchange' => $exchange, 'short' => 'false']) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->batchExchangeDetailedQuote($item), $url);
+			$object = $this->map(new BatchExchangeDetailedQuoteMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -602,7 +658,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/batch-forex-quotes');
 
 		foreach ($this->requestJson('stable/batch-forex-quotes') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->batchForexQuote($item), $url);
+			$object = $this->map(new BatchForexQuoteMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -626,7 +682,7 @@ final readonly class FmpClient
 			'from' => $from->format('Y-m-d'),
 			'to' => $to->format('Y-m-d'),
 		]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->historicalPriceEod($item), $url);
+			$object = $this->map(new HistoricalPriceEodMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -650,7 +706,7 @@ final readonly class FmpClient
 			'from' => $from->format('Y-m-d'),
 			'to' => $to->format('Y-m-d'),
 		]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->historicalChart($item), $url);
+			$object = $this->map(new HistoricalChartMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -674,7 +730,7 @@ final readonly class FmpClient
 			'limit' => $limit,
 			'period' => $period->value,
 		]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->keyMetrics($item), $url);
+			$object = $this->map(new KeyMetricsMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -690,7 +746,8 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/key-metrics-ttm', ['symbol' => $symbol]);
 
 		foreach ($this->requestJson('stable/key-metrics-ttm', ['symbol' => $symbol]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->keyMetricsTtm($item), $url);
+			$item = $this->removeTtmSuffix($item);
+			$object = $this->map(new KeyMetricsTtmMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -706,7 +763,8 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/key-metrics-ttm-bulk');
 
 		foreach ($this->requestCsv('stable/key-metrics-ttm-bulk') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->keyMetricsTtm($item, true), $url);
+			$item = $this->removeTtmSuffix($item);
+			$object = $this->map(new KeyMetricsTtmMapper(), $item, $url, true);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -730,7 +788,7 @@ final readonly class FmpClient
 			'limit' => $limit,
 			'period' => $period->value,
 		]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->ratios($item), $url);
+			$object = $this->map(new RatiosMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -746,7 +804,8 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/ratios-ttm', ['symbol' => $symbol]);
 
 		foreach ($this->requestJson('stable/ratios-ttm', ['symbol' => $symbol]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->ratiosTtm($item), $url);
+			$item = $this->removeTtmSuffix($item);
+			$object = $this->map(new RatiosTtmMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -762,7 +821,8 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/ratios-ttm-bulk');
 
 		foreach ($this->requestCsv('stable/ratios-ttm-bulk') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->ratiosTtm($item, true), $url);
+			$item = $this->removeTtmSuffix($item);
+			$object = $this->map(new RatiosTtmMapper(), $item, $url, true);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -778,7 +838,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/financial-scores', ['symbol' => $symbol]);
 
 		foreach ($this->requestJson('stable/financial-scores', ['symbol' => $symbol]) as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->scores($item), $url);
+			$object = $this->map(new ScoresMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -794,7 +854,7 @@ final readonly class FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/scores-bulk');
 
 		foreach ($this->requestCsv('stable/scores-bulk') as $item) {
-			$object = $this->safeInvoke(fn() => $this->mapper->scores($item, true), $url);
+			$object = $this->map(new ScoresMapper(), $item, $url, true);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -803,36 +863,35 @@ final readonly class FmpClient
 
 	/**
 	 * @template TRet of object
-	 * @param callable(): TRet $fn
+	 * @param Type<TRet> $type
 	 * @return TRet|null
 	 */
-	private function safeInvoke(callable $fn, string $url): ?object
+	private function map(Type $type, mixed $value, string $url, bool $isCsv = false): ?object
 	{
-		if ($this->strictMode === true) {
-			try {
-				return $fn();
-			} catch (InvalidArgumentException $exception) {
+		$config = $isCsv ? $this->csvTypeConfig : $this->jsonTypeConfig;
+
+		$value = $this->schemaProcessor->parse($value, $type, $config, true);
+		if ($value instanceof ErrorElement) {
+			if ($this->strictMode === true) {
 				throw new Exception\UnexpectedResponseContentException(
-					$exception->getMessage(),
-					$exception,
+					TypeSchemaErrorFormatter::prettyString($value, ''),
+					null,
 					$url,
 				);
 			}
-		}
 
-		try {
-			return $fn();
-		} catch (InvalidArgumentException $exception) {
 			$this->invalidArgumentHandler?->handle(
 				new Exception\UnexpectedResponseContentException(
-					$exception->getMessage(),
-					$exception,
+					TypeSchemaErrorFormatter::prettyString($value, ''),
+					null,
 					$url,
 				)
 			);
 
 			return null;
 		}
+
+		return $value;
 	}
 
 	/**
@@ -905,6 +964,23 @@ final readonly class FmpClient
 		}
 
 		return $url;
+	}
+
+	private function removeTtmSuffix(mixed $item): mixed
+	{
+		if (!is_array($item)) {
+			return $item;
+		}
+
+		$ret = [];
+		foreach ($item as $key => $value) {
+			if (is_string($key) && str_ends_with($key, 'TTM')) {
+				$key = substr($key, 0, -3);
+			}
+
+			$ret[$key] = $value;
+		}
+		return $ret;
 	}
 
 }

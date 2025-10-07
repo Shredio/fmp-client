@@ -2,6 +2,9 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+
+#[CompileObjectMapper(identifier: 'symbol')]
 final readonly class ActivelyTrading
 {
 

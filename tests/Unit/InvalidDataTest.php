@@ -14,7 +14,11 @@ final class InvalidDataTest extends TestCase
 		$client = $this->createClient(__DIR__ . '/fixtures/bad-data.json');
 
 		$this->expectException(UnexpectedResponseContentException::class);
-		$this->expectExceptionMessage('The name of available exchange in AMS must be a non-empty-string. Got: NULL');
+		$this->expectExceptionMessage(<<<'ERR'
+Invalid type null, expected non-empty-string.
+  → at name
+  → for value "AMS"
+ERR);
 		iterator_to_array($client->availableExchanges());
 	}
 
@@ -42,7 +46,11 @@ final class InvalidDataTest extends TestCase
 		$this->assertSame('AMEX', $exchanges[0]->exchange);
 
 		$this->assertSame([
-			'The name of available exchange in AMS must be a non-empty-string. Got: NULL',
+			<<<'ERR'
+Invalid type null, expected non-empty-string.
+  → at name
+  → for value "AMS"
+ERR,
 		], $handler->messages);
 	}
 

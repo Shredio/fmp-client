@@ -17,8 +17,6 @@ This is a PHP 8.3+ client library for the Financial Modeling Prep (FMP) API, des
 - **FmpRequest/FmpResponse** - HTTP layer using Symfony HTTP Client
 - **FmpPromise** - Async operations using PHP Fibers for concurrent API calls
 - **LargeResponseParser** - Memory-efficient streaming parser using JsonMachine and League CSV
-- **FmpPayloadMapper** - Maps API responses to strongly-typed payload objects
-- **FmpValidator** - Validation layer using Webmozart Assert
 
 ### Key Design Principles
 

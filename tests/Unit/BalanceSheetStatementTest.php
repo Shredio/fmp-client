@@ -85,7 +85,7 @@ final class BalanceSheetStatementTest extends TestCase
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/balance-sheet-statement-bulk.csv');
 
-		$statements = iterator_to_array($client->balanceSheetStatementBulk('2023'));
+		$statements = iterator_to_array($client->balanceSheetStatementBulk(2023));
 
 		$this->assertNotEmpty($statements);
 		$this->assertSame((new BalanceSheetStatement(

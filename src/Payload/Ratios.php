@@ -4,6 +4,9 @@ namespace Shredio\FmpClient\Payload;
 
 use Shredio\FmpClient\Enum\Period;
 
+use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+
+#[CompileObjectMapper(identifier: 'symbol')]
 final readonly class Ratios
 {
 

@@ -2,6 +2,9 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+
+#[CompileObjectMapper(identifier: 'symbol')]
 final readonly class KeyMetricsTtm
 {
 
@@ -23,8 +26,8 @@ final readonly class KeyMetricsTtm
 		public float|null $grahamNetNet = null,
 		public float|null $taxBurden = null,
 		public float|null $interestBurden = null,
-		public int|null $workingCapital = null,
-		public int|null $investedCapital = null,
+		public float|null $workingCapital = null,
+		public float|null $investedCapital = null,
 		public float|null $returnOnAssets = null,
 		public float|null $operatingReturnOnAssets = null,
 		public float|null $returnOnTangibleAssets = null,
@@ -40,24 +43,24 @@ final readonly class KeyMetricsTtm
 		public float|null $researchAndDevelopementToRevenue = null,
 		public float|null $stockBasedCompensationToRevenue = null,
 		public float|null $intangiblesToTotalAssets = null,
-		public int|null $averageReceivables = null,
-		public int|null $averagePayables = null,
-		public int|null $averageInventory = null,
+		public float|null $averageReceivables = null,
+		public float|null $averagePayables = null,
+		public float|null $averageInventory = null,
 		public float|null $daysOfSalesOutstanding = null,
 		public float|null $daysOfPayablesOutstanding = null,
 		public float|null $daysOfInventoryOutstanding = null,
 		public float|null $operatingCycle = null,
 		public float|null $cashConversionCycle = null,
-		public int|null $freeCashFlowToEquity = null,
+		public float|null $freeCashFlowToEquity = null,
 		public float|null $freeCashFlowToFirm = null,
-		public int|null $tangibleAssetValue = null,
-		public int|null $netCurrentAssetValue = null,
+		public float|null $tangibleAssetValue = null,
+		public float|null $netCurrentAssetValue = null,
 	)
 	{
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, marketCap: int|null, enterpriseValue: int|null, evToSales: float|null, evToOperatingCashFlow: float|null, evToFreeCashFlow: float|null, evToEBITDA: float|null, netDebtToEBITDA: float|null, currentRatio: float|null, incomeQuality: float|null, grahamNumber: float|null, grahamNetNet: float|null, taxBurden: float|null, interestBurden: float|null, workingCapital: int|null, investedCapital: int|null, returnOnAssets: float|null, operatingReturnOnAssets: float|null, returnOnTangibleAssets: float|null, returnOnEquity: float|null, returnOnInvestedCapital: float|null, returnOnCapitalEmployed: float|null, earningsYield: float|null, freeCashFlowYield: float|null, capexToOperatingCashFlow: float|null, capexToDepreciation: float|null, capexToRevenue: float|null, salesGeneralAndAdministrativeToRevenue: float|null, researchAndDevelopementToRevenue: float|null, stockBasedCompensationToRevenue: float|null, intangiblesToTotalAssets: float|null, averageReceivables: int|null, averagePayables: int|null, averageInventory: int|null, daysOfSalesOutstanding: float|null, daysOfPayablesOutstanding: float|null, daysOfInventoryOutstanding: float|null, operatingCycle: float|null, cashConversionCycle: float|null, freeCashFlowToEquity: int|null, freeCashFlowToFirm: float|null, tangibleAssetValue: int|null, netCurrentAssetValue: int|null}
+	 * @return array{symbol: non-empty-string, marketCap: int|null, enterpriseValue: int|null, evToSales: float|null, evToOperatingCashFlow: float|null, evToFreeCashFlow: float|null, evToEBITDA: float|null, netDebtToEBITDA: float|null, currentRatio: float|null, incomeQuality: float|null, grahamNumber: float|null, grahamNetNet: float|null, taxBurden: float|null, interestBurden: float|null, workingCapital: float|null, investedCapital: float|null, returnOnAssets: float|null, operatingReturnOnAssets: float|null, returnOnTangibleAssets: float|null, returnOnEquity: float|null, returnOnInvestedCapital: float|null, returnOnCapitalEmployed: float|null, earningsYield: float|null, freeCashFlowYield: float|null, capexToOperatingCashFlow: float|null, capexToDepreciation: float|null, capexToRevenue: float|null, salesGeneralAndAdministrativeToRevenue: float|null, researchAndDevelopementToRevenue: float|null, stockBasedCompensationToRevenue: float|null, intangiblesToTotalAssets: float|null, averageReceivables: float|null, averagePayables: float|null, averageInventory: float|null, daysOfSalesOutstanding: float|null, daysOfPayablesOutstanding: float|null, daysOfInventoryOutstanding: float|null, operatingCycle: float|null, cashConversionCycle: float|null, freeCashFlowToEquity: float|null, freeCashFlowToFirm: float|null, tangibleAssetValue: float|null, netCurrentAssetValue: float|null}
 	 */
 	public function toArray(): array
 	{

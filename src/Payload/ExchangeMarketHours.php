@@ -2,9 +2,16 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+
+#[CompileObjectMapper]
 final readonly class ExchangeMarketHours
 {
 
+	/**
+	 * @param non-empty-string|null $openingAdditional
+	 * @param non-empty-string|null $closingAdditional
+	 */
 	public function __construct(
 		public string $exchange,
 		public string $name,
@@ -19,7 +26,7 @@ final readonly class ExchangeMarketHours
 	}
 
 	/**
-	 * @return array{exchange: string, name: string, openingHour: string, closingHour: string, timezone: string, isMarketOpen: bool, openingAdditional: string|null, closingAdditional: string|null}
+	 * @return array{exchange: string, name: string, openingHour: string, closingHour: string, timezone: string, isMarketOpen: bool, openingAdditional: non-empty-string|null, closingAdditional: non-empty-string|null}
 	 */
 	public function toArray(): array
 	{

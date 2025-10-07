@@ -2,6 +2,9 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+
+#[CompileObjectMapper(identifier: 'symbol')]
 final readonly class PressRelease
 {
 
@@ -10,6 +13,7 @@ final readonly class PressRelease
 	 * @param non-empty-string $publishedDate
 	 * @param non-empty-string $publisher
 	 * @param non-empty-string $title
+	 * @param non-empty-string|null $image
 	 * @param non-empty-string $site
 	 * @param non-empty-string $text
 	 * @param non-empty-string $url
@@ -28,7 +32,7 @@ final readonly class PressRelease
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, publishedDate: non-empty-string, publisher: non-empty-string, title: non-empty-string, image: string|null, site: non-empty-string, text: non-empty-string, url: non-empty-string}
+	 * @return array{symbol: non-empty-string, publishedDate: non-empty-string, publisher: non-empty-string, title: non-empty-string, image: non-empty-string|null, site: non-empty-string, text: non-empty-string, url: non-empty-string}
 	 */
 	public function toArray(): array
 	{

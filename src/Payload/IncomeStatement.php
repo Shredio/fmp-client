@@ -4,6 +4,9 @@ namespace Shredio\FmpClient\Payload;
 
 use Shredio\FmpClient\Enum\Period;
 
+use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+
+#[CompileObjectMapper(identifier: 'symbol')]
 final readonly class IncomeStatement
 {
 
@@ -19,33 +22,33 @@ final readonly class IncomeStatement
 		public string $acceptedDate,
 		public string $fiscalYear,
 		public Period $period,
-		public int $revenue = 0,
-		public int $costOfRevenue = 0,
-		public int $grossProfit = 0,
-		public int $researchAndDevelopmentExpenses = 0,
-		public int $generalAndAdministrativeExpenses = 0,
-		public int $sellingAndMarketingExpenses = 0,
-		public int $sellingGeneralAndAdministrativeExpenses = 0,
-		public int $otherExpenses = 0,
-		public int $operatingExpenses = 0,
-		public int $costAndExpenses = 0,
-		public int $netInterestIncome = 0,
-		public int $interestIncome = 0,
-		public int $interestExpense = 0,
-		public int $depreciationAndAmortization = 0,
-		public int $ebitda = 0,
-		public int $ebit = 0,
-		public int $nonOperatingIncomeExcludingInterest = 0,
-		public int $operatingIncome = 0,
-		public int $totalOtherIncomeExpensesNet = 0,
-		public int $incomeBeforeTax = 0,
-		public int $incomeTaxExpense = 0,
-		public int $netIncomeFromContinuingOperations = 0,
-		public int $netIncomeFromDiscontinuedOperations = 0,
-		public int $otherAdjustmentsToNetIncome = 0,
-		public int $netIncome = 0,
-		public int $netIncomeDeductions = 0,
-		public int $bottomLineNetIncome = 0,
+		public float $revenue = 0.0,
+		public float $costOfRevenue = 0.0,
+		public float $grossProfit = 0.0,
+		public float $researchAndDevelopmentExpenses = 0.0,
+		public float $generalAndAdministrativeExpenses = 0.0,
+		public float $sellingAndMarketingExpenses = 0.0,
+		public float $sellingGeneralAndAdministrativeExpenses = 0.0,
+		public float $otherExpenses = 0.0,
+		public float $operatingExpenses = 0.0,
+		public float $costAndExpenses = 0.0,
+		public float $netInterestIncome = 0.0,
+		public float $interestIncome = 0.0,
+		public float $interestExpense = 0.0,
+		public float $depreciationAndAmortization = 0.0,
+		public float $ebitda = 0.0,
+		public float $ebit = 0.0,
+		public float $nonOperatingIncomeExcludingInterest = 0.0,
+		public float $operatingIncome = 0.0,
+		public float $totalOtherIncomeExpensesNet = 0.0,
+		public float $incomeBeforeTax = 0.0,
+		public float $incomeTaxExpense = 0.0,
+		public float $netIncomeFromContinuingOperations = 0.0,
+		public float $netIncomeFromDiscontinuedOperations = 0.0,
+		public float $otherAdjustmentsToNetIncome = 0.0,
+		public float $netIncome = 0.0,
+		public float $netIncomeDeductions = 0.0,
+		public float $bottomLineNetIncome = 0.0,
 		public float $eps = 0.0,
 		public float $epsDiluted = 0.0,
 		public int $weightedAverageShsOut = 0,
@@ -54,8 +57,49 @@ final readonly class IncomeStatement
 	{
 	}
 
+
 	/**
-	 * @return array{symbol: non-empty-string, date: string, reportedCurrency: string, cik: string, filingDate: string, acceptedDate: string, fiscalYear: string, period: string, revenue: int, costOfRevenue: int, grossProfit: int, researchAndDevelopmentExpenses: int, generalAndAdministrativeExpenses: int, sellingAndMarketingExpenses: int, sellingGeneralAndAdministrativeExpenses: int, otherExpenses: int, operatingExpenses: int, costAndExpenses: int, netInterestIncome: int, interestIncome: int, interestExpense: int, depreciationAndAmortization: int, ebitda: int, ebit: int, nonOperatingIncomeExcludingInterest: int, operatingIncome: int, totalOtherIncomeExpensesNet: int, incomeBeforeTax: int, incomeTaxExpense: int, netIncomeFromContinuingOperations: int, netIncomeFromDiscontinuedOperations: int, otherAdjustmentsToNetIncome: int, netIncome: int, netIncomeDeductions: int, bottomLineNetIncome: int, eps: float, epsDiluted: float, weightedAverageShsOut: int, weightedAverageShsOutDil: int}
+	 * @return array{
+	 *     symbol: non-empty-string,
+	 *     date: string,
+	 *     reportedCurrency: string,
+	 *     cik: string,
+	 *     filingDate: string,
+	 *     acceptedDate: string,
+	 *     fiscalYear: string,
+	 *     period: string,
+	 *     revenue: float,
+	 *     costOfRevenue: float,
+	 *     grossProfit: float,
+	 *     researchAndDevelopmentExpenses: float,
+	 *     generalAndAdministrativeExpenses: float,
+	 *     sellingAndMarketingExpenses: float,
+	 *     sellingGeneralAndAdministrativeExpenses: float,
+	 *     otherExpenses: float,
+	 *     operatingExpenses: float,
+	 *     costAndExpenses: float,
+	 *     netInterestIncome: float,
+	 *     interestIncome: float,
+	 *     interestExpense: float,
+	 *     depreciationAndAmortization: float,
+	 *     ebitda: float,
+	 *     ebit: float,
+	 *     nonOperatingIncomeExcludingInterest: float,
+	 *     operatingIncome: float,
+	 *     totalOtherIncomeExpensesNet: float,
+	 *     incomeBeforeTax: float,
+	 *     incomeTaxExpense: float,
+	 *     netIncomeFromContinuingOperations: float,
+	 *     netIncomeFromDiscontinuedOperations: float,
+	 *     otherAdjustmentsToNetIncome: float,
+	 *     netIncome: float,
+	 *     netIncomeDeductions: float,
+	 *     bottomLineNetIncome: float,
+	 *     eps: float,
+	 *     epsDiluted: float,
+	 *     weightedAverageShsOut: int,
+	 *     weightedAverageShsOutDil: int
+	 * }
 	 */
 	public function toArray(): array
 	{

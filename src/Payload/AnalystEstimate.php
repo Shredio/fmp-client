@@ -2,11 +2,15 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+
+#[CompileObjectMapper(identifier: 'symbol')]
 final readonly class AnalystEstimate
 {
 
 	/**
 	 * @param non-empty-string $symbol
+	 * @param non-empty-string $date
 	 */
 	public function __construct(
 		public string $symbol,
@@ -36,7 +40,7 @@ final readonly class AnalystEstimate
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: string, revenueLow: int, revenueHigh: int, revenueAvg: int, ebitdaLow: int, ebitdaHigh: int, ebitdaAvg: int, ebitLow: int, ebitHigh: int, ebitAvg: int, netIncomeLow: int, netIncomeHigh: int, netIncomeAvg: int, sgaExpenseLow: int, sgaExpenseHigh: int, sgaExpenseAvg: int, epsAvg: float, epsHigh: float, epsLow: float, numAnalystsRevenue: int, numAnalystsEps: int}
+	 * @return array{symbol: non-empty-string, date: non-empty-string, revenueLow: int, revenueHigh: int, revenueAvg: int, ebitdaLow: int, ebitdaHigh: int, ebitdaAvg: int, ebitLow: int, ebitHigh: int, ebitAvg: int, netIncomeLow: int, netIncomeHigh: int, netIncomeAvg: int, sgaExpenseLow: int, sgaExpenseHigh: int, sgaExpenseAvg: int, epsAvg: float, epsHigh: float, epsLow: float, numAnalystsRevenue: int, numAnalystsEps: int}
 	 */
 	public function toArray(): array
 	{

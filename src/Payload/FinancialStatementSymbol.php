@@ -2,11 +2,15 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+
+#[CompileObjectMapper(identifier: 'symbol')]
 final readonly class FinancialStatementSymbol
 {
 
 	/**
 	 * @param non-empty-string $symbol
+	 * @param non-empty-string|null $reportingCurrency
 	 */
 	public function __construct(
 		public string $symbol,
@@ -18,7 +22,7 @@ final readonly class FinancialStatementSymbol
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, companyName: string, tradingCurrency: string, reportingCurrency: string|null}
+	 * @return array{symbol: non-empty-string, companyName: string, tradingCurrency: string, reportingCurrency: non-empty-string|null}
 	 */
 	public function toArray(): array
 	{

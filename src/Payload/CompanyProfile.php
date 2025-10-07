@@ -2,11 +2,36 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+
+#[CompileObjectMapper(identifier: 'symbol')]
 final readonly class CompanyProfile
 {
 
 	/**
 	 * @param non-empty-string $symbol
+	 * @param non-empty-string|null $range
+	 * @param non-empty-string|null $companyName
+	 * @param non-empty-string|null $currency
+	 * @param non-empty-string|null $cik
+	 * @param non-empty-string|null $isin
+	 * @param non-empty-string|null $cusip
+	 * @param non-empty-string|null $exchangeFullName
+	 * @param non-empty-string|null $exchange
+	 * @param non-empty-string|null $industry
+	 * @param non-empty-string|null $website
+	 * @param non-empty-string|null $description
+	 * @param non-empty-string|null $ceo
+	 * @param non-empty-string|null $sector
+	 * @param non-empty-string|null $country
+	 * @param non-empty-string|null $fullTimeEmployees
+	 * @param non-empty-string|null $phone
+	 * @param non-empty-string|null $address
+	 * @param non-empty-string|null $city
+	 * @param non-empty-string|null $state
+	 * @param non-empty-string|null $zip
+	 * @param non-empty-string|null $image
+	 * @param non-empty-string|null $ipoDate
 	 */
 	public function __construct(
 		public string $symbol,
@@ -50,7 +75,7 @@ final readonly class CompanyProfile
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, price: float|null, marketCap: int|null, beta: float|null, lastDividend: float|null, range: string|null, change: float|null, changePercentage: float|null, volume: int|float|null, averageVolume: int|float|null, companyName: string|null, currency: string|null, cik: string|null, isin: string|null, cusip: string|null, exchangeFullName: string|null, exchange: string|null, industry: string|null, website: string|null, description: string|null, ceo: string|null, sector: string|null, country: string|null, fullTimeEmployees: string|null, phone: string|null, address: string|null, city: string|null, state: string|null, zip: string|null, image: string|null, ipoDate: string|null, defaultImage: bool|null, isEtf: bool|null, isActivelyTrading: bool|null, isAdr: bool|null, isFund: bool|null}
+	 * @return array{symbol: non-empty-string, price: float|null, marketCap: int|null, beta: float|null, lastDividend: float|null, range: non-empty-string|null, change: float|null, changePercentage: float|null, volume: int|float|null, averageVolume: int|float|null, companyName: non-empty-string|null, currency: non-empty-string|null, cik: non-empty-string|null, isin: non-empty-string|null, cusip: non-empty-string|null, exchangeFullName: non-empty-string|null, exchange: non-empty-string|null, industry: non-empty-string|null, website: non-empty-string|null, description: non-empty-string|null, ceo: non-empty-string|null, sector: non-empty-string|null, country: non-empty-string|null, fullTimeEmployees: non-empty-string|null, phone: non-empty-string|null, address: non-empty-string|null, city: non-empty-string|null, state: non-empty-string|null, zip: non-empty-string|null, image: non-empty-string|null, ipoDate: non-empty-string|null, defaultImage: bool|null, isEtf: bool|null, isActivelyTrading: bool|null, isAdr: bool|null, isFund: bool|null}
 	 */
 	public function toArray(): array
 	{
