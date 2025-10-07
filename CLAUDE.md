@@ -6,6 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `composer phpstan` - Run static analysis at maximum level
 - `composer test` - Run PHPUnit tests
+- `composer compile` - Generate mappers (required after adding new payload classes)
 
 ## Architecture Overview
 
@@ -32,7 +33,7 @@ When implementing new FMP API endpoints:
 
 1. Fetch response to determine structure, save it to the `tests/Unit/fixtures/` directory for future testing.
 2. Create payload class in `src/Payload/` (extend from existing patterns)
-3. Add mapping logic in `FmpPayloadMapper` 
+3. Run `composer compile` to generate mappers for new payload classes
 4. Add endpoint method to `FmpClient`, add `@see` annotation to the method docblock containing the endpoint URL without an API key (query parameter `apikey`).
 5. Create test fixtures in `tests/Unit/fixtures/`, save **full** response body from the API to the `tests/Unit/fixtures`.
 6. Write comprehensive tests covering both success and error cases

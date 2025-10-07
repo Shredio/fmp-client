@@ -1,0 +1,702 @@
+[
+  {
+    "symbol": "CAM",
+    "companyName": "Cameron Intl Corp.",
+    "exchange": "NYSE",
+    "ipoDate": "1995-07-05",
+    "delistedDate": "2025-10-06"
+  },
+  {
+    "symbol": "NEUE",
+    "companyName": "NeueHealth, Inc.",
+    "exchange": "NYSE",
+    "ipoDate": "2021-06-24",
+    "delistedDate": "2025-10-02"
+  },
+  {
+    "symbol": "DMYY",
+    "companyName": "dMY Squared Technology Group, Inc.",
+    "exchange": "AMEX",
+    "ipoDate": "2022-12-07",
+    "delistedDate": "2025-09-30"
+  },
+  {
+    "symbol": "CALT",
+    "companyName": "Calliditas Therapeutics AB (publ)",
+    "exchange": "NASDAQ",
+    "ipoDate": "2020-06-05",
+    "delistedDate": "2025-09-29"
+  },
+  {
+    "symbol": "SLNWF",
+    "companyName": "Selina Hospitality PLC. - Warrants (27/10/2027)",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-04-06",
+    "delistedDate": "2025-09-29"
+  },
+  {
+    "symbol": "SLNAF",
+    "companyName": "Selina Hospitality PLC.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2022-10-27",
+    "delistedDate": "2025-09-29"
+  },
+  {
+    "symbol": "ARKD",
+    "companyName": "EA Series Trust - ARK 21Shares Blockchain and Digital Economy Innovation ETF",
+    "exchange": "CBOE",
+    "ipoDate": "2023-11-15",
+    "delistedDate": "2025-09-26"
+  },
+  {
+    "symbol": "ARKZ",
+    "companyName": "EA Series Trust - ARK 21Shares Active Ethereum Futures Strategy ETF",
+    "exchange": "CBOE",
+    "ipoDate": "2023-11-14",
+    "delistedDate": "2025-09-26"
+  },
+  {
+    "symbol": "ARKA",
+    "companyName": "ARK 21Shares Active Bitcoin Futures Strategy ETF",
+    "exchange": "CBOE",
+    "ipoDate": "2023-11-14",
+    "delistedDate": "2025-09-26"
+  },
+  {
+    "symbol": "MGRO",
+    "companyName": "VanEck Morningstar Wide Moat Growth ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-03-28",
+    "delistedDate": "2025-09-19"
+  },
+  {
+    "symbol": "RINC",
+    "companyName": "AXS Real Estate Income ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2023-08-28",
+    "delistedDate": "2025-09-19"
+  },
+  {
+    "symbol": "KMET",
+    "companyName": "KraneShares Electrification Metals Strategy ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2022-10-13",
+    "delistedDate": "2025-09-19"
+  },
+  {
+    "symbol": "LFAZ",
+    "companyName": "LifeX 2062 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-17"
+  },
+  {
+    "symbol": "LIAW",
+    "companyName": "LifeX 2062 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-17"
+  },
+  {
+    "symbol": "LIAV",
+    "companyName": "LifeX 2061 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-17"
+  },
+  {
+    "symbol": "LFBB",
+    "companyName": "LifeX 2063 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-17"
+  },
+  {
+    "symbol": "LIAX",
+    "companyName": "LifeX 2063 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-17"
+  },
+  {
+    "symbol": "LFAX",
+    "companyName": "LifeX 2061 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-17"
+  },
+  {
+    "symbol": "LFAR",
+    "companyName": "LifeX 2057 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-16"
+  },
+  {
+    "symbol": "LFAV",
+    "companyName": "LifeX 2059 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-09",
+    "delistedDate": "2025-09-16"
+  },
+  {
+    "symbol": "LFAU",
+    "companyName": "LifeX 2058 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-16"
+  },
+  {
+    "symbol": "LFAQ",
+    "companyName": "LifeX 2056 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-16"
+  },
+  {
+    "symbol": "LIAP",
+    "companyName": "LifeX 2057 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-16"
+  },
+  {
+    "symbol": "HGASW",
+    "companyName": "Global Gas Corporation",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-02-19",
+    "delistedDate": "2025-09-16"
+  },
+  {
+    "symbol": "LIAT",
+    "companyName": "LifeX 2059 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-09",
+    "delistedDate": "2025-09-16"
+  },
+  {
+    "symbol": "LIAO",
+    "companyName": "LifeX 2056 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-16"
+  },
+  {
+    "symbol": "HGAS",
+    "companyName": "Global Gas Corporation",
+    "exchange": "OTC",
+    "ipoDate": "2021-02-19",
+    "delistedDate": "2025-09-16"
+  },
+  {
+    "symbol": "LIAQ",
+    "companyName": "LifeX 2058 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-16"
+  },
+  {
+    "symbol": "LIAK",
+    "companyName": "LifeX 2054 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-09",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "LFAN",
+    "companyName": "LifeX 2054 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-09",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "LFAL",
+    "companyName": "LifeX 2053 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "LFAK",
+    "companyName": "LifeX 2052 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "SHPSQ",
+    "companyName": "Shapeways Holdings Inc - Warrants (29/09/2026)",
+    "exchange": "NASDAQ",
+    "ipoDate": "2019-11-14",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "ASLN",
+    "companyName": "ASLAN Pharmaceuticals Limited",
+    "exchange": "NASDAQ",
+    "ipoDate": "2018-05-04",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "SHPWQ",
+    "companyName": "Shapeways Holdings Inc",
+    "exchange": "NASDAQ",
+    "ipoDate": "2019-11-14",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "SWSS",
+    "companyName": "Clean Energy Special Situations Corp.",
+    "exchange": "OTC",
+    "ipoDate": "2021-09-23",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "SWSSU",
+    "companyName": "Clean Energy Special Situations Corp. Unit",
+    "exchange": "OTC",
+    "ipoDate": "2021-08-26",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "LFAJ",
+    "companyName": "LifeX 2051 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "CMCAU",
+    "companyName": "Capitalworks Emerging Markets Acquisition Corp",
+    "exchange": "OTC",
+    "ipoDate": "2021-12-01",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "PETVW",
+    "companyName": "PetVivo Holdings, Inc.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-08-11",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "LIAG",
+    "companyName": "LifeX 2052 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "LIAJ",
+    "companyName": "LifeX 2053 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "SWSSW",
+    "companyName": "Springwater Special Situations Corp.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-09-23",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "LIAF",
+    "companyName": "LifeX 2051 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "CSSNQ",
+    "companyName": "Chicken Soup for the Soul Entertainment Inc",
+    "exchange": "NASDAQ",
+    "ipoDate": "2020-07-21",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "IMAQW",
+    "companyName": "International Media Acquisition Corp.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-08-17",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "IMAQR",
+    "companyName": "International Media Acquisition Corp.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-08-17",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "IMAQU",
+    "companyName": "International Media Acquisition Corp.",
+    "exchange": "OTC",
+    "ipoDate": "2021-07-29",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "LSDIF",
+    "companyName": "Lucy Scientific Discovery Inc",
+    "exchange": "NASDAQ",
+    "ipoDate": "2023-02-09",
+    "delistedDate": "2025-09-15"
+  },
+  {
+    "symbol": "LIAC",
+    "companyName": "LifeX 2049 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-12"
+  },
+  {
+    "symbol": "SKX",
+    "companyName": "Skechers U.S.A., Inc.",
+    "exchange": "NYSE",
+    "ipoDate": "1999-06-09",
+    "delistedDate": "2025-09-12"
+  },
+  {
+    "symbol": "LFAE",
+    "companyName": "LifeX 2048 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-12"
+  },
+  {
+    "symbol": "OLO",
+    "companyName": "Olo Inc.",
+    "exchange": "NYSE",
+    "ipoDate": "2021-03-17",
+    "delistedDate": "2025-09-12"
+  },
+  {
+    "symbol": "LIAB",
+    "companyName": "LifeX 2048 Inflation-Protected Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-12"
+  },
+  {
+    "symbol": "LFAF",
+    "companyName": "LifeX 2049 Longevity Income ETF",
+    "exchange": "BATS",
+    "ipoDate": "2024-09-16",
+    "delistedDate": "2025-09-12"
+  },
+  {
+    "symbol": "QPFF",
+    "companyName": "American Century Quality Preferred ETF",
+    "exchange": "CBOE",
+    "ipoDate": "2021-02-18",
+    "delistedDate": "2025-09-09"
+  },
+  {
+    "symbol": "EMFQ",
+    "companyName": "Amplify Emerging Markets FinTech ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2019-01-30",
+    "delistedDate": "2025-09-05"
+  },
+  {
+    "symbol": "XIN",
+    "companyName": "Xinyuan Real Estate Co., Ltd.",
+    "exchange": "NYSE",
+    "ipoDate": "2007-12-12",
+    "delistedDate": "2025-09-04"
+  },
+  {
+    "symbol": "WNDY",
+    "companyName": "Global X Wind Energy ETF",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-09-15",
+    "delistedDate": "2025-09-02"
+  },
+  {
+    "symbol": "PTEC",
+    "companyName": "Global X Funds - Global X PropTech ETF",
+    "exchange": "NASDAQ",
+    "ipoDate": "2023-04-13",
+    "delistedDate": "2025-09-02"
+  },
+  {
+    "symbol": "DYNT",
+    "companyName": "Dynatronics Corporation",
+    "exchange": "OTC",
+    "ipoDate": "1994-04-25",
+    "delistedDate": "2025-08-22"
+  },
+  {
+    "symbol": "CCRV",
+    "companyName": "iShares Commodity Curve Carry Strategy ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2020-09-03",
+    "delistedDate": "2025-08-19"
+  },
+  {
+    "symbol": "QUIZ",
+    "companyName": "Zacks Quality International ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2025-08-19",
+    "delistedDate": "2025-08-19"
+  },
+  {
+    "symbol": "IDAT",
+    "companyName": "iShares Cloud 5G and Tech ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2021-06-10",
+    "delistedDate": "2025-08-19"
+  },
+  {
+    "symbol": "ICCT",
+    "companyName": "iCoreConnect Inc.",
+    "exchange": "OTC",
+    "ipoDate": "2022-04-19",
+    "delistedDate": "2025-08-19"
+  },
+  {
+    "symbol": "TIPD",
+    "companyName": "Northern Funds - Northern Trust 2055 Inflation-Linked Distributing Ladder ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2022-04-07",
+    "delistedDate": "2025-08-19"
+  },
+  {
+    "symbol": "ETAOF",
+    "companyName": "ETAO International Co., Ltd.",
+    "exchange": "OTC",
+    "ipoDate": "2021-06-23",
+    "delistedDate": "2025-08-18"
+  },
+  {
+    "symbol": "OCEAW",
+    "companyName": "Ocean Biomedical, Inc.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-11-05",
+    "delistedDate": "2025-08-18"
+  },
+  {
+    "symbol": "SECOY",
+    "companyName": "Secoo Holding Limited",
+    "exchange": "OTC",
+    "ipoDate": "2017-09-22",
+    "delistedDate": "2025-08-18"
+  },
+  {
+    "symbol": "OPGN",
+    "companyName": "OpGen, Inc.",
+    "exchange": "OTC",
+    "ipoDate": "2015-05-05",
+    "delistedDate": "2025-08-18"
+  },
+  {
+    "symbol": "PXMD",
+    "companyName": "PaxMedica, Inc. Common Stock",
+    "exchange": "OTC",
+    "ipoDate": "2022-08-26",
+    "delistedDate": "2025-08-18"
+  },
+  {
+    "symbol": "RTCJF",
+    "companyName": "Baijiayun Group Ltd",
+    "exchange": "NASDAQ",
+    "ipoDate": "2022-12-30",
+    "delistedDate": "2025-08-15"
+  },
+  {
+    "symbol": "BPTH",
+    "companyName": "Bio-Path Holdings, Inc.",
+    "exchange": "OTC",
+    "ipoDate": "2008-03-04",
+    "delistedDate": "2025-08-14"
+  },
+  {
+    "symbol": "CULL",
+    "companyName": "Cullman Bancorp, Inc.",
+    "exchange": "OTC",
+    "ipoDate": "2013-04-19",
+    "delistedDate": "2025-08-14"
+  },
+  {
+    "symbol": "CNTM",
+    "companyName": "ConnectM Technology Solutions, Inc.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2022-07-01",
+    "delistedDate": "2025-08-05"
+  },
+  {
+    "symbol": "WTMA",
+    "companyName": "Welsbach Technology Metals Acquisition Corp.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2022-01-25",
+    "delistedDate": "2025-08-04"
+  },
+  {
+    "symbol": "MOR",
+    "companyName": "MorphoSys AG",
+    "exchange": "NASDAQ",
+    "ipoDate": "2018-04-19",
+    "delistedDate": "2025-08-04"
+  },
+  {
+    "symbol": "TTOO",
+    "companyName": "T2 Biosystems, Inc.",
+    "exchange": "OTC",
+    "ipoDate": "2014-08-07",
+    "delistedDate": "2025-08-04"
+  },
+  {
+    "symbol": "PCL",
+    "companyName": "Plum Creek Timber Company Inc",
+    "exchange": "NYSE",
+    "ipoDate": "1989-06-02",
+    "delistedDate": "2025-08-01"
+  },
+  {
+    "symbol": "STLE",
+    "companyName": "Steele Bancorp Inc.",
+    "exchange": "PNK",
+    "ipoDate": "2025-08-01",
+    "delistedDate": "2025-08-01"
+  },
+  {
+    "symbol": "PCI",
+    "companyName": "PGIM ETF Trust – PGIM Corporate Bond 5-10 Year ETF",
+    "exchange": "NYSE",
+    "ipoDate": "2013-01-29",
+    "delistedDate": "2025-08-01"
+  },
+  {
+    "symbol": "ATXI",
+    "companyName": "Avenue Therapeutics, Inc.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2017-06-27",
+    "delistedDate": "2025-07-30"
+  },
+  {
+    "symbol": "CNGL",
+    "companyName": "Canna-Global Acquisition Corp",
+    "exchange": "OTC",
+    "ipoDate": "2024-07-30",
+    "delistedDate": "2025-07-29"
+  },
+  {
+    "symbol": "CMLS",
+    "companyName": "Cumulus Media Inc.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2001-01-02",
+    "delistedDate": "2025-07-29"
+  },
+  {
+    "symbol": "PAIYY",
+    "companyName": "Aesthetic Medical International Holdings Group Limited",
+    "exchange": "OTC",
+    "ipoDate": "2019-10-25",
+    "delistedDate": "2025-07-29"
+  },
+  {
+    "symbol": "IMLP",
+    "companyName": "iPath S&P MLP ETN",
+    "exchange": "CBOE",
+    "ipoDate": "2013-01-04",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "DDG",
+    "companyName": "ProShares Short Oil & Gas",
+    "exchange": "AMEX",
+    "ipoDate": "2008-06-18",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "CTHR",
+    "companyName": "Charles & Colvard, Ltd.",
+    "exchange": "NASDAQ",
+    "ipoDate": "1997-11-14",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "WINV",
+    "companyName": "WinVest Acquisition Corp.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-09-30",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "AQGX",
+    "companyName": "AI Quality Growth ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2021-11-08",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "LGV",
+    "companyName": "Longview Acquisition Corp. II",
+    "exchange": "NYSE",
+    "ipoDate": "2021-05-10",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "MSGR",
+    "companyName": "Direxion mRNA ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2021-12-09",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "WINVR",
+    "companyName": "WinVest Acquisition Corp.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-10-04",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "MBT",
+    "companyName": "Mobile TeleSystems Public Joint Stock Company",
+    "exchange": "NYSE",
+    "ipoDate": "2000-06-30",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "AWYX",
+    "companyName": "ETFMG 2x Daily Travel Tech ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2021-06-16",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "JGLD",
+    "companyName": "Amplify Pure Junior Gold Miners ETF",
+    "exchange": "AMEX",
+    "ipoDate": "2020-12-01",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "NKGNW",
+    "companyName": "NKGen Biotech, Inc. Warrants",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-07-12",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "LBJ",
+    "companyName": "Direxion Daily Latin America Bull 2X Shares",
+    "exchange": "AMEX",
+    "ipoDate": "2009-12-03",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "WINVU",
+    "companyName": "WinVest Acquisition Corp.",
+    "exchange": "NASDAQ",
+    "ipoDate": "2021-09-15",
+    "delistedDate": "2025-07-28"
+  },
+  {
+    "symbol": "ARD",
+    "companyName": "Ardagh Group S.A.",
+    "exchange": "NYSE",
+    "ipoDate": "2017-03-15",
+    "delistedDate": "2025-07-28"
+  }
+]

@@ -21,6 +21,7 @@ use Shredio\FmpClient\Mapper\BatchForexQuoteMapper;
 use Shredio\FmpClient\Mapper\CashFlowStatementMapper;
 use Shredio\FmpClient\Mapper\CompanyProfileMapper;
 use Shredio\FmpClient\Mapper\CryptocurrencyMapper;
+use Shredio\FmpClient\Mapper\DelistedCompanyMapper;
 use Shredio\FmpClient\Mapper\DividendMapper;
 use Shredio\FmpClient\Mapper\EarningsCalendarItemMapper;
 use Shredio\FmpClient\Mapper\EodQuoteMapper;
@@ -51,6 +52,7 @@ use Shredio\FmpClient\Payload\BatchForexQuote;
 use Shredio\FmpClient\Payload\CashFlowStatement;
 use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
+use Shredio\FmpClient\Payload\DelistedCompany;
 use Shredio\FmpClient\Payload\Dividend;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
@@ -251,6 +253,22 @@ final readonly class FmpClient
 
 		foreach ($this->requestJson('stable/symbol-change') as $item) {
 			$object = $this->map(new SymbolChangeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/delisted-companies
+	 * @return iterable<int, DelistedCompany>
+	 */
+	public function delistedCompanies(int $limit = 100, int $page = 0): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/delisted-companies', ['page' => $page, 'limit' => $limit]);
+
+		foreach ($this->requestJson('stable/delisted-companies', ['page' => $page, 'limit' => $limit]) as $item) {
+			$object = $this->map(new DelistedCompanyMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
