@@ -292,18 +292,19 @@ final readonly class FmpClient
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/profile
-	 * @return iterable<int, CompanyProfile>
 	 */
-	public function companyProfile(string $symbols): iterable
+	public function companyProfile(string $symbol): ?CompanyProfile
 	{
-		$url = $this->buildUrlWithoutApiKey('stable/profile', ['symbol' => $symbols]);
+		$url = $this->buildUrlWithoutApiKey('stable/profile', ['symbol' => $symbol]);
 
-		foreach ($this->requestJson('stable/profile', ['symbol' => $symbols]) as $item) {
+		foreach ($this->requestJson('stable/profile', ['symbol' => $symbol]) as $item) {
 			$object = $this->map(new CompanyProfileMapper(), $item, $url);
 			if ($object !== null) {
-				yield $object;
+				return $object;
 			}
 		}
+
+		return null;
 	}
 
 	/**

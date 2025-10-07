@@ -13,9 +13,8 @@ final class CompanyProfileTest extends TestCase
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/company-profile-aapl.json');
 
-		$profiles = iterator_to_array($client->companyProfile('AAPL'));
+		$profile = $client->companyProfile('AAPL');
 
-		$this->assertNotEmpty($profiles);
 		$this->assertSame((new CompanyProfile(
 			symbol: 'AAPL',
 			price: 200.3,
@@ -53,16 +52,16 @@ final class CompanyProfileTest extends TestCase
 			isActivelyTrading: true,
 			isAdr: false,
 			isFund: false,
-		))->toArray(), $profiles[0]->toArray());
+		))->toArray(), $profile->toArray());
 	}
 
 	public function testCompanyProfileEmpty(): void
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/company-profile-empty.json');
 
-		$profiles = iterator_to_array($client->companyProfile('BTCUSDX'));
+		$profile = $client->companyProfile('BTCUSDX');
 
-		$this->assertEmpty($profiles);
+		$this->assertNull($profile);
 	}
 
 	public function testCompanyProfileBulk(): void
