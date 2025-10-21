@@ -48,7 +48,7 @@ final readonly class AvailableExchangeMapper extends Type
 	}
 
 
-	public function getTypeNode(TypeContext $context): TypeNode
+	protected function getTypeNode(TypeContext $context): TypeNode
 	{
 		return new IdentifierTypeNode(AvailableExchange::class);
 	}

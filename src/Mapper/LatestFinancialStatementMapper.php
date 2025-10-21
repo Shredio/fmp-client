@@ -47,7 +47,7 @@ final readonly class LatestFinancialStatementMapper extends Type
 	}
 
 
-	public function getTypeNode(TypeContext $context): TypeNode
+	protected function getTypeNode(TypeContext $context): TypeNode
 	{
 		return new IdentifierTypeNode(LatestFinancialStatement::class);
 	}

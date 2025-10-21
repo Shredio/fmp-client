@@ -31,19 +31,19 @@ final readonly class AnalystEstimateMapper extends Type
 			'date' => $ts->nonEmptyString(),
 			'revenueLow' => $ts->int(),
 			'revenueHigh' => $ts->int(),
-			'revenueAvg' => $ts->int(),
+			'revenueAvg' => $ts->union([$ts->int(), $ts->float()]),
 			'ebitdaLow' => $ts->int(),
 			'ebitdaHigh' => $ts->int(),
-			'ebitdaAvg' => $ts->int(),
+			'ebitdaAvg' => $ts->union([$ts->int(), $ts->float()]),
 			'ebitLow' => $ts->int(),
 			'ebitHigh' => $ts->int(),
-			'ebitAvg' => $ts->int(),
+			'ebitAvg' => $ts->union([$ts->int(), $ts->float()]),
 			'netIncomeLow' => $ts->int(),
 			'netIncomeHigh' => $ts->int(),
-			'netIncomeAvg' => $ts->int(),
+			'netIncomeAvg' => $ts->union([$ts->int(), $ts->float()]),
 			'sgaExpenseLow' => $ts->int(),
 			'sgaExpenseHigh' => $ts->int(),
-			'sgaExpenseAvg' => $ts->int(),
+			'sgaExpenseAvg' => $ts->union([$ts->int(), $ts->float()]),
 			'epsAvg' => $ts->float(),
 			'epsHigh' => $ts->float(),
 			'epsLow' => $ts->float(),
@@ -64,7 +64,7 @@ final readonly class AnalystEstimateMapper extends Type
 	}
 
 
-	public function getTypeNode(TypeContext $context): TypeNode
+	protected function getTypeNode(TypeContext $context): TypeNode
 	{
 		return new IdentifierTypeNode(AnalystEstimate::class);
 	}

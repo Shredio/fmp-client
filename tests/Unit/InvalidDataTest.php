@@ -47,7 +47,7 @@ ERR);
 
 		$this->assertSame([
 			<<<'ERR'
-Invalid type null, expected non-empty-string.
+Shredio\FmpClient\Payload\AvailableExchange: Invalid type null, expected non-empty-string.
   → at name
   → for value "AMS"
 ERR,

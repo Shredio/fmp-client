@@ -51,7 +51,7 @@ final readonly class DividendMapper extends Type
 	}
 
 
-	public function getTypeNode(TypeContext $context): TypeNode
+	protected function getTypeNode(TypeContext $context): TypeNode
 	{
 		return new IdentifierTypeNode(Dividend::class);
 	}

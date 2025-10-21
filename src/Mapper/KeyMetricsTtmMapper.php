@@ -85,7 +85,7 @@ final readonly class KeyMetricsTtmMapper extends Type
 	}
 
 
-	public function getTypeNode(TypeContext $context): TypeNode
+	protected function getTypeNode(TypeContext $context): TypeNode
 	{
 		return new IdentifierTypeNode(KeyMetricsTtm::class);
 	}

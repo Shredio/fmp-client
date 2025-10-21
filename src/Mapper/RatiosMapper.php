@@ -107,7 +107,7 @@ final readonly class RatiosMapper extends Type
 	}
 
 
-	public function getTypeNode(TypeContext $context): TypeNode
+	protected function getTypeNode(TypeContext $context): TypeNode
 	{
 		return new IdentifierTypeNode(Ratios::class);
 	}
