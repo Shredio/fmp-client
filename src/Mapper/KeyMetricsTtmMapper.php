@@ -81,51 +81,7 @@ final readonly class KeyMetricsTtmMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new KeyMetricsTtm(...array_intersect_key($values, [
-			'symbol' => true,
-			'marketCap' => true,
-			'enterpriseValue' => true,
-			'evToSales' => true,
-			'evToOperatingCashFlow' => true,
-			'evToFreeCashFlow' => true,
-			'evToEBITDA' => true,
-			'netDebtToEBITDA' => true,
-			'currentRatio' => true,
-			'incomeQuality' => true,
-			'grahamNumber' => true,
-			'grahamNetNet' => true,
-			'taxBurden' => true,
-			'interestBurden' => true,
-			'workingCapital' => true,
-			'investedCapital' => true,
-			'returnOnAssets' => true,
-			'operatingReturnOnAssets' => true,
-			'returnOnTangibleAssets' => true,
-			'returnOnEquity' => true,
-			'returnOnInvestedCapital' => true,
-			'returnOnCapitalEmployed' => true,
-			'earningsYield' => true,
-			'freeCashFlowYield' => true,
-			'capexToOperatingCashFlow' => true,
-			'capexToDepreciation' => true,
-			'capexToRevenue' => true,
-			'salesGeneralAndAdministrativeToRevenue' => true,
-			'researchAndDevelopementToRevenue' => true,
-			'stockBasedCompensationToRevenue' => true,
-			'intangiblesToTotalAssets' => true,
-			'averageReceivables' => true,
-			'averagePayables' => true,
-			'averageInventory' => true,
-			'daysOfSalesOutstanding' => true,
-			'daysOfPayablesOutstanding' => true,
-			'daysOfInventoryOutstanding' => true,
-			'operatingCycle' => true,
-			'cashConversionCycle' => true,
-			'freeCashFlowToEquity' => true,
-			'freeCashFlowToFirm' => true,
-			'tangibleAssetValue' => true,
-			'netCurrentAssetValue' => true,
-		]));
+		return new KeyMetricsTtm(...$values);
 	}
 
 

@@ -43,13 +43,7 @@ final readonly class DelistedCompanyMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new DelistedCompany(...array_intersect_key($values, [
-			'symbol' => true,
-			'companyName' => true,
-			'exchange' => true,
-			'ipoDate' => true,
-			'delistedDate' => true,
-		]));
+		return new DelistedCompany(...$values);
 	}
 
 

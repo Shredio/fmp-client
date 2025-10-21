@@ -41,14 +41,7 @@ final readonly class HistoricalChartMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new HistoricalChart(...array_intersect_key($values, [
-			'date' => true,
-			'open' => true,
-			'high' => true,
-			'low' => true,
-			'close' => true,
-			'volume' => true,
-		]));
+		return new HistoricalChart(...$values);
 	}
 
 

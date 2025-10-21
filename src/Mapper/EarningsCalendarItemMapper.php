@@ -45,15 +45,7 @@ final readonly class EarningsCalendarItemMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new EarningsCalendarItem(...array_intersect_key($values, [
-			'symbol' => true,
-			'date' => true,
-			'epsActual' => true,
-			'epsEstimated' => true,
-			'revenueActual' => true,
-			'revenueEstimated' => true,
-			'lastUpdated' => true,
-		]));
+		return new EarningsCalendarItem(...$values);
 	}
 
 

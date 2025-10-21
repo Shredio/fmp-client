@@ -40,7 +40,7 @@ final readonly class StockMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new Stock(...array_intersect_key($values, ['symbol' => true, 'companyName' => true]));
+		return new Stock(...$values);
 	}
 
 

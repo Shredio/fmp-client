@@ -74,44 +74,7 @@ final readonly class CompanyProfileMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new CompanyProfile(...array_intersect_key($values, [
-			'symbol' => true,
-			'price' => true,
-			'marketCap' => true,
-			'beta' => true,
-			'lastDividend' => true,
-			'range' => true,
-			'change' => true,
-			'changePercentage' => true,
-			'volume' => true,
-			'averageVolume' => true,
-			'companyName' => true,
-			'currency' => true,
-			'cik' => true,
-			'isin' => true,
-			'cusip' => true,
-			'exchangeFullName' => true,
-			'exchange' => true,
-			'industry' => true,
-			'website' => true,
-			'description' => true,
-			'ceo' => true,
-			'sector' => true,
-			'country' => true,
-			'fullTimeEmployees' => true,
-			'phone' => true,
-			'address' => true,
-			'city' => true,
-			'state' => true,
-			'zip' => true,
-			'image' => true,
-			'ipoDate' => true,
-			'defaultImage' => true,
-			'isEtf' => true,
-			'isActivelyTrading' => true,
-			'isAdr' => true,
-			'isFund' => true,
-		]));
+		return new CompanyProfile(...$values);
 	}
 
 

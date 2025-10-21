@@ -42,12 +42,7 @@ final readonly class BatchExchangeQuoteMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new BatchExchangeQuote(...array_intersect_key($values, [
-			'symbol' => true,
-			'price' => true,
-			'change' => true,
-			'volume' => true,
-		]));
+		return new BatchExchangeQuote(...$values);
 	}
 
 

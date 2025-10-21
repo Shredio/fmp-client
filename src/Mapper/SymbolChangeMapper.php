@@ -42,12 +42,7 @@ final readonly class SymbolChangeMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new SymbolChange(...array_intersect_key($values, [
-			'date' => true,
-			'companyName' => true,
-			'oldSymbol' => true,
-			'newSymbol' => true,
-		]));
+		return new SymbolChange(...$values);
 	}
 
 

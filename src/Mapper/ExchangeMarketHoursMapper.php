@@ -43,16 +43,7 @@ final readonly class ExchangeMarketHoursMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new ExchangeMarketHours(...array_intersect_key($values, [
-			'exchange' => true,
-			'name' => true,
-			'openingHour' => true,
-			'closingHour' => true,
-			'timezone' => true,
-			'isMarketOpen' => true,
-			'openingAdditional' => true,
-			'closingAdditional' => true,
-		]));
+		return new ExchangeMarketHours(...$values);
 	}
 
 

@@ -42,12 +42,7 @@ final readonly class IndexMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new Index(...array_intersect_key($values, [
-			'symbol' => true,
-			'name' => true,
-			'exchange' => true,
-			'currency' => true,
-		]));
+		return new Index(...$values);
 	}
 
 

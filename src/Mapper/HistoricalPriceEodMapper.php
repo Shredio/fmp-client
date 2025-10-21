@@ -48,18 +48,7 @@ final readonly class HistoricalPriceEodMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new HistoricalPriceEod(...array_intersect_key($values, [
-			'symbol' => true,
-			'date' => true,
-			'open' => true,
-			'high' => true,
-			'low' => true,
-			'close' => true,
-			'volume' => true,
-			'change' => true,
-			'changePercent' => true,
-			'vwap' => true,
-		]));
+		return new HistoricalPriceEod(...$values);
 	}
 
 

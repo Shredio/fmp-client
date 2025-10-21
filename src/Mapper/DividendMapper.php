@@ -47,17 +47,7 @@ final readonly class DividendMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new Dividend(...array_intersect_key($values, [
-			'symbol' => true,
-			'date' => true,
-			'recordDate' => true,
-			'paymentDate' => true,
-			'declarationDate' => true,
-			'adjDividend' => true,
-			'dividend' => true,
-			'yield' => true,
-			'frequency' => true,
-		]));
+		return new Dividend(...$values);
 	}
 
 

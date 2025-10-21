@@ -60,30 +60,7 @@ final readonly class AnalystEstimateMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new AnalystEstimate(...array_intersect_key($values, [
-			'symbol' => true,
-			'date' => true,
-			'revenueLow' => true,
-			'revenueHigh' => true,
-			'revenueAvg' => true,
-			'ebitdaLow' => true,
-			'ebitdaHigh' => true,
-			'ebitdaAvg' => true,
-			'ebitLow' => true,
-			'ebitHigh' => true,
-			'ebitAvg' => true,
-			'netIncomeLow' => true,
-			'netIncomeHigh' => true,
-			'netIncomeAvg' => true,
-			'sgaExpenseLow' => true,
-			'sgaExpenseHigh' => true,
-			'sgaExpenseAvg' => true,
-			'epsAvg' => true,
-			'epsHigh' => true,
-			'epsLow' => true,
-			'numAnalystsRevenue' => true,
-			'numAnalystsEps' => true,
-		]));
+		return new AnalystEstimate(...$values);
 	}
 
 

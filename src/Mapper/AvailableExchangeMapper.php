@@ -44,14 +44,7 @@ final readonly class AvailableExchangeMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new AvailableExchange(...array_intersect_key($values, [
-			'exchange' => true,
-			'name' => true,
-			'countryName' => true,
-			'countryCode' => true,
-			'symbolSuffix' => true,
-			'delay' => true,
-		]));
+		return new AvailableExchange(...$values);
 	}
 
 

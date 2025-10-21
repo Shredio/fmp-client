@@ -46,16 +46,7 @@ final readonly class EodQuoteMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new EodQuote(...array_intersect_key($values, [
-			'symbol' => true,
-			'date' => true,
-			'open' => true,
-			'low' => true,
-			'high' => true,
-			'close' => true,
-			'adjClose' => true,
-			'volume' => true,
-		]));
+		return new EodQuote(...$values);
 	}
 
 

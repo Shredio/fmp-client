@@ -43,13 +43,7 @@ final readonly class LatestFinancialStatementMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new LatestFinancialStatement(...array_intersect_key($values, [
-			'symbol' => true,
-			'calendarYear' => true,
-			'period' => true,
-			'date' => true,
-			'dateAdded' => true,
-		]));
+		return new LatestFinancialStatement(...$values);
 	}
 
 

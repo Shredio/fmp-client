@@ -42,12 +42,7 @@ final readonly class FinancialStatementSymbolMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new FinancialStatementSymbol(...array_intersect_key($values, [
-			'symbol' => true,
-			'companyName' => true,
-			'tradingCurrency' => true,
-			'reportingCurrency' => true,
-		]));
+		return new FinancialStatementSymbol(...$values);
 	}
 
 

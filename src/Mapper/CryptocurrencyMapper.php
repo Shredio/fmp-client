@@ -44,14 +44,7 @@ final readonly class CryptocurrencyMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new Cryptocurrency(...array_intersect_key($values, [
-			'symbol' => true,
-			'name' => true,
-			'exchange' => true,
-			'icoDate' => true,
-			'circulatingSupply' => true,
-			'totalSupply' => true,
-		]));
+		return new Cryptocurrency(...$values);
 	}
 
 

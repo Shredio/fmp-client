@@ -42,12 +42,7 @@ final readonly class SplitsCalendarItemMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new SplitsCalendarItem(...array_intersect_key($values, [
-			'symbol' => true,
-			'date' => true,
-			'numerator' => true,
-			'denominator' => true,
-		]));
+		return new SplitsCalendarItem(...$values);
 	}
 
 

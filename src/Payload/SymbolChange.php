@@ -2,7 +2,7 @@
 
 namespace Shredio\FmpClient\Payload;
 
-use Shredio\TypeSchema\Mapper\Jit\Attribute\CompileObjectMapper;
+use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 
 #[CompileObjectMapper(identifier: 'oldSymbol')]
 final readonly class SymbolChange

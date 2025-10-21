@@ -46,16 +46,7 @@ final readonly class StockNewsMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new StockNews(...array_intersect_key($values, [
-			'symbol' => true,
-			'publishedDate' => true,
-			'publisher' => true,
-			'title' => true,
-			'image' => true,
-			'site' => true,
-			'text' => true,
-			'url' => true,
-		]));
+		return new StockNews(...$values);
 	}
 
 

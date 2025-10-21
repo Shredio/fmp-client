@@ -40,7 +40,7 @@ final readonly class ActivelyTradingMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new ActivelyTrading(...array_intersect_key($values, ['symbol' => true, 'name' => true]));
+		return new ActivelyTrading(...$values);
 	}
 
 

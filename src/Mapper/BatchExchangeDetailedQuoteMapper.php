@@ -55,25 +55,7 @@ final readonly class BatchExchangeDetailedQuoteMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new BatchExchangeDetailedQuote(...array_intersect_key($values, [
-			'symbol' => true,
-			'name' => true,
-			'exchange' => true,
-			'price' => true,
-			'changePercentage' => true,
-			'change' => true,
-			'volume' => true,
-			'dayLow' => true,
-			'dayHigh' => true,
-			'yearHigh' => true,
-			'yearLow' => true,
-			'marketCap' => true,
-			'priceAvg50' => true,
-			'priceAvg200' => true,
-			'open' => true,
-			'previousClose' => true,
-			'timestamp' => true,
-		]));
+		return new BatchExchangeDetailedQuote(...$values);
 	}
 
 

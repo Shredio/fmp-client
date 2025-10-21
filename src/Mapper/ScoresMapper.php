@@ -49,19 +49,7 @@ final readonly class ScoresMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new Scores(...array_intersect_key($values, [
-			'symbol' => true,
-			'reportedCurrency' => true,
-			'altmanZScore' => true,
-			'piotroskiScore' => true,
-			'workingCapital' => true,
-			'totalAssets' => true,
-			'retainedEarnings' => true,
-			'ebit' => true,
-			'marketCap' => true,
-			'totalLiabilities' => true,
-			'revenue' => true,
-		]));
+		return new Scores(...$values);
 	}
 
 

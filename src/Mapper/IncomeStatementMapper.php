@@ -78,47 +78,7 @@ final readonly class IncomeStatementMapper extends Type
 		}
 
 		// 3. Create a new instance
-		return new IncomeStatement(...array_intersect_key($values, [
-			'symbol' => true,
-			'date' => true,
-			'reportedCurrency' => true,
-			'cik' => true,
-			'filingDate' => true,
-			'acceptedDate' => true,
-			'fiscalYear' => true,
-			'period' => true,
-			'revenue' => true,
-			'costOfRevenue' => true,
-			'grossProfit' => true,
-			'researchAndDevelopmentExpenses' => true,
-			'generalAndAdministrativeExpenses' => true,
-			'sellingAndMarketingExpenses' => true,
-			'sellingGeneralAndAdministrativeExpenses' => true,
-			'otherExpenses' => true,
-			'operatingExpenses' => true,
-			'costAndExpenses' => true,
-			'netInterestIncome' => true,
-			'interestIncome' => true,
-			'interestExpense' => true,
-			'depreciationAndAmortization' => true,
-			'ebitda' => true,
-			'ebit' => true,
-			'nonOperatingIncomeExcludingInterest' => true,
-			'operatingIncome' => true,
-			'totalOtherIncomeExpensesNet' => true,
-			'incomeBeforeTax' => true,
-			'incomeTaxExpense' => true,
-			'netIncomeFromContinuingOperations' => true,
-			'netIncomeFromDiscontinuedOperations' => true,
-			'otherAdjustmentsToNetIncome' => true,
-			'netIncome' => true,
-			'netIncomeDeductions' => true,
-			'bottomLineNetIncome' => true,
-			'eps' => true,
-			'epsDiluted' => true,
-			'weightedAverageShsOut' => true,
-			'weightedAverageShsOutDil' => true,
-		]));
+		return new IncomeStatement(...$values);
 	}
 
 
