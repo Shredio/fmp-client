@@ -33,7 +33,7 @@ When implementing new FMP API endpoints:
 
 1. Fetch response to determine structure, save it to the `tests/Unit/fixtures/` directory for future testing.
 2. Create payload class in `src/Payload/` (extend from existing patterns)
-3. Run `composer compile` to generate mappers for new payload classes
+3. Run `composer compile` to automatically generate mappers. This command scans all payload classes with `#[CompileObjectMapper]` attribute and generates corresponding mapper classes in `src/Mapper/`. Mappers are generated automatically - do not create them manually.
 4. Add endpoint method to `FmpClient`, add `@see` annotation to the method docblock containing the endpoint URL without an API key (query parameter `apikey`).
 5. Create test fixtures in `tests/Unit/fixtures/`, save **full** response body from the API to the `tests/Unit/fixtures`.
 6. Write comprehensive tests covering both success and error cases
@@ -43,6 +43,10 @@ When implementing new FMP API endpoints:
 
 All payload classes in `src/Payload/` must include:
 
+- **CompileObjectMapper attribute**: Add `#[CompileObjectMapper]` attribute to the class
+  - Most payload classes use `identifier` parameter (e.g., `#[CompileObjectMapper(identifier: 'symbol')]`)
+  - Common identifiers: `'symbol'`, `'exchange'`, `'oldSymbol'`
+  - Some payloads don't specify an identifier (e.g., HistoricalChart, ExchangeMarketHours)
 - **Constructor**: All properties as readonly constructor parameters
 - **toArray() method**: Returns all properties as associative array with complete `@return array{ ... }` type annotation
   - Example: `@return array{symbol: non-empty-string, name: string, price: float|null}`
