@@ -87,12 +87,10 @@ use Shredio\TypeSchema\Conversion\Converter\String\StrictStringConverter;
 use Shredio\TypeSchema\Conversion\Object\LenientObjectSupervisor;
 use Shredio\TypeSchema\Error\ErrorElement;
 use Shredio\TypeSchema\Error\TypeSchemaErrorFormatter;
-use Shredio\TypeSchema\Exception\AssertException;
 use Shredio\TypeSchema\Types\Type;
 use Shredio\TypeSchema\TypeSchemaProcessor;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
-use Webmozart\Assert\InvalidArgumentException;
 
 final readonly class FmpClient
 {
