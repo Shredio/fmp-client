@@ -106,6 +106,14 @@ foreach ($fmpClient->balanceSheetStatement('AAPL') as $statement) {
 foreach ($fmpClient->dividends('AAPL') as $dividend) {
     echo "Date: {$dividend->date}, Amount: {$dividend->dividend}\n";
 }
+
+// Get shares float information
+$sharesFloat = $fmpClient->getSharesFloat('AAPL');
+if ($sharesFloat !== null) {
+    echo "Free Float: {$sharesFloat->freeFloat}%\n";
+    echo "Float Shares: {$sharesFloat->floatShares}\n";
+    echo "Outstanding Shares: {$sharesFloat->outstandingShares}\n";
+}
 ```
 
 ### Bulk Operations
@@ -235,6 +243,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `stockList()` - List all available stocks
 - `companyProfile(string $symbols)` - Company profile information
 - `companyProfileBulk()` - Bulk company profiles (streaming)
+- `getSharesFloat(string $symbol)` - Shares float information (free float, float shares, outstanding shares)
 - `availableExchanges()` - Available stock exchanges
 - `getAllExchangeMarketHours()` - Market hours for all exchanges
 

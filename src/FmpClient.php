@@ -38,6 +38,7 @@ use Shredio\FmpClient\Mapper\PressReleaseMapper;
 use Shredio\FmpClient\Mapper\RatiosMapper;
 use Shredio\FmpClient\Mapper\RatiosTtmMapper;
 use Shredio\FmpClient\Mapper\ScoresMapper;
+use Shredio\FmpClient\Mapper\SharesFloatMapper;
 use Shredio\FmpClient\Mapper\SplitsCalendarItemMapper;
 use Shredio\FmpClient\Mapper\StockMapper;
 use Shredio\FmpClient\Mapper\StockNewsMapper;
@@ -69,6 +70,7 @@ use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\Scores;
+use Shredio\FmpClient\Payload\SharesFloat;
 use Shredio\FmpClient\Payload\SplitsCalendarItem;
 use Shredio\FmpClient\Payload\Stock;
 use Shredio\FmpClient\Payload\StockNews;
@@ -351,6 +353,30 @@ final readonly class FmpClient
 		if ($part === 100) {
 			throw new LogicException('Reached maximum number of parts for company profile bulk request.');
 		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/shares-float
+	 */
+	public function getSharesFloat(string $symbol): ?SharesFloat
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/shares-float', ['symbol' => $symbol]);
+		$count = 0;
+		$result = null;
+
+		foreach ($this->requestJson('stable/shares-float', ['symbol' => $symbol]) as $item) {
+			$count++;
+			if ($count > 1) {
+				throw new LogicException(sprintf('Expected 0 or 1 record for shares float, got more than 1 for symbol %s', $symbol));
+			}
+
+			$object = $this->map(new SharesFloatMapper(), $item, $url);
+			if ($object !== null) {
+				$result = $object;
+			}
+		}
+
+		return $result;
 	}
 
 	/**
