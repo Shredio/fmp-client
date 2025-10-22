@@ -167,7 +167,7 @@ final readonly class FmpClient
 	 * @see https://financialmodelingprep.com/stable/all-exchange-market-hours
 	 * @return iterable<int, ExchangeMarketHours>
 	 */
-	public function getAllExchangeMarketHours(): iterable
+	public function allExchangeMarketHours(): iterable
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/all-exchange-market-hours');
 
@@ -356,7 +356,7 @@ final readonly class FmpClient
 	/**
 	 * @see https://financialmodelingprep.com/stable/shares-float
 	 */
-	public function getSharesFloat(string $symbol): ?SharesFloat
+	public function sharesFloat(string $symbol): ?SharesFloat
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/shares-float', ['symbol' => $symbol]);
 		$count = 0;
@@ -413,7 +413,7 @@ final readonly class FmpClient
 	 * @see https://financialmodelingprep.com/stable/analyst-estimates
 	 * @return iterable<int, AnalystEstimate>
 	 */
-	public function getAnalystEstimates(string $symbol, string $period = 'annual', int $page = 0, int $limit = 6): iterable
+	public function analystEstimates(string $symbol, string $period = 'annual', int $page = 0, int $limit = 6): iterable
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/analyst-estimates', [
 			'symbol' => $symbol,

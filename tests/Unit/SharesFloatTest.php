@@ -13,7 +13,7 @@ final class SharesFloatTest extends TestCase
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/shares-float.json');
 
-		$sharesFloat = $client->getSharesFloat('AAPL');
+		$sharesFloat = $client->sharesFloat('AAPL');
 
 		$this->assertSame((new SharesFloat(
 			symbol: 'AAPL',
@@ -29,7 +29,7 @@ final class SharesFloatTest extends TestCase
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/shares-float-empty.json');
 
-		$sharesFloat = $client->getSharesFloat('INVALID');
+		$sharesFloat = $client->sharesFloat('INVALID');
 
 		$this->assertNull($sharesFloat);
 	}
@@ -41,7 +41,7 @@ final class SharesFloatTest extends TestCase
 		$this->expectException(LogicException::class);
 		$this->expectExceptionMessage('Expected 0 or 1 record for shares float, got more than 1 for symbol AAPL');
 
-		$client->getSharesFloat('AAPL');
+		$client->sharesFloat('AAPL');
 	}
 
 }

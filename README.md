@@ -243,9 +243,9 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `stockList()` - List all available stocks
 - `companyProfile(string $symbols)` - Company profile information
 - `companyProfileBulk()` - Bulk company profiles (streaming)
-- `getSharesFloat(string $symbol)` - Shares float information (free float, float shares, outstanding shares)
+- `sharesFloat(string $symbol)` - Shares float information (free float, float shares, outstanding shares)
 - `availableExchanges()` - Available stock exchanges
-- `getAllExchangeMarketHours()` - Market hours for all exchanges
+- `allExchangeMarketHours()` - Market hours for all exchanges
 
 ### Financial Statements  
 - `balanceSheetStatement(string $symbol)` - Balance sheet data
@@ -275,7 +275,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `ratiosTtmBulk()` - Bulk TTM ratios
 - `financialScores(string $symbol)` - Financial scores
 - `scoresBulk()` - Bulk financial scores
-- `getAnalystEstimates(string $symbol, string $period, int $page, int $limit)` - Analyst estimates
+- `analystEstimates(string $symbol, string $period, int $page, int $limit)` - Analyst estimates
 
 ### Calendar Events
 - `earningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Earnings calendar

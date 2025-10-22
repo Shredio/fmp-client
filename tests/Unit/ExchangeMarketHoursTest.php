@@ -12,7 +12,7 @@ final class ExchangeMarketHoursTest extends TestCase
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/all-exchange-market-hours.json');
 
-		$marketHours = iterator_to_array($client->getAllExchangeMarketHours());
+		$marketHours = iterator_to_array($client->allExchangeMarketHours());
 
 		$this->assertNotEmpty($marketHours);
 		$this->assertContainsOnlyInstancesOf(ExchangeMarketHours::class, $marketHours);
@@ -42,7 +42,7 @@ final class ExchangeMarketHoursTest extends TestCase
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/all_exchange_market_hours.closed.json');
 
-		$marketHours = iterator_to_array($client->getAllExchangeMarketHours());
+		$marketHours = iterator_to_array($client->allExchangeMarketHours());
 
 		$this->assertNotEmpty($marketHours);
 		$this->assertContainsOnlyInstancesOf(ExchangeMarketHours::class, $marketHours);
