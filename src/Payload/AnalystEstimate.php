@@ -40,7 +40,7 @@ final readonly class AnalystEstimate
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: non-empty-string, revenueLow: int, revenueHigh: int, revenueAvg: int, ebitdaLow: int, ebitdaHigh: int, ebitdaAvg: int, ebitLow: int, ebitHigh: int, ebitAvg: int, netIncomeLow: int, netIncomeHigh: int, netIncomeAvg: int, sgaExpenseLow: int, sgaExpenseHigh: int, sgaExpenseAvg: int, epsAvg: float, epsHigh: float, epsLow: float, numAnalystsRevenue: int, numAnalystsEps: int}
+	 * @return array{symbol: non-empty-string, date: non-empty-string, revenueLow: int, revenueHigh: int, revenueAvg: int|float, ebitdaLow: int, ebitdaHigh: int, ebitdaAvg: int|float, ebitLow: int, ebitHigh: int, ebitAvg: int|float, netIncomeLow: int, netIncomeHigh: int, netIncomeAvg: int|float, sgaExpenseLow: int, sgaExpenseHigh: int, sgaExpenseAvg: int|float, epsAvg: float, epsHigh: float, epsLow: float, numAnalystsRevenue: int, numAnalystsEps: int}
 	 */
 	public function toArray(): array
 	{
