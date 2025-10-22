@@ -26,7 +26,7 @@ final readonly class LargeResponseParser
 	 */
 	public function parseCsv(HttpClientInterface $client, ResponseInterface $response): iterable
 	{
-		$reader = Reader::createFromStream(StreamWrapper::createResource($response, $client));
+		$reader = Reader::from(StreamWrapper::createResource($response, $client));
 		$reader->setHeaderOffset(0);
 
 		/** @var array<string, string> $item */
