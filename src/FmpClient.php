@@ -14,10 +14,14 @@ use Shredio\FmpClient\Exception\UnexpectedResponseContentExceptionHandler;
 use Shredio\FmpClient\Mapper\ActivelyTradingMapper;
 use Shredio\FmpClient\Mapper\AnalystEstimateMapper;
 use Shredio\FmpClient\Mapper\AvailableExchangeMapper;
+use Shredio\FmpClient\Mapper\BalanceSheetStatementGrowthBulkMapper;
+use Shredio\FmpClient\Mapper\BalanceSheetStatementGrowthMapper;
 use Shredio\FmpClient\Mapper\BalanceSheetStatementMapper;
 use Shredio\FmpClient\Mapper\BatchExchangeDetailedQuoteMapper;
 use Shredio\FmpClient\Mapper\BatchExchangeQuoteMapper;
 use Shredio\FmpClient\Mapper\BatchForexQuoteMapper;
+use Shredio\FmpClient\Mapper\CashFlowStatementGrowthBulkMapper;
+use Shredio\FmpClient\Mapper\CashFlowStatementGrowthMapper;
 use Shredio\FmpClient\Mapper\CashFlowStatementMapper;
 use Shredio\FmpClient\Mapper\CompanyProfileMapper;
 use Shredio\FmpClient\Mapper\CryptocurrencyMapper;
@@ -29,6 +33,8 @@ use Shredio\FmpClient\Mapper\ExchangeMarketHoursMapper;
 use Shredio\FmpClient\Mapper\FinancialStatementSymbolMapper;
 use Shredio\FmpClient\Mapper\HistoricalChartMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodMapper;
+use Shredio\FmpClient\Mapper\IncomeStatementGrowthBulkMapper;
+use Shredio\FmpClient\Mapper\IncomeStatementGrowthMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementMapper;
 use Shredio\FmpClient\Mapper\IndexMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsMapper;
@@ -47,10 +53,14 @@ use Shredio\FmpClient\Payload\ActivelyTrading;
 use Shredio\FmpClient\Payload\AnalystEstimate;
 use Shredio\FmpClient\Payload\AvailableExchange;
 use Shredio\FmpClient\Payload\BalanceSheetStatement;
+use Shredio\FmpClient\Payload\BalanceSheetStatementGrowth;
+use Shredio\FmpClient\Payload\BalanceSheetStatementGrowthBulk;
 use Shredio\FmpClient\Payload\BatchExchangeDetailedQuote;
 use Shredio\FmpClient\Payload\BatchExchangeQuote;
 use Shredio\FmpClient\Payload\BatchForexQuote;
 use Shredio\FmpClient\Payload\CashFlowStatement;
+use Shredio\FmpClient\Payload\CashFlowStatementGrowth;
+use Shredio\FmpClient\Payload\CashFlowStatementGrowthBulk;
 use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
@@ -62,6 +72,8 @@ use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
 use Shredio\FmpClient\Payload\IncomeStatement;
+use Shredio\FmpClient\Payload\IncomeStatementGrowth;
+use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
 use Shredio\FmpClient\Payload\Index;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
@@ -623,6 +635,182 @@ final readonly class FmpClient
 
 		foreach ($this->requestCsv('stable/cash-flow-statement-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
 			$object = $this->map(CashFlowStatement::class, new CashFlowStatementMapper(), $item, $url, true);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/api/v3/income-statement-growth/{symbol}
+	 * @return iterable<int, IncomeStatementGrowth>
+	 */
+	public function incomeStatementGrowth(string $symbol, int|null $limit = null, ?PeriodQuery $period = null): iterable
+	{
+		$params = ['symbol' => $symbol];
+		if ($limit !== null) {
+			$params['limit'] = $limit;
+		}
+		if ($period !== null) {
+			$params['period'] = $period->value;
+		}
+
+		$url = $this->buildUrlWithoutApiKey('api/v3/income-statement-growth/' . $symbol, $params);
+
+		foreach ($this->requestJson('api/v3/income-statement-growth/' . $symbol, $params) as $item) {
+			$object = $this->map(IncomeStatementGrowth::class, new IncomeStatementGrowthMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/api/v3/balance-sheet-statement-growth/{symbol}
+	 * @return iterable<int, BalanceSheetStatementGrowth>
+	 */
+	public function balanceSheetStatementGrowth(string $symbol, int|null $limit = null, ?PeriodQuery $period = null): iterable
+	{
+		$params = ['symbol' => $symbol];
+		if ($limit !== null) {
+			$params['limit'] = $limit;
+		}
+		if ($period !== null) {
+			$params['period'] = $period->value;
+		}
+
+		$url = $this->buildUrlWithoutApiKey('api/v3/balance-sheet-statement-growth/' . $symbol, $params);
+
+		foreach ($this->requestJson('api/v3/balance-sheet-statement-growth/' . $symbol, $params) as $item) {
+			$object = $this->map(BalanceSheetStatementGrowth::class, new BalanceSheetStatementGrowthMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/api/v3/cash-flow-statement-growth/{symbol}
+	 * @return iterable<int, CashFlowStatementGrowth>
+	 */
+	public function cashFlowStatementGrowth(string $symbol, int|null $limit = null, ?PeriodQuery $period = null): iterable
+	{
+		$params = ['symbol' => $symbol];
+		if ($limit !== null) {
+			$params['limit'] = $limit;
+		}
+		if ($period !== null) {
+			$params['period'] = $period->value;
+		}
+
+		$url = $this->buildUrlWithoutApiKey('api/v3/cash-flow-statement-growth/' . $symbol, $params);
+
+		foreach ($this->requestJson('api/v3/cash-flow-statement-growth/' . $symbol, $params) as $item) {
+			$object = $this->map(CashFlowStatementGrowth::class, new CashFlowStatementGrowthMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/income-statement-growth-bulk
+	 * @return iterable<int, IncomeStatementGrowthBulk>
+	 */
+	public function incomeStatementGrowthBulk(int $year, Period $period): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/income-statement-growth-bulk', ['year' => $year, 'period' => $period->value]);
+
+		foreach ($this->requestCsv('stable/income-statement-growth-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
+			if (isset($item['fiscalYear'])) {
+				$item['calendarYear'] = $item['fiscalYear'];
+			}
+
+			// Remove keys not in the payload
+			unset(
+				$item['fiscalYear'],
+				$item['reportedCurrency'],
+				$item['growthEBIT'],
+				$item['growthNonOperatingIncomeExcludingInterest'],
+				$item['growthNetInterestIncome'],
+				$item['growthTotalOtherIncomeExpensesNet'],
+				$item['growthNetIncomeFromContinuingOperations'],
+				$item['growthOtherAdjustmentsToNetIncome'],
+				$item['growthNetIncomeDeductions']
+			);
+
+			$object = $this->map(IncomeStatementGrowthBulk::class, new IncomeStatementGrowthBulkMapper(), $item, $url, true);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/balance-sheet-statement-growth-bulk
+	 * @return iterable<int, BalanceSheetStatementGrowthBulk>
+	 */
+	public function balanceSheetStatementGrowthBulk(int $year, Period $period): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/balance-sheet-statement-growth-bulk', ['year' => $year, 'period' => $period->value]);
+
+		foreach ($this->requestCsv('stable/balance-sheet-statement-growth-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
+			if (isset($item['fiscalYear'])) {
+				$item['calendarYear'] = $item['fiscalYear'];
+			}
+
+			// Remove keys not in the payload
+			unset(
+				$item['fiscalYear'],
+				$item['reportedCurrency'],
+				$item['growthPreferredStock'],
+				$item['growthMinorityInterest'],
+				$item['growthTotalEquity'],
+				$item['growthAccountsReceivables'],
+				$item['growthOtherReceivables'],
+				$item['growthPrepaids'],
+				$item['growthTotalPayables'],
+				$item['growthOtherPayables'],
+				$item['growthAccruedExpenses'],
+				$item['growthCapitalLeaseObligationsCurrent'],
+				$item['growthAdditionalPaidInCapital'],
+				$item['growthTreasuryStock']
+			);
+
+			$object = $this->map(BalanceSheetStatementGrowthBulk::class, new BalanceSheetStatementGrowthBulkMapper(), $item, $url, true);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/cash-flow-statement-growth-bulk
+	 * @return iterable<int, CashFlowStatementGrowthBulk>
+	 */
+	public function cashFlowStatementGrowthBulk(int $year, Period $period): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/cash-flow-statement-growth-bulk', ['year' => $year, 'period' => $period->value]);
+
+		foreach ($this->requestCsv('stable/cash-flow-statement-growth-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
+			if (isset($item['fiscalYear'])) {
+				$item['calendarYear'] = $item['fiscalYear'];
+			}
+
+			// Remove keys not in the payload
+			unset(
+				$item['fiscalYear'],
+				$item['reportedCurrency'],
+				$item['growthNetDebtIssuance'],
+				$item['growthLongTermNetDebtIssuance'],
+				$item['growthShortTermNetDebtIssuance'],
+				$item['growthNetStockIssuance'],
+				$item['growthPreferredDividendsPaid'],
+				$item['growthIncomeTaxesPaid'],
+				$item['growthInterestPaid']
+			);
+
+			$object = $this->map(CashFlowStatementGrowthBulk::class, new CashFlowStatementGrowthBulkMapper(), $item, $url, true);
 			if ($object !== null) {
 				yield $object;
 			}

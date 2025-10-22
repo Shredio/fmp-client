@@ -91,6 +91,8 @@ $fmpClient = new FmpClient($httpClient, 'api-key', $handler);
 ### Basic Stock Data
 
 ```php
+use Shredio\FmpClient\Enum\PeriodQuery;
+
 // Get available exchanges
 foreach ($fmpClient->availableExchanges() as $exchange) {
     echo "{$exchange->name} ({$exchange->code})\n";
@@ -100,6 +102,13 @@ foreach ($fmpClient->availableExchanges() as $exchange) {
 foreach ($fmpClient->balanceSheetStatement('AAPL') as $statement) {
     echo "Date: {$statement->date}\n";
     echo "Total Assets: {$statement->totalAssets}\n";
+}
+
+// Get financial statement growth metrics
+foreach ($fmpClient->incomeStatementGrowth('AAPL', limit: 5, period: PeriodQuery::Quarter) as $growth) {
+    echo "Date: {$growth->date}\n";
+    echo "Revenue Growth: {$growth->growthRevenue}\n";
+    echo "Net Income Growth: {$growth->growthNetIncome}\n";
 }
 
 // Get dividend history
@@ -247,13 +256,19 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `availableExchanges()` - Available stock exchanges
 - `allExchangeMarketHours()` - Market hours for all exchanges
 
-### Financial Statements  
+### Financial Statements
 - `balanceSheetStatement(string $symbol)` - Balance sheet data
 - `balanceSheetStatementBulk(string $year, Period $period)` - Bulk balance sheets
+- `balanceSheetStatementGrowth(string $symbol, int|null $limit, PeriodQuery|null $period)` - Balance sheet growth metrics
+- `balanceSheetStatementGrowthBulk(int $year, Period $period)` - Bulk balance sheet growth metrics
 - `incomeStatement(string $symbol)` - Income statement data
 - `incomeStatementBulk(string $year, Period $period)` - Bulk income statements
+- `incomeStatementGrowth(string $symbol, int|null $limit, PeriodQuery|null $period)` - Income statement growth metrics
+- `incomeStatementGrowthBulk(int $year, Period $period)` - Bulk income statement growth metrics
 - `cashFlowStatement(string $symbol)` - Cash flow data
 - `cashFlowStatementBulk(string $year, Period $period)` - Bulk cash flow statements
+- `cashFlowStatementGrowth(string $symbol, int|null $limit, PeriodQuery|null $period)` - Cash flow growth metrics
+- `cashFlowStatementGrowthBulk(int $year, Period $period)` - Bulk cash flow growth metrics
 - `latestFinancialStatements(int $page, int $limit)` - Latest financial statements
 
 ### Market Data & Quotes
