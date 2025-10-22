@@ -12,7 +12,7 @@ final class AnalystEstimateTest extends TestCase
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/analyst-estimates-aapl.json');
 
-		$estimates = iterator_to_array($client->getAnalystEstimates('AAPL'));
+		$estimates = iterator_to_array($client->analystEstimates('AAPL'));
 
 		$this->assertNotEmpty($estimates);
 		$this->assertSame((new AnalystEstimate(
