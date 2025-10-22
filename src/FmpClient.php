@@ -112,6 +112,7 @@ final readonly class FmpClient
 		private string $secret,
 		private ?UnexpectedResponseContentExceptionHandler $invalidArgumentHandler = null,
 		private bool $strictMode = false,
+		private bool $builtInJsonParser = false,
 	)
 	{
 		$this->largeResponseParser = new Parser\LargeResponseParser();
@@ -942,8 +943,12 @@ final readonly class FmpClient
 
 		FmpPromise::wait();
 
-		foreach ($this->largeResponseParser->parseJson($this->httpClient, $response) as $item) {
-			yield $item;
+		if (!$this->builtInJsonParser) {
+			foreach ($this->largeResponseParser->parseJson($this->httpClient, $response) as $item) {
+				yield $item;
+			}
+		} else {
+			yield from $response->toArray();
 		}
 
 		$response->cancel();
