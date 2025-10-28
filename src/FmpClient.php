@@ -392,13 +392,17 @@ final readonly class FmpClient
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/balance-sheet-statement
+	 * @param int<1, 1000> $limit
 	 * @return iterable<int, BalanceSheetStatement>
 	 */
-	public function balanceSheetStatement(string $symbol): iterable
+	public function balanceSheetStatement(string $symbol, int $limit = 4, PeriodQuery|Period $period = PeriodQuery::FY): iterable
 	{
-		$url = $this->buildUrlWithoutApiKey('stable/balance-sheet-statement', ['symbol' => $symbol]);
+		$url = $this->buildUrlWithoutApiKey(
+			'stable/balance-sheet-statement',
+			['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value],
+		);
 
-		foreach ($this->requestJson('stable/balance-sheet-statement', ['symbol' => $symbol]) as $item) {
+		foreach ($this->requestJson('stable/balance-sheet-statement', ['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value]) as $item) {
 			$object = $this->map(BalanceSheetStatement::class, new BalanceSheetStatementMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -581,13 +585,17 @@ final readonly class FmpClient
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/income-statement
+	 * @param int<1, 1000> $limit
 	 * @return iterable<int, IncomeStatement>
 	 */
-	public function incomeStatement(string $symbol): iterable
+	public function incomeStatement(string $symbol, int $limit = 4, PeriodQuery|Period $period = PeriodQuery::FY): iterable
 	{
-		$url = $this->buildUrlWithoutApiKey('stable/income-statement', ['symbol' => $symbol]);
+		$url = $this->buildUrlWithoutApiKey(
+			'stable/income-statement',
+			['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value],
+		);
 
-		foreach ($this->requestJson('stable/income-statement', ['symbol' => $symbol]) as $item) {
+		foreach ($this->requestJson('stable/income-statement', ['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value]) as $item) {
 			$object = $this->map(IncomeStatement::class, new IncomeStatementMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -613,13 +621,17 @@ final readonly class FmpClient
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/cash-flow-statement
+	 * @param int<1, 1000> $limit
 	 * @return iterable<int, CashFlowStatement>
 	 */
-	public function cashFlowStatement(string $symbol): iterable
+	public function cashFlowStatement(string $symbol, int $limit = 4, PeriodQuery|Period $period = PeriodQuery::FY): iterable
 	{
-		$url = $this->buildUrlWithoutApiKey('stable/cash-flow-statement', ['symbol' => $symbol]);
+		$url = $this->buildUrlWithoutApiKey(
+			'stable/cash-flow-statement',
+			['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value],
+		);
 
-		foreach ($this->requestJson('stable/cash-flow-statement', ['symbol' => $symbol]) as $item) {
+		foreach ($this->requestJson('stable/cash-flow-statement', ['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value]) as $item) {
 			$object = $this->map(CashFlowStatement::class, new CashFlowStatementMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
