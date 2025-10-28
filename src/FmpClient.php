@@ -563,6 +563,8 @@ final readonly class FmpClient
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/latest-financial-statements
+	 * @param int<0, 100> $page
+	 * @param int<1, 250> $limit
 	 * @return iterable<int, LatestFinancialStatement>
 	 */
 	public function latestFinancialStatements(int $page = 0, int $limit = 250): iterable
