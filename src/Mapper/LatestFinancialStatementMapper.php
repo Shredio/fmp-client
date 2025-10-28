@@ -6,6 +6,7 @@ namespace Shredio\FmpClient\Mapper;
 
 use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
+use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchema\Error\ErrorElement;
@@ -29,7 +30,7 @@ final readonly class LatestFinancialStatementMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'calendarYear' => $ts->int(),
-			'period' => $ts->string(),
+			'period' => $ts->mapper(Period::class),
 			'date' => $ts->string(),
 			'dateAdded' => $ts->string(),
 		],

@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
 use Tests\TestCase;
 
@@ -23,7 +24,7 @@ final class LatestFinancialStatementsTest extends TestCase
 		$expectedFirstStatement = new LatestFinancialStatement(
 			symbol: '001570.KS',
 			calendarYear: 2025,
-			period: 'Q1',
+			period: Period::Q1,
 			date: '2025-03-31',
 			dateAdded: '2025-06-27 18:06:09'
 		);

@@ -2,6 +2,7 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\FmpClient\Enum\Period;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 
 #[CompileObjectMapper(identifier: 'symbol')]
@@ -14,7 +15,7 @@ final readonly class LatestFinancialStatement
 	public function __construct(
 		public string $symbol,
 		public int $calendarYear,
-		public string $period,
+		public Period $period,
 		public string $date,
 		public string $dateAdded,
 	)
@@ -22,7 +23,7 @@ final readonly class LatestFinancialStatement
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, calendarYear: int, period: string, date: string, dateAdded: string}
+	 * @return array{symbol: non-empty-string, calendarYear: int, period: Period, date: string, dateAdded: string}
 	 */
 	public function toArray(): array
 	{
