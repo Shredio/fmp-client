@@ -16,5 +16,11 @@
     "companyName": "Supremex Inc.",
     "tradingCurrency": "USD",
     "reportingCurrency": "CAD"
+  },
+  {
+    "symbol": "HUM.L",
+    "companyName": "Hummingbird Resources PLC",
+    "tradingCurrency": "GBp",
+    "reportingCurrency": "USD"
   }
 ]
