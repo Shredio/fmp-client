@@ -28,8 +28,8 @@ final readonly class FinancialStatementSymbolMapper extends Type
 		$schema = $ts->arrayShape(
 			[
 			'symbol' => $ts->nonEmptyString(),
-			'companyName' => $ts->string(),
-			'tradingCurrency' => $ts->string(),
+			'companyName' => $ts->nonEmptyString(),
+			'tradingCurrency' => $ts->nonEmptyString(),
 			'reportingCurrency' => $ts->optional($ts->nullable($ts->nonEmptyString())),
 		],
 			identifier: 'symbol',

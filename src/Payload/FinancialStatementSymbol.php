@@ -10,6 +10,8 @@ final readonly class FinancialStatementSymbol
 
 	/**
 	 * @param non-empty-string $symbol
+	 * @param non-empty-string $companyName
+	 * @param non-empty-string $tradingCurrency
 	 * @param non-empty-string|null $reportingCurrency
 	 */
 	public function __construct(
