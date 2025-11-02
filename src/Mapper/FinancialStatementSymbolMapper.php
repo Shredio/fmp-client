@@ -6,8 +6,6 @@ namespace Shredio\FmpClient\Mapper;
 
 use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
-use PrinsFrank\Standards\Currency\CurrencyAlpha3;
-use PrinsFrank\Standards\Currency\MinorUnits\CurrencyMinorLowerLastAlpha3;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchema\Error\ErrorElement;
@@ -31,8 +29,8 @@ final readonly class FinancialStatementSymbolMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'companyName' => $ts->string(),
-			'tradingCurrency' => $ts->union([$ts->mapper(CurrencyAlpha3::class), $ts->mapper(CurrencyMinorLowerLastAlpha3::class)]),
-			'reportingCurrency' => $ts->optional($ts->nullable($ts->union([$ts->mapper(CurrencyAlpha3::class), $ts->mapper(CurrencyMinorLowerLastAlpha3::class)]))),
+			'tradingCurrency' => $ts->string(),
+			'reportingCurrency' => $ts->optional($ts->nullable($ts->nonEmptyString())),
 		],
 			identifier: 'symbol',
 		);
