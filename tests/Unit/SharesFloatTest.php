@@ -44,4 +44,29 @@ final class SharesFloatTest extends TestCase
 		$client->sharesFloat('AAPL');
 	}
 
+	public function testSharesFloatAll(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/shares-float-all.json');
+
+		$sharesFloatList = iterator_to_array($client->sharesFloatAll(10, 0));
+
+		$this->assertCount(10, $sharesFloatList);
+
+		$this->assertSame((new SharesFloat(
+			symbol: '000001.SZ',
+			date: '2025-11-05 02:09:05',
+			freeFloat: 41.70506089082711,
+			floatShares: 8093250000,
+			outstandingShares: 19405918198,
+		))->toArray(), $sharesFloatList[0]->toArray());
+
+		$this->assertSame((new SharesFloat(
+			symbol: '000005.SZ',
+			date: null,
+			freeFloat: 79.91881,
+			floatShares: 845972573,
+			outstandingShares: 1058540032,
+		))->toArray(), $sharesFloatList[3]->toArray());
+	}
+
 }

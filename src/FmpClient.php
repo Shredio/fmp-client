@@ -391,6 +391,23 @@ final readonly class FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/shares-float-all
+	 * @param int<1, 5000> $limit
+	 * @return iterable<int, SharesFloat>
+	 */
+	public function sharesFloatAll(int $limit = 1000, int $page = 0): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/shares-float-all', ['page' => $page, 'limit' => $limit]);
+
+		foreach ($this->requestJson('stable/shares-float-all', ['page' => $page, 'limit' => $limit]) as $item) {
+			$object = $this->map(SharesFloat::class, new SharesFloatMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/balance-sheet-statement
 	 * @param int<1, 1000> $limit
 	 * @return iterable<int, BalanceSheetStatement>
@@ -1103,6 +1120,38 @@ final readonly class FmpClient
 			$object = $this->map(Scores::class, new ScoresMapper(), $item, $url, true);
 			if ($object !== null) {
 				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @template T
+	 * @param callable(int $page): array<T> $callback
+	 * @param int<0, max> $initialPage
+	 * @param int<0, max>|null $maxPage Inclusive
+	 * @param-immediately-invoked-callable $callback
+	 * @return iterable<int, T>
+	 */
+	public function iteratePages(callable $callback, int $initialPage = 0, ?int $maxPage = null): iterable
+	{
+		$page = $initialPage;
+
+		while (true) {
+			$result = $callback($page);
+			$isEmpty = true;
+
+			foreach ($result as $item) {
+				$isEmpty = false;
+				yield $item;
+			}
+
+			if ($isEmpty) {
+				break;
+			}
+
+			$page++;
+			if ($maxPage !== null && $page > $maxPage) {
+				break;
 			}
 		}
 	}

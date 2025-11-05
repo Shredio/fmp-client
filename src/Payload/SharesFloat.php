@@ -10,22 +10,22 @@ final readonly class SharesFloat
 
 	/**
 	 * @param non-empty-string $symbol
-	 * @param non-empty-string $date
-	 * @param non-empty-string $source
+	 * @param non-empty-string|null $date
+	 * @param non-empty-string|null $source
 	 */
 	public function __construct(
 		public string $symbol,
-		public string $date,
+		public string|null $date,
 		public float $freeFloat,
 		public int $floatShares,
 		public int $outstandingShares,
-		public string $source,
+		public string|null $source = null,
 	)
 	{
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: non-empty-string, freeFloat: float, floatShares: int, outstandingShares: int, source: non-empty-string}
+	 * @return array{symbol: non-empty-string, date: non-empty-string|null, freeFloat: float, floatShares: int, outstandingShares: int, source: non-empty-string|null}
 	 */
 	public function toArray(): array
 	{

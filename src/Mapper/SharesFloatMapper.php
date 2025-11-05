@@ -28,11 +28,11 @@ final readonly class SharesFloatMapper extends Type
 		$schema = $ts->arrayShape(
 			[
 			'symbol' => $ts->nonEmptyString(),
-			'date' => $ts->nonEmptyString(),
+			'date' => $ts->nullable($ts->nonEmptyString()),
 			'freeFloat' => $ts->float(),
 			'floatShares' => $ts->int(),
 			'outstandingShares' => $ts->int(),
-			'source' => $ts->nonEmptyString(),
+			'source' => $ts->optional($ts->nullable($ts->nonEmptyString())),
 		],
 			identifier: 'symbol',
 		);

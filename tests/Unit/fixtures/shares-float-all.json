@@ -1,0 +1,72 @@
+[
+  {
+    "symbol": "000001.SZ",
+    "date": "2025-11-05 02:09:05",
+    "freeFloat": 41.70506089082711,
+    "floatShares": 8093250000,
+    "outstandingShares": 19405918198
+  },
+  {
+    "symbol": "000002.SZ",
+    "date": "2025-11-04 23:21:50",
+    "freeFloat": 53.01982566529671,
+    "floatShares": 6282270789,
+    "outstandingShares": 11848908800
+  },
+  {
+    "symbol": "000004.SZ",
+    "date": "2025-11-04 21:03:30",
+    "freeFloat": 59.53577317504128,
+    "floatShares": 78813624,
+    "outstandingShares": 132380282
+  },
+  {
+    "symbol": "000005.SZ",
+    "date": null,
+    "freeFloat": 79.91881,
+    "floatShares": 845972573,
+    "outstandingShares": 1058540032
+  },
+  {
+    "symbol": "000006.SZ",
+    "date": "2025-11-04 12:58:10",
+    "freeFloat": 61.91612935741099,
+    "floatShares": 835864679,
+    "outstandingShares": 1349995046
+  },
+  {
+    "symbol": "000007.SZ",
+    "date": "2025-11-04 08:41:25",
+    "freeFloat": 94.97438793795007,
+    "floatShares": 329036909,
+    "outstandingShares": 346448044
+  },
+  {
+    "symbol": "000008.SZ",
+    "date": "2025-11-05 09:26:50",
+    "freeFloat": 99.5922,
+    "floatShares": 2705300294,
+    "outstandingShares": 2716377683
+  },
+  {
+    "symbol": "000009.SZ",
+    "date": "2025-11-04 18:39:10",
+    "freeFloat": 93.88879181878966,
+    "floatShares": 2421592830,
+    "outstandingShares": 2579213965
+  },
+  {
+    "symbol": "000010.SZ",
+    "date": "2025-11-04 09:30:05",
+    "freeFloat": 78.71134792907596,
+    "floatShares": 958238112,
+    "outstandingShares": 1217407829
+  },
+  {
+    "symbol": "000011.SZ",
+    "date": "2025-11-05 09:07:30",
+    "freeFloat": 34.830009953804506,
+    "floatShares": 184032664,
+    "outstandingShares": 528373849
+  }
+]
