@@ -1126,13 +1126,14 @@ final readonly class FmpClient
 
 	/**
 	 * @template T
-	 * @param callable(int $page): array<T> $callback
+	 * @param callable(int<0, max> $page): array<T> $callback
 	 * @param int<0, max> $initialPage
 	 * @param int<0, max>|null $maxPage Inclusive
+	 * @param int<1, max>|null $maxPageGuard Safety guard to prevent infinite loops
 	 * @param-immediately-invoked-callable $callback
 	 * @return iterable<int, T>
 	 */
-	public function iteratePages(callable $callback, int $initialPage = 0, ?int $maxPage = null): iterable
+	public function iteratePages(callable $callback, int $initialPage = 0, ?int $maxPage = null, ?int $maxPageGuard = null): iterable
 	{
 		$page = $initialPage;
 
@@ -1152,6 +1153,9 @@ final readonly class FmpClient
 			$page++;
 			if ($maxPage !== null && $page > $maxPage) {
 				break;
+			}
+			if ($maxPageGuard !== null && $page - $initialPage >= $maxPageGuard) {
+				throw new LogicException(sprintf('Maximum page of %d reached', $page));
 			}
 		}
 	}
