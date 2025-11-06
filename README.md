@@ -218,6 +218,13 @@ foreach ($fmpClient->ratios('AAPL', 5, PeriodQuery::Quarterly) as $ratios) {
     echo "Current Ratio: {$ratios->currentRatio}\n";
     echo "Debt to Equity: {$ratios->debtEquityRatio}\n";
 }
+
+// Market risk premium by country
+foreach ($fmpClient->marketRiskPremium() as $premium) {
+    echo "Country: {$premium->country} ({$premium->continent})\n";
+    echo "Country Risk Premium: {$premium->countryRiskPremium}%\n";
+    echo "Total Equity Risk Premium: {$premium->totalEquityRiskPremium}%\n";
+}
 ```
 
 ### Asynchronous Operations
@@ -283,7 +290,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 
 ### Analytics & Metrics
 - `keyMetrics(string $symbol, int $limit, PeriodQuery $period)` - Key financial metrics
-- `keyMetricsTtm(string $symbol)` - TTM key metrics  
+- `keyMetricsTtm(string $symbol)` - TTM key metrics
 - `keyMetricsTtmBulk()` - Bulk TTM key metrics
 - `ratios(string $symbol, int $limit, PeriodQuery $period)` - Financial ratios
 - `ratiosTtm(string $symbol)` - TTM ratios
@@ -291,6 +298,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `financialScores(string $symbol)` - Financial scores
 - `scoresBulk()` - Bulk financial scores
 - `analystEstimates(string $symbol, string $period, int $page, int $limit)` - Analyst estimates
+- `marketRiskPremium()` - Market risk premium by country
 
 ### Calendar Events
 - `earningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Earnings calendar

@@ -40,6 +40,7 @@ use Shredio\FmpClient\Mapper\IndexMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsTtmMapper;
 use Shredio\FmpClient\Mapper\LatestFinancialStatementMapper;
+use Shredio\FmpClient\Mapper\MarketRiskPremiumMapper;
 use Shredio\FmpClient\Mapper\PressReleaseMapper;
 use Shredio\FmpClient\Mapper\RatiosMapper;
 use Shredio\FmpClient\Mapper\RatiosTtmMapper;
@@ -78,6 +79,7 @@ use Shredio\FmpClient\Payload\Index;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
+use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
@@ -186,6 +188,22 @@ final readonly class FmpClient
 
 		foreach ($this->requestJson('stable/all-exchange-market-hours') as $item) {
 			$object = $this->map(ExchangeMarketHours::class, new ExchangeMarketHoursMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/market-risk-premium
+	 * @return iterable<int, MarketRiskPremium>
+	 */
+	public function marketRiskPremium(): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/market-risk-premium');
+
+		foreach ($this->requestJson('stable/market-risk-premium') as $item) {
+			$object = $this->map(MarketRiskPremium::class, new MarketRiskPremiumMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}

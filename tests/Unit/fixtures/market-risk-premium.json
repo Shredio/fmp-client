@@ -1,0 +1,1118 @@
+[
+  {
+    "country": "Zimbabwe",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Zambia",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Yemen",
+    "continent": "Asia",
+    "countryRiskPremium": 16.02,
+    "totalEquityRiskPremium": 20.35
+  },
+  {
+    "country": "Vietnam",
+    "continent": "Asia",
+    "countryRiskPremium": 4.02,
+    "totalEquityRiskPremium": 8.35
+  },
+  {
+    "country": "Venezuela",
+    "continent": "South America",
+    "countryRiskPremium": 23.59,
+    "totalEquityRiskPremium": 27.92
+  },
+  {
+    "country": "Uzbekistan",
+    "continent": "Asia",
+    "countryRiskPremium": 4.8,
+    "totalEquityRiskPremium": 9.13
+  },
+  {
+    "country": "Uruguay",
+    "continent": "South America",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "United States",
+    "continent": "North America",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "United Arab Emirates",
+    "continent": "Asia",
+    "countryRiskPremium": 0.66,
+    "totalEquityRiskPremium": 4.99
+  },
+  {
+    "country": "Ukraine",
+    "continent": "Europe",
+    "countryRiskPremium": 16.02,
+    "totalEquityRiskPremium": 20.35
+  },
+  {
+    "country": "Uganda",
+    "continent": "Africa",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Turks & Caicos Islands",
+    "continent": "North America",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "Turkey",
+    "continent": "Asia",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Tunisia",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "continent": "North America",
+    "countryRiskPremium": 4.02,
+    "totalEquityRiskPremium": 8.35
+  },
+  {
+    "country": "Togo",
+    "continent": "Africa",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Thailand",
+    "continent": "Asia",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "Tanzania",
+    "continent": "Africa",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Tajikistan",
+    "continent": "Asia",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Taiwan",
+    "continent": "Asia",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "Syria",
+    "continent": "Asia",
+    "countryRiskPremium": 23.59,
+    "totalEquityRiskPremium": 27.92
+  },
+  {
+    "country": "Switzerland",
+    "continent": "Europe",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Sweden",
+    "continent": "Europe",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Swaziland",
+    "continent": "Africa",
+    "countryRiskPremium": 7.34,
+    "totalEquityRiskPremium": 11.67
+  },
+  {
+    "country": "Suriname",
+    "continent": "South America",
+    "countryRiskPremium": 10.01,
+    "totalEquityRiskPremium": 14.34
+  },
+  {
+    "country": "Sudan",
+    "continent": "Africa",
+    "countryRiskPremium": 23.59,
+    "totalEquityRiskPremium": 27.92
+  },
+  {
+    "country": "St. Maarten",
+    "continent": "North America",
+    "countryRiskPremium": 4.02,
+    "totalEquityRiskPremium": 8.35
+  },
+  {
+    "country": "Sri Lanka",
+    "continent": "Asia",
+    "countryRiskPremium": 16.02,
+    "totalEquityRiskPremium": 20.35
+  },
+  {
+    "country": "Spain",
+    "continent": "Europe",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "South Korea",
+    "continent": "Asia",
+    "countryRiskPremium": 0.66,
+    "totalEquityRiskPremium": 4.99
+  },
+  {
+    "country": "South Africa",
+    "continent": "Africa",
+    "countryRiskPremium": 4.02,
+    "totalEquityRiskPremium": 8.35
+  },
+  {
+    "country": "Somalia",
+    "continent": "Africa",
+    "countryRiskPremium": 13.35,
+    "totalEquityRiskPremium": 17.68
+  },
+  {
+    "country": "Solomon Islands",
+    "continent": "Oceania",
+    "countryRiskPremium": 10.01,
+    "totalEquityRiskPremium": 14.34
+  },
+  {
+    "country": "Slovenia",
+    "continent": "Europe",
+    "countryRiskPremium": 1.6,
+    "totalEquityRiskPremium": 5.93
+  },
+  {
+    "country": "Slovakia",
+    "continent": "Europe",
+    "countryRiskPremium": 1.6,
+    "totalEquityRiskPremium": 5.93
+  },
+  {
+    "country": "Singapore",
+    "continent": "Asia",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Sierra Leone",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Serbia",
+    "continent": "Europe",
+    "countryRiskPremium": 4.02,
+    "totalEquityRiskPremium": 8.35
+  },
+  {
+    "country": "Senegal",
+    "continent": "Africa",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Saudi Arabia",
+    "continent": "Asia",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "Saint Lucia",
+    "continent": "North America",
+    "countryRiskPremium": 8.11,
+    "totalEquityRiskPremium": 12.44
+  },
+  {
+    "country": "Rwanda",
+    "continent": "Africa",
+    "countryRiskPremium": 7.34,
+    "totalEquityRiskPremium": 11.67
+  },
+  {
+    "country": "Russia",
+    "continent": "Europe",
+    "countryRiskPremium": 4.02,
+    "totalEquityRiskPremium": 8.35
+  },
+  {
+    "country": "Romania",
+    "continent": "Europe",
+    "countryRiskPremium": 2.93,
+    "totalEquityRiskPremium": 7.26
+  },
+  {
+    "country": "Reunion",
+    "continent": "Africa",
+    "countryRiskPremium": 1.44,
+    "totalEquityRiskPremium": 5.77
+  },
+  {
+    "country": "Qatar",
+    "continent": "Asia",
+    "countryRiskPremium": 0.66,
+    "totalEquityRiskPremium": 4.99
+  },
+  {
+    "country": "Portugal",
+    "continent": "Europe",
+    "countryRiskPremium": 1.6,
+    "totalEquityRiskPremium": 5.93
+  },
+  {
+    "country": "Poland",
+    "continent": "Europe",
+    "countryRiskPremium": 1.13,
+    "totalEquityRiskPremium": 5.46
+  },
+  {
+    "country": "Philippines",
+    "continent": "Asia",
+    "countryRiskPremium": 2.54,
+    "totalEquityRiskPremium": 6.87
+  },
+  {
+    "country": "Peru",
+    "continent": "South America",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "Paraguay",
+    "continent": "South America",
+    "countryRiskPremium": 2.93,
+    "totalEquityRiskPremium": 7.26
+  },
+  {
+    "country": "Papua New Guinea",
+    "continent": "Oceania",
+    "countryRiskPremium": 7.34,
+    "totalEquityRiskPremium": 11.67
+  },
+  {
+    "country": "Panama",
+    "continent": "North America",
+    "countryRiskPremium": 2.93,
+    "totalEquityRiskPremium": 7.26
+  },
+  {
+    "country": "Palestinian Authority",
+    "continent": "Asia",
+    "countryRiskPremium": 23.59,
+    "totalEquityRiskPremium": 27.92
+  },
+  {
+    "country": "Pakistan",
+    "continent": "Asia",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Oman",
+    "continent": "Asia",
+    "countryRiskPremium": 3.34,
+    "totalEquityRiskPremium": 7.67
+  },
+  {
+    "country": "Norway",
+    "continent": "Europe",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Nigeria",
+    "continent": "Africa",
+    "countryRiskPremium": 10.01,
+    "totalEquityRiskPremium": 14.34
+  },
+  {
+    "country": "Niger",
+    "continent": "Africa",
+    "countryRiskPremium": 13.35,
+    "totalEquityRiskPremium": 17.68
+  },
+  {
+    "country": "Nicaragua",
+    "continent": "North America",
+    "countryRiskPremium": 7.34,
+    "totalEquityRiskPremium": 11.67
+  },
+  {
+    "country": "New Zealand",
+    "continent": "Oceania",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Netherlands",
+    "continent": "Europe",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Nepal",
+    "continent": "Asia",
+    "countryRiskPremium": 4.8,
+    "totalEquityRiskPremium": 9.13
+  },
+  {
+    "country": "Namibia",
+    "continent": "Africa",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Myanmar",
+    "continent": "Asia",
+    "countryRiskPremium": 13.35,
+    "totalEquityRiskPremium": 17.68
+  },
+  {
+    "country": "Mozambique",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Morocco",
+    "continent": "Africa",
+    "countryRiskPremium": 3.34,
+    "totalEquityRiskPremium": 7.67
+  },
+  {
+    "country": "Montserrat",
+    "continent": "North America",
+    "countryRiskPremium": 2.93,
+    "totalEquityRiskPremium": 7.26
+  },
+  {
+    "country": "Montenegro",
+    "continent": "Europe",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Mongolia",
+    "continent": "Asia",
+    "countryRiskPremium": 7.34,
+    "totalEquityRiskPremium": 11.67
+  },
+  {
+    "country": "Monaco",
+    "continent": "Europe",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Moldova",
+    "continent": "Europe",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Mexico",
+    "continent": "North America",
+    "countryRiskPremium": 2.54,
+    "totalEquityRiskPremium": 6.87
+  },
+  {
+    "country": "Mauritius",
+    "continent": "Africa",
+    "countryRiskPremium": 2.93,
+    "totalEquityRiskPremium": 7.26
+  },
+  {
+    "country": "Martinique",
+    "continent": "North America",
+    "countryRiskPremium": 8.11,
+    "totalEquityRiskPremium": 12.44
+  },
+  {
+    "country": "Malta",
+    "continent": "Europe",
+    "countryRiskPremium": 1.13,
+    "totalEquityRiskPremium": 5.46
+  },
+  {
+    "country": "Mali",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Maldives",
+    "continent": "Asia",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Malaysia",
+    "continent": "Asia",
+    "countryRiskPremium": 1.6,
+    "totalEquityRiskPremium": 5.93
+  },
+  {
+    "country": "Malawi",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Madagascar",
+    "continent": "Africa",
+    "countryRiskPremium": 7.34,
+    "totalEquityRiskPremium": 11.67
+  },
+  {
+    "country": "Macedonia",
+    "continent": "Europe",
+    "countryRiskPremium": 4.8,
+    "totalEquityRiskPremium": 9.13
+  },
+  {
+    "country": "Macau",
+    "continent": "Asia",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "Luxembourg",
+    "continent": "Europe",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Lithuania",
+    "continent": "Europe",
+    "countryRiskPremium": 1.13,
+    "totalEquityRiskPremium": 5.46
+  },
+  {
+    "country": "Liechtenstein",
+    "continent": "Europe",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Libya",
+    "continent": "Africa",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "Liberia",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Lebanon",
+    "continent": "Asia",
+    "countryRiskPremium": 23.59,
+    "totalEquityRiskPremium": 27.92
+  },
+  {
+    "country": "Latvia",
+    "continent": "Europe",
+    "countryRiskPremium": 1.6,
+    "totalEquityRiskPremium": 5.93
+  },
+  {
+    "country": "Laos",
+    "continent": "Asia",
+    "countryRiskPremium": 13.35,
+    "totalEquityRiskPremium": 17.68
+  },
+  {
+    "country": "Kyrgyzstan",
+    "continent": "Asia",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Kuwait",
+    "continent": "Asia",
+    "countryRiskPremium": 0.94,
+    "totalEquityRiskPremium": 5.27
+  },
+  {
+    "country": "Korea, D.P.R.",
+    "continent": "Asia",
+    "countryRiskPremium": 16.02,
+    "totalEquityRiskPremium": 20.35
+  },
+  {
+    "country": "Kenya",
+    "continent": "Africa",
+    "countryRiskPremium": 10.01,
+    "totalEquityRiskPremium": 14.34
+  },
+  {
+    "country": "Kazakhstan",
+    "continent": "Asia",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "Jordan",
+    "continent": "Asia",
+    "countryRiskPremium": 4.8,
+    "totalEquityRiskPremium": 9.13
+  },
+  {
+    "country": "Jersey (States of)",
+    "continent": "Europe",
+    "countryRiskPremium": 0.66,
+    "totalEquityRiskPremium": 4.99
+  },
+  {
+    "country": "Japan",
+    "continent": "Asia",
+    "countryRiskPremium": 0.94,
+    "totalEquityRiskPremium": 5.27
+  },
+  {
+    "country": "Jamaica",
+    "continent": "North America",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Ivory Coast",
+    "continent": "Africa",
+    "countryRiskPremium": 4.02,
+    "totalEquityRiskPremium": 8.35
+  },
+  {
+    "country": "Italy",
+    "continent": "Europe",
+    "countryRiskPremium": 2.93,
+    "totalEquityRiskPremium": 7.26
+  },
+  {
+    "country": "Israel",
+    "continent": "Asia",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "Isle of Man",
+    "continent": "Europe",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "Ireland",
+    "continent": "Europe",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "Iraq",
+    "continent": "Asia",
+    "countryRiskPremium": 10.01,
+    "totalEquityRiskPremium": 14.34
+  },
+  {
+    "country": "Iran",
+    "continent": "Asia",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Indonesia",
+    "continent": "Asia",
+    "countryRiskPremium": 2.54,
+    "totalEquityRiskPremium": 6.87
+  },
+  {
+    "country": "India",
+    "continent": "Asia",
+    "countryRiskPremium": 2.93,
+    "totalEquityRiskPremium": 7.26
+  },
+  {
+    "country": "Iceland",
+    "continent": "Europe",
+    "countryRiskPremium": 0.94,
+    "totalEquityRiskPremium": 5.27
+  },
+  {
+    "country": "Hungary",
+    "continent": "Europe",
+    "countryRiskPremium": 2.54,
+    "totalEquityRiskPremium": 6.87
+  },
+  {
+    "country": "Hong Kong",
+    "continent": "Asia",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "Honduras",
+    "continent": "North America",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Haiti",
+    "continent": "North America",
+    "countryRiskPremium": 16.02,
+    "totalEquityRiskPremium": 20.35
+  },
+  {
+    "country": "Guyana",
+    "continent": "South America",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "Guinea-Bissau",
+    "continent": "Africa",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Guinea",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Guernsey",
+    "continent": "Europe",
+    "countryRiskPremium": 0.94,
+    "totalEquityRiskPremium": 5.27
+  },
+  {
+    "country": "Guatemala",
+    "continent": "North America",
+    "countryRiskPremium": 3.34,
+    "totalEquityRiskPremium": 7.67
+  },
+  {
+    "country": "Greenland",
+    "continent": "North America",
+    "countryRiskPremium": 1.12,
+    "totalEquityRiskPremium": 5.45
+  },
+  {
+    "country": "Greece",
+    "continent": "Europe",
+    "countryRiskPremium": 3.34,
+    "totalEquityRiskPremium": 7.67
+  },
+  {
+    "country": "Gibraltar",
+    "continent": "Europe",
+    "countryRiskPremium": 1.12,
+    "totalEquityRiskPremium": 5.45
+  },
+  {
+    "country": "Ghana",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Germany",
+    "continent": "Europe",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Georgia",
+    "continent": "Asia",
+    "countryRiskPremium": 4.02,
+    "totalEquityRiskPremium": 8.35
+  },
+  {
+    "country": "Gambia",
+    "continent": "Africa",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Gabon",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "French Guiana",
+    "continent": "South America",
+    "countryRiskPremium": 4.82,
+    "totalEquityRiskPremium": 9.15
+  },
+  {
+    "country": "France",
+    "continent": "Europe",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "Finland",
+    "continent": "Europe",
+    "countryRiskPremium": 0.53,
+    "totalEquityRiskPremium": 4.86
+  },
+  {
+    "country": "Fiji",
+    "continent": "Oceania",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Falkland Islands",
+    "continent": "South America",
+    "countryRiskPremium": 4.82,
+    "totalEquityRiskPremium": 9.15
+  },
+  {
+    "country": "Ethiopia",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Estonia",
+    "continent": "Europe",
+    "countryRiskPremium": 0.94,
+    "totalEquityRiskPremium": 5.27
+  },
+  {
+    "country": "El Salvador",
+    "continent": "North America",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Egypt",
+    "continent": "Africa",
+    "countryRiskPremium": 10.01,
+    "totalEquityRiskPremium": 14.34
+  },
+  {
+    "country": "Ecuador",
+    "continent": "South America",
+    "countryRiskPremium": 13.35,
+    "totalEquityRiskPremium": 17.68
+  },
+  {
+    "country": "Dominican Republic",
+    "continent": "North America",
+    "countryRiskPremium": 4.8,
+    "totalEquityRiskPremium": 9.13
+  },
+  {
+    "country": "Denmark",
+    "continent": "Europe",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Czech Republic",
+    "continent": "Europe",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "Cyprus",
+    "continent": "Asia",
+    "countryRiskPremium": 1.6,
+    "totalEquityRiskPremium": 5.93
+  },
+  {
+    "country": "Curaçao",
+    "continent": "North America",
+    "countryRiskPremium": 2.93,
+    "totalEquityRiskPremium": 7.26
+  },
+  {
+    "country": "Cuba",
+    "continent": "North America",
+    "countryRiskPremium": 16.02,
+    "totalEquityRiskPremium": 20.35
+  },
+  {
+    "country": "Croatia",
+    "continent": "Europe",
+    "countryRiskPremium": 1.6,
+    "totalEquityRiskPremium": 5.93
+  },
+  {
+    "country": "Costa Rica",
+    "continent": "North America",
+    "countryRiskPremium": 4.8,
+    "totalEquityRiskPremium": 9.13
+  },
+  {
+    "country": "Cook Islands",
+    "continent": "Oceania",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Congo (Republic of)",
+    "continent": "Africa",
+    "countryRiskPremium": 12.02,
+    "totalEquityRiskPremium": 16.35
+  },
+  {
+    "country": "Congo (Democratic Republic of)",
+    "continent": "Africa",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Colombia",
+    "continent": "South America",
+    "countryRiskPremium": 2.54,
+    "totalEquityRiskPremium": 6.87
+  },
+  {
+    "country": "China",
+    "continent": "Asia",
+    "countryRiskPremium": 0.94,
+    "totalEquityRiskPremium": 5.27
+  },
+  {
+    "country": "Chile",
+    "continent": "South America",
+    "countryRiskPremium": 1.13,
+    "totalEquityRiskPremium": 5.46
+  },
+  {
+    "country": "Cayman Islands",
+    "continent": "North America",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "Cape Verde",
+    "continent": "Africa",
+    "countryRiskPremium": 7.34,
+    "totalEquityRiskPremium": 11.67
+  },
+  {
+    "country": "Canada",
+    "continent": "North America",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Cameroon",
+    "continent": "Africa",
+    "countryRiskPremium": 10.01,
+    "totalEquityRiskPremium": 14.34
+  },
+  {
+    "country": "Cambodia",
+    "continent": "Asia",
+    "countryRiskPremium": 7.34,
+    "totalEquityRiskPremium": 11.67
+  },
+  {
+    "country": "Burkina Faso",
+    "continent": "Africa",
+    "countryRiskPremium": 10.01,
+    "totalEquityRiskPremium": 14.34
+  },
+  {
+    "country": "Bulgaria",
+    "continent": "Europe",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "Brunei",
+    "continent": "Asia",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "British Virgin Islands",
+    "continent": "North America",
+    "countryRiskPremium": 8.11,
+    "totalEquityRiskPremium": 12.44
+  },
+  {
+    "country": "Brazil",
+    "continent": "South America",
+    "countryRiskPremium": 3.34,
+    "totalEquityRiskPremium": 7.67
+  },
+  {
+    "country": "Botswana",
+    "continent": "Africa",
+    "countryRiskPremium": 1.6,
+    "totalEquityRiskPremium": 5.93
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "continent": "Europe",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Bolivia",
+    "continent": "South America",
+    "countryRiskPremium": 13.35,
+    "totalEquityRiskPremium": 17.68
+  },
+  {
+    "country": "Bermuda",
+    "continent": "North America",
+    "countryRiskPremium": 1.13,
+    "totalEquityRiskPremium": 5.46
+  },
+  {
+    "country": "Benin",
+    "continent": "Africa",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Belize",
+    "continent": "North America",
+    "countryRiskPremium": 10.01,
+    "totalEquityRiskPremium": 14.34
+  },
+  {
+    "country": "Belgium",
+    "continent": "Europe",
+    "countryRiskPremium": 0.8,
+    "totalEquityRiskPremium": 5.13
+  },
+  {
+    "country": "Belarus",
+    "continent": "Europe",
+    "countryRiskPremium": 23.59,
+    "totalEquityRiskPremium": 27.92
+  },
+  {
+    "country": "Barbados",
+    "continent": "North America",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Bangladesh",
+    "continent": "Asia",
+    "countryRiskPremium": 7.34,
+    "totalEquityRiskPremium": 11.67
+  },
+  {
+    "country": "Bahrain",
+    "continent": "Asia",
+    "countryRiskPremium": 7.34,
+    "totalEquityRiskPremium": 11.67
+  },
+  {
+    "country": "Bahamas",
+    "continent": "North America",
+    "countryRiskPremium": 6.01,
+    "totalEquityRiskPremium": 10.34
+  },
+  {
+    "country": "Azerbaijan",
+    "continent": "Asia",
+    "countryRiskPremium": 3.34,
+    "totalEquityRiskPremium": 7.67
+  },
+  {
+    "country": "Austria",
+    "continent": "Europe",
+    "countryRiskPremium": 0.53,
+    "totalEquityRiskPremium": 4.86
+  },
+  {
+    "country": "Australia",
+    "continent": "Oceania",
+    "countryRiskPremium": 0,
+    "totalEquityRiskPremium": 4.33
+  },
+  {
+    "country": "Aruba",
+    "continent": "North America",
+    "countryRiskPremium": 2.93,
+    "totalEquityRiskPremium": 7.26
+  },
+  {
+    "country": "Armenia",
+    "continent": "Asia",
+    "countryRiskPremium": 4.8,
+    "totalEquityRiskPremium": 9.13
+  },
+  {
+    "country": "Argentina",
+    "continent": "South America",
+    "countryRiskPremium": 16.02,
+    "totalEquityRiskPremium": 20.35
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "continent": "North America",
+    "countryRiskPremium": 8.1,
+    "totalEquityRiskPremium": 12.43
+  },
+  {
+    "country": "Anguilla",
+    "continent": "North America",
+    "countryRiskPremium": 8.11,
+    "totalEquityRiskPremium": 12.44
+  },
+  {
+    "country": "Angola",
+    "continent": "Africa",
+    "countryRiskPremium": 8.68,
+    "totalEquityRiskPremium": 13.01
+  },
+  {
+    "country": "Andorra (Principality of)",
+    "continent": "Europe",
+    "countryRiskPremium": 2.13,
+    "totalEquityRiskPremium": 6.46
+  },
+  {
+    "country": "Algeria",
+    "continent": "Africa",
+    "countryRiskPremium": 4.02,
+    "totalEquityRiskPremium": 8.35
+  },
+  {
+    "country": "Albania",
+    "continent": "Europe",
+    "countryRiskPremium": 4.8,
+    "totalEquityRiskPremium": 9.13
+  }
+]
