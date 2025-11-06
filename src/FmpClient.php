@@ -46,6 +46,7 @@ use Shredio\FmpClient\Mapper\RatiosMapper;
 use Shredio\FmpClient\Mapper\RatiosTtmMapper;
 use Shredio\FmpClient\Mapper\ScoresMapper;
 use Shredio\FmpClient\Mapper\SharesFloatMapper;
+use Shredio\FmpClient\Mapper\TreasuryRateMapper;
 use Shredio\FmpClient\Mapper\SplitsCalendarItemMapper;
 use Shredio\FmpClient\Mapper\StockMapper;
 use Shredio\FmpClient\Mapper\StockNewsMapper;
@@ -89,6 +90,7 @@ use Shredio\FmpClient\Payload\SplitsCalendarItem;
 use Shredio\FmpClient\Payload\Stock;
 use Shredio\FmpClient\Payload\StockNews;
 use Shredio\FmpClient\Payload\SymbolChange;
+use Shredio\FmpClient\Payload\TreasuryRate;
 use Shredio\FmpClient\Promise\FmpPromise;
 use Shredio\TypeSchema\Config\TypeConfig;
 use Shredio\TypeSchema\Conversion\ConfigurableConversionStrategy;
@@ -204,6 +206,22 @@ final readonly class FmpClient
 
 		foreach ($this->requestJson('stable/market-risk-premium') as $item) {
 			$object = $this->map(MarketRiskPremium::class, new MarketRiskPremiumMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/treasury-rates
+	 * @return iterable<int, TreasuryRate>
+	 */
+	public function treasuryRates(): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/treasury-rates');
+
+		foreach ($this->requestJson('stable/treasury-rates') as $item) {
+			$object = $this->map(TreasuryRate::class, new TreasuryRateMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}

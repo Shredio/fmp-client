@@ -225,6 +225,14 @@ foreach ($fmpClient->marketRiskPremium() as $premium) {
     echo "Country Risk Premium: {$premium->countryRiskPremium}%\n";
     echo "Total Equity Risk Premium: {$premium->totalEquityRiskPremium}%\n";
 }
+
+// US Treasury rates
+foreach ($fmpClient->treasuryRates() as $rate) {
+    echo "Date: {$rate->date}\n";
+    echo "1 Month: {$rate->month1}%, 3 Month: {$rate->month3}%\n";
+    echo "1 Year: {$rate->year1}%, 10 Year: {$rate->year10}%\n";
+    echo "30 Year: {$rate->year30}%\n";
+}
 ```
 
 ### Asynchronous Operations
@@ -299,6 +307,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `scoresBulk()` - Bulk financial scores
 - `analystEstimates(string $symbol, string $period, int $page, int $limit)` - Analyst estimates
 - `marketRiskPremium()` - Market risk premium by country
+- `treasuryRates()` - US Treasury rates for various maturities
 
 ### Calendar Events
 - `earningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Earnings calendar
