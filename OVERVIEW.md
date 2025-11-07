@@ -1,32 +1,32 @@
-# Přehled API Endpointů FMP Klienta
+# FMP Client API Endpoints Overview
 
-Tento dokument poskytuje kompletní přehled všech dostupných endpointů (metod) v FMP Client knihovně. Každý endpoint je popsán včetně jeho účelu a návratových hodnot.
+This document provides a comprehensive overview of all available endpoints (methods) in the FMP Client library. Each endpoint is described with its purpose and return values.
 
-## Obsah
+## Table of Contents
 
-- [Informace o burzách a trzích](#informace-o-burzách-a-trzích)
-- [Seznamy akcií a aktiv](#seznamy-akcií-a-aktiv)
-- [Informace o společnostech](#informace-o-společnostech)
-- [Finanční výkazy](#finanční-výkazy)
-- [Růst finančních výkazů](#růst-finančních-výkazů)
-- [Kalendář událostí](#kalendář-událostí)
-- [Tržní data a kotace](#tržní-data-a-kotace)
-- [Finanční metriky a poměry](#finanční-metriky-a-poměry)
-- [Pomocné metody](#pomocné-metody)
+- [Exchange and Market Information](#exchange-and-market-information)
+- [Stock and Asset Lists](#stock-and-asset-lists)
+- [Company Information](#company-information)
+- [Financial Statements](#financial-statements)
+- [Financial Statement Growth](#financial-statement-growth)
+- [Event Calendars](#event-calendars)
+- [Market Data and Quotes](#market-data-and-quotes)
+- [Financial Metrics and Ratios](#financial-metrics-and-ratios)
+- [Utility Methods](#utility-methods)
 
 ---
 
-## Informace o burzách a trzích
+## Exchange and Market Information
 
 ### `availableExchanges()`
 
-**Účel:** Získání seznamu všech dostupných burz v systému FMP.
+**Purpose:** Retrieve a list of all available exchanges in the FMP system.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<AvailableExchange>`
-- `name` - Název burzy
-- `stockExchangeHours` - Otevírací doba burzy
+**Return Values:** `iterable<AvailableExchange>`
+- `name` - Exchange name
+- `stockExchangeHours` - Exchange trading hours
 
 **API endpoint:** `https://financialmodelingprep.com/stable/available-exchanges`
 
@@ -34,17 +34,17 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `allExchangeMarketHours()`
 
-**Účel:** Získání otevírací doby pro všechny burzy.
+**Purpose:** Retrieve trading hours for all exchanges.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<ExchangeMarketHours>`
-- `stockExchange` - Název burzy
-- `stockMarketHours` - Údaje o otevírací době
-- `isTheStockMarketOpen` - Indikace, zda je burza otevřená
-- `isTheEuronextMarketOpen` - Indikace stavu Euronext trhu
-- `isTheForexMarketOpen` - Indikace stavu Forex trhu
-- `isTheCryptoMarketOpen` - Indikace stavu krypto trhu
+**Return Values:** `iterable<ExchangeMarketHours>`
+- `stockExchange` - Exchange name
+- `stockMarketHours` - Trading hours information
+- `isTheStockMarketOpen` - Indicates if the exchange is open
+- `isTheEuronextMarketOpen` - Euronext market status
+- `isTheForexMarketOpen` - Forex market status
+- `isTheCryptoMarketOpen` - Crypto market status
 
 **API endpoint:** `https://financialmodelingprep.com/stable/all-exchange-market-hours`
 
@@ -52,15 +52,15 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `marketRiskPremium()`
 
-**Účel:** Získání tržní rizikové prémie pro různé země.
+**Purpose:** Retrieve market risk premiums for various countries.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<MarketRiskPremium>`
-- `country` - Název země
-- `continent` - Kontinent
-- `totalEquityRiskPremium` - Celková riziková prémie akcií
-- `countryRiskPremium` - Riziková prémie země
+**Return Values:** `iterable<MarketRiskPremium>`
+- `country` - Country name
+- `continent` - Continent
+- `totalEquityRiskPremium` - Total equity risk premium
+- `countryRiskPremium` - Country risk premium
 
 **API endpoint:** `https://financialmodelingprep.com/stable/market-risk-premium`
 
@@ -68,32 +68,32 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `treasuryRates()`
 
-**Účel:** Získání aktuálních sazeb státních dluhopisů USA (Treasury rates).
+**Purpose:** Retrieve current US Treasury rates.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<TreasuryRate>`
-- `date` - Datum
-- `month1` až `month120` - Úrokové sazby pro různé splatnosti
+**Return Values:** `iterable<TreasuryRate>`
+- `date` - Date
+- `month1` through `month120` - Interest rates for various maturities
 
 **API endpoint:** `https://financialmodelingprep.com/stable/treasury-rates`
 
 ---
 
-## Seznamy akcií a aktiv
+## Stock and Asset Lists
 
 ### `indexList()`
 
-**Účel:** Získání seznamu všech dostupných indexů (např. S&P 500, NASDAQ).
+**Purpose:** Retrieve a list of all available indices (e.g., S&P 500, NASDAQ).
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<Index>`
-- `symbol` - Symbol indexu
-- `name` - Název indexu
-- `currency` - Měna
-- `stockExchange` - Burza
-- `exchangeShortName` - Zkrácený název burzy
+**Return Values:** `iterable<Index>`
+- `symbol` - Index symbol
+- `name` - Index name
+- `currency` - Currency
+- `stockExchange` - Exchange
+- `exchangeShortName` - Exchange short name
 
 **API endpoint:** `https://financialmodelingprep.com/stable/index-list`
 
@@ -101,16 +101,16 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `cryptocurrencyList()`
 
-**Účel:** Získání seznamu všech dostupných kryptoměn.
+**Purpose:** Retrieve a list of all available cryptocurrencies.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<Cryptocurrency>`
-- `symbol` - Symbol kryptoměny
-- `name` - Název kryptoměny
-- `currency` - Měna
-- `stockExchange` - Burza
-- `exchangeShortName` - Zkrácený název burzy
+**Return Values:** `iterable<Cryptocurrency>`
+- `symbol` - Cryptocurrency symbol
+- `name` - Cryptocurrency name
+- `currency` - Currency
+- `stockExchange` - Exchange
+- `exchangeShortName` - Exchange short name
 
 **API endpoint:** `https://financialmodelingprep.com/stable/cryptocurrency-list`
 
@@ -118,17 +118,17 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `stockList()`
 
-**Účel:** Získání seznamu všech dostupných akcií.
+**Purpose:** Retrieve a list of all available stocks.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<Stock>`
-- `symbol` - Ticker symbol akcie
-- `name` - Název společnosti
-- `price` - Aktuální cena
-- `exchange` - Burza
-- `exchangeShortName` - Zkrácený název burzy
-- `type` - Typ instrumentu
+**Return Values:** `iterable<Stock>`
+- `symbol` - Ticker symbol
+- `name` - Company name
+- `price` - Current price
+- `exchange` - Exchange
+- `exchangeShortName` - Exchange short name
+- `type` - Instrument type
 
 **API endpoint:** `https://financialmodelingprep.com/stable/stock-list`
 
@@ -136,17 +136,17 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `activelyTradingList()`
 
-**Účel:** Získání seznamu aktivně obchodovaných akcií.
+**Purpose:** Retrieve a list of actively trading stocks.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<ActivelyTrading>`
+**Return Values:** `iterable<ActivelyTrading>`
 - `symbol` - Ticker symbol
-- `name` - Název společnosti
-- `price` - Aktuální cena
-- `exchange` - Burza
-- `exchangeShortName` - Zkrácený název burzy
-- `type` - Typ instrumentu
+- `name` - Company name
+- `price` - Current price
+- `exchange` - Exchange
+- `exchangeShortName` - Exchange short name
+- `type` - Instrument type
 
 **API endpoint:** `https://financialmodelingprep.com/stable/actively-trading-list`
 
@@ -154,15 +154,15 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `symbolChangeList()`
 
-**Účel:** Získání seznamu změn symbolů (např. při fúzích nebo rebrandingu společností).
+**Purpose:** Retrieve a list of symbol changes (e.g., due to mergers or rebranding).
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<SymbolChange>`
-- `date` - Datum změny
-- `name` - Název společnosti
-- `oldSymbol` - Starý symbol
-- `newSymbol` - Nový symbol
+**Return Values:** `iterable<SymbolChange>`
+- `date` - Change date
+- `name` - Company name
+- `oldSymbol` - Old symbol
+- `newSymbol` - New symbol
 
 **API endpoint:** `https://financialmodelingprep.com/stable/symbol-change`
 
@@ -170,18 +170,18 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `delistedCompanies()`
 
-**Účel:** Získání seznamu vyřazených společností z burzy.
+**Purpose:** Retrieve a list of delisted companies.
 
-**Parametry:**
-- `limit` (int, výchozí: 100) - Maximální počet záznamů
-- `page` (int, výchozí: 0) - Číslo stránky
+**Parameters:**
+- `limit` (int, default: 100) - Maximum number of records
+- `page` (int, default: 0) - Page number
 
-**Návratové hodnoty:** `iterable<DelistedCompany>`
-- `symbol` - Symbol společnosti
-- `companyName` - Název společnosti
-- `exchange` - Burza
-- `ipoDate` - Datum IPO
-- `delistedDate` - Datum vyřazení
+**Return Values:** `iterable<DelistedCompany>`
+- `symbol` - Company symbol
+- `companyName` - Company name
+- `exchange` - Exchange
+- `ipoDate` - IPO date
+- `delistedDate` - Delisting date
 
 **API endpoint:** `https://financialmodelingprep.com/stable/delisted-companies`
 
@@ -189,63 +189,63 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `financialStatementSymbolList()`
 
-**Účel:** Získání seznamu symbolů, pro které jsou dostupné finanční výkazy.
+**Purpose:** Retrieve a list of symbols for which financial statements are available.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<FinancialStatementSymbol>`
+**Return Values:** `iterable<FinancialStatementSymbol>`
 - `symbol` - Ticker symbol
 
 **API endpoint:** `https://financialmodelingprep.com/stable/financial-statement-symbol-list`
 
 ---
 
-## Informace o společnostech
+## Company Information
 
 ### `companyProfile()`
 
-**Účel:** Získání detailního profilu společnosti.
+**Purpose:** Retrieve detailed company profile.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
+**Parameters:**
+- `symbol` (string) - Ticker symbol
 
-**Návratové hodnoty:** `CompanyProfile|null`
+**Return Values:** `CompanyProfile|null`
 - `symbol` - Ticker symbol
-- `price` - Aktuální cena akcie
-- `beta` - Beta koeficient
-- `volAvg` - Průměrný objem obchodů
-- `mktCap` - Tržní kapitalizace
-- `lastDiv` - Poslední dividenda
-- `range` - Cenové rozpětí (52 týdnů)
-- `changes` - Změna ceny
-- `companyName` - Název společnosti
-- `currency` - Měna
-- `cik` - CIK číslo (SEC)
-- `isin` - ISIN kód
-- `cusip` - CUSIP kód
-- `exchange` - Burza
-- `exchangeShortName` - Zkrácený název burzy
-- `industry` - Odvětví
-- `website` - Webová stránka
-- `description` - Popis společnosti
-- `ceo` - Jméno CEO
-- `sector` - Sektor
-- `country` - Země
-- `fullTimeEmployees` - Počet zaměstnanců
-- `phone` - Telefon
-- `address` - Adresa
-- `city` - Město
-- `state` - Stát
-- `zip` - PSČ
-- `dcfDiff` - Rozdíl DCF
-- `dcf` - Diskontovaný peněžní tok (DCF)
-- `image` - URL obrázku loga
-- `ipoDate` - Datum IPO
-- `defaultImage` - Indikace výchozího obrázku
-- `isEtf` - Indikace, zda je to ETF
-- `isActivelyTrading` - Indikace aktivního obchodování
-- `isAdr` - Indikace, zda je to ADR
-- `isFund` - Indikace, zda je to fond
+- `price` - Current stock price
+- `beta` - Beta coefficient
+- `volAvg` - Average trading volume
+- `mktCap` - Market capitalization
+- `lastDiv` - Last dividend
+- `range` - 52-week price range
+- `changes` - Price change
+- `companyName` - Company name
+- `currency` - Currency
+- `cik` - CIK number (SEC)
+- `isin` - ISIN code
+- `cusip` - CUSIP code
+- `exchange` - Exchange
+- `exchangeShortName` - Exchange short name
+- `industry` - Industry
+- `website` - Website
+- `description` - Company description
+- `ceo` - CEO name
+- `sector` - Sector
+- `country` - Country
+- `fullTimeEmployees` - Number of employees
+- `phone` - Phone
+- `address` - Address
+- `city` - City
+- `state` - State
+- `zip` - ZIP code
+- `dcfDiff` - DCF difference
+- `dcf` - Discounted cash flow (DCF)
+- `image` - Logo image URL
+- `ipoDate` - IPO date
+- `defaultImage` - Default image indicator
+- `isEtf` - ETF indicator
+- `isActivelyTrading` - Active trading indicator
+- `isAdr` - ADR indicator
+- `isFund` - Fund indicator
 
 **API endpoint:** `https://financialmodelingprep.com/stable/profile`
 
@@ -253,11 +253,11 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `companyProfileBulk()`
 
-**Účel:** Hromadné získání profilů všech společností (streaming velkého množství dat).
+**Purpose:** Bulk retrieval of company profiles for all companies (streaming large datasets).
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<CompanyProfile>` (stejná struktura jako `companyProfile()`)
+**Return Values:** `iterable<CompanyProfile>` (same structure as `companyProfile()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/profile-bulk`
 
@@ -265,18 +265,18 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `sharesFloat()`
 
-**Účel:** Získání informací o počtu volně obchodovatelných akcií pro konkrétní symbol.
+**Purpose:** Retrieve shares float information for a specific symbol.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
+**Parameters:**
+- `symbol` (string) - Ticker symbol
 
-**Návratové hodnoty:** `SharesFloat|null`
+**Return Values:** `SharesFloat|null`
 - `symbol` - Ticker symbol
-- `date` - Datum
-- `freeFloat` - Procento volně obchodovatelných akcií
-- `floatShares` - Počet volně obchodovatelných akcií
-- `outstandingShares` - Celkový počet vydaných akcií
-- `source` - Zdroj dat
+- `date` - Date
+- `freeFloat` - Free float percentage
+- `floatShares` - Number of floating shares
+- `outstandingShares` - Total outstanding shares
+- `source` - Data source
 
 **API endpoint:** `https://financialmodelingprep.com/stable/shares-float`
 
@@ -284,13 +284,13 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `sharesFloatAll()`
 
-**Účel:** Získání informací o volně obchodovatelných akciích pro všechny společnosti (s možností stránkování).
+**Purpose:** Retrieve shares float information for all companies (with pagination).
 
-**Parametry:**
-- `limit` (int, výchozí: 1000) - Maximální počet záznamů (1-5000)
-- `page` (int, výchozí: 0) - Číslo stránky
+**Parameters:**
+- `limit` (int, default: 1000) - Maximum number of records (1-5000)
+- `page` (int, default: 0) - Page number
 
-**Návratové hodnoty:** `iterable<SharesFloat>` (stejná struktura jako `sharesFloat()`)
+**Return Values:** `iterable<SharesFloat>` (same structure as `sharesFloat()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/shares-float-all`
 
@@ -298,17 +298,17 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `pressReleasesLatest()`
 
-**Účel:** Získání nejnovějších tiskových zpráv společností.
+**Purpose:** Retrieve latest press releases from companies.
 
-**Parametry:**
-- `limit` (int) - Maximální počet záznamů
-- `page` (int, výchozí: 0) - Číslo stránky
+**Parameters:**
+- `limit` (int) - Maximum number of records
+- `page` (int, default: 0) - Page number
 
-**Návratové hodnoty:** `iterable<PressRelease>`
+**Return Values:** `iterable<PressRelease>`
 - `symbol` - Ticker symbol
-- `date` - Datum vydání
-- `title` - Nadpis tiskové zprávy
-- `text` - Text tiskové zprávy
+- `date` - Release date
+- `title` - Press release title
+- `text` - Press release text
 
 **API endpoint:** `https://financialmodelingprep.com/stable/news/press-releases-latest`
 
@@ -316,20 +316,20 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `stockNewsLatest()`
 
-**Účel:** Získání nejnovějších zpráv o akciích.
+**Purpose:** Retrieve latest stock news.
 
-**Parametry:**
-- `limit` (int, 1-250) - Maximální počet záznamů
-- `page` (int, výchozí: 0) - Číslo stránky
+**Parameters:**
+- `limit` (int, 1-250) - Maximum number of records
+- `page` (int, default: 0) - Page number
 
-**Návratové hodnoty:** `iterable<StockNews>`
+**Return Values:** `iterable<StockNews>`
 - `symbol` - Ticker symbol
-- `publishedDate` - Datum publikace
-- `title` - Nadpis zprávy
-- `image` - URL obrázku
-- `site` - Zdroj zprávy
-- `text` - Text zprávy
-- `url` - URL zprávy
+- `publishedDate` - Publication date
+- `title` - News title
+- `image` - Image URL
+- `site` - News source
+- `text` - News text
+- `url` - News URL
 
 **API endpoint:** `https://financialmodelingprep.com/stable/news/stock-latest`
 
@@ -337,37 +337,37 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `analystEstimates()`
 
-**Účel:** Získání odhadů analytiků pro finanční výsledky společnosti.
+**Purpose:** Retrieve analyst estimates for a company's financial results.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
-- `period` (string, výchozí: 'annual') - Období (annual/quarter)
-- `page` (int, výchozí: 0) - Číslo stránky
-- `limit` (int, výchozí: 6) - Maximální počet záznamů
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `period` (string, default: 'annual') - Period (annual/quarter)
+- `page` (int, default: 0) - Page number
+- `limit` (int, default: 6) - Maximum number of records
 
-**Návratové hodnoty:** `iterable<AnalystEstimate>`
+**Return Values:** `iterable<AnalystEstimate>`
 - `symbol` - Ticker symbol
-- `date` - Datum
-- `estimatedRevenueLow` - Nejnižší odhad příjmů
-- `estimatedRevenueHigh` - Nejvyšší odhad příjmů
-- `estimatedRevenueAvg` - Průměrný odhad příjmů
-- `estimatedEbitdaLow` - Nejnižší odhad EBITDA
-- `estimatedEbitdaHigh` - Nejvyšší odhad EBITDA
-- `estimatedEbitdaAvg` - Průměrný odhad EBITDA
-- `estimatedEbitLow` - Nejnižší odhad EBIT
-- `estimatedEbitHigh` - Nejvyšší odhad EBIT
-- `estimatedEbitAvg` - Průměrný odhad EBIT
-- `estimatedNetIncomeLow` - Nejnižší odhad čistého zisku
-- `estimatedNetIncomeHigh` - Nejvyšší odhad čistého zisku
-- `estimatedNetIncomeAvg` - Průměrný odhad čistého zisku
-- `estimatedSgaExpenseLow` - Nejnižší odhad SGA výdajů
-- `estimatedSgaExpenseHigh` - Nejvyšší odhad SGA výdajů
-- `estimatedSgaExpenseAvg` - Průměrný odhad SGA výdajů
-- `estimatedEpsAvg` - Průměrný odhad EPS
-- `estimatedEpsHigh` - Nejvyšší odhad EPS
-- `estimatedEpsLow` - Nejnižší odhad EPS
-- `numberAnalystEstimatedRevenue` - Počet analytiků odhadujících příjmy
-- `numberAnalystsEstimatedEps` - Počet analytiků odhadujících EPS
+- `date` - Date
+- `estimatedRevenueLow` - Lowest revenue estimate
+- `estimatedRevenueHigh` - Highest revenue estimate
+- `estimatedRevenueAvg` - Average revenue estimate
+- `estimatedEbitdaLow` - Lowest EBITDA estimate
+- `estimatedEbitdaHigh` - Highest EBITDA estimate
+- `estimatedEbitdaAvg` - Average EBITDA estimate
+- `estimatedEbitLow` - Lowest EBIT estimate
+- `estimatedEbitHigh` - Highest EBIT estimate
+- `estimatedEbitAvg` - Average EBIT estimate
+- `estimatedNetIncomeLow` - Lowest net income estimate
+- `estimatedNetIncomeHigh` - Highest net income estimate
+- `estimatedNetIncomeAvg` - Average net income estimate
+- `estimatedSgaExpenseLow` - Lowest SGA expense estimate
+- `estimatedSgaExpenseHigh` - Highest SGA expense estimate
+- `estimatedSgaExpenseAvg` - Average SGA expense estimate
+- `estimatedEpsAvg` - Average EPS estimate
+- `estimatedEpsHigh` - Highest EPS estimate
+- `estimatedEpsLow` - Lowest EPS estimate
+- `numberAnalystEstimatedRevenue` - Number of analysts estimating revenue
+- `numberAnalystsEstimatedEps` - Number of analysts estimating EPS
 
 **API endpoint:** `https://financialmodelingprep.com/stable/analyst-estimates`
 
@@ -375,22 +375,22 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `financialScores()`
 
-**Účel:** Získání finančních skóre (hodnocení) pro konkrétní společnost.
+**Purpose:** Retrieve financial scores (ratings) for a specific company.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
+**Parameters:**
+- `symbol` (string) - Ticker symbol
 
-**Návratové hodnoty:** `iterable<Scores>`
+**Return Values:** `iterable<Scores>`
 - `symbol` - Ticker symbol
-- `altmanZScore` - Altman Z-Score (riziko bankrotu)
-- `piotroskiScore` - Piotroski F-Score (finanční síla)
-- `workingCapital` - Pracovní kapitál
-- `totalAssets` - Celková aktiva
-- `retainedEarnings` - Nerozdělený zisk
+- `altmanZScore` - Altman Z-Score (bankruptcy risk)
+- `piotroskiScore` - Piotroski F-Score (financial strength)
+- `workingCapital` - Working capital
+- `totalAssets` - Total assets
+- `retainedEarnings` - Retained earnings
 - `ebit` - EBIT
-- `marketCap` - Tržní kapitalizace
-- `totalLiabilities` - Celkové závazky
-- `revenue` - Výnosy
+- `marketCap` - Market capitalization
+- `totalLiabilities` - Total liabilities
+- `revenue` - Revenue
 
 **API endpoint:** `https://financialmodelingprep.com/stable/financial-scores`
 
@@ -398,40 +398,40 @@ Tento dokument poskytuje kompletní přehled všech dostupných endpointů (meto
 
 ### `scoresBulk()`
 
-**Účel:** Hromadné získání finančních skóre pro všechny společnosti.
+**Purpose:** Bulk retrieval of financial scores for all companies.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<Scores>` (stejná struktura jako `financialScores()`)
+**Return Values:** `iterable<Scores>` (same structure as `financialScores()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/scores-bulk`
 
 ---
 
-## Finanční výkazy
+## Financial Statements
 
 ### `balanceSheetStatement()`
 
-**Účel:** Získání výkazu rozvahy (Balance Sheet) pro konkrétní společnost.
+**Purpose:** Retrieve balance sheet statement for a specific company.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
-- `limit` (int, výchozí: 4) - Maximální počet záznamů (1-1000)
-- `period` (PeriodQuery|Period, výchozí: FY) - Období (FY=roční, Q1-Q4=čtvrtletní)
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int, default: 4) - Maximum number of records (1-1000)
+- `period` (PeriodQuery|Period, default: FY) - Period (FY=annual, Q1-Q4=quarterly)
 
-**Návratové hodnoty:** `iterable<BalanceSheetStatement>`
-Obsahuje kompletní rozvahu včetně:
-- `date` - Datum výkazu
+**Return Values:** `iterable<BalanceSheetStatement>`
+Contains complete balance sheet including:
+- `date` - Statement date
 - `symbol` - Ticker symbol
-- `reportedCurrency` - Měna vykazování
-- `cik` - CIK číslo
-- `fillingDate` - Datum podání
-- `acceptedDate` - Datum přijetí
-- `calendarYear` - Kalendářní rok
-- `period` - Období
-- Aktiva (např. `cashAndCashEquivalents`, `inventory`, `totalAssets`)
-- Pasiva (např. `totalLiabilities`, `totalStockholdersEquity`)
-- A mnoho dalších účetních položek
+- `reportedCurrency` - Reporting currency
+- `cik` - CIK number
+- `fillingDate` - Filing date
+- `acceptedDate` - Acceptance date
+- `calendarYear` - Calendar year
+- `period` - Period
+- Assets (e.g., `cashAndCashEquivalents`, `inventory`, `totalAssets`)
+- Liabilities (e.g., `totalLiabilities`, `totalStockholdersEquity`)
+- And many other accounting items
 
 **API endpoint:** `https://financialmodelingprep.com/stable/balance-sheet-statement`
 
@@ -439,13 +439,13 @@ Obsahuje kompletní rozvahu včetně:
 
 ### `balanceSheetStatementBulk()`
 
-**Účel:** Hromadné získání rozvah pro všechny společnosti za dané období.
+**Purpose:** Bulk retrieval of balance sheets for all companies for a given period.
 
-**Parametry:**
-- `year` (int) - Rok
-- `period` (Period, výchozí: FY) - Období
+**Parameters:**
+- `year` (int) - Year
+- `period` (Period, default: FY) - Period
 
-**Návratové hodnoty:** `iterable<BalanceSheetStatement>` (stejná struktura jako `balanceSheetStatement()`)
+**Return Values:** `iterable<BalanceSheetStatement>` (same structure as `balanceSheetStatement()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/balance-sheet-statement-bulk`
 
@@ -453,26 +453,26 @@ Obsahuje kompletní rozvahu včetně:
 
 ### `incomeStatement()`
 
-**Účel:** Získání výkazu zisku a ztráty (Income Statement) pro konkrétní společnost.
+**Purpose:** Retrieve income statement for a specific company.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
-- `limit` (int, výchozí: 4) - Maximální počet záznamů (1-1000)
-- `period` (PeriodQuery|Period, výchozí: FY) - Období
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int, default: 4) - Maximum number of records (1-1000)
+- `period` (PeriodQuery|Period, default: FY) - Period
 
-**Návratové hodnoty:** `iterable<IncomeStatement>`
-Obsahuje kompletní výkaz zisku a ztráty včetně:
-- `date` - Datum výkazu
+**Return Values:** `iterable<IncomeStatement>`
+Contains complete income statement including:
+- `date` - Statement date
 - `symbol` - Ticker symbol
-- `reportedCurrency` - Měna
-- `revenue` - Výnosy
-- `costOfRevenue` - Náklady na výnosy
-- `grossProfit` - Hrubý zisk
-- `operatingIncome` - Provozní zisk
-- `netIncome` - Čistý zisk
-- `eps` - Zisk na akcii
+- `reportedCurrency` - Currency
+- `revenue` - Revenue
+- `costOfRevenue` - Cost of revenue
+- `grossProfit` - Gross profit
+- `operatingIncome` - Operating income
+- `netIncome` - Net income
+- `eps` - Earnings per share
 - `ebitda` - EBITDA
-- A mnoho dalších položek výsledovky
+- And many other items
 
 **API endpoint:** `https://financialmodelingprep.com/stable/income-statement`
 
@@ -480,13 +480,13 @@ Obsahuje kompletní výkaz zisku a ztráty včetně:
 
 ### `incomeStatementBulk()`
 
-**Účel:** Hromadné získání výkazů zisku a ztráty pro všechny společnosti za dané období.
+**Purpose:** Bulk retrieval of income statements for all companies for a given period.
 
-**Parametry:**
-- `year` (int) - Rok
-- `period` (Period, výchozí: FY) - Období
+**Parameters:**
+- `year` (int) - Year
+- `period` (Period, default: FY) - Period
 
-**Návratové hodnoty:** `iterable<IncomeStatement>` (stejná struktura jako `incomeStatement()`)
+**Return Values:** `iterable<IncomeStatement>` (same structure as `incomeStatement()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/income-statement-bulk`
 
@@ -494,25 +494,25 @@ Obsahuje kompletní výkaz zisku a ztráty včetně:
 
 ### `cashFlowStatement()`
 
-**Účel:** Získání výkazu peněžních toků (Cash Flow Statement) pro konkrétní společnost.
+**Purpose:** Retrieve cash flow statement for a specific company.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
-- `limit` (int, výchozí: 4) - Maximální počet záznamů (1-1000)
-- `period` (PeriodQuery|Period, výchozí: FY) - Období
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int, default: 4) - Maximum number of records (1-1000)
+- `period` (PeriodQuery|Period, default: FY) - Period
 
-**Návratové hodnoty:** `iterable<CashFlowStatement>`
-Obsahuje kompletní výkaz cash flow včetně:
-- `date` - Datum výkazu
+**Return Values:** `iterable<CashFlowStatement>`
+Contains complete cash flow statement including:
+- `date` - Statement date
 - `symbol` - Ticker symbol
-- `reportedCurrency` - Měna
-- `operatingCashFlow` - Provozní peněžní tok
-- `capitalExpenditure` - Kapitálové výdaje
-- `freeCashFlow` - Volný peněžní tok
-- `netCashProvidedByOperatingActivities` - Peněžní tok z provozní činnosti
-- `netCashUsedForInvestingActivities` - Peněžní tok z investiční činnosti
-- `netCashUsedProvidedByFinancingActivities` - Peněžní tok z finanční činnosti
-- A mnoho dalších položek
+- `reportedCurrency` - Currency
+- `operatingCashFlow` - Operating cash flow
+- `capitalExpenditure` - Capital expenditure
+- `freeCashFlow` - Free cash flow
+- `netCashProvidedByOperatingActivities` - Cash flow from operating activities
+- `netCashUsedForInvestingActivities` - Cash flow from investing activities
+- `netCashUsedProvidedByFinancingActivities` - Cash flow from financing activities
+- And many other items
 
 **API endpoint:** `https://financialmodelingprep.com/stable/cash-flow-statement`
 
@@ -520,13 +520,13 @@ Obsahuje kompletní výkaz cash flow včetně:
 
 ### `cashFlowStatementBulk()`
 
-**Účel:** Hromadné získání výkazů peněžních toků pro všechny společnosti za dané období.
+**Purpose:** Bulk retrieval of cash flow statements for all companies for a given period.
 
-**Parametry:**
-- `year` (int) - Rok
-- `period` (Period, výchozí: FY) - Období
+**Parameters:**
+- `year` (int) - Year
+- `period` (Period, default: FY) - Period
 
-**Návratové hodnoty:** `iterable<CashFlowStatement>` (stejná struktura jako `cashFlowStatement()`)
+**Return Values:** `iterable<CashFlowStatement>` (same structure as `cashFlowStatement()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/cash-flow-statement-bulk`
 
@@ -534,34 +534,34 @@ Obsahuje kompletní výkaz cash flow včetně:
 
 ### `latestFinancialStatements()`
 
-**Účel:** Získání nejnovějších finančních výkazů napříč všemi společnostmi.
+**Purpose:** Retrieve latest financial statements across all companies.
 
-**Parametry:**
-- `page` (int, výchozí: 0) - Číslo stránky (0-100)
-- `limit` (int, výchozí: 250) - Maximální počet záznamů (1-250)
+**Parameters:**
+- `page` (int, default: 0) - Page number (0-100)
+- `limit` (int, default: 250) - Maximum number of records (1-250)
 
-**Návratové hodnoty:** `iterable<LatestFinancialStatement>`
+**Return Values:** `iterable<LatestFinancialStatement>`
 - `symbol` - Ticker symbol
-- `annualFillingDate` - Datum posledního ročního výkazu
-- `quarterFillingDate` - Datum posledního čtvrtletního výkazu
+- `annualFillingDate` - Latest annual statement date
+- `quarterFillingDate` - Latest quarterly statement date
 
 **API endpoint:** `https://financialmodelingprep.com/stable/latest-financial-statements`
 
 ---
 
-## Růst finančních výkazů
+## Financial Statement Growth
 
 ### `incomeStatementGrowth()`
 
-**Účel:** Získání meziročního růstu položek výkazu zisku a ztráty.
+**Purpose:** Retrieve year-over-year growth of income statement items.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
-- `limit` (int|null, výchozí: null) - Maximální počet záznamů
-- `period` (PeriodQuery|null, výchozí: null) - Období
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null, default: null) - Maximum number of records
+- `period` (PeriodQuery|null, default: null) - Period
 
-**Návratové hodnoty:** `iterable<IncomeStatementGrowth>`
-Obsahuje procentuální růst všech položek z Income Statement (např. růst výnosů, růst čistého zisku atd.)
+**Return Values:** `iterable<IncomeStatementGrowth>`
+Contains percentage growth of all income statement items (e.g., revenue growth, net income growth, etc.)
 
 **API endpoint:** `https://financialmodelingprep.com/api/v3/income-statement-growth/{symbol}`
 
@@ -569,13 +569,13 @@ Obsahuje procentuální růst všech položek z Income Statement (např. růst v
 
 ### `incomeStatementGrowthBulk()`
 
-**Účel:** Hromadné získání růstu výkazu zisku a ztráty pro všechny společnosti.
+**Purpose:** Bulk retrieval of income statement growth for all companies.
 
-**Parametry:**
-- `year` (int) - Rok
-- `period` (Period) - Období
+**Parameters:**
+- `year` (int) - Year
+- `period` (Period) - Period
 
-**Návratové hodnoty:** `iterable<IncomeStatementGrowthBulk>`
+**Return Values:** `iterable<IncomeStatementGrowthBulk>`
 
 **API endpoint:** `https://financialmodelingprep.com/stable/income-statement-growth-bulk`
 
@@ -583,15 +583,15 @@ Obsahuje procentuální růst všech položek z Income Statement (např. růst v
 
 ### `balanceSheetStatementGrowth()`
 
-**Účel:** Získání meziročního růstu položek rozvahy.
+**Purpose:** Retrieve year-over-year growth of balance sheet items.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
-- `limit` (int|null, výchozí: null) - Maximální počet záznamů
-- `period` (PeriodQuery|null, výchozí: null) - Období
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null, default: null) - Maximum number of records
+- `period` (PeriodQuery|null, default: null) - Period
 
-**Návratové hodnoty:** `iterable<BalanceSheetStatementGrowth>`
-Obsahuje procentuální růst všech položek z Balance Sheet
+**Return Values:** `iterable<BalanceSheetStatementGrowth>`
+Contains percentage growth of all balance sheet items
 
 **API endpoint:** `https://financialmodelingprep.com/api/v3/balance-sheet-statement-growth/{symbol}`
 
@@ -599,13 +599,13 @@ Obsahuje procentuální růst všech položek z Balance Sheet
 
 ### `balanceSheetStatementGrowthBulk()`
 
-**Účel:** Hromadné získání růstu rozvahy pro všechny společnosti.
+**Purpose:** Bulk retrieval of balance sheet growth for all companies.
 
-**Parametry:**
-- `year` (int) - Rok
-- `period` (Period) - Období
+**Parameters:**
+- `year` (int) - Year
+- `period` (Period) - Period
 
-**Návratové hodnoty:** `iterable<BalanceSheetStatementGrowthBulk>`
+**Return Values:** `iterable<BalanceSheetStatementGrowthBulk>`
 
 **API endpoint:** `https://financialmodelingprep.com/stable/balance-sheet-statement-growth-bulk`
 
@@ -613,15 +613,15 @@ Obsahuje procentuální růst všech položek z Balance Sheet
 
 ### `cashFlowStatementGrowth()`
 
-**Účel:** Získání meziročního růstu položek výkazu peněžních toků.
+**Purpose:** Retrieve year-over-year growth of cash flow statement items.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
-- `limit` (int|null, výchozí: null) - Maximální počet záznamů
-- `period` (PeriodQuery|null, výchozí: null) - Období
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null, default: null) - Maximum number of records
+- `period` (PeriodQuery|null, default: null) - Period
 
-**Návratové hodnoty:** `iterable<CashFlowStatementGrowth>`
-Obsahuje procentuální růst všech položek z Cash Flow Statement
+**Return Values:** `iterable<CashFlowStatementGrowth>`
+Contains percentage growth of all cash flow statement items
 
 **API endpoint:** `https://financialmodelingprep.com/api/v3/cash-flow-statement-growth/{symbol}`
 
@@ -629,38 +629,38 @@ Obsahuje procentuální růst všech položek z Cash Flow Statement
 
 ### `cashFlowStatementGrowthBulk()`
 
-**Účel:** Hromadné získání růstu cash flow pro všechny společnosti.
+**Purpose:** Bulk retrieval of cash flow growth for all companies.
 
-**Parametry:**
-- `year` (int) - Rok
-- `period` (Period) - Období
+**Parameters:**
+- `year` (int) - Year
+- `period` (Period) - Period
 
-**Návratové hodnoty:** `iterable<CashFlowStatementGrowthBulk>`
+**Return Values:** `iterable<CashFlowStatementGrowthBulk>`
 
 **API endpoint:** `https://financialmodelingprep.com/stable/cash-flow-statement-growth-bulk`
 
 ---
 
-## Kalendář událostí
+## Event Calendars
 
 ### `dividendsCalendar()`
 
-**Účel:** Získání kalendáře dividend v daném časovém období.
+**Purpose:** Retrieve dividend calendar for a given time period.
 
-**Parametry:**
-- `from` (DateTimeImmutable) - Počáteční datum
-- `to` (DateTimeImmutable) - Konečné datum
-- `logger` (LoggerInterface|null, výchozí: null) - Volitelný logger
+**Parameters:**
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
+- `logger` (LoggerInterface|null, default: null) - Optional logger
 
-**Návratové hodnoty:** `iterable<Dividend>`
-- `date` - Datum dividendy
-- `label` - Popis
-- `adjDividend` - Upravená dividenda
+**Return Values:** `iterable<Dividend>`
+- `date` - Dividend date
+- `label` - Description
+- `adjDividend` - Adjusted dividend
 - `symbol` - Ticker symbol
-- `dividend` - Výše dividendy
-- `recordDate` - Datum záznamu
-- `paymentDate` - Datum výplaty
-- `declarationDate` - Datum vyhlášení
+- `dividend` - Dividend amount
+- `recordDate` - Record date
+- `paymentDate` - Payment date
+- `declarationDate` - Declaration date
 
 **API endpoint:** `https://financialmodelingprep.com/stable/dividends-calendar`
 
@@ -668,13 +668,13 @@ Obsahuje procentuální růst všech položek z Cash Flow Statement
 
 ### `dividends()`
 
-**Účel:** Získání historických dividend pro konkrétní symbol.
+**Purpose:** Retrieve historical dividends for a specific symbol.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
-- `limit` (int|null, výchozí: null) - Maximální počet záznamů (1-1000)
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null, default: null) - Maximum number of records (1-1000)
 
-**Návratové hodnoty:** `iterable<Dividend>` (stejná struktura jako `dividendsCalendar()`)
+**Return Values:** `iterable<Dividend>` (same structure as `dividendsCalendar()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/dividends`
 
@@ -682,23 +682,23 @@ Obsahuje procentuální růst všech položek z Cash Flow Statement
 
 ### `earningsCalendar()`
 
-**Účel:** Získání kalendáře zveřejnění finančních výsledků v daném časovém období.
+**Purpose:** Retrieve earnings announcement calendar for a given time period.
 
-**Parametry:**
-- `from` (DateTimeImmutable) - Počáteční datum
-- `to` (DateTimeImmutable) - Konečné datum
-- `logger` (LoggerInterface|null, výchozí: null) - Volitelný logger
+**Parameters:**
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
+- `logger` (LoggerInterface|null, default: null) - Optional logger
 
-**Návratové hodnoty:** `iterable<EarningsCalendarItem>`
-- `date` - Datum zveřejnění
+**Return Values:** `iterable<EarningsCalendarItem>`
+- `date` - Announcement date
 - `symbol` - Ticker symbol
-- `eps` - Skutečný EPS
-- `epsEstimated` - Odhadovaný EPS
-- `time` - Čas zveřejnění
-- `revenue` - Skutečné výnosy
-- `revenueEstimated` - Odhadované výnosy
-- `updatedFromDate` - Datum poslední aktualizace
-- `fiscalDateEnding` - Konec fiskálního období
+- `eps` - Actual EPS
+- `epsEstimated` - Estimated EPS
+- `time` - Announcement time
+- `revenue` - Actual revenue
+- `revenueEstimated` - Estimated revenue
+- `updatedFromDate` - Last update date
+- `fiscalDateEnding` - End of fiscal period
 
 **API endpoint:** `https://financialmodelingprep.com/stable/earnings-calendar`
 
@@ -706,55 +706,55 @@ Obsahuje procentuální růst všech položek z Cash Flow Statement
 
 ### `splitsCalendar()`
 
-**Účel:** Získání kalendáře štěpení akcií (stock splits) v daném časovém období.
+**Purpose:** Retrieve stock splits calendar for a given time period.
 
-**Parametry:**
-- `from` (DateTimeImmutable) - Počáteční datum
-- `to` (DateTimeImmutable) - Konečné datum
-- `logger` (LoggerInterface|null, výchozí: null) - Volitelný logger
+**Parameters:**
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
+- `logger` (LoggerInterface|null, default: null) - Optional logger
 
-**Návratové hodnoty:** `iterable<SplitsCalendarItem>`
-- `date` - Datum štěpení
-- `label` - Popis
+**Return Values:** `iterable<SplitsCalendarItem>`
+- `date` - Split date
+- `label` - Description
 - `symbol` - Ticker symbol
-- `numerator` - Čitatel poměru štěpení
-- `denominator` - Jmenovatel poměru štěpení
+- `numerator` - Split ratio numerator
+- `denominator` - Split ratio denominator
 
 **API endpoint:** `https://financialmodelingprep.com/stable/splits-calendar`
 
 ---
 
-## Tržní data a kotace
+## Market Data and Quotes
 
 ### `batchExchangeQuote()`
 
-**Účel:** Získání aktuálních kotací pro všechny akcie na konkrétní burze (zjednodušená verze).
+**Purpose:** Retrieve current quotes for all stocks on a specific exchange (simplified version).
 
-**Parametry:**
-- `exchange` (string) - Název burzy (např. "NYSE", "NASDAQ")
+**Parameters:**
+- `exchange` (string) - Exchange name (e.g., "NYSE", "NASDAQ")
 
-**Návratové hodnoty:** `iterable<BatchExchangeQuote>`
+**Return Values:** `iterable<BatchExchangeQuote>`
 - `symbol` - Ticker symbol
-- `name` - Název společnosti
-- `price` - Aktuální cena
-- `changesPercentage` - Procentuální změna
-- `change` - Absolutní změna
-- `dayLow` - Denní minimum
-- `dayHigh` - Denní maximum
-- `yearHigh` - Roční maximum
-- `yearLow` - Roční minimum
-- `marketCap` - Tržní kapitalizace
-- `priceAvg50` - 50denní průměrná cena
-- `priceAvg200` - 200denní průměrná cena
-- `exchange` - Burza
-- `volume` - Objem obchodů
-- `avgVolume` - Průměrný objem
-- `open` - Otevírací cena
-- `previousClose` - Předchozí závěrečná cena
-- `eps` - Zisk na akcii
-- `pe` - P/E poměr
-- `sharesOutstanding` - Počet vydaných akcií
-- `timestamp` - Časové razítko
+- `name` - Company name
+- `price` - Current price
+- `changesPercentage` - Percentage change
+- `change` - Absolute change
+- `dayLow` - Daily low
+- `dayHigh` - Daily high
+- `yearHigh` - 52-week high
+- `yearLow` - 52-week low
+- `marketCap` - Market capitalization
+- `priceAvg50` - 50-day average price
+- `priceAvg200` - 200-day average price
+- `exchange` - Exchange
+- `volume` - Trading volume
+- `avgVolume` - Average volume
+- `open` - Opening price
+- `previousClose` - Previous close
+- `eps` - Earnings per share
+- `pe` - P/E ratio
+- `sharesOutstanding` - Outstanding shares
+- `timestamp` - Timestamp
 
 **API endpoint:** `https://financialmodelingprep.com/stable/batch-exchange-quote`
 
@@ -762,15 +762,15 @@ Obsahuje procentuální růst všech položek z Cash Flow Statement
 
 ### `batchExchangeQuoteDetailed()`
 
-**Účel:** Získání detailních kotací pro všechny akcie na konkrétní burze (rozšířená verze).
+**Purpose:** Retrieve detailed quotes for all stocks on a specific exchange (extended version).
 
-**Parametry:**
-- `exchange` (string) - Název burzy
+**Parameters:**
+- `exchange` (string) - Exchange name
 
-**Návratové hodnoty:** `iterable<BatchExchangeDetailedQuote>`
-Obsahuje všechny údaje z `BatchExchangeQuote` plus dodatečné informace:
-- `earningsAnnouncement` - Datum zveřejnění výsledků
-- `timestamp` - Časové razítko
+**Return Values:** `iterable<BatchExchangeDetailedQuote>`
+Contains all data from `BatchExchangeQuote` plus additional information:
+- `earningsAnnouncement` - Earnings announcement date
+- `timestamp` - Timestamp
 
 **API endpoint:** `https://financialmodelingprep.com/stable/batch-exchange-quote`
 
@@ -778,33 +778,33 @@ Obsahuje všechny údaje z `BatchExchangeQuote` plus dodatečné informace:
 
 ### `batchForexQuotes()`
 
-**Účel:** Získání aktuálních kotací všech měnových párů (Forex).
+**Purpose:** Retrieve current quotes for all forex currency pairs.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<BatchForexQuote>`
-- `symbol` - Symbol měnového páru (např. "EUR/USD")
-- `name` - Název páru
-- `price` - Aktuální kurz
-- `changesPercentage` - Procentuální změna
-- `change` - Absolutní změna
-- `dayLow` - Denní minimum
-- `dayHigh` - Denní maximum
-- `yearHigh` - Roční maximum
-- `yearLow` - Roční minimum
-- `marketCap` - Tržní kapitalizace
-- `priceAvg50` - 50denní průměr
-- `priceAvg200` - 200denní průměr
-- `exchange` - Burza/platforma
-- `volume` - Objem
-- `avgVolume` - Průměrný objem
-- `open` - Otevírací kurz
-- `previousClose` - Předchozí zavření
-- `eps` - EPS (není relevantní pro forex)
-- `pe` - P/E (není relevantní pro forex)
-- `earningsAnnouncement` - Datum zveřejnění
-- `sharesOutstanding` - Počet akcií
-- `timestamp` - Časové razítko
+**Return Values:** `iterable<BatchForexQuote>`
+- `symbol` - Currency pair symbol (e.g., "EUR/USD")
+- `name` - Pair name
+- `price` - Current rate
+- `changesPercentage` - Percentage change
+- `change` - Absolute change
+- `dayLow` - Daily low
+- `dayHigh` - Daily high
+- `yearHigh` - 52-week high
+- `yearLow` - 52-week low
+- `marketCap` - Market capitalization
+- `priceAvg50` - 50-day average
+- `priceAvg200` - 200-day average
+- `exchange` - Exchange/platform
+- `volume` - Volume
+- `avgVolume` - Average volume
+- `open` - Opening rate
+- `previousClose` - Previous close
+- `eps` - EPS (not relevant for forex)
+- `pe` - P/E (not relevant for forex)
+- `earningsAnnouncement` - Announcement date
+- `sharesOutstanding` - Outstanding shares
+- `timestamp` - Timestamp
 
 **API endpoint:** `https://financialmodelingprep.com/stable/batch-forex-quotes`
 
@@ -812,18 +812,18 @@ Obsahuje všechny údaje z `BatchExchangeQuote` plus dodatečné informace:
 
 ### `eodBulkQuotes()`
 
-**Účel:** Získání závěrečných denních kotací (End-of-Day) pro všechny akcie k danému datu.
+**Purpose:** Retrieve end-of-day quotes for all stocks for a given date.
 
-**Parametry:**
-- `date` (DateTimeImmutable) - Datum, pro které chcete získat EOD data
+**Parameters:**
+- `date` (DateTimeImmutable) - Date for which to retrieve EOD data
 
-**Návratové hodnoty:** `iterable<EodQuote>`
+**Return Values:** `iterable<EodQuote>`
 - `symbol` - Ticker symbol
-- `open` - Otevírací cena
-- `high` - Nejvyšší cena dne
-- `low` - Nejnižší cena dne
-- `close` - Zavírací cena
-- `volume` - Objem obchodů
+- `open` - Opening price
+- `high` - Highest price of the day
+- `low` - Lowest price of the day
+- `close` - Closing price
+- `volume` - Trading volume
 
 **API endpoint:** `https://financialmodelingprep.com/stable/eod-bulk`
 
@@ -831,27 +831,27 @@ Obsahuje všechny údaje z `BatchExchangeQuote` plus dodatečné informace:
 
 ### `historicalPriceEod()`
 
-**Účel:** Získání historických denních cen pro konkrétní symbol v daném časovém období.
+**Purpose:** Retrieve historical daily prices for a specific symbol in a given time period.
 
-**Parametry:**
+**Parameters:**
 - `symbol` (string) - Ticker symbol
-- `from` (DateTimeImmutable) - Počáteční datum
-- `to` (DateTimeImmutable) - Konečné datum
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
 
-**Návratové hodnoty:** `iterable<HistoricalPriceEod>`
-- `date` - Datum
-- `open` - Otevírací cena
-- `high` - Nejvyšší cena
-- `low` - Nejnižší cena
-- `close` - Zavírací cena
-- `adjClose` - Upravená zavírací cena
-- `volume` - Objem obchodů
-- `unadjustedVolume` - Neupravený objem
-- `change` - Změna ceny
-- `changePercent` - Procentuální změna
-- `vwap` - Vážený průměrný kurz
-- `label` - Popis
-- `changeOverTime` - Změna v čase
+**Return Values:** `iterable<HistoricalPriceEod>`
+- `date` - Date
+- `open` - Opening price
+- `high` - Highest price
+- `low` - Lowest price
+- `close` - Closing price
+- `adjClose` - Adjusted closing price
+- `volume` - Trading volume
+- `unadjustedVolume` - Unadjusted volume
+- `change` - Price change
+- `changePercent` - Percentage change
+- `vwap` - Volume-weighted average price
+- `label` - Description
+- `changeOverTime` - Change over time
 
 **API endpoint:** `https://financialmodelingprep.com/stable/historical-price-eod/full`
 
@@ -859,65 +859,65 @@ Obsahuje všechny údaje z `BatchExchangeQuote` plus dodatečné informace:
 
 ### `historicalChart()`
 
-**Účel:** Získání historických intradenních cenových dat s různými časovými intervaly.
+**Purpose:** Retrieve historical intraday price data with various time intervals.
 
-**Parametry:**
+**Parameters:**
 - `symbol` (string) - Ticker symbol
-- `interval` (TimeInterval) - Časový interval (1min, 5min, 15min, 30min, 1hour, 4hour)
-- `from` (DateTimeImmutable) - Počáteční datum
-- `to` (DateTimeImmutable) - Konečné datum
+- `interval` (TimeInterval) - Time interval (1min, 5min, 15min, 30min, 1hour, 4hour)
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
 
-**Návratové hodnoty:** `iterable<HistoricalChart>`
-- `date` - Datum a čas
-- `open` - Otevírací cena
-- `low` - Nejnižší cena
-- `high` - Nejvyšší cena
-- `close` - Zavírací cena
-- `volume` - Objem obchodů
+**Return Values:** `iterable<HistoricalChart>`
+- `date` - Date and time
+- `open` - Opening price
+- `low` - Lowest price
+- `high` - Highest price
+- `close` - Closing price
+- `volume` - Trading volume
 
 **API endpoint:** `https://financialmodelingprep.com/stable/historical-chart/{interval}`
 
 ---
 
-## Finanční metriky a poměry
+## Financial Metrics and Ratios
 
 ### `keyMetrics()`
 
-**Účel:** Získání klíčových finančních metrik pro konkrétní společnost.
+**Purpose:** Retrieve key financial metrics for a specific company.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
-- `limit` (int, výchozí: 80) - Maximální počet záznamů
-- `period` (PeriodQuery, výchozí: Annual) - Období
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int, default: 80) - Maximum number of records
+- `period` (PeriodQuery, default: Annual) - Period
 
-**Návratové hodnoty:** `iterable<KeyMetrics>`
-Obsahuje mnoho klíčových metrik jako:
-- `revenuePerShare` - Výnosy na akcii
-- `netIncomePerShare` - Čistý zisk na akcii
-- `operatingCashFlowPerShare` - Provozní cash flow na akcii
-- `freeCashFlowPerShare` - Volný cash flow na akcii
-- `cashPerShare` - Hotovost na akcii
-- `bookValuePerShare` - Účetní hodnota na akcii
-- `tangibleBookValuePerShare` - Hmotná účetní hodnota na akcii
-- `shareholdersEquityPerShare` - Vlastní kapitál na akcii
-- `interestDebtPerShare` - Úročený dluh na akcii
-- `marketCap` - Tržní kapitalizace
-- `enterpriseValue` - Podniková hodnota
-- `peRatio` - P/E poměr
-- `priceToSalesRatio` - P/S poměr
-- `pocfratio` - Poměr ceny k provoznímu cash flow
-- `pfcfRatio` - Poměr ceny k volnému cash flow
-- `pbRatio` - P/B poměr
-- `ptbRatio` - Poměr ceny k hmotné účetní hodnotě
+**Return Values:** `iterable<KeyMetrics>`
+Contains many key metrics such as:
+- `revenuePerShare` - Revenue per share
+- `netIncomePerShare` - Net income per share
+- `operatingCashFlowPerShare` - Operating cash flow per share
+- `freeCashFlowPerShare` - Free cash flow per share
+- `cashPerShare` - Cash per share
+- `bookValuePerShare` - Book value per share
+- `tangibleBookValuePerShare` - Tangible book value per share
+- `shareholdersEquityPerShare` - Shareholders equity per share
+- `interestDebtPerShare` - Interest debt per share
+- `marketCap` - Market capitalization
+- `enterpriseValue` - Enterprise value
+- `peRatio` - P/E ratio
+- `priceToSalesRatio` - P/S ratio
+- `pocfratio` - Price to operating cash flow ratio
+- `pfcfRatio` - Price to free cash flow ratio
+- `pbRatio` - P/B ratio
+- `ptbRatio` - Price to tangible book value ratio
 - `evToSales` - EV/Sales
-- `evToOperatingCashFlow` - EV/Provozní cash flow
-- `evToFreeCashFlow` - EV/Volný cash flow
-- `earningsYield` - Výnosnost zisku
-- `freeCashFlowYield` - Výnosnost volného cash flow
-- `debtToEquity` - Poměr dluhu k vlastnímu kapitálu
-- `debtToAssets` - Poměr dluhu k aktivům
-- `netDebtToEBITDA` - Čistý dluh k EBITDA
-- A mnoho dalších metrik
+- `evToOperatingCashFlow` - EV/Operating cash flow
+- `evToFreeCashFlow` - EV/Free cash flow
+- `earningsYield` - Earnings yield
+- `freeCashFlowYield` - Free cash flow yield
+- `debtToEquity` - Debt to equity ratio
+- `debtToAssets` - Debt to assets ratio
+- `netDebtToEBITDA` - Net debt to EBITDA
+- And many other metrics
 
 **API endpoint:** `https://financialmodelingprep.com/stable/key-metrics`
 
@@ -925,12 +925,12 @@ Obsahuje mnoho klíčových metrik jako:
 
 ### `keyMetricsTtm()`
 
-**Účel:** Získání klíčových metrik TTM (Trailing Twelve Months - za posledních 12 měsíců) pro konkrétní symbol.
+**Purpose:** Retrieve key metrics TTM (Trailing Twelve Months) for a specific symbol.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
+**Parameters:**
+- `symbol` (string) - Ticker symbol
 
-**Návratové hodnoty:** `iterable<KeyMetricsTtm>` (stejná struktura jako `keyMetrics()`)
+**Return Values:** `iterable<KeyMetricsTtm>` (same structure as `keyMetrics()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/key-metrics-ttm`
 
@@ -938,11 +938,11 @@ Obsahuje mnoho klíčových metrik jako:
 
 ### `keyMetricsTtmBulk()`
 
-**Účel:** Hromadné získání klíčových metrik TTM pro všechny společnosti.
+**Purpose:** Bulk retrieval of key metrics TTM for all companies.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<KeyMetricsTtm>` (stejná struktura jako `keyMetrics()`)
+**Return Values:** `iterable<KeyMetricsTtm>` (same structure as `keyMetrics()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/key-metrics-ttm-bulk`
 
@@ -950,21 +950,21 @@ Obsahuje mnoho klíčových metrik jako:
 
 ### `ratios()`
 
-**Účel:** Získání finančních poměrů (ratios) pro konkrétní společnost.
+**Purpose:** Retrieve financial ratios for a specific company.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
-- `limit` (int, výchozí: 80) - Maximální počet záznamů
-- `period` (PeriodQuery, výchozí: Annual) - Období
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int, default: 80) - Maximum number of records
+- `period` (PeriodQuery, default: Annual) - Period
 
-**Návratové hodnoty:** `iterable<Ratios>`
-Obsahuje širokou škálu finančních poměrů včetně:
-- Poměry likvidity (currentRatio, quickRatio, cashRatio)
-- Poměry zadluženosti (debtRatio, debtEquityRatio)
-- Poměry rentability (grossProfitMargin, operatingProfitMargin, netProfitMargin, ROA, ROE)
-- Poměry efektivity (assetTurnover, inventoryTurnover)
-- Poměry tržní hodnoty (priceEarningsRatio, priceToBookRatio, dividendYield)
-- A mnoho dalších
+**Return Values:** `iterable<Ratios>`
+Contains a wide range of financial ratios including:
+- Liquidity ratios (currentRatio, quickRatio, cashRatio)
+- Leverage ratios (debtRatio, debtEquityRatio)
+- Profitability ratios (grossProfitMargin, operatingProfitMargin, netProfitMargin, ROA, ROE)
+- Efficiency ratios (assetTurnover, inventoryTurnover)
+- Market value ratios (priceEarningsRatio, priceToBookRatio, dividendYield)
+- And many others
 
 **API endpoint:** `https://financialmodelingprep.com/stable/ratios`
 
@@ -972,12 +972,12 @@ Obsahuje širokou škálu finančních poměrů včetně:
 
 ### `ratiosTtm()`
 
-**Účel:** Získání finančních poměrů TTM (za posledních 12 měsíců) pro konkrétní symbol.
+**Purpose:** Retrieve financial ratios TTM (trailing twelve months) for a specific symbol.
 
-**Parametry:**
-- `symbol` (string) - Ticker symbol společnosti
+**Parameters:**
+- `symbol` (string) - Ticker symbol
 
-**Návratové hodnoty:** `iterable<RatiosTtm>` (stejná struktura jako `ratios()`)
+**Return Values:** `iterable<RatiosTtm>` (same structure as `ratios()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/ratios-ttm`
 
@@ -985,67 +985,67 @@ Obsahuje širokou škálu finančních poměrů včetně:
 
 ### `ratiosTtmBulk()`
 
-**Účel:** Hromadné získání finančních poměrů TTM pro všechny společnosti.
+**Purpose:** Bulk retrieval of financial ratios TTM for all companies.
 
-**Parametry:** Žádné
+**Parameters:** None
 
-**Návratové hodnoty:** `iterable<RatiosTtm>` (stejná struktura jako `ratios()`)
+**Return Values:** `iterable<RatiosTtm>` (same structure as `ratios()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/ratios-ttm-bulk`
 
 ---
 
-## Pomocné metody
+## Utility Methods
 
 ### `promise()`
 
-**Účel:** Vytvoření asynchronního příslibu (Promise) pro neblokující operace.
+**Purpose:** Create an asynchronous promise for non-blocking operations.
 
-**Parametry:**
-- `fn` (callable) - Funkce, která má být spuštěna asynchronně
+**Parameters:**
+- `fn` (callable) - Function to be executed asynchronously
 
-**Návratové hodnoty:** `FmpPromise<TReturn>` - Promise objekt pro práci s asynchronními operacemi
+**Return Values:** `FmpPromise<TReturn>` - Promise object for working with asynchronous operations
 
 ---
 
 ### `iteratePages()`
 
-**Účel:** Pomocná metoda pro iteraci přes stránkované výsledky API.
+**Purpose:** Helper method for iterating through paginated API results.
 
-**Parametry:**
-- `callback` (callable) - Funkce, která vrací data pro danou stránku
-- `initialPage` (int, výchozí: 0) - Počáteční stránka
-- `maxPage` (int|null, výchozí: null) - Maximální stránka (včetně)
-- `maxPageGuard` (int|null, výchozí: null) - Bezpečnostní limit pro prevenci nekonečných smyček
+**Parameters:**
+- `callback` (callable) - Function that returns data for a given page
+- `initialPage` (int, default: 0) - Initial page
+- `maxPage` (int|null, default: null) - Maximum page (inclusive)
+- `maxPageGuard` (int|null, default: null) - Safety guard to prevent infinite loops
 
-**Návratové hodnoty:** `iterable<T>` - Iterátor přes všechny položky ze všech stránek
+**Return Values:** `iterable<T>` - Iterator over all items from all pages
 
 ---
 
 ### `withStrictMode()`
 
-**Účel:** Vytvoření nové instance klienta se zapnutým/vypnutým striktním režimem.
+**Purpose:** Create a new client instance with strict mode enabled/disabled.
 
-**Parametry:**
-- `strictMode` (bool) - True pro zapnutí striktního režimu (výjimky při chybách dat)
+**Parameters:**
+- `strictMode` (bool) - True to enable strict mode (exceptions on data errors)
 
-**Návratové hodnoty:** `FmpClient` - Nová instance klienta s daným nastavením
+**Return Values:** `FmpClient` - New client instance with the given setting
 
 ---
 
-## Poznámky k použití
+## Usage Notes
 
-### Paměťová efektivita
-Všechny metody vracející `iterable` používají streaming - data jsou zpracovávána průběžně, bez načtení celé odpovědi do paměti. To umožňuje práci s velkými datasety efektivně.
+### Memory Efficiency
+All methods returning `iterable` use streaming - data is processed progressively without loading the entire response into memory. This allows efficient handling of large datasets.
 
-### Asynchronní operace
-Pro paralelní volání více endpointů použijte metodu `promise()`, která využívá PHP Fibers pro neblokující operace.
+### Asynchronous Operations
+For parallel calls to multiple endpoints, use the `promise()` method, which leverages PHP Fibers for non-blocking operations.
 
-### Striktní režim
-Ve výchozím nastavení jsou chyby validace dat logované (pokud je nastaven handler), ale nezastaví zpracování. Ve striktním režimu (`strictMode = true`) jsou vyhazovány výjimky.
+### Strict Mode
+By default, data validation errors are logged (if a handler is set) but do not stop processing. In strict mode (`strictMode = true`), exceptions are thrown.
 
-### Stránkování
-Mnoho endpointů podporuje stránkování pomocí parametrů `page` a `limit`. Pro automatickou iteraci přes všechny stránky použijte pomocnou metodu `iteratePages()`.
+### Pagination
+Many endpoints support pagination using `page` and `limit` parameters. For automatic iteration through all pages, use the helper method `iteratePages()`.
 
-### Bulk endpointy
-Endpointy s příponou "Bulk" jsou optimalizované pro získání velkého množství dat najednou a často vrací data ve formátu CSV pro lepší výkon.
+### Bulk Endpoints
+Endpoints with "Bulk" suffix are optimized for retrieving large amounts of data at once and often return data in CSV format for better performance.
