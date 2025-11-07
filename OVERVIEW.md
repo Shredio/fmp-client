@@ -12,7 +12,6 @@ This document provides a comprehensive overview of all available endpoints (meth
 - [Event Calendars](#event-calendars)
 - [Market Data and Quotes](#market-data-and-quotes)
 - [Financial Metrics and Ratios](#financial-metrics-and-ratios)
-- [Utility Methods](#utility-methods)
 
 ---
 
@@ -995,57 +994,13 @@ Contains a wide range of financial ratios including:
 
 ---
 
-## Utility Methods
-
-### `promise()`
-
-**Purpose:** Create an asynchronous promise for non-blocking operations.
-
-**Parameters:**
-- `fn` (callable) - Function to be executed asynchronously
-
-**Return Values:** `FmpPromise<TReturn>` - Promise object for working with asynchronous operations
-
----
-
-### `iteratePages()`
-
-**Purpose:** Helper method for iterating through paginated API results.
-
-**Parameters:**
-- `callback` (callable) - Function that returns data for a given page
-- `initialPage` (int, default: 0) - Initial page
-- `maxPage` (int|null, default: null) - Maximum page (inclusive)
-- `maxPageGuard` (int|null, default: null) - Safety guard to prevent infinite loops
-
-**Return Values:** `iterable<T>` - Iterator over all items from all pages
-
----
-
-### `withStrictMode()`
-
-**Purpose:** Create a new client instance with strict mode enabled/disabled.
-
-**Parameters:**
-- `strictMode` (bool) - True to enable strict mode (exceptions on data errors)
-
-**Return Values:** `FmpClient` - New client instance with the given setting
-
----
-
 ## Usage Notes
 
 ### Memory Efficiency
 All methods returning `iterable` use streaming - data is processed progressively without loading the entire response into memory. This allows efficient handling of large datasets.
 
-### Asynchronous Operations
-For parallel calls to multiple endpoints, use the `promise()` method, which leverages PHP Fibers for non-blocking operations.
-
-### Strict Mode
-By default, data validation errors are logged (if a handler is set) but do not stop processing. In strict mode (`strictMode = true`), exceptions are thrown.
-
 ### Pagination
-Many endpoints support pagination using `page` and `limit` parameters. For automatic iteration through all pages, use the helper method `iteratePages()`.
+Many endpoints support pagination using `page` and `limit` parameters.
 
 ### Bulk Endpoints
 Endpoints with "Bulk" suffix are optimized for retrieving large amounts of data at once and often return data in CSV format for better performance.
