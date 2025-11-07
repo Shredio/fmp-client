@@ -419,18 +419,67 @@ This document provides a comprehensive overview of all available endpoints (meth
 - `period` (PeriodQuery|Period, default: FY) - Period (FY=annual, Q1-Q4=quarterly)
 
 **Return Values:** `iterable<BalanceSheetStatement>`
-Contains complete balance sheet including:
-- `date` - Statement date
 - `symbol` - Ticker symbol
+- `date` - Statement date
 - `reportedCurrency` - Reporting currency
 - `cik` - CIK number
-- `fillingDate` - Filing date
+- `filingDate` - Filing date
 - `acceptedDate` - Acceptance date
-- `calendarYear` - Calendar year
+- `fiscalYear` - Fiscal year
 - `period` - Period
-- Assets (e.g., `cashAndCashEquivalents`, `inventory`, `totalAssets`)
-- Liabilities (e.g., `totalLiabilities`, `totalStockholdersEquity`)
-- And many other accounting items
+- `cashAndCashEquivalents` - Cash and cash equivalents
+- `shortTermInvestments` - Short-term investments
+- `cashAndShortTermInvestments` - Cash and short-term investments
+- `netReceivables` - Net receivables
+- `accountsReceivables` - Accounts receivables
+- `otherReceivables` - Other receivables
+- `inventory` - Inventory
+- `prepaids` - Prepaid expenses
+- `otherCurrentAssets` - Other current assets
+- `totalCurrentAssets` - Total current assets
+- `propertyPlantEquipmentNet` - Property, plant and equipment (net)
+- `goodwill` - Goodwill
+- `intangibleAssets` - Intangible assets
+- `goodwillAndIntangibleAssets` - Goodwill and intangible assets
+- `longTermInvestments` - Long-term investments
+- `taxAssets` - Tax assets
+- `otherNonCurrentAssets` - Other non-current assets
+- `totalNonCurrentAssets` - Total non-current assets
+- `otherAssets` - Other assets
+- `totalAssets` - Total assets
+- `totalPayables` - Total payables
+- `accountPayables` - Account payables
+- `otherPayables` - Other payables
+- `accruedExpenses` - Accrued expenses
+- `shortTermDebt` - Short-term debt
+- `capitalLeaseObligationsCurrent` - Current capital lease obligations
+- `taxPayables` - Tax payables
+- `deferredRevenue` - Deferred revenue
+- `otherCurrentLiabilities` - Other current liabilities
+- `totalCurrentLiabilities` - Total current liabilities
+- `longTermDebt` - Long-term debt
+- `capitalLeaseObligationsNonCurrent` - Non-current capital lease obligations
+- `deferredRevenueNonCurrent` - Non-current deferred revenue
+- `deferredTaxLiabilitiesNonCurrent` - Non-current deferred tax liabilities
+- `otherNonCurrentLiabilities` - Other non-current liabilities
+- `totalNonCurrentLiabilities` - Total non-current liabilities
+- `otherLiabilities` - Other liabilities
+- `capitalLeaseObligations` - Capital lease obligations
+- `totalLiabilities` - Total liabilities
+- `treasuryStock` - Treasury stock
+- `preferredStock` - Preferred stock
+- `commonStock` - Common stock
+- `retainedEarnings` - Retained earnings
+- `additionalPaidInCapital` - Additional paid-in capital
+- `accumulatedOtherComprehensiveIncomeLoss` - Accumulated other comprehensive income/loss
+- `otherTotalStockholdersEquity` - Other total stockholders equity
+- `totalStockholdersEquity` - Total stockholders equity
+- `totalEquity` - Total equity
+- `minorityInterest` - Minority interest
+- `totalLiabilitiesAndTotalEquity` - Total liabilities and total equity
+- `totalInvestments` - Total investments
+- `totalDebt` - Total debt
+- `netDebt` - Net debt
 
 **API endpoint:** `https://financialmodelingprep.com/stable/balance-sheet-statement`
 
@@ -460,18 +509,45 @@ Contains complete balance sheet including:
 - `period` (PeriodQuery|Period, default: FY) - Period
 
 **Return Values:** `iterable<IncomeStatement>`
-Contains complete income statement including:
-- `date` - Statement date
 - `symbol` - Ticker symbol
-- `reportedCurrency` - Currency
+- `date` - Statement date
+- `reportedCurrency` - Reporting currency
+- `cik` - CIK number
+- `filingDate` - Filing date
+- `acceptedDate` - Acceptance date
+- `fiscalYear` - Fiscal year
+- `period` - Period
 - `revenue` - Revenue
 - `costOfRevenue` - Cost of revenue
 - `grossProfit` - Gross profit
-- `operatingIncome` - Operating income
-- `netIncome` - Net income
-- `eps` - Earnings per share
+- `researchAndDevelopmentExpenses` - Research and development expenses
+- `generalAndAdministrativeExpenses` - General and administrative expenses
+- `sellingAndMarketingExpenses` - Selling and marketing expenses
+- `sellingGeneralAndAdministrativeExpenses` - Selling, general and administrative expenses
+- `otherExpenses` - Other expenses
+- `operatingExpenses` - Operating expenses
+- `costAndExpenses` - Cost and expenses
+- `netInterestIncome` - Net interest income
+- `interestIncome` - Interest income
+- `interestExpense` - Interest expense
+- `depreciationAndAmortization` - Depreciation and amortization
 - `ebitda` - EBITDA
-- And many other items
+- `ebit` - EBIT
+- `nonOperatingIncomeExcludingInterest` - Non-operating income excluding interest
+- `operatingIncome` - Operating income
+- `totalOtherIncomeExpensesNet` - Total other income/expenses (net)
+- `incomeBeforeTax` - Income before tax
+- `incomeTaxExpense` - Income tax expense
+- `netIncomeFromContinuingOperations` - Net income from continuing operations
+- `netIncomeFromDiscontinuedOperations` - Net income from discontinued operations
+- `otherAdjustmentsToNetIncome` - Other adjustments to net income
+- `netIncome` - Net income
+- `netIncomeDeductions` - Net income deductions
+- `bottomLineNetIncome` - Bottom line net income
+- `eps` - Earnings per share (basic)
+- `epsDiluted` - Earnings per share (diluted)
+- `weightedAverageShsOut` - Weighted average shares outstanding
+- `weightedAverageShsOutDil` - Weighted average shares outstanding (diluted)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/income-statement`
 
@@ -501,17 +577,53 @@ Contains complete income statement including:
 - `period` (PeriodQuery|Period, default: FY) - Period
 
 **Return Values:** `iterable<CashFlowStatement>`
-Contains complete cash flow statement including:
-- `date` - Statement date
 - `symbol` - Ticker symbol
-- `reportedCurrency` - Currency
+- `date` - Statement date
+- `reportedCurrency` - Reporting currency
+- `cik` - CIK number
+- `filingDate` - Filing date
+- `acceptedDate` - Acceptance date
+- `fiscalYear` - Fiscal year
+- `period` - Period
+- `netIncome` - Net income
+- `depreciationAndAmortization` - Depreciation and amortization
+- `deferredIncomeTax` - Deferred income tax
+- `stockBasedCompensation` - Stock-based compensation
+- `changeInWorkingCapital` - Change in working capital
+- `accountsReceivables` - Accounts receivables
+- `inventory` - Inventory
+- `accountsPayables` - Accounts payables
+- `otherWorkingCapital` - Other working capital
+- `otherNonCashItems` - Other non-cash items
+- `netCashProvidedByOperatingActivities` - Net cash provided by operating activities
+- `investmentsInPropertyPlantAndEquipment` - Investments in property, plant and equipment
+- `acquisitionsNet` - Acquisitions (net)
+- `purchasesOfInvestments` - Purchases of investments
+- `salesMaturitiesOfInvestments` - Sales/maturities of investments
+- `otherInvestingActivities` - Other investing activities
+- `netCashProvidedByInvestingActivities` - Net cash provided by investing activities
+- `netDebtIssuance` - Net debt issuance
+- `longTermNetDebtIssuance` - Long-term net debt issuance
+- `shortTermNetDebtIssuance` - Short-term net debt issuance
+- `netStockIssuance` - Net stock issuance
+- `netCommonStockIssuance` - Net common stock issuance
+- `commonStockIssuance` - Common stock issuance
+- `commonStockRepurchased` - Common stock repurchased
+- `netPreferredStockIssuance` - Net preferred stock issuance
+- `netDividendsPaid` - Net dividends paid
+- `commonDividendsPaid` - Common dividends paid
+- `preferredDividendsPaid` - Preferred dividends paid
+- `otherFinancingActivities` - Other financing activities
+- `netCashProvidedByFinancingActivities` - Net cash provided by financing activities
+- `effectOfForexChangesOnCash` - Effect of forex changes on cash
+- `netChangeInCash` - Net change in cash
+- `cashAtEndOfPeriod` - Cash at end of period
+- `cashAtBeginningOfPeriod` - Cash at beginning of period
 - `operatingCashFlow` - Operating cash flow
 - `capitalExpenditure` - Capital expenditure
 - `freeCashFlow` - Free cash flow
-- `netCashProvidedByOperatingActivities` - Cash flow from operating activities
-- `netCashUsedForInvestingActivities` - Cash flow from investing activities
-- `netCashUsedProvidedByFinancingActivities` - Cash flow from financing activities
-- And many other items
+- `incomeTaxesPaid` - Income taxes paid
+- `interestPaid` - Interest paid
 
 **API endpoint:** `https://financialmodelingprep.com/stable/cash-flow-statement`
 
@@ -890,33 +1002,53 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `period` (PeriodQuery, default: Annual) - Period
 
 **Return Values:** `iterable<KeyMetrics>`
-Contains many key metrics such as:
-- `revenuePerShare` - Revenue per share
-- `netIncomePerShare` - Net income per share
-- `operatingCashFlowPerShare` - Operating cash flow per share
-- `freeCashFlowPerShare` - Free cash flow per share
-- `cashPerShare` - Cash per share
-- `bookValuePerShare` - Book value per share
-- `tangibleBookValuePerShare` - Tangible book value per share
-- `shareholdersEquityPerShare` - Shareholders equity per share
-- `interestDebtPerShare` - Interest debt per share
+- `symbol` - Ticker symbol
+- `date` - Date
+- `fiscalYear` - Fiscal year
+- `period` - Period
+- `reportedCurrency` - Reported currency
 - `marketCap` - Market capitalization
 - `enterpriseValue` - Enterprise value
-- `peRatio` - P/E ratio
-- `priceToSalesRatio` - P/S ratio
-- `pocfratio` - Price to operating cash flow ratio
-- `pfcfRatio` - Price to free cash flow ratio
-- `pbRatio` - P/B ratio
-- `ptbRatio` - Price to tangible book value ratio
-- `evToSales` - EV/Sales
-- `evToOperatingCashFlow` - EV/Operating cash flow
-- `evToFreeCashFlow` - EV/Free cash flow
+- `evToSales` - EV to sales ratio
+- `evToOperatingCashFlow` - EV to operating cash flow ratio
+- `evToFreeCashFlow` - EV to free cash flow ratio
+- `evToEBITDA` - EV to EBITDA ratio
+- `netDebtToEBITDA` - Net debt to EBITDA ratio
+- `currentRatio` - Current ratio
+- `incomeQuality` - Income quality
+- `grahamNumber` - Graham number
+- `grahamNetNet` - Graham net-net
+- `taxBurden` - Tax burden
+- `interestBurden` - Interest burden
+- `workingCapital` - Working capital
+- `investedCapital` - Invested capital
+- `returnOnAssets` - Return on assets (ROA)
+- `operatingReturnOnAssets` - Operating return on assets
+- `returnOnTangibleAssets` - Return on tangible assets
+- `returnOnEquity` - Return on equity (ROE)
+- `returnOnInvestedCapital` - Return on invested capital (ROIC)
+- `returnOnCapitalEmployed` - Return on capital employed (ROCE)
 - `earningsYield` - Earnings yield
 - `freeCashFlowYield` - Free cash flow yield
-- `debtToEquity` - Debt to equity ratio
-- `debtToAssets` - Debt to assets ratio
-- `netDebtToEBITDA` - Net debt to EBITDA
-- And many other metrics
+- `capexToOperatingCashFlow` - Capex to operating cash flow ratio
+- `capexToDepreciation` - Capex to depreciation ratio
+- `capexToRevenue` - Capex to revenue ratio
+- `salesGeneralAndAdministrativeToRevenue` - SG&A to revenue ratio
+- `researchAndDevelopementToRevenue` - R&D to revenue ratio
+- `stockBasedCompensationToRevenue` - Stock-based compensation to revenue ratio
+- `intangiblesToTotalAssets` - Intangibles to total assets ratio
+- `averageReceivables` - Average receivables
+- `averagePayables` - Average payables
+- `averageInventory` - Average inventory
+- `daysOfSalesOutstanding` - Days sales outstanding (DSO)
+- `daysOfPayablesOutstanding` - Days payables outstanding (DPO)
+- `daysOfInventoryOutstanding` - Days inventory outstanding (DIO)
+- `operatingCycle` - Operating cycle
+- `cashConversionCycle` - Cash conversion cycle
+- `freeCashFlowToEquity` - Free cash flow to equity
+- `freeCashFlowToFirm` - Free cash flow to firm
+- `tangibleAssetValue` - Tangible asset value
+- `netCurrentAssetValue` - Net current asset value
 
 **API endpoint:** `https://financialmodelingprep.com/stable/key-metrics`
 
@@ -957,13 +1089,70 @@ Contains many key metrics such as:
 - `period` (PeriodQuery, default: Annual) - Period
 
 **Return Values:** `iterable<Ratios>`
-Contains a wide range of financial ratios including:
-- Liquidity ratios (currentRatio, quickRatio, cashRatio)
-- Leverage ratios (debtRatio, debtEquityRatio)
-- Profitability ratios (grossProfitMargin, operatingProfitMargin, netProfitMargin, ROA, ROE)
-- Efficiency ratios (assetTurnover, inventoryTurnover)
-- Market value ratios (priceEarningsRatio, priceToBookRatio, dividendYield)
-- And many others
+- `symbol` - Ticker symbol
+- `date` - Date
+- `fiscalYear` - Fiscal year
+- `period` - Period
+- `reportedCurrency` - Reported currency
+- `grossProfitMargin` - Gross profit margin
+- `ebitMargin` - EBIT margin
+- `ebitdaMargin` - EBITDA margin
+- `operatingProfitMargin` - Operating profit margin
+- `pretaxProfitMargin` - Pretax profit margin
+- `continuousOperationsProfitMargin` - Continuous operations profit margin
+- `netProfitMargin` - Net profit margin
+- `bottomLineProfitMargin` - Bottom line profit margin
+- `receivablesTurnover` - Receivables turnover
+- `payablesTurnover` - Payables turnover
+- `inventoryTurnover` - Inventory turnover
+- `fixedAssetTurnover` - Fixed asset turnover
+- `assetTurnover` - Asset turnover
+- `currentRatio` - Current ratio
+- `quickRatio` - Quick ratio
+- `solvencyRatio` - Solvency ratio
+- `cashRatio` - Cash ratio
+- `priceToEarningsRatio` - Price to earnings ratio (P/E)
+- `priceToEarningsGrowthRatio` - Price to earnings growth ratio (PEG)
+- `forwardPriceToEarningsGrowthRatio` - Forward price to earnings growth ratio
+- `priceToBookRatio` - Price to book ratio (P/B)
+- `priceToSalesRatio` - Price to sales ratio (P/S)
+- `priceToFreeCashFlowRatio` - Price to free cash flow ratio
+- `priceToOperatingCashFlowRatio` - Price to operating cash flow ratio
+- `debtToAssetsRatio` - Debt to assets ratio
+- `debtToEquityRatio` - Debt to equity ratio
+- `debtToCapitalRatio` - Debt to capital ratio
+- `longTermDebtToCapitalRatio` - Long-term debt to capital ratio
+- `financialLeverageRatio` - Financial leverage ratio
+- `workingCapitalTurnoverRatio` - Working capital turnover ratio
+- `operatingCashFlowRatio` - Operating cash flow ratio
+- `operatingCashFlowSalesRatio` - Operating cash flow sales ratio
+- `freeCashFlowOperatingCashFlowRatio` - Free cash flow to operating cash flow ratio
+- `debtServiceCoverageRatio` - Debt service coverage ratio
+- `interestCoverageRatio` - Interest coverage ratio
+- `shortTermOperatingCashFlowCoverageRatio` - Short-term operating cash flow coverage ratio
+- `operatingCashFlowCoverageRatio` - Operating cash flow coverage ratio
+- `capitalExpenditureCoverageRatio` - Capital expenditure coverage ratio
+- `dividendPaidAndCapexCoverageRatio` - Dividend paid and capex coverage ratio
+- `dividendPayoutRatio` - Dividend payout ratio
+- `dividendYield` - Dividend yield
+- `dividendYieldPercentage` - Dividend yield percentage
+- `revenuePerShare` - Revenue per share
+- `netIncomePerShare` - Net income per share
+- `interestDebtPerShare` - Interest debt per share
+- `cashPerShare` - Cash per share
+- `bookValuePerShare` - Book value per share
+- `tangibleBookValuePerShare` - Tangible book value per share
+- `shareholdersEquityPerShare` - Shareholders equity per share
+- `operatingCashFlowPerShare` - Operating cash flow per share
+- `capexPerShare` - Capex per share
+- `freeCashFlowPerShare` - Free cash flow per share
+- `netIncomePerEBT` - Net income per EBT
+- `ebtPerEbit` - EBT per EBIT
+- `priceToFairValue` - Price to fair value
+- `debtToMarketCap` - Debt to market cap
+- `effectiveTaxRate` - Effective tax rate
+- `enterpriseValueMultiple` - Enterprise value multiple
+- `dividendPerShare` - Dividend per share
 
 **API endpoint:** `https://financialmodelingprep.com/stable/ratios`
 
