@@ -38,6 +38,11 @@ When implementing new FMP API endpoints:
 5. Create test fixtures in `tests/Unit/fixtures/`, save **full** response body from the API to the `tests/Unit/fixtures`.
 6. Write comprehensive tests covering both success and error cases
 7. Update README.md with the new endpoint documentation
+8. Update OVERVIEW.md with the new endpoint:
+   - Add method to the appropriate category section
+   - Include method name, purpose, parameters, and **complete** list of all return values
+   - List all return value fields with their descriptions (do not use "and many others" or similar shortcuts)
+   - Add API endpoint URL without the API key parameter
 
 ### Payload Classes
 
