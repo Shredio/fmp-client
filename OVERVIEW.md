@@ -991,16 +991,3 @@ Contains a wide range of financial ratios including:
 **Return Values:** `iterable<RatiosTtm>` (same structure as `ratios()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/ratios-ttm-bulk`
-
----
-
-## Usage Notes
-
-### Memory Efficiency
-All methods returning `iterable` use streaming - data is processed progressively without loading the entire response into memory. This allows efficient handling of large datasets.
-
-### Pagination
-Many endpoints support pagination using `page` and `limit` parameters.
-
-### Bulk Endpoints
-Endpoints with "Bulk" suffix are optimized for retrieving large amounts of data at once and often return data in CSV format for better performance.
