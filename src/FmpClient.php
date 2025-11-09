@@ -7,6 +7,7 @@ use LogicException;
 use Psr\Log\LoggerInterface;
 use SensitiveParameter;
 use Shredio\FmpClient\Calendar\FmpCalendarPaginator;
+use Shredio\FmpClient\Converter\LenientAndEmptyNumberConverter;
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Enum\PeriodQuery;
 use Shredio\FmpClient\Enum\TimeInterval;
@@ -96,9 +97,12 @@ use Shredio\TypeSchema\Config\TypeConfig;
 use Shredio\TypeSchema\Conversion\ConfigurableConversionStrategy;
 use Shredio\TypeSchema\Conversion\ConversionStrategyFactory;
 use Shredio\TypeSchema\Conversion\Converter\Array\LenientArrayConverter;
+use Shredio\TypeSchema\Conversion\Converter\Bool\LenientBoolConverter;
 use Shredio\TypeSchema\Conversion\Converter\Bool\StrictBoolConverter;
 use Shredio\TypeSchema\Conversion\Converter\Null\LenientNullConverter;
 use Shredio\TypeSchema\Conversion\Converter\Number\JsonNumberConverter;
+use Shredio\TypeSchema\Conversion\Converter\Number\LenientNumberConverter;
+use Shredio\TypeSchema\Conversion\Converter\String\LenientStringConverter;
 use Shredio\TypeSchema\Conversion\Converter\String\StrictStringConverter;
 use Shredio\TypeSchema\Conversion\Object\LenientObjectSupervisor;
 use Shredio\TypeSchema\Error\ErrorElement;
@@ -471,8 +475,9 @@ final readonly class FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/balance-sheet-statement-bulk', ['year' => $year, 'period' => $period->value]);
 
+		$config = $this->createTypeConfigForStatements();
 		foreach ($this->requestCsv('stable/balance-sheet-statement-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
-			$object = $this->map(BalanceSheetStatement::class, new BalanceSheetStatementMapper(), $item, $url, true);
+			$object = $this->map(BalanceSheetStatement::class, new BalanceSheetStatementMapper(), $item, $url, true, $config);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -664,8 +669,9 @@ final readonly class FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/income-statement-bulk', ['year' => $year, 'period' => $period->value]);
 
+		$config = $this->createTypeConfigForStatements();
 		foreach ($this->requestCsv('stable/income-statement-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
-			$object = $this->map(IncomeStatement::class, new IncomeStatementMapper(), $item, $url, true);
+			$object = $this->map(IncomeStatement::class, new IncomeStatementMapper(), $item, $url, true, $config);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -700,8 +706,9 @@ final readonly class FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/cash-flow-statement-bulk', ['year' => $year, 'period' => $period->value]);
 
+		$config = $this->createTypeConfigForStatements();
 		foreach ($this->requestCsv('stable/cash-flow-statement-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
-			$object = $this->map(CashFlowStatement::class, new CashFlowStatementMapper(), $item, $url, true);
+			$object = $this->map(CashFlowStatement::class, new CashFlowStatementMapper(), $item, $url, true, $config);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -1202,9 +1209,16 @@ final readonly class FmpClient
 	 * @param Type<TRet> $type
 	 * @return TRet|null
 	 */
-	private function map(string $payload, Type $type, mixed $value, string $url, bool $isCsv = false): ?object
+	private function map(
+		string $payload,
+		Type $type,
+		mixed $value,
+		string $url,
+		bool $isCsv = false,
+		?TypeConfig $config = null,
+	): ?object
 	{
-		$config = $isCsv ? $this->csvTypeConfig : $this->jsonTypeConfig;
+		$config ??= $isCsv ? $this->csvTypeConfig : $this->jsonTypeConfig;
 
 		$value = $this->schemaProcessor->parse($value, $type, $config, true);
 		if ($value instanceof ErrorElement) {
@@ -1222,6 +1236,18 @@ final readonly class FmpClient
 		}
 
 		return $value;
+	}
+
+	private function createTypeConfigForStatements(): TypeConfig
+	{
+		return new TypeConfig(new ConfigurableConversionStrategy(
+			new LenientStringConverter(),
+			new LenientAndEmptyNumberConverter(new LenientNumberConverter()),
+			new LenientBoolConverter(),
+			new LenientNullConverter(),
+			new LenientArrayConverter(),
+			new LenientObjectSupervisor(),
+		));
 	}
 
 	/**
