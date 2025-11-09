@@ -51,8 +51,8 @@ final readonly class IncomeStatement
 		public float $bottomLineNetIncome = 0.0,
 		public float $eps = 0.0,
 		public float $epsDiluted = 0.0,
-		public int $weightedAverageShsOut = 0,
-		public int $weightedAverageShsOutDil = 0,
+		public int|float $weightedAverageShsOut = 0,
+		public int|float $weightedAverageShsOutDil = 0,
 	)
 	{
 	}
@@ -97,8 +97,8 @@ final readonly class IncomeStatement
 	 *     bottomLineNetIncome: float,
 	 *     eps: float,
 	 *     epsDiluted: float,
-	 *     weightedAverageShsOut: int,
-	 *     weightedAverageShsOutDil: int
+	 *     weightedAverageShsOut: int|float,
+	 *     weightedAverageShsOutDil: int|float
 	 * }
 	 */
 	public function toArray(): array

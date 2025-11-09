@@ -65,8 +65,8 @@ final readonly class IncomeStatementMapper extends Type
 			'bottomLineNetIncome' => $ts->optional($ts->float()),
 			'eps' => $ts->optional($ts->float()),
 			'epsDiluted' => $ts->optional($ts->float()),
-			'weightedAverageShsOut' => $ts->optional($ts->int()),
-			'weightedAverageShsOutDil' => $ts->optional($ts->int()),
+			'weightedAverageShsOut' => $ts->optional($ts->union([$ts->int(), $ts->float()])),
+			'weightedAverageShsOutDil' => $ts->optional($ts->union([$ts->int(), $ts->float()])),
 		],
 			identifier: 'symbol',
 		);
