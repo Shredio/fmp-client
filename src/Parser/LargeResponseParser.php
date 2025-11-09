@@ -5,6 +5,7 @@ namespace Shredio\FmpClient\Parser;
 use JsonMachine\Items;
 use JsonMachine\JsonDecoder\ExtJsonDecoder;
 use League\Csv\Reader;
+use Shredio\FmpClient\Exception\UnexpectedHttpCodeException;
 use Symfony\Component\HttpClient\Response\StreamableInterface;
 use Symfony\Component\HttpClient\Response\StreamWrapper;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
@@ -26,6 +27,15 @@ final readonly class LargeResponseParser
 	 */
 	public function parseCsv(HttpClientInterface $client, ResponseInterface $response): iterable
 	{
+		if ($response->getStatusCode() !== 200) {
+			$response->cancel();
+
+			throw new UnexpectedHttpCodeException(sprintf(
+				'Unexpected HTTP status code %d received when parsing CSV response.',
+				$response->getStatusCode()
+			));
+		}
+
 		$reader = Reader::from(StreamWrapper::createResource($response, $client));
 		$reader->setHeaderOffset(0);
 
@@ -46,6 +56,15 @@ final readonly class LargeResponseParser
 	 */
 	public function parseJson(HttpClientInterface $client, ResponseInterface $response): iterable
 	{
+		if ($response->getStatusCode() !== 200) {
+			$response->cancel();
+
+			throw new UnexpectedHttpCodeException(sprintf(
+				'Unexpected HTTP status code %d received when parsing JSON response.',
+				$response->getStatusCode()
+			));
+		}
+
 		$parser = static function (ResponseInterface $response) use ($client): iterable {
 			if ($response instanceof StreamableInterface) {
 				return Items::fromStream($response->toStream(), [
