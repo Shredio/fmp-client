@@ -16,19 +16,31 @@ final readonly class Scores
 		public string $reportedCurrency,
 		public float|null $altmanZScore = null,
 		public int|null $piotroskiScore = null,
-		public int|null $workingCapital = null,
-		public int|null $totalAssets = null,
+		public int|float|null $workingCapital = null,
+		public int|float|null $totalAssets = null,
 		public int|float|null $retainedEarnings = null,
 		public int|float|null $ebit = null,
-		public int|null $marketCap = null,
-		public int|null $totalLiabilities = null,
-		public int|null $revenue = null,
+		public int|float|null $marketCap = null,
+		public int|float|null $totalLiabilities = null,
+		public int|float|null $revenue = null,
 	)
 	{
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, reportedCurrency: string, altmanZScore: float|null, piotroskiScore: int|null, workingCapital: int|null, totalAssets: int|null, retainedEarnings: float|null, ebit: float|null, marketCap: int|null, totalLiabilities: int|null, revenue: int|null}
+	 * @return array{
+	 *     symbol: non-empty-string,
+	 *     reportedCurrency: string,
+	 *     altmanZScore: float|null,
+	 *     piotroskiScore: int|null,
+	 *     workingCapital: int|float|null,
+	 *     totalAssets: int|float|null,
+	 *     retainedEarnings: int|float|null,
+	 *     ebit: int|float|null,
+	 *     marketCap: int|float|null,
+	 *     totalLiabilities: int|float|null,
+	 *     revenue: int|float|null
+	 * }
 	 */
 	public function toArray(): array
 	{
