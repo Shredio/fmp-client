@@ -1169,7 +1169,7 @@ final readonly class FmpClient
 
 	/**
 	 * @template T
-	 * @param callable(int<0, max> $page): array<T> $callback
+	 * @param callable(int<0, max> $page): iterable<T> $callback
 	 * @param int<0, max> $initialPage
 	 * @param int<0, max>|null $maxPage Inclusive
 	 * @param int<1, max>|null $maxPageGuard Safety guard to prevent infinite loops
