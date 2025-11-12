@@ -27,7 +27,7 @@ final readonly class StockNewsMapper extends Type
 		// 1. Define schema
 		$schema = $ts->arrayShape(
 			[
-			'symbol' => $ts->nonEmptyString(),
+			'symbol' => $ts->nullable($ts->nonEmptyString()),
 			'publishedDate' => $ts->nonEmptyString(),
 			'publisher' => $ts->nonEmptyString(),
 			'title' => $ts->nonEmptyString(),

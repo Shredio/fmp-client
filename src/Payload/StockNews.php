@@ -9,7 +9,7 @@ final readonly class StockNews
 {
 
 	/**
-	 * @param non-empty-string $symbol
+	 * @param non-empty-string|null $symbol
 	 * @param non-empty-string $publishedDate
 	 * @param non-empty-string $publisher
 	 * @param non-empty-string $title
@@ -19,7 +19,7 @@ final readonly class StockNews
 	 * @param non-empty-string $url
 	 */
 	public function __construct(
-		public string $symbol,
+		public ?string $symbol,
 		public string $publishedDate,
 		public string $publisher,
 		public string $title,
@@ -32,7 +32,7 @@ final readonly class StockNews
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, publishedDate: non-empty-string, publisher: non-empty-string, title: non-empty-string, image: non-empty-string|null, site: non-empty-string, text: non-empty-string, url: non-empty-string}
+	 * @return array{symbol: non-empty-string|null, publishedDate: non-empty-string, publisher: non-empty-string, title: non-empty-string, image: non-empty-string|null, site: non-empty-string, text: non-empty-string, url: non-empty-string}
 	 */
 	public function toArray(): array
 	{
