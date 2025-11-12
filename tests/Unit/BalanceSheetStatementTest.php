@@ -153,4 +153,76 @@ final class BalanceSheetStatementTest extends TestCase
 		))->toArray(), $statements[0]->toArray());
 	}
 
+	public function testBalanceSheetStatementWithNullValues(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/balance-sheet-statement-null-values.json');
+
+		$statements = iterator_to_array($client->balanceSheetStatement('AAPL'));
+
+		$this->assertNotEmpty($statements);
+		$this->assertSame((new BalanceSheetStatement(
+			symbol: 'AAPL',
+			date: '2024-09-28',
+			reportedCurrency: 'USD',
+			cik: '0000320193',
+			filingDate: '2024-11-01',
+			acceptedDate: '2024-11-01 06:01:36',
+			fiscalYear: '2024',
+			period: Period::FY,
+			cashAndCashEquivalents: 0,
+			shortTermInvestments: 0,
+			cashAndShortTermInvestments: 0,
+			netReceivables: 0,
+			accountsReceivables: 0,
+			otherReceivables: 0,
+			inventory: 0,
+			prepaids: 0,
+			otherCurrentAssets: 0,
+			totalCurrentAssets: 0,
+			propertyPlantEquipmentNet: 0,
+			goodwill: 0,
+			intangibleAssets: 0,
+			goodwillAndIntangibleAssets: 0,
+			longTermInvestments: 0,
+			taxAssets: 0,
+			otherNonCurrentAssets: 0,
+			totalNonCurrentAssets: 0,
+			otherAssets: 0,
+			totalAssets: 0,
+			totalPayables: 0,
+			accountPayables: 0,
+			otherPayables: 0,
+			accruedExpenses: 0,
+			shortTermDebt: 0,
+			capitalLeaseObligationsCurrent: 0,
+			taxPayables: 0,
+			deferredRevenue: 0,
+			otherCurrentLiabilities: 0,
+			totalCurrentLiabilities: 0,
+			longTermDebt: 0,
+			capitalLeaseObligationsNonCurrent: 0,
+			deferredRevenueNonCurrent: 0,
+			deferredTaxLiabilitiesNonCurrent: 0,
+			otherNonCurrentLiabilities: 0,
+			totalNonCurrentLiabilities: 0,
+			otherLiabilities: 0,
+			capitalLeaseObligations: 0,
+			totalLiabilities: 0,
+			treasuryStock: 0,
+			preferredStock: 0,
+			commonStock: 0,
+			retainedEarnings: 0,
+			additionalPaidInCapital: 0,
+			accumulatedOtherComprehensiveIncomeLoss: 0,
+			otherTotalStockholdersEquity: 0,
+			totalStockholdersEquity: 0,
+			totalEquity: 0,
+			minorityInterest: 0,
+			totalLiabilitiesAndTotalEquity: 0,
+			totalInvestments: 0,
+			totalDebt: 0,
+			netDebt: 0,
+		))->toArray(), $statements[0]->toArray());
+	}
+
 }

@@ -22,6 +22,8 @@ final readonly class IncomeStatementMapper extends Type
 {
 	public function parse(mixed $valueToParse, TypeContext $context): ErrorElement|IncomeStatement
 	{
+		$context = IncomeStatement::createContext($context);
+
 		// 0. Initialize TypeSchema
 		$ts = TypeSchema::get();
 

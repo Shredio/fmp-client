@@ -4,9 +4,11 @@ namespace Shredio\FmpClient\Payload;
 
 use Shredio\FmpClient\Enum\Period;
 
+use Shredio\FmpClient\TypeSchema\NullAsZeroConversion;
+use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 
-#[CompileObjectMapper(identifier: 'symbol')]
+#[CompileObjectMapper(identifier: 'symbol', contextFactory: 'createContext')]
 final readonly class BalanceSheetStatement
 {
 
@@ -210,6 +212,14 @@ final readonly class BalanceSheetStatement
 			'totalDebt' => $this->totalDebt,
 			'netDebt' => $this->netDebt,
 		];
+	}
+
+	/**
+	 * @internal Internal method for object mapper
+	 */
+	public static function createContext(TypeContext $context): TypeContext
+	{
+		return $context->withConversionStrategy(new NullAsZeroConversion($context->conversionStrategy));
 	}
 
 }

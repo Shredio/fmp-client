@@ -125,4 +125,62 @@ final class CashFlowStatementTest extends TestCase
 		))->toArray(), $statements[0]->toArray());
 	}
 
+	public function testCashFlowStatementWithNullValues(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/cash-flow-statement-null-values.json');
+
+		$statements = iterator_to_array($client->cashFlowStatement('AAPL'));
+
+		$this->assertNotEmpty($statements);
+		$this->assertSame((new CashFlowStatement(
+			symbol: 'AAPL',
+			date: '2024-09-28',
+			reportedCurrency: 'USD',
+			cik: '0000320193',
+			filingDate: '2024-11-01',
+			acceptedDate: '2024-11-01 06:01:36',
+			fiscalYear: '2024',
+			period: Period::FY,
+			netIncome: 0,
+			depreciationAndAmortization: 0,
+			deferredIncomeTax: 0,
+			stockBasedCompensation: 0,
+			changeInWorkingCapital: 0,
+			accountsReceivables: 0,
+			inventory: 0,
+			accountsPayables: 0,
+			otherWorkingCapital: 0,
+			otherNonCashItems: 0,
+			netCashProvidedByOperatingActivities: 0,
+			investmentsInPropertyPlantAndEquipment: 0,
+			acquisitionsNet: 0,
+			purchasesOfInvestments: 0,
+			salesMaturitiesOfInvestments: 0,
+			otherInvestingActivities: 0,
+			netCashProvidedByInvestingActivities: 0,
+			netDebtIssuance: 0,
+			longTermNetDebtIssuance: 0,
+			shortTermNetDebtIssuance: 0,
+			netStockIssuance: 0,
+			netCommonStockIssuance: 0,
+			commonStockIssuance: 0,
+			commonStockRepurchased: 0,
+			netPreferredStockIssuance: 0,
+			netDividendsPaid: 0,
+			commonDividendsPaid: 0,
+			preferredDividendsPaid: 0,
+			otherFinancingActivities: 0,
+			netCashProvidedByFinancingActivities: 0,
+			effectOfForexChangesOnCash: 0,
+			netChangeInCash: 0,
+			cashAtEndOfPeriod: 0,
+			cashAtBeginningOfPeriod: 0,
+			operatingCashFlow: 0,
+			capitalExpenditure: 0,
+			freeCashFlow: 0,
+			incomeTaxesPaid: 0,
+			interestPaid: 0,
+		))->toArray(), $statements[0]->toArray());
+	}
+
 }

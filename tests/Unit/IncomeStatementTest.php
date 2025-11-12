@@ -109,4 +109,54 @@ final class IncomeStatementTest extends TestCase
 		))->toArray(), $statements[0]->toArray());
 	}
 
+	public function testIncomeStatementWithNullValues(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/income-statement-null-values.json');
+
+		$statements = iterator_to_array($client->incomeStatement('AAPL'));
+
+		$this->assertNotEmpty($statements);
+		$this->assertSame((new IncomeStatement(
+			symbol: 'AAPL',
+			date: '2024-09-28',
+			reportedCurrency: 'USD',
+			cik: '0000320193',
+			filingDate: '2024-11-01',
+			acceptedDate: '2024-11-01 06:01:36',
+			fiscalYear: '2024',
+			period: Period::FY,
+			revenue: 0,
+			costOfRevenue: 0,
+			grossProfit: 0,
+			researchAndDevelopmentExpenses: 0,
+			generalAndAdministrativeExpenses: 0,
+			sellingAndMarketingExpenses: 0,
+			sellingGeneralAndAdministrativeExpenses: 0,
+			otherExpenses: 0,
+			operatingExpenses: 0,
+			costAndExpenses: 0,
+			netInterestIncome: 0,
+			interestIncome: 0,
+			interestExpense: 0,
+			depreciationAndAmortization: 0,
+			ebitda: 0,
+			ebit: 0,
+			nonOperatingIncomeExcludingInterest: 0,
+			operatingIncome: 0,
+			totalOtherIncomeExpensesNet: 0,
+			incomeBeforeTax: 0,
+			incomeTaxExpense: 0,
+			netIncomeFromContinuingOperations: 0,
+			netIncomeFromDiscontinuedOperations: 0,
+			otherAdjustmentsToNetIncome: 0,
+			netIncome: 0,
+			netIncomeDeductions: 0,
+			bottomLineNetIncome: 0,
+			eps: 0.0,
+			epsDiluted: 0.0,
+			weightedAverageShsOut: 0,
+			weightedAverageShsOutDil: 0,
+		))->toArray(), $statements[0]->toArray());
+	}
+
 }

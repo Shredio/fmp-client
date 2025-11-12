@@ -22,6 +22,8 @@ final readonly class CashFlowStatementMapper extends Type
 {
 	public function parse(mixed $valueToParse, TypeContext $context): ErrorElement|CashFlowStatement
 	{
+		$context = CashFlowStatement::createContext($context);
+
 		// 0. Initialize TypeSchema
 		$ts = TypeSchema::get();
 
