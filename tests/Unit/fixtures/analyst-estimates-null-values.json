@@ -1,0 +1,26 @@
+[
+  {
+    "symbol": "AAPL",
+    "date": "2029-09-28",
+    "revenueLow": null,
+    "revenueHigh": null,
+    "revenueAvg": null,
+    "ebitdaLow": null,
+    "ebitdaHigh": null,
+    "ebitdaAvg": null,
+    "ebitLow": null,
+    "ebitHigh": null,
+    "ebitAvg": null,
+    "netIncomeLow": null,
+    "netIncomeHigh": null,
+    "netIncomeAvg": null,
+    "sgaExpenseLow": null,
+    "sgaExpenseHigh": null,
+    "sgaExpenseAvg": null,
+    "epsAvg": null,
+    "epsHigh": null,
+    "epsLow": null,
+    "numAnalystsRevenue": null,
+    "numAnalystsEps": null
+  }
+]

@@ -2,9 +2,11 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\FmpClient\TypeSchema\NullAsZeroConversion;
+use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 
-#[CompileObjectMapper(identifier: 'symbol')]
+#[CompileObjectMapper(identifier: 'symbol', contextFactory: 'createContext')]
 final readonly class AnalystEstimate
 {
 
@@ -15,26 +17,26 @@ final readonly class AnalystEstimate
 	public function __construct(
 		public string $symbol,
 		public string $date,
-		public int $revenueLow,
-		public int $revenueHigh,
-		public int|float $revenueAvg,
-		public int $ebitdaLow,
-		public int $ebitdaHigh,
-		public int|float $ebitdaAvg,
-		public int $ebitLow,
-		public int $ebitHigh,
-		public int|float $ebitAvg,
-		public int $netIncomeLow,
-		public int $netIncomeHigh,
-		public int|float $netIncomeAvg,
-		public int $sgaExpenseLow,
-		public int $sgaExpenseHigh,
-		public int|float $sgaExpenseAvg,
-		public float $epsAvg,
-		public float $epsHigh,
-		public float $epsLow,
-		public int $numAnalystsRevenue,
-		public int $numAnalystsEps,
+		public int $revenueLow = 0,
+		public int $revenueHigh = 0,
+		public int|float $revenueAvg = 0,
+		public int $ebitdaLow = 0,
+		public int $ebitdaHigh = 0,
+		public int|float $ebitdaAvg = 0,
+		public int $ebitLow = 0,
+		public int $ebitHigh = 0,
+		public int|float $ebitAvg = 0,
+		public int $netIncomeLow = 0,
+		public int $netIncomeHigh = 0,
+		public int|float $netIncomeAvg = 0,
+		public int $sgaExpenseLow = 0,
+		public int $sgaExpenseHigh = 0,
+		public int|float $sgaExpenseAvg = 0,
+		public float $epsAvg = 0.0,
+		public float $epsHigh = 0.0,
+		public float $epsLow = 0.0,
+		public int $numAnalystsRevenue = 0,
+		public int $numAnalystsEps = 0,
 	)
 	{
 	}
@@ -68,6 +70,14 @@ final readonly class AnalystEstimate
 			'numAnalystsRevenue' => $this->numAnalystsRevenue,
 			'numAnalystsEps' => $this->numAnalystsEps,
 		];
+	}
+
+	/**
+	 * @internal Internal method for object mapper
+	 */
+	public static function createContext(TypeContext $context): TypeContext
+	{
+		return $context->withConversionStrategy(new NullAsZeroConversion($context->conversionStrategy));
 	}
 
 }

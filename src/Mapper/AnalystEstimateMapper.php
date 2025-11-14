@@ -21,6 +21,8 @@ final readonly class AnalystEstimateMapper extends Type
 {
 	public function parse(mixed $valueToParse, TypeContext $context): ErrorElement|AnalystEstimate
 	{
+		$context = AnalystEstimate::createContext($context);
+
 		// 0. Initialize TypeSchema
 		$ts = TypeSchema::get();
 
@@ -29,26 +31,26 @@ final readonly class AnalystEstimateMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'date' => $ts->nonEmptyString(),
-			'revenueLow' => $ts->int(),
-			'revenueHigh' => $ts->int(),
-			'revenueAvg' => $ts->union([$ts->int(), $ts->float()]),
-			'ebitdaLow' => $ts->int(),
-			'ebitdaHigh' => $ts->int(),
-			'ebitdaAvg' => $ts->union([$ts->int(), $ts->float()]),
-			'ebitLow' => $ts->int(),
-			'ebitHigh' => $ts->int(),
-			'ebitAvg' => $ts->union([$ts->int(), $ts->float()]),
-			'netIncomeLow' => $ts->int(),
-			'netIncomeHigh' => $ts->int(),
-			'netIncomeAvg' => $ts->union([$ts->int(), $ts->float()]),
-			'sgaExpenseLow' => $ts->int(),
-			'sgaExpenseHigh' => $ts->int(),
-			'sgaExpenseAvg' => $ts->union([$ts->int(), $ts->float()]),
-			'epsAvg' => $ts->float(),
-			'epsHigh' => $ts->float(),
-			'epsLow' => $ts->float(),
-			'numAnalystsRevenue' => $ts->int(),
-			'numAnalystsEps' => $ts->int(),
+			'revenueLow' => $ts->optional($ts->int()),
+			'revenueHigh' => $ts->optional($ts->int()),
+			'revenueAvg' => $ts->optional($ts->union([$ts->int(), $ts->float()])),
+			'ebitdaLow' => $ts->optional($ts->int()),
+			'ebitdaHigh' => $ts->optional($ts->int()),
+			'ebitdaAvg' => $ts->optional($ts->union([$ts->int(), $ts->float()])),
+			'ebitLow' => $ts->optional($ts->int()),
+			'ebitHigh' => $ts->optional($ts->int()),
+			'ebitAvg' => $ts->optional($ts->union([$ts->int(), $ts->float()])),
+			'netIncomeLow' => $ts->optional($ts->int()),
+			'netIncomeHigh' => $ts->optional($ts->int()),
+			'netIncomeAvg' => $ts->optional($ts->union([$ts->int(), $ts->float()])),
+			'sgaExpenseLow' => $ts->optional($ts->int()),
+			'sgaExpenseHigh' => $ts->optional($ts->int()),
+			'sgaExpenseAvg' => $ts->optional($ts->union([$ts->int(), $ts->float()])),
+			'epsAvg' => $ts->optional($ts->float()),
+			'epsHigh' => $ts->optional($ts->float()),
+			'epsLow' => $ts->optional($ts->float()),
+			'numAnalystsRevenue' => $ts->optional($ts->int()),
+			'numAnalystsEps' => $ts->optional($ts->int()),
 		],
 			identifier: 'symbol',
 		);

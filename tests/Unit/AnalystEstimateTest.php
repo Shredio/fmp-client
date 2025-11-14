@@ -41,4 +41,37 @@ final class AnalystEstimateTest extends TestCase
 		))->toArray(), $estimates[0]->toArray());
 	}
 
+	public function testAnalystEstimateWithNullValues(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/analyst-estimates-null-values.json');
+
+		$estimates = iterator_to_array($client->analystEstimates('AAPL'));
+
+		$this->assertNotEmpty($estimates);
+		$this->assertSame((new AnalystEstimate(
+			symbol: 'AAPL',
+			date: '2029-09-28',
+			revenueLow: 0,
+			revenueHigh: 0,
+			revenueAvg: 0,
+			ebitdaLow: 0,
+			ebitdaHigh: 0,
+			ebitdaAvg: 0,
+			ebitLow: 0,
+			ebitHigh: 0,
+			ebitAvg: 0,
+			netIncomeLow: 0,
+			netIncomeHigh: 0,
+			netIncomeAvg: 0,
+			sgaExpenseLow: 0,
+			sgaExpenseHigh: 0,
+			sgaExpenseAvg: 0,
+			epsAvg: 0.0,
+			epsHigh: 0.0,
+			epsLow: 0.0,
+			numAnalystsRevenue: 0,
+			numAnalystsEps: 0,
+		))->toArray(), $estimates[0]->toArray());
+	}
+
 }
