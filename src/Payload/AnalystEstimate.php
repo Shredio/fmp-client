@@ -17,20 +17,20 @@ final readonly class AnalystEstimate
 	public function __construct(
 		public string $symbol,
 		public string $date,
-		public int $revenueLow = 0,
-		public int $revenueHigh = 0,
+		public int|float $revenueLow = 0,
+		public int|float $revenueHigh = 0,
 		public int|float $revenueAvg = 0,
-		public int $ebitdaLow = 0,
-		public int $ebitdaHigh = 0,
+		public int|float $ebitdaLow = 0,
+		public int|float $ebitdaHigh = 0,
 		public int|float $ebitdaAvg = 0,
-		public int $ebitLow = 0,
-		public int $ebitHigh = 0,
+		public int|float $ebitLow = 0,
+		public int|float $ebitHigh = 0,
 		public int|float $ebitAvg = 0,
-		public int $netIncomeLow = 0,
-		public int $netIncomeHigh = 0,
+		public int|float $netIncomeLow = 0,
+		public int|float $netIncomeHigh = 0,
 		public int|float $netIncomeAvg = 0,
-		public int $sgaExpenseLow = 0,
-		public int $sgaExpenseHigh = 0,
+		public int|float $sgaExpenseLow = 0,
+		public int|float $sgaExpenseHigh = 0,
 		public int|float $sgaExpenseAvg = 0,
 		public float $epsAvg = 0.0,
 		public float $epsHigh = 0.0,
@@ -42,7 +42,7 @@ final readonly class AnalystEstimate
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: non-empty-string, revenueLow: int, revenueHigh: int, revenueAvg: int|float, ebitdaLow: int, ebitdaHigh: int, ebitdaAvg: int|float, ebitLow: int, ebitHigh: int, ebitAvg: int|float, netIncomeLow: int, netIncomeHigh: int, netIncomeAvg: int|float, sgaExpenseLow: int, sgaExpenseHigh: int, sgaExpenseAvg: int|float, epsAvg: float, epsHigh: float, epsLow: float, numAnalystsRevenue: int, numAnalystsEps: int}
+	 * @return array{symbol: non-empty-string, date: non-empty-string, revenueLow: int|float, revenueHigh: int|float, revenueAvg: int|float, ebitdaLow: int|float, ebitdaHigh: int|float, ebitdaAvg: int|float, ebitLow: int|float, ebitHigh: int|float, ebitAvg: int|float, netIncomeLow: int|float, netIncomeHigh: int|float, netIncomeAvg: int|float, sgaExpenseLow: int|float, sgaExpenseHigh: int|float, sgaExpenseAvg: int|float, epsAvg: float, epsHigh: float, epsLow: float, numAnalystsRevenue: int, numAnalystsEps: int}
 	 */
 	public function toArray(): array
 	{
