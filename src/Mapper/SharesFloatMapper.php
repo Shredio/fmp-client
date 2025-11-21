@@ -29,8 +29,8 @@ final readonly class SharesFloatMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'date' => $ts->nullable($ts->nonEmptyString()),
-			'freeFloat' => $ts->float(),
-			'floatShares' => $ts->int(),
+			'freeFloat' => $ts->nullable($ts->float()),
+			'floatShares' => $ts->nullable($ts->int()),
 			'outstandingShares' => $ts->int(),
 			'source' => $ts->optional($ts->nullable($ts->nonEmptyString())),
 		],

@@ -16,8 +16,8 @@ final readonly class SharesFloat
 	public function __construct(
 		public string $symbol,
 		public string|null $date,
-		public float $freeFloat,
-		public int $floatShares,
+		public ?float $freeFloat,
+		public ?int $floatShares,
 		public int $outstandingShares,
 		public string|null $source = null,
 	)
