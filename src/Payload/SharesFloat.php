@@ -25,7 +25,7 @@ final readonly class SharesFloat
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: non-empty-string|null, freeFloat: float, floatShares: int, outstandingShares: int, source: non-empty-string|null}
+	 * @return array{symbol: non-empty-string, date: non-empty-string|null, freeFloat: float|null, floatShares: int|null, outstandingShares: int, source: non-empty-string|null}
 	 */
 	public function toArray(): array
 	{
