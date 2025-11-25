@@ -5,8 +5,10 @@ namespace Shredio\FmpClient\Payload;
 use Shredio\FmpClient\Enum\Period;
 
 use Shredio\FmpClient\TypeSchema\NullAsZeroConversion;
+use Shredio\TypeSchema\Context\SourceFormat;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
+use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
 
 #[CompileObjectMapper(identifier: 'symbol', contextFactory: 'createContext')]
 final readonly class IncomeStatement
@@ -53,8 +55,10 @@ final readonly class IncomeStatement
 		public float $bottomLineNetIncome = 0.0,
 		public float $eps = 0.0,
 		public float $epsDiluted = 0.0,
-		public int|float $weightedAverageShsOut = 0,
-		public int|float $weightedAverageShsOutDil = 0,
+		#[CompilePropertyOptions(before: [self::class, 'castInfinityToNull'])]
+		public int|float|null $weightedAverageShsOut = null,
+		#[CompilePropertyOptions(before: [self::class, 'castInfinityToNull'])]
+		public int|float|null $weightedAverageShsOutDil = null,
 	)
 	{
 	}
@@ -99,8 +103,8 @@ final readonly class IncomeStatement
 	 *     bottomLineNetIncome: float,
 	 *     eps: float,
 	 *     epsDiluted: float,
-	 *     weightedAverageShsOut: int|float,
-	 *     weightedAverageShsOutDil: int|float
+	 *     weightedAverageShsOut: int|float|null,
+	 *     weightedAverageShsOutDil: int|float|null
 	 * }
 	 */
 	public function toArray(): array
@@ -154,6 +158,22 @@ final readonly class IncomeStatement
 	public static function createContext(TypeContext $context): TypeContext
 	{
 		return $context->withConversionStrategy(new NullAsZeroConversion($context->conversionStrategy));
+	}
+
+	public static function castInfinityToNull(mixed $value, TypeContext $context): mixed
+	{
+		$option = $context->getOption(SourceFormat::class);
+		if ($option === null || !$option->is('csv')) {
+			return $value;
+		}
+		if (!is_string($value)) {
+			return $value;
+		}
+		if ($value === 'Infinity' || $value === '-Infinity') {
+			return null;
+		}
+
+		return $value;
 	}
 
 }

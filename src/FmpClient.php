@@ -94,6 +94,7 @@ use Shredio\FmpClient\Payload\SymbolChange;
 use Shredio\FmpClient\Payload\TreasuryRate;
 use Shredio\FmpClient\Promise\FmpPromise;
 use Shredio\TypeSchema\Config\TypeConfig;
+use Shredio\TypeSchema\Context\SourceFormat;
 use Shredio\TypeSchema\Conversion\ConfigurableConversionStrategy;
 use Shredio\TypeSchema\Conversion\ConversionStrategyFactory;
 use Shredio\TypeSchema\Conversion\Converter\Array\LenientArrayConverter;
@@ -137,7 +138,9 @@ final readonly class FmpClient
 	{
 		$this->largeResponseParser = new Parser\LargeResponseParser();
 		$this->schemaProcessor = TypeSchemaProcessor::createDefault();
-		$this->csvTypeConfig = new TypeConfig(ConversionStrategyFactory::lenient());
+		$this->csvTypeConfig = new TypeConfig(ConversionStrategyFactory::lenient(), options: [
+			SourceFormat::class => new SourceFormat('csv'),
+		]);
 		$this->jsonTypeConfig = new TypeConfig(new ConfigurableConversionStrategy(
 			new StrictStringConverter(),
 			new JsonNumberConverter(),
@@ -145,7 +148,9 @@ final readonly class FmpClient
 			new LenientNullConverter(),
 			new LenientArrayConverter(),
 			new LenientObjectSupervisor(),
-		));
+		), options: [
+			SourceFormat::class => new SourceFormat('json'),
+		]);
 	}
 
 	public function withStrictMode(bool $strictMode): self
@@ -1247,7 +1252,9 @@ final readonly class FmpClient
 			new LenientNullConverter(),
 			new LenientArrayConverter(),
 			new LenientObjectSupervisor(),
-		));
+		), options: [
+			SourceFormat::class => new SourceFormat('csv'),
+		]);
 	}
 
 	/**

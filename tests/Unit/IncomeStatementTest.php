@@ -154,9 +154,104 @@ final class IncomeStatementTest extends TestCase
 			bottomLineNetIncome: 0,
 			eps: 0.0,
 			epsDiluted: 0.0,
-			weightedAverageShsOut: 0,
-			weightedAverageShsOutDil: 0,
+			weightedAverageShsOut: null,
+			weightedAverageShsOutDil: null,
 		))->toArray(), $statements[0]->toArray());
+	}
+
+	public function testIncomeStatementBulkWithInfinityValues(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/income-statement-bulk-infinity.csv');
+
+		$statements = iterator_to_array($client->incomeStatementBulk(2024));
+
+		$this->assertCount(2, $statements);
+
+		// Test positive Infinity is converted to null
+		$this->assertSame((new IncomeStatement(
+			symbol: 'TEST.SZ',
+			date: '2024-12-31',
+			reportedCurrency: 'CNY',
+			cik: '0000000000',
+			filingDate: '2024-12-31',
+			acceptedDate: '2024-12-31 00:00:00',
+			fiscalYear: '2024',
+			period: Period::FY,
+			revenue: 100000000,
+			costOfRevenue: 50000000,
+			grossProfit: 50000000,
+			researchAndDevelopmentExpenses: 0,
+			generalAndAdministrativeExpenses: 10000000,
+			sellingAndMarketingExpenses: 0,
+			sellingGeneralAndAdministrativeExpenses: 10000000,
+			otherExpenses: 5000000,
+			operatingExpenses: 15000000,
+			costAndExpenses: 65000000,
+			netInterestIncome: 0,
+			interestIncome: 0,
+			interestExpense: 0,
+			depreciationAndAmortization: 2000000,
+			ebitda: 37000000,
+			ebit: 35000000,
+			nonOperatingIncomeExcludingInterest: 0,
+			operatingIncome: 35000000,
+			totalOtherIncomeExpensesNet: 0,
+			incomeBeforeTax: 35000000,
+			incomeTaxExpense: 7000000,
+			netIncomeFromContinuingOperations: 28000000,
+			netIncomeFromDiscontinuedOperations: 0,
+			otherAdjustmentsToNetIncome: 0,
+			netIncome: 28000000,
+			netIncomeDeductions: 0,
+			bottomLineNetIncome: 28000000,
+			eps: 1.5,
+			epsDiluted: 1.5,
+			weightedAverageShsOut: null,
+			weightedAverageShsOutDil: null,
+		))->toArray(), $statements[0]->toArray());
+
+		// Test negative Infinity is converted to null
+		$this->assertSame((new IncomeStatement(
+			symbol: 'TEST2.SZ',
+			date: '2024-12-31',
+			reportedCurrency: 'CNY',
+			cik: '0000000000',
+			filingDate: '2024-12-31',
+			acceptedDate: '2024-12-31 00:00:00',
+			fiscalYear: '2024',
+			period: Period::FY,
+			revenue: 200000000,
+			costOfRevenue: 100000000,
+			grossProfit: 100000000,
+			researchAndDevelopmentExpenses: 0,
+			generalAndAdministrativeExpenses: 20000000,
+			sellingAndMarketingExpenses: 0,
+			sellingGeneralAndAdministrativeExpenses: 20000000,
+			otherExpenses: 10000000,
+			operatingExpenses: 30000000,
+			costAndExpenses: 130000000,
+			netInterestIncome: 0,
+			interestIncome: 0,
+			interestExpense: 0,
+			depreciationAndAmortization: 4000000,
+			ebitda: 74000000,
+			ebit: 70000000,
+			nonOperatingIncomeExcludingInterest: 0,
+			operatingIncome: 70000000,
+			totalOtherIncomeExpensesNet: 0,
+			incomeBeforeTax: 70000000,
+			incomeTaxExpense: 14000000,
+			netIncomeFromContinuingOperations: 56000000,
+			netIncomeFromDiscontinuedOperations: 0,
+			otherAdjustmentsToNetIncome: 0,
+			netIncome: 56000000,
+			netIncomeDeductions: 0,
+			bottomLineNetIncome: 56000000,
+			eps: 2.5,
+			epsDiluted: 2.5,
+			weightedAverageShsOut: null,
+			weightedAverageShsOutDil: null,
+		))->toArray(), $statements[1]->toArray());
 	}
 
 }
