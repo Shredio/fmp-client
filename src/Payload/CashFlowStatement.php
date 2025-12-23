@@ -5,6 +5,7 @@ namespace Shredio\FmpClient\Payload;
 use Shredio\FmpClient\Enum\Period;
 
 use Shredio\FmpClient\TypeSchema\NullAsZeroConversion;
+use Shredio\TypeSchema\Context\SourceFormat;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 
@@ -176,7 +177,10 @@ final readonly class CashFlowStatement
 	 */
 	public static function createContext(TypeContext $context): TypeContext
 	{
-		return $context->withConversionStrategy(new NullAsZeroConversion($context->conversionStrategy));
+		return $context->withConversionStrategy(new NullAsZeroConversion(
+			$context->conversionStrategy,
+			$context->getOption(SourceFormat::class)?->is('csv') === true,
+		));
 	}
 
 }

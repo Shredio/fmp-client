@@ -157,7 +157,10 @@ final readonly class IncomeStatement
 	 */
 	public static function createContext(TypeContext $context): TypeContext
 	{
-		return $context->withConversionStrategy(new NullAsZeroConversion($context->conversionStrategy));
+		return $context->withConversionStrategy(new NullAsZeroConversion(
+			$context->conversionStrategy,
+			$context->getOption(SourceFormat::class)?->is('csv') === true,
+		));
 	}
 
 	public static function castInfinityToNull(mixed $value, TypeContext $context): mixed
