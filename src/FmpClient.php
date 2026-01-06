@@ -7,6 +7,7 @@ use LogicException;
 use Psr\Log\LoggerInterface;
 use SensitiveParameter;
 use Shredio\FmpClient\Calendar\FmpCalendarPaginator;
+use Shredio\FmpClient\Config\HttpClientRetryConfiguration;
 use Shredio\FmpClient\Converter\LenientAndEmptyNumberConverter;
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Enum\PeriodQuery;
@@ -47,11 +48,11 @@ use Shredio\FmpClient\Mapper\RatiosMapper;
 use Shredio\FmpClient\Mapper\RatiosTtmMapper;
 use Shredio\FmpClient\Mapper\ScoresMapper;
 use Shredio\FmpClient\Mapper\SharesFloatMapper;
-use Shredio\FmpClient\Mapper\TreasuryRateMapper;
 use Shredio\FmpClient\Mapper\SplitsCalendarItemMapper;
 use Shredio\FmpClient\Mapper\StockMapper;
 use Shredio\FmpClient\Mapper\StockNewsMapper;
 use Shredio\FmpClient\Mapper\SymbolChangeMapper;
+use Shredio\FmpClient\Mapper\TreasuryRateMapper;
 use Shredio\FmpClient\Payload\ActivelyTrading;
 use Shredio\FmpClient\Payload\AnalystEstimate;
 use Shredio\FmpClient\Payload\AvailableExchange;
@@ -110,6 +111,10 @@ use Shredio\TypeSchema\Error\ErrorElement;
 use Shredio\TypeSchema\Error\TypeSchemaErrorFormatter;
 use Shredio\TypeSchema\Types\Type;
 use Shredio\TypeSchema\TypeSchemaProcessor;
+use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Component\HttpClient\Retry\GenericRetryStrategy;
+use Symfony\Component\HttpClient\Retry\RetryStrategyInterface;
+use Symfony\Component\HttpClient\RetryableHttpClient;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
@@ -127,15 +132,28 @@ final readonly class FmpClient
 
 	private TypeConfig $jsonTypeConfig;
 
+	private HttpClientInterface $httpClient;
+
 	public function __construct(
-		private HttpClientInterface $httpClient,
+		HttpClientInterface $httpClient,
 		#[SensitiveParameter]
 		private string $secret,
 		private ?UnexpectedResponseContentExceptionHandler $invalidArgumentHandler = null,
 		private bool $strictMode = false,
 		private bool $builtInJsonParser = false,
+		?HttpClientRetryConfiguration $retryConfiguration = new HttpClientRetryConfiguration(),
 	)
 	{
+		if ($retryConfiguration === null) {
+			$this->httpClient = $httpClient;
+		} else {
+			$this->httpClient = new RetryableHttpClient(
+				$httpClient,
+				new GenericRetryStrategy(delayMs: $retryConfiguration->delayMs, multiplier: $retryConfiguration->multiplier),
+				$retryConfiguration->maxRetries,
+			);
+		}
+
 		$this->largeResponseParser = new Parser\LargeResponseParser();
 		$this->schemaProcessor = TypeSchemaProcessor::createDefault();
 		$this->csvTypeConfig = new TypeConfig(ConversionStrategyFactory::lenient(), options: [
@@ -160,6 +178,35 @@ final readonly class FmpClient
 			$this->secret,
 			$this->invalidArgumentHandler,
 			$strictMode,
+			$this->builtInJsonParser,
+			retryConfiguration: null,
+		);
+	}
+
+	public function withRetryConfiguration(HttpClientRetryConfiguration $config): self
+	{
+		return new self(
+			$this->httpClient,
+			$this->secret,
+			$this->invalidArgumentHandler,
+			$this->strictMode,
+			$this->builtInJsonParser,
+			retryConfiguration: $config,
+		);
+	}
+
+	/**
+	 * Returns a client configured for background tasks (cron jobs, queues) with extended retry settings and more host connections.
+	 */
+	public function forBackgroundProcessing(): self
+	{
+		return new self(
+			HttpClient::create(maxHostConnections: 100),
+			$this->secret,
+			$this->invalidArgumentHandler,
+			$this->strictMode,
+			$this->builtInJsonParser,
+			retryConfiguration: new HttpClientRetryConfiguration(1000, 1.5, 4),
 		);
 	}
 
