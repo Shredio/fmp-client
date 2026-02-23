@@ -32,6 +32,6 @@
 		"nette/utils": "^4.0",
 		"shredio/type-schema-compiler": "^v0.9.6",
 		"symfony/translation": "^7.3",
-		"symfony/cache": "^8.0"
+		"symfony/cache": "^7.4"
 	}
 }
