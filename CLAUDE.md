@@ -14,8 +14,9 @@ This is a PHP 8.3+ client library for the Financial Modeling Prep (FMP) API, des
 
 ### Core Components
 
-- **FmpClient** (`src/FmpClient.php`) - Main entry point, orchestrates API calls and response processing
-- **FmpRequest/FmpResponse** - HTTP layer using Symfony HTTP Client
+- **FmpClient** (`src/FmpClient.php`) - Interface defining the API contract
+- **SymfonyFmpClient** (`src/SymfonyFmpClient.php`) - Primary implementation using Symfony HTTP Client, handles API calls and response processing
+- **CacheFmpClient** (`src/CacheFmpClient.php`) - Caching decorator wrapping any `FmpClient` implementation via `PSR-16 SimpleCache`. Caches per-symbol and list endpoints; delegates bulk, calendar, and streaming endpoints directly to the inner client
 - **FmpPromise** - Async operations using PHP Fibers for concurrent API calls
 - **LargeResponseParser** - Memory-efficient streaming parser using JsonMachine and League CSV
 
@@ -34,7 +35,7 @@ When implementing new FMP API endpoints:
 1. Fetch response to determine structure, save it to the `tests/Unit/fixtures/` directory for future testing.
 2. Create payload class in `src/Payload/` (extend from existing patterns)
 3. Run `composer compile` to automatically generate mappers. This command scans all payload classes with `#[CompileObjectMapper]` attribute and generates corresponding mapper classes in `src/Mapper/`. Mappers are generated automatically - do not create them manually.
-4. Add endpoint method to `FmpClient`, add `@see` annotation to the method docblock containing the endpoint URL without an API key (query parameter `apikey`).
+4. Add endpoint method signature to `FmpClient` interface with `@see` annotation containing the endpoint URL without an API key (query parameter `apikey`). Implement the method in `SymfonyFmpClient`. Add corresponding cached/delegated method to `CacheFmpClient` (cache per-symbol and list endpoints, delegate bulk and streaming endpoints).
 5. Create test fixtures in `tests/Unit/fixtures/`, save **full** response body from the API to the `tests/Unit/fixtures`.
 6. Write comprehensive tests covering both success and error cases
 7. Update README.md with the new endpoint documentation

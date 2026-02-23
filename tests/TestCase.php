@@ -4,7 +4,7 @@ namespace Tests;
 
 use Nette\Utils\FileSystem;
 use Shredio\FmpClient\Exception\UnexpectedResponseContentExceptionHandler;
-use Shredio\FmpClient\FmpClient;
+use Shredio\FmpClient\SymfonyFmpClient;
 use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
 
@@ -16,7 +16,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
 	/**
 	 * @param list<MockResponse> $responses
 	 */
-	protected function createClient(string $file, ?UnexpectedResponseContentExceptionHandler $handler = null, array $responses = []): FmpClient
+	protected function createClient(string $file, ?UnexpectedResponseContentExceptionHandler $handler = null, array $responses = []): SymfonyFmpClient
 	{
 		if (self::$fastTests && str_ends_with($file, '.csv')) {
 			$contents = '';
@@ -39,7 +39,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
 			...$responses,
 		]);
 
-		return new FmpClient($mockClient, 'SECRET', $handler, strictMode: true);
+		return new SymfonyFmpClient($mockClient, 'SECRET', $handler, strictMode: true);
 	}
 
 }

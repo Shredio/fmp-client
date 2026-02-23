@@ -31,12 +31,12 @@ composer require shredio/fmp-client
 ## Quick Start
 
 ```php
-use Shredio\FmpClient\FmpClient;
+use Shredio\FmpClient\SymfonyFmpClient;
 use Symfony\Component\HttpClient\HttpClient;
 
 // Initialize the client
 $httpClient = HttpClient::create();
-$fmpClient = new FmpClient($httpClient, 'your-api-key-here');
+$fmpClient = new SymfonyFmpClient($httpClient, 'your-api-key-here');
 
 // Get company profile
 foreach ($fmpClient->companyProfile('AAPL') as $profile) {
