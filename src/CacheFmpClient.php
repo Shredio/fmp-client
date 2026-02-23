@@ -2,6 +2,7 @@
 
 namespace Shredio\FmpClient;
 
+use DateInterval;
 use DateTimeImmutable;
 use Psr\Log\LoggerInterface;
 use Psr\SimpleCache\CacheInterface;
@@ -56,9 +57,13 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
 final readonly class CacheFmpClient implements FmpClient
 {
 
+	/**
+	 * @param int<1, max>|DateInterval|null $ttl Time to live for cached items in seconds
+	 */
 	public function __construct(
 		private FmpClient $client,
 		private CacheInterface $cache,
+		private int|DateInterval|null $ttl,
 	)
 	{
 	}
@@ -68,6 +73,7 @@ final readonly class CacheFmpClient implements FmpClient
 		return new self(
 			$this->client->withStrictMode($strictMode),
 			$this->cache,
+			$this->ttl,
 		);
 	}
 
@@ -76,6 +82,7 @@ final readonly class CacheFmpClient implements FmpClient
 		return new self(
 			$this->client->withRetryConfiguration($config),
 			$this->cache,
+			$this->ttl,
 		);
 	}
 
@@ -84,6 +91,7 @@ final readonly class CacheFmpClient implements FmpClient
 		return new self(
 			$this->client->forBackgroundProcessing(),
 			$this->cache,
+			$this->ttl,
 		);
 	}
 
@@ -583,7 +591,7 @@ final readonly class CacheFmpClient implements FmpClient
 		if ($value === null) {
 			$value = iterator_to_array($factory(), false);
 
-			$this->cache->set($cacheKey, $value);
+			$this->cache->set($cacheKey, $value, $this->ttl);
 		}
 
 		return $value;
@@ -604,7 +612,7 @@ final readonly class CacheFmpClient implements FmpClient
 		if ($cached === null) {
 			$value = $factory();
 
-			$this->cache->set($cacheKey, ['hit' => true, 'value' => $value]);
+			$this->cache->set($cacheKey, ['hit' => true, 'value' => $value], $this->ttl);
 
 			return $value;
 		}
