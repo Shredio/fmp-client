@@ -315,6 +315,9 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Stock splits calendar
 - `dividends(string $symbol)` - Company dividend history
 
+### Search
+- `searchIsin(string $isin)` - Search for stocks by ISIN code
+
 ### Other Data
 - `cryptocurrencyList()` - Available cryptocurrencies
 - `indexList()` - Available market indices

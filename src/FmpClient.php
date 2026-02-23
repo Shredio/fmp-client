@@ -38,6 +38,7 @@ use Shredio\FmpClient\Mapper\HistoricalPriceEodMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementGrowthBulkMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementGrowthMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementMapper;
+use Shredio\FmpClient\Mapper\IsinSearchResultMapper;
 use Shredio\FmpClient\Mapper\IndexMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsTtmMapper;
@@ -78,6 +79,7 @@ use Shredio\FmpClient\Payload\HistoricalPriceEod;
 use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
+use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\Index;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
@@ -358,6 +360,22 @@ final readonly class FmpClient
 
 		foreach ($this->requestJson('stable/symbol-change') as $item) {
 			$object = $this->map(SymbolChange::class, new SymbolChangeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/search-isin
+	 * @return iterable<int, IsinSearchResult>
+	 */
+	public function searchIsin(string $isin): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/search-isin', ['isin' => $isin]);
+
+		foreach ($this->requestJson('stable/search-isin', ['isin' => $isin]) as $item) {
+			$object = $this->map(IsinSearchResult::class, new IsinSearchResultMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}

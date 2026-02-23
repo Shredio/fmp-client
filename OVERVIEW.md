@@ -167,6 +167,23 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 ---
 
+### `searchIsin()`
+
+**Purpose:** Search for stocks by ISIN (International Securities Identification Number) code.
+
+**Parameters:**
+- `isin` (string) - ISIN code (e.g., "US0378331005")
+
+**Return Values:** `iterable<IsinSearchResult>`
+- `symbol` - Ticker symbol
+- `name` - Company name
+- `isin` - ISIN code
+- `marketCap` - Market capitalization
+
+**API endpoint:** `https://financialmodelingprep.com/stable/search-isin`
+
+---
+
 ### `delistedCompanies()`
 
 **Purpose:** Retrieve a list of delisted companies.
