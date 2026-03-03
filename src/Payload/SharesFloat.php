@@ -2,7 +2,10 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\TypeSchema\Conversion\Converter\Number\LenientNumberConverter;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
+use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
+use Shredio\TypeSchemaCompiler\Attribute\TypeConverters;
 
 #[CompileObjectMapper(identifier: 'symbol')]
 final readonly class SharesFloat
@@ -17,6 +20,9 @@ final readonly class SharesFloat
 		public string $symbol,
 		public string|null $date,
 		public ?float $freeFloat,
+		#[CompilePropertyOptions(
+			typeConverters: new TypeConverters(int: new LenientNumberConverter(LenientNumberConverter::AlwaysFloatToInt)),
+		)]
 		public ?int $floatShares,
 		public int $outstandingShares,
 		public string|null $source = null,

@@ -25,6 +25,22 @@ final class SharesFloatTest extends TestCase
 		))->toArray(), $sharesFloat->toArray());
 	}
 
+	public function testSharesFloatWithFloatShares(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/shares-float-float-shares.json');
+
+		$sharesFloat = $client->sharesFloat('AAPL');
+
+		$this->assertSame((new SharesFloat(
+			symbol: 'AAPL',
+			date: '2025-10-20 18:44:55',
+			freeFloat: 99.82400000269534,
+			floatShares: 14814270914,
+			outstandingShares: 14840390000,
+			source: 'https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm',
+		))->toArray(), $sharesFloat->toArray());
+	}
+
 	public function testSharesFloatEmpty(): void
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/shares-float-empty.json');
