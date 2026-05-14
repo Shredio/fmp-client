@@ -47,6 +47,7 @@ use Shredio\FmpClient\Mapper\MarketRiskPremiumMapper;
 use Shredio\FmpClient\Mapper\PressReleaseMapper;
 use Shredio\FmpClient\Mapper\RatiosMapper;
 use Shredio\FmpClient\Mapper\RatiosTtmMapper;
+use Shredio\FmpClient\Mapper\PeersBulkMapper;
 use Shredio\FmpClient\Mapper\ScoresMapper;
 use Shredio\FmpClient\Mapper\SharesFloatMapper;
 use Shredio\FmpClient\Mapper\SplitsCalendarItemMapper;
@@ -85,6 +86,7 @@ use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
+use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
@@ -1227,6 +1229,24 @@ final readonly class SymfonyFmpClient implements FmpClient
 
 		foreach ($this->requestCsv('stable/scores-bulk') as $item) {
 			$object = $this->map(Scores::class, new ScoresMapper(), $item, $url, true);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/peers-bulk
+	 * @return iterable<int, PeersBulk>
+	 */
+	public function peersBulk(): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/peers-bulk');
+
+		foreach ($this->requestCsv('stable/peers-bulk') as $item) {
+			$item['peers'] = $item['peers'] === '' ? [] : explode(',', $item['peers']);
+
+			$object = $this->map(PeersBulk::class, new PeersBulkMapper(), $item, $url, true);
 			if ($object !== null) {
 				yield $object;
 			}

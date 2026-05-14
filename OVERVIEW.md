@@ -424,6 +424,20 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 ---
 
+### `peersBulk()`
+
+**Purpose:** Bulk retrieval of stock peers (companies considered similar by industry, sector and market cap) for all symbols.
+
+**Parameters:** None
+
+**Return Values:** `iterable<PeersBulk>`
+- `symbol` - Ticker symbol
+- `peers` - List of peer ticker symbols (`list<non-empty-string>`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/peers-bulk`
+
+---
+
 ## Financial Statements
 
 ### `balanceSheetStatement()`

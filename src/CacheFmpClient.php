@@ -41,6 +41,7 @@ use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
+use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
@@ -553,6 +554,14 @@ final readonly class CacheFmpClient implements FmpClient
 	public function scoresBulk(): iterable
 	{
 		return $this->client->scoresBulk();
+	}
+
+	/**
+	 * @return iterable<int, PeersBulk>
+	 */
+	public function peersBulk(): iterable
+	{
+		return $this->client->peersBulk();
 	}
 
 	/**

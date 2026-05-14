@@ -39,6 +39,7 @@ use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
+use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
@@ -379,6 +380,12 @@ interface FmpClient
 	 * @return iterable<int, Scores>
 	 */
 	public function scoresBulk(): iterable;
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/peers-bulk
+	 * @return iterable<int, PeersBulk>
+	 */
+	public function peersBulk(): iterable;
 
 	/**
 	 * @template T

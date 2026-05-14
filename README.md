@@ -267,6 +267,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `stockList()` - List all available stocks
 - `companyProfile(string $symbols)` - Company profile information
 - `companyProfileBulk()` - Bulk company profiles (streaming)
+- `peersBulk()` - Bulk stock peers (companies grouped by industry/sector similarity)
 - `sharesFloat(string $symbol)` - Shares float information (free float, float shares, outstanding shares)
 - `availableExchanges()` - Available stock exchanges
 - `allExchangeMarketHours()` - Market hours for all exchanges
