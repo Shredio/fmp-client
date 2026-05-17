@@ -35,7 +35,7 @@ final class SharesFloatTest extends TestCase
 			symbol: 'AAPL',
 			date: '2025-10-20 18:44:55',
 			freeFloat: 99.82400000269534,
-			floatShares: 14814270914,
+			floatShares: 14814270914.0,
 			outstandingShares: 14840390000,
 			source: 'https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm',
 		))->toArray(), $sharesFloat->toArray());

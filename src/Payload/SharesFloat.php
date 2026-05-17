@@ -2,10 +2,7 @@
 
 namespace Shredio\FmpClient\Payload;
 
-use Shredio\TypeSchema\Conversion\Converter\Number\LenientNumberConverter;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
-use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
-use Shredio\TypeSchemaCompiler\Attribute\TypeConverters;
 
 #[CompileObjectMapper(identifier: 'symbol')]
 final readonly class SharesFloat
@@ -19,11 +16,8 @@ final readonly class SharesFloat
 	public function __construct(
 		public string $symbol,
 		public string|null $date,
-		public ?float $freeFloat,
-		#[CompilePropertyOptions(
-			typeConverters: new TypeConverters(int: new LenientNumberConverter(LenientNumberConverter::AlwaysFloatToInt)),
-		)]
-		public ?int $floatShares,
+		public int|float|null $freeFloat,
+		public int|float|null $floatShares,
 		public int $outstandingShares,
 		public string|null $source = null,
 	)
@@ -31,7 +25,7 @@ final readonly class SharesFloat
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: non-empty-string|null, freeFloat: float|null, floatShares: int|null, outstandingShares: int, source: non-empty-string|null}
+	 * @return array{symbol: non-empty-string, date: non-empty-string|null, freeFloat: int|float|null, floatShares: int|float|null, outstandingShares: int, source: non-empty-string|null}
 	 */
 	public function toArray(): array
 	{

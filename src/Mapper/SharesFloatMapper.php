@@ -8,7 +8,6 @@ use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Payload\SharesFloat;
 use Shredio\TypeSchema\Context\TypeContext;
-use Shredio\TypeSchema\Conversion\Converter\Number\LenientNumberConverter;
 use Shredio\TypeSchema\Error\ErrorElement;
 use Shredio\TypeSchema\TypeSchema;
 use Shredio\TypeSchema\Types\Type;
@@ -30,8 +29,8 @@ final readonly class SharesFloatMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'date' => $ts->nullable($ts->nonEmptyString()),
-			'freeFloat' => $ts->nullable($ts->float()),
-			'floatShares' => $ts->nullable($ts->int())->conversion(int: new LenientNumberConverter(true)),
+			'freeFloat' => $ts->nullable($ts->union([$ts->int(), $ts->float()])),
+			'floatShares' => $ts->nullable($ts->union([$ts->int(), $ts->float()])),
 			'outstandingShares' => $ts->int(),
 			'source' => $ts->optional($ts->nullable($ts->nonEmptyString())),
 		],

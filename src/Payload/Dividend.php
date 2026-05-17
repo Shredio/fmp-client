@@ -20,14 +20,14 @@ final readonly class Dividend
         public ?string $recordDate,
         public ?string $paymentDate,
         public ?string $declarationDate,
-        public float $adjDividend,
-        public float $dividend,
+        public ?float $adjDividend,
+        public ?float $dividend,
         public float $yield,
         public string $frequency,
     ) {}
 
     /**
-     * @return array{symbol: non-empty-string, date: string, recordDate: non-empty-string|null, paymentDate: non-empty-string|null, declarationDate: non-empty-string|null, adjDividend: float, dividend: float, yield: float, frequency: string}
+     * @return array{symbol: non-empty-string, date: string, recordDate: non-empty-string|null, paymentDate: non-empty-string|null, declarationDate: non-empty-string|null, adjDividend: float|null, dividend: float|null, yield: float, frequency: string}
      */
     public function toArray(): array
     {
