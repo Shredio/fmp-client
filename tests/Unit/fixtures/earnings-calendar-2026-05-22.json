@@ -1,0 +1,5753 @@
+[
+    {
+        "symbol": "MWG",
+        "date": "2026-05-22",
+        "epsActual": -0.0297,
+        "epsEstimated": null,
+        "revenueActual": 14209920,
+        "revenueEstimated": 14209920,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VTGDF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "JAGRAN.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.7,
+        "revenueActual": null,
+        "revenueEstimated": 3947000000,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "SMD100.BK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IRCON.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.3,
+        "revenueActual": null,
+        "revenueEstimated": 31246000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5305.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "5071.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-27"
+    },
+    {
+        "symbol": "HLCL.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 16692050,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IWS.OL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.31,
+        "revenueActual": null,
+        "revenueEstimated": 319379800,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ARTGF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SNAX",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "STYRENIX.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "DFSC.V",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "LICI.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 37.11,
+        "revenueActual": null,
+        "revenueEstimated": 1665652000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SUNTV.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 8.65,
+        "revenueActual": null,
+        "revenueEstimated": 9132160000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IMPP",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.34,
+        "revenueActual": null,
+        "revenueEstimated": 48100000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DOLLF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.01448,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ARVLF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DFSC",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "GREENLAM.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.5,
+        "revenueActual": null,
+        "revenueEstimated": 8023333000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GMXTF",
+        "date": "2026-05-22",
+        "epsActual": 0.02125,
+        "epsEstimated": 0.03083,
+        "revenueActual": 880082800,
+        "revenueEstimated": 904227900,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GBK.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "GOKEX.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.25,
+        "revenueActual": null,
+        "revenueEstimated": 10405000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VRPX",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "8869.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.06927,
+        "revenueActual": null,
+        "revenueEstimated": 4151526000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BOR.OL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.335,
+        "revenueActual": null,
+        "revenueEstimated": 205500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HNDFDS.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.1,
+        "revenueActual": null,
+        "revenueEstimated": 10500000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ECF.BK",
+        "date": "2026-05-22",
+        "epsActual": -0.84,
+        "epsEstimated": null,
+        "revenueActual": 53746000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ECOSMOBLTY.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.3,
+        "revenueActual": null,
+        "revenueEstimated": 2069000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0R88.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AESANDES.SN",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.01501,
+        "revenueActual": null,
+        "revenueEstimated": 763748200,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TSPH",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.4,
+        "revenueActual": null,
+        "revenueEstimated": 1072700000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CHYFF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.768,
+        "revenueActual": null,
+        "revenueEstimated": 3392626000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AGS.SI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "AGS.SI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "DBOL.NS",
+        "date": "2026-05-22",
+        "epsActual": 2.55,
+        "epsEstimated": null,
+        "revenueActual": 4863400000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CASIF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.36,
+        "revenueActual": null,
+        "revenueEstimated": 3454970,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PBLA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -2640,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BALUFORGE.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MDKA.JK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 11481750000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MDOMF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 121708900,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IONGF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-01"
+    },
+    {
+        "symbol": "LUNA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CFRXQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SSWL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 12506000000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "CELLO.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.7,
+        "revenueActual": null,
+        "revenueEstimated": 6055500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KNDI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "83690.HK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.71586,
+        "revenueActual": null,
+        "revenueEstimated": 90156550000,
+        "lastUpdated": "2026-03-26"
+    },
+    {
+        "symbol": "PNOR.OL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 261681200,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BHILQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SSWL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 12506000000,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "SSKN",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.36,
+        "revenueActual": null,
+        "revenueEstimated": 5260000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CALM.CN",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BHOOY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SIGY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "INDIGOPNTS.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 12,
+        "revenueActual": null,
+        "revenueEstimated": 4209000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "APM.DE",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 18730000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MMFL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 4112000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LNSX.F",
+        "date": "2026-05-22",
+        "epsActual": -0.724,
+        "epsEstimated": null,
+        "revenueActual": 194952000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TRANSRAILL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-28"
+    },
+    {
+        "symbol": "SB-PD",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.09,
+        "revenueActual": null,
+        "revenueEstimated": 65900000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OLECTRA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DEBS.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.0116,
+        "revenueActual": null,
+        "revenueEstimated": 390968000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "3681.T",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GIPCL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BEWFF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5288.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "STARCEMENT.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.27,
+        "revenueActual": null,
+        "revenueEstimated": 11779450000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "JEL.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SAMBANDAM.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ORIENTCEM.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 8391500000,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "1961.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 2276251000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ITC.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.15,
+        "revenueActual": 176288900000,
+        "revenueEstimated": 173793700000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ANEB",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.14,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ABO.DE",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 26500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KAP.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.06,
+        "revenueActual": null,
+        "revenueEstimated": 1345071000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SUNDARMFIN.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 45.6,
+        "revenueActual": null,
+        "revenueEstimated": 10389000000,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "RAMKY.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BHHOF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.01563,
+        "revenueActual": null,
+        "revenueEstimated": 526946700,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ISUNQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PAKKA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SALZERELEC.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 2110000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PWF-PZ.TO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NBRVF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -16.75,
+        "revenueActual": null,
+        "revenueEstimated": 2250000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BACK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CLEAN.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 7.38,
+        "revenueActual": null,
+        "revenueEstimated": 2516000000,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "4667.T",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NVSGF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PETS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.18,
+        "revenueActual": null,
+        "revenueEstimated": 52000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VFSWW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.31,
+        "revenueActual": null,
+        "revenueEstimated": 1025125000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TOKY3.SA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "THA.JO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.39,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IFGLEXPOR.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BCP.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WSTCSTPAPR.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "UFABQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CHEMCON.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 715000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DCXINDIA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 6050000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KOLTEPATIL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 11.6,
+        "revenueActual": null,
+        "revenueEstimated": 8601500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MDRX",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.01,
+        "revenueActual": null,
+        "revenueEstimated": 143800000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AMPE",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -6,
+        "revenueActual": null,
+        "revenueEstimated": 245000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BEML.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 40.5,
+        "revenueActual": null,
+        "revenueEstimated": 20491000000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "DHAMPURSUG.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NOVKAN.ST",
+        "date": "2026-05-22",
+        "epsActual": -0.041,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CHMF.ME",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 69.17,
+        "revenueActual": null,
+        "revenueEstimated": 179912500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LNVGF",
+        "date": "2026-05-22",
+        "epsActual": 0.0432,
+        "epsEstimated": 0.02609,
+        "revenueActual": 21588000000,
+        "revenueEstimated": 19268290000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GMRAIRPORT.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.1,
+        "revenueActual": null,
+        "revenueEstimated": 40038000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CDPR.V",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PURVA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 6030000000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "CAPRIHANS.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5983.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "3301.KL",
+        "date": "2026-05-22",
+        "epsActual": 0.43,
+        "epsEstimated": null,
+        "revenueActual": 909096000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "B61.SI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "ACI.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 7.4,
+        "revenueActual": null,
+        "revenueEstimated": 3411667000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "MWE.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SDCCQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FORTIS.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.97,
+        "revenueActual": null,
+        "revenueEstimated": 23008040000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IONEXCHANG.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-02"
+    },
+    {
+        "symbol": "IONEXCHANG.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "RET.BR",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 78051190,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KAP.IL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.06,
+        "revenueActual": null,
+        "revenueEstimated": 1331650000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "INDOSTAR.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 7.24,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "INDOSTAR.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 7.24,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "FAZE3Q.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 5.2,
+        "revenueActual": null,
+        "revenueEstimated": 1320000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CLPMF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.02,
+        "revenueActual": null,
+        "revenueEstimated": 1212388,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PGEL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.7,
+        "revenueActual": null,
+        "revenueEstimated": 15959800000,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "GREENLAM.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.5,
+        "revenueActual": null,
+        "revenueEstimated": 8023333000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SHAWGELTIN.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MNSO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.238,
+        "revenueActual": null,
+        "revenueEstimated": 805599800,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HDD.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.014,
+        "revenueActual": null,
+        "revenueEstimated": 4800000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NXST-RR.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.69,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-27"
+    },
+    {
+        "symbol": "PSPPROJECT.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 7.75,
+        "revenueActual": null,
+        "revenueEstimated": 9807000000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "PSPPROJECT.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 7.75,
+        "revenueActual": null,
+        "revenueEstimated": 9807000000,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "KALAMANDIR.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "GSL-PB",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.4,
+        "revenueActual": null,
+        "revenueEstimated": 182865500,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PREMCAP.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CDR-PC",
+        "date": "2026-05-22",
+        "epsActual": 0.0063,
+        "epsEstimated": -0.1,
+        "revenueActual": 6871000,
+        "revenueEstimated": 32245000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5204.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 50000000,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "AGO.WA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 362700000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "APL.NZ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 2994122,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0002.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-27"
+    },
+    {
+        "symbol": "PRST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SANW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.63,
+        "revenueActual": null,
+        "revenueEstimated": 11000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ABFRL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -1.705,
+        "revenueActual": null,
+        "revenueEstimated": 19341330000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ABFRL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -2.12,
+        "revenueActual": null,
+        "revenueEstimated": 35263250000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "SOFO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.28,
+        "revenueActual": null,
+        "revenueEstimated": 6000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BEML.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 35.1,
+        "revenueActual": null,
+        "revenueEstimated": 18603670000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KBNT",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.29,
+        "revenueActual": null,
+        "revenueEstimated": 400000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IONEXCHANG.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0QMU.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.98,
+        "revenueActual": null,
+        "revenueEstimated": 10729190000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "GLENMARK.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 12.1,
+        "revenueActual": null,
+        "revenueEstimated": 33743250000,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "BAH",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.32,
+        "revenueActual": null,
+        "revenueEstimated": 2859048000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BODALCHEM.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 4501000000,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "BODALCHEM.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 4501000000,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "ABFRL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -2.12,
+        "revenueActual": null,
+        "revenueEstimated": 35263250000,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "LUMAXIND.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 32.7,
+        "revenueActual": null,
+        "revenueEstimated": 8291000000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "HGINFRA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 23.55,
+        "revenueActual": null,
+        "revenueEstimated": 18571000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CHEMCON.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "MYCOF",
+        "date": "2026-05-22",
+        "epsActual": 0.04273,
+        "epsEstimated": -0.80756,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CAMLINFINE.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.5,
+        "revenueActual": null,
+        "revenueEstimated": 4584500000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "HCMLY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.2621,
+        "revenueActual": null,
+        "revenueEstimated": 15250340000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CFISH.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.08,
+        "revenueActual": null,
+        "revenueEstimated": 177000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AMBP3.SA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.04226,
+        "revenueActual": null,
+        "revenueEstimated": 1426621000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NATKY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.06,
+        "revenueActual": null,
+        "revenueEstimated": 1331650000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DZSIQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OTRKQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SATINDLTD.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-08"
+    },
+    {
+        "symbol": "6742.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HARIOMPIPE.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 6,
+        "revenueActual": null,
+        "revenueEstimated": 1240000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GLOP-PA",
+        "date": "2026-05-22",
+        "epsActual": 0.37,
+        "epsEstimated": 0.3099,
+        "revenueActual": 68607000,
+        "revenueEstimated": 78777250,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HONASA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.88,
+        "revenueActual": null,
+        "revenueEstimated": 6429968000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PNCINFRA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 5.22,
+        "revenueActual": null,
+        "revenueEstimated": 16047250000,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "FPAYQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.09,
+        "revenueActual": null,
+        "revenueEstimated": 43900000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EICCF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.61,
+        "revenueActual": null,
+        "revenueEstimated": 19800030,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5789.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BALUFORGE.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CUB.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.87,
+        "revenueActual": null,
+        "revenueEstimated": 10677000000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "GULFOILLUB.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 15.25,
+        "revenueActual": null,
+        "revenueEstimated": 10108750000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "9896.HK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.633,
+        "revenueActual": null,
+        "revenueEstimated": 6089326000,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "NEXI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -13.25,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SARDAEN.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ZZ-B.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.54,
+        "revenueActual": null,
+        "revenueEstimated": 915400000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OIL.CN",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VITFF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.31489,
+        "revenueActual": null,
+        "revenueEstimated": -1746400,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5094.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CFRUY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.3738,
+        "revenueActual": null,
+        "revenueEstimated": 13440660000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CHEMCON.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "5151.KL",
+        "date": "2026-05-22",
+        "epsActual": 0.0041,
+        "epsEstimated": null,
+        "revenueActual": 177522000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NWR.BK",
+        "date": "2026-05-22",
+        "epsActual": -0.0579,
+        "epsEstimated": null,
+        "revenueActual": 1892508000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AGARWALEYE.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.07,
+        "revenueActual": null,
+        "revenueEstimated": 5398750000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SLGL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -2.86,
+        "revenueActual": null,
+        "revenueEstimated": 900000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FASTAT.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.04,
+        "revenueActual": null,
+        "revenueEstimated": 80000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HNDFDS.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.1,
+        "revenueActual": null,
+        "revenueEstimated": 10500000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EAST.CA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 11706000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "REFINE.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -80,
+        "revenueActual": null,
+        "revenueEstimated": 4200000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DFSCW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-02"
+    },
+    {
+        "symbol": "BRAGF",
+        "date": "2026-05-22",
+        "epsActual": 0.174,
+        "epsEstimated": null,
+        "revenueActual": 489606600,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SHVTF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.1442,
+        "revenueActual": null,
+        "revenueEstimated": 70433690,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TIHRF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.14,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EGRX",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HYREQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EASEMYTRIP.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "SCHAND.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-20"
+    },
+    {
+        "symbol": "CLIQ.DE",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MANZF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 64908500,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NPK.JO",
+        "date": "2026-05-22",
+        "epsActual": 79.08,
+        "epsEstimated": 46.91,
+        "revenueActual": 5056300000,
+        "revenueEstimated": 6003000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5305.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SAMHI.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.5,
+        "revenueActual": null,
+        "revenueEstimated": 3371750000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CDMNF",
+        "date": "2026-05-22",
+        "epsActual": -0.00427,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RIBT",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.7,
+        "revenueActual": null,
+        "revenueEstimated": 8522000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BEML.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 35.1,
+        "revenueActual": null,
+        "revenueEstimated": 18603670000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IMVIF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "XDSL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CLVR",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CSHR",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.1,
+        "revenueActual": null,
+        "revenueEstimated": 29691000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "3856.T",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BNALTD.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PAKKA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AEGISLOG.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.6,
+        "revenueActual": null,
+        "revenueEstimated": 17743330000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "RTB",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.1,
+        "revenueActual": null,
+        "revenueEstimated": 25300000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FORTIS.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.97,
+        "revenueActual": null,
+        "revenueEstimated": 23008040000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MTC.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 10549910,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GGENG.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5916.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HIPOLIN.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ASAPQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AFIB",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PSSWF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CANG",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.19,
+        "revenueActual": null,
+        "revenueEstimated": 100405600,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GHRT.V",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SUNTV.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 10.18,
+        "revenueActual": null,
+        "revenueEstimated": 9687387000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "LASE",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TEAM.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MAWANASUG.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SBBSF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AEIN.DE",
+        "date": "2026-05-22",
+        "epsActual": -0.29,
+        "epsEstimated": null,
+        "revenueActual": 89257000,
+        "revenueEstimated": 89257000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EASEMYTRIP.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RADHIKAJWE.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CONCORDBIO.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 8.9,
+        "revenueActual": null,
+        "revenueEstimated": 3761750000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CFOR",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -39,
+        "revenueActual": null,
+        "revenueEstimated": 1125000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LPKGF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MASKINVEST.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NH.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 13.1,
+        "revenueActual": null,
+        "revenueEstimated": 24852430000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TSDRF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GLOP-PC",
+        "date": "2026-05-22",
+        "epsActual": 0.37,
+        "epsEstimated": 0.3099,
+        "revenueActual": 68607000,
+        "revenueEstimated": 78777250,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SUNPHARMA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 11.51,
+        "revenueActual": null,
+        "revenueEstimated": 145565100000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MTSS.ME",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 8.39,
+        "revenueActual": null,
+        "revenueEstimated": 123620200000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TSEC.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.01,
+        "revenueActual": null,
+        "revenueEstimated": 155000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "JAIPURKURT.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GMRAIRPORT.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-31"
+    },
+    {
+        "symbol": "HIMTEK.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "2882.TW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.45,
+        "revenueActual": null,
+        "revenueEstimated": 108317900000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0KT6.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 68200000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MPNGY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.33881,
+        "revenueActual": null,
+        "revenueEstimated": 13210620000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KEGX",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SHV.AX",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.209,
+        "revenueActual": null,
+        "revenueEstimated": 102100000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RAJPACK.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AGMR.TO",
+        "date": "2026-05-22",
+        "epsActual": 0.1101,
+        "epsEstimated": -0.02736,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "USDP",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.26,
+        "revenueActual": null,
+        "revenueEstimated": 35605850,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HINDALCO.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 18.65,
+        "revenueActual": null,
+        "revenueEstimated": 716513100000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HINDALCO.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 18.65,
+        "revenueActual": null,
+        "revenueEstimated": 716513100000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SIBN.ME",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 19.29,
+        "revenueActual": null,
+        "revenueEstimated": 617904600000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PLAT.AT",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 111400000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TORNTPHARM.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 20.19,
+        "revenueActual": null,
+        "revenueEstimated": 39067430000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DANUBE.BO",
+        "date": "2026-05-22",
+        "epsActual": 0.03,
+        "epsEstimated": null,
+        "revenueActual": 335113000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5247.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LTRYW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AGMRF",
+        "date": "2026-05-22",
+        "epsActual": 0.07914,
+        "epsEstimated": -0.01967,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SHILPAMED.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.3,
+        "revenueActual": null,
+        "revenueEstimated": 4350000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "COMSP",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SLHGF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CSSEQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.75,
+        "revenueActual": null,
+        "revenueEstimated": 19022290,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PNTKYOR.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ADAPY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.02,
+        "revenueActual": null,
+        "revenueEstimated": 22032290,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0208.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.01988,
+        "revenueActual": null,
+        "revenueEstimated": 278107100,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "XEBEQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.0023,
+        "revenueActual": null,
+        "revenueEstimated": 80130950,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "XELA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TRANSRAILL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-28"
+    },
+    {
+        "symbol": "DSSL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KLAR.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.2194,
+        "revenueActual": null,
+        "revenueEstimated": 30000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TTKPRESTIG.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.9,
+        "revenueActual": null,
+        "revenueEstimated": 7049000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0QZ2.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.3895,
+        "revenueActual": null,
+        "revenueEstimated": 200488800,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IMP-A-SDB.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.89037,
+        "revenueActual": null,
+        "revenueEstimated": 6479737,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DOYU",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.09281,
+        "revenueActual": null,
+        "revenueEstimated": 127057300,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LUXHQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "JUBLPHARMA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 8,
+        "revenueActual": null,
+        "revenueEstimated": 21909330000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RAMKY.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EXROF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.01977,
+        "revenueActual": null,
+        "revenueEstimated": 9817740,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PWFNF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0002.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "XINT.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.01,
+        "revenueActual": null,
+        "revenueEstimated": 1032000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BIOCQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DATAMATICS.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 12.3,
+        "revenueActual": null,
+        "revenueEstimated": 5304000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FAZE3Q.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 5.2,
+        "revenueActual": null,
+        "revenueEstimated": 1320000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IMPACT.BK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MPNGF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.16805,
+        "revenueActual": null,
+        "revenueEstimated": 13185540000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DOFGO.OL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.02,
+        "revenueActual": null,
+        "revenueEstimated": 4912375000,
+        "lastUpdated": "2026-03-27"
+    },
+    {
+        "symbol": "3121.T",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NAUKRI.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.28,
+        "revenueActual": null,
+        "revenueEstimated": 7782394000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GRE.MC",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.58113,
+        "revenueActual": null,
+        "revenueEstimated": 439771000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SHARDAMOTR.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RIGMF",
+        "date": "2026-05-22",
+        "epsActual": -0.00287,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HOOK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NXST.BO",
+        "date": "2026-05-22",
+        "epsActual": 0.78,
+        "epsEstimated": 0.9,
+        "revenueActual": null,
+        "revenueEstimated": 6663000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BSFC",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PJXRF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5031.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BJ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.04,
+        "revenueActual": null,
+        "revenueEstimated": 5437423000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CHEMCON.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 715000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "COLPAL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 13.13,
+        "revenueActual": null,
+        "revenueEstimated": 15266720000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SARDAEN.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IREDA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.2,
+        "revenueActual": null,
+        "revenueEstimated": 9136000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ADSL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ICRA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 51.9,
+        "revenueActual": null,
+        "revenueEstimated": 1742000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VIPCLOTHNG.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NRF.BK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 516000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PATELSAI.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NH.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 13.1,
+        "revenueActual": null,
+        "revenueEstimated": 24852430000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NMTRQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WEL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RLO.JO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.54,
+        "revenueActual": null,
+        "revenueEstimated": 7089000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VRAYQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ZVOI",
+        "date": "2026-05-22",
+        "epsActual": -0.1,
+        "epsEstimated": null,
+        "revenueActual": 22545000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "7095.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BTMWW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.555,
+        "revenueActual": null,
+        "revenueEstimated": 99918000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GULFOILLUB.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 15.25,
+        "revenueActual": null,
+        "revenueEstimated": 10108750000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TLSS",
+        "date": "2026-05-22",
+        "epsActual": -0.0001,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 3000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ATLN",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.18,
+        "revenueActual": null,
+        "revenueEstimated": 111034000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "UPHL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "3430.TWO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.38,
+        "revenueActual": null,
+        "revenueEstimated": 435000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LVX.V",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GLOP-PB",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.3099,
+        "revenueActual": null,
+        "revenueEstimated": 78777250,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SQZB",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WAH.DE",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 67600000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "XCUR",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -18.6,
+        "revenueActual": null,
+        "revenueEstimated": 1644250,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "3301.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "DSSL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5071.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "M5Z.F",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 48700000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5247.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "ECORECO.BO",
+        "date": "2026-05-22",
+        "epsActual": 3.85,
+        "epsEstimated": null,
+        "revenueActual": 186100000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BIKAJI.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.33,
+        "revenueActual": null,
+        "revenueEstimated": 6941200000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "UTRS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "USCU.V",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GOKEX.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.25,
+        "revenueActual": null,
+        "revenueEstimated": 10405000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DATAMATICS.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 12.3,
+        "revenueActual": null,
+        "revenueEstimated": 5304000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GSPL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.58,
+        "revenueActual": null,
+        "revenueEstimated": 2270583000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GSPL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.58,
+        "revenueActual": null,
+        "revenueEstimated": 2270583000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "COLFF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.00719,
+        "revenueActual": null,
+        "revenueEstimated": 129942300,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ATH-PE",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "INFIQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.125,
+        "revenueActual": null,
+        "revenueEstimated": 1277400,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KONNDOR.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RATEGAIN.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.88,
+        "revenueActual": 7155500000,
+        "revenueEstimated": 6805500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SKA.WA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 167500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GETR",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "YELLQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GPW.WA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 160700000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AUTOIND.BO",
+        "date": "2026-05-22",
+        "epsActual": 6.7,
+        "epsEstimated": null,
+        "revenueActual": 2893100000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FRONTSP.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "M1GU.SI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TALK.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 54397770,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CAMLINFINE.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.5,
+        "revenueActual": null,
+        "revenueEstimated": 4584500000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "GANECOS.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4,
+        "revenueActual": null,
+        "revenueEstimated": 4031000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MFRVF",
+        "date": "2026-05-22",
+        "epsActual": 0.0151,
+        "epsEstimated": -0.00538,
+        "revenueActual": 330947200,
+        "revenueEstimated": 330947200,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CELLO.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.7,
+        "revenueActual": null,
+        "revenueEstimated": 6055500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ROAD.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WELCORP.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 15.25,
+        "revenueActual": null,
+        "revenueEstimated": 51635330000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HYDR.ME",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 103960800000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ANDHRAPET.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "XELAP",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SKYIND.BO",
+        "date": "2026-05-22",
+        "epsActual": 2.34,
+        "epsEstimated": null,
+        "revenueActual": 211107000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CMH.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -7.15166,
+        "revenueActual": null,
+        "revenueEstimated": 604500,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HARIOMPIPE.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 6,
+        "revenueActual": null,
+        "revenueEstimated": 1240000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ZEVY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HONASA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.88,
+        "revenueActual": null,
+        "revenueEstimated": 6429968000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ZFCVINDIA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 74.6,
+        "revenueActual": null,
+        "revenueEstimated": 10495000000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "MIRZAINT.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SUNTV.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 8.65,
+        "revenueActual": 8825100000,
+        "revenueEstimated": 9132160000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "JAYAGROGN.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "1155.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.2156,
+        "revenueActual": null,
+        "revenueEstimated": 7620992000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RADHEDE.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SATINDLTD.BO",
+        "date": "2026-05-22",
+        "epsActual": 2.12,
+        "epsEstimated": null,
+        "revenueActual": 1995807000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "INDIGRID-IV.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "PURVA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 6030000000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "LVXFF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GMBL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MAXESTATES.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.4,
+        "revenueActual": null,
+        "revenueEstimated": 780000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RENO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EDELWEISS.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MTC.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 17900000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "ATH-PD",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FG.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.23278,
+        "revenueActual": null,
+        "revenueEstimated": 1031725000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LUMAXIND.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 32.7,
+        "revenueActual": null,
+        "revenueEstimated": 8291000000,
+        "lastUpdated": "2026-03-30"
+    },
+    {
+        "symbol": "OXLCP",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.26,
+        "revenueActual": null,
+        "revenueEstimated": 244266000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CELUW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MINDACORP.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.7,
+        "revenueActual": null,
+        "revenueEstimated": 15755000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "USCUF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LUMAXIND.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 54.3,
+        "revenueActual": null,
+        "revenueEstimated": 11362000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SCHAND.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GOEVQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -4.2,
+        "revenueActual": null,
+        "revenueEstimated": 3400000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TPICQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.66,
+        "revenueActual": null,
+        "revenueEstimated": 337303900,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HTGMQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -11.8,
+        "revenueActual": null,
+        "revenueEstimated": 1596667,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "COLPAL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 13.13,
+        "revenueActual": null,
+        "revenueEstimated": 15266720000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AGS.SI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SFG.WA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.3039,
+        "revenueActual": null,
+        "revenueEstimated": 80328370,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GMBLP",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DOFG.OL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.63,
+        "revenueActual": null,
+        "revenueEstimated": 4906740000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SHWZ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.02,
+        "revenueActual": null,
+        "revenueEstimated": 19300000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RATEGAIN.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.88,
+        "revenueActual": null,
+        "revenueEstimated": 6805500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LGIQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.14634,
+        "revenueActual": null,
+        "revenueEstimated": 6800000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "2441.TW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-04-01"
+    },
+    {
+        "symbol": "EBET",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.6,
+        "revenueActual": null,
+        "revenueEstimated": 7000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OILCF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CMOTEC-B.ST",
+        "date": "2026-05-22",
+        "epsActual": -0.06,
+        "epsEstimated": null,
+        "revenueActual": 2798000,
+        "revenueEstimated": 2800000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0196.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RGFC",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "2892.TW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.5,
+        "revenueActual": null,
+        "revenueEstimated": 18472000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BINI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BBLNF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ARND3.SA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.06121,
+        "revenueActual": null,
+        "revenueEstimated": 15000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SAMHI.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.5,
+        "revenueActual": null,
+        "revenueEstimated": 3371750000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0166.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.01549,
+        "revenueActual": null,
+        "revenueEstimated": 309448700,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TRVN",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WINT",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AYUR.CN",
+        "date": "2026-05-22",
+        "epsActual": -0.0134,
+        "epsEstimated": null,
+        "revenueActual": 7744554,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MDVLQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -2,
+        "revenueActual": null,
+        "revenueEstimated": 8194000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ENGINERSIN.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 11587000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NITINCAST.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RUCHIRA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ICRA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 51.9,
+        "revenueActual": null,
+        "revenueEstimated": 1742000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NCKL.JK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 10419920000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0KUR.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CDPR.CN",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WSTL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WVMDF",
+        "date": "2026-05-22",
+        "epsActual": -0.00794,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OGKB.ME",
+        "date": "2026-05-22",
+        "epsActual": 0.0471,
+        "epsEstimated": null,
+        "revenueActual": 29051000000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MAHSEAMLES.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KLDO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SIMEF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RUCHIRA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "9896.HK",
+        "date": "2026-05-22",
+        "epsActual": 0.3941,
+        "epsEstimated": 0.665,
+        "revenueActual": 6345615000,
+        "revenueEstimated": 6159559000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CENTURYPLY.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.85,
+        "revenueActual": null,
+        "revenueEstimated": 14122290000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VTWRF",
+        "date": "2026-05-22",
+        "epsActual": 0.3516,
+        "epsEstimated": null,
+        "revenueActual": 499663400,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AEGISLOG.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.7,
+        "revenueActual": null,
+        "revenueEstimated": 19057500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AEGISLOG.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.7,
+        "revenueActual": null,
+        "revenueEstimated": 19057500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KLDI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TTOO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "2887.TW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.605,
+        "revenueActual": null,
+        "revenueEstimated": 42280630000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DOFGO.OL",
+        "date": "2026-05-22",
+        "epsActual": 6.15,
+        "epsEstimated": 4.2,
+        "revenueActual": 5820640000,
+        "revenueEstimated": 5425776000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TAVI.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CHMBBRW.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CFR.SW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.97,
+        "revenueActual": null,
+        "revenueEstimated": 10672660000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DCXINDIA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 6050000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LUMAXIND.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 54.3,
+        "revenueActual": null,
+        "revenueEstimated": 11362000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NASC",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -1.5,
+        "revenueActual": null,
+        "revenueEstimated": 172000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AFIIQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ATH-PB",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GANECOS.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4,
+        "revenueActual": null,
+        "revenueEstimated": 4031000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TIOG",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "2885.TW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.77,
+        "revenueActual": null,
+        "revenueEstimated": 33925410000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CONCORDBIO.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 8.9,
+        "revenueActual": null,
+        "revenueEstimated": 3761750000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AKRN.ME",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 39361000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RADHIKAJWE.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0HOT.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 1.34,
+        "revenueActual": null,
+        "revenueEstimated": 2859048000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "THS.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.1059,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "KOLTEPATIL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 11.6,
+        "revenueActual": null,
+        "revenueEstimated": 8601500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HITECH.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GMRINFRA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 40038000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GEBHY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 1682019000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OLOX",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 299.93,
+        "revenueActual": null,
+        "revenueEstimated": 8000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FOODSIN.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CFRHF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.72,
+        "revenueActual": null,
+        "revenueEstimated": 13354280000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ADSL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MMFL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 4112000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GMRAIRPORT.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.1,
+        "revenueActual": null,
+        "revenueEstimated": 40038000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CBNT",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.02,
+        "revenueActual": null,
+        "revenueEstimated": 175000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IFGLEXPOR.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ITC.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.15,
+        "revenueActual": 176288900000,
+        "revenueEstimated": 173793700000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MAXESTATES.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.4,
+        "revenueActual": null,
+        "revenueEstimated": 780000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DSINVEST.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HGINFRA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 23.55,
+        "revenueActual": null,
+        "revenueEstimated": 18571000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ANUP.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 11.2,
+        "revenueActual": null,
+        "revenueEstimated": 1990000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OLECTRA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0QMU.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.97,
+        "revenueActual": null,
+        "revenueEstimated": 10672660000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AGILQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SYRS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FRO.OL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 22.73,
+        "revenueActual": null,
+        "revenueEstimated": 5617361000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OXLCG",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.26,
+        "revenueActual": null,
+        "revenueEstimated": 244266000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SONX",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FINCABLES.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 9.9,
+        "revenueActual": null,
+        "revenueEstimated": 18426000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IREDA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.2,
+        "revenueActual": null,
+        "revenueEstimated": 9136000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TILAK.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EDELWEISS.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GDTRF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "COMS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LSBCF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CARM",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.1474,
+        "revenueActual": null,
+        "revenueEstimated": 4229000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ENLV.TA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.06294,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AUTOIND.NS",
+        "date": "2026-05-22",
+        "epsActual": 6.7,
+        "epsEstimated": null,
+        "revenueActual": 2893100000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FOODSIN.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FXLV",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MAHSEAMLES.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HUIZ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 55104280,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SBNY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RGCCF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MDLM",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EASEMYTRIP.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OXLCO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.26,
+        "revenueActual": null,
+        "revenueEstimated": 244266000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VIVE",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MAGN.ME",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 6.11,
+        "revenueActual": null,
+        "revenueEstimated": 173186100000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ANUP.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 11.2,
+        "revenueActual": null,
+        "revenueEstimated": 1990000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SHILPAMED.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.3,
+        "revenueActual": null,
+        "revenueEstimated": 4350000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BXRXQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OXLCN",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.26,
+        "revenueActual": null,
+        "revenueEstimated": 244266000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CENTURYPLY.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.85,
+        "revenueActual": null,
+        "revenueEstimated": 14122290000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CTHRQ",
+        "date": "2026-05-22",
+        "epsActual": -1.75,
+        "epsEstimated": null,
+        "revenueActual": 3835843,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MCLDF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LOWLF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.3,
+        "revenueActual": null,
+        "revenueEstimated": 6969920,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WELCORP.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 15.25,
+        "revenueActual": null,
+        "revenueEstimated": 51635330000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ENGINERSIN.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 11587000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SHERF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.03595,
+        "revenueActual": null,
+        "revenueEstimated": 41432560,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MSPR",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2362.5,
+        "revenueActual": null,
+        "revenueEstimated": 265462000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TTKPRESTIG.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.9,
+        "revenueActual": null,
+        "revenueEstimated": 7049000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AGVENTURES.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CDR-PB",
+        "date": "2026-05-22",
+        "epsActual": 0.0063,
+        "epsEstimated": -0.1,
+        "revenueActual": 6871000,
+        "revenueEstimated": 32245000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BTTX",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.22,
+        "revenueActual": null,
+        "revenueEstimated": 5043000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MSPRW",
+        "date": "2026-05-22",
+        "epsActual": -29.15,
+        "epsEstimated": null,
+        "revenueActual": 536000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EMIL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.9,
+        "revenueActual": null,
+        "revenueEstimated": 19235800000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ENSV",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GPPRF",
+        "date": "2026-05-22",
+        "epsActual": 0.0011,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5196.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.00664,
+        "revenueActual": null,
+        "revenueEstimated": 181775000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WOLF.VI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 67600000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OXLC",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.26,
+        "revenueActual": null,
+        "revenueEstimated": 244266000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LPS.V",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.01,
+        "revenueActual": null,
+        "revenueEstimated": 800000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ORXGF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WORL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ASAHIINDIA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 12020000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EICHERMOT.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 53.29,
+        "revenueActual": null,
+        "revenueEstimated": 59440750000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SUNPHARMA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 11.51,
+        "revenueActual": null,
+        "revenueEstimated": 145565100000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SCHAND.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-20"
+    },
+    {
+        "symbol": "FINCABLES.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 9.9,
+        "revenueActual": null,
+        "revenueEstimated": 18426000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DHAMPURSUG.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SB-PC",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.09,
+        "revenueActual": null,
+        "revenueEstimated": 65900000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FIEE",
+        "date": "2026-05-22",
+        "epsActual": 0.03,
+        "epsEstimated": -0.83039,
+        "revenueActual": 2121989,
+        "revenueEstimated": 14793000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TARSONS.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EICHERMOT.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 53.29,
+        "revenueActual": null,
+        "revenueEstimated": 59440750000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BIKAJI.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.33,
+        "revenueActual": null,
+        "revenueEstimated": 6941200000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SCHAND.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TNSTLTU.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TARSONS.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IONEXCHANG.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NEV.V",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DBOL.BO",
+        "date": "2026-05-22",
+        "epsActual": 2.55,
+        "epsEstimated": null,
+        "revenueActual": 4863400000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LUD",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MIRZAINT.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CALA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SING",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SVM.TO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.3895,
+        "revenueActual": null,
+        "revenueEstimated": 200488800,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BEW.V",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "NAUKRI.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 4.28,
+        "revenueActual": null,
+        "revenueEstimated": 7782394000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "9257.T",
+        "date": "2026-05-22",
+        "epsActual": -3.16364,
+        "epsEstimated": null,
+        "revenueActual": 4878891000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ATH-PA",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.14,
+        "revenueActual": null,
+        "revenueEstimated": 1626375000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0090.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SONIF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.81692,
+        "revenueActual": null,
+        "revenueEstimated": 204229,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MAWANASUG.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GAILF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.1246,
+        "revenueActual": null,
+        "revenueEstimated": 3618774000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IDBHF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.1307,
+        "revenueActual": null,
+        "revenueEstimated": 893810000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "2239.TW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.97,
+        "revenueActual": null,
+        "revenueEstimated": 4879000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AREC",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.095,
+        "revenueActual": null,
+        "revenueEstimated": 6670,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VIAAY",
+        "date": "2026-05-22",
+        "epsActual": 0.1275,
+        "epsEstimated": 0.1275,
+        "revenueActual": 277780300,
+        "revenueEstimated": 272422900,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CZOOF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -353.2482,
+        "revenueActual": null,
+        "revenueEstimated": 419911200,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CENTEXT.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MLYNF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.05318,
+        "revenueActual": null,
+        "revenueEstimated": 1879337000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GSL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.4,
+        "revenueActual": null,
+        "revenueEstimated": 182865500,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "BIORQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -202.78,
+        "revenueActual": null,
+        "revenueEstimated": 25410600,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0RUM.L",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "INLB",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IONM",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -18,
+        "revenueActual": null,
+        "revenueEstimated": 5000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TMPOQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "AYURF",
+        "date": "2026-05-22",
+        "epsActual": -0.00719,
+        "epsEstimated": null,
+        "revenueActual": 5684348,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GMRINFRA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 40038000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RAMCOCEM.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 5.24,
+        "revenueActual": null,
+        "revenueEstimated": 26077140000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MOTS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -2.55,
+        "revenueActual": null,
+        "revenueEstimated": 2360000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ABFRL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -1.705,
+        "revenueActual": null,
+        "revenueEstimated": 19341330000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GIPCL.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "JUBLPHARMA.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 8,
+        "revenueActual": null,
+        "revenueEstimated": 21909330000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LICI.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 37.11,
+        "revenueActual": null,
+        "revenueEstimated": 1665652000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CENTEXT.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "STARCEMENT.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.27,
+        "revenueActual": null,
+        "revenueEstimated": 11779450000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "2890.TW",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.75,
+        "revenueActual": null,
+        "revenueEstimated": 23425000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "B61.SI",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OGUN-B.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.41,
+        "revenueActual": null,
+        "revenueEstimated": 118700000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MARK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.3,
+        "revenueActual": null,
+        "revenueEstimated": 5124000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "MINDACORP.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 3.7,
+        "revenueActual": null,
+        "revenueEstimated": 15755000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VYGVQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ASAHIINDIA.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 12020000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "JKTYRE.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 8.4,
+        "revenueActual": null,
+        "revenueEstimated": 44239500000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TUEMQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DIVGIITTS.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 1008000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WANBURY.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SRNE",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "LPSIF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.00805,
+        "revenueActual": null,
+        "revenueEstimated": 643909,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "JAYAGROGN.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WVM.V",
+        "date": "2026-05-22",
+        "epsActual": -0.0111,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "INDIGOPNTS.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 12,
+        "revenueActual": null,
+        "revenueEstimated": 4209000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5249.KL",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ADNH",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.9,
+        "revenueActual": null,
+        "revenueEstimated": 1800000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ZNZNF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.2672,
+        "revenueActual": null,
+        "revenueEstimated": 96300080,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VINC",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DIVGIITTS.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 1008000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "IRCON.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.3,
+        "revenueActual": null,
+        "revenueEstimated": 31246000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SIG.CN",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TORNTPHARM.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 20.19,
+        "revenueActual": null,
+        "revenueEstimated": 39067430000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "OREAF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "THMO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -5.85,
+        "revenueActual": null,
+        "revenueEstimated": 2657000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "RAMCOCEM.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 5.24,
+        "revenueActual": null,
+        "revenueEstimated": 26077140000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HITECH.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "6228.T",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EMIL.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.9,
+        "revenueActual": null,
+        "revenueEstimated": 19235800000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "5071.KL",
+        "date": "2026-05-22",
+        "epsActual": 0.0364,
+        "epsEstimated": null,
+        "revenueActual": 15929000,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ELYS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TREVQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WHBRADY.BO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TBXXF",
+        "date": "2026-05-22",
+        "epsActual": -0.00583,
+        "epsEstimated": 0.08,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "3690.HK",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -1.31771,
+        "revenueActual": null,
+        "revenueEstimated": 103391700000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "FRO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 2.35,
+        "revenueActual": null,
+        "revenueEstimated": 579593700,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "VCNX",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -73.038,
+        "revenueActual": null,
+        "revenueEstimated": 50000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "0ZQ.F",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": 0.92,
+        "revenueActual": null,
+        "revenueEstimated": 1154830000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "WANBURY.NS",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "CQRLF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "PSAN.DE",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 69731040,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ODTC",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "TBIO",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -6.39,
+        "revenueActual": null,
+        "revenueEstimated": 2533333,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "EFTR",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -6.39599,
+        "revenueActual": null,
+        "revenueEstimated": 100000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "ADS.OL",
+        "date": "2026-05-22",
+        "epsActual": 0.1462,
+        "epsEstimated": -0.11179,
+        "revenueActual": 5002290,
+        "revenueEstimated": 165937100,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "GBK.ST",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -282.90033,
+        "revenueActual": null,
+        "revenueEstimated": 65000000,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "SY",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": -0.10487,
+        "revenueActual": null,
+        "revenueEstimated": 60196920,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "HGYMF",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": 57941600,
+        "lastUpdated": "2026-05-22"
+    },
+    {
+        "symbol": "DYNTQ",
+        "date": "2026-05-22",
+        "epsActual": null,
+        "epsEstimated": null,
+        "revenueActual": null,
+        "revenueEstimated": null,
+        "lastUpdated": "2026-05-22"
+    }
+]

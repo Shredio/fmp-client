@@ -832,15 +832,13 @@ Contains percentage growth of all cash flow statement items
 - `logger` (LoggerInterface|null, default: null) - Optional logger
 
 **Return Values:** `iterable<EarningsCalendarItem>`
-- `date` - Announcement date
 - `symbol` - Ticker symbol
-- `eps` - Actual EPS
-- `epsEstimated` - Estimated EPS
-- `time` - Announcement time
-- `revenue` - Actual revenue
-- `revenueEstimated` - Estimated revenue
-- `updatedFromDate` - Last update date
-- `fiscalDateEnding` - End of fiscal period
+- `date` - Announcement date
+- `epsActual` - Actual EPS (nullable when not yet reported)
+- `epsEstimated` - Estimated EPS (nullable)
+- `revenueActual` - Actual revenue (nullable when not yet reported)
+- `revenueEstimated` - Estimated revenue (nullable)
+- `lastUpdated` - Last update date
 
 **API endpoint:** `https://financialmodelingprep.com/stable/earnings-calendar`
 

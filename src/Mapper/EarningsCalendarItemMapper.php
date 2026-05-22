@@ -29,9 +29,9 @@ final readonly class EarningsCalendarItemMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'date' => $ts->string(),
-			'epsActual' => $ts->float(),
+			'epsActual' => $ts->nullable($ts->float()),
 			'epsEstimated' => $ts->nullable($ts->float()),
-			'revenueActual' => $ts->int(),
+			'revenueActual' => $ts->nullable($ts->int()),
 			'revenueEstimated' => $ts->nullable($ts->int()),
 			'lastUpdated' => $ts->string(),
 		],

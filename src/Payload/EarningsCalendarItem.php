@@ -14,9 +14,9 @@ final readonly class EarningsCalendarItem
 	public function __construct(
 		public string $symbol,
 		public string $date,
-		public float $epsActual,
+		public float|null $epsActual,
 		public float|null $epsEstimated,
-		public int $revenueActual,
+		public int|null $revenueActual,
 		public int|null $revenueEstimated,
 		public string $lastUpdated,
 	)
@@ -24,7 +24,7 @@ final readonly class EarningsCalendarItem
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: string, epsActual: float, epsEstimated: float|null, revenueActual: int, revenueEstimated: int|null, lastUpdated: string}
+	 * @return array{symbol: non-empty-string, date: string, epsActual: float|null, epsEstimated: float|null, revenueActual: int|null, revenueEstimated: int|null, lastUpdated: string}
 	 */
 	public function toArray(): array
 	{
