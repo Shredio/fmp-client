@@ -3,6 +3,7 @@
 namespace Shredio\FmpClient\Payload;
 
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
+use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
 
 #[CompileObjectMapper(identifier: 'symbol')]
 final readonly class Dividend
@@ -17,8 +18,11 @@ final readonly class Dividend
     public function __construct(
         public string $symbol,
         public string $date,
+        #[CompilePropertyOptions(nullValues: [''])]
         public ?string $recordDate,
+        #[CompilePropertyOptions(nullValues: [''])]
         public ?string $paymentDate,
+        #[CompilePropertyOptions(nullValues: [''])]
         public ?string $declarationDate,
         public ?float $adjDividend,
         public ?float $dividend,

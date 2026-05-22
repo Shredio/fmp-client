@@ -29,9 +29,9 @@ final readonly class DividendMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'date' => $ts->nonEmptyString(),
-			'recordDate' => $ts->nullable($ts->nonEmptyString()),
-			'paymentDate' => $ts->nullable($ts->nonEmptyString()),
-			'declarationDate' => $ts->nullable($ts->nonEmptyString()),
+			'recordDate' => $ts->nullable($ts->nonEmptyString(), ['']),
+			'paymentDate' => $ts->nullable($ts->nonEmptyString(), ['']),
+			'declarationDate' => $ts->nullable($ts->nonEmptyString(), ['']),
 			'adjDividend' => $ts->nullable($ts->float()),
 			'dividend' => $ts->nullable($ts->float()),
 			'yield' => $ts->float(),

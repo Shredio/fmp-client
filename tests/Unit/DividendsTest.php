@@ -49,4 +49,27 @@ final class DividendsTest extends TestCase
 		$this->assertSame($expectedSecondDividend->toArray(), $dividends[1]->toArray());
 	}
 
+	public function testDividendsWithUnconfirmedRecord(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/dividends_POMRY.PA_unconfirmed.json');
+
+		$dividends = iterator_to_array($client->dividends('POMRY.PA'));
+
+		$this->assertCount(1, $dividends);
+
+		$expectedDividend = new Dividend(
+			symbol: 'POMRY.PA',
+			date: '2026-09-18',
+			recordDate: null,
+			paymentDate: null,
+			declarationDate: null,
+			adjDividend: null,
+			dividend: null,
+			yield: 0.0,
+			frequency: 'Annual'
+		);
+
+		$this->assertSame($expectedDividend->toArray(), $dividends[0]->toArray());
+	}
+
 }
