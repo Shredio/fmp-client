@@ -10,18 +10,20 @@ final readonly class SplitsCalendarItem
 
 	/**
 	 * @param non-empty-string $symbol
+	 * @param non-empty-string|null $splitType
 	 */
 	public function __construct(
 		public string $symbol,
 		public string $date,
 		public int $numerator,
 		public int $denominator,
+		public ?string $splitType,
 	)
 	{
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: string, numerator: int, denominator: int}
+	 * @return array{symbol: non-empty-string, date: string, numerator: int, denominator: int, splitType: non-empty-string|null}
 	 */
 	public function toArray(): array
 	{
@@ -30,6 +32,7 @@ final readonly class SplitsCalendarItem
 			'date' => $this->date,
 			'numerator' => $this->numerator,
 			'denominator' => $this->denominator,
+			'splitType' => $this->splitType,
 		];
 	}
 

@@ -856,11 +856,11 @@ Contains percentage growth of all cash flow statement items
 - `logger` (LoggerInterface|null, default: null) - Optional logger
 
 **Return Values:** `iterable<SplitsCalendarItem>`
-- `date` - Split date
-- `label` - Description
 - `symbol` - Ticker symbol
+- `date` - Split date
 - `numerator` - Split ratio numerator
 - `denominator` - Split ratio denominator
+- `splitType` - Type of split (`stock-split`, `stock-dividend`, or `null`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/splits-calendar`
 

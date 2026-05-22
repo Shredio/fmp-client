@@ -31,6 +31,7 @@ final readonly class SplitsCalendarItemMapper extends Type
 			'date' => $ts->string(),
 			'numerator' => $ts->int(),
 			'denominator' => $ts->int(),
+			'splitType' => $ts->nullable($ts->nonEmptyString()),
 		],
 			identifier: 'symbol',
 		);

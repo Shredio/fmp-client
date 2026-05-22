@@ -1,62 +1,5693 @@
 [
-  {
-    "symbol": "TNPV.TA",
-    "date": "2021-01-10",
-    "numerator": 1,
-    "denominator": 10
-  },
-  {
-    "symbol": "IPCALAB.BO",
-    "date": "2021-01-10",
-    "numerator": 2,
-    "denominator": 1
-  },
-  {
-    "symbol": "TUI1.DE",
-    "date": "2021-01-08",
-    "numerator": 199,
-    "denominator": 125
-  },
-  {
-    "symbol": "TUI.L",
-    "date": "2021-01-08",
-    "numerator": 1589,
-    "denominator": 1000
-  },
-  {
-    "symbol": "TUIFF",
-    "date": "2021-01-08",
-    "numerator": 199,
-    "denominator": 125
-  },
-  {
-    "symbol": "KCC.V",
-    "date": "2021-01-08",
-    "numerator": 1,
-    "denominator": 3
-  },
-  {
-    "symbol": "0HX7.L",
-    "date": "2021-01-08",
-    "numerator": 1,
-    "denominator": 7
-  },
-  {
-    "symbol": "8193.HK",
-    "date": "2021-01-08",
-    "numerator": 151,
-    "denominator": 100
-  },
-  {
-    "symbol": "GPO.CN",
-    "date": "2021-01-08",
-    "numerator": 1,
-    "denominator": 2
-  },
-  {
-    "symbol": "8292.HK",
-    "date": "2021-01-08",
-    "numerator": 1,
-    "denominator": 10
-  }
+    {
+        "symbol": "JZ",
+        "date": "2026-05-22",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CHLL.L",
+        "date": "2026-05-22",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GEL.BO",
+        "date": "2026-05-22",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "UBXG",
+        "date": "2026-05-22",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "688377.SS",
+        "date": "2026-05-22",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0876.HK",
+        "date": "2026-05-22",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002749.SZ",
+        "date": "2026-05-22",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LZMH",
+        "date": "2026-05-22",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LNAI",
+        "date": "2026-05-22",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002360.KS",
+        "date": "2026-05-22",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002245.SZ",
+        "date": "2026-05-21",
+        "numerator": 37,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "605289.SS",
+        "date": "2026-05-21",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "004410.KS",
+        "date": "2026-05-21",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CMND",
+        "date": "2026-05-21",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "301181.SZ",
+        "date": "2026-05-21",
+        "numerator": 13,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AVG.NS",
+        "date": "2026-05-21",
+        "numerator": 103,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "603039.SS",
+        "date": "2026-05-21",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ONCO",
+        "date": "2026-05-21",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AVG.BO",
+        "date": "2026-05-21",
+        "numerator": 103,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "004415.KS",
+        "date": "2026-05-21",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HAO",
+        "date": "2026-05-21",
+        "numerator": 1,
+        "denominator": 128,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "024890.KS",
+        "date": "2026-05-21",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "000922.SZ",
+        "date": "2026-05-21",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "301608.SZ",
+        "date": "2026-05-20",
+        "numerator": 1489,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "005320.KS",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BUY.AX",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "078130.KQ",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PSG.BK",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "OPTI.CN",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "092220.KS",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PSGC.BK",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NEXT.OL",
+        "date": "2026-05-20",
+        "numerator": 1883,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HYD.AX",
+        "date": "2026-05-20",
+        "numerator": 529,
+        "denominator": 250,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ZAAG",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 2500,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "000890.KS",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "011090.KS",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VIVE.ST",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BYOGF",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "603179.SS",
+        "date": "2026-05-20",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002987.SZ",
+        "date": "2026-05-20",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "001316.SZ",
+        "date": "2026-05-20",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "OPTH",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "603162.SS",
+        "date": "2026-05-20",
+        "numerator": 37,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "006200.KS",
+        "date": "2026-05-20",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ALSRS.PA",
+        "date": "2026-05-19",
+        "numerator": 1,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FNNCF",
+        "date": "2026-05-19",
+        "numerator": 11,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "300818.SZ",
+        "date": "2026-05-19",
+        "numerator": 13,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NCI",
+        "date": "2026-05-19",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9538.SR",
+        "date": "2026-05-19",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ULTH.CN",
+        "date": "2026-05-19",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ULTHF",
+        "date": "2026-05-19",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FTN.TO",
+        "date": "2026-05-19",
+        "numerator": 11,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WAK.AX",
+        "date": "2026-05-19",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "009810.KS",
+        "date": "2026-05-19",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0328.HK",
+        "date": "2026-05-19",
+        "numerator": 1283,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "000034.SZ",
+        "date": "2026-05-19",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "EZGO",
+        "date": "2026-05-19",
+        "numerator": 1,
+        "denominator": 150,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BK.TO",
+        "date": "2026-05-19",
+        "numerator": 11,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "301128.SZ",
+        "date": "2026-05-19",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CNDCF",
+        "date": "2026-05-19",
+        "numerator": 11,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "056730.KQ",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002956.SZ",
+        "date": "2026-05-18",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "001130.KS",
+        "date": "2026-05-18",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "YYAI",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MSBC",
+        "date": "2026-05-18",
+        "numerator": 21,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8057.HK",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HPUR.OL",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "027740.KS",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MI",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 80,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WNFT",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "001620.KS",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CELL.MI",
+        "date": "2026-05-18",
+        "numerator": 62,
+        "denominator": 61,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PALL",
+        "date": "2026-05-18",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KEYW.BR",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "EZRA",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PPCB",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HPURF",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "605499.SS",
+        "date": "2026-05-18",
+        "numerator": 13,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "YMT",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 15,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CHLL.L",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "009460.KS",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RETO",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ADTX",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 27,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PPLT",
+        "date": "2026-05-18",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "044380.KS",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FRGT",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CPIA.TA",
+        "date": "2026-05-18",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "688498.SS",
+        "date": "2026-05-18",
+        "numerator": 29,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "095720.KS",
+        "date": "2026-05-15",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CCFN",
+        "date": "2026-05-15",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002458.SZ",
+        "date": "2026-05-15",
+        "numerator": 13,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "011930.KS",
+        "date": "2026-05-15",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BIOGEN.BO",
+        "date": "2026-05-15",
+        "numerator": 7,
+        "denominator": 6,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DEVLAB.BO",
+        "date": "2026-05-15",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FLERIE.ST",
+        "date": "2026-05-15",
+        "numerator": 8,
+        "denominator": 7,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "011000.KS",
+        "date": "2026-05-14",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "2459.HK",
+        "date": "2026-05-14",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SLMT",
+        "date": "2026-05-14",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BMBRF",
+        "date": "2026-05-14",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6712.TWO",
+        "date": "2026-05-14",
+        "numerator": 21,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BIMAS.IS",
+        "date": "2026-05-14",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SPX.AX",
+        "date": "2026-05-13",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "INOX.BK",
+        "date": "2026-05-13",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WNRS",
+        "date": "2026-05-13",
+        "numerator": 1,
+        "denominator": 300,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CROTF",
+        "date": "2026-05-13",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "069640.KS",
+        "date": "2026-05-13",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CYBR.JK",
+        "date": "2026-05-13",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002560.SZ",
+        "date": "2026-05-13",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AE.BK",
+        "date": "2026-05-13",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "300516.SZ",
+        "date": "2026-05-13",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9561.SR",
+        "date": "2026-05-12",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CHP.L",
+        "date": "2026-05-12",
+        "numerator": 1,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "5IC.SI",
+        "date": "2026-05-12",
+        "numerator": 5,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4016.SR",
+        "date": "2026-05-12",
+        "numerator": 7,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "STPH.CN",
+        "date": "2026-05-12",
+        "numerator": 1,
+        "denominator": 6,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NOBI.ST",
+        "date": "2026-05-12",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TMI.L",
+        "date": "2026-05-12",
+        "numerator": 4,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0JQ2.L",
+        "date": "2026-05-12",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ASBP",
+        "date": "2026-05-11",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4083.SR",
+        "date": "2026-05-11",
+        "numerator": 72,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "001380.KS",
+        "date": "2026-05-11",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002960.SZ",
+        "date": "2026-05-11",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3EUL.L",
+        "date": "2026-05-11",
+        "numerator": 25,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KALA",
+        "date": "2026-05-11",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "205470.KQ",
+        "date": "2026-05-11",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "603596.SS",
+        "date": "2026-05-11",
+        "numerator": 37,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3LSI.L",
+        "date": "2026-05-11",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "301552.SZ",
+        "date": "2026-05-11",
+        "numerator": 13,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3DEL.MI",
+        "date": "2026-05-11",
+        "numerator": 20,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3LEU.L",
+        "date": "2026-05-11",
+        "numerator": 25,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3DEL.L",
+        "date": "2026-05-11",
+        "numerator": 20,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3SIL.MI",
+        "date": "2026-05-11",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3UKL.L",
+        "date": "2026-05-11",
+        "numerator": 20,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002975.SZ",
+        "date": "2026-05-11",
+        "numerator": 13,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SMX",
+        "date": "2026-05-11",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VIBE.CN",
+        "date": "2026-05-11",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3EUL.MI",
+        "date": "2026-05-11",
+        "numerator": 25,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3LDE.L",
+        "date": "2026-05-11",
+        "numerator": 20,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VIBEF",
+        "date": "2026-05-11",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DKI",
+        "date": "2026-05-11",
+        "numerator": 1,
+        "denominator": 16,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GDV.TO",
+        "date": "2026-05-11",
+        "numerator": 23,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ITBL.MI",
+        "date": "2026-05-11",
+        "numerator": 50,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3SIL.L",
+        "date": "2026-05-11",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ASBPW",
+        "date": "2026-05-11",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FCIT.L",
+        "date": "2026-05-11",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4090.SR",
+        "date": "2026-05-11",
+        "numerator": 1919,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AIXI",
+        "date": "2026-05-11",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PCFD.SG",
+        "date": "2026-05-11",
+        "numerator": 25,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002595.SZ",
+        "date": "2026-05-11",
+        "numerator": 29,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9538.SR",
+        "date": "2026-05-10",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BMTLF",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BNZI",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "688256.SS",
+        "date": "2026-05-08",
+        "numerator": 149,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4445.T",
+        "date": "2026-05-08",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "270520.KQ",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRAF.L",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BMET.V",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "300932.SZ",
+        "date": "2026-05-08",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SPOD.CN",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 15,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "007460.KS",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 15,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RBD.L",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TROUF",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CPL.V",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WTCZF",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CVNA",
+        "date": "2026-05-08",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "OLOX",
+        "date": "2026-05-08",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1682.HK",
+        "date": "2026-05-08",
+        "numerator": 1527,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "007280.KS",
+        "date": "2026-05-07",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NKG.V",
+        "date": "2026-05-07",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SBS",
+        "date": "2026-05-07",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRANS.ST",
+        "date": "2026-05-07",
+        "numerator": 1179,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "033250.KS",
+        "date": "2026-05-07",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CHSN",
+        "date": "2026-05-07",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GT1.AX",
+        "date": "2026-05-07",
+        "numerator": 1021,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FCT.NZ",
+        "date": "2026-05-07",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NKGFF",
+        "date": "2026-05-07",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SRN.AX",
+        "date": "2026-05-06",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "004060.KS",
+        "date": "2026-05-06",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "006740.KS",
+        "date": "2026-05-06",
+        "numerator": 833,
+        "denominator": 10000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SELIC.BK",
+        "date": "2026-05-06",
+        "numerator": 24,
+        "denominator": 23,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8074.TWO",
+        "date": "2026-05-06",
+        "numerator": 128,
+        "denominator": 125,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "004270.KS",
+        "date": "2026-05-06",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "2477.HK",
+        "date": "2026-05-06",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "031820.KS",
+        "date": "2026-05-06",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SPI.BK",
+        "date": "2026-05-06",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BMR.AX",
+        "date": "2026-05-06",
+        "numerator": 253,
+        "denominator": 250,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MIMI",
+        "date": "2026-05-06",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8069.HK",
+        "date": "2026-05-06",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BMNG",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AVROIND.BO",
+        "date": "2026-05-05",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0KUV.L",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DUOG",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FIGG",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ALATA.PA",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AVROIND.NS",
+        "date": "2026-05-05",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GOVZ",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BAIG",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9980.HK",
+        "date": "2026-05-05",
+        "numerator": 13,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NUVI",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PONGF",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CRCG",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MCA.AX",
+        "date": "2026-05-05",
+        "numerator": 14,
+        "denominator": 11,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CRWG",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WHIP.CN",
+        "date": "2026-05-05",
+        "numerator": 1,
+        "denominator": 120,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ESSI",
+        "date": "2026-05-04",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LGHL",
+        "date": "2026-05-04",
+        "numerator": 1,
+        "denominator": 6,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "012160.KS",
+        "date": "2026-05-04",
+        "numerator": 7709,
+        "denominator": 10000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRI.TO",
+        "date": "2026-05-04",
+        "numerator": 123,
+        "denominator": 125,
+        "splitType": "stock-dividend"
+    },
+    {
+        "symbol": "VEEE",
+        "date": "2026-05-04",
+        "numerator": 1,
+        "denominator": 37,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FCHL",
+        "date": "2026-05-04",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "328130.KQ",
+        "date": "2026-05-04",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BNK.TO",
+        "date": "2026-05-04",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "INHD",
+        "date": "2026-05-04",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ERNA",
+        "date": "2026-05-04",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRI",
+        "date": "2026-05-04",
+        "numerator": 123,
+        "denominator": 125,
+        "splitType": "stock-dividend"
+    },
+    {
+        "symbol": "214330.KS",
+        "date": "2026-05-04",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PIC-A.TO",
+        "date": "2026-05-01",
+        "numerator": 11,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GMEX",
+        "date": "2026-05-01",
+        "numerator": 1,
+        "denominator": 7,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TLIH",
+        "date": "2026-05-01",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MRAL",
+        "date": "2026-05-01",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FAIR.L",
+        "date": "2026-05-01",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GREH",
+        "date": "2026-05-01",
+        "numerator": 103,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MSTP",
+        "date": "2026-05-01",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SNDA.L",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "JAGX",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 35,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRUBB.BK",
+        "date": "2026-04-30",
+        "numerator": 37,
+        "denominator": 36,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AIRE",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "300458.SZ",
+        "date": "2026-04-30",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CCB.V",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "301016.SZ",
+        "date": "2026-04-30",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BKYI",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "POR.V",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PYMOF",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SANINFRA.BO",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TYUM.CN",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "025750.KS",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "UK",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "054300.KQ",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ZUUZF",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "115160.KQ",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1703.HK",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PFFOF",
+        "date": "2026-04-30",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "EDVR",
+        "date": "2026-04-30",
+        "numerator": 51,
+        "denominator": 50,
+        "splitType": "stock-dividend"
+    },
+    {
+        "symbol": "CTNT",
+        "date": "2026-04-29",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BRAI",
+        "date": "2026-04-29",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "073570.KQ",
+        "date": "2026-04-29",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SBSP3.SA",
+        "date": "2026-04-29",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7729.TWO",
+        "date": "2026-04-29",
+        "numerator": 203,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HDV",
+        "date": "2026-04-29",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DIVIO-B.ST",
+        "date": "2026-04-29",
+        "numerator": 203,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IWF",
+        "date": "2026-04-29",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "QBAK",
+        "date": "2026-04-29",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BFGFF",
+        "date": "2026-04-29",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "603031.SS",
+        "date": "2026-04-29",
+        "numerator": 29,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8057.HK",
+        "date": "2026-04-29",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002393.SZ",
+        "date": "2026-04-28",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1961.T",
+        "date": "2026-04-28",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "334A.T",
+        "date": "2026-04-28",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3804.T",
+        "date": "2026-04-28",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DGNX",
+        "date": "2026-04-28",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8087.HK",
+        "date": "2026-04-28",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3565.T",
+        "date": "2026-04-28",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1436.T",
+        "date": "2026-04-28",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HYT.AX",
+        "date": "2026-04-28",
+        "numerator": 203,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "300501.SZ",
+        "date": "2026-04-28",
+        "numerator": 73,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ISPC",
+        "date": "2026-04-28",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VNRX",
+        "date": "2026-04-28",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "2695.T",
+        "date": "2026-04-28",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RSE.L",
+        "date": "2026-04-28",
+        "numerator": 657,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "UUU.CN",
+        "date": "2026-04-27",
+        "numerator": 2,
+        "denominator": 7,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DRCT",
+        "date": "2026-04-27",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CISS",
+        "date": "2026-04-27",
+        "numerator": 1,
+        "denominator": 7,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "UP",
+        "date": "2026-04-27",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "001230.KS",
+        "date": "2026-04-27",
+        "numerator": 1453,
+        "denominator": 5000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "038880.KQ",
+        "date": "2026-04-27",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "OCG",
+        "date": "2026-04-27",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "001510.KS",
+        "date": "2026-04-27",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ERKA.TA",
+        "date": "2026-04-27",
+        "numerator": 2,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NXDCF",
+        "date": "2026-04-27",
+        "numerator": 203,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "001515.KS",
+        "date": "2026-04-27",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AIOS",
+        "date": "2026-04-27",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AMU.AX",
+        "date": "2026-04-27",
+        "numerator": 91,
+        "denominator": 90,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "000180.KS",
+        "date": "2026-04-27",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IMUX",
+        "date": "2026-04-27",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SOWG",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 15,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AFBCF",
+        "date": "2026-04-24",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "OZYSR.IS",
+        "date": "2026-04-24",
+        "numerator": 41,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3321.HK",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TDTH",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MMI.AX",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CUE",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BULG",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AERO.ST",
+        "date": "2026-04-24",
+        "numerator": 257,
+        "denominator": 250,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TCF.CN",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MMILF",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRLEF",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "OIO",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GEMG",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "118000.KS",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MSS",
+        "date": "2026-04-24",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0574.HK",
+        "date": "2026-04-23",
+        "numerator": 1317,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002315.SZ",
+        "date": "2026-04-23",
+        "numerator": 13,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ROG.AX",
+        "date": "2026-04-23",
+        "numerator": 5,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "058430.KS",
+        "date": "2026-04-23",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IPST",
+        "date": "2026-04-23",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CBSU",
+        "date": "2026-04-23",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FONC.SW",
+        "date": "2026-04-23",
+        "numerator": 1029,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8123.HK",
+        "date": "2026-04-23",
+        "numerator": 1,
+        "denominator": 60,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TOUR",
+        "date": "2026-04-22",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "688678.SS",
+        "date": "2026-04-22",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CHM.AX",
+        "date": "2026-04-22",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BAC.JO",
+        "date": "2026-04-22",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "300857.SZ",
+        "date": "2026-04-22",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NXT.AX",
+        "date": "2026-04-22",
+        "numerator": 203,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1150.SR",
+        "date": "2026-04-22",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KUST",
+        "date": "2026-04-22",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MCS.V",
+        "date": "2026-04-22",
+        "numerator": 327,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CHMMF",
+        "date": "2026-04-22",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6085.T",
+        "date": "2026-04-22",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AGNPF",
+        "date": "2026-04-21",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "Y3D.SI",
+        "date": "2026-04-21",
+        "numerator": 619,
+        "denominator": 500,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ZSPC",
+        "date": "2026-04-21",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VUG",
+        "date": "2026-04-21",
+        "numerator": 6,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1120.SR",
+        "date": "2026-04-21",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AGN.CN",
+        "date": "2026-04-21",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VOOG",
+        "date": "2026-04-21",
+        "numerator": 6,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CVT.NZ",
+        "date": "2026-04-21",
+        "numerator": 1023,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VO",
+        "date": "2026-04-21",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HXL.AX",
+        "date": "2026-04-21",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KITT",
+        "date": "2026-04-21",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VGT",
+        "date": "2026-04-21",
+        "numerator": 8,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MAZAYA.KW",
+        "date": "2026-04-21",
+        "numerator": 41,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TERN.L",
+        "date": "2026-04-21",
+        "numerator": 40,
+        "denominator": 39,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MGK",
+        "date": "2026-04-21",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3HCS.MI",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3SDE.L",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 120,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LRHC",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3SIS.L",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 3800,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ANAB",
+        "date": "2026-04-20",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GRAUWEIL.NS",
+        "date": "2026-04-20",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HUBC",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CMCT",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3EUS.L",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 140,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FGLDF",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LXEH",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TDIC",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WHLR",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3HCS.L",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3DES.L",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 120,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3BSR.L",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 650,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RAYA",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3BRS.MI",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 650,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "003350.KS",
+        "date": "2026-04-20",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "EHGO",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 16,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CNTM",
+        "date": "2026-04-20",
+        "numerator": 1,
+        "denominator": 32,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PMAX",
+        "date": "2026-04-17",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MEJA.JK",
+        "date": "2026-04-17",
+        "numerator": 7,
+        "denominator": 6,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LFBCF",
+        "date": "2026-04-17",
+        "numerator": 23,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PASHUPATI.NS",
+        "date": "2026-04-17",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GXXM",
+        "date": "2026-04-17",
+        "numerator": 1,
+        "denominator": 10000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LBS.TO",
+        "date": "2026-04-17",
+        "numerator": 23,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AFFU",
+        "date": "2026-04-16",
+        "numerator": 1,
+        "denominator": 1250,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NMTC",
+        "date": "2026-04-16",
+        "numerator": 1,
+        "denominator": 6,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3SEE.L",
+        "date": "2026-04-16",
+        "numerator": 1,
+        "denominator": 358,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KFH.KW",
+        "date": "2026-04-16",
+        "numerator": 107,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FG.V",
+        "date": "2026-04-16",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VGLS",
+        "date": "2026-04-16",
+        "numerator": 1,
+        "denominator": 20000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8021.HK",
+        "date": "2026-04-16",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FGLDF",
+        "date": "2026-04-16",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "XLGS.L",
+        "date": "2026-04-16",
+        "numerator": 1,
+        "denominator": 358,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GXXM",
+        "date": "2026-04-16",
+        "numerator": 1,
+        "denominator": 10000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MKSEF",
+        "date": "2026-04-15",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ERE.AX",
+        "date": "2026-04-15",
+        "numerator": 20,
+        "denominator": 19,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "R8R.AX",
+        "date": "2026-04-15",
+        "numerator": 8,
+        "denominator": 7,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BNRG",
+        "date": "2026-04-15",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CNMA.JK",
+        "date": "2026-04-15",
+        "numerator": 51,
+        "denominator": 50,
+        "splitType": "stock-dividend"
+    },
+    {
+        "symbol": "EOSU",
+        "date": "2026-04-15",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002070.KS",
+        "date": "2026-04-14",
+        "numerator": 83,
+        "denominator": 2500,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CENN",
+        "date": "2026-04-13",
+        "numerator": 1,
+        "denominator": 60,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AKAN",
+        "date": "2026-04-13",
+        "numerator": 2,
+        "denominator": 9,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MKSEF",
+        "date": "2026-04-13",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MSAI",
+        "date": "2026-04-13",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "QNCX",
+        "date": "2026-04-13",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NXPL",
+        "date": "2026-04-13",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HCAI",
+        "date": "2026-04-13",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "134380.KS",
+        "date": "2026-04-13",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WFF",
+        "date": "2026-04-13",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PN",
+        "date": "2026-04-13",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "JEM",
+        "date": "2026-04-13",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NEXT.OL",
+        "date": "2026-04-13",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "010120.KS",
+        "date": "2026-04-13",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IGRD.QA",
+        "date": "2026-04-13",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "003060.KS",
+        "date": "2026-04-13",
+        "numerator": 667,
+        "denominator": 10000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "300033.SZ",
+        "date": "2026-04-10",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WORX",
+        "date": "2026-04-10",
+        "numerator": 1,
+        "denominator": 15,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WWI.AX",
+        "date": "2026-04-10",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MEGA.JK",
+        "date": "2026-04-10",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WMWWF",
+        "date": "2026-04-10",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "015360.KS",
+        "date": "2026-04-09",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PFFEF",
+        "date": "2026-04-09",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DSSA.JK",
+        "date": "2026-04-09",
+        "numerator": 25,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AZRM.TA",
+        "date": "2026-04-09",
+        "numerator": 1031847,
+        "denominator": 1000000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RUBI",
+        "date": "2026-04-09",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3086.TWO",
+        "date": "2026-04-09",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KWHIY",
+        "date": "2026-04-08",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RDGT",
+        "date": "2026-04-08",
+        "numerator": 1,
+        "denominator": 150,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "001207.SZ",
+        "date": "2026-04-08",
+        "numerator": 7,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "JTAI",
+        "date": "2026-04-08",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "XLPI",
+        "date": "2026-04-08",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "377030.KQ",
+        "date": "2026-04-07",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PCE1.DE",
+        "date": "2026-04-07",
+        "numerator": 25,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MOBX",
+        "date": "2026-04-07",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NXTS",
+        "date": "2026-04-07",
+        "numerator": 1,
+        "denominator": 7,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CHR",
+        "date": "2026-04-07",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "688511.SS",
+        "date": "2026-04-07",
+        "numerator": 13,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SER.AX",
+        "date": "2026-04-07",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0W2Y.L",
+        "date": "2026-04-07",
+        "numerator": 25,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AXIIF",
+        "date": "2026-04-07",
+        "numerator": 1061,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SKK",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LNKS",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 250,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GNLN",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WGSH.JK",
+        "date": "2026-04-06",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BKNG.SW",
+        "date": "2026-04-06",
+        "numerator": 25,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AIIO",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "011790.KS",
+        "date": "2026-04-06",
+        "numerator": 1069,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BKNG",
+        "date": "2026-04-06",
+        "numerator": 25,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1010.SR",
+        "date": "2026-04-06",
+        "numerator": 4,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HKIT",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WNW",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "XRTX",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BCAB",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "INLF",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 16,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "POWL",
+        "date": "2026-04-06",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "XRTX.V",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BDRX",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HTCR",
+        "date": "2026-04-06",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ATHA.CN",
+        "date": "2026-04-02",
+        "numerator": 10,
+        "denominator": 99,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KAI.AX",
+        "date": "2026-04-02",
+        "numerator": 1,
+        "denominator": 15,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RNBDENIMS.BO",
+        "date": "2026-04-02",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "B2BSOFT.BO",
+        "date": "2026-04-02",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AHNRF",
+        "date": "2026-04-02",
+        "numerator": 10,
+        "denominator": 99,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RNBDENIMS.NS",
+        "date": "2026-04-02",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PSTV",
+        "date": "2026-04-02",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "STIXF",
+        "date": "2026-04-02",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "STIXD",
+        "date": "2026-04-02",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NCT",
+        "date": "2026-04-02",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SGSN.SW",
+        "date": "2026-04-02",
+        "numerator": 29,
+        "denominator": 28,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AHNRD",
+        "date": "2026-04-02",
+        "numerator": 10,
+        "denominator": 99,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BARK",
+        "date": "2026-04-01",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8937.TWO",
+        "date": "2026-04-01",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "UCAR",
+        "date": "2026-04-01",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "OVT.AX",
+        "date": "2026-04-01",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KNCRY",
+        "date": "2026-04-01",
+        "numerator": 2399,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AUUD",
+        "date": "2026-04-01",
+        "numerator": 10,
+        "denominator": 77,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SEAF.ST",
+        "date": "2026-03-31",
+        "numerator": 1123,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MODD",
+        "date": "2026-03-31",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "XSPRAY.ST",
+        "date": "2026-03-31",
+        "numerator": 257,
+        "denominator": 250,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AGL",
+        "date": "2026-03-31",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RCOI.L",
+        "date": "2026-03-31",
+        "numerator": 94,
+        "denominator": 125,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AKTX",
+        "date": "2026-03-31",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CETXP",
+        "date": "2026-03-31",
+        "numerator": 21,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PAVS",
+        "date": "2026-03-31",
+        "numerator": 1,
+        "denominator": 12,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "5331.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "2220.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "2602.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SNROF",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4709.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8345.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9763.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8367.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7685.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRITONV.BO",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DINRF",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9533.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4022.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4368.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8219.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "2003.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ATXG",
+        "date": "2026-03-30",
+        "numerator": 1,
+        "denominator": 15,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "128820.KS",
+        "date": "2026-03-30",
+        "numerator": 1033333,
+        "denominator": 1000000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KWHIF",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6675.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IPNAF",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8078.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "THOGF",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KTERF",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9658.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "338A.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6731.T",
+        "date": "2026-03-30",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6226.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MLGEQ.PA",
+        "date": "2026-03-30",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1982.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8060.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7735.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "5729.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7322.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3104.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7389.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7875.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1847.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "5803.T",
+        "date": "2026-03-30",
+        "numerator": 6,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4923.T",
+        "date": "2026-03-30",
+        "numerator": 21,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1306.T",
+        "date": "2026-03-30",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9008.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7376.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6745.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "5834.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9562.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DHLGY",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7181.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "OITAF",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8393.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8392.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IRB.NS",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DCHCF",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VTEPD",
+        "date": "2026-03-30",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6454.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "JPPIF",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7012.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6264.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6196.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6676.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7305.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8366.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8386.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4008.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "5273.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8341.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NICFF",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VTEPF",
+        "date": "2026-03-30",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4116.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7887.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "2612.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "5821.T",
+        "date": "2026-03-30",
+        "numerator": 21,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "EXL1V.HE",
+        "date": "2026-03-30",
+        "numerator": 1,
+        "denominator": 15,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8012.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "5393.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RR1.AX",
+        "date": "2026-03-30",
+        "numerator": 1029,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6227.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7380.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3796.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1909.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3712.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1723.T",
+        "date": "2026-03-30",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "417A.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "5445.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IRB.BO",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3964.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8050.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8336.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8046.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1798.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3465.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "EJH",
+        "date": "2026-03-30",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3443.T",
+        "date": "2026-03-30",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FBLG",
+        "date": "2026-03-30",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SVRN",
+        "date": "2026-03-30",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7466.T",
+        "date": "2026-03-30",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VID.L",
+        "date": "2026-03-30",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8136.T",
+        "date": "2026-03-30",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8926.TW",
+        "date": "2026-03-27",
+        "numerator": 103,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HIRECT.NS",
+        "date": "2026-03-27",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRUG",
+        "date": "2026-03-27",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LBGJ",
+        "date": "2026-03-27",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SYR.AX",
+        "date": "2026-03-27",
+        "numerator": 567,
+        "denominator": 500,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ROQ.L",
+        "date": "2026-03-27",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ADV",
+        "date": "2026-03-27",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CDT",
+        "date": "2026-03-27",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VKSC",
+        "date": "2026-03-27",
+        "numerator": 200000,
+        "denominator": 4071827,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KCR.HE",
+        "date": "2026-03-27",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MPTI",
+        "date": "2026-03-27",
+        "numerator": 1031,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HIRECT.BO",
+        "date": "2026-03-27",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IVF",
+        "date": "2026-03-27",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KNCRF",
+        "date": "2026-03-27",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PVVINFRA.BO",
+        "date": "2026-03-27",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "EMU.AX",
+        "date": "2026-03-27",
+        "numerator": 1037,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "APUS",
+        "date": "2026-03-26",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CMCT",
+        "date": "2026-03-26",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "EEZY.HE",
+        "date": "2026-03-26",
+        "numerator": 2821,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RENX",
+        "date": "2026-03-26",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ONCO",
+        "date": "2026-03-25",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "V2RETAIL.BO",
+        "date": "2026-03-25",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "JFB",
+        "date": "2026-03-25",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "XTLB",
+        "date": "2026-03-25",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ENZN",
+        "date": "2026-03-25",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "V2RETAIL.NS",
+        "date": "2026-03-25",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MANBRO.BO",
+        "date": "2026-03-25",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0482.HK",
+        "date": "2026-03-25",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PIPR",
+        "date": "2026-03-24",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KILITCH.NS",
+        "date": "2026-03-24",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KILITCH.BO",
+        "date": "2026-03-24",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "458870.KQ",
+        "date": "2026-03-24",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VIVK",
+        "date": "2026-03-24",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TIMESGREEN.BO",
+        "date": "2026-03-24",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FUBO",
+        "date": "2026-03-24",
+        "numerator": 1,
+        "denominator": 12,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SNEX",
+        "date": "2026-03-23",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AREB",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "QBTZ",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "OSCX",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CLMB",
+        "date": "2026-03-23",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "XFLT",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MST",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 7,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DIT",
+        "date": "2026-03-23",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BRLL",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 400,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "YYGH",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CUBT",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 150,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FCHL",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 15,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "EUDA",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AVXX",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RKLZ",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AZI",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "JDZG",
+        "date": "2026-03-23",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MPL",
+        "date": "2026-03-20",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MEGA.CN",
+        "date": "2026-03-20",
+        "numerator": 1,
+        "denominator": 12,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WALRF",
+        "date": "2026-03-20",
+        "numerator": 1,
+        "denominator": 12,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CIIT",
+        "date": "2026-03-20",
+        "numerator": 1,
+        "denominator": 7,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "UOKA",
+        "date": "2026-03-20",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "METROPOLIS.NS",
+        "date": "2026-03-20",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ORCX",
+        "date": "2026-03-20",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BTFL",
+        "date": "2026-03-20",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "METROPOLIS.BO",
+        "date": "2026-03-20",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "QSU",
+        "date": "2026-03-20",
+        "numerator": 1,
+        "denominator": 6,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RKTL",
+        "date": "2026-03-20",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ORGN",
+        "date": "2026-03-20",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "M3B.DE",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "M3B0.DE",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MSTX",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RGTX",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RIOX",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SMCX",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IONX",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SOUX",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RAD.CN",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "110790.KQ",
+        "date": "2026-03-19",
+        "numerator": 102871,
+        "denominator": 100000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HOOX",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IRE",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SBSP3.SA",
+        "date": "2026-03-19",
+        "numerator": 514173,
+        "denominator": 500000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HIMZ",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 14,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RADLF",
+        "date": "2026-03-19",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "COOK",
+        "date": "2026-03-18",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GFTRF",
+        "date": "2026-03-17",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FUTR.CN",
+        "date": "2026-03-17",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ELVG",
+        "date": "2026-03-17",
+        "numerator": 1,
+        "denominator": 500,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "XLO",
+        "date": "2026-03-16",
+        "numerator": 1,
+        "denominator": 14,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CLIR",
+        "date": "2026-03-16",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MASK",
+        "date": "2026-03-16",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DXST",
+        "date": "2026-03-16",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HBIO",
+        "date": "2026-03-16",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0I0B.L",
+        "date": "2026-03-16",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ZJYL",
+        "date": "2026-03-16",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NIVF",
+        "date": "2026-03-16",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1825.HK",
+        "date": "2026-03-16",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SKYQ",
+        "date": "2026-03-16",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KXIN",
+        "date": "2026-03-13",
+        "numerator": 1,
+        "denominator": 15,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AITX",
+        "date": "2026-03-13",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BUI.BK",
+        "date": "2026-03-13",
+        "numerator": 11,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ECLERX.NS",
+        "date": "2026-03-13",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FRONTSP.BO",
+        "date": "2026-03-13",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AITXD",
+        "date": "2026-03-13",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NOWG",
+        "date": "2026-03-13",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HUIL.BO",
+        "date": "2026-03-13",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "STFS",
+        "date": "2026-03-13",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ECLERX.BO",
+        "date": "2026-03-13",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CCMC.V",
+        "date": "2026-03-13",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SCAN.V",
+        "date": "2026-03-13",
+        "numerator": 1,
+        "denominator": 45,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LDDFF",
+        "date": "2026-03-13",
+        "numerator": 1,
+        "denominator": 45,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "METCB",
+        "date": "2026-03-13",
+        "numerator": 253,
+        "denominator": 250,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PED",
+        "date": "2026-03-13",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0CHZ.L",
+        "date": "2026-03-12",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "QBY0.DE",
+        "date": "2026-03-12",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ELPW",
+        "date": "2026-03-12",
+        "numerator": 1,
+        "denominator": 80,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "QBY.DE",
+        "date": "2026-03-12",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "QSCGF",
+        "date": "2026-03-12",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ZNB",
+        "date": "2026-03-12",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "115450.KQ",
+        "date": "2026-03-12",
+        "numerator": 21,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRCTF",
+        "date": "2026-03-11",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "000640.KS",
+        "date": "2026-03-11",
+        "numerator": 103,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HAGHY",
+        "date": "2026-03-11",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WLDSW",
+        "date": "2026-03-11",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "UAV.CN",
+        "date": "2026-03-11",
+        "numerator": 5,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3322.TWO",
+        "date": "2026-03-11",
+        "numerator": 128,
+        "denominator": 125,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRAC.CN",
+        "date": "2026-03-11",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "YRLLF",
+        "date": "2026-03-11",
+        "numerator": 5,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WLDS",
+        "date": "2026-03-11",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WPH.BK",
+        "date": "2026-03-11",
+        "numerator": 51,
+        "denominator": 50,
+        "splitType": "stock-dividend"
+    },
+    {
+        "symbol": "TSLS",
+        "date": "2026-03-10",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LITX",
+        "date": "2026-03-10",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CRMX",
+        "date": "2026-03-10",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ELAB",
+        "date": "2026-03-10",
+        "numerator": 1,
+        "denominator": 6,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KIDZ",
+        "date": "2026-03-10",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ARTL",
+        "date": "2026-03-10",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "APPX",
+        "date": "2026-03-10",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "170900.KS",
+        "date": "2026-03-10",
+        "numerator": 21,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TANFACIND.BO",
+        "date": "2026-03-09",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DCOY",
+        "date": "2026-03-09",
+        "numerator": 1,
+        "denominator": 12,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9543.SR",
+        "date": "2026-03-09",
+        "numerator": 5,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CUPID.BO",
+        "date": "2026-03-09",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ADTX",
+        "date": "2026-03-09",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RVPH",
+        "date": "2026-03-09",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DTCK",
+        "date": "2026-03-09",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CUPID.NS",
+        "date": "2026-03-09",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BHAT",
+        "date": "2026-03-09",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7946.T",
+        "date": "2026-03-07",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "YCM.TO",
+        "date": "2026-03-06",
+        "numerator": 11,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BNKR.V",
+        "date": "2026-03-06",
+        "numerator": 1,
+        "denominator": 35,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BHLLD",
+        "date": "2026-03-06",
+        "numerator": 1,
+        "denominator": 35,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SILVERTUC.BO",
+        "date": "2026-03-06",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KAPSTON.NS",
+        "date": "2026-03-06",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GSIW",
+        "date": "2026-03-06",
+        "numerator": 1,
+        "denominator": 200,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BWNAF",
+        "date": "2026-03-06",
+        "numerator": 253,
+        "denominator": 250,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SILVERTUC.NS",
+        "date": "2026-03-06",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ACCEDERE.BO",
+        "date": "2026-03-06",
+        "numerator": 11,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DUKR",
+        "date": "2026-03-06",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LKPFIN.BO",
+        "date": "2026-03-06",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MEERA.BO",
+        "date": "2026-03-06",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CISTRO.BO",
+        "date": "2026-03-06",
+        "numerator": 3,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WCT",
+        "date": "2026-03-06",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TVGN",
+        "date": "2026-03-06",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BHLL",
+        "date": "2026-03-06",
+        "numerator": 1,
+        "denominator": 35,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DUST",
+        "date": "2026-03-05",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AQYLON.BO",
+        "date": "2026-03-05",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GLIIF",
+        "date": "2026-03-05",
+        "numerator": 1,
+        "denominator": 2.4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SOXS",
+        "date": "2026-03-05",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TR",
+        "date": "2026-03-05",
+        "numerator": 103,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AEHL",
+        "date": "2026-03-05",
+        "numerator": 1,
+        "denominator": 6,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "JDST",
+        "date": "2026-03-05",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GLI.V",
+        "date": "2026-03-05",
+        "numerator": 1,
+        "denominator": 2.4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DOHOME.BK",
+        "date": "2026-03-05",
+        "numerator": 26,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "HIBS",
+        "date": "2026-03-05",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "AQYLON.NS",
+        "date": "2026-03-05",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "XTKG",
+        "date": "2026-03-05",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TROLB",
+        "date": "2026-03-05",
+        "numerator": 103,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0810.HK",
+        "date": "2026-03-04",
+        "numerator": 1323,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MPG.NZ",
+        "date": "2026-03-04",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BWAY",
+        "date": "2026-03-04",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NGCG",
+        "date": "2026-03-04",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SPRC",
+        "date": "2026-03-04",
+        "numerator": 1,
+        "denominator": 9,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MPP.AX",
+        "date": "2026-03-04",
+        "numerator": 1,
+        "denominator": 40,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "1341.HK",
+        "date": "2026-03-04",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "008600.KS",
+        "date": "2026-03-04",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ASP.AX",
+        "date": "2026-03-04",
+        "numerator": 1,
+        "denominator": 250,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MRDN",
+        "date": "2026-03-03",
+        "numerator": 1,
+        "denominator": 12,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RCSL3.SA",
+        "date": "2026-03-03",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GMGI",
+        "date": "2026-03-03",
+        "numerator": 1,
+        "denominator": 12,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RCSL4.SA",
+        "date": "2026-03-03",
+        "numerator": 4,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BVA.V",
+        "date": "2026-03-02",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BGAVF",
+        "date": "2026-03-02",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ZCMD",
+        "date": "2026-03-02",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BURU",
+        "date": "2026-03-02",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CSLLY",
+        "date": "2026-03-02",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PPBT",
+        "date": "2026-03-02",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TKUN.TA",
+        "date": "2026-03-02",
+        "numerator": 1,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PLYFF",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "IXHL",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SOLT",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SOU.L",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SNEGF",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SFHG",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SF",
+        "date": "2026-02-27",
+        "numerator": 3,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PLY.V",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BSFA.L",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 12,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PTLE",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 80,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FNRN",
+        "date": "2026-02-27",
+        "numerator": 21,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PTRVF",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0138.HK",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VCIG",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 60,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "480370.KS",
+        "date": "2026-02-27",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "VIK.CN",
+        "date": "2026-02-27",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4825.T",
+        "date": "2026-02-26",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6590.T",
+        "date": "2026-02-26",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "WNWSF",
+        "date": "2026-02-26",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7608.T",
+        "date": "2026-02-26",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "002810.KS",
+        "date": "2026-02-26",
+        "numerator": 31567,
+        "denominator": 31250,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FRSX",
+        "date": "2026-02-26",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "3612.T",
+        "date": "2026-02-26",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ZSL",
+        "date": "2026-02-26",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8273.T",
+        "date": "2026-02-26",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PGY.AX",
+        "date": "2026-02-26",
+        "numerator": 1,
+        "denominator": 25,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "9602.T",
+        "date": "2026-02-26",
+        "numerator": 5,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8932.TWO",
+        "date": "2026-02-25",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "5381.TWO",
+        "date": "2026-02-25",
+        "numerator": 17,
+        "denominator": 20,
+        "splitType": "stock-dividend"
+    },
+    {
+        "symbol": "STM.AX",
+        "date": "2026-02-25",
+        "numerator": 1,
+        "denominator": 30,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "EUBG",
+        "date": "2026-02-25",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SVRE",
+        "date": "2026-02-25",
+        "numerator": 1,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KGKG",
+        "date": "2026-02-25",
+        "numerator": 1,
+        "denominator": 2500,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GLOBAL-R.BK",
+        "date": "2026-02-24",
+        "numerator": 28,
+        "denominator": 27,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "LFWD",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 12,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KS",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KLSVF",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BERZ",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SPYU",
+        "date": "2026-02-24",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GLOBAL.BK",
+        "date": "2026-02-24",
+        "numerator": 28,
+        "denominator": 27,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DULL",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "CRTD",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "RPGL",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SBC.TO",
+        "date": "2026-02-24",
+        "numerator": 6,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KS.V",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NRGD",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BNKD",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "OILD",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "2160.HK",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SHNY",
+        "date": "2026-02-24",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BULZ",
+        "date": "2026-02-24",
+        "numerator": 10,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8246.HK",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 8,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TRNR",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "FLYD",
+        "date": "2026-02-24",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "DSY",
+        "date": "2026-02-23",
+        "numerator": 1,
+        "denominator": 20,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SPYI.DE",
+        "date": "2026-02-23",
+        "numerator": 25,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "4260.SR",
+        "date": "2026-02-23",
+        "numerator": 4,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BTM",
+        "date": "2026-02-23",
+        "numerator": 1,
+        "denominator": 7,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "ONIXSOLAR.BO",
+        "date": "2026-02-23",
+        "numerator": 131,
+        "denominator": 125,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "MWG",
+        "date": "2026-02-23",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NBY",
+        "date": "2026-02-23",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    }
 ]

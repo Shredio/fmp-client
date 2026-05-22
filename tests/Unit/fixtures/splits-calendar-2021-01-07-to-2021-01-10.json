@@ -1,0 +1,156 @@
+[
+    {
+        "symbol": "IPCALAB.BO",
+        "date": "2021-01-10",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TNPV.TA",
+        "date": "2021-01-10",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TUIFF",
+        "date": "2021-01-08",
+        "numerator": 199,
+        "denominator": 125,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8193.HK",
+        "date": "2021-01-08",
+        "numerator": 151,
+        "denominator": 100,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "GPO.CN",
+        "date": "2021-01-08",
+        "numerator": 1,
+        "denominator": 2,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "8292.HK",
+        "date": "2021-01-08",
+        "numerator": 1,
+        "denominator": 10,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0HX7.L",
+        "date": "2021-01-08",
+        "numerator": 1,
+        "denominator": 7,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "KCC.V",
+        "date": "2021-01-08",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TUI.L",
+        "date": "2021-01-08",
+        "numerator": 1589,
+        "denominator": 1000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "BZDLF",
+        "date": "2021-01-08",
+        "numerator": 1,
+        "denominator": 3,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "TUI1.DE",
+        "date": "2021-01-08",
+        "numerator": 199,
+        "denominator": 125,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "6251.TW",
+        "date": "2021-01-07",
+        "numerator": 223,
+        "denominator": 250,
+        "splitType": "stock-dividend"
+    },
+    {
+        "symbol": "NOBLE-R.BK",
+        "date": "2021-01-07",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "2061.TWO",
+        "date": "2021-01-07",
+        "numerator": 4,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SILGO.NS",
+        "date": "2021-01-07",
+        "numerator": 5,
+        "denominator": 4,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "PAANF",
+        "date": "2021-01-07",
+        "numerator": 1,
+        "denominator": 50,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "7516.TWO",
+        "date": "2021-01-07",
+        "numerator": 2404,
+        "denominator": 3125,
+        "splitType": null
+    },
+    {
+        "symbol": "6134.TWO",
+        "date": "2021-01-07",
+        "numerator": 1792179,
+        "denominator": 2500000,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "NOBLE.BK",
+        "date": "2021-01-07",
+        "numerator": 3,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "080580.KQ",
+        "date": "2021-01-07",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "SLM.BK",
+        "date": "2021-01-07",
+        "numerator": 1,
+        "denominator": 5,
+        "splitType": "stock-split"
+    },
+    {
+        "symbol": "0208.KL",
+        "date": "2021-01-07",
+        "numerator": 2,
+        "denominator": 1,
+        "splitType": "stock-split"
+    }
+]
