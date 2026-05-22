@@ -41,9 +41,9 @@ final class SharesFloatTest extends TestCase
 		))->toArray(), $sharesFloat->toArray());
 	}
 
-	public function testSharesFloatWithFloatOutstandingShares(): void
+	public function testSharesFloatWithDecimalFloatShares(): void
 	{
-		$client = $this->createClient(__DIR__ . '/fixtures/shares-float-outstanding-shares-float.json');
+		$client = $this->createClient(__DIR__ . '/fixtures/shares-float-float-shares-decimal.json');
 
 		$sharesFloat = $client->sharesFloat('ABTE.ST');
 
@@ -51,7 +51,7 @@ final class SharesFloatTest extends TestCase
 			symbol: 'ABTE.ST',
 			date: '2026-05-22 12:00:00',
 			freeFloat: 80.0,
-			floatShares: 45458789,
+			floatShares: 45458789.1554,
 			outstandingShares: 56823487,
 			source: 'https://example.com/source',
 		))->toArray(), $sharesFloat->toArray());

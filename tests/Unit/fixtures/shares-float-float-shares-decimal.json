@@ -3,8 +3,8 @@
     "symbol": "ABTE.ST",
     "date": "2026-05-22 12:00:00",
     "freeFloat": 80.0,
-    "floatShares": 45458789,
-    "outstandingShares": 56823487.1554,
+    "floatShares": 45458789.1554,
+    "outstandingShares": 56823487,
     "source": "https://example.com/source"
   }
 ]
