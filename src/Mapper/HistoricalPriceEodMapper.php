@@ -35,7 +35,7 @@ final readonly class HistoricalPriceEodMapper extends Type
 			'close' => $ts->float(),
 			'volume' => $ts->int(),
 			'change' => $ts->float(),
-			'changePercent' => $ts->float(),
+			'changePercent' => $ts->nullable($ts->float()),
 			'vwap' => $ts->float(),
 		],
 			identifier: 'symbol',

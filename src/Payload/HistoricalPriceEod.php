@@ -8,6 +8,8 @@ use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 final readonly class HistoricalPriceEod
 {
 
+	public float $changePercent;
+
 	/**
 	 * @param non-empty-string $symbol
 	 */
@@ -20,10 +22,11 @@ final readonly class HistoricalPriceEod
 		public float $close,
 		public int $volume,
 		public float $change,
-		public float $changePercent,
+		?float $changePercent,
 		public float $vwap,
 	)
 	{
+		$this->changePercent = $changePercent ?? self::deriveChangePercent($close, $change);
 	}
 
 	/**
@@ -43,6 +46,17 @@ final readonly class HistoricalPriceEod
 			'changePercent' => $this->changePercent,
 			'vwap' => $this->vwap,
 		];
+	}
+
+	private static function deriveChangePercent(float $close, float $change): float
+	{
+		$previousClose = $close - $change;
+
+		if ($previousClose === 0.0) {
+			return 0.0;
+		}
+
+		return $change / $previousClose * 100;
 	}
 
 }

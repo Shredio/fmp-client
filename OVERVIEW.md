@@ -990,7 +990,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `volume` - Trading volume
 - `unadjustedVolume` - Unadjusted volume
 - `change` - Price change
-- `changePercent` - Percentage change
+- `changePercent` - Percentage change (derived from `change` and previous close when the API returns null)
 - `vwap` - Volume-weighted average price
 - `label` - Description
 - `changeOverTime` - Change over time
