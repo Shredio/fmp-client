@@ -27,6 +27,7 @@ use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
 use Shredio\FmpClient\Payload\Dividend;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
+use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
@@ -306,6 +307,14 @@ final readonly class CacheFmpClient implements FmpClient
 	public function splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
 	{
 		return $this->client->splitsCalendar($from, $to, $logger);
+	}
+
+	/**
+	 * @return iterable<int, EconomicCalendarItem>
+	 */
+	public function economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
+	{
+		return $this->client->economicCalendar($from, $to, $logger);
 	}
 
 	/**

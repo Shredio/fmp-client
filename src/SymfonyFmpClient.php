@@ -30,6 +30,7 @@ use Shredio\FmpClient\Mapper\CryptocurrencyMapper;
 use Shredio\FmpClient\Mapper\DelistedCompanyMapper;
 use Shredio\FmpClient\Mapper\DividendMapper;
 use Shredio\FmpClient\Mapper\EarningsCalendarItemMapper;
+use Shredio\FmpClient\Mapper\EconomicCalendarItemMapper;
 use Shredio\FmpClient\Mapper\EodQuoteMapper;
 use Shredio\FmpClient\Mapper\ExchangeMarketHoursMapper;
 use Shredio\FmpClient\Mapper\FinancialStatementSymbolMapper;
@@ -72,6 +73,7 @@ use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
 use Shredio\FmpClient\Payload\Dividend;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
+use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
@@ -684,6 +686,38 @@ final readonly class SymfonyFmpClient implements FmpClient
 				$object = $this->map(SplitsCalendarItem::class, new SplitsCalendarItemMapper(), $item, $url);
 				if ($object !== null) {
 					$lastStringDate = $object->date;
+					$count++;
+					yield $object;
+				}
+			}
+		} while ($paginator->next($count, $lastStringDate, $logger));
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/economic-calendar
+	 * @return iterable<int, EconomicCalendarItem>
+	 */
+	public function economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
+	{
+		$paginator = new FmpCalendarPaginator($from, $to);
+
+		do {
+			$values = $this->requestJson('stable/economic-calendar', [
+				'from' => $paginator->getFrom()->format('Y-m-d'),
+				'to' => $paginator->getTo()->format('Y-m-d'),
+			]);
+			$lastStringDate = null;
+			$count = 0;
+
+			$url = $this->buildUrlWithoutApiKey('stable/economic-calendar', [
+				'from' => $paginator->getFrom()->format('Y-m-d'),
+				'to' => $paginator->getTo()->format('Y-m-d'),
+			]);
+
+			foreach ($values as $item) {
+				$object = $this->map(EconomicCalendarItem::class, new EconomicCalendarItemMapper(), $item, $url);
+				if ($object !== null) {
+					$lastStringDate = substr($object->date, 0, 10);
 					$count++;
 					yield $object;
 				}

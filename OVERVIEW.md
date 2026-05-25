@@ -864,6 +864,32 @@ Contains percentage growth of all cash flow statement items
 
 ---
 
+### `economicCalendar()`
+
+**Purpose:** Retrieve calendar of upcoming and past economic data releases (macroeconomic indicators, central bank speeches, employment data, etc.) for a given time period. Automatically paginated via the standard calendar paginator to handle large result sets.
+
+**Parameters:**
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
+- `logger` (LoggerInterface|null, default: null) - Optional logger
+
+**Return Values:** `iterable<EconomicCalendarItem>`
+- `date` - Event datetime in `Y-m-d H:i:s` format
+- `country` - ISO 3166-1 alpha-2 country code (e.g. `US`, `JP`, `DE`)
+- `event` - Event name (e.g. `CPI (Apr)`, `Fed Waller Speech`)
+- `currency` - ISO 4217 currency code (e.g. `USD`, `EUR`, `JPY`)
+- `previous` - Previous reading (nullable)
+- `estimate` - Consensus estimate (nullable)
+- `actual` - Actual reading (nullable when not yet released)
+- `change` - Difference between actual and previous (nullable)
+- `impact` - Expected market impact (`Low`, `Medium`, `High`)
+- `changePercentage` - Percentage change from previous (nullable)
+- `unit` - Unit of measurement (`K`, `M`, `B`, `T`, `%`, or `null`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/economic-calendar`
+
+---
+
 ## Market Data and Quotes
 
 ### `batchExchangeQuote()`

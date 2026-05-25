@@ -173,6 +173,12 @@ foreach ($fmpClient->dividendsCalendar($from, $to, $logger) as $dividend) {
 foreach ($fmpClient->splitsCalendar($from, $to, $logger) as $split) {
     echo "{$split->symbol}: {$split->numerator}:{$split->denominator} on {$split->date}\n";
 }
+
+// Economic calendar (macroeconomic events; automatically paginated for large date ranges)
+foreach ($fmpClient->economicCalendar($from, $to, $logger) as $event) {
+    echo "{$event->date} [{$event->country}] {$event->event} (impact: {$event->impact})\n";
+    echo "  Previous: {$event->previous}, Estimate: {$event->estimate}, Actual: {$event->actual}\n";
+}
 ```
 
 ### Historical Data
@@ -314,6 +320,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `earningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Earnings calendar
 - `dividendsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Dividends calendar
 - `splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Stock splits calendar
+- `economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Economic data releases calendar
 - `dividends(string $symbol)` - Company dividend history
 
 ### Search

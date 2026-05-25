@@ -25,6 +25,7 @@ use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
 use Shredio\FmpClient\Payload\Dividend;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
+use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
@@ -220,6 +221,12 @@ interface FmpClient
 	 * @return iterable<int, SplitsCalendarItem>
 	 */
 	public function splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/economic-calendar
+	 * @return iterable<int, EconomicCalendarItem>
+	 */
+	public function economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/latest-financial-statements
