@@ -844,26 +844,27 @@ Contains percentage growth of all cash flow statement items
 
 ---
 
-### `earningsCalendarConfirmed()`
+### `legacyEarningsCalendar()`
 
-**Purpose:** Retrieve confirmed earnings announcements for a given time period. Each entry corresponds to a press release that confirms an upcoming earnings call (date, time, pre/post-market window, and source URL). Automatically paginated via the standard calendar paginator to handle large date ranges (the API limits each response to 1000 records).
+**Purpose:** Retrieve earnings announcements from the legacy v3 earnings calendar endpoint. Unlike the stable `earningsCalendar()` endpoint, this legacy endpoint exposes the announcement `time` window (`bmo` = before market open, `amc` = after market close, or `null` when unspecified) and includes `fiscalDateEnding` plus `updatedFromDate` metadata. The upstream API silently truncates each response to a 90-day window (oldest records get dropped first), so requests are automatically split into 90-day chunks walking backwards from `to` to `from`.
 
 **Parameters:**
 - `from` (DateTimeImmutable) - Start date
 - `to` (DateTimeImmutable) - End date
 - `logger` (LoggerInterface|null, default: null) - Optional logger
 
-**Return Values:** `iterable<EarningsCalendarConfirmed>`
+**Return Values:** `iterable<LegacyEarningsCalendar>`
 - `symbol` - Ticker symbol
-- `exchange` - Exchange where the symbol is listed (e.g. `NASDAQ`, `NYSE`)
-- `time` - Announcement time in `H:i` format (nullable when not specified)
-- `when` - Trading session window (`pre market`, `post market`, or `null`)
-- `date` - Confirmed earnings announcement date in `Y-m-d` format
-- `publicationDate` - Date when the confirmation press release was published in `Y-m-d` format
-- `title` - Press release title confirming the earnings call
-- `url` - Source URL of the press release
+- `date` - Announcement date in `Y-m-d` format
+- `eps` - Reported EPS (nullable when not yet reported)
+- `epsEstimated` - Estimated EPS (nullable)
+- `time` - Announcement time window: `bmo` (before market open), `amc` (after market close), or `null` when unspecified
+- `revenue` - Reported revenue (nullable when not yet reported)
+- `revenueEstimated` - Estimated revenue (nullable)
+- `fiscalDateEnding` - End date of the fiscal period being reported in `Y-m-d` format (nullable)
+- `updatedFromDate` - Date the record was last updated in `Y-m-d` format (nullable)
 
-**API endpoint:** `https://financialmodelingprep.com/api/v4/earning-calendar-confirmed`
+**API endpoint:** `https://financialmodelingprep.com/api/v3/earning_calendar`
 
 ---
 

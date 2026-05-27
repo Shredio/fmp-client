@@ -164,10 +164,10 @@ foreach ($fmpClient->earningsCalendar($from, $to, $logger) as $earning) {
     echo "EPS Estimate: {$earning->epsEstimate}\n";
 }
 
-// Confirmed earnings announcements (automatically paginated)
-foreach ($fmpClient->earningsCalendarConfirmed($from, $to, $logger) as $confirmed) {
-    echo "{$confirmed->symbol} ({$confirmed->exchange}) - {$confirmed->date} {$confirmed->time} [{$confirmed->when}]\n";
-    echo "  {$confirmed->title}\n";
+// Legacy earnings calendar with time window (bmo/amc) and fiscal metadata (automatically paginated)
+foreach ($fmpClient->legacyEarningsCalendar($from, $to, $logger) as $earning) {
+    echo "{$earning->symbol} - {$earning->date} [{$earning->time}]\n";
+    echo "  EPS: {$earning->eps} (est. {$earning->epsEstimated}), revenue: {$earning->revenue}\n";
 }
 
 // Dividends calendar
@@ -324,7 +324,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 
 ### Calendar Events
 - `earningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Earnings calendar
-- `earningsCalendarConfirmed(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Confirmed earnings announcements
+- `legacyEarningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Legacy v3 earnings calendar with time window (bmo/amc) and fiscal metadata
 - `dividendsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Dividends calendar
 - `splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Stock splits calendar
 - `economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Economic data releases calendar

@@ -24,7 +24,6 @@ use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
 use Shredio\FmpClient\Payload\Dividend;
-use Shredio\FmpClient\Payload\EarningsCalendarConfirmed;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
@@ -40,6 +39,7 @@ use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
+use Shredio\FmpClient\Payload\LegacyEarningsCalendar;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
@@ -60,7 +60,7 @@ interface FmpClient
 
 	public const int MaxDividendsLimit = 1000;
 	public const int MaxStockNewsLimit = 250;
-	public const int MaxEarningsCalendarConfirmedLimit = 1000;
+	public const int MaxLegacyEarningsCalendarDaysWindow = 90;
 
 	public function withStrictMode(bool $strictMode): FmpClient;
 
@@ -219,10 +219,10 @@ interface FmpClient
 	public function earningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
 	/**
-	 * @see https://financialmodelingprep.com/api/v4/earning-calendar-confirmed
-	 * @return iterable<int, EarningsCalendarConfirmed>
+	 * @see https://financialmodelingprep.com/api/v3/earning_calendar
+	 * @return iterable<int, LegacyEarningsCalendar>
 	 */
-	public function earningsCalendarConfirmed(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
+	public function legacyEarningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/splits-calendar

@@ -3,6 +3,7 @@
 namespace Shredio\FmpClient;
 
 use DateTimeImmutable;
+use InvalidArgumentException;
 use LogicException;
 use Psr\Log\LoggerInterface;
 use SensitiveParameter;
@@ -29,7 +30,6 @@ use Shredio\FmpClient\Mapper\CompanyProfileMapper;
 use Shredio\FmpClient\Mapper\CryptocurrencyMapper;
 use Shredio\FmpClient\Mapper\DelistedCompanyMapper;
 use Shredio\FmpClient\Mapper\DividendMapper;
-use Shredio\FmpClient\Mapper\EarningsCalendarConfirmedMapper;
 use Shredio\FmpClient\Mapper\EarningsCalendarItemMapper;
 use Shredio\FmpClient\Mapper\EconomicCalendarItemMapper;
 use Shredio\FmpClient\Mapper\EodQuoteMapper;
@@ -45,6 +45,7 @@ use Shredio\FmpClient\Mapper\IsinSearchResultMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsTtmMapper;
 use Shredio\FmpClient\Mapper\LatestFinancialStatementMapper;
+use Shredio\FmpClient\Mapper\LegacyEarningsCalendarMapper;
 use Shredio\FmpClient\Mapper\MarketRiskPremiumMapper;
 use Shredio\FmpClient\Mapper\PressReleaseMapper;
 use Shredio\FmpClient\Mapper\RatiosMapper;
@@ -73,7 +74,6 @@ use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
 use Shredio\FmpClient\Payload\Dividend;
-use Shredio\FmpClient\Payload\EarningsCalendarConfirmed;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
@@ -89,6 +89,7 @@ use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
+use Shredio\FmpClient\Payload\LegacyEarningsCalendar;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
@@ -664,33 +665,43 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
-	 * @see https://financialmodelingprep.com/api/v4/earning-calendar-confirmed
-	 * @return iterable<int, EarningsCalendarConfirmed>
+	 * @see https://financialmodelingprep.com/api/v3/earning_calendar
+	 * @return iterable<int, LegacyEarningsCalendar>
 	 */
-	public function earningsCalendarConfirmed(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
+	public function legacyEarningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
 	{
-		$paginator = new FmpCalendarPaginator($from, $to, self::MaxEarningsCalendarConfirmedLimit);
+		$from = $from->setTime(0, 0);
+		$to = $to->setTime(0, 0);
+
+		if ($to < $from) {
+			throw new InvalidArgumentException('To date must be greater than from date');
+		}
+
+		$windowSize = sprintf('- %d days', self::MaxLegacyEarningsCalendarDaysWindow - 1);
+		$windowTo = $to;
 
 		do {
+			$windowFrom = $windowTo->modify($windowSize);
+			if ($windowFrom < $from) {
+				$windowFrom = $from;
+			}
+
 			$query = [
-				'from' => $paginator->getFrom()->format('Y-m-d'),
-				'to' => $paginator->getTo()->format('Y-m-d'),
-				'limit' => self::MaxEarningsCalendarConfirmedLimit,
+				'from' => $windowFrom->format('Y-m-d'),
+				'to' => $windowTo->format('Y-m-d'),
 			];
-			$lastStringDate = null;
-			$count = 0;
 
-			$url = $this->buildUrlWithoutApiKey('api/v4/earning-calendar-confirmed', $query);
+			$url = $this->buildUrlWithoutApiKey('api/v3/earning_calendar', $query);
 
-			foreach ($this->requestJson('api/v4/earning-calendar-confirmed', $query) as $item) {
-				$object = $this->map(EarningsCalendarConfirmed::class, new EarningsCalendarConfirmedMapper(), $item, $url);
+			foreach ($this->requestJson('api/v3/earning_calendar', $query) as $item) {
+				$object = $this->map(LegacyEarningsCalendar::class, new LegacyEarningsCalendarMapper(), $item, $url);
 				if ($object !== null) {
-					$lastStringDate = $object->date;
-					$count++;
 					yield $object;
 				}
 			}
-		} while ($paginator->next($count, $lastStringDate, $logger));
+
+			$windowTo = $windowFrom->modify('- 1 day');
+		} while ($windowTo >= $from);
 	}
 
 	/**
