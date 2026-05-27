@@ -844,6 +844,29 @@ Contains percentage growth of all cash flow statement items
 
 ---
 
+### `earningsCalendarConfirmed()`
+
+**Purpose:** Retrieve confirmed earnings announcements for a given time period. Each entry corresponds to a press release that confirms an upcoming earnings call (date, time, pre/post-market window, and source URL). Automatically paginated via the standard calendar paginator to handle large date ranges (the API limits each response to 1000 records).
+
+**Parameters:**
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
+- `logger` (LoggerInterface|null, default: null) - Optional logger
+
+**Return Values:** `iterable<EarningsCalendarConfirmed>`
+- `symbol` - Ticker symbol
+- `exchange` - Exchange where the symbol is listed (e.g. `NASDAQ`, `NYSE`)
+- `time` - Announcement time in `H:i` format (nullable when not specified)
+- `when` - Trading session window (`pre market`, `post market`, or `null`)
+- `date` - Confirmed earnings announcement date in `Y-m-d` format
+- `publicationDate` - Date when the confirmation press release was published in `Y-m-d` format
+- `title` - Press release title confirming the earnings call
+- `url` - Source URL of the press release
+
+**API endpoint:** `https://financialmodelingprep.com/api/v4/earning-calendar-confirmed`
+
+---
+
 ### `splitsCalendar()`
 
 **Purpose:** Retrieve stock splits calendar for a given time period.

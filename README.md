@@ -164,6 +164,12 @@ foreach ($fmpClient->earningsCalendar($from, $to, $logger) as $earning) {
     echo "EPS Estimate: {$earning->epsEstimate}\n";
 }
 
+// Confirmed earnings announcements (automatically paginated)
+foreach ($fmpClient->earningsCalendarConfirmed($from, $to, $logger) as $confirmed) {
+    echo "{$confirmed->symbol} ({$confirmed->exchange}) - {$confirmed->date} {$confirmed->time} [{$confirmed->when}]\n";
+    echo "  {$confirmed->title}\n";
+}
+
 // Dividends calendar
 foreach ($fmpClient->dividendsCalendar($from, $to, $logger) as $dividend) {
     echo "{$dividend->symbol}: {$dividend->dividend} on {$dividend->date}\n";
@@ -318,6 +324,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 
 ### Calendar Events
 - `earningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Earnings calendar
+- `earningsCalendarConfirmed(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Confirmed earnings announcements
 - `dividendsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Dividends calendar
 - `splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Stock splits calendar
 - `economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Economic data releases calendar

@@ -15,9 +15,13 @@ final class FmpCalendarPaginator
 
 	private DateTimeImmutable $lastTo;
 
+	/**
+	 * @param int<1, max> $maxRecordsPerPage Maximum number of records returned by the API in a single response
+	 */
 	public function __construct(
 		DateTimeImmutable $from,
 		DateTimeImmutable $to,
+		private readonly int $maxRecordsPerPage = 4000,
 	)
 	{
 		$this->from = $from->setTime(0, 0);
@@ -49,9 +53,8 @@ final class FmpCalendarPaginator
 
 		$this->to = new DateTimeImmutable($lastStringDate);
 
-		// FMP limits the number of records to 4000
-		// if we have less than 4000 records, we can go back one day, because there are no more records for that day
-		if ($itemCount < 4000) {
+		// If we have less than the API page limit, we can go back one day, because there are no more records for that day
+		if ($itemCount < $this->maxRecordsPerPage) {
 			$this->to = $this->to->modify('- 1 day');
 		} else if ($this->to == $this->lastTo) { // the same `to` date can cause an infinite loop
 			$logger?->info('Infinite loop detected for {date}', [

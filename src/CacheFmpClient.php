@@ -26,6 +26,7 @@ use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
 use Shredio\FmpClient\Payload\Dividend;
+use Shredio\FmpClient\Payload\EarningsCalendarConfirmed;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
@@ -299,6 +300,14 @@ final readonly class CacheFmpClient implements FmpClient
 	public function earningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
 	{
 		return $this->client->earningsCalendar($from, $to, $logger);
+	}
+
+	/**
+	 * @return iterable<int, EarningsCalendarConfirmed>
+	 */
+	public function earningsCalendarConfirmed(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
+	{
+		return $this->client->earningsCalendarConfirmed($from, $to, $logger);
 	}
 
 	/**

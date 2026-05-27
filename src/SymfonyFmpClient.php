@@ -29,6 +29,7 @@ use Shredio\FmpClient\Mapper\CompanyProfileMapper;
 use Shredio\FmpClient\Mapper\CryptocurrencyMapper;
 use Shredio\FmpClient\Mapper\DelistedCompanyMapper;
 use Shredio\FmpClient\Mapper\DividendMapper;
+use Shredio\FmpClient\Mapper\EarningsCalendarConfirmedMapper;
 use Shredio\FmpClient\Mapper\EarningsCalendarItemMapper;
 use Shredio\FmpClient\Mapper\EconomicCalendarItemMapper;
 use Shredio\FmpClient\Mapper\EodQuoteMapper;
@@ -72,6 +73,7 @@ use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
 use Shredio\FmpClient\Payload\Dividend;
+use Shredio\FmpClient\Payload\EarningsCalendarConfirmed;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
@@ -652,6 +654,36 @@ final readonly class SymfonyFmpClient implements FmpClient
 
 			foreach ($values as $item) {
 				$object = $this->map(EarningsCalendarItem::class, new EarningsCalendarItemMapper(), $item, $url);
+				if ($object !== null) {
+					$lastStringDate = $object->date;
+					$count++;
+					yield $object;
+				}
+			}
+		} while ($paginator->next($count, $lastStringDate, $logger));
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/api/v4/earning-calendar-confirmed
+	 * @return iterable<int, EarningsCalendarConfirmed>
+	 */
+	public function earningsCalendarConfirmed(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
+	{
+		$paginator = new FmpCalendarPaginator($from, $to, self::MaxEarningsCalendarConfirmedLimit);
+
+		do {
+			$query = [
+				'from' => $paginator->getFrom()->format('Y-m-d'),
+				'to' => $paginator->getTo()->format('Y-m-d'),
+				'limit' => self::MaxEarningsCalendarConfirmedLimit,
+			];
+			$lastStringDate = null;
+			$count = 0;
+
+			$url = $this->buildUrlWithoutApiKey('api/v4/earning-calendar-confirmed', $query);
+
+			foreach ($this->requestJson('api/v4/earning-calendar-confirmed', $query) as $item) {
+				$object = $this->map(EarningsCalendarConfirmed::class, new EarningsCalendarConfirmedMapper(), $item, $url);
 				if ($object !== null) {
 					$lastStringDate = $object->date;
 					$count++;

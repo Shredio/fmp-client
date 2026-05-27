@@ -24,6 +24,7 @@ use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
 use Shredio\FmpClient\Payload\Dividend;
+use Shredio\FmpClient\Payload\EarningsCalendarConfirmed;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
@@ -59,6 +60,7 @@ interface FmpClient
 
 	public const int MaxDividendsLimit = 1000;
 	public const int MaxStockNewsLimit = 250;
+	public const int MaxEarningsCalendarConfirmedLimit = 1000;
 
 	public function withStrictMode(bool $strictMode): FmpClient;
 
@@ -215,6 +217,12 @@ interface FmpClient
 	 * @return iterable<int, EarningsCalendarItem>
 	 */
 	public function earningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
+
+	/**
+	 * @see https://financialmodelingprep.com/api/v4/earning-calendar-confirmed
+	 * @return iterable<int, EarningsCalendarConfirmed>
+	 */
+	public function earningsCalendarConfirmed(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/splits-calendar
