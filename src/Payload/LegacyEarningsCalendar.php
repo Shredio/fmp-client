@@ -21,8 +21,8 @@ final readonly class LegacyEarningsCalendar
 		public ?float $eps,
 		public ?float $epsEstimated,
 		public ?string $time,
-		public ?int $revenue,
-		public ?int $revenueEstimated,
+		public int|float|null $revenue,
+		public int|float|null $revenueEstimated,
 		public ?string $fiscalDateEnding,
 		public ?string $updatedFromDate,
 	)
@@ -30,7 +30,7 @@ final readonly class LegacyEarningsCalendar
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: non-empty-string, eps: float|null, epsEstimated: float|null, time: non-empty-string|null, revenue: int|null, revenueEstimated: int|null, fiscalDateEnding: non-empty-string|null, updatedFromDate: non-empty-string|null}
+	 * @return array{symbol: non-empty-string, date: non-empty-string, eps: float|null, epsEstimated: float|null, time: non-empty-string|null, revenue: int|float|null, revenueEstimated: int|float|null, fiscalDateEnding: non-empty-string|null, updatedFromDate: non-empty-string|null}
 	 */
 	public function toArray(): array
 	{
