@@ -31,6 +31,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
+use Shredio\FmpClient\Payload\HolidayByExchange;
 use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
@@ -89,6 +90,12 @@ interface FmpClient
 	 * @return iterable<int, ExchangeMarketHours>
 	 */
 	public function allExchangeMarketHours(): iterable;
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/holidays-by-exchange
+	 * @return iterable<int, HolidayByExchange>
+	 */
+	public function holidaysByExchange(string $exchange): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/market-risk-premium

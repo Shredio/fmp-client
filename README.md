@@ -283,6 +283,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `sharesFloat(string $symbol)` - Shares float information (free float, float shares, outstanding shares)
 - `availableExchanges()` - Available stock exchanges
 - `allExchangeMarketHours()` - Market hours for all exchanges
+- `holidaysByExchange(string $exchange)` - Market holidays and early-close days for an exchange
 
 ### Financial Statements
 - `balanceSheetStatement(string $symbol)` - Balance sheet data

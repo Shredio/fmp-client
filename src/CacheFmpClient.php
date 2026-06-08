@@ -33,6 +33,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
+use Shredio\FmpClient\Payload\HolidayByExchange;
 use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
@@ -122,6 +123,14 @@ final readonly class CacheFmpClient implements FmpClient
 	public function allExchangeMarketHours(): iterable
 	{
 		return $this->cached(__FUNCTION__, fn () => $this->client->allExchangeMarketHours());
+	}
+
+	/**
+	 * @return iterable<int, HolidayByExchange>
+	 */
+	public function holidaysByExchange(string $exchange): iterable
+	{
+		return $this->cached(__FUNCTION__, fn () => $this->client->holidaysByExchange($exchange), $exchange);
 	}
 
 	/**

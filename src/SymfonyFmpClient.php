@@ -37,6 +37,7 @@ use Shredio\FmpClient\Mapper\ExchangeMarketHoursMapper;
 use Shredio\FmpClient\Mapper\FinancialStatementSymbolMapper;
 use Shredio\FmpClient\Mapper\HistoricalChartMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodMapper;
+use Shredio\FmpClient\Mapper\HolidayByExchangeMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementGrowthBulkMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementGrowthMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementMapper;
@@ -81,6 +82,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
+use Shredio\FmpClient\Payload\HolidayByExchange;
 use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
@@ -251,6 +253,22 @@ final readonly class SymfonyFmpClient implements FmpClient
 
 		foreach ($this->requestJson('stable/all-exchange-market-hours') as $item) {
 			$object = $this->map(ExchangeMarketHours::class, new ExchangeMarketHoursMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/holidays-by-exchange
+	 * @return iterable<int, HolidayByExchange>
+	 */
+	public function holidaysByExchange(string $exchange): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/holidays-by-exchange', ['exchange' => $exchange]);
+
+		foreach ($this->requestJson('stable/holidays-by-exchange', ['exchange' => $exchange]) as $item) {
+			$object = $this->map(HolidayByExchange::class, new HolidayByExchangeMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}

@@ -49,6 +49,26 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 ---
 
+### `holidaysByExchange(string $exchange)`
+
+**Purpose:** Retrieve market holidays and early-close days for a specific exchange.
+
+**Parameters:**
+- `$exchange` - Exchange code (e.g. `NASDAQ`)
+
+**Return Values:** `iterable<HolidayByExchange>`
+- `exchange` - Exchange code
+- `date` - Holiday date (Y-m-d)
+- `name` - Holiday name
+- `isClosed` - Whether the market is closed for the whole day (`null` for early-close days)
+- `adjOpenTime` - Adjusted opening time, or `null`
+- `adjCloseTime` - Adjusted closing time for early-close days, or `null`
+- `isFullyClosed` - Whether the market is fully closed (present only for early-close days, otherwise `null`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/holidays-by-exchange`
+
+---
+
 ### `marketRiskPremium()`
 
 **Purpose:** Retrieve market risk premiums for various countries.
