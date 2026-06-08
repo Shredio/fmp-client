@@ -220,9 +220,12 @@ final readonly class BalanceSheetStatement
 	 */
 	public static function createContext(TypeContext $context): TypeContext
 	{
+		$isCsv = $context->getOption(SourceFormat::class)?->is('csv') === true;
+
 		return $context->withConversionStrategy(new NullAsZeroConversion(
 			$context->conversionStrategy,
-			$context->getOption(SourceFormat::class)?->is('csv') === true,
+			handleNaN: $isCsv,
+			handleInfinite: $isCsv,
 		));
 	}
 
