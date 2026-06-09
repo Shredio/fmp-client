@@ -305,7 +305,7 @@ final class IncomeStatementTest extends TestCase
 
 		$this->assertCount(2, $statements);
 
-		// Test positive Infinity is converted to null
+		// Test positive Infinity: non-nullable float fields become 0.0, nullable share-count fields become null
 		$this->assertSame((new IncomeStatement(
 			symbol: 'TEST.SZ',
 			date: '2024-12-31',
@@ -343,12 +343,12 @@ final class IncomeStatementTest extends TestCase
 			netIncomeDeductions: 0,
 			bottomLineNetIncome: 28000000,
 			eps: 1.5,
-			epsDiluted: 1.5,
+			epsDiluted: 0.0,
 			weightedAverageShsOut: null,
 			weightedAverageShsOutDil: null,
 		))->toArray(), $statements[0]->toArray());
 
-		// Test negative Infinity is converted to null
+		// Test negative Infinity: non-nullable float fields become 0.0, nullable share-count fields become null
 		$this->assertSame((new IncomeStatement(
 			symbol: 'TEST2.SZ',
 			date: '2024-12-31',
@@ -386,7 +386,7 @@ final class IncomeStatementTest extends TestCase
 			netIncomeDeductions: 0,
 			bottomLineNetIncome: 56000000,
 			eps: 2.5,
-			epsDiluted: 2.5,
+			epsDiluted: 0.0,
 			weightedAverageShsOut: null,
 			weightedAverageShsOutDil: null,
 		))->toArray(), $statements[1]->toArray());

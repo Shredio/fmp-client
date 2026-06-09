@@ -225,7 +225,7 @@ final readonly class BalanceSheetStatement
 		return $context->withConversionStrategy(new NullAsZeroConversion(
 			$context->conversionStrategy,
 			handleNaN: $isCsv,
-			handleInfinite: $isCsv,
+			handleInfinity: $isCsv,
 		));
 	}
 

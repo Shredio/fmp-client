@@ -14,15 +14,17 @@ final readonly class NullAsZeroConversion extends ConversionStrategyDecorator
 		'na' => true,
 	];
 
-	private const array InfiniteValues = [
+	private const array InfinityValues = [
 		'infinite' => true,
 		'-infinite' => true,
+		'infinity' => true,
+		'-infinity' => true,
 	];
 
 	public function __construct(
 		ConversionStrategy $inner,
 		private bool $handleNaN = false,
-		private bool $handleInfinite = false,
+		private bool $handleInfinity = false,
 	)
 	{
 		parent::__construct($inner);
@@ -43,13 +45,13 @@ final readonly class NullAsZeroConversion extends ConversionStrategyDecorator
 			return 0.0;
 		}
 
-		if (is_string($value) && ($this->handleNaN || $this->handleInfinite)) {
+		if (is_string($value) && ($this->handleNaN || $this->handleInfinity)) {
 			$normalizedValue = strtolower($value);
 			if ($this->handleNaN && isset(self::NanValues[$normalizedValue])) {
 				return 0.0;
 			}
 
-			if ($this->handleInfinite && isset(self::InfiniteValues[$normalizedValue])) {
+			if ($this->handleInfinity && isset(self::InfinityValues[$normalizedValue])) {
 				return 0.0;
 			}
 		}
