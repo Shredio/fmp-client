@@ -864,27 +864,28 @@ Contains percentage growth of all cash flow statement items
 
 ---
 
-### `legacyEarningsCalendar()`
+### `detailedEarningsCalendar()`
 
-**Purpose:** Retrieve earnings announcements from the legacy v3 earnings calendar endpoint. Unlike the stable `earningsCalendar()` endpoint, this legacy endpoint exposes the announcement `time` window (`bmo` = before market open, `amc` = after market close, or `null` when unspecified) and includes `fiscalDateEnding` plus `updatedFromDate` metadata. The upstream API silently truncates each response to a 90-day window (oldest records get dropped first), so requests are automatically split into 90-day chunks walking backwards from `to` to `from`.
+**Purpose:** Retrieve the earnings announcement calendar with the additional report-time fields exposed by passing `includeReportTimes=true` to the stable earnings calendar endpoint. Compared to `earningsCalendar()`, each item additionally carries the announcement `time` window (`bmo` = before market open, `amc` = after market close, or `null` when unspecified), the `periodEnding` of the fiscal period being reported, and a `confirmed` flag. Requests are automatically paginated over the date range.
 
 **Parameters:**
 - `from` (DateTimeImmutable) - Start date
 - `to` (DateTimeImmutable) - End date
 - `logger` (LoggerInterface|null, default: null) - Optional logger
 
-**Return Values:** `iterable<LegacyEarningsCalendar>`
+**Return Values:** `iterable<DetailedEarningsCalendarItem>`
 - `symbol` - Ticker symbol
-- `date` - Announcement date in `Y-m-d` format
-- `eps` - Reported EPS (nullable when not yet reported)
+- `date` - Announcement date
+- `epsActual` - Actual EPS (nullable when not yet reported)
 - `epsEstimated` - Estimated EPS (nullable)
-- `time` - Announcement time window: `bmo` (before market open), `amc` (after market close), or `null` when unspecified
-- `revenue` - Reported revenue (nullable when not yet reported)
+- `revenueActual` - Actual revenue (nullable when not yet reported)
 - `revenueEstimated` - Estimated revenue (nullable)
-- `fiscalDateEnding` - End date of the fiscal period being reported in `Y-m-d` format (nullable)
-- `updatedFromDate` - Date the record was last updated in `Y-m-d` format (nullable)
+- `time` - Announcement time window: `bmo` (before market open), `amc` (after market close), or `null` when unspecified
+- `periodEnding` - End date of the fiscal period being reported in `Y-m-d` format (nullable)
+- `confirmed` - Whether the announcement date is confirmed
+- `lastUpdated` - Last update date
 
-**API endpoint:** `https://financialmodelingprep.com/api/v3/earning_calendar`
+**API endpoint:** `https://financialmodelingprep.com/stable/earnings-calendar?includeReportTimes=true`
 
 ---
 

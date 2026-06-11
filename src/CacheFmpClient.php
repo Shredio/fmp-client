@@ -25,6 +25,7 @@ use Shredio\FmpClient\Payload\CashFlowStatementGrowthBulk;
 use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
+use Shredio\FmpClient\Payload\DetailedEarningsCalendarItem;
 use Shredio\FmpClient\Payload\Dividend;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EconomicCalendarItem;
@@ -42,7 +43,6 @@ use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
-use Shredio\FmpClient\Payload\LegacyEarningsCalendar;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
@@ -312,11 +312,11 @@ final readonly class CacheFmpClient implements FmpClient
 	}
 
 	/**
-	 * @return iterable<int, LegacyEarningsCalendar>
+	 * @return iterable<int, DetailedEarningsCalendarItem>
 	 */
-	public function legacyEarningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
+	public function detailedEarningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
 	{
-		return $this->client->legacyEarningsCalendar($from, $to, $logger);
+		return $this->client->detailedEarningsCalendar($from, $to, $logger);
 	}
 
 	/**
