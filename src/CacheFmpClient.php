@@ -34,6 +34,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
+use Shredio\FmpClient\Payload\HistoricalPriceEodNonSplitAdjusted;
 use Shredio\FmpClient\Payload\HolidayByExchange;
 use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
@@ -495,6 +496,18 @@ final readonly class CacheFmpClient implements FmpClient
 		return $this->cached(
 			__FUNCTION__,
 			fn () => $this->client->historicalPriceEod($symbol, $from, $to),
+			sprintf('%s.%s.%s', $symbol, $from->format('Y-m-d'), $to->format('Y-m-d')),
+		);
+	}
+
+	/**
+	 * @return iterable<int, HistoricalPriceEodNonSplitAdjusted>
+	 */
+	public function historicalPriceEodNonSplitAdjusted(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->historicalPriceEodNonSplitAdjusted($symbol, $from, $to),
 			sprintf('%s.%s.%s', $symbol, $from->format('Y-m-d'), $to->format('Y-m-d')),
 		);
 	}

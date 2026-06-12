@@ -1,0 +1,110 @@
+[
+  {
+    "symbol": "AAPL",
+    "date": "2026-06-10",
+    "adjOpen": 290.74,
+    "adjHigh": 294.75,
+    "adjLow": 287.38,
+    "adjClose": 291.58,
+    "volume": 52793300
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-06-09",
+    "adjOpen": 300.27,
+    "adjHigh": 300.75,
+    "adjLow": 287.78,
+    "adjClose": 290.55,
+    "volume": 70108847
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-06-08",
+    "adjOpen": 308.74,
+    "adjHigh": 317.4,
+    "adjLow": 301.17,
+    "adjClose": 301.54,
+    "volume": 77949100
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-06-05",
+    "adjOpen": 312.86,
+    "adjHigh": 315.17,
+    "adjLow": 307.15,
+    "adjClose": 307.34,
+    "volume": 65310502
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-06-04",
+    "adjOpen": 313.23,
+    "adjHigh": 313.54,
+    "adjLow": 309.65,
+    "adjClose": 311.23,
+    "volume": 44869134
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-06-03",
+    "adjOpen": 314.18,
+    "adjHigh": 316.94,
+    "adjLow": 308.85,
+    "adjClose": 310.26,
+    "volume": 50836705
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-06-02",
+    "adjOpen": 307.46,
+    "adjHigh": 315.45,
+    "adjLow": 306.69,
+    "adjClose": 315.2,
+    "volume": 44534716
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-06-01",
+    "adjOpen": 309.63,
+    "adjHigh": 310.94,
+    "adjLow": 305.02,
+    "adjClose": 306.31,
+    "volume": 48849933
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-05-29",
+    "adjOpen": 311.77,
+    "adjHigh": 315,
+    "adjLow": 309.53,
+    "adjClose": 312.06,
+    "volume": 70026800
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-05-28",
+    "adjOpen": 310.68,
+    "adjHigh": 312.8,
+    "adjLow": 309.57,
+    "adjClose": 312.51,
+    "volume": 48220400
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-05-27",
+    "adjOpen": 308.33,
+    "adjHigh": 313.26,
+    "adjLow": 308.3,
+    "adjClose": 310.85,
+    "volume": 50430919
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2026-05-26",
+    "adjOpen": 309.56,
+    "adjHigh": 311.82,
+    "adjLow": 307.67,
+    "adjClose": 308.33,
+    "volume": 48000500
+  }
+]

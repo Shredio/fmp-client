@@ -32,6 +32,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
+use Shredio\FmpClient\Payload\HistoricalPriceEodNonSplitAdjusted;
 use Shredio\FmpClient\Payload\HolidayByExchange;
 use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
@@ -347,6 +348,12 @@ interface FmpClient
 	 * @return iterable<int, HistoricalPriceEod>
 	 */
 	public function historicalPriceEod(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable;
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/historical-price-eod/non-split-adjusted
+	 * @return iterable<int, HistoricalPriceEodNonSplitAdjusted>
+	 */
+	public function historicalPriceEodNonSplitAdjusted(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/historical-chart

@@ -201,6 +201,11 @@ foreach ($fmpClient->historicalPriceEod('AAPL', $from, $to) as $price) {
     echo "Date: {$price->date}, Close: ${$price->close}\n";
 }
 
+// Historical end-of-day prices without split adjustments
+foreach ($fmpClient->historicalPriceEodNonSplitAdjusted('AAPL', $from, $to) as $price) {
+    echo "Date: {$price->date}, Close: ${$price->adjClose}\n";
+}
+
 // Historical chart data with intervals
 foreach ($fmpClient->historicalChart('AAPL', TimeInterval::FiveMin, $from, $to) as $data) {
     echo "Time: {$data->date}, Price: ${$data->close}\n";
@@ -308,6 +313,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 
 ### Historical Data
 - `historicalPriceEod(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical prices
+- `historicalPriceEodNonSplitAdjusted(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical prices without split adjustments
 - `historicalChart(string $symbol, TimeInterval $interval, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical chart data
 
 ### Analytics & Metrics

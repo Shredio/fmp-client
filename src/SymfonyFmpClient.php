@@ -38,6 +38,7 @@ use Shredio\FmpClient\Mapper\ExchangeMarketHoursMapper;
 use Shredio\FmpClient\Mapper\FinancialStatementSymbolMapper;
 use Shredio\FmpClient\Mapper\HistoricalChartMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodMapper;
+use Shredio\FmpClient\Mapper\HistoricalPriceEodNonSplitAdjustedMapper;
 use Shredio\FmpClient\Mapper\HolidayByExchangeMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementGrowthBulkMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementGrowthMapper;
@@ -83,6 +84,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
+use Shredio\FmpClient\Payload\HistoricalPriceEodNonSplitAdjusted;
 use Shredio\FmpClient\Payload\HolidayByExchange;
 use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
@@ -1146,6 +1148,30 @@ final readonly class SymfonyFmpClient implements FmpClient
 			'to' => $to->format('Y-m-d'),
 		]) as $item) {
 			$object = $this->map(HistoricalPriceEod::class, new HistoricalPriceEodMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/historical-price-eod/non-split-adjusted
+	 * @return iterable<int, HistoricalPriceEodNonSplitAdjusted>
+	 */
+	public function historicalPriceEodNonSplitAdjusted(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/historical-price-eod/non-split-adjusted', [
+			'symbol' => $symbol,
+			'from' => $from->format('Y-m-d'),
+			'to' => $to->format('Y-m-d'),
+		]);
+
+		foreach ($this->requestJson('stable/historical-price-eod/non-split-adjusted', [
+			'symbol' => $symbol,
+			'from' => $from->format('Y-m-d'),
+			'to' => $to->format('Y-m-d'),
+		]) as $item) {
+			$object = $this->map(HistoricalPriceEodNonSplitAdjusted::class, new HistoricalPriceEodNonSplitAdjustedMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}

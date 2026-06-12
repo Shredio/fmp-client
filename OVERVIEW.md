@@ -1068,6 +1068,28 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 ---
 
+### `historicalPriceEodNonSplitAdjusted()`
+
+**Purpose:** Retrieve historical daily prices without stock split adjustments for a specific symbol in a given time period.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
+
+**Return Values:** `iterable<HistoricalPriceEodNonSplitAdjusted>`
+- `symbol` - Ticker symbol
+- `date` - Date
+- `adjOpen` - Opening price without split adjustments
+- `adjHigh` - Highest price without split adjustments
+- `adjLow` - Lowest price without split adjustments
+- `adjClose` - Closing price without split adjustments
+- `volume` - Trading volume
+
+**API endpoint:** `https://financialmodelingprep.com/stable/historical-price-eod/non-split-adjusted`
+
+---
+
 ### `historicalChart()`
 
 **Purpose:** Retrieve historical intraday price data with various time intervals.
