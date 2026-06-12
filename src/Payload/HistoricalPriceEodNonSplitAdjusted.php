@@ -18,13 +18,13 @@ final readonly class HistoricalPriceEodNonSplitAdjusted
 		public float $adjHigh,
 		public float $adjLow,
 		public float $adjClose,
-		public int $volume,
+		public float $volume,
 	)
 	{
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: string, adjOpen: float, adjHigh: float, adjLow: float, adjClose: float, volume: int}
+	 * @return array{symbol: non-empty-string, date: string, adjOpen: float, adjHigh: float, adjLow: float, adjClose: float, volume: float}
 	 */
 	public function toArray(): array
 	{

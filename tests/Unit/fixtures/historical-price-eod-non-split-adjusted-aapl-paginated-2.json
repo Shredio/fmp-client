@@ -1,0 +1,1289 @@
+[
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-27",
+    "adjOpen": 64.4,
+    "adjHigh": 64.96,
+    "adjLow": 62.72,
+    "adjClose": 63.28,
+    "volume": 26253242
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-26",
+    "adjOpen": 61.88,
+    "adjHigh": 64.68,
+    "adjLow": 61.6,
+    "adjClose": 63.84,
+    "volume": 32093936
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-25",
+    "adjOpen": 61.88,
+    "adjHigh": 62.16,
+    "adjLow": 60.76,
+    "adjClose": 61.88,
+    "volume": 21045845
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-24",
+    "adjOpen": 61.32,
+    "adjHigh": 62.16,
+    "adjLow": 60.48,
+    "adjClose": 61.32,
+    "volume": 25821033
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-21",
+    "adjOpen": 59.92,
+    "adjHigh": 61.04,
+    "adjLow": 59.64,
+    "adjClose": 60.76,
+    "volume": 31860063
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-20",
+    "adjOpen": 61.04,
+    "adjHigh": 61.6,
+    "adjLow": 59.64,
+    "adjClose": 60.48,
+    "volume": 70446886
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-19",
+    "adjOpen": 52.92,
+    "adjHigh": 55.16,
+    "adjLow": 52.36,
+    "adjClose": 54.04,
+    "volume": 50133922
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-18",
+    "adjOpen": 53.2,
+    "adjHigh": 53.76,
+    "adjLow": 51.8,
+    "adjClose": 52.92,
+    "volume": 35755763
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-17",
+    "adjOpen": 51.8,
+    "adjHigh": 53.2,
+    "adjLow": 51.52,
+    "adjClose": 52.36,
+    "volume": 36594836
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-14",
+    "adjOpen": 52.64,
+    "adjHigh": 52.92,
+    "adjLow": 50.12,
+    "adjClose": 50.68,
+    "volume": 35465600
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-13",
+    "adjOpen": 52.08,
+    "adjHigh": 54.04,
+    "adjLow": 51.52,
+    "adjClose": 52.36,
+    "volume": 44639532
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-12",
+    "adjOpen": 55.16,
+    "adjHigh": 55.16,
+    "adjLow": 52.92,
+    "adjClose": 52.92,
+    "volume": 33118900
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-11",
+    "adjOpen": 55.16,
+    "adjHigh": 56,
+    "adjLow": 54.6,
+    "adjClose": 55.72,
+    "volume": 29477069
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-10",
+    "adjOpen": 55.72,
+    "adjHigh": 56.56,
+    "adjLow": 54.6,
+    "adjClose": 54.88,
+    "volume": 18971458
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-07",
+    "adjOpen": 56.56,
+    "adjHigh": 56.56,
+    "adjLow": 54.6,
+    "adjClose": 55.44,
+    "volume": 28549532
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-06",
+    "adjOpen": 57.12,
+    "adjHigh": 57.4,
+    "adjLow": 55.72,
+    "adjClose": 55.72,
+    "volume": 22620182
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-05",
+    "adjOpen": 57.12,
+    "adjHigh": 57.68,
+    "adjLow": 56.56,
+    "adjClose": 57.12,
+    "volume": 18530226
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-03",
+    "adjOpen": 57.4,
+    "adjHigh": 58.24,
+    "adjLow": 57.4,
+    "adjClose": 57.96,
+    "volume": 6956174.86
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-30",
+    "adjOpen": 57.68,
+    "adjHigh": 57.68,
+    "adjLow": 56.56,
+    "adjClose": 57.4,
+    "volume": 26451194
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-29",
+    "adjOpen": 56.84,
+    "adjHigh": 59.08,
+    "adjLow": 56.28,
+    "adjClose": 59.08,
+    "volume": 31258975
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-28",
+    "adjOpen": 57.4,
+    "adjHigh": 57.4,
+    "adjLow": 55.44,
+    "adjClose": 56,
+    "volume": 30395294
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-27",
+    "adjOpen": 59.08,
+    "adjHigh": 59.08,
+    "adjLow": 57.4,
+    "adjClose": 57.4,
+    "volume": 19665411
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-26",
+    "adjOpen": 59.08,
+    "adjHigh": 59.08,
+    "adjLow": 58.24,
+    "adjClose": 59.08,
+    "volume": 16662000
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-23",
+    "adjOpen": 59.64,
+    "adjHigh": 60.2,
+    "adjLow": 58.8,
+    "adjClose": 58.8,
+    "volume": 23578700
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-22",
+    "adjOpen": 58.24,
+    "adjHigh": 59.64,
+    "adjLow": 57.96,
+    "adjClose": 59.64,
+    "volume": 34551426
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-21",
+    "adjOpen": 57.68,
+    "adjHigh": 58.8,
+    "adjLow": 57.4,
+    "adjClose": 57.96,
+    "volume": 30856110
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-20",
+    "adjOpen": 57.68,
+    "adjHigh": 58.24,
+    "adjLow": 57.4,
+    "adjClose": 57.4,
+    "volume": 24036600
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-19",
+    "adjOpen": 57.96,
+    "adjHigh": 58.24,
+    "adjLow": 57.12,
+    "adjClose": 57.12,
+    "volume": 25773929
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-16",
+    "adjOpen": 59.08,
+    "adjHigh": 59.08,
+    "adjLow": 57.4,
+    "adjClose": 57.68,
+    "volume": 29939245
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-15",
+    "adjOpen": 57.4,
+    "adjHigh": 59.64,
+    "adjLow": 56.84,
+    "adjClose": 59.36,
+    "volume": 42519274
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-14",
+    "adjOpen": 58.24,
+    "adjHigh": 58.8,
+    "adjLow": 56.56,
+    "adjClose": 57.68,
+    "volume": 31371535
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-13",
+    "adjOpen": 57.68,
+    "adjHigh": 59.08,
+    "adjLow": 57.4,
+    "adjClose": 58.24,
+    "volume": 38605110
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-12",
+    "adjOpen": 59.36,
+    "adjHigh": 59.64,
+    "adjLow": 56.84,
+    "adjClose": 57.12,
+    "volume": 25642265
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-09",
+    "adjOpen": 61.04,
+    "adjHigh": 61.6,
+    "adjLow": 59.08,
+    "adjClose": 59.36,
+    "volume": 27712843
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-08",
+    "adjOpen": 58.52,
+    "adjHigh": 61.04,
+    "adjLow": 57.12,
+    "adjClose": 60.76,
+    "volume": 49911409
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-07",
+    "adjOpen": 60.2,
+    "adjHigh": 60.48,
+    "adjLow": 58.24,
+    "adjClose": 58.52,
+    "volume": 26813962
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-06",
+    "adjOpen": 60.2,
+    "adjHigh": 60.76,
+    "adjLow": 58.8,
+    "adjClose": 59.64,
+    "volume": 25933337
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-05",
+    "adjOpen": 61.04,
+    "adjHigh": 61.04,
+    "adjLow": 59.92,
+    "adjClose": 59.92,
+    "volume": 21639845
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-02",
+    "adjOpen": 63,
+    "adjHigh": 63,
+    "adjLow": 60.76,
+    "adjClose": 61.6,
+    "volume": 24496744
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-01",
+    "adjOpen": 59.92,
+    "adjHigh": 62.16,
+    "adjLow": 59.64,
+    "adjClose": 62.16,
+    "volume": 33669073
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-31",
+    "adjOpen": 61.88,
+    "adjHigh": 61.88,
+    "adjLow": 58.8,
+    "adjClose": 59.64,
+    "volume": 45755373
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-30",
+    "adjOpen": 63.28,
+    "adjHigh": 63.28,
+    "adjLow": 61.32,
+    "adjClose": 61.32,
+    "volume": 20125364
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-26",
+    "adjOpen": 64.4,
+    "adjHigh": 64.68,
+    "adjLow": 63,
+    "adjClose": 63.56,
+    "volume": 15464828
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-25",
+    "adjOpen": 64.12,
+    "adjHigh": 64.4,
+    "adjLow": 63.28,
+    "adjClose": 64.4,
+    "volume": 16563336
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-24",
+    "adjOpen": 63,
+    "adjHigh": 63.56,
+    "adjLow": 61.6,
+    "adjClose": 63.28,
+    "volume": 32722976
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-23",
+    "adjOpen": 64.96,
+    "adjHigh": 65.24,
+    "adjLow": 63,
+    "adjClose": 63.28,
+    "volume": 24814088
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-22",
+    "adjOpen": 63.84,
+    "adjHigh": 64.12,
+    "adjLow": 62.72,
+    "adjClose": 63.28,
+    "volume": 25680825
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-19",
+    "adjOpen": 63.28,
+    "adjHigh": 64.96,
+    "adjLow": 62.72,
+    "adjClose": 64.4,
+    "volume": 35221619
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-18",
+    "adjOpen": 65.8,
+    "adjHigh": 66.36,
+    "adjLow": 63,
+    "adjClose": 63.28,
+    "volume": 23524839
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-17",
+    "adjOpen": 64.68,
+    "adjHigh": 65.8,
+    "adjLow": 64.12,
+    "adjClose": 65.24,
+    "volume": 26941178
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-16",
+    "adjOpen": 68.04,
+    "adjHigh": 68.32,
+    "adjLow": 64.68,
+    "adjClose": 64.96,
+    "volume": 33470897
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-15",
+    "adjOpen": 67.48,
+    "adjHigh": 68.32,
+    "adjLow": 67.2,
+    "adjClose": 67.76,
+    "volume": 18921074
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-12",
+    "adjOpen": 67.76,
+    "adjHigh": 68.6,
+    "adjLow": 66.92,
+    "adjClose": 67.76,
+    "volume": 22926838
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-11",
+    "adjOpen": 70.84,
+    "adjHigh": 70.84,
+    "adjLow": 67.48,
+    "adjClose": 68.04,
+    "volume": 29032301
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-10",
+    "adjOpen": 71.4,
+    "adjHigh": 71.4,
+    "adjLow": 69.72,
+    "adjClose": 70.56,
+    "volume": 16695930
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-09",
+    "adjOpen": 71.96,
+    "adjHigh": 72.52,
+    "adjLow": 70.56,
+    "adjClose": 71.12,
+    "volume": 18989954
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-08",
+    "adjOpen": 73.08,
+    "adjHigh": 73.92,
+    "adjLow": 71.68,
+    "adjClose": 71.96,
+    "volume": 21247653
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-05",
+    "adjOpen": 71.96,
+    "adjHigh": 72.24,
+    "adjLow": 71.12,
+    "adjClose": 71.96,
+    "volume": 20141668
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-04",
+    "adjOpen": 71.12,
+    "adjHigh": 72.8,
+    "adjLow": 70.56,
+    "adjClose": 71.12,
+    "volume": 30731598
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-03",
+    "adjOpen": 71.96,
+    "adjHigh": 71.96,
+    "adjLow": 70.28,
+    "adjClose": 71.12,
+    "volume": 24546248
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-02",
+    "adjOpen": 70.28,
+    "adjHigh": 71.96,
+    "adjLow": 70,
+    "adjClose": 71.68,
+    "volume": 27569915
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-01",
+    "adjOpen": 70.84,
+    "adjHigh": 71.4,
+    "adjLow": 69.16,
+    "adjClose": 69.72,
+    "volume": 26806954
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-28",
+    "adjOpen": 69.44,
+    "adjHigh": 71.4,
+    "adjLow": 69.16,
+    "adjClose": 70.28,
+    "volume": 27148459
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-27",
+    "adjOpen": 67.76,
+    "adjHigh": 69.72,
+    "adjLow": 67.48,
+    "adjClose": 69.44,
+    "volume": 30214974
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-26",
+    "adjOpen": 66.64,
+    "adjHigh": 68.32,
+    "adjLow": 66.36,
+    "adjClose": 68.04,
+    "volume": 25391465
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-25",
+    "adjOpen": 66.08,
+    "adjHigh": 66.64,
+    "adjLow": 65.52,
+    "adjClose": 66.08,
+    "volume": 18896322
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-24",
+    "adjOpen": 66.92,
+    "adjHigh": 66.92,
+    "adjLow": 65.52,
+    "adjClose": 65.8,
+    "volume": 25255241
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-21",
+    "adjOpen": 68.32,
+    "adjHigh": 68.6,
+    "adjLow": 66.36,
+    "adjClose": 66.92,
+    "volume": 28186460
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-20",
+    "adjOpen": 69.44,
+    "adjHigh": 70,
+    "adjLow": 66.08,
+    "adjClose": 67.76,
+    "volume": 59549867
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-19",
+    "adjOpen": 66.92,
+    "adjHigh": 66.92,
+    "adjLow": 65.52,
+    "adjClose": 65.52,
+    "volume": 39001399
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-18",
+    "adjOpen": 64.96,
+    "adjHigh": 66.36,
+    "adjLow": 64.68,
+    "adjClose": 66.08,
+    "volume": 28394604
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-17",
+    "adjOpen": 66.64,
+    "adjHigh": 66.92,
+    "adjLow": 64.4,
+    "adjClose": 64.68,
+    "volume": 25797065
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-13",
+    "adjOpen": 66.36,
+    "adjHigh": 67.48,
+    "adjLow": 65.8,
+    "adjClose": 66.36,
+    "volume": 26246714
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-12",
+    "adjOpen": 68.04,
+    "adjHigh": 68.04,
+    "adjLow": 66.36,
+    "adjClose": 66.64,
+    "volume": 26444090
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-11",
+    "adjOpen": 68.88,
+    "adjHigh": 69.16,
+    "adjLow": 67.2,
+    "adjClose": 68.04,
+    "volume": 33553633
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-10",
+    "adjOpen": 70.28,
+    "adjHigh": 70.84,
+    "adjLow": 68.32,
+    "adjClose": 68.6,
+    "volume": 32287728
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-07",
+    "adjOpen": 70.84,
+    "adjHigh": 71.12,
+    "adjLow": 68.6,
+    "adjClose": 69.72,
+    "volume": 55192311
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-06",
+    "adjOpen": 68.32,
+    "adjHigh": 71.96,
+    "adjLow": 68.32,
+    "adjClose": 71.12,
+    "volume": 95146095
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-05",
+    "adjOpen": 64.68,
+    "adjHigh": 67.2,
+    "adjLow": 64.12,
+    "adjClose": 67.2,
+    "volume": 79819455
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-04",
+    "adjOpen": 62.16,
+    "adjHigh": 62.16,
+    "adjLow": 61.04,
+    "adjClose": 61.04,
+    "volume": 33294657
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-03",
+    "adjOpen": 63.56,
+    "adjHigh": 64.12,
+    "adjLow": 62.72,
+    "adjClose": 62.72,
+    "volume": 29150157
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-31",
+    "adjOpen": 63.28,
+    "adjHigh": 63.56,
+    "adjLow": 62.16,
+    "adjClose": 62.72,
+    "volume": 29144909
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-30",
+    "adjOpen": 62.72,
+    "adjHigh": 63.28,
+    "adjLow": 61.6,
+    "adjClose": 62.72,
+    "volume": 49679009
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-29",
+    "adjOpen": 59.08,
+    "adjHigh": 62.44,
+    "adjLow": 57.68,
+    "adjClose": 62.44,
+    "volume": 83839091
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-28",
+    "adjOpen": 59.64,
+    "adjHigh": 60.2,
+    "adjLow": 58.24,
+    "adjClose": 58.8,
+    "volume": 48944224
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-27",
+    "adjOpen": 60.2,
+    "adjHigh": 61.32,
+    "adjLow": 59.36,
+    "adjClose": 59.64,
+    "volume": 39601719
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-24",
+    "adjOpen": 60.2,
+    "adjHigh": 61.04,
+    "adjLow": 59.08,
+    "adjClose": 59.92,
+    "volume": 38293654
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-23",
+    "adjOpen": 61.88,
+    "adjHigh": 61.88,
+    "adjLow": 59.64,
+    "adjClose": 60.2,
+    "volume": 51054931
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-22",
+    "adjOpen": 62.16,
+    "adjHigh": 63.28,
+    "adjLow": 61.32,
+    "adjClose": 61.6,
+    "volume": 48087216
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-21",
+    "adjOpen": 64.4,
+    "adjHigh": 64.4,
+    "adjLow": 61.32,
+    "adjClose": 61.88,
+    "volume": 48048800
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-20",
+    "adjOpen": 65.24,
+    "adjHigh": 65.52,
+    "adjLow": 63.84,
+    "adjClose": 64.12,
+    "volume": 21627781
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-17",
+    "adjOpen": 64.68,
+    "adjHigh": 65.52,
+    "adjLow": 64.12,
+    "adjClose": 64.68,
+    "volume": 29048461
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-16",
+    "adjOpen": 66.92,
+    "adjHigh": 66.92,
+    "adjLow": 64.4,
+    "adjClose": 64.4,
+    "volume": 26784554
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-15",
+    "adjOpen": 67.76,
+    "adjHigh": 68.04,
+    "adjLow": 65.52,
+    "adjClose": 66.36,
+    "volume": 31867999
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-14",
+    "adjOpen": 65.8,
+    "adjHigh": 67.2,
+    "adjLow": 65.52,
+    "adjClose": 67.2,
+    "volume": 22943734
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-13",
+    "adjOpen": 64.96,
+    "adjHigh": 66.36,
+    "adjLow": 64.68,
+    "adjClose": 65.8,
+    "volume": 30764830
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-10",
+    "adjOpen": 64.12,
+    "adjHigh": 64.4,
+    "adjLow": 62.44,
+    "adjClose": 63.28,
+    "volume": 37264181
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-09",
+    "adjOpen": 66.08,
+    "adjHigh": 66.36,
+    "adjLow": 63.84,
+    "adjClose": 63.84,
+    "volume": 28581020
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-08",
+    "adjOpen": 66.36,
+    "adjHigh": 67.2,
+    "adjLow": 65.24,
+    "adjClose": 65.52,
+    "volume": 23337591
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-07",
+    "adjOpen": 65.8,
+    "adjHigh": 66.92,
+    "adjLow": 64.96,
+    "adjClose": 66.36,
+    "volume": 31178911
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-06",
+    "adjOpen": 67.76,
+    "adjHigh": 67.76,
+    "adjLow": 64.96,
+    "adjClose": 65.52,
+    "volume": 32618048
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-03",
+    "adjOpen": 69.44,
+    "adjHigh": 70,
+    "adjLow": 67.48,
+    "adjClose": 67.76,
+    "volume": 26350554
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-02",
+    "adjOpen": 68.88,
+    "adjHigh": 70,
+    "adjLow": 68.6,
+    "adjClose": 69.72,
+    "volume": 22342342
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-01",
+    "adjOpen": 68.88,
+    "adjHigh": 69.44,
+    "adjLow": 68.04,
+    "adjClose": 69.16,
+    "volume": 27281403
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-28",
+    "adjOpen": 71.68,
+    "adjHigh": 72.52,
+    "adjLow": 68.04,
+    "adjClose": 68.6,
+    "volume": 45267725
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-27",
+    "adjOpen": 71.96,
+    "adjHigh": 72.24,
+    "adjLow": 70.56,
+    "adjClose": 71.12,
+    "volume": 28263484
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-24",
+    "adjOpen": 71.96,
+    "adjHigh": 72.8,
+    "adjLow": 71.12,
+    "adjClose": 71.4,
+    "volume": 19099443
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-23",
+    "adjOpen": 71.68,
+    "adjHigh": 73.08,
+    "adjLow": 71.4,
+    "adjClose": 71.68,
+    "volume": 30625278
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-22",
+    "adjOpen": 68.88,
+    "adjHigh": 71.68,
+    "adjLow": 68.04,
+    "adjClose": 71.4,
+    "volume": 34946578
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-21",
+    "adjOpen": 70.56,
+    "adjHigh": 70.84,
+    "adjLow": 68.6,
+    "adjClose": 69.16,
+    "volume": 27848859
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-17",
+    "adjOpen": 70.28,
+    "adjHigh": 70.84,
+    "adjLow": 69.72,
+    "adjClose": 70.28,
+    "volume": 20571400
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-16",
+    "adjOpen": 70,
+    "adjHigh": 71.12,
+    "adjLow": 69.44,
+    "adjClose": 70.56,
+    "volume": 34069410
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-15",
+    "adjOpen": 67.2,
+    "adjHigh": 69.72,
+    "adjLow": 66.64,
+    "adjClose": 69.16,
+    "volume": 41430057
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-14",
+    "adjOpen": 64.96,
+    "adjHigh": 68.04,
+    "adjLow": 64.96,
+    "adjClose": 67.76,
+    "volume": 41468409
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-13",
+    "adjOpen": 66.64,
+    "adjHigh": 66.64,
+    "adjLow": 64.68,
+    "adjClose": 64.68,
+    "volume": 31558303
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-10",
+    "adjOpen": 65.24,
+    "adjHigh": 67.76,
+    "adjLow": 63,
+    "adjClose": 67.2,
+    "volume": 62874200
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-09",
+    "adjOpen": 69.16,
+    "adjHigh": 69.16,
+    "adjLow": 64.4,
+    "adjClose": 64.96,
+    "volume": 41078393
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-08",
+    "adjOpen": 68.6,
+    "adjHigh": 69.16,
+    "adjLow": 66.08,
+    "adjClose": 68.88,
+    "volume": 34045234
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-07",
+    "adjOpen": 68.32,
+    "adjHigh": 69.44,
+    "adjLow": 66.64,
+    "adjClose": 67.48,
+    "volume": 49615537
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-06",
+    "adjOpen": 71.96,
+    "adjHigh": 72.52,
+    "adjLow": 66.64,
+    "adjClose": 67.2,
+    "volume": 59008411
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-03",
+    "adjOpen": 72.24,
+    "adjHigh": 72.8,
+    "adjLow": 71.12,
+    "adjClose": 71.96,
+    "volume": 24720120
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-02",
+    "adjOpen": 75.04,
+    "adjHigh": 75.32,
+    "adjLow": 71.96,
+    "adjClose": 71.96,
+    "volume": 25271225
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-01",
+    "adjOpen": 75.04,
+    "adjHigh": 76.44,
+    "adjLow": 74.76,
+    "adjClose": 75.32,
+    "volume": 18619410
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-31",
+    "adjOpen": 75.6,
+    "adjHigh": 76.44,
+    "adjLow": 73.64,
+    "adjClose": 75.6,
+    "volume": 32626560
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-30",
+    "adjOpen": 71.12,
+    "adjHigh": 76.72,
+    "adjLow": 70.84,
+    "adjClose": 75.04,
+    "volume": 49942945
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-27",
+    "adjOpen": 73.08,
+    "adjHigh": 73.64,
+    "adjLow": 71.12,
+    "adjClose": 71.96,
+    "volume": 34085345
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-26",
+    "adjOpen": 74.48,
+    "adjHigh": 75.32,
+    "adjLow": 71.96,
+    "adjClose": 72.24,
+    "volume": 42228490
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-25",
+    "adjOpen": 77.28,
+    "adjHigh": 77.56,
+    "adjLow": 73.36,
+    "adjClose": 74.2,
+    "volume": 45574317
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-24",
+    "adjOpen": 78.96,
+    "adjHigh": 79.52,
+    "adjLow": 75.88,
+    "adjClose": 76.16,
+    "volume": 40808872
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-23",
+    "adjOpen": 76.16,
+    "adjHigh": 79.52,
+    "adjLow": 75.88,
+    "adjClose": 77.56,
+    "volume": 37848981
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-20",
+    "adjOpen": 79.24,
+    "adjHigh": 80.08,
+    "adjLow": 75.88,
+    "adjClose": 76.16,
+    "volume": 40662168
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-19",
+    "adjOpen": 81.2,
+    "adjHigh": 81.76,
+    "adjLow": 78.68,
+    "adjClose": 78.96,
+    "volume": 60585772
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-18",
+    "adjOpen": 83.16,
+    "adjHigh": 84,
+    "adjLow": 81.76,
+    "adjClose": 82.6,
+    "volume": 43325691
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-17",
+    "adjOpen": 85.68,
+    "adjHigh": 86.24,
+    "adjLow": 84,
+    "adjClose": 84.84,
+    "volume": 29887917
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-13",
+    "adjOpen": 84.84,
+    "adjHigh": 85.96,
+    "adjLow": 84.56,
+    "adjClose": 85.68,
+    "volume": 27736219
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-12",
+    "adjOpen": 84.84,
+    "adjHigh": 86.52,
+    "adjLow": 83.72,
+    "adjClose": 84.28,
+    "volume": 45743200
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-11",
+    "adjOpen": 84,
+    "adjHigh": 84.84,
+    "adjLow": 82.6,
+    "adjClose": 84,
+    "volume": 53364181
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-10",
+    "adjOpen": 76.16,
+    "adjHigh": 81.76,
+    "adjLow": 75.88,
+    "adjClose": 80.92,
+    "volume": 81441265
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-09",
+    "adjOpen": 77,
+    "adjHigh": 77.28,
+    "adjLow": 75.6,
+    "adjClose": 76.16,
+    "volume": 24123048
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-06",
+    "adjOpen": 75.32,
+    "adjHigh": 76.72,
+    "adjLow": 74.48,
+    "adjClose": 76.16,
+    "volume": 25162793
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-05",
+    "adjOpen": 74.76,
+    "adjHigh": 74.76,
+    "adjLow": 73.64,
+    "adjClose": 74.48,
+    "volume": 16056598
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-04",
+    "adjOpen": 75.04,
+    "adjHigh": 75.88,
+    "adjLow": 74.48,
+    "adjClose": 75.04,
+    "volume": 22175110
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-03",
+    "adjOpen": 72.24,
+    "adjHigh": 74.76,
+    "adjLow": 72.24,
+    "adjClose": 74.76,
+    "volume": 28836172
+  }
+]

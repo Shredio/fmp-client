@@ -62,6 +62,7 @@ interface FmpClient
 
 	public const int MaxDividendsLimit = 1000;
 	public const int MaxStockNewsLimit = 250;
+	public const int MaxHistoricalPriceEodRecordsPerRequest = 5000;
 
 	public function withStrictMode(bool $strictMode): FmpClient;
 
@@ -344,12 +345,16 @@ interface FmpClient
 	public function batchForexQuotes(): iterable;
 
 	/**
+	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
+	 *
 	 * @see https://financialmodelingprep.com/stable/historical-price-eod/full
 	 * @return iterable<int, HistoricalPriceEod>
 	 */
 	public function historicalPriceEod(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable;
 
 	/**
+	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
+	 *
 	 * @see https://financialmodelingprep.com/stable/historical-price-eod/non-split-adjusted
 	 * @return iterable<int, HistoricalPriceEodNonSplitAdjusted>
 	 */

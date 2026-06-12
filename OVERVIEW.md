@@ -1064,6 +1064,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `label` - Description
 - `changeOverTime` - Change over time
 
+**Note:** The API returns at most 5000 records per request; the client automatically issues follow-up requests to cover the entire date range.
+
 **API endpoint:** `https://financialmodelingprep.com/stable/historical-price-eod/full`
 
 ---
@@ -1085,6 +1087,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `adjLow` - Lowest price without split adjustments
 - `adjClose` - Closing price without split adjustments
 - `volume` - Trading volume
+
+**Note:** The API returns at most 5000 records per request; the client automatically issues follow-up requests to cover the entire date range.
 
 **API endpoint:** `https://financialmodelingprep.com/stable/historical-price-eod/non-split-adjusted`
 

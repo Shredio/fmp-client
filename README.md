@@ -197,6 +197,7 @@ $from = new DateTimeImmutable('2024-01-01');
 $to = new DateTimeImmutable('2024-01-31');
 
 // Historical end-of-day prices
+// Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically
 foreach ($fmpClient->historicalPriceEod('AAPL', $from, $to) as $price) {
     echo "Date: {$price->date}, Close: ${$price->close}\n";
 }

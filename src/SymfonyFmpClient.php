@@ -2,6 +2,7 @@
 
 namespace Shredio\FmpClient;
 
+use DateInterval;
 use DateTimeImmutable;
 use InvalidArgumentException;
 use LogicException;
@@ -1131,50 +1132,96 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
+	 *
 	 * @see https://financialmodelingprep.com/stable/historical-price-eod/full
 	 * @return iterable<int, HistoricalPriceEod>
 	 */
 	public function historicalPriceEod(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable
 	{
-		$url = $this->buildUrlWithoutApiKey('stable/historical-price-eod/full', [
-			'symbol' => $symbol,
-			'from' => $from->format('Y-m-d'),
-			'to' => $to->format('Y-m-d'),
-		]);
+		$currentTo = $to;
 
-		foreach ($this->requestJson('stable/historical-price-eod/full', [
-			'symbol' => $symbol,
-			'from' => $from->format('Y-m-d'),
-			'to' => $to->format('Y-m-d'),
-		]) as $item) {
-			$object = $this->map(HistoricalPriceEod::class, new HistoricalPriceEodMapper(), $item, $url);
-			if ($object !== null) {
-				yield $object;
+		while (true) {
+			$query = [
+				'symbol' => $symbol,
+				'from' => $from->format('Y-m-d'),
+				'to' => $currentTo->format('Y-m-d'),
+			];
+			$url = $this->buildUrlWithoutApiKey('stable/historical-price-eod/full', $query);
+
+			$recordCount = 0;
+			$oldestDate = null;
+
+			foreach ($this->requestJson('stable/historical-price-eod/full', $query) as $item) {
+				$recordCount++;
+
+				$object = $this->map(HistoricalPriceEod::class, new HistoricalPriceEodMapper(), $item, $url);
+				if ($object !== null) {
+					if ($oldestDate === null || $object->date < $oldestDate) {
+						$oldestDate = $object->date;
+					}
+
+					yield $object;
+				}
 			}
+
+			if ($recordCount < self::MaxHistoricalPriceEodRecordsPerRequest || $oldestDate === null) {
+				return;
+			}
+
+			$nextTo = (new DateTimeImmutable($oldestDate))->sub(new DateInterval('P1D'));
+			if ($nextTo >= $currentTo || $nextTo < $from) {
+				return;
+			}
+
+			$currentTo = $nextTo;
 		}
 	}
 
 	/**
+	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
+	 *
 	 * @see https://financialmodelingprep.com/stable/historical-price-eod/non-split-adjusted
 	 * @return iterable<int, HistoricalPriceEodNonSplitAdjusted>
 	 */
 	public function historicalPriceEodNonSplitAdjusted(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable
 	{
-		$url = $this->buildUrlWithoutApiKey('stable/historical-price-eod/non-split-adjusted', [
-			'symbol' => $symbol,
-			'from' => $from->format('Y-m-d'),
-			'to' => $to->format('Y-m-d'),
-		]);
+		$currentTo = $to;
 
-		foreach ($this->requestJson('stable/historical-price-eod/non-split-adjusted', [
-			'symbol' => $symbol,
-			'from' => $from->format('Y-m-d'),
-			'to' => $to->format('Y-m-d'),
-		]) as $item) {
-			$object = $this->map(HistoricalPriceEodNonSplitAdjusted::class, new HistoricalPriceEodNonSplitAdjustedMapper(), $item, $url);
-			if ($object !== null) {
-				yield $object;
+		while (true) {
+			$query = [
+				'symbol' => $symbol,
+				'from' => $from->format('Y-m-d'),
+				'to' => $currentTo->format('Y-m-d'),
+			];
+			$url = $this->buildUrlWithoutApiKey('stable/historical-price-eod/non-split-adjusted', $query);
+
+			$recordCount = 0;
+			$oldestDate = null;
+
+			foreach ($this->requestJson('stable/historical-price-eod/non-split-adjusted', $query) as $item) {
+				$recordCount++;
+
+				$object = $this->map(HistoricalPriceEodNonSplitAdjusted::class, new HistoricalPriceEodNonSplitAdjustedMapper(), $item, $url);
+				if ($object !== null) {
+					if ($oldestDate === null || $object->date < $oldestDate) {
+						$oldestDate = $object->date;
+					}
+
+					yield $object;
+				}
 			}
+
+			if ($recordCount < self::MaxHistoricalPriceEodRecordsPerRequest || $oldestDate === null) {
+				return;
+			}
+
+			$nextTo = (new DateTimeImmutable($oldestDate))->sub(new DateInterval('P1D'));
+			if ($nextTo >= $currentTo || $nextTo < $from) {
+				return;
+			}
+
+			$currentTo = $nextTo;
 		}
 	}
 

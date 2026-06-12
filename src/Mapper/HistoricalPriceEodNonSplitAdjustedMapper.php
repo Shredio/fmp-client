@@ -33,7 +33,7 @@ final readonly class HistoricalPriceEodNonSplitAdjustedMapper extends Type
 			'adjHigh' => $ts->float(),
 			'adjLow' => $ts->float(),
 			'adjClose' => $ts->float(),
-			'volume' => $ts->int(),
+			'volume' => $ts->float(),
 		],
 			identifier: 'symbol',
 		);
