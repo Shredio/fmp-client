@@ -10,17 +10,17 @@ final readonly class ActivelyTrading
 
 	/**
 	 * @param non-empty-string $symbol
-	 * @param non-empty-string $name
+	 * @param non-empty-string|null $name
 	 */
 	public function __construct(
 		public string $symbol,
-		public string $name,
+		public ?string $name = null,
 	)
 	{
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, name: non-empty-string}
+	 * @return array{symbol: non-empty-string, name: non-empty-string|null}
 	 */
 	public function toArray(): array
 	{

@@ -28,7 +28,7 @@ final readonly class ActivelyTradingMapper extends Type
 		$schema = $ts->arrayShape(
 			[
 			'symbol' => $ts->nonEmptyString(),
-			'name' => $ts->nonEmptyString(),
+			'name' => $ts->optional($ts->nullable($ts->nonEmptyString())),
 		],
 			identifier: 'symbol',
 		);
