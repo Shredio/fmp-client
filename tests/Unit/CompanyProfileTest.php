@@ -115,4 +115,19 @@ final class CompanyProfileTest extends TestCase
 		))->toArray(), $profiles[0]->toArray());
 	}
 
+	public function testCompanyProfileBulkDecimalMarketCap(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/company-profile-bulk-decimal-marketcap.csv', responses: [
+			new MockResponse('', [
+				'http_code' => 400,
+			]),
+		]);
+
+		$profiles = iterator_to_array($client->companyProfileBulk());
+
+		$this->assertCount(1, $profiles);
+		$this->assertSame('GOOGL', $profiles[0]->symbol);
+		$this->assertSame(4367820508911, $profiles[0]->marketCap);
+	}
+
 }

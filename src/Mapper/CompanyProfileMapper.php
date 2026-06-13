@@ -29,7 +29,7 @@ final readonly class CompanyProfileMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'price' => $ts->optional($ts->nullable($ts->float())),
-			'marketCap' => $ts->optional($ts->nullable($ts->int())),
+			'marketCap' => $ts->optional($ts->before(CompanyProfile::castDecimalStringToInt(...), $ts->nullable($ts->int()))),
 			'beta' => $ts->optional($ts->nullable($ts->float())),
 			'lastDividend' => $ts->optional($ts->nullable($ts->float())),
 			'range' => $ts->optional($ts->nullable($ts->nonEmptyString())),
