@@ -31,7 +31,7 @@ final readonly class SharesFloatMapper extends Type
 			'date' => $ts->nullable($ts->nonEmptyString()),
 			'freeFloat' => $ts->nullable($ts->union([$ts->int(), $ts->float()])),
 			'floatShares' => $ts->nullable($ts->union([$ts->int(), $ts->float()])),
-			'outstandingShares' => $ts->int(),
+			'outstandingShares' => $ts->before(SharesFloat::castDecimalToInt(...), $ts->int()),
 			'source' => $ts->optional($ts->nullable($ts->nonEmptyString())),
 		],
 			identifier: 'symbol',

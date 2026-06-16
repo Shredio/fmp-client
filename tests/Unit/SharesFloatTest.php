@@ -55,6 +55,7 @@ final class SharesFloatTest extends TestCase
 			outstandingShares: 56823487,
 			source: 'https://example.com/source',
 		))->toArray(), $sharesFloat->toArray());
+		$this->assertSame(56823487, $sharesFloat->outstandingShares);
 	}
 
 	public function testSharesFloatEmpty(): void
