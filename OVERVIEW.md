@@ -889,6 +889,24 @@ Contains percentage growth of all cash flow statement items
 
 ---
 
+### `splits()`
+
+**Purpose:** Retrieve the full historical stock split record for a single symbol.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+
+**Return Values:** `iterable<StockSplit>`
+- `symbol` - Ticker symbol
+- `date` - Split date
+- `numerator` - Split ratio numerator
+- `denominator` - Split ratio denominator
+- `splitType` - Type of split (`stock-split`, `stock-dividend`, or `null`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/splits`
+
+---
+
 ### `splitsCalendar()`
 
 **Purpose:** Retrieve stock splits calendar for a given time period.
@@ -898,7 +916,7 @@ Contains percentage growth of all cash flow statement items
 - `to` (DateTimeImmutable) - End date
 - `logger` (LoggerInterface|null, default: null) - Optional logger
 
-**Return Values:** `iterable<SplitsCalendarItem>`
+**Return Values:** `iterable<StockSplit>`
 - `symbol` - Ticker symbol
 - `date` - Split date
 - `numerator` - Split ratio numerator
@@ -1042,7 +1060,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 ### `historicalPriceEod()`
 
-**Purpose:** Retrieve historical daily prices for a specific symbol in a given time period.
+**Purpose:** Retrieve historical daily prices for a specific symbol in a given time period. The same endpoint also serves forex pairs (e.g. `EURUSD`), which return the identical field structure.
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1091,6 +1109,27 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 **Note:** The API returns at most 5000 records per request; the client automatically issues follow-up requests to cover the entire date range.
 
 **API endpoint:** `https://financialmodelingprep.com/stable/historical-price-eod/non-split-adjusted`
+
+---
+
+### `historicalPriceEodLight()`
+
+**Purpose:** Retrieve a lightweight variant of historical daily prices (closing price and volume only) for a specific symbol in a given time period. Also works with forex pairs (e.g. `EURUSD`).
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
+
+**Return Values:** `iterable<HistoricalPriceEodLight>`
+- `symbol` - Ticker symbol
+- `date` - Date
+- `price` - Closing price
+- `volume` - Trading volume
+
+**Note:** The API returns at most 5000 records per request; the client automatically issues follow-up requests to cover the entire date range.
+
+**API endpoint:** `https://financialmodelingprep.com/stable/historical-price-eod/light`
 
 ---
 

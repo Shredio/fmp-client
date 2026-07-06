@@ -38,6 +38,7 @@ use Shredio\FmpClient\Mapper\EodQuoteMapper;
 use Shredio\FmpClient\Mapper\ExchangeMarketHoursMapper;
 use Shredio\FmpClient\Mapper\FinancialStatementSymbolMapper;
 use Shredio\FmpClient\Mapper\HistoricalChartMapper;
+use Shredio\FmpClient\Mapper\HistoricalPriceEodLightMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodNonSplitAdjustedMapper;
 use Shredio\FmpClient\Mapper\HolidayByExchangeMapper;
@@ -56,8 +57,8 @@ use Shredio\FmpClient\Mapper\RatiosTtmMapper;
 use Shredio\FmpClient\Mapper\PeersBulkMapper;
 use Shredio\FmpClient\Mapper\ScoresMapper;
 use Shredio\FmpClient\Mapper\SharesFloatMapper;
-use Shredio\FmpClient\Mapper\SplitsCalendarItemMapper;
 use Shredio\FmpClient\Mapper\StockMapper;
+use Shredio\FmpClient\Mapper\StockSplitMapper;
 use Shredio\FmpClient\Mapper\StockNewsMapper;
 use Shredio\FmpClient\Mapper\SymbolChangeMapper;
 use Shredio\FmpClient\Mapper\TreasuryRateMapper;
@@ -85,6 +86,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
+use Shredio\FmpClient\Payload\HistoricalPriceEodLight;
 use Shredio\FmpClient\Payload\HistoricalPriceEodNonSplitAdjusted;
 use Shredio\FmpClient\Payload\HolidayByExchange;
 use Shredio\FmpClient\Payload\IncomeStatement;
@@ -102,8 +104,8 @@ use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\Scores;
 use Shredio\FmpClient\Payload\SharesFloat;
-use Shredio\FmpClient\Payload\SplitsCalendarItem;
 use Shredio\FmpClient\Payload\Stock;
+use Shredio\FmpClient\Payload\StockSplit;
 use Shredio\FmpClient\Payload\StockNews;
 use Shredio\FmpClient\Payload\SymbolChange;
 use Shredio\FmpClient\Payload\TreasuryRate;
@@ -720,8 +722,24 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/splits
+	 * @return iterable<int, StockSplit>
+	 */
+	public function splits(string $symbol): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/splits', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/splits', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(StockSplit::class, new StockSplitMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/splits-calendar
-	 * @return iterable<int, SplitsCalendarItem>
+	 * @return iterable<int, StockSplit>
 	 */
 	public function splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
 	{
@@ -741,7 +759,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 			]);
 
 			foreach ($values as $item) {
-				$object = $this->map(SplitsCalendarItem::class, new SplitsCalendarItemMapper(), $item, $url);
+				$object = $this->map(StockSplit::class, new StockSplitMapper(), $item, $url);
 				if ($object !== null) {
 					$lastStringDate = $object->date;
 					$count++;
@@ -1203,6 +1221,53 @@ final readonly class SymfonyFmpClient implements FmpClient
 				$recordCount++;
 
 				$object = $this->map(HistoricalPriceEodNonSplitAdjusted::class, new HistoricalPriceEodNonSplitAdjustedMapper(), $item, $url);
+				if ($object !== null) {
+					if ($oldestDate === null || $object->date < $oldestDate) {
+						$oldestDate = $object->date;
+					}
+
+					yield $object;
+				}
+			}
+
+			if ($recordCount < self::MaxHistoricalPriceEodRecordsPerRequest || $oldestDate === null) {
+				return;
+			}
+
+			$nextTo = (new DateTimeImmutable($oldestDate))->sub(new DateInterval('P1D'));
+			if ($nextTo >= $currentTo || $nextTo < $from) {
+				return;
+			}
+
+			$currentTo = $nextTo;
+		}
+	}
+
+	/**
+	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
+	 *
+	 * @see https://financialmodelingprep.com/stable/historical-price-eod/light
+	 * @return iterable<int, HistoricalPriceEodLight>
+	 */
+	public function historicalPriceEodLight(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable
+	{
+		$currentTo = $to;
+
+		while (true) {
+			$query = [
+				'symbol' => $symbol,
+				'from' => $from->format('Y-m-d'),
+				'to' => $currentTo->format('Y-m-d'),
+			];
+			$url = $this->buildUrlWithoutApiKey('stable/historical-price-eod/light', $query);
+
+			$recordCount = 0;
+			$oldestDate = null;
+
+			foreach ($this->requestJson('stable/historical-price-eod/light', $query) as $item) {
+				$recordCount++;
+
+				$object = $this->map(HistoricalPriceEodLight::class, new HistoricalPriceEodLightMapper(), $item, $url);
 				if ($object !== null) {
 					if ($oldestDate === null || $object->date < $oldestDate) {
 						$oldestDate = $object->date;

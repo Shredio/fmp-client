@@ -34,6 +34,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
+use Shredio\FmpClient\Payload\HistoricalPriceEodLight;
 use Shredio\FmpClient\Payload\HistoricalPriceEodNonSplitAdjusted;
 use Shredio\FmpClient\Payload\HolidayByExchange;
 use Shredio\FmpClient\Payload\IncomeStatement;
@@ -51,8 +52,8 @@ use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\Scores;
 use Shredio\FmpClient\Payload\SharesFloat;
-use Shredio\FmpClient\Payload\SplitsCalendarItem;
 use Shredio\FmpClient\Payload\Stock;
+use Shredio\FmpClient\Payload\StockSplit;
 use Shredio\FmpClient\Payload\StockNews;
 use Shredio\FmpClient\Payload\SymbolChange;
 use Shredio\FmpClient\Payload\TreasuryRate;
@@ -321,7 +322,19 @@ final readonly class CacheFmpClient implements FmpClient
 	}
 
 	/**
-	 * @return iterable<int, SplitsCalendarItem>
+	 * @return iterable<int, StockSplit>
+	 */
+	public function splits(string $symbol): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->splits($symbol),
+			$symbol,
+		);
+	}
+
+	/**
+	 * @return iterable<int, StockSplit>
 	 */
 	public function splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
 	{
@@ -508,6 +521,18 @@ final readonly class CacheFmpClient implements FmpClient
 		return $this->cached(
 			__FUNCTION__,
 			fn () => $this->client->historicalPriceEodNonSplitAdjusted($symbol, $from, $to),
+			sprintf('%s.%s.%s', $symbol, $from->format('Y-m-d'), $to->format('Y-m-d')),
+		);
+	}
+
+	/**
+	 * @return iterable<int, HistoricalPriceEodLight>
+	 */
+	public function historicalPriceEodLight(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->historicalPriceEodLight($symbol, $from, $to),
 			sprintf('%s.%s.%s', $symbol, $from->format('Y-m-d'), $to->format('Y-m-d')),
 		);
 	}

@@ -1,0 +1,122 @@
+[
+  {
+    "symbol": "EURUSD",
+    "date": "2026-07-06",
+    "open": 1.14338,
+    "high": 1.14456,
+    "low": 1.14102,
+    "close": 1.14172,
+    "volume": 49574,
+    "change": -0.00166,
+    "changePercent": -0.14518358,
+    "vwap": 1.14
+  },
+  {
+    "symbol": "EURUSD",
+    "date": "2026-07-05",
+    "open": 1.14338,
+    "high": 1.14456,
+    "low": 1.14281,
+    "close": 1.14307,
+    "volume": 17671,
+    "change": -0.00031,
+    "changePercent": -0.0271126,
+    "vwap": 1.14
+  },
+  {
+    "symbol": "EURUSD",
+    "date": "2026-07-03",
+    "open": 1.1433,
+    "high": 1.14622,
+    "low": 1.14207,
+    "close": 1.14376,
+    "volume": 83579,
+    "change": 0.00046,
+    "changePercent": 0.04023441,
+    "vwap": 1.14384
+  },
+  {
+    "symbol": "EURUSD",
+    "date": "2026-07-02",
+    "open": 1.1378,
+    "high": 1.1473,
+    "low": 1.1375,
+    "close": 1.14337,
+    "volume": 156375,
+    "change": 0.00557,
+    "changePercent": 0.48954,
+    "vwap": 1.14149
+  },
+  {
+    "symbol": "EURUSD",
+    "date": "2026-07-01",
+    "open": 1.14219,
+    "high": 1.14233,
+    "low": 1.13618,
+    "close": 1.13782,
+    "volume": 126633,
+    "change": -0.00437,
+    "changePercent": -0.3826,
+    "vwap": 1.13963
+  },
+  {
+    "symbol": "EURUSD",
+    "date": "2026-06-30",
+    "open": 1.14244,
+    "high": 1.14367,
+    "low": 1.13827,
+    "close": 1.14218,
+    "volume": 114862,
+    "change": -0.00026,
+    "changePercent": -0.02275831,
+    "vwap": 1.14164
+  },
+  {
+    "symbol": "EURUSD",
+    "date": "2026-06-29",
+    "open": 1.13897,
+    "high": 1.14306,
+    "low": 1.13809,
+    "close": 1.14242,
+    "volume": 102527,
+    "change": 0.00345,
+    "changePercent": 0.30291,
+    "vwap": 1.14064
+  },
+  {
+    "symbol": "EURUSD",
+    "date": "2026-06-28",
+    "open": 1.13897,
+    "high": 1.13936,
+    "low": 1.13812,
+    "close": 1.13921,
+    "volume": 18278,
+    "change": 0.00024,
+    "changePercent": 0.02107167,
+    "vwap": 1.14
+  },
+  {
+    "symbol": "EURUSD",
+    "date": "2026-06-26",
+    "open": 1.13719,
+    "high": 1.1434,
+    "low": 1.13542,
+    "close": 1.1385,
+    "volume": 125143,
+    "change": 0.00131,
+    "changePercent": 0.1152,
+    "vwap": 1.13863
+  },
+  {
+    "symbol": "EURUSD",
+    "date": "2026-06-25",
+    "open": 1.13618,
+    "high": 1.13882,
+    "low": 1.13335,
+    "close": 1.13702,
+    "volume": 123282,
+    "change": 0.00084,
+    "changePercent": 0.07393195,
+    "vwap": 1.13634
+  }
+]

@@ -32,6 +32,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
+use Shredio\FmpClient\Payload\HistoricalPriceEodLight;
 use Shredio\FmpClient\Payload\HistoricalPriceEodNonSplitAdjusted;
 use Shredio\FmpClient\Payload\HolidayByExchange;
 use Shredio\FmpClient\Payload\IncomeStatement;
@@ -49,8 +50,8 @@ use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\Scores;
 use Shredio\FmpClient\Payload\SharesFloat;
-use Shredio\FmpClient\Payload\SplitsCalendarItem;
 use Shredio\FmpClient\Payload\Stock;
+use Shredio\FmpClient\Payload\StockSplit;
 use Shredio\FmpClient\Payload\StockNews;
 use Shredio\FmpClient\Payload\SymbolChange;
 use Shredio\FmpClient\Payload\TreasuryRate;
@@ -233,8 +234,14 @@ interface FmpClient
 	public function detailedEarningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/splits
+	 * @return iterable<int, StockSplit>
+	 */
+	public function splits(string $symbol): iterable;
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/splits-calendar
-	 * @return iterable<int, SplitsCalendarItem>
+	 * @return iterable<int, StockSplit>
 	 */
 	public function splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
@@ -359,6 +366,14 @@ interface FmpClient
 	 * @return iterable<int, HistoricalPriceEodNonSplitAdjusted>
 	 */
 	public function historicalPriceEodNonSplitAdjusted(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable;
+
+	/**
+	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
+	 *
+	 * @see https://financialmodelingprep.com/stable/historical-price-eod/light
+	 * @return iterable<int, HistoricalPriceEodLight>
+	 */
+	public function historicalPriceEodLight(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/historical-chart

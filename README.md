@@ -175,6 +175,11 @@ foreach ($fmpClient->dividendsCalendar($from, $to, $logger) as $dividend) {
     echo "{$dividend->symbol}: {$dividend->dividend} on {$dividend->date}\n";
 }
 
+// Historical stock splits for a single symbol
+foreach ($fmpClient->splits('AAPL') as $split) {
+    echo "{$split->symbol}: {$split->numerator}:{$split->denominator} on {$split->date}\n";
+}
+
 // Stock splits calendar
 foreach ($fmpClient->splitsCalendar($from, $to, $logger) as $split) {
     echo "{$split->symbol}: {$split->numerator}:{$split->denominator} on {$split->date}\n";
@@ -196,10 +201,15 @@ use Shredio\FmpClient\Enum\TimeInterval;
 $from = new DateTimeImmutable('2024-01-01');
 $to = new DateTimeImmutable('2024-01-31');
 
-// Historical end-of-day prices
+// Historical end-of-day prices (also works with forex pairs, e.g. 'EURUSD')
 // Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically
 foreach ($fmpClient->historicalPriceEod('AAPL', $from, $to) as $price) {
     echo "Date: {$price->date}, Close: ${$price->close}\n";
+}
+
+// Historical end-of-day prices, lightweight (only date, price and volume)
+foreach ($fmpClient->historicalPriceEodLight('AAPL', $from, $to) as $price) {
+    echo "Date: {$price->date}, Price: ${$price->price}\n";
 }
 
 // Historical end-of-day prices without split adjustments
@@ -313,7 +323,8 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `batchForexQuotes()` - Forex currency quotes
 
 ### Historical Data
-- `historicalPriceEod(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical prices
+- `historicalPriceEod(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical prices (also works with forex pairs)
+- `historicalPriceEodLight(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical prices, lightweight (date, price, volume only)
 - `historicalPriceEodNonSplitAdjusted(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical prices without split adjustments
 - `historicalChart(string $symbol, TimeInterval $interval, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical chart data
 
@@ -337,6 +348,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Stock splits calendar
 - `economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Economic data releases calendar
 - `dividends(string $symbol)` - Company dividend history
+- `splits(string $symbol)` - Company stock split history
 
 ### Search
 - `searchIsin(string $isin)` - Search for stocks by ISIN code

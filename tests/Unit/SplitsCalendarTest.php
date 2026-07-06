@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use DateTimeImmutable;
-use Shredio\FmpClient\Payload\SplitsCalendarItem;
+use Shredio\FmpClient\Payload\StockSplit;
 use Tests\TestCase;
 
 final class SplitsCalendarTest extends TestCase
@@ -21,7 +21,7 @@ final class SplitsCalendarTest extends TestCase
 		$this->assertNotEmpty($splits);
 		$this->assertCount(22, $splits);
 
-		$expectedFirstSplit = new SplitsCalendarItem(
+		$expectedFirstSplit = new StockSplit(
 			symbol: 'IPCALAB.BO',
 			date: '2021-01-10',
 			numerator: 2,
@@ -31,7 +31,7 @@ final class SplitsCalendarTest extends TestCase
 
 		$this->assertSame($expectedFirstSplit->toArray(), $splits[0]->toArray());
 
-		$expectedStockDividendSplit = new SplitsCalendarItem(
+		$expectedStockDividendSplit = new StockSplit(
 			symbol: '6251.TW',
 			date: '2021-01-07',
 			numerator: 223,
@@ -41,7 +41,7 @@ final class SplitsCalendarTest extends TestCase
 
 		$this->assertSame($expectedStockDividendSplit->toArray(), $splits[11]->toArray());
 
-		$expectedNullSplitTypeSplit = new SplitsCalendarItem(
+		$expectedNullSplitTypeSplit = new StockSplit(
 			symbol: '7516.TWO',
 			date: '2021-01-07',
 			numerator: 2404,
@@ -51,7 +51,7 @@ final class SplitsCalendarTest extends TestCase
 
 		$this->assertSame($expectedNullSplitTypeSplit->toArray(), $splits[16]->toArray());
 
-		$expectedLastSplit = new SplitsCalendarItem(
+		$expectedLastSplit = new StockSplit(
 			symbol: '0208.KL',
 			date: '2021-01-07',
 			numerator: 2,

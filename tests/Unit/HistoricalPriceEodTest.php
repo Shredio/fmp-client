@@ -65,6 +65,45 @@ final class HistoricalPriceEodTest extends TestCase
 		))->toArray(), $historicalPrices[5]->toArray());
 	}
 
+	public function testHistoricalPriceEodForexPair(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/historical-price-eod-eurusd.json');
+
+		$historicalPrices = iterator_to_array($client->historicalPriceEod(
+			'EURUSD',
+			new DateTimeImmutable('2026-06-25'),
+			new DateTimeImmutable('2026-07-06')
+		));
+
+		$this->assertCount(10, $historicalPrices);
+
+		$this->assertSame((new HistoricalPriceEod(
+			symbol: 'EURUSD',
+			date: '2026-07-06',
+			open: 1.14338,
+			high: 1.14456,
+			low: 1.14102,
+			close: 1.14172,
+			volume: 49574,
+			change: -0.00166,
+			changePercent: -0.14518358,
+			vwap: 1.14,
+		))->toArray(), $historicalPrices[0]->toArray());
+
+		$this->assertSame((new HistoricalPriceEod(
+			symbol: 'EURUSD',
+			date: '2026-06-25',
+			open: 1.13618,
+			high: 1.13882,
+			low: 1.13335,
+			close: 1.13702,
+			volume: 123282,
+			change: 0.00084,
+			changePercent: 0.07393195,
+			vwap: 1.13634,
+		))->toArray(), $historicalPrices[9]->toArray());
+	}
+
 	public function testHistoricalPriceEodWithNullChangePercent(): void
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/historical-price-eod-gdstu.json');

@@ -5,7 +5,7 @@ namespace Shredio\FmpClient\Payload;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 
 #[CompileObjectMapper(identifier: 'symbol')]
-final readonly class SplitsCalendarItem
+final readonly class StockSplit
 {
 
 	/**

@@ -1,0 +1,860 @@
+[
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-27",
+    "price": 2.26,
+    "volume": 735090780
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-26",
+    "price": 2.28,
+    "volume": 898630208
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-25",
+    "price": 2.21,
+    "volume": 589283660
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-24",
+    "price": 2.19,
+    "volume": 722988944
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-21",
+    "price": 2.17,
+    "volume": 892081788
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-20",
+    "price": 2.16,
+    "volume": 1972512820
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-19",
+    "price": 1.93,
+    "volume": 1403749816
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-18",
+    "price": 1.89,
+    "volume": 1001161383
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-17",
+    "price": 1.87,
+    "volume": 1024655424
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-14",
+    "price": 1.81,
+    "volume": 993036800
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-13",
+    "price": 1.87,
+    "volume": 1249906912
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-12",
+    "price": 1.89,
+    "volume": 927329200
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-11",
+    "price": 1.99,
+    "volume": 825357944
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-10",
+    "price": 1.96,
+    "volume": 531200848
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-07",
+    "price": 1.98,
+    "volume": 799386908
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-06",
+    "price": 1.99,
+    "volume": 633365112
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-05",
+    "price": 2.04,
+    "volume": 518846339
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-07-03",
+    "price": 2.07,
+    "volume": 194772896
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-30",
+    "price": 2.05,
+    "volume": 740633444
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-29",
+    "price": 2.11,
+    "volume": 875251304
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-28",
+    "price": 2,
+    "volume": 851068240
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-27",
+    "price": 2.05,
+    "volume": 550631524
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-26",
+    "price": 2.11,
+    "volume": 466536000
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-23",
+    "price": 2.1,
+    "volume": 660203600
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-22",
+    "price": 2.13,
+    "volume": 967439940
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-21",
+    "price": 2.07,
+    "volume": 863971100
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-20",
+    "price": 2.05,
+    "volume": 673024800
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-19",
+    "price": 2.04,
+    "volume": 721670032
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-16",
+    "price": 2.06,
+    "volume": 838298884
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-15",
+    "price": 2.12,
+    "volume": 1190539684
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-14",
+    "price": 2.06,
+    "volume": 878402988
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-13",
+    "price": 2.08,
+    "volume": 1080943096
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-12",
+    "price": 2.04,
+    "volume": 717983436
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-09",
+    "price": 2.12,
+    "volume": 775959620
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-08",
+    "price": 2.17,
+    "volume": 1397519476
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-07",
+    "price": 2.09,
+    "volume": 750790956
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-06",
+    "price": 2.13,
+    "volume": 726133460
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-05",
+    "price": 2.14,
+    "volume": 605915676
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-02",
+    "price": 2.2,
+    "volume": 685908844
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-06-01",
+    "price": 2.22,
+    "volume": 942734059
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-31",
+    "price": 2.13,
+    "volume": 1281150464
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-30",
+    "price": 2.19,
+    "volume": 563510192
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-26",
+    "price": 2.27,
+    "volume": 433015196
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-25",
+    "price": 2.3,
+    "volume": 463773420
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-24",
+    "price": 2.26,
+    "volume": 916243348
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-23",
+    "price": 2.26,
+    "volume": 694794484
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-22",
+    "price": 2.26,
+    "volume": 719063116
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-19",
+    "price": 2.3,
+    "volume": 986205336
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-18",
+    "price": 2.26,
+    "volume": 658695504
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-17",
+    "price": 2.33,
+    "volume": 754353008
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-16",
+    "price": 2.32,
+    "volume": 937185128
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-15",
+    "price": 2.42,
+    "volume": 529790096
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-12",
+    "price": 2.42,
+    "volume": 641951488
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-11",
+    "price": 2.43,
+    "volume": 812904428
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-10",
+    "price": 2.52,
+    "volume": 467486056
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-09",
+    "price": 2.54,
+    "volume": 531718736
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-08",
+    "price": 2.57,
+    "volume": 594934288
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-05",
+    "price": 2.57,
+    "volume": 563966704
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-04",
+    "price": 2.54,
+    "volume": 860484764
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-03",
+    "price": 2.54,
+    "volume": 687294956
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-02",
+    "price": 2.56,
+    "volume": 771957632
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-05-01",
+    "price": 2.49,
+    "volume": 750594732
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-28",
+    "price": 2.51,
+    "volume": 760156856
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-27",
+    "price": 2.48,
+    "volume": 846019276
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-26",
+    "price": 2.43,
+    "volume": 710961028
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-25",
+    "price": 2.36,
+    "volume": 529097040
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-24",
+    "price": 2.35,
+    "volume": 707146752
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-21",
+    "price": 2.39,
+    "volume": 789220884
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-20",
+    "price": 2.42,
+    "volume": 1667396288
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-19",
+    "price": 2.34,
+    "volume": 1092039172
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-18",
+    "price": 2.36,
+    "volume": 795048920
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-17",
+    "price": 2.31,
+    "volume": 722317840
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-13",
+    "price": 2.37,
+    "volume": 734907996
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-12",
+    "price": 2.38,
+    "volume": 740434532
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-11",
+    "price": 2.43,
+    "volume": 939501736
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-10",
+    "price": 2.45,
+    "volume": 904056392
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-07",
+    "price": 2.49,
+    "volume": 1545384712
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-06",
+    "price": 2.54,
+    "volume": 2664090664
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-05",
+    "price": 2.4,
+    "volume": 2234944760
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-04",
+    "price": 2.18,
+    "volume": 932250404
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-04-03",
+    "price": 2.24,
+    "volume": 816204400
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-31",
+    "price": 2.24,
+    "volume": 816057456
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-30",
+    "price": 2.24,
+    "volume": 1391012268
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-29",
+    "price": 2.23,
+    "volume": 2347494568
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-28",
+    "price": 2.1,
+    "volume": 1370438296
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-27",
+    "price": 2.13,
+    "volume": 1108848148
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-24",
+    "price": 2.14,
+    "volume": 1072222319
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-23",
+    "price": 2.15,
+    "volume": 1429538068
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-22",
+    "price": 2.2,
+    "volume": 1346442048
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-21",
+    "price": 2.21,
+    "volume": 1345366400
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-20",
+    "price": 2.29,
+    "volume": 605577884
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-17",
+    "price": 2.31,
+    "volume": 813356908
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-16",
+    "price": 2.3,
+    "volume": 749967532
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-15",
+    "price": 2.37,
+    "volume": 892303996
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-14",
+    "price": 2.4,
+    "volume": 642424576
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-13",
+    "price": 2.35,
+    "volume": 861415260
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-10",
+    "price": 2.26,
+    "volume": 1043397072
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-09",
+    "price": 2.28,
+    "volume": 800268576
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-08",
+    "price": 2.34,
+    "volume": 653452556
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-07",
+    "price": 2.37,
+    "volume": 873009512
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-06",
+    "price": 2.34,
+    "volume": 913305360
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-03",
+    "price": 2.42,
+    "volume": 737815520
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-02",
+    "price": 2.49,
+    "volume": 625585584
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-03-01",
+    "price": 2.47,
+    "volume": 763879288
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-28",
+    "price": 2.45,
+    "volume": 1267496304
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-27",
+    "price": 2.54,
+    "volume": 791377556
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-24",
+    "price": 2.55,
+    "volume": 534784404
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-23",
+    "price": 2.56,
+    "volume": 857507800
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-22",
+    "price": 2.55,
+    "volume": 978504207
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-21",
+    "price": 2.47,
+    "volume": 779768072
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-17",
+    "price": 2.51,
+    "volume": 575999200
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-16",
+    "price": 2.52,
+    "volume": 953943480
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-15",
+    "price": 2.47,
+    "volume": 1160041608
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-14",
+    "price": 2.42,
+    "volume": 1161115464
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-13",
+    "price": 2.31,
+    "volume": 883632496
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-10",
+    "price": 2.4,
+    "volume": 1760477600
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-09",
+    "price": 2.32,
+    "volume": 1150195004
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-08",
+    "price": 2.46,
+    "volume": 953266552
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-07",
+    "price": 2.41,
+    "volume": 1389235052
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-06",
+    "price": 2.4,
+    "volume": 1652235508
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-03",
+    "price": 2.57,
+    "volume": 692163380
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-02",
+    "price": 2.57,
+    "volume": 707594304
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-02-01",
+    "price": 2.69,
+    "volume": 521343496
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-31",
+    "price": 2.7,
+    "volume": 913543696
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-30",
+    "price": 2.68,
+    "volume": 1398402484
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-27",
+    "price": 2.57,
+    "volume": 954389687
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-26",
+    "price": 2.58,
+    "volume": 1182397724
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-25",
+    "price": 2.65,
+    "volume": 1276080892
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-24",
+    "price": 2.72,
+    "volume": 1142648436
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-23",
+    "price": 2.77,
+    "volume": 1059771488
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-20",
+    "price": 2.72,
+    "volume": 1138540720
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-19",
+    "price": 2.82,
+    "volume": 1696401632
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-18",
+    "price": 2.95,
+    "volume": 1213119356
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-17",
+    "price": 3.03,
+    "volume": 836861700
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-13",
+    "price": 3.06,
+    "volume": 776614152
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-12",
+    "price": 3.01,
+    "volume": 1280809600
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-11",
+    "price": 3,
+    "volume": 1494197076
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-10",
+    "price": 2.89,
+    "volume": 2280355432
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-09",
+    "price": 2.72,
+    "volume": 675445344
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-06",
+    "price": 2.72,
+    "volume": 704558208
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-05",
+    "price": 2.66,
+    "volume": 449584744
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-04",
+    "price": 2.68,
+    "volume": 620903084
+  },
+  {
+    "symbol": "AAPL",
+    "date": "2006-01-03",
+    "price": 2.67,
+    "volume": 807412836
+  }
+]
