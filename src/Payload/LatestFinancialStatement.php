@@ -23,14 +23,14 @@ final readonly class LatestFinancialStatement
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, calendarYear: int, period: Period, date: string, dateAdded: string}
+	 * @return array{symbol: non-empty-string, calendarYear: int, period: value-of<Period>, date: string, dateAdded: string}
 	 */
 	public function toArray(): array
 	{
 		return [
 			'symbol' => $this->symbol,
 			'calendarYear' => $this->calendarYear,
-			'period' => $this->period,
+			'period' => $this->period->value,
 			'date' => $this->date,
 			'dateAdded' => $this->dateAdded,
 		];

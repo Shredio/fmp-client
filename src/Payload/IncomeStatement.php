@@ -73,7 +73,7 @@ final readonly class IncomeStatement
 	 *     filingDate: string,
 	 *     acceptedDate: string,
 	 *     fiscalYear: string,
-	 *     period: string,
+	 *     period: value-of<Period>,
 	 *     revenue: float,
 	 *     costOfRevenue: float,
 	 *     grossProfit: float,

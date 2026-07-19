@@ -58,7 +58,7 @@ final readonly class CashFlowStatementGrowth
 	 *     date: string,
 	 *     symbol: non-empty-string,
 	 *     calendarYear: string,
-	 *     period: string,
+	 *     period: value-of<Period>,
 	 *     growthNetIncome: float,
 	 *     growthDepreciationAndAmortization: float,
 	 *     growthDeferredIncomeTax: float,

@@ -67,7 +67,7 @@ final readonly class BalanceSheetStatementGrowth
 	 *     date: string,
 	 *     symbol: non-empty-string,
 	 *     calendarYear: string,
-	 *     period: string,
+	 *     period: value-of<Period>,
 	 *     growthCashAndCashEquivalents: float,
 	 *     growthShortTermInvestments: float,
 	 *     growthCashAndShortTermInvestments: float,

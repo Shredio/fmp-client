@@ -92,7 +92,7 @@ final readonly class BalanceSheetStatement
 	 *     filingDate: string,
 	 *     acceptedDate: string,
 	 *     fiscalYear: string,
-	 *     period: string,
+	 *     period: value-of<Period>,
 	 *     cashAndCashEquivalents: float,
 	 *     shortTermInvestments: float,
 	 *     cashAndShortTermInvestments: float,

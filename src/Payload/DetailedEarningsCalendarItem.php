@@ -32,7 +32,7 @@ final readonly class DetailedEarningsCalendarItem
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: string, epsActual: float|null, epsEstimated: float|null, revenueActual: int|float|null, revenueEstimated: int|float|null, time: non-empty-string|null, periodEnding: non-empty-string|null, fiscalPeriod: string, fiscalYear: int, confirmed: bool, lastUpdated: string}
+	 * @return array{symbol: non-empty-string, date: string, epsActual: float|null, epsEstimated: float|null, revenueActual: int|float|null, revenueEstimated: int|float|null, time: non-empty-string|null, periodEnding: non-empty-string|null, fiscalPeriod: value-of<Period>, fiscalYear: int, confirmed: bool, lastUpdated: string}
 	 */
 	public function toArray(): array
 	{

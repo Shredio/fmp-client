@@ -50,7 +50,7 @@ final readonly class IncomeStatementGrowthBulk
 	 *     symbol: non-empty-string,
 	 *     date: string,
 	 *     calendarYear: string,
-	 *     period: string,
+	 *     period: value-of<Period>,
 	 *     growthRevenue: float,
 	 *     growthCostOfRevenue: float,
 	 *     growthGrossProfit: float,

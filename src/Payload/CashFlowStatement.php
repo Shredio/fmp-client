@@ -77,7 +77,7 @@ final readonly class CashFlowStatement
 	 *     filingDate: string,
 	 *     acceptedDate: string,
 	 *     fiscalYear: string,
-	 *     period: string,
+	 *     period: value-of<Period>,
 	 *     netIncome: float,
 	 *     depreciationAndAmortization: float,
 	 *     deferredIncomeTax: float,

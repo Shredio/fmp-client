@@ -54,7 +54,7 @@ final readonly class IncomeStatementGrowth
 	 *     date: string,
 	 *     symbol: non-empty-string,
 	 *     calendarYear: string,
-	 *     period: string,
+	 *     period: value-of<Period>,
 	 *     growthRevenue: float,
 	 *     growthCostOfRevenue: float,
 	 *     growthGrossProfit: float,
