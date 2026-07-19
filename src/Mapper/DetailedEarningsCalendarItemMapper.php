@@ -6,6 +6,7 @@ namespace Shredio\FmpClient\Mapper;
 
 use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
+use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Payload\DetailedEarningsCalendarItem;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchema\Error\ErrorElement;
@@ -35,6 +36,8 @@ final readonly class DetailedEarningsCalendarItemMapper extends Type
 			'revenueEstimated' => $ts->nullable($ts->union([$ts->int(), $ts->float()])),
 			'time' => $ts->nullable($ts->nonEmptyString()),
 			'periodEnding' => $ts->nullable($ts->nonEmptyString()),
+			'fiscalPeriod' => $ts->mapper(Period::class),
+			'fiscalYear' => $ts->int(),
 			'confirmed' => $ts->bool(),
 			'lastUpdated' => $ts->string(),
 		],

@@ -2,6 +2,7 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\FmpClient\Enum\Period;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 
 #[CompileObjectMapper(identifier: 'symbol')]
@@ -22,6 +23,8 @@ final readonly class DetailedEarningsCalendarItem
 		public int|float|null $revenueEstimated,
 		public ?string $time,
 		public ?string $periodEnding,
+		public Period $fiscalPeriod,
+		public int $fiscalYear,
 		public bool $confirmed,
 		public string $lastUpdated,
 	)
@@ -29,7 +32,7 @@ final readonly class DetailedEarningsCalendarItem
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: string, epsActual: float|null, epsEstimated: float|null, revenueActual: int|float|null, revenueEstimated: int|float|null, time: non-empty-string|null, periodEnding: non-empty-string|null, confirmed: bool, lastUpdated: string}
+	 * @return array{symbol: non-empty-string, date: string, epsActual: float|null, epsEstimated: float|null, revenueActual: int|float|null, revenueEstimated: int|float|null, time: non-empty-string|null, periodEnding: non-empty-string|null, fiscalPeriod: string, fiscalYear: int, confirmed: bool, lastUpdated: string}
 	 */
 	public function toArray(): array
 	{
@@ -42,6 +45,8 @@ final readonly class DetailedEarningsCalendarItem
 			'revenueEstimated' => $this->revenueEstimated,
 			'time' => $this->time,
 			'periodEnding' => $this->periodEnding,
+			'fiscalPeriod' => $this->fiscalPeriod->value,
+			'fiscalYear' => $this->fiscalYear,
 			'confirmed' => $this->confirmed,
 			'lastUpdated' => $this->lastUpdated,
 		];

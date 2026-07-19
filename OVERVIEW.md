@@ -866,7 +866,7 @@ Contains percentage growth of all cash flow statement items
 
 ### `detailedEarningsCalendar()`
 
-**Purpose:** Retrieve the earnings announcement calendar with the additional report-time fields exposed by passing `includeReportTimes=true` to the stable earnings calendar endpoint. Compared to `earningsCalendar()`, each item additionally carries the announcement `time` window (`bmo` = before market open, `amc` = after market close, or `null` when unspecified), the `periodEnding` of the fiscal period being reported, and a `confirmed` flag. Requests are automatically paginated over the date range.
+**Purpose:** Retrieve the earnings announcement calendar with the additional report-time fields exposed by passing `includeReportTimes=true` to the stable earnings calendar endpoint. Compared to `earningsCalendar()`, each item additionally carries the announcement `time` window (`bmo` = before market open, `amc` = after market close, or `null` when unspecified), the `periodEnding` of the fiscal period being reported, the `fiscalPeriod` and `fiscalYear` being reported, and a `confirmed` flag. Requests are automatically paginated over the date range.
 
 **Parameters:**
 - `from` (DateTimeImmutable) - Start date
@@ -882,6 +882,8 @@ Contains percentage growth of all cash flow statement items
 - `revenueEstimated` - Estimated revenue (nullable)
 - `time` - Announcement time window: `bmo` (before market open), `amc` (after market close), or `null` when unspecified
 - `periodEnding` - End date of the fiscal period being reported in `Y-m-d` format (nullable)
+- `fiscalPeriod` - Fiscal quarter being reported as a `Period` enum (`Q1`, `Q2`, `Q3`, `Q4`)
+- `fiscalYear` - Fiscal year being reported as an integer
 - `confirmed` - Whether the announcement date is confirmed
 - `lastUpdated` - Last update date
 

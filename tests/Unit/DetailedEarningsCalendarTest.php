@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use DateTimeImmutable;
+use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Payload\DetailedEarningsCalendarItem;
 use Tests\TestCase;
 
@@ -18,52 +19,58 @@ final class DetailedEarningsCalendarTest extends TestCase
 			$items[] = $item;
 		}
 
-		$this->assertCount(120, $items);
+		$this->assertCount(115, $items);
 
 		$expectedNullTimeItem = new DetailedEarningsCalendarItem(
-			symbol: '1766.T',
+			symbol: '7378.T',
 			date: '2026-06-12',
-			epsActual: null,
+			epsActual: 34.61,
 			epsEstimated: null,
-			revenueActual: null,
-			revenueEstimated: 103250000000,
+			revenueActual: 1889000000,
+			revenueEstimated: null,
 			time: null,
-			periodEnding: '2025-04-30',
-			confirmed: false,
-			lastUpdated: '2026-06-11',
+			periodEnding: '2026-04-30',
+			fiscalPeriod: Period::Q2,
+			fiscalYear: 2026,
+			confirmed: true,
+			lastUpdated: '2026-07-19',
 		);
 
 		$this->assertSame($expectedNullTimeItem->toArray(), $items[0]->toArray());
 
-		$expectedAmcItem = new DetailedEarningsCalendarItem(
-			symbol: 'CBLU.V',
-			date: '2026-06-12',
-			epsActual: null,
-			epsEstimated: null,
-			revenueActual: null,
-			revenueEstimated: null,
-			time: 'amc',
-			periodEnding: '2026-03-31',
-			confirmed: true,
-			lastUpdated: '2026-06-11',
-		);
-
-		$this->assertSame($expectedAmcItem->toArray(), $items[19]->toArray());
-
 		$expectedBmoItem = new DetailedEarningsCalendarItem(
-			symbol: 'JFIN',
+			symbol: 'JVA',
 			date: '2026-06-12',
-			epsActual: null,
-			epsEstimated: 0.1707,
-			revenueActual: null,
-			revenueEstimated: 53395030,
+			epsActual: 0.05,
+			epsEstimated: 0.08,
+			revenueActual: 22126160,
+			revenueEstimated: 24600000,
 			time: 'bmo',
-			periodEnding: '2026-03-31',
+			periodEnding: '2026-04-30',
+			fiscalPeriod: Period::Q2,
+			fiscalYear: 2026,
 			confirmed: true,
-			lastUpdated: '2026-06-11',
+			lastUpdated: '2026-07-19',
 		);
 
-		$this->assertSame($expectedBmoItem->toArray(), $items[20]->toArray());
+		$this->assertSame($expectedBmoItem->toArray(), $items[21]->toArray());
+
+		$expectedAmcItem = new DetailedEarningsCalendarItem(
+			symbol: '3038.T',
+			date: '2026-06-12',
+			epsActual: 48.79,
+			epsEstimated: 32.3,
+			revenueActual: 147715100000,
+			revenueEstimated: 145717600000,
+			time: 'amc',
+			periodEnding: '2026-04-30',
+			fiscalPeriod: Period::Q2,
+			fiscalYear: 2026,
+			confirmed: true,
+			lastUpdated: '2026-07-19',
+		);
+
+		$this->assertSame($expectedAmcItem->toArray(), $items[35]->toArray());
 	}
 
 }
