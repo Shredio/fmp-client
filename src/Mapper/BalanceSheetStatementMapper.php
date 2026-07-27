@@ -34,7 +34,7 @@ final readonly class BalanceSheetStatementMapper extends Type
 			'date' => $ts->nonEmptyString(),
 			'reportedCurrency' => $ts->string(),
 			'cik' => $ts->string(),
-			'filingDate' => $ts->string(),
+			'filingDate' => $ts->nullable($ts->string()),
 			'acceptedDate' => $ts->string(),
 			'fiscalYear' => $ts->string(),
 			'period' => $ts->mapper(Period::class),

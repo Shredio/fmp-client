@@ -165,7 +165,7 @@ final class BalanceSheetStatementTest extends TestCase
 			date: '2024-09-28',
 			reportedCurrency: 'USD',
 			cik: '0000320193',
-			filingDate: '2024-11-01',
+			filingDate: null,
 			acceptedDate: '2024-11-01 06:01:36',
 			fiscalYear: '2024',
 			period: Period::FY,

@@ -1,0 +1,38 @@
+[
+    {
+        "symbol": "BANCAUSD",
+        "date": "2021-05-30",
+        "open": 0.0000545371,
+        "high": 0.0000545372,
+        "low": 0.00005,
+        "close": 0.0000520641,
+        "volume": 32647,
+        "change": -0.00000247,
+        "changePercent": -4.53,
+        "vwap": 0.0001
+    },
+    {
+        "symbol": "BANCAUSD",
+        "date": "2021-05-29",
+        "open": 0.0000481555,
+        "high": 0.0000523977,
+        "low": 0.0000481555,
+        "close": 0.000049898,
+        "volume": 40912,
+        "change": 0.00000174,
+        "changePercent": 3.62,
+        "vwap": null
+    },
+    {
+        "symbol": "BANCAUSD",
+        "date": "2021-05-28",
+        "open": 0.0000545,
+        "high": 0.0000549303,
+        "low": 0.0000483079,
+        "close": 0.0000484444,
+        "volume": 31848,
+        "change": -0.00000606,
+        "changePercent": -11.11,
+        "vwap": 0.0001
+    }
+]

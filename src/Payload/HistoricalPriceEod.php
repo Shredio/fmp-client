@@ -10,6 +10,8 @@ final readonly class HistoricalPriceEod
 
 	public float $changePercent;
 
+	public float $vwap;
+
 	/**
 	 * @param non-empty-string $symbol
 	 */
@@ -23,10 +25,11 @@ final readonly class HistoricalPriceEod
 		public int $volume,
 		public float $change,
 		?float $changePercent,
-		public float $vwap,
+		?float $vwap,
 	)
 	{
 		$this->changePercent = $changePercent ?? self::deriveChangePercent($close, $change);
+		$this->vwap = $vwap ?? self::deriveVwap($open, $high, $low, $close);
 	}
 
 	/**
@@ -46,6 +49,11 @@ final readonly class HistoricalPriceEod
 			'changePercent' => $this->changePercent,
 			'vwap' => $this->vwap,
 		];
+	}
+
+	private static function deriveVwap(float $open, float $high, float $low, float $close): float
+	{
+		return ($open + $high + $low + $close) / 4;
 	}
 
 	private static function deriveChangePercent(float $close, float $change): float

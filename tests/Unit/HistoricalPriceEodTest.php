@@ -130,6 +130,34 @@ final class HistoricalPriceEodTest extends TestCase
 		))->toArray(), $historicalPrices[0]->toArray());
 	}
 
+	public function testHistoricalPriceEodWithNullVwap(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/historical-price-eod-bancausd.json');
+
+		$historicalPrices = iterator_to_array($client->historicalPriceEod(
+			'BANCAUSD',
+			new DateTimeImmutable('2021-05-28'),
+			new DateTimeImmutable('2021-05-30')
+		));
+
+		$this->assertCount(3, $historicalPrices);
+
+		$this->assertSame((new HistoricalPriceEod(
+			symbol: 'BANCAUSD',
+			date: '2021-05-29',
+			open: 0.0000481555,
+			high: 0.0000523977,
+			low: 0.0000481555,
+			close: 0.000049898,
+			volume: 40912,
+			change: 0.00000174,
+			changePercent: 3.62,
+			vwap: null,
+		))->toArray(), $historicalPrices[1]->toArray());
+
+		$this->assertSame(0.000049651675, $historicalPrices[1]->vwap);
+	}
+
 	public function testHistoricalPriceEodPaginatesWhenRangeExceedsRecordLimit(): void
 	{
 		$firstPage = MockResponse::fromFile(__DIR__ . '/fixtures/historical-price-eod-aapl-paginated-1.json');

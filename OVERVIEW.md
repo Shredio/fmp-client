@@ -474,7 +474,7 @@ This document provides a comprehensive overview of all available endpoints (meth
 - `date` - Statement date
 - `reportedCurrency` - Reporting currency
 - `cik` - CIK number
-- `filingDate` - Filing date
+- `filingDate` - Filing date (null when the API has not published it yet)
 - `acceptedDate` - Acceptance date
 - `fiscalYear` - Fiscal year
 - `period` - Period
@@ -564,7 +564,7 @@ This document provides a comprehensive overview of all available endpoints (meth
 - `date` - Statement date
 - `reportedCurrency` - Reporting currency
 - `cik` - CIK number
-- `filingDate` - Filing date
+- `filingDate` - Filing date (null when the API has not published it yet)
 - `acceptedDate` - Acceptance date
 - `fiscalYear` - Fiscal year
 - `period` - Period
@@ -632,7 +632,7 @@ This document provides a comprehensive overview of all available endpoints (meth
 - `date` - Statement date
 - `reportedCurrency` - Reporting currency
 - `cik` - CIK number
-- `filingDate` - Filing date
+- `filingDate` - Filing date (null when the API has not published it yet)
 - `acceptedDate` - Acceptance date
 - `fiscalYear` - Fiscal year
 - `period` - Period
@@ -1080,7 +1080,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `unadjustedVolume` - Unadjusted volume
 - `change` - Price change
 - `changePercent` - Percentage change (derived from `change` and previous close when the API returns null)
-- `vwap` - Volume-weighted average price
+- `vwap` - Volume-weighted average price (derived as the average of `open`, `high`, `low` and `close` when the API returns null)
 - `label` - Description
 - `changeOverTime` - Change over time
 
