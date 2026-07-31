@@ -1,0 +1,596 @@
+[
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2026,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2026-06-27",
+    "data": {
+      "Mac": 10352000000,
+      "Service": 30739000000,
+      "Wearables, Home and Accessories": 7883000000,
+      "iPad": 6191000000,
+      "iPhone": 54252000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2026,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2026-03-28",
+    "data": {
+      "Mac": 8399000000,
+      "Service": 30976000000,
+      "Wearables, Home and Accessories": 7901000000,
+      "iPad": 6914000000,
+      "iPhone": 56994000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2026,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2025-12-27",
+    "data": {
+      "Mac": 8386000000,
+      "Service": 30013000000,
+      "Wearables, Home and Accessories": 11493000000,
+      "iPad": 8595000000,
+      "iPhone": 85269000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2025,
+    "period": "Q4",
+    "reportedCurrency": "USD",
+    "date": "2025-09-27",
+    "data": {
+      "Mac": 8726000000,
+      "Service": 28750000000,
+      "Wearables, Home and Accessories": 9013000000,
+      "iPad": 6952000000,
+      "iPhone": 49025000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2025,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2025-06-28",
+    "data": {
+      "Mac": 8046000000,
+      "Service": 27423000000,
+      "Wearables, Home and Accessories": 7404000000,
+      "iPad": 6581000000,
+      "iPhone": 44582000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2025,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2025-03-29",
+    "data": {
+      "Mac": 7949000000,
+      "Service": 26645000000,
+      "Wearables, Home and Accessories": 7522000000,
+      "iPad": 6402000000,
+      "iPhone": 46841000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2025,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2024-12-28",
+    "data": {
+      "Mac": 8987000000,
+      "Service": 26340000000,
+      "Wearables, Home and Accessories": 11747000000,
+      "iPad": 8088000000,
+      "iPhone": 69138000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2024,
+    "period": "Q4",
+    "reportedCurrency": "USD",
+    "date": "2024-09-28",
+    "data": {
+      "Mac": 7744000000,
+      "Service": 24972000000,
+      "Wearables, Home and Accessories": 9042000000,
+      "iPad": 6950000000,
+      "iPhone": 46222000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2024,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2024-06-29",
+    "data": {
+      "Mac": 7009000000,
+      "Service": 24213000000,
+      "Wearables, Home and Accessories": 8097000000,
+      "iPad": 7162000000,
+      "iPhone": 39296000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2024,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2024-03-30",
+    "data": {
+      "Mac": 7451000000,
+      "Service": 23867000000,
+      "Wearables, Home and Accessories": 7913000000,
+      "iPad": 5559000000,
+      "iPhone": 45963000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2024,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2023-12-30",
+    "data": {
+      "Mac": 7780000000,
+      "Service": 23117000000,
+      "Wearables, Home and Accessories": 11953000000,
+      "iPad": 7023000000,
+      "iPhone": 69702000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2023,
+    "period": "Q4",
+    "reportedCurrency": "USD",
+    "date": "2023-09-30",
+    "data": {
+      "Mac": 7614000000,
+      "Service": 22314000000,
+      "Wearables, Home and Accessories": 9322000000,
+      "iPad": 6443000000,
+      "iPhone": 43805000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2023,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2023-07-01",
+    "data": {
+      "Mac": 6840000000,
+      "Service": 21213000000,
+      "Wearables, Home and Accessories": 8284000000,
+      "iPad": 5791000000,
+      "iPhone": 39669000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2023,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2023-04-01",
+    "data": {
+      "Mac": 7168000000,
+      "Service": 20907000000,
+      "Wearables, Home and Accessories": 8757000000,
+      "iPad": 6670000000,
+      "iPhone": 51334000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2023,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2022-12-31",
+    "data": {
+      "Mac": 7735000000,
+      "Service": 20766000000,
+      "Wearables, Home and Accessories": 13482000000,
+      "iPad": 9396000000,
+      "iPhone": 65775000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2022,
+    "period": "Q4",
+    "reportedCurrency": "USD",
+    "date": "2022-09-24",
+    "data": {
+      "Mac": 11508000000,
+      "Service": 19188000000,
+      "Wearables, Home and Accessories": 9650000000,
+      "iPad": 7174000000,
+      "iPhone": 42626000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2022,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2022-06-25",
+    "data": {
+      "Mac": 7382000000,
+      "Service": 19604000000,
+      "Wearables, Home and Accessories": 8084000000,
+      "iPad": 7224000000,
+      "iPhone": 40665000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2022,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2022-03-26",
+    "data": {
+      "Mac": 10435000000,
+      "Service": 19821000000,
+      "Wearables, Home and Accessories": 8806000000,
+      "iPad": 7646000000,
+      "iPhone": 50570000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2022,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2021-12-25",
+    "data": {
+      "Mac": 10852000000,
+      "Service": 19516000000,
+      "Wearables, Home and Accessories": 14701000000,
+      "iPad": 7248000000,
+      "iPhone": 71628000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2021,
+    "period": "Q4",
+    "reportedCurrency": "USD",
+    "date": "2021-09-25",
+    "data": {
+      "Mac": 9178000000,
+      "Service": 18277000000,
+      "Wearables, Home and Accessories": 8785000000,
+      "iPad": 8252000000,
+      "iPhone": 38868000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2021,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2021-06-26",
+    "data": {
+      "Mac": 8235000000,
+      "Service": 17486000000,
+      "Wearables, Home and Accessories": 8775000000,
+      "iPad": 7368000000,
+      "iPhone": 39570000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2021,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2021-03-27",
+    "data": {
+      "Mac": 9102000000,
+      "Service": 16901000000,
+      "Wearables, Home and Accessories": 7836000000,
+      "iPad": 7807000000,
+      "iPhone": 47938000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2021,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2020-12-26",
+    "data": {
+      "Mac": 8675000000,
+      "Service": 15761000000,
+      "Wearables, Home and Accessories": 12971000000,
+      "iPad": 8435000000,
+      "iPhone": 65597000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2020,
+    "period": "Q4",
+    "reportedCurrency": "USD",
+    "date": "2020-09-26",
+    "data": {
+      "Mac": 9032000000,
+      "Service": 14549000000,
+      "Wearables, Home and Accessories": 7876000000,
+      "iPad": 6797000000,
+      "iPhone": 26444000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2020,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2020-06-27",
+    "data": {
+      "Mac": 7079000000,
+      "Service": 13156000000,
+      "Wearables, Home and Accessories": 6450000000,
+      "iPad": 6582000000,
+      "iPhone": 26418000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2020,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2020-03-28",
+    "data": {
+      "Mac": 5351000000,
+      "Service": 13348000000,
+      "Wearables, Home and Accessories": 6284000000,
+      "iPad": 4368000000,
+      "iPhone": 28962000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2020,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2019-12-28",
+    "data": {
+      "Mac": 7160000000,
+      "Service": 12715000000,
+      "Wearables, Home and Accessories": 10010000000,
+      "iPad": 5977000000,
+      "iPhone": 55957000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2019,
+    "period": "Q4",
+    "reportedCurrency": "USD",
+    "date": "2019-09-28",
+    "data": {
+      "Mac": 6991000000,
+      "Service": 12511000000,
+      "Wearables, Home and Accessories": 6520000000,
+      "iPad": 4656000000,
+      "iPhone": 33362000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2019,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2019-06-29",
+    "data": {
+      "Mac": 5820000000,
+      "Service": 11455000000,
+      "Wearables, Home and Accessories": 5525000000,
+      "iPad": 5023000000,
+      "iPhone": 25986000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2019,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2019-03-30",
+    "data": {
+      "Mac": 5513000000,
+      "Service": 11450000000,
+      "Wearables, Home and Accessories": 5129000000,
+      "iPad": 4872000000,
+      "iPhone": 31051000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2019,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2018-12-29",
+    "data": {
+      "Mac": 7416000000,
+      "Service": 10875000000,
+      "Wearables, Home and Accessories": 7308000000,
+      "iPad": 6729000000,
+      "iPhone": 51982000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2014,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2014-06-28",
+    "data": {
+      "Retail": 4104000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2014,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2014-03-29",
+    "data": {
+      "J P": 3963000000,
+      "Retail": 5227000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2014,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2013-12-28",
+    "data": {
+      "J P": 4948000000,
+      "Retail": 6998000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2013,
+    "period": "Q4",
+    "reportedCurrency": "USD",
+    "date": "2013-09-28",
+    "data": {
+      "J P": 3341000000,
+      "Retail": 4472000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2013,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2013-06-29",
+    "data": {
+      "J P": 2543000000,
+      "Retail": 4074000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2013,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2013-03-30",
+    "data": {
+      "J P": 3135000000,
+      "Retail": 5241000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2013,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2012-12-29",
+    "data": {
+      "J P": 4443000000,
+      "Retail": 6441000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2012,
+    "period": "Q4",
+    "reportedCurrency": "USD",
+    "date": "2012-09-29",
+    "data": {
+      "J P": 2367000000,
+      "Retail": 4229000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2012,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2012-06-30",
+    "data": {
+      "J P": 2009000000,
+      "Retail": 4084000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2012,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2012-03-31",
+    "data": {
+      "J P": 2645000000,
+      "Retail": 4399000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2012,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2011-12-31",
+    "data": {
+      "J P": 3550000000,
+      "Retail": 6116000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2011,
+    "period": "Q4",
+    "reportedCurrency": "USD",
+    "date": "2011-09-24",
+    "data": {
+      "Retail": 3584000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2011,
+    "period": "Q3",
+    "reportedCurrency": "USD",
+    "date": "2011-06-25",
+    "data": {
+      "Retail": 3505000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2011,
+    "period": "Q2",
+    "reportedCurrency": "USD",
+    "date": "2011-03-26",
+    "data": {
+      "Retail": 3191000000
+    }
+  },
+  {
+    "symbol": "AAPL",
+    "fiscalYear": 2011,
+    "period": "Q1",
+    "reportedCurrency": "USD",
+    "date": "2010-12-25",
+    "data": {
+      "Retail": 3847000000
+    }
+  }
+]

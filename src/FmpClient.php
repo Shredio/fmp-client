@@ -48,6 +48,8 @@ use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
+use Shredio\FmpClient\Payload\RevenueGeographicSegmentation;
+use Shredio\FmpClient\Payload\RevenueProductSegmentation;
 use Shredio\FmpClient\Payload\Scores;
 use Shredio\FmpClient\Payload\SharesFloat;
 use Shredio\FmpClient\Payload\Stock;
@@ -320,6 +322,18 @@ interface FmpClient
 	 * @return iterable<int, CashFlowStatementGrowthBulk>
 	 */
 	public function cashFlowStatementGrowthBulk(int $year, Period $period): iterable;
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/revenue-product-segmentation
+	 * @return iterable<int, RevenueProductSegmentation>
+	 */
+	public function revenueProductSegmentation(string $symbol, PeriodQuery $period = PeriodQuery::Annual): iterable;
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/revenue-geographic-segmentation
+	 * @return iterable<int, RevenueGeographicSegmentation>
+	 */
+	public function revenueGeographicSegmentation(string $symbol, PeriodQuery $period = PeriodQuery::Annual): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/eod-bulk

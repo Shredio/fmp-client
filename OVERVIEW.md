@@ -9,6 +9,7 @@ This document provides a comprehensive overview of all available endpoints (meth
 - [Company Information](#company-information)
 - [Financial Statements](#financial-statements)
 - [Financial Statement Growth](#financial-statement-growth)
+- [Revenue Segmentation](#revenue-segmentation)
 - [Event Calendars](#event-calendars)
 - [Market Data and Quotes](#market-data-and-quotes)
 - [Financial Metrics and Ratios](#financial-metrics-and-ratios)
@@ -800,6 +801,48 @@ Contains percentage growth of all cash flow statement items
 **Return Values:** `iterable<CashFlowStatementGrowthBulk>`
 
 **API endpoint:** `https://financialmodelingprep.com/stable/cash-flow-statement-growth-bulk`
+
+---
+
+## Revenue Segmentation
+
+### `revenueProductSegmentation()`
+
+**Purpose:** Retrieve the revenue breakdown by product line for a company.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `period` (PeriodQuery, default: PeriodQuery::Annual) - Period (`annual` or `quarter`)
+
+**Return Values:** `iterable<RevenueProductSegmentation>`
+- `symbol` - Ticker symbol
+- `fiscalYear` - Fiscal year of the reported period
+- `period` - Fiscal period (`FY`, `Q1`, `Q2`, `Q3`, `Q4`)
+- `reportedCurrency` - Currency used in the filing
+- `date` - Period end date
+- `data` - Map of product line name to revenue (`array<string, float>`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/revenue-product-segmentation`
+
+---
+
+### `revenueGeographicSegmentation()`
+
+**Purpose:** Retrieve the revenue breakdown by geographic region for a company.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `period` (PeriodQuery, default: PeriodQuery::Annual) - Period (`annual` or `quarter`)
+
+**Return Values:** `iterable<RevenueGeographicSegmentation>`
+- `symbol` - Ticker symbol
+- `fiscalYear` - Fiscal year of the reported period
+- `period` - Fiscal period (`FY`, `Q1`, `Q2`, `Q3`, `Q4`)
+- `reportedCurrency` - Currency used in the filing
+- `date` - Period end date
+- `data` - Map of geographic region name to revenue (`array<string, float>`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/revenue-geographic-segmentation`
 
 ---
 

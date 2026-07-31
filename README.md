@@ -111,6 +111,15 @@ foreach ($fmpClient->incomeStatementGrowth('AAPL', limit: 5, period: PeriodQuery
     echo "Net Income Growth: {$growth->growthNetIncome}\n";
 }
 
+// Get revenue breakdown by product line
+foreach ($fmpClient->revenueProductSegmentation('AAPL') as $segmentation) {
+    echo "Fiscal Year: {$segmentation->fiscalYear}\n";
+
+    foreach ($segmentation->data as $product => $revenue) {
+        echo "  {$product}: {$revenue} {$segmentation->reportedCurrency}\n";
+    }
+}
+
 // Get dividend history
 foreach ($fmpClient->dividends('AAPL') as $dividend) {
     echo "Date: {$dividend->date}, Amount: {$dividend->dividend}\n";
@@ -314,6 +323,8 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `cashFlowStatementBulk(string $year, Period $period)` - Bulk cash flow statements
 - `cashFlowStatementGrowth(string $symbol, int|null $limit, PeriodQuery|null $period)` - Cash flow growth metrics
 - `cashFlowStatementGrowthBulk(int $year, Period $period)` - Bulk cash flow growth metrics
+- `revenueProductSegmentation(string $symbol, PeriodQuery $period)` - Revenue breakdown by product line
+- `revenueGeographicSegmentation(string $symbol, PeriodQuery $period)` - Revenue breakdown by geographic region
 - `latestFinancialStatements(int $page, int $limit)` - Latest financial statements
 
 ### Market Data & Quotes

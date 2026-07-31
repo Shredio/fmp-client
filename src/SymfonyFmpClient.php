@@ -54,6 +54,8 @@ use Shredio\FmpClient\Mapper\MarketRiskPremiumMapper;
 use Shredio\FmpClient\Mapper\PressReleaseMapper;
 use Shredio\FmpClient\Mapper\RatiosMapper;
 use Shredio\FmpClient\Mapper\RatiosTtmMapper;
+use Shredio\FmpClient\Mapper\RevenueGeographicSegmentationMapper;
+use Shredio\FmpClient\Mapper\RevenueProductSegmentationMapper;
 use Shredio\FmpClient\Mapper\PeersBulkMapper;
 use Shredio\FmpClient\Mapper\ScoresMapper;
 use Shredio\FmpClient\Mapper\SharesFloatMapper;
@@ -102,6 +104,8 @@ use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
+use Shredio\FmpClient\Payload\RevenueGeographicSegmentation;
+use Shredio\FmpClient\Payload\RevenueProductSegmentation;
 use Shredio\FmpClient\Payload\Scores;
 use Shredio\FmpClient\Payload\SharesFloat;
 use Shredio\FmpClient\Payload\Stock;
@@ -1063,6 +1067,40 @@ final readonly class SymfonyFmpClient implements FmpClient
 			);
 
 			$object = $this->map(CashFlowStatementGrowthBulk::class, new CashFlowStatementGrowthBulkMapper(), $item, $url, true);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/revenue-product-segmentation
+	 * @return iterable<int, RevenueProductSegmentation>
+	 */
+	public function revenueProductSegmentation(string $symbol, PeriodQuery $period = PeriodQuery::Annual): iterable
+	{
+		$query = ['symbol' => $symbol, 'period' => $period->value];
+		$url = $this->buildUrlWithoutApiKey('stable/revenue-product-segmentation', $query);
+
+		foreach ($this->requestJson('stable/revenue-product-segmentation', $query) as $item) {
+			$object = $this->map(RevenueProductSegmentation::class, new RevenueProductSegmentationMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/revenue-geographic-segmentation
+	 * @return iterable<int, RevenueGeographicSegmentation>
+	 */
+	public function revenueGeographicSegmentation(string $symbol, PeriodQuery $period = PeriodQuery::Annual): iterable
+	{
+		$query = ['symbol' => $symbol, 'period' => $period->value];
+		$url = $this->buildUrlWithoutApiKey('stable/revenue-geographic-segmentation', $query);
+
+		foreach ($this->requestJson('stable/revenue-geographic-segmentation', $query) as $item) {
+			$object = $this->map(RevenueGeographicSegmentation::class, new RevenueGeographicSegmentationMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}

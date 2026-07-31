@@ -50,6 +50,8 @@ use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
+use Shredio\FmpClient\Payload\RevenueGeographicSegmentation;
+use Shredio\FmpClient\Payload\RevenueProductSegmentation;
 use Shredio\FmpClient\Payload\Scores;
 use Shredio\FmpClient\Payload\SharesFloat;
 use Shredio\FmpClient\Payload\Stock;
@@ -459,6 +461,30 @@ final readonly class CacheFmpClient implements FmpClient
 	public function cashFlowStatementGrowthBulk(int $year, Period $period): iterable
 	{
 		return $this->client->cashFlowStatementGrowthBulk($year, $period);
+	}
+
+	/**
+	 * @return iterable<int, RevenueProductSegmentation>
+	 */
+	public function revenueProductSegmentation(string $symbol, PeriodQuery $period = PeriodQuery::Annual): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->revenueProductSegmentation($symbol, $period),
+			sprintf('%s.%s', $symbol, $period->value),
+		);
+	}
+
+	/**
+	 * @return iterable<int, RevenueGeographicSegmentation>
+	 */
+	public function revenueGeographicSegmentation(string $symbol, PeriodQuery $period = PeriodQuery::Annual): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->revenueGeographicSegmentation($symbol, $period),
+			sprintf('%s.%s', $symbol, $period->value),
+		);
 	}
 
 	/**
