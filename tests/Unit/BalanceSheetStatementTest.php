@@ -3,7 +3,10 @@
 namespace Tests\Unit;
 
 use Shredio\FmpClient\Enum\Period;
+use Shredio\FmpClient\Enum\PeriodQuery;
+use Shredio\FmpClient\Exception\UnexpectedResponseContentException;
 use Shredio\FmpClient\Payload\BalanceSheetStatement;
+use Tests\Mock\TestUnexpectedResponseContentExceptionHandler;
 use Tests\TestCase;
 
 final class BalanceSheetStatementTest extends TestCase
@@ -223,6 +226,49 @@ final class BalanceSheetStatementTest extends TestCase
 			totalDebt: 0,
 			netDebt: 0,
 		))->toArray(), $statements[0]->toArray());
+	}
+
+	public function testBalanceSheetStatementBulkSkipsRowWithGlitchedMagnitude(): void
+	{
+		// Real PRH row from the 2026 Q1 bulk file: FMP concatenated two adjacent figures into
+		// otherNonCurrentAssets = -2.2112000000467206e+35, a magnitude no real figure ever has.
+		$client = $this->createClient(
+			__DIR__ . '/fixtures/balance-sheet-statement-bulk-glitched.csv',
+			$handler = new TestUnexpectedResponseContentExceptionHandler(),
+		)->withStrictMode(false);
+
+		$statements = iterator_to_array($client->balanceSheetStatementBulk(2026, Period::Q1));
+
+		$this->assertSame(
+			['PRGS', 'PRHI'],
+			array_map(static fn (BalanceSheetStatement $statement): string => $statement->symbol, $statements),
+		);
+		$this->assertCount(1, $handler->messages);
+		$this->assertStringContainsString('otherNonCurrentAssets', $handler->messages[0]);
+	}
+
+	public function testBalanceSheetStatementBulkGlitchedMagnitudeThrowsInStrictMode(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/balance-sheet-statement-bulk-glitched.csv');
+
+		$this->expectException(UnexpectedResponseContentException::class);
+		iterator_to_array($client->balanceSheetStatementBulk(2026, Period::Q1));
+	}
+
+	public function testBalanceSheetStatementSkipsStatementWithGlitchedMagnitude(): void
+	{
+		// The same glitch through the per-symbol JSON endpoint: the value arrives as a native float there.
+		$client = $this->createClient(
+			__DIR__ . '/fixtures/balance-sheet-statement-glitched.json',
+			$handler = new TestUnexpectedResponseContentExceptionHandler(),
+		)->withStrictMode(false);
+
+		$statements = iterator_to_array($client->balanceSheetStatement('PRH', 2, PeriodQuery::Quarter));
+
+		$this->assertCount(1, $statements);
+		$this->assertSame('2026-06-30', $statements[0]->date);
+		$this->assertCount(1, $handler->messages);
+		$this->assertStringContainsString('otherNonCurrentAssets', $handler->messages[0]);
 	}
 
 	public function testBalanceSheetStatementBulkWithNanValues(): void

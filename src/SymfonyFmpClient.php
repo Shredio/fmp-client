@@ -11,6 +11,7 @@ use SensitiveParameter;
 use Shredio\FmpClient\Calendar\FmpCalendarPaginator;
 use Shredio\FmpClient\Config\HttpClientRetryConfiguration;
 use Shredio\FmpClient\Converter\LenientAndEmptyNumberConverter;
+use Shredio\FmpClient\Converter\RepresentableNumberConverter;
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Enum\PeriodQuery;
 use Shredio\FmpClient\Enum\TimeInterval;
@@ -559,8 +560,10 @@ final readonly class SymfonyFmpClient implements FmpClient
 			['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value],
 		);
 
+		$config = $this->createJsonTypeConfigForStatements();
+
 		foreach ($this->requestJson('stable/balance-sheet-statement', ['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value]) as $item) {
-			$object = $this->map(BalanceSheetStatement::class, new BalanceSheetStatementMapper(), $item, $url);
+			$object = $this->map(BalanceSheetStatement::class, new BalanceSheetStatementMapper(), $item, $url, config: $config);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -835,8 +838,10 @@ final readonly class SymfonyFmpClient implements FmpClient
 			['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value],
 		);
 
+		$config = $this->createJsonTypeConfigForStatements();
+
 		foreach ($this->requestJson('stable/income-statement', ['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value]) as $item) {
-			$object = $this->map(IncomeStatement::class, new IncomeStatementMapper(), $item, $url);
+			$object = $this->map(IncomeStatement::class, new IncomeStatementMapper(), $item, $url, config: $config);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -872,8 +877,10 @@ final readonly class SymfonyFmpClient implements FmpClient
 			['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value],
 		);
 
+		$config = $this->createJsonTypeConfigForStatements();
+
 		foreach ($this->requestJson('stable/cash-flow-statement', ['symbol' => $symbol, 'limit' => $limit, 'period' => $period->value]) as $item) {
-			$object = $this->map(CashFlowStatement::class, new CashFlowStatementMapper(), $item, $url);
+			$object = $this->map(CashFlowStatement::class, new CashFlowStatementMapper(), $item, $url, config: $config);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -1593,13 +1600,32 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		return new TypeConfig(new ConfigurableConversionStrategy(
 			new LenientStringConverter(),
-			new LenientAndEmptyNumberConverter(new LenientNumberConverter()),
+			new RepresentableNumberConverter(new LenientAndEmptyNumberConverter(new LenientNumberConverter())),
 			new LenientBoolConverter(),
 			new LenientNullConverter(),
 			new LenientArrayConverter(),
 			new LenientObjectSupervisor(),
 		), options: [
 			SourceFormat::class => new SourceFormat('csv'),
+		]);
+	}
+
+	/**
+	 * The statement figures are money amounts, where a magnitude beyond a signed 64-bit integer is always a
+	 * glitched row (see RepresentableNumberConverter) - unlike e.g. cryptocurrency supplies, which reach such
+	 * magnitudes legitimately, so the guard must not live in the shared JSON config.
+	 */
+	private function createJsonTypeConfigForStatements(): TypeConfig
+	{
+		return new TypeConfig(new ConfigurableConversionStrategy(
+			new StrictStringConverter(),
+			new RepresentableNumberConverter(new JsonNumberConverter()),
+			new StrictBoolConverter(),
+			new LenientNullConverter(),
+			new LenientArrayConverter(),
+			new LenientObjectSupervisor(),
+		), options: [
+			SourceFormat::class => new SourceFormat('json'),
 		]);
 	}
 
