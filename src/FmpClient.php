@@ -23,13 +23,18 @@ use Shredio\FmpClient\Payload\CashFlowStatementGrowthBulk;
 use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
+use Shredio\FmpClient\Payload\DiscountedCashFlow;
 use Shredio\FmpClient\Payload\DetailedEarningsCalendarItem;
 use Shredio\FmpClient\Payload\Dividend;
+use Shredio\FmpClient\Payload\EarningCallTranscript;
+use Shredio\FmpClient\Payload\EarningCallTranscriptDate;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
+use Shredio\FmpClient\Payload\Grade;
+use Shredio\FmpClient\Payload\GradesConsensus;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
 use Shredio\FmpClient\Payload\HistoricalPriceEodLight;
@@ -39,6 +44,7 @@ use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
 use Shredio\FmpClient\Payload\Index;
+use Shredio\FmpClient\Payload\InsiderTrade;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
@@ -46,11 +52,14 @@ use Shredio\FmpClient\Payload\LatestFinancialStatement;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
+use Shredio\FmpClient\Payload\PriceTargetConsensus;
+use Shredio\FmpClient\Payload\Quote;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\RevenueGeographicSegmentation;
 use Shredio\FmpClient\Payload\RevenueProductSegmentation;
 use Shredio\FmpClient\Payload\Scores;
+use Shredio\FmpClient\Payload\SenateTrade;
 use Shredio\FmpClient\Payload\SharesFloat;
 use Shredio\FmpClient\Payload\Stock;
 use Shredio\FmpClient\Payload\StockSplit;
@@ -236,6 +245,16 @@ interface FmpClient
 	public function detailedEarningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
 	/**
+	 * Returns both upcoming and historical earnings reports for a single symbol, ordered from the newest to the oldest.
+	 * Upcoming reports have null actual values.
+	 *
+	 * @see https://financialmodelingprep.com/stable/earnings
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, EarningsCalendarItem>
+	 */
+	public function earnings(string $symbol, ?int $limit = null): iterable;
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/splits
 	 * @return iterable<int, StockSplit>
 	 */
@@ -273,6 +292,15 @@ interface FmpClient
 	 * @return iterable<int, IncomeStatement>
 	 */
 	public function incomeStatementBulk(int $year, Period $period = Period::FY): iterable;
+
+	/**
+	 * Returns a historical series of trailing twelve months income statements, ordered from the newest to the oldest.
+	 *
+	 * @see https://financialmodelingprep.com/stable/income-statement-ttm
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, IncomeStatement>
+	 */
+	public function incomeStatementTtm(string $symbol, ?int $limit = null): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/cash-flow-statement
@@ -366,6 +394,11 @@ interface FmpClient
 	public function batchForexQuotes(): iterable;
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/quote
+	 */
+	public function quote(string $symbol): ?Quote;
+
+	/**
 	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
 	 *
 	 * @see https://financialmodelingprep.com/stable/historical-price-eod/full
@@ -448,6 +481,67 @@ interface FmpClient
 	 * @return iterable<int, PeersBulk>
 	 */
 	public function peersBulk(): iterable;
+
+	/**
+	 * Analyst price targets aggregated across all covering analysts. Only available for symbols with analyst coverage.
+	 *
+	 * @see https://financialmodelingprep.com/stable/price-target-consensus
+	 */
+	public function priceTargetConsensus(string $symbol): ?PriceTargetConsensus;
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/discounted-cash-flow
+	 */
+	public function discountedCashFlow(string $symbol): ?DiscountedCashFlow;
+
+	/**
+	 * Number of analysts per rating bucket together with the resulting consensus rating.
+	 *
+	 * @see https://financialmodelingprep.com/stable/grades-consensus
+	 */
+	public function gradesConsensus(string $symbol): ?GradesConsensus;
+
+	/**
+	 * Individual rating actions (upgrade, downgrade, maintain) ordered from the newest to the oldest.
+	 *
+	 * @see https://financialmodelingprep.com/stable/grades
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, Grade>
+	 */
+	public function grades(string $symbol, ?int $limit = null): iterable;
+
+	/**
+	 * Insider transactions reported to the SEC on forms 3, 4 and 5, ordered from the newest to the oldest.
+	 *
+	 * @see https://financialmodelingprep.com/stable/insider-trading/search
+	 * @param int<0, max> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, InsiderTrade>
+	 */
+	public function insiderTrades(string $symbol, int $page = 0, ?int $limit = null): iterable;
+
+	/**
+	 * Trades disclosed by U.S. senators, ordered from the newest to the oldest disclosure.
+	 *
+	 * @see https://financialmodelingprep.com/stable/senate-trades
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, SenateTrade>
+	 */
+	public function senateTrades(string $symbol, ?int $limit = null): iterable;
+
+	/**
+	 * Quarters for which an earning call transcript is available, ordered from the newest to the oldest.
+	 *
+	 * @see https://financialmodelingprep.com/stable/earning-call-transcript-dates
+	 * @return iterable<int, EarningCallTranscriptDate>
+	 */
+	public function earningCallTranscriptDates(string $symbol): iterable;
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/earning-call-transcript
+	 * @param int<1, 4> $quarter
+	 */
+	public function earningCallTranscript(string $symbol, int $year, int $quarter): ?EarningCallTranscript;
 
 	/**
 	 * @template T

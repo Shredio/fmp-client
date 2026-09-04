@@ -101,6 +101,40 @@ final class CacheFmpClientTest extends TestCase
 		$this->assertTrue($cache->has('fmp-client.companyProfile.AAPL'), 'Cache should have the key after first request');
 	}
 
+	public function testQuoteIsCachedPerSymbol(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/quote-aapl.json'),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+
+		// First request
+		$quote = $client->quote('AAPL');
+
+		$this->assertNotNull($quote);
+		$this->assertSame(328.21, $quote->price);
+		$this->assertTrue($cache->has('fmp-client.quote.AAPL'), 'Cache should have the key after first request');
+
+		// Second request is served from the cache, the mock client has no response left
+		$this->assertSame($quote->toArray(), $client->quote('AAPL')?->toArray());
+	}
+
+	public function testGradesAreCachedPerSymbolAndLimit(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/grades-consensus-aapl.json'),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+
+		$consensus = $client->gradesConsensus('AAPL');
+
+		$this->assertNotNull($consensus);
+		$this->assertSame('Buy', $consensus->consensus);
+		$this->assertTrue($cache->has('fmp-client.gradesConsensus.AAPL'), 'Cache should have the key after first request');
+	}
+
 	public function testMissingNullable(): void
 	{
 		$client = new CacheFmpClient(

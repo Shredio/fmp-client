@@ -13,6 +13,9 @@ This document provides a comprehensive overview of all available endpoints (meth
 - [Event Calendars](#event-calendars)
 - [Market Data and Quotes](#market-data-and-quotes)
 - [Financial Metrics and Ratios](#financial-metrics-and-ratios)
+- [Valuation and Analyst Sentiment](#valuation-and-analyst-sentiment)
+- [Ownership and Insider Activity](#ownership-and-insider-activity)
+- [Earning Call Transcripts](#earning-call-transcripts)
 
 ---
 
@@ -619,6 +622,59 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 ---
 
+### `incomeStatementTtm()`
+
+**Purpose:** Retrieve a historical series of trailing twelve months (TTM) income statements for a specific company, ordered from the newest to the oldest. Unlike `incomeStatement()`, every record aggregates the four quarters ending on `date`, so the endpoint returns a rolling series rather than a single snapshot (AAPL currently returns 50 records reaching back to 2014).
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null) - Maximum number of records, `null` uses the API default
+
+**Return Values:** `iterable<IncomeStatement>` (same structure as `incomeStatement()`)
+- `symbol` - Ticker symbol
+- `date` - End date of the trailing twelve months period
+- `reportedCurrency` - Reporting currency
+- `cik` - CIK identifier
+- `filingDate` - Filing date
+- `acceptedDate` - Date and time the filing was accepted
+- `fiscalYear` - Fiscal year of the last included quarter
+- `period` - Fiscal period of the last included quarter (`Period` enum)
+- `revenue` - Revenue
+- `costOfRevenue` - Cost of revenue
+- `grossProfit` - Gross profit
+- `researchAndDevelopmentExpenses` - Research and development expenses
+- `generalAndAdministrativeExpenses` - General and administrative expenses
+- `sellingAndMarketingExpenses` - Selling and marketing expenses
+- `sellingGeneralAndAdministrativeExpenses` - Selling, general and administrative expenses
+- `otherExpenses` - Other expenses
+- `operatingExpenses` - Operating expenses
+- `costAndExpenses` - Total costs and expenses
+- `netInterestIncome` - Net interest income
+- `interestIncome` - Interest income
+- `interestExpense` - Interest expense
+- `depreciationAndAmortization` - Depreciation and amortization
+- `ebitda` - EBITDA
+- `ebit` - EBIT
+- `nonOperatingIncomeExcludingInterest` - Non-operating income excluding interest
+- `operatingIncome` - Operating income
+- `totalOtherIncomeExpensesNet` - Total other income and expenses, net
+- `incomeBeforeTax` - Income before tax
+- `incomeTaxExpense` - Income tax expense
+- `netIncomeFromContinuingOperations` - Net income from continuing operations
+- `netIncomeFromDiscontinuedOperations` - Net income from discontinued operations
+- `otherAdjustmentsToNetIncome` - Other adjustments to net income
+- `netIncome` - Net income
+- `netIncomeDeductions` - Net income deductions
+- `bottomLineNetIncome` - Bottom line net income
+- `eps` - Earnings per share
+- `epsDiluted` - Diluted earnings per share
+- `weightedAverageShsOut` - Weighted average shares outstanding
+- `weightedAverageShsOutDil` - Weighted average diluted shares outstanding
+
+**API endpoint:** `https://financialmodelingprep.com/stable/income-statement-ttm`
+
+---
+
 ### `cashFlowStatement()`
 
 **Purpose:** Retrieve cash flow statement for a specific company.
@@ -934,6 +990,27 @@ Contains percentage growth of all cash flow statement items
 
 ---
 
+### `earnings()`
+
+**Purpose:** Retrieve upcoming and historical earnings reports for a single company, ordered from the newest to the oldest. The first record is usually the next scheduled report with `null` actual values, the remaining records provide the beat/miss history.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null) - Maximum number of records, `null` uses the API default
+
+**Return Values:** `iterable<EarningsCalendarItem>`
+- `symbol` - Ticker symbol
+- `date` - Report date
+- `epsActual` - Reported earnings per share, `null` for upcoming reports
+- `epsEstimated` - Estimated earnings per share, `null` when no estimate is available
+- `revenueActual` - Reported revenue, `null` for upcoming reports
+- `revenueEstimated` - Estimated revenue, `null` when no estimate is available
+- `lastUpdated` - Date the record was last updated
+
+**API endpoint:** `https://financialmodelingprep.com/stable/earnings`
+
+---
+
 ### `splits()`
 
 **Purpose:** Retrieve the full historical stock split record for a single symbol.
@@ -999,6 +1076,36 @@ Contains percentage growth of all cash flow statement items
 ---
 
 ## Market Data and Quotes
+
+### `quote()`
+
+**Purpose:** Retrieve the full quote for a single symbol. Works for stocks, ETFs, indexes, forex pairs and cryptocurrencies.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+
+**Return Values:** `Quote|null` (`null` when the symbol is unknown)
+- `symbol` - Ticker symbol
+- `name` - Instrument name
+- `exchange` - Exchange code (for example NASDAQ, XETRA, FOREX, CRYPTO, INDEX)
+- `price` - Current price
+- `changePercentage` - Price change in percent
+- `change` - Absolute price change
+- `volume` - Traded volume (float for cryptocurrencies)
+- `dayLow` - Lowest price of the day
+- `dayHigh` - Highest price of the day
+- `yearHigh` - 52 week high
+- `yearLow` - 52 week low
+- `marketCap` - Market capitalization, `null` for forex pairs and 0 for indexes
+- `priceAvg50` - 50 day moving average
+- `priceAvg200` - 200 day moving average
+- `open` - Opening price
+- `previousClose` - Previous closing price
+- `timestamp` - Unix timestamp of the quote
+
+**API endpoint:** `https://financialmodelingprep.com/stable/quote`
+
+---
 
 ### `batchExchangeQuote()`
 
@@ -1390,3 +1497,183 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 **Return Values:** `iterable<RatiosTtm>` (same structure as `ratios()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/ratios-ttm-bulk`
+
+---
+
+## Valuation and Analyst Sentiment
+
+### `priceTargetConsensus()`
+
+**Purpose:** Retrieve the consensus analyst price target for a specific company. Only available for symbols with analyst coverage; foreign listings and ETFs typically return no data.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+
+**Return Values:** `PriceTargetConsensus|null` (`null` when the symbol has no analyst coverage)
+- `symbol` - Ticker symbol
+- `targetHigh` - Highest analyst price target
+- `targetLow` - Lowest analyst price target
+- `targetConsensus` - Average analyst price target
+- `targetMedian` - Median analyst price target
+
+**API endpoint:** `https://financialmodelingprep.com/stable/price-target-consensus`
+
+---
+
+### `discountedCashFlow()`
+
+**Purpose:** Retrieve the discounted cash flow valuation for a specific company together with the current stock price. Available for companies with financial statements; ETFs and indexes return no data.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+
+**Return Values:** `DiscountedCashFlow|null` (`null` when no valuation is available)
+- `symbol` - Ticker symbol
+- `date` - Valuation date
+- `dcf` - Discounted cash flow value per share
+- `stockPrice` - Current stock price (returned by the API under the `Stock Price` key)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/discounted-cash-flow`
+
+---
+
+### `gradesConsensus()`
+
+**Purpose:** Retrieve the distribution of analyst ratings for a specific company together with the resulting consensus rating.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+
+**Return Values:** `GradesConsensus|null` (`null` when the symbol has no analyst coverage)
+- `symbol` - Ticker symbol
+- `strongBuy` - Number of strong buy ratings
+- `buy` - Number of buy ratings
+- `hold` - Number of hold ratings
+- `sell` - Number of sell ratings
+- `strongSell` - Number of strong sell ratings
+- `consensus` - Resulting consensus rating (for example Buy, Hold, Sell)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/grades-consensus`
+
+---
+
+### `grades()`
+
+**Purpose:** Retrieve individual analyst rating actions for a specific company, ordered from the newest to the oldest. Without a limit the endpoint returns the full history (AAPL currently returns 1794 records), so passing a limit is recommended.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null) - Maximum number of records, `null` uses the API default
+
+**Return Values:** `iterable<Grade>`
+- `symbol` - Ticker symbol
+- `date` - Date of the rating action
+- `gradingCompany` - Name of the brokerage or research firm
+- `previousGrade` - Rating before the action
+- `newGrade` - Rating after the action
+- `action` - Type of the action (`maintain`, `upgrade`, `downgrade`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/grades`
+
+---
+
+## Ownership and Insider Activity
+
+### `insiderTrades()`
+
+**Purpose:** Retrieve insider transactions reported to the SEC on forms 3, 4 and 5 for a specific company, ordered from the newest to the oldest filing. Only available for SEC registrants, foreign listings return no data.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `page` (int) - Page number, starting at 0
+- `limit` (int|null) - Maximum number of records per page, `null` uses the API default
+
+**Return Values:** `iterable<InsiderTrade>`
+- `symbol` - Ticker symbol
+- `filingDate` - Date the form was filed
+- `transactionDate` - Date of the transaction
+- `reportingCik` - CIK of the reporting insider
+- `companyCik` - CIK of the company
+- `transactionType` - Transaction code (for example S-Sale, A-Award, M-Exempt, F-InKind, G-Gift, C-Conversion, J-Other), empty for form 3
+- `securitiesOwned` - Securities owned after the transaction
+- `reportingName` - Name of the reporting insider
+- `typeOfOwner` - Relationship to the company (for example "officer: CFO", "director")
+- `acquisitionOrDisposition` - A for acquisition, D for disposition, empty for form 3
+- `directOrIndirect` - D for direct, I for indirect ownership
+- `formType` - SEC form type (3, 4, 5)
+- `securitiesTransacted` - Number of securities transacted
+- `price` - Transaction price per security, 0 for awards and gifts
+- `securityName` - Name of the security (for example Common Stock, Restricted Stock Unit)
+- `url` - Link to the filing on the SEC website
+
+**API endpoint:** `https://financialmodelingprep.com/stable/insider-trading/search`
+
+---
+
+### `senateTrades()`
+
+**Purpose:** Retrieve trades in a specific company disclosed by U.S. senators, ordered from the newest to the oldest disclosure.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null) - Maximum number of records, `null` uses the API default
+
+**Return Values:** `iterable<SenateTrade>`
+- `symbol` - Ticker symbol
+- `senateID` - Bioguide identifier of the senator, `null` for senators no longer in office
+- `disclosureDate` - Date the transaction was disclosed
+- `transactionDate` - Date of the transaction
+- `firstName` - First name of the senator
+- `lastName` - Last name of the senator
+- `office` - Office name as reported in the disclosure
+- `district` - Two letter state code, may be empty
+- `owner` - Owner of the assets (Self, Spouse, Joint, Child), may be empty
+- `assetDescription` - Description of the traded asset
+- `assetType` - Type of the asset (for example Stock, Stock Option, ETF, Corporate Bond)
+- `type` - Type of the transaction (for example Purchase, Sale, Sale (Full), Sale (Partial))
+- `amount` - Reported value range (for example "$15,001 - $50,000")
+- `comment` - Comment from the disclosure, may be empty or "--"
+- `link` - Link to the disclosure on efdsearch.senate.gov
+- `capitalGainsOver200USD` - Whether capital gains exceeded 200 USD, returned by the API as the string "True" or "False"
+
+**API endpoint:** `https://financialmodelingprep.com/stable/senate-trades`
+
+---
+
+## Earning Call Transcripts
+
+Requires the Ultimate or Enterprise FMP plan.
+
+### `earningCallTranscriptDates()`
+
+**Purpose:** Retrieve the quarters for which an earning call transcript is available for a specific company, ordered from the newest to the oldest. Use it to find the latest available transcript before calling `earningCallTranscript()`.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+
+**Return Values:** `iterable<EarningCallTranscriptDate>`
+- `quarter` - Fiscal quarter (1-4)
+- `fiscalYear` - Fiscal year
+- `date` - Date of the earning call
+
+**API endpoint:** `https://financialmodelingprep.com/stable/earning-call-transcript-dates`
+
+---
+
+### `earningCallTranscript()`
+
+**Purpose:** Retrieve the full transcript of a single earning call.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `year` (int) - Fiscal year
+- `quarter` (int) - Fiscal quarter (1-4)
+
+**Return Values:** `EarningCallTranscript|null` (`null` when no transcript exists for the given quarter)
+- `symbol` - Ticker symbol
+- `period` - Fiscal period (`Period` enum)
+- `year` - Fiscal year
+- `date` - Date of the earning call
+- `content` - Full transcript text, prepared remarks and Q&A, speakers prefixed with their name
+
+**API endpoint:** `https://financialmodelingprep.com/stable/earning-call-transcript`

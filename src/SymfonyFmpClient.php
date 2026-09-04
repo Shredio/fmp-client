@@ -33,11 +33,16 @@ use Shredio\FmpClient\Mapper\CryptocurrencyMapper;
 use Shredio\FmpClient\Mapper\DelistedCompanyMapper;
 use Shredio\FmpClient\Mapper\DetailedEarningsCalendarItemMapper;
 use Shredio\FmpClient\Mapper\DividendMapper;
+use Shredio\FmpClient\Mapper\DiscountedCashFlowMapper;
+use Shredio\FmpClient\Mapper\EarningCallTranscriptDateMapper;
+use Shredio\FmpClient\Mapper\EarningCallTranscriptMapper;
 use Shredio\FmpClient\Mapper\EarningsCalendarItemMapper;
 use Shredio\FmpClient\Mapper\EconomicCalendarItemMapper;
 use Shredio\FmpClient\Mapper\EodQuoteMapper;
 use Shredio\FmpClient\Mapper\ExchangeMarketHoursMapper;
 use Shredio\FmpClient\Mapper\FinancialStatementSymbolMapper;
+use Shredio\FmpClient\Mapper\GradeMapper;
+use Shredio\FmpClient\Mapper\GradesConsensusMapper;
 use Shredio\FmpClient\Mapper\HistoricalChartMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodLightMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodMapper;
@@ -47,18 +52,22 @@ use Shredio\FmpClient\Mapper\IncomeStatementGrowthBulkMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementGrowthMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementMapper;
 use Shredio\FmpClient\Mapper\IndexMapper;
+use Shredio\FmpClient\Mapper\InsiderTradeMapper;
 use Shredio\FmpClient\Mapper\IsinSearchResultMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsTtmMapper;
 use Shredio\FmpClient\Mapper\LatestFinancialStatementMapper;
 use Shredio\FmpClient\Mapper\MarketRiskPremiumMapper;
 use Shredio\FmpClient\Mapper\PressReleaseMapper;
+use Shredio\FmpClient\Mapper\PriceTargetConsensusMapper;
+use Shredio\FmpClient\Mapper\QuoteMapper;
 use Shredio\FmpClient\Mapper\RatiosMapper;
 use Shredio\FmpClient\Mapper\RatiosTtmMapper;
 use Shredio\FmpClient\Mapper\RevenueGeographicSegmentationMapper;
 use Shredio\FmpClient\Mapper\RevenueProductSegmentationMapper;
 use Shredio\FmpClient\Mapper\PeersBulkMapper;
 use Shredio\FmpClient\Mapper\ScoresMapper;
+use Shredio\FmpClient\Mapper\SenateTradeMapper;
 use Shredio\FmpClient\Mapper\SharesFloatMapper;
 use Shredio\FmpClient\Mapper\StockMapper;
 use Shredio\FmpClient\Mapper\StockSplitMapper;
@@ -80,13 +89,18 @@ use Shredio\FmpClient\Payload\CashFlowStatementGrowthBulk;
 use Shredio\FmpClient\Payload\CompanyProfile;
 use Shredio\FmpClient\Payload\Cryptocurrency;
 use Shredio\FmpClient\Payload\DelistedCompany;
+use Shredio\FmpClient\Payload\DiscountedCashFlow;
 use Shredio\FmpClient\Payload\DetailedEarningsCalendarItem;
 use Shredio\FmpClient\Payload\Dividend;
+use Shredio\FmpClient\Payload\EarningCallTranscript;
+use Shredio\FmpClient\Payload\EarningCallTranscriptDate;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
 use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
+use Shredio\FmpClient\Payload\Grade;
+use Shredio\FmpClient\Payload\GradesConsensus;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
 use Shredio\FmpClient\Payload\HistoricalPriceEodLight;
@@ -96,6 +110,7 @@ use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
 use Shredio\FmpClient\Payload\Index;
+use Shredio\FmpClient\Payload\InsiderTrade;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
@@ -103,11 +118,14 @@ use Shredio\FmpClient\Payload\LatestFinancialStatement;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
+use Shredio\FmpClient\Payload\PriceTargetConsensus;
+use Shredio\FmpClient\Payload\Quote;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\RevenueGeographicSegmentation;
 use Shredio\FmpClient\Payload\RevenueProductSegmentation;
 use Shredio\FmpClient\Payload\Scores;
+use Shredio\FmpClient\Payload\SenateTrade;
 use Shredio\FmpClient\Payload\SharesFloat;
 use Shredio\FmpClient\Payload\Stock;
 use Shredio\FmpClient\Payload\StockSplit;
@@ -729,6 +747,24 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/earnings
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, EarningsCalendarItem>
+	 */
+	public function earnings(string $symbol, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/earnings', $query);
+
+		foreach ($this->requestJson('stable/earnings', $query) as $item) {
+			$object = $this->map(EarningsCalendarItem::class, new EarningsCalendarItemMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/splits
 	 * @return iterable<int, StockSplit>
 	 */
@@ -859,6 +895,26 @@ final readonly class SymfonyFmpClient implements FmpClient
 		$config = $this->createTypeConfigForStatements();
 		foreach ($this->requestCsv('stable/income-statement-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
 			$object = $this->map(IncomeStatement::class, new IncomeStatementMapper(), $item, $url, true, $config);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/income-statement-ttm
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, IncomeStatement>
+	 */
+	public function incomeStatementTtm(string $symbol, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/income-statement-ttm', $query);
+
+		$config = $this->createJsonTypeConfigForStatements();
+
+		foreach ($this->requestJson('stable/income-statement-ttm', $query) as $item) {
+			$object = $this->map(IncomeStatement::class, new IncomeStatementMapper(), $item, $url, config: $config);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -1195,6 +1251,23 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/quote
+	 */
+	public function quote(string $symbol): ?Quote
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/quote', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/quote', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(Quote::class, new QuoteMapper(), $item, $url);
+			if ($object !== null) {
+				return $object;
+			}
+		}
+
+		return null;
+	}
+
+	/**
 	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
 	 *
 	 * @see https://financialmodelingprep.com/stable/historical-price-eod/full
@@ -1523,6 +1596,147 @@ final readonly class SymfonyFmpClient implements FmpClient
 				yield $object;
 			}
 		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/price-target-consensus
+	 */
+	public function priceTargetConsensus(string $symbol): ?PriceTargetConsensus
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/price-target-consensus', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/price-target-consensus', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(PriceTargetConsensus::class, new PriceTargetConsensusMapper(), $item, $url);
+			if ($object !== null) {
+				return $object;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/discounted-cash-flow
+	 */
+	public function discountedCashFlow(string $symbol): ?DiscountedCashFlow
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/discounted-cash-flow', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/discounted-cash-flow', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(DiscountedCashFlow::class, new DiscountedCashFlowMapper(), $item, $url);
+			if ($object !== null) {
+				return $object;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/grades-consensus
+	 */
+	public function gradesConsensus(string $symbol): ?GradesConsensus
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/grades-consensus', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/grades-consensus', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(GradesConsensus::class, new GradesConsensusMapper(), $item, $url);
+			if ($object !== null) {
+				return $object;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/grades
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, Grade>
+	 */
+	public function grades(string $symbol, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/grades', $query);
+
+		foreach ($this->requestJson('stable/grades', $query) as $item) {
+			$object = $this->map(Grade::class, new GradeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/insider-trading/search
+	 * @param int<0, max> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, InsiderTrade>
+	 */
+	public function insiderTrades(string $symbol, int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/insider-trading/search', $query);
+
+		foreach ($this->requestJson('stable/insider-trading/search', $query) as $item) {
+			$object = $this->map(InsiderTrade::class, new InsiderTradeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/senate-trades
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, SenateTrade>
+	 */
+	public function senateTrades(string $symbol, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/senate-trades', $query);
+
+		foreach ($this->requestJson('stable/senate-trades', $query) as $item) {
+			$object = $this->map(SenateTrade::class, new SenateTradeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/earning-call-transcript-dates
+	 * @return iterable<int, EarningCallTranscriptDate>
+	 */
+	public function earningCallTranscriptDates(string $symbol): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/earning-call-transcript-dates', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/earning-call-transcript-dates', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(EarningCallTranscriptDate::class, new EarningCallTranscriptDateMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/earning-call-transcript
+	 * @param int<1, 4> $quarter
+	 */
+	public function earningCallTranscript(string $symbol, int $year, int $quarter): ?EarningCallTranscript
+	{
+		$query = ['symbol' => $symbol, 'year' => $year, 'quarter' => $quarter];
+		$url = $this->buildUrlWithoutApiKey('stable/earning-call-transcript', $query);
+
+		foreach ($this->requestJson('stable/earning-call-transcript', $query) as $item) {
+			$object = $this->map(EarningCallTranscript::class, new EarningCallTranscriptMapper(), $item, $url);
+			if ($object !== null) {
+				return $object;
+			}
+		}
+
+		return null;
 	}
 
 	/**

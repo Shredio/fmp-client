@@ -125,6 +125,13 @@ foreach ($fmpClient->dividends('AAPL') as $dividend) {
     echo "Date: {$dividend->date}, Amount: {$dividend->dividend}\n";
 }
 
+// Get a quote for a single symbol
+$quote = $fmpClient->quote('AAPL');
+if ($quote !== null) {
+    echo "Price: {$quote->price} ({$quote->changePercentage}%)\n";
+    echo "Market Cap: {$quote->marketCap}\n";
+}
+
 // Get shares float information
 $sharesFloat = $fmpClient->getSharesFloat('AAPL');
 if ($sharesFloat !== null) {
@@ -263,12 +270,71 @@ foreach ($fmpClient->marketRiskPremium() as $premium) {
     echo "Total Equity Risk Premium: {$premium->totalEquityRiskPremium}%\n";
 }
 
+// Trailing twelve months income statements
+foreach ($fmpClient->incomeStatementTtm('AAPL', limit: 4) as $statement) {
+    echo "Date: {$statement->date} ({$statement->period->value})\n";
+    echo "TTM Revenue: {$statement->revenue}\n";
+}
+
+// Valuation and analyst sentiment
+$priceTarget = $fmpClient->priceTargetConsensus('AAPL');
+if ($priceTarget !== null) {
+    echo "Consensus Target: {$priceTarget->targetConsensus}\n";
+}
+
+$dcf = $fmpClient->discountedCashFlow('AAPL');
+if ($dcf !== null) {
+    echo "DCF: {$dcf->dcf}, Stock Price: {$dcf->stockPrice}\n";
+}
+
+$grades = $fmpClient->gradesConsensus('AAPL');
+if ($grades !== null) {
+    echo "Consensus: {$grades->consensus} (buy: {$grades->buy}, hold: {$grades->hold}, sell: {$grades->sell})\n";
+}
+
+// Rating changes
+foreach ($fmpClient->grades('AAPL', limit: 10) as $grade) {
+    echo "{$grade->date} {$grade->gradingCompany}: {$grade->previousGrade} -> {$grade->newGrade} ({$grade->action})\n";
+}
+
 // US Treasury rates
 foreach ($fmpClient->treasuryRates() as $rate) {
     echo "Date: {$rate->date}\n";
     echo "1 Month: {$rate->month1}%, 3 Month: {$rate->month3}%\n";
     echo "1 Year: {$rate->year1}%, 10 Year: {$rate->year10}%\n";
     echo "30 Year: {$rate->year30}%\n";
+}
+```
+
+### Ownership, Congress Trades and Transcripts
+
+```php
+// Insider transactions
+foreach ($fmpClient->insiderTrades('AAPL', limit: 20) as $trade) {
+    echo "{$trade->transactionDate} {$trade->reportingName} ({$trade->typeOfOwner})\n";
+    echo "  {$trade->transactionType}: {$trade->securitiesTransacted} @ {$trade->price}\n";
+}
+
+// Trades disclosed by U.S. senators
+foreach ($fmpClient->senateTrades('AAPL', limit: 20) as $trade) {
+    echo "{$trade->transactionDate} {$trade->firstName} {$trade->lastName} ({$trade->district})\n";
+    echo "  {$trade->type}: {$trade->amount}\n";
+}
+
+// Upcoming and historical earnings reports for a single symbol
+foreach ($fmpClient->earnings('AAPL', limit: 8) as $report) {
+    echo "{$report->date}: actual {$report->epsActual}, estimated {$report->epsEstimated}\n";
+}
+
+// The latest earning call transcript
+foreach ($fmpClient->earningCallTranscriptDates('AAPL') as $date) {
+    $transcript = $fmpClient->earningCallTranscript('AAPL', $date->fiscalYear, $date->quarter);
+    if ($transcript !== null) {
+        echo "{$transcript->date} {$transcript->period->value} {$transcript->year}\n";
+        echo substr($transcript->content, 0, 200) . "\n";
+    }
+
+    break;
 }
 ```
 
@@ -317,6 +383,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `balanceSheetStatementGrowthBulk(int $year, Period $period)` - Bulk balance sheet growth metrics
 - `incomeStatement(string $symbol)` - Income statement data
 - `incomeStatementBulk(string $year, Period $period)` - Bulk income statements
+- `incomeStatementTtm(string $symbol, int|null $limit)` - Historical series of trailing twelve months income statements
 - `incomeStatementGrowth(string $symbol, int|null $limit, PeriodQuery|null $period)` - Income statement growth metrics
 - `incomeStatementGrowthBulk(int $year, Period $period)` - Bulk income statement growth metrics
 - `cashFlowStatement(string $symbol)` - Cash flow data
@@ -328,6 +395,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `latestFinancialStatements(int $page, int $limit)` - Latest financial statements
 
 ### Market Data & Quotes
+- `quote(string $symbol)` - Full quote for a single symbol (stocks, ETFs, indexes, forex, crypto)
 - `eodBulkQuotes(DateTimeImmutable $date)` - End of day bulk quotes
 - `batchExchangeQuote(string $exchange)` - Exchange quotes
 - `batchExchangeQuoteDetailed(string $exchange)` - Detailed exchange quotes
@@ -349,6 +417,10 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `financialScores(string $symbol)` - Financial scores
 - `scoresBulk()` - Bulk financial scores
 - `analystEstimates(string $symbol, string $period, int $page, int $limit)` - Analyst estimates
+- `priceTargetConsensus(string $symbol)` - Consensus analyst price target (high, low, consensus, median)
+- `discountedCashFlow(string $symbol)` - DCF valuation together with the current stock price
+- `gradesConsensus(string $symbol)` - Analyst rating distribution and the resulting consensus rating
+- `grades(string $symbol, int|null $limit)` - Individual analyst rating actions (upgrade, downgrade, maintain)
 - `marketRiskPremium()` - Market risk premium by country
 - `treasuryRates()` - US Treasury rates for various maturities
 
@@ -359,7 +431,16 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Stock splits calendar
 - `economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Economic data releases calendar
 - `dividends(string $symbol)` - Company dividend history
+- `earnings(string $symbol, int|null $limit)` - Upcoming and historical earnings reports for a single symbol
 - `splits(string $symbol)` - Company stock split history
+
+### Ownership & Insider Activity
+- `insiderTrades(string $symbol, int $page, int|null $limit)` - Insider transactions reported on SEC forms 3, 4 and 5
+- `senateTrades(string $symbol, int|null $limit)` - Trades disclosed by U.S. senators
+
+### Earning Call Transcripts
+- `earningCallTranscriptDates(string $symbol)` - Quarters with an available transcript
+- `earningCallTranscript(string $symbol, int $year, int $quarter)` - Full transcript of a single earning call
 
 ### Search
 - `searchIsin(string $isin)` - Search for stocks by ISIN code
