@@ -208,6 +208,8 @@ foreach ($fmpClient->economicCalendar($from, $to, $logger) as $event) {
 }
 ```
 
+The calendar endpoints (`earningsCalendar`, `detailedEarningsCalendar`, `dividendsCalendar`, `splitsCalendar`, `economicCalendar`) accept any window: the client walks it backwards from `to` page by page. FMP silently narrows every request to roughly the last 90 days before `to`, so an empty page is not the end of the window - the walk steps 90 days back and continues until it passes `from`. A window ending a year ahead therefore still returns everything announced in between, even when its tail holds nothing yet.
+
 ### Historical Data
 
 ```php
