@@ -7,6 +7,7 @@ namespace Shredio\FmpClient\Mapper;
 use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Payload\Quote;
+use Shredio\FmpClient\TypeSchema\MoneyAmount;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchema\Result\Failure;
 use Shredio\TypeSchema\Result\WithNotices;
@@ -39,7 +40,7 @@ final readonly class QuoteMapper extends Type
 			'dayHigh' => $ts->optional($ts->nullable($ts->float())),
 			'yearHigh' => $ts->optional($ts->nullable($ts->float())),
 			'yearLow' => $ts->optional($ts->nullable($ts->float())),
-			'marketCap' => $ts->optional($ts->nullable($ts->int())),
+			'marketCap' => $ts->optional($ts->before(MoneyAmount::roundToInt(...), $ts->nullable($ts->int()))),
 			'priceAvg50' => $ts->optional($ts->nullable($ts->float())),
 			'priceAvg200' => $ts->optional($ts->nullable($ts->float())),
 			'open' => $ts->optional($ts->nullable($ts->float())),

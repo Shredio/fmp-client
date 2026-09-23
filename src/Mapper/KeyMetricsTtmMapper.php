@@ -7,6 +7,7 @@ namespace Shredio\FmpClient\Mapper;
 use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
+use Shredio\FmpClient\TypeSchema\MoneyAmount;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchema\Result\Failure;
 use Shredio\TypeSchema\Result\WithNotices;
@@ -29,8 +30,8 @@ final readonly class KeyMetricsTtmMapper extends Type
 		$schema = $ts->arrayShape(
 			[
 			'symbol' => $ts->nonEmptyString(),
-			'marketCap' => $ts->optional($ts->nullable($ts->int())),
-			'enterpriseValue' => $ts->optional($ts->nullable($ts->int())),
+			'marketCap' => $ts->optional($ts->before(MoneyAmount::roundToInt(...), $ts->nullable($ts->int()))),
+			'enterpriseValue' => $ts->optional($ts->before(MoneyAmount::roundToInt(...), $ts->nullable($ts->int()))),
 			'evToSales' => $ts->optional($ts->nullable($ts->float())),
 			'evToOperatingCashFlow' => $ts->optional($ts->nullable($ts->float())),
 			'evToFreeCashFlow' => $ts->optional($ts->nullable($ts->float())),

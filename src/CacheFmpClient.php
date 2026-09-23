@@ -75,6 +75,12 @@ final readonly class CacheFmpClient implements FmpClient
 {
 
 	/**
+	 * Part of every cache key. Bump it whenever a cached payload changes shape: an entry serialized with the old
+	 * shape would be unserialized with the new properties uninitialized.
+	 */
+	private const int CacheKeyVersion = 2;
+
+	/**
 	 * @param int<1, max>|DateInterval|null $ttl Time to live for cached items in seconds
 	 */
 	public function __construct(
@@ -840,7 +846,7 @@ final readonly class CacheFmpClient implements FmpClient
 	 */
 	private function key(string $method, ?string $suffix = null): string
 	{
-		$key = sprintf('fmp-client.%s', $method);
+		$key = sprintf('fmp-client.v%d.%s', self::CacheKeyVersion, $method);
 		if ($suffix !== null && $suffix !== '') {
 			$key .= sprintf('.%s', $suffix);
 		}

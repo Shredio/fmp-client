@@ -2,7 +2,7 @@
 
 namespace Shredio\FmpClient\Payload;
 
-use Shredio\TypeSchema\Context\TypeContext;
+use Shredio\FmpClient\TypeSchema\MoneyAmount;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
 
@@ -38,7 +38,7 @@ final readonly class CompanyProfile
 	public function __construct(
 		public string $symbol,
 		public ?float $price = null,
-		#[CompilePropertyOptions(before: [self::class, 'castDecimalStringToInt'])]
+		#[CompilePropertyOptions(before: [MoneyAmount::class, 'roundToInt'])]
 		public ?int $marketCap = null,
 		public ?float $beta = null,
 		public ?float $lastDividend = null,
@@ -120,22 +120,6 @@ final readonly class CompanyProfile
 			'isAdr' => $this->isAdr,
 			'isFund' => $this->isFund,
 		];
-	}
-
-	/**
-	 * The CSV bulk endpoint returns marketCap as a decimal string (e.g. "4367820508911.0005"),
-	 * which the int type rejects. Round such values to the nearest integer.
-	 */
-	public static function castDecimalStringToInt(mixed $value, TypeContext $context): mixed
-	{
-		if (is_string($value) && str_contains($value, '.')) {
-			$float = filter_var($value, FILTER_VALIDATE_FLOAT);
-			if ($float !== false) {
-				return (int) $float;
-			}
-		}
-
-		return $value;
 	}
 
 }

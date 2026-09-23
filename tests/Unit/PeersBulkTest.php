@@ -32,4 +32,21 @@ final class PeersBulkTest extends TestCase
 		))->toArray(), $peers[0]->toArray());
 	}
 
+	public function testPeersBulkSkipsEmptyItems(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/peers-bulk-empty-items.csv');
+
+		$peers = iterator_to_array($client->peersBulk());
+
+		$this->assertCount(2, $peers);
+		$this->assertSame((new PeersBulk(
+			symbol: 'ALSN',
+			peers: ['GNTX', 'ADNT', 'ALV', 'FOXF', 'DAN', 'APTV', 'LKQ', 'LEA', 'MGA', 'AXL', 'VC', 'DORM', 'BWA'],
+		))->toArray(), $peers[0]->toArray());
+		$this->assertSame((new PeersBulk(
+			symbol: 'ARBG',
+			peers: ['BACA', 'ALOR', 'ALSA', 'AFTR-UN', 'AOAO', 'SAMA', 'VHAQ', 'DTOC', 'OPA', 'GENQ'],
+		))->toArray(), $peers[1]->toArray());
+	}
+
 }

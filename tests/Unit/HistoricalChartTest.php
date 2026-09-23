@@ -62,4 +62,27 @@ final class HistoricalChartTest extends TestCase
 		$this->assertSame('4hour', TimeInterval::FourHour->value);
 	}
 
+	public function testHistoricalChartWithFractionalVolume(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/historical-chart-1hour-aapl.json');
+
+		$historicalCharts = iterator_to_array($client->historicalChart(
+			'AAPL',
+			TimeInterval::OneHour,
+			new DateTimeImmutable('2026-09-16'),
+			new DateTimeImmutable('2026-09-23'),
+		));
+
+		$this->assertCount(35, $historicalCharts);
+		$this->assertSame(3292068, $historicalCharts[0]->volume);
+		$this->assertSame((new HistoricalChart(
+			date: '2026-09-22 14:30:00',
+			open: 341.02,
+			high: 341.44,
+			low: 339.89,
+			close: 340.14,
+			volume: 2711455.25282,
+		))->toArray(), $historicalCharts[1]->toArray());
+	}
+
 }

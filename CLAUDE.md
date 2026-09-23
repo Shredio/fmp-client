@@ -59,6 +59,8 @@ All payload classes in `src/Payload/` must include:
   - Include all properties with their exact types (including `|null` for nullable properties)
   - Use proper type annotations: `string`, `int`, `float`, `bool`, `string|null`, `int|null`, etc.
   - **Important**: If constructor parameters are typed as `non-empty-string`, the `toArray()` return type should also use `non-empty-string` (not just `string`)
+- **Cache compatibility**: Adding, removing or renaming a property of a payload cached by `CacheFmpClient` requires bumping `CacheFmpClient::CacheKeyVersion`, otherwise entries serialized with the old shape are unserialized with uninitialized properties
+- **Money amounts**: Integer money amounts computed by FMP (market cap, enterprise value) use `#[CompilePropertyOptions(before: [MoneyAmount::class, 'roundToInt'])]`, because they occasionally arrive with a floating-point tail
 
 When creating tests for payload classes:
 - Use `assertSame()` with `toArray()` methods for payload comparisons

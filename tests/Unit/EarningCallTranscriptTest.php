@@ -50,4 +50,19 @@ final class EarningCallTranscriptTest extends TestCase
 		$this->assertNull($client->earningCallTranscript('AAPL', 1990, 1));
 	}
 
+	public function testTranscriptDatesWithSymbol(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/earning-call-transcript-dates-googl.json');
+
+		$dates = iterator_to_array($client->earningCallTranscriptDates('GOOGL'));
+
+		$this->assertCount(84, $dates);
+		$this->assertSame((new EarningCallTranscriptDate(
+			quarter: 2,
+			fiscalYear: 2026,
+			date: '2026-07-22',
+			symbol: 'GOOGL',
+		))->toArray(), $dates[0]->toArray());
+	}
+
 }

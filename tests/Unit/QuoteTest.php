@@ -56,4 +56,33 @@ final class QuoteTest extends TestCase
 		$this->assertNull($client->quote('UNKNOWN'));
 	}
 
+	public function testQuoteWithFractionalMarketCap(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/quote-goog.json');
+
+		$quote = $client->quote('GOOG');
+
+		$this->assertNotNull($quote);
+		// marketCap is 4216133870848.9995 in the response
+		$this->assertSame((new Quote(
+			symbol: 'GOOG',
+			name: 'Alphabet Inc.',
+			exchange: 'NASDAQ',
+			price: 347.41,
+			changePercentage: -0.98612,
+			change: -3.46,
+			volume: 19629631,
+			dayLow: 345.74,
+			dayHigh: 359.98,
+			yearHigh: 404.47,
+			yearLow: 236.685,
+			marketCap: 4216133870849,
+			priceAvg50: 343.394,
+			priceAvg200: 336.35294,
+			open: 353.5,
+			previousClose: 350.87,
+			timestamp: 1790107201,
+		))->toArray(), $quote->toArray());
+	}
+
 }

@@ -7,6 +7,7 @@ namespace Shredio\FmpClient\Mapper;
 use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Payload\RatiosTtm;
+use Shredio\FmpClient\TypeSchema\MoneyAmount;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchema\Result\Failure;
 use Shredio\TypeSchema\Result\WithNotices;
@@ -49,6 +50,8 @@ final readonly class RatiosTtmMapper extends Type
 			'priceToEarningsRatio' => $ts->optional($ts->nullable($ts->float())),
 			'priceToEarningsGrowthRatio' => $ts->optional($ts->nullable($ts->float())),
 			'forwardPriceToEarningsGrowthRatio' => $ts->optional($ts->nullable($ts->float())),
+			'priceToEarningsDilutedRatio' => $ts->optional($ts->nullable($ts->float())),
+			'priceToEarningsDilutedGrowthRatio' => $ts->optional($ts->nullable($ts->float())),
 			'priceToBookRatio' => $ts->optional($ts->nullable($ts->float())),
 			'priceToSalesRatio' => $ts->optional($ts->nullable($ts->float())),
 			'priceToFreeCashFlowRatio' => $ts->optional($ts->nullable($ts->float())),
@@ -71,7 +74,7 @@ final readonly class RatiosTtmMapper extends Type
 			'dividendPayoutRatio' => $ts->optional($ts->nullable($ts->float())),
 			'dividendYield' => $ts->optional($ts->nullable($ts->float())),
 			'dividendPerShare' => $ts->optional($ts->nullable($ts->float())),
-			'enterpriseValue' => $ts->optional($ts->nullable($ts->int())),
+			'enterpriseValue' => $ts->optional($ts->before(MoneyAmount::roundToInt(...), $ts->nullable($ts->int()))),
 			'revenuePerShare' => $ts->optional($ts->nullable($ts->float())),
 			'netIncomePerShare' => $ts->optional($ts->nullable($ts->float())),
 			'interestDebtPerShare' => $ts->optional($ts->nullable($ts->float())),

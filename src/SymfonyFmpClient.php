@@ -1589,7 +1589,11 @@ final readonly class SymfonyFmpClient implements FmpClient
 		$url = $this->buildUrlWithoutApiKey('stable/peers-bulk');
 
 		foreach ($this->requestCsv('stable/peers-bulk') as $item) {
-			$item['peers'] = $item['peers'] === '' ? [] : explode(',', $item['peers']);
+			// the list occasionally contains empty items, e.g. "GNTX,,DORM" or ",BACA"
+			$item['peers'] = array_values(array_filter(
+				array_map(trim(...), explode(',', $item['peers'])),
+				static fn (string $peer): bool => $peer !== '',
+			));
 
 			$object = $this->map(PeersBulk::class, new PeersBulkMapper(), $item, $url, true);
 			if ($object !== null) {

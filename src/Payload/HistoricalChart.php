@@ -14,13 +14,13 @@ final readonly class HistoricalChart
 		public float $high,
 		public float $low,
 		public float $close,
-		public int $volume,
+		public int|float $volume, // float for cryptocurrencies and some intraday bars
 	)
 	{
 	}
 
 	/**
-	 * @return array{date: string, open: float, high: float, low: float, close: float, volume: int}
+	 * @return array{date: string, open: float, high: float, low: float, close: float, volume: int|float}
 	 */
 	public function toArray(): array
 	{

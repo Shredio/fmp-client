@@ -30,6 +30,7 @@ final readonly class EarningCallTranscriptDateMapper extends Type
 			'quarter' => $ts->intRange(1, 4),
 			'fiscalYear' => $ts->int(),
 			'date' => $ts->nonEmptyString(),
+			'symbol' => $ts->optional($ts->nullable($ts->nonEmptyString())),
 		]);
 
 		// 2. Map values

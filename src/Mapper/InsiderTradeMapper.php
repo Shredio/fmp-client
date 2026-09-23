@@ -38,7 +38,7 @@ final readonly class InsiderTradeMapper extends Type
 			'reportingName' => $ts->string(),
 			'typeOfOwner' => $ts->string(),
 			'acquisitionOrDisposition' => $ts->string(),
-			'directOrIndirect' => $ts->nonEmptyString(),
+			'directOrIndirect' => $ts->nullable($ts->nonEmptyString()),
 			'formType' => $ts->string(),
 			'securitiesTransacted' => $ts->union([$ts->int(), $ts->float()]),
 			'price' => $ts->float(),

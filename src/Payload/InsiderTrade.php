@@ -14,7 +14,7 @@ final readonly class InsiderTrade
 	 * @param non-empty-string $transactionDate
 	 * @param string $transactionType Empty for form 3 (initial statement of ownership)
 	 * @param string $acquisitionOrDisposition A for acquisition, D for disposition, empty for form 3
-	 * @param non-empty-string $directOrIndirect D for direct, I for indirect ownership
+	 * @param non-empty-string|null $directOrIndirect D for direct, I for indirect ownership, null for some filings without a transaction (e.g. form 3)
 	 */
 	public function __construct(
 		public string $symbol,
@@ -27,7 +27,7 @@ final readonly class InsiderTrade
 		public string $reportingName,
 		public string $typeOfOwner,
 		public string $acquisitionOrDisposition,
-		public string $directOrIndirect,
+		public string|null $directOrIndirect,
 		public string $formType,
 		public int|float $securitiesTransacted,
 		public float $price,
@@ -49,7 +49,7 @@ final readonly class InsiderTrade
 	 *     reportingName: string,
 	 *     typeOfOwner: string,
 	 *     acquisitionOrDisposition: string,
-	 *     directOrIndirect: non-empty-string,
+	 *     directOrIndirect: non-empty-string|null,
 	 *     formType: string,
 	 *     securitiesTransacted: int|float,
 	 *     price: float,

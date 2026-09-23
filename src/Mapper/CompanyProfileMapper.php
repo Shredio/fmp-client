@@ -7,6 +7,7 @@ namespace Shredio\FmpClient\Mapper;
 use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Payload\CompanyProfile;
+use Shredio\FmpClient\TypeSchema\MoneyAmount;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchema\Result\Failure;
 use Shredio\TypeSchema\Result\WithNotices;
@@ -30,7 +31,7 @@ final readonly class CompanyProfileMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'price' => $ts->optional($ts->nullable($ts->float())),
-			'marketCap' => $ts->optional($ts->before(CompanyProfile::castDecimalStringToInt(...), $ts->nullable($ts->int()))),
+			'marketCap' => $ts->optional($ts->before(MoneyAmount::roundToInt(...), $ts->nullable($ts->int()))),
 			'beta' => $ts->optional($ts->nullable($ts->float())),
 			'lastDividend' => $ts->optional($ts->nullable($ts->float())),
 			'range' => $ts->optional($ts->nullable($ts->nonEmptyString())),

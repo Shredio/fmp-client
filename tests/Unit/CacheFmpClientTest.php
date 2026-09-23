@@ -33,7 +33,7 @@ final class CacheFmpClientTest extends TestCase
 			delay: 'Real-time',
 		))->toArray(), $exchanges[0]->toArray());
 
-		$this->assertTrue($cache->has('fmp-client.availableExchanges'), 'Cache should have the key after first request');
+		$this->assertTrue($cache->has('fmp-client.v2.availableExchanges'), 'Cache should have the key after first request');
 
 		// Second request
 		$exchanges = iterator_to_array($client->availableExchanges());
@@ -98,7 +98,7 @@ final class CacheFmpClientTest extends TestCase
 			isFund: false,
 		))->toArray(), $profile->toArray());
 
-		$this->assertTrue($cache->has('fmp-client.companyProfile.AAPL'), 'Cache should have the key after first request');
+		$this->assertTrue($cache->has('fmp-client.v2.companyProfile.AAPL'), 'Cache should have the key after first request');
 	}
 
 	public function testQuoteIsCachedPerSymbol(): void
@@ -114,7 +114,7 @@ final class CacheFmpClientTest extends TestCase
 
 		$this->assertNotNull($quote);
 		$this->assertSame(328.21, $quote->price);
-		$this->assertTrue($cache->has('fmp-client.quote.AAPL'), 'Cache should have the key after first request');
+		$this->assertTrue($cache->has('fmp-client.v2.quote.AAPL'), 'Cache should have the key after first request');
 
 		// Second request is served from the cache, the mock client has no response left
 		$this->assertSame($quote->toArray(), $client->quote('AAPL')?->toArray());
@@ -132,7 +132,7 @@ final class CacheFmpClientTest extends TestCase
 
 		$this->assertNotNull($consensus);
 		$this->assertSame('Buy', $consensus->consensus);
-		$this->assertTrue($cache->has('fmp-client.gradesConsensus.AAPL'), 'Cache should have the key after first request');
+		$this->assertTrue($cache->has('fmp-client.v2.gradesConsensus.AAPL'), 'Cache should have the key after first request');
 	}
 
 	public function testMissingNullable(): void
@@ -148,7 +148,7 @@ final class CacheFmpClientTest extends TestCase
 
 		$this->assertNull($profile);
 
-		$this->assertTrue($cache->has('fmp-client.companyProfile.BTCUSDX'), 'Cache should have the key after first request');
+		$this->assertTrue($cache->has('fmp-client.v2.companyProfile.BTCUSDX'), 'Cache should have the key after first request');
 	}
 
 	public function testExpiration(): void
@@ -164,13 +164,13 @@ final class CacheFmpClientTest extends TestCase
 		$client->availableExchanges();
 		$client->companyProfile('AAPL');
 
-		$this->assertTrue($cache->has('fmp-client.availableExchanges'), 'Cache should have the key after first request');
-		$this->assertTrue($cache->has('fmp-client.companyProfile.AAPL'), 'Cache should have the key after first request');
+		$this->assertTrue($cache->has('fmp-client.v2.availableExchanges'), 'Cache should have the key after first request');
+		$this->assertTrue($cache->has('fmp-client.v2.companyProfile.AAPL'), 'Cache should have the key after first request');
 
 		sleep(1);
 
-		$this->assertFalse($cache->has('fmp-client.availableExchanges'), 'Cache should have expired the key after TTL');
-		$this->assertFalse($cache->has('fmp-client.companyProfile.AAPL'), 'Cache should have expired the key after TTL');
+		$this->assertFalse($cache->has('fmp-client.v2.availableExchanges'), 'Cache should have expired the key after TTL');
+		$this->assertFalse($cache->has('fmp-client.v2.companyProfile.AAPL'), 'Cache should have expired the key after TTL');
 	}
 
 }

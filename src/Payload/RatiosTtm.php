@@ -2,7 +2,9 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\FmpClient\TypeSchema\MoneyAmount;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
+use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
 
 #[CompileObjectMapper(identifier: 'symbol')]
 final readonly class RatiosTtm
@@ -33,6 +35,8 @@ final readonly class RatiosTtm
 		public float|null $priceToEarningsRatio = null,
 		public float|null $priceToEarningsGrowthRatio = null,
 		public float|null $forwardPriceToEarningsGrowthRatio = null,
+		public float|null $priceToEarningsDilutedRatio = null,
+		public float|null $priceToEarningsDilutedGrowthRatio = null,
 		public float|null $priceToBookRatio = null,
 		public float|null $priceToSalesRatio = null,
 		public float|null $priceToFreeCashFlowRatio = null,
@@ -55,6 +59,7 @@ final readonly class RatiosTtm
 		public float|null $dividendPayoutRatio = null,
 		public float|null $dividendYield = null,
 		public float|null $dividendPerShare = null,
+		#[CompilePropertyOptions(before: [MoneyAmount::class, 'roundToInt'])]
 		public int|null $enterpriseValue = null,
 		public float|null $revenuePerShare = null,
 		public float|null $netIncomePerShare = null,
@@ -77,7 +82,7 @@ final readonly class RatiosTtm
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, grossProfitMargin: float|null, ebitMargin: float|null, ebitdaMargin: float|null, operatingProfitMargin: float|null, pretaxProfitMargin: float|null, continuousOperationsProfitMargin: float|null, netProfitMargin: float|null, bottomLineProfitMargin: float|null, receivablesTurnover: float|null, payablesTurnover: float|null, inventoryTurnover: float|null, fixedAssetTurnover: float|null, assetTurnover: float|null, currentRatio: float|null, quickRatio: float|null, solvencyRatio: float|null, cashRatio: float|null, priceToEarningsRatio: float|null, priceToEarningsGrowthRatio: float|null, forwardPriceToEarningsGrowthRatio: float|null, priceToBookRatio: float|null, priceToSalesRatio: float|null, priceToFreeCashFlowRatio: float|null, priceToOperatingCashFlowRatio: float|null, debtToAssetsRatio: float|null, debtToEquityRatio: float|null, debtToCapitalRatio: float|null, longTermDebtToCapitalRatio: float|null, financialLeverageRatio: float|null, workingCapitalTurnoverRatio: float|null, operatingCashFlowRatio: float|null, operatingCashFlowSalesRatio: float|null, freeCashFlowOperatingCashFlowRatio: float|null, debtServiceCoverageRatio: float|null, interestCoverageRatio: float|null, shortTermOperatingCashFlowCoverageRatio: float|null, operatingCashFlowCoverageRatio: float|null, capitalExpenditureCoverageRatio: float|null, dividendPaidAndCapexCoverageRatio: float|null, dividendPayoutRatio: float|null, dividendYield: float|null, dividendPerShare: float|null, enterpriseValue: int|null, revenuePerShare: float|null, netIncomePerShare: float|null, interestDebtPerShare: float|null, cashPerShare: float|null, bookValuePerShare: float|null, tangibleBookValuePerShare: float|null, shareholdersEquityPerShare: float|null, operatingCashFlowPerShare: float|null, capexPerShare: float|null, freeCashFlowPerShare: float|null, netIncomePerEBT: float|null, ebtPerEbit: float|null, priceToFairValue: float|null, debtToMarketCap: float|null, effectiveTaxRate: float|null, enterpriseValueMultiple: float|null}
+	 * @return array{symbol: non-empty-string, grossProfitMargin: float|null, ebitMargin: float|null, ebitdaMargin: float|null, operatingProfitMargin: float|null, pretaxProfitMargin: float|null, continuousOperationsProfitMargin: float|null, netProfitMargin: float|null, bottomLineProfitMargin: float|null, receivablesTurnover: float|null, payablesTurnover: float|null, inventoryTurnover: float|null, fixedAssetTurnover: float|null, assetTurnover: float|null, currentRatio: float|null, quickRatio: float|null, solvencyRatio: float|null, cashRatio: float|null, priceToEarningsRatio: float|null, priceToEarningsGrowthRatio: float|null, forwardPriceToEarningsGrowthRatio: float|null, priceToEarningsDilutedRatio: float|null, priceToEarningsDilutedGrowthRatio: float|null, priceToBookRatio: float|null, priceToSalesRatio: float|null, priceToFreeCashFlowRatio: float|null, priceToOperatingCashFlowRatio: float|null, debtToAssetsRatio: float|null, debtToEquityRatio: float|null, debtToCapitalRatio: float|null, longTermDebtToCapitalRatio: float|null, financialLeverageRatio: float|null, workingCapitalTurnoverRatio: float|null, operatingCashFlowRatio: float|null, operatingCashFlowSalesRatio: float|null, freeCashFlowOperatingCashFlowRatio: float|null, debtServiceCoverageRatio: float|null, interestCoverageRatio: float|null, shortTermOperatingCashFlowCoverageRatio: float|null, operatingCashFlowCoverageRatio: float|null, capitalExpenditureCoverageRatio: float|null, dividendPaidAndCapexCoverageRatio: float|null, dividendPayoutRatio: float|null, dividendYield: float|null, dividendPerShare: float|null, enterpriseValue: int|null, revenuePerShare: float|null, netIncomePerShare: float|null, interestDebtPerShare: float|null, cashPerShare: float|null, bookValuePerShare: float|null, tangibleBookValuePerShare: float|null, shareholdersEquityPerShare: float|null, operatingCashFlowPerShare: float|null, capexPerShare: float|null, freeCashFlowPerShare: float|null, netIncomePerEBT: float|null, ebtPerEbit: float|null, priceToFairValue: float|null, debtToMarketCap: float|null, effectiveTaxRate: float|null, enterpriseValueMultiple: float|null}
 	 */
 	public function toArray(): array
 	{
@@ -103,6 +108,8 @@ final readonly class RatiosTtm
 			'priceToEarningsRatio' => $this->priceToEarningsRatio,
 			'priceToEarningsGrowthRatio' => $this->priceToEarningsGrowthRatio,
 			'forwardPriceToEarningsGrowthRatio' => $this->forwardPriceToEarningsGrowthRatio,
+			'priceToEarningsDilutedRatio' => $this->priceToEarningsDilutedRatio,
+			'priceToEarningsDilutedGrowthRatio' => $this->priceToEarningsDilutedGrowthRatio,
 			'priceToBookRatio' => $this->priceToBookRatio,
 			'priceToSalesRatio' => $this->priceToSalesRatio,
 			'priceToFreeCashFlowRatio' => $this->priceToFreeCashFlowRatio,

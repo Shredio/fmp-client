@@ -2,7 +2,9 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\FmpClient\TypeSchema\MoneyAmount;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
+use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
 
 #[CompileObjectMapper(identifier: 'symbol')]
 final readonly class KeyMetricsTtm
@@ -13,7 +15,9 @@ final readonly class KeyMetricsTtm
 	 */
 	public function __construct(
 		public string $symbol,
+		#[CompilePropertyOptions(before: [MoneyAmount::class, 'roundToInt'])]
 		public int|null $marketCap = null,
+		#[CompilePropertyOptions(before: [MoneyAmount::class, 'roundToInt'])]
 		public int|null $enterpriseValue = null,
 		public float|null $evToSales = null,
 		public float|null $evToOperatingCashFlow = null,

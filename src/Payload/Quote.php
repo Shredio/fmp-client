@@ -2,7 +2,9 @@
 
 namespace Shredio\FmpClient\Payload;
 
+use Shredio\FmpClient\TypeSchema\MoneyAmount;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
+use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
 
 #[CompileObjectMapper(identifier: 'symbol')]
 final readonly class Quote
@@ -23,6 +25,7 @@ final readonly class Quote
 		public float|null $dayHigh = null,
 		public float|null $yearHigh = null,
 		public float|null $yearLow = null,
+		#[CompilePropertyOptions(before: [MoneyAmount::class, 'roundToInt'])]
 		public int|null $marketCap = null, // null for forex pairs, 0 for indexes
 		public float|null $priceAvg50 = null,
 		public float|null $priceAvg200 = null,

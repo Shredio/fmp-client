@@ -187,4 +187,90 @@ final class KeyMetricsTest extends TestCase
 		))->toArray(), $metrics[0]->toArray());
 	}
 
+	public function testKeyMetricsTtmWithFractionalMoneyAmounts(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/key-metrics-ttm-googl.json');
+
+		$metrics = iterator_to_array($client->keyMetricsTtm('GOOGL'));
+
+		$this->assertCount(1, $metrics);
+		// marketCap is 4216133870848.9995 and enterpriseValueTTM 4272978870848.9995 in the response
+		$this->assertSame((new KeyMetricsTtm(
+			symbol: 'GOOGL',
+			marketCap: 4216133870849,
+			enterpriseValue: 4272978870849,
+			evToSales: 9.583549476409951,
+			evToOperatingCashFlow: 23.01321594640635,
+			evToFreeCashFlow: 80.20909036189063,
+			evToEBITDA: 13.177469194387905,
+			netDebtToEBITDA: 0.1753046900056744,
+			currentRatio: 2.723981254609035,
+			incomeQuality: 0.7603243176839131,
+			grahamNumber: 154.38649243656639,
+			grahamNetNet: 1.4688297259484817,
+			taxBurden: 0.816004998847191,
+			interestBurden: 0.9941765053717004,
+			workingCapital: 217413000000,
+			investedCapital: 623252000000,
+			returnOnAssets: 0.26486930887012017,
+			operatingReturnOnAssets: 0.18180185521636605,
+			returnOnTangibleAssets: 0.28560318110052046,
+			returnOnEquity: 0.5084008289969907,
+			returnOnInvestedCapital: 0.1515357148991219,
+			returnOnCapitalEmployed: 0.185703228659885,
+			earningsYield: 0.05784958071911151,
+			freeCashFlowYield: 0.012635509600000547,
+			capexToOperatingCashFlow: 0.7130846909923253,
+			capexToDepreciation: 5.246344652692476,
+			capexToRevenue: 0.296954690422683,
+			salesGeneralAndAdministrativeToRevenue: 0.12316480736364738,
+			researchAndDevelopementToRevenue: 0.1546967025967443,
+			stockBasedCompensationToRevenue: 0.06312883242947433,
+			intangiblesToTotalAssets: 0.0725967832378688,
+			averageReceivables: 66087000000,
+			averagePayables: 18555000000,
+			averageInventory: 4995500000,
+			daysOfSalesOutstanding: 56.628841400779606,
+			daysOfPayablesOutstanding: 42.410165816838635,
+			daysOfInventoryOutstanding: 20.916179616745723,
+			operatingCycle: 77.54502101752533,
+			cashConversionCycle: 35.134855200686694,
+			freeCashFlowToEquity: 123402000000,
+			freeCashFlowToFirm: 54703456762.979126,
+			tangibleAssetValue: 573547000000,
+			netCurrentAssetValue: 62021000000,
+		))->toArray(), $metrics[0]->toArray());
+	}
+
+	public function testKeyMetricsWithFractionalMoneyAmounts(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/key-metrics-tsm.json');
+
+		$metrics = iterator_to_array($client->keyMetrics('TSM', 3));
+
+		$this->assertSame([
+			[49375093288318, 47671819588318],
+			[33635305333951, 32554720433951],
+			[16546038754274, 16036868854274],
+		], array_map(
+			static fn (KeyMetrics $keyMetrics): array => [$keyMetrics->marketCap, $keyMetrics->enterpriseValue],
+			$metrics,
+		));
+	}
+
+	public function testKeyMetricsTtmBulkWithDecimalMoneyAmounts(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/key-metrics-ttm-bulk-decimal-money.csv');
+
+		$metrics = iterator_to_array($client->keyMetricsTtmBulk());
+
+		$this->assertSame([
+			['0005.HK', 347206896780, 252305896780],
+			['0013.HK', 2497579231, 2485530231],
+		], array_map(
+			static fn (KeyMetricsTtm $keyMetrics): array => [$keyMetrics->symbol, $keyMetrics->marketCap, $keyMetrics->enterpriseValue],
+			$metrics,
+		));
+	}
+
 }

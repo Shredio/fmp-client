@@ -1301,7 +1301,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `low` - Lowest price
 - `high` - Highest price
 - `close` - Closing price
-- `volume` - Trading volume
+- `volume` - Trading volume (float for cryptocurrencies and some intraday bars)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/historical-chart/{interval}`
 
@@ -1431,6 +1431,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `priceToEarningsRatio` - Price to earnings ratio (P/E)
 - `priceToEarningsGrowthRatio` - Price to earnings growth ratio (PEG)
 - `forwardPriceToEarningsGrowthRatio` - Forward price to earnings growth ratio
+- `priceToEarningsDilutedRatio` - Price to diluted earnings ratio
+- `priceToEarningsDilutedGrowthRatio` - Price to diluted earnings growth ratio
 - `priceToBookRatio` - Price to book ratio (P/B)
 - `priceToSalesRatio` - Price to sales ratio (P/S)
 - `priceToFreeCashFlowRatio` - Price to free cash flow ratio
@@ -1599,7 +1601,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `reportingName` - Name of the reporting insider
 - `typeOfOwner` - Relationship to the company (for example "officer: CFO", "director")
 - `acquisitionOrDisposition` - A for acquisition, D for disposition, empty for form 3
-- `directOrIndirect` - D for direct, I for indirect ownership
+- `directOrIndirect` - D for direct, I for indirect ownership, `null` for some filings without a transaction (e.g. form 3)
 - `formType` - SEC form type (3, 4, 5)
 - `securitiesTransacted` - Number of securities transacted
 - `price` - Transaction price per security, 0 for awards and gifts
@@ -1655,6 +1657,7 @@ Requires the Ultimate or Enterprise FMP plan.
 - `quarter` - Fiscal quarter (1-4)
 - `fiscalYear` - Fiscal year
 - `date` - Date of the earning call
+- `symbol` - Ticker symbol, returned only for some symbols (otherwise `null`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/earning-call-transcript-dates`
 

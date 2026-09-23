@@ -47,4 +47,31 @@ final class InsiderTradesTest extends TestCase
 		$this->assertSame(0.0, $trades[2]->price);
 	}
 
+	public function testInsiderTradeWithoutDirectOrIndirect(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/insider-trading-search-msft.json');
+
+		$trades = iterator_to_array($client->insiderTrades('MSFT'));
+
+		$this->assertCount(100, $trades);
+		$this->assertSame((new InsiderTrade(
+			symbol: 'MSFT',
+			filingDate: '2026-07-01',
+			transactionDate: '2026-07-01',
+			reportingCik: '0001626431',
+			companyCik: '0000789019',
+			transactionType: '',
+			securitiesOwned: 0,
+			reportingName: 'Hogan Kathleen T',
+			typeOfOwner: 'officer',
+			acquisitionOrDisposition: '',
+			directOrIndirect: null,
+			formType: '4',
+			securitiesTransacted: 0,
+			price: 0.0,
+			securityName: '',
+			url: 'https://www.sec.gov/Archives/edgar/data/789019/000078901926000137/0000789019-26-000137-index.htm',
+		))->toArray(), $trades[61]->toArray());
+	}
+
 }

@@ -32,7 +32,7 @@ final readonly class HistoricalChartMapper extends Type
 			'high' => $ts->float(),
 			'low' => $ts->float(),
 			'close' => $ts->float(),
-			'volume' => $ts->int(),
+			'volume' => $ts->union([$ts->int(), $ts->float()]),
 		]);
 
 		// 2. Map values

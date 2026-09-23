@@ -3,8 +3,9 @@
 namespace Shredio\FmpClient\Payload;
 
 use Shredio\FmpClient\Enum\Period;
-
+use Shredio\FmpClient\TypeSchema\MoneyAmount;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
+use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
 
 #[CompileObjectMapper(identifier: 'symbol')]
 final readonly class KeyMetrics
@@ -19,7 +20,9 @@ final readonly class KeyMetrics
 		public string $fiscalYear,
 		public Period $period,
 		public string $reportedCurrency,
+		#[CompilePropertyOptions(before: [MoneyAmount::class, 'roundToInt'])]
 		public int|null $marketCap = null,
+		#[CompilePropertyOptions(before: [MoneyAmount::class, 'roundToInt'])]
 		public int|null $enterpriseValue = null,
 		public float|null $evToSales = null,
 		public float|null $evToOperatingCashFlow = null,

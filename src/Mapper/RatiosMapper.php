@@ -54,6 +54,8 @@ final readonly class RatiosMapper extends Type
 			'priceToEarningsRatio' => $ts->optional($ts->nullable($ts->float())),
 			'priceToEarningsGrowthRatio' => $ts->optional($ts->nullable($ts->float())),
 			'forwardPriceToEarningsGrowthRatio' => $ts->optional($ts->nullable($ts->float())),
+			'priceToEarningsDilutedRatio' => $ts->optional($ts->nullable($ts->float())),
+			'priceToEarningsDilutedGrowthRatio' => $ts->optional($ts->nullable($ts->float())),
 			'priceToBookRatio' => $ts->optional($ts->nullable($ts->float())),
 			'priceToSalesRatio' => $ts->optional($ts->nullable($ts->float())),
 			'priceToFreeCashFlowRatio' => $ts->optional($ts->nullable($ts->float())),

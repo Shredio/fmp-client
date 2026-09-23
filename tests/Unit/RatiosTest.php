@@ -238,4 +238,172 @@ final class RatiosTest extends TestCase
 		))->toArray(), $ratios[0]->toArray());
 	}
 
+
+	public function testRatiosTtmWithDilutedRatiosAndFractionalEnterpriseValue(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/ratios-ttm-googl.json');
+
+		$ratios = iterator_to_array($client->ratiosTtm('GOOGL'));
+
+		$this->assertCount(1, $ratios);
+		// enterpriseValueTTM is 4272978870848.9995 in the response
+		$this->assertSame((new RatiosTtm(
+			symbol: 'GOOGL',
+			grossProfitMargin: 0.6089654739316297,
+			ebitMargin: 0.6751400645036849,
+			ebitdaMargin: 0.7272678338334836,
+			operatingProfitMargin: 0.3314807587930006,
+			pretaxProfitMargin: 0.6712083899646979,
+			continuousOperationsProfitMargin: 0.5477094014793682,
+			netProfitMargin: 0.5477094014793682,
+			bottomLineProfitMargin: 0.5477094014793682,
+			receivablesTurnover: 6.4454788579689195,
+			payablesTurnover: 8.606427090532135,
+			inventoryTurnover: 17.45060554499049,
+			fixedAssetTurnover: 1.3156037367293585,
+			assetTurnover: 0.483594599900432,
+			currentRatio: 2.723981254609035,
+			quickRatio: 2.644757396262023,
+			solvencyRatio: 0.9500680276941986,
+			cashRatio: 0.44334752717843806,
+			priceToEarningsRatio: 17.249751737835155,
+			priceToEarningsGrowthRatio: 0.15340304547343084,
+			forwardPriceToEarningsGrowthRatio: 0.1841207942956559,
+			priceToEarningsDilutedRatio: 17.449020592667,
+			priceToEarningsDilutedGrowthRatio: 0.15574743665888127,
+			priceToBookRatio: 6.59096132588059,
+			priceToSalesRatio: 9.456056014248674,
+			priceToFreeCashFlowRatio: 79.14203951061512,
+			priceToOperatingCashFlowRatio: 22.73531121583412,
+			debtToAssetsRatio: 0.12229726578472705,
+			debtToEquityRatio: 0.17604921309018237,
+			debtToCapitalRatio: 0.14969544737638668,
+			longTermDebtToCapitalRatio: 0.13289875379918634,
+			financialLeverageRatio: 1.439518798401199,
+			workingCapitalTurnoverRatio: 2.7868540962191153,
+			operatingCashFlowRatio: 1.4723140725234118,
+			operatingCashFlowSalesRatio: 0.4164367769688651,
+			freeCashFlowOperatingCashFlowRatio: 0.2869153090076747,
+			debtServiceCoverageRatio: 153.5653166001141,
+			interestCoverageRatio: 84.31032515687393,
+			shortTermOperatingCashFlowCoverageRatio: 0,
+			operatingCashFlowCoverageRatio: 1.6466972932704247,
+			capitalExpenditureCoverageRatio: 1.4023579704234075,
+			dividendPaidAndCapexCoverageRatio: 1.3011106828772643,
+			dividendPayoutRatio: 0.04218996335046375,
+			dividendYield: 0.00247546,
+			enterpriseValue: 4272978870849,
+			revenuePerShare: 36.69377006007736,
+			netIncomePerShare: 20.09752283762653,
+			interestDebtPerShare: 9.423833429347379,
+			cashPerShare: 19.95506542671385,
+			bookValuePerShare: 52.710065015225084,
+			tangibleBookValuePerShare: 47.20162949551477,
+			shareholdersEquityPerShare: 52.710065015225084,
+			operatingCashFlowPerShare: 15.280635338655255,
+			capexPerShare: 10.896387128631389,
+			freeCashFlowPerShare: 4.384248210023866,
+			netIncomePerEBT: 0.816004998847191,
+			ebtPerEbit: 2.0248788871146717,
+			priceToFairValue: 6.59096132588059,
+			debtToMarketCap: 0.023283179094176293,
+			effectiveTaxRate: 0.183995001152809,
+			enterpriseValueMultiple: 13.177469194387905,
+			dividendPerShare: 0.86,
+		))->toArray(), $ratios[0]->toArray());
+	}
+
+	public function testRatiosWithDilutedRatios(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/ratios-msft.json');
+
+		$ratios = iterator_to_array($client->ratios('MSFT', 2));
+
+		$this->assertCount(2, $ratios);
+		$this->assertSame((new Ratios(
+			symbol: 'MSFT',
+			date: '2026-06-30',
+			fiscalYear: '2026',
+			period: Period::FY,
+			reportedCurrency: 'USD',
+			grossProfitMargin: 0.6794409337058032,
+			ebitMargin: 0.5092379135665187,
+			ebitdaMargin: 0.6253604910815185,
+			operatingProfitMargin: 0.4678081840892722,
+			pretaxProfitMargin: 0.5000436958886689,
+			continuousOperationsProfitMargin: 0.4030538905915218,
+			netProfitMargin: 0.4030538905915218,
+			bottomLineProfitMargin: 0.4030538905915218,
+			receivablesTurnover: 4.103059003907216,
+			payablesTurnover: 2.5078743870237648,
+			inventoryTurnover: 76.1445955619184,
+			fixedAssetTurnover: 0.9839467699323653,
+			assetTurnover: 0.4375652710528814,
+			currentRatio: 1.2303272619576484,
+			quickRatio: 1.2220524211461572,
+			solvencyRatio: 0.545218346208254,
+			cashRatio: 0.12400414630534577,
+			priceToEarningsRatio: 20.723333333333333,
+			priceToEarningsGrowthRatio: 0.6602550387596896,
+			forwardPriceToEarningsGrowthRatio: 0.6602550387596896,
+			priceToEarningsDilutedRatio: 20.78105849582173,
+			priceToEarningsDilutedGrowthRatio: 0.657665053092827,
+			priceToBookRatio: 6.264120735916742,
+			priceToSalesRatio: 8.350933977018975,
+			priceToFreeCashFlowRatio: 41.368707062564376,
+			priceToOperatingCashFlowRatio: 15.148361877169487,
+			debtToAssetsRatio: 0.16984754264375454,
+			debtToEquityRatio: 0.29116655778763845,
+			debtToCapitalRatio: 0.22550658242461027,
+			longTermDebtToCapitalRatio: 0.06561777912954585,
+			financialLeverageRatio: 1.7142818392041357,
+			workingCapitalTurnoverRatio: 7.474019685128043,
+			operatingCashFlowRatio: 1.0835776691840664,
+			operatingCashFlowSalesRatio: 0.5512763719755664,
+			freeCashFlowOperatingCashFlowRatio: 0.3661792439937683,
+			debtServiceCoverageRatio: 14.28033881739697,
+			interestCoverageRatio: 50.880694854146185,
+			shortTermOperatingCashFlowCoverageRatio: 19.826053972038583,
+			operatingCashFlowCoverageRatio: 1.4202112752050915,
+			capitalExpenditureCoverageRatio: 1.57773312174423,
+			dividendPaidAndCapexCoverageRatio: 1.2847190522005998,
+			dividendPayoutRatio: 0.19772110445685576,
+			dividendYield: 0.00954291587296635,
+			dividendYieldPercentage: 0.954291587296635,
+			revenuePerShare: 44.66805761206084,
+			netIncomePerShare: 18.003634405707363,
+			interestDebtPerShare: 17.749266388477587,
+			cashPerShare: 10.343653250773993,
+			bookValuePerShare: 59.54866065419303,
+			tangibleBookValuePerShare: 40.93781128011845,
+			shareholdersEquityPerShare: 59.54866065419303,
+			operatingCashFlowPerShare: 24.624444743572486,
+			capexPerShare: 15.607484183604791,
+			freeCashFlowPerShare: 9.016960559967695,
+			netIncomePerEBT: 0.8060373401472875,
+			ebtPerEbit: 1.0689075413722244,
+			priceToFairValue: 6.264120735916742,
+			debtToMarketCap: 0.014540451963898887,
+			effectiveTaxRate: 0.19396265985271252,
+			enterpriseValueMultiple: 13.873615813491776,
+			dividendPerShare: 3.5596984789339077,
+		))->toArray(), $ratios[0]->toArray());
+		$this->assertSame(36.46700879765396, $ratios[1]->priceToEarningsDilutedRatio);
+	}
+
+	public function testRatiosTtmBulkWithDecimalEnterpriseValue(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/ratios-ttm-bulk-decimal-enterprise-value.csv');
+
+		$ratios = iterator_to_array($client->ratiosTtmBulk());
+
+		$this->assertCount(2, $ratios);
+		$this->assertSame('0005.HK', $ratios[0]->symbol);
+		$this->assertSame(252653452961, $ratios[0]->enterpriseValue);
+		$this->assertSame(14.551035568345323, $ratios[0]->priceToEarningsDilutedRatio);
+		$this->assertNull($ratios[0]->priceToEarningsDilutedGrowthRatio);
+		$this->assertSame('000585.SZ', $ratios[1]->symbol);
+		$this->assertSame(157009966, $ratios[1]->enterpriseValue);
+	}
+
 }
