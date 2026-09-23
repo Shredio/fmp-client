@@ -9,7 +9,8 @@ use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Payload\BalanceSheetStatementGrowth;
 use Shredio\TypeSchema\Context\TypeContext;
-use Shredio\TypeSchema\Error\ErrorElement;
+use Shredio\TypeSchema\Result\Failure;
+use Shredio\TypeSchema\Result\WithNotices;
 use Shredio\TypeSchema\TypeSchema;
 use Shredio\TypeSchema\Types\Type;
 
@@ -20,7 +21,7 @@ use Shredio\TypeSchema\Types\Type;
  */
 final readonly class BalanceSheetStatementGrowthMapper extends Type
 {
-	public function parse(mixed $valueToParse, TypeContext $context): ErrorElement|BalanceSheetStatementGrowth
+	public function parse(mixed $valueToParse, TypeContext $context): Failure|WithNotices|BalanceSheetStatementGrowth
 	{
 		// 0. Initialize TypeSchema
 		$ts = TypeSchema::get();
@@ -77,12 +78,20 @@ final readonly class BalanceSheetStatementGrowthMapper extends Type
 
 		// 2. Map values
 		$values = $schema->parse($valueToParse, $context);
-		if ($this->isError($values)) {
-			return $values;
+		if ($values instanceof Failure) {
+			return $this->withOwnDefinition($values, $context);
+		}
+
+		$notices = null;
+		if ($values instanceof WithNotices) {
+			$notices = $values->notices;
+			$values = $values->value;
 		}
 
 		// 3. Create a new instance
-		return new BalanceSheetStatementGrowth(...$values);
+		$obj = new BalanceSheetStatementGrowth(...$values);
+
+		return $notices === null ? $obj : new WithNotices($obj, $notices);
 	}
 
 

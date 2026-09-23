@@ -6,7 +6,7 @@ use Shredio\FmpClient\Enum\Period;
 
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 
-#[CompileObjectMapper(identifier: 'symbol', discardExtraItems: true)]
+#[CompileObjectMapper(identifier: 'symbol')]
 final readonly class BalanceSheetStatementGrowthBulk
 {
 

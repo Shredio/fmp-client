@@ -14,9 +14,13 @@ final class TestUnexpectedResponseContentExceptionHandler implements UnexpectedR
 	/** @var list<string> */
 	public array $messages = [];
 
+	/** @var list<UnexpectedResponseContentException> */
+	public array $exceptions = [];
+
 	public function handle(UnexpectedResponseContentException $exception): void
 	{
 		$this->messages[] = $exception->getMessage();
+		$this->exceptions[] = $exception;
 	}
 
 }

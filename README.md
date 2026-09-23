@@ -14,7 +14,7 @@ A high-performance PHP client library for the [Financial Modeling Prep (FMP) API
 
 ## Requirements
 
-- PHP 8.3 or higher
+- PHP 8.4 or higher
 - Symfony HTTP Client
 - JsonMachine for efficient JSON parsing
 - League CSV for CSV processing  
@@ -70,6 +70,12 @@ try {
 }
 ```
 
+### Unknown Keys
+
+When the API returns keys that a payload does not know (e.g. a newly added field), strict mode throws
+`UnexpectedResponseContentException`. In non-strict mode the payload is returned without the unknown keys
+and the problem is passed to the error handler with `noticesOnly` set to `true`.
+
 ### Custom Error Handling
 
 Implement custom error handling for non-strict mode (useful for logging):
@@ -79,6 +85,13 @@ use Shredio\FmpClient\Exception\UnexpectedResponseContentExceptionHandler;
 
 $handler = new class implements UnexpectedResponseContentExceptionHandler {
     public function handle(UnexpectedResponseContentException $exception): void {
+        if ($exception->noticesOnly) {
+            // the payload was returned, e.g. the API added a new key
+            error_log("FMP Client Notice: {$exception->getMessage()}");
+            return;
+        }
+
+        // the payload was discarded
         error_log("FMP Client Error: {$exception->getMessage()}");
     }
 };
@@ -531,5 +544,5 @@ This library provides a PHP interface to the [Financial Modeling Prep API](https
 ## Links
 
 - [Financial Modeling Prep API Documentation](https://financialmodelingprep.com/developer/docs)
-- [PHP 8.3 Documentation](https://www.php.net/releases/8.3/en.php)
+- [PHP 8.4 Documentation](https://www.php.net/releases/8.4/en.php)
 - [Symfony HTTP Client](https://symfony.com/doc/current/http_client.html)

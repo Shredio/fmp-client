@@ -9,7 +9,8 @@ use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Payload\BalanceSheetStatementGrowthBulk;
 use Shredio\TypeSchema\Context\TypeContext;
-use Shredio\TypeSchema\Error\ErrorElement;
+use Shredio\TypeSchema\Result\Failure;
+use Shredio\TypeSchema\Result\WithNotices;
 use Shredio\TypeSchema\TypeSchema;
 use Shredio\TypeSchema\Types\Type;
 
@@ -20,7 +21,7 @@ use Shredio\TypeSchema\Types\Type;
  */
 final readonly class BalanceSheetStatementGrowthBulkMapper extends Type
 {
-	public function parse(mixed $valueToParse, TypeContext $context): ErrorElement|BalanceSheetStatementGrowthBulk
+	public function parse(mixed $valueToParse, TypeContext $context): Failure|WithNotices|BalanceSheetStatementGrowthBulk
 	{
 		// 0. Initialize TypeSchema
 		$ts = TypeSchema::get();
@@ -77,56 +78,20 @@ final readonly class BalanceSheetStatementGrowthBulkMapper extends Type
 
 		// 2. Map values
 		$values = $schema->parse($valueToParse, $context);
-		if ($this->isError($values)) {
-			return $values;
+		if ($values instanceof Failure) {
+			return $this->withOwnDefinition($values, $context);
+		}
+
+		$notices = null;
+		if ($values instanceof WithNotices) {
+			$notices = $values->notices;
+			$values = $values->value;
 		}
 
 		// 3. Create a new instance
-		return new BalanceSheetStatementGrowthBulk(...array_intersect_key($values, [
-			'symbol' => true,
-			'date' => true,
-			'calendarYear' => true,
-			'period' => true,
-			'growthCashAndCashEquivalents' => true,
-			'growthShortTermInvestments' => true,
-			'growthCashAndShortTermInvestments' => true,
-			'growthNetReceivables' => true,
-			'growthInventory' => true,
-			'growthOtherCurrentAssets' => true,
-			'growthTotalCurrentAssets' => true,
-			'growthPropertyPlantEquipmentNet' => true,
-			'growthGoodwill' => true,
-			'growthIntangibleAssets' => true,
-			'growthGoodwillAndIntangibleAssets' => true,
-			'growthLongTermInvestments' => true,
-			'growthTaxAssets' => true,
-			'growthOtherNonCurrentAssets' => true,
-			'growthTotalNonCurrentAssets' => true,
-			'growthOtherAssets' => true,
-			'growthTotalAssets' => true,
-			'growthAccountPayables' => true,
-			'growthShortTermDebt' => true,
-			'growthTaxPayables' => true,
-			'growthDeferredRevenue' => true,
-			'growthOtherCurrentLiabilities' => true,
-			'growthTotalCurrentLiabilities' => true,
-			'growthLongTermDebt' => true,
-			'growthDeferredRevenueNonCurrent' => true,
-			'growthDeferredTaxLiabilitiesNonCurrent' => true,
-			'growthOtherNonCurrentLiabilities' => true,
-			'growthTotalNonCurrentLiabilities' => true,
-			'growthOtherLiabilities' => true,
-			'growthTotalLiabilities' => true,
-			'growthCommonStock' => true,
-			'growthRetainedEarnings' => true,
-			'growthAccumulatedOtherComprehensiveIncomeLoss' => true,
-			'growthOthertotalStockholdersEquity' => true,
-			'growthTotalStockholdersEquity' => true,
-			'growthTotalLiabilitiesAndStockholdersEquity' => true,
-			'growthTotalInvestments' => true,
-			'growthTotalDebt' => true,
-			'growthNetDebt' => true,
-		]));
+		$obj = new BalanceSheetStatementGrowthBulk(...$values);
+
+		return $notices === null ? $obj : new WithNotices($obj, $notices);
 	}
 
 

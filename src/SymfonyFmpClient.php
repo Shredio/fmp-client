@@ -146,8 +146,8 @@ use Shredio\TypeSchema\Conversion\Converter\Number\LenientNumberConverter;
 use Shredio\TypeSchema\Conversion\Converter\String\LenientStringConverter;
 use Shredio\TypeSchema\Conversion\Converter\String\StrictStringConverter;
 use Shredio\TypeSchema\Conversion\Object\LenientObjectSupervisor;
-use Shredio\TypeSchema\Error\ErrorElement;
-use Shredio\TypeSchema\Error\TypeSchemaErrorFormatter;
+use Shredio\TypeSchema\Issue\Report\TypeSchemaErrorFormatter;
+use Shredio\TypeSchema\Result\Failure;
 use Shredio\TypeSchema\Types\Type;
 use Shredio\TypeSchema\TypeSchemaProcessor;
 use Symfony\Component\HttpClient\HttpClient;
@@ -1792,10 +1792,15 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		$config ??= $isCsv ? $this->csvTypeConfig : $this->jsonTypeConfig;
 
-		$value = $this->schemaProcessor->parse($value, $type, $config, true);
-		if ($value instanceof ErrorElement) {
+		$result = $this->schemaProcessor->parse($value, $type, $config, true);
+		if ($this->strictMode === true) {
+			// notices, e.g. keys added by the API, are errors in strict mode
+			$result = $result->withNoticesAsErrors();
+		}
+
+		if ($result instanceof Failure) {
 			$exception = new Exception\UnexpectedResponseContentException(
-				sprintf('%s: %s', $payload, TypeSchemaErrorFormatter::prettyString($value, '')),
+				sprintf('%s: %s', $payload, TypeSchemaErrorFormatter::prettyString($result->withNoticesAsErrors(), '')),
 				null,
 				$url,
 			);
@@ -1807,7 +1812,16 @@ final readonly class SymfonyFmpClient implements FmpClient
 			return null;
 		}
 
-		return $value;
+		if ($result->notices !== null) {
+			$this->invalidArgumentHandler?->handle(new Exception\UnexpectedResponseContentException(
+				sprintf('%s: %s', $payload, TypeSchemaErrorFormatter::prettyString($result->notices, '')),
+				null,
+				$url,
+				noticesOnly: true,
+			));
+		}
+
+		return $result->value;
 	}
 
 	private function createTypeConfigForStatements(): TypeConfig

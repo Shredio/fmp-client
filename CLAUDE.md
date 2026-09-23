@@ -10,7 +10,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture Overview
 
-This is a PHP 8.3+ client library for the Financial Modeling Prep (FMP) API, designed to handle large financial datasets efficiently.
+This is a PHP 8.4+ client library for the Financial Modeling Prep (FMP) API, designed to handle large financial datasets efficiently.
 
 ### Core Components
 

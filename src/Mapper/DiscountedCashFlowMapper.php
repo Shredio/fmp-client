@@ -8,7 +8,8 @@ use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Payload\DiscountedCashFlow;
 use Shredio\TypeSchema\Context\TypeContext;
-use Shredio\TypeSchema\Error\ErrorElement;
+use Shredio\TypeSchema\Result\Failure;
+use Shredio\TypeSchema\Result\WithNotices;
 use Shredio\TypeSchema\TypeSchema;
 use Shredio\TypeSchema\Types\Type;
 
@@ -19,7 +20,7 @@ use Shredio\TypeSchema\Types\Type;
  */
 final readonly class DiscountedCashFlowMapper extends Type
 {
-	public function parse(mixed $valueToParse, TypeContext $context): ErrorElement|DiscountedCashFlow
+	public function parse(mixed $valueToParse, TypeContext $context): Failure|WithNotices|DiscountedCashFlow
 	{
 		// 0. Initialize TypeSchema
 		$ts = TypeSchema::get();
@@ -37,18 +38,30 @@ final readonly class DiscountedCashFlowMapper extends Type
 
 		// 2. Map values
 		$values = $schema->parse($valueToParse, $context);
-		if ($this->isError($values)) {
-			return $values;
+		if ($values instanceof Failure) {
+			return $this->withOwnDefinition($values, $context);
+		}
+
+		$notices = null;
+		if ($values instanceof WithNotices) {
+			$notices = $values->notices;
+			$values = $values->value;
 		}
 
 		// 3. Reindex values
+		$reindexedValues = [];
+
 		if (array_key_exists('Stock Price', $values)) {
-			$values['stockPrice'] = $values['Stock Price'];
-			unset($values['Stock Price']);
+			$reindexedValues['stockPrice'] = $values['Stock Price'];
 		}
 
+		unset($values['Stock Price']);
+		$values = $reindexedValues + $values;
+
 		// 4. Create a new instance
-		return new DiscountedCashFlow(...$values);
+		$obj = new DiscountedCashFlow(...$values);
+
+		return $notices === null ? $obj : new WithNotices($obj, $notices);
 	}
 
 

@@ -1,0 +1,28 @@
+[
+	{
+		"exchange": "AMEX",
+		"name": "New York Stock Exchange Arca",
+		"countryName": "United States of America",
+		"countryCode": "US",
+		"symbolSuffix": "N/A",
+		"delay": "Real-time",
+		"timezone": "America/New_York"
+	},
+	{
+		"exchange": "AMS",
+		"name": "Euronext Amsterdam",
+		"countryName": "Netherlands",
+		"countryCode": "NL",
+		"symbolSuffix": ".AS",
+		"delay": "Real-time"
+	},
+	{
+		"exchange": "XETRA",
+		"name": null,
+		"countryName": "Germany",
+		"countryCode": "DE",
+		"symbolSuffix": ".DE",
+		"delay": "Real-time",
+		"timezone": "Europe/Berlin"
+	}
+]

@@ -8,7 +8,8 @@ use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Payload\EarningCallTranscriptDate;
 use Shredio\TypeSchema\Context\TypeContext;
-use Shredio\TypeSchema\Error\ErrorElement;
+use Shredio\TypeSchema\Result\Failure;
+use Shredio\TypeSchema\Result\WithNotices;
 use Shredio\TypeSchema\TypeSchema;
 use Shredio\TypeSchema\Types\Type;
 
@@ -19,7 +20,7 @@ use Shredio\TypeSchema\Types\Type;
  */
 final readonly class EarningCallTranscriptDateMapper extends Type
 {
-	public function parse(mixed $valueToParse, TypeContext $context): ErrorElement|EarningCallTranscriptDate
+	public function parse(mixed $valueToParse, TypeContext $context): Failure|WithNotices|EarningCallTranscriptDate
 	{
 		// 0. Initialize TypeSchema
 		$ts = TypeSchema::get();
@@ -33,12 +34,20 @@ final readonly class EarningCallTranscriptDateMapper extends Type
 
 		// 2. Map values
 		$values = $schema->parse($valueToParse, $context);
-		if ($this->isError($values)) {
-			return $values;
+		if ($values instanceof Failure) {
+			return $this->withOwnDefinition($values, $context);
+		}
+
+		$notices = null;
+		if ($values instanceof WithNotices) {
+			$notices = $values->notices;
+			$values = $values->value;
 		}
 
 		// 3. Create a new instance
-		return new EarningCallTranscriptDate(...$values);
+		$obj = new EarningCallTranscriptDate(...$values);
+
+		return $notices === null ? $obj : new WithNotices($obj, $notices);
 	}
 
 
