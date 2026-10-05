@@ -27,13 +27,14 @@ final readonly class LargeResponseParser
 	 */
 	public function parseCsv(HttpClientInterface $client, ResponseInterface $response): iterable
 	{
-		if ($response->getStatusCode() !== 200) {
+		$statusCode = $response->getStatusCode();
+		if ($statusCode !== 200) {
 			$response->cancel();
 
 			throw new UnexpectedHttpCodeException(sprintf(
 				'Unexpected HTTP status code %d received when parsing CSV response.',
-				$response->getStatusCode()
-			));
+				$statusCode
+			), $statusCode);
 		}
 
 		$reader = Reader::from(StreamWrapper::createResource($response, $client));
@@ -56,13 +57,14 @@ final readonly class LargeResponseParser
 	 */
 	public function parseJson(HttpClientInterface $client, ResponseInterface $response): iterable
 	{
-		if ($response->getStatusCode() !== 200) {
+		$statusCode = $response->getStatusCode();
+		if ($statusCode !== 200) {
 			$response->cancel();
 
 			throw new UnexpectedHttpCodeException(sprintf(
 				'Unexpected HTTP status code %d received when parsing JSON response.',
-				$response->getStatusCode()
-			));
+				$statusCode
+			), $statusCode);
 		}
 
 		$parser = static function (ResponseInterface $response) use ($client): iterable {
