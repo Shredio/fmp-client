@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use Shredio\FmpClient\Payload\InstitutionalHolder;
+use Shredio\FmpClient\Payload\InstitutionalOwnershipFiling;
 use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
 use Tests\TestCase;
 
@@ -179,6 +180,25 @@ final class InstitutionalOwnershipTest extends TestCase
 		$client = $this->createClient(__DIR__ . '/fixtures/empty-response.json');
 
 		$this->assertSame([], iterator_to_array($client->institutionalHolders('AAPL', 2026, 4)));
+	}
+
+	public function testInstitutionalOwnershipLatest(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/institutional-ownership-latest.json');
+
+		$filings = iterator_to_array($client->institutionalOwnershipLatest(limit: 100));
+
+		$this->assertCount(100, $filings);
+		$this->assertSame((new InstitutionalOwnershipFiling(
+			cik: '0001531809',
+			name: 'CAPWEALTH ADVISORS, LLC',
+			date: '2026-09-30',
+			filingDate: '2026-10-05 00:00:00',
+			acceptedDate: '2026-10-05 10:59:23',
+			formType: '13F-HR',
+			link: 'https://www.sec.gov/Archives/edgar/data/1531809/000153180926000007/0001531809-26-000007-index.htm',
+			finalLink: 'https://www.sec.gov/Archives/edgar/data/1531809/000153180926000007/xslForm13F_X02/primary_doc.xml',
+		))->toArray(), $filings[0]->toArray());
 	}
 
 }

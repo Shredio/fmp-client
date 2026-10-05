@@ -391,6 +391,46 @@ foreach ($fmpClient->earningCallTranscriptDates('AAPL') as $date) {
 }
 ```
 
+### Latest Feeds
+
+Feeds of the newest records across all symbols, ordered from the newest to the oldest. The API serves at most 101 pages (0-100) of each feed.
+
+```php
+use DateTimeImmutable;
+
+// Insider transactions filed since yesterday
+foreach ($fmpClient->insiderTradesLatest(limit: 1000, from: new DateTimeImmutable('yesterday')) as $trade) {
+    echo "{$trade->filingDate} {$trade->symbol} {$trade->reportingName}: {$trade->transactionType}\n";
+}
+
+// Analyst price targets and rating actions
+foreach ($fmpClient->priceTargetLatestNews(limit: 100) as $news) {
+    echo "{$news->publishedDate} {$news->symbol}: {$news->priceTarget} by {$news->analystCompany}\n";
+}
+
+foreach ($fmpClient->gradesLatestNews(limit: 100) as $news) {
+    echo "{$news->publishedDate} {$news->symbol}: {$news->action} to {$news->newGrade} by {$news->gradingCompany}\n";
+}
+
+// The same news for a single symbol
+foreach ($fmpClient->priceTargetNews('AAPL', limit: 20) as $news) {
+    echo "{$news->publishedDate}: {$news->priceTarget} ({$news->newsTitle})\n";
+}
+
+// 13F filings, senate disclosures and earning call transcripts
+foreach ($fmpClient->institutionalOwnershipLatest(limit: 100) as $filing) {
+    echo "{$filing->acceptedDate} {$filing->name}: {$filing->formType} for {$filing->date}\n";
+}
+
+foreach ($fmpClient->senateTradesLatest(limit: 100) as $trade) {
+    echo "{$trade->disclosureDate} {$trade->firstName} {$trade->lastName}: {$trade->type} {$trade->assetDescription}\n";
+}
+
+foreach ($fmpClient->earningCallTranscriptLatest() as $transcript) {
+    echo "{$transcript->date} {$transcript->symbol} {$transcript->period->value} {$transcript->fiscalYear}\n";
+}
+```
+
 ### Asynchronous Operations
 
 ```php
@@ -474,10 +514,14 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `discountedCashFlow(string $symbol)` - DCF valuation together with the current stock price
 - `priceTargetSummary(string $symbol)` - Number and average of the price targets published in the last month, quarter, year and overall
 - `priceTargetSummaryBulk()` - Bulk price target summaries
+- `priceTargetNews(string $symbol, int $page, int|null $limit)` - Individual analyst price targets with the news they were published in
+- `priceTargetLatestNews(int $page, int|null $limit)` - Latest analyst price targets across all symbols
 - `gradesConsensus(string $symbol)` - Analyst rating distribution and the resulting consensus rating
 - `gradesConsensusBulk()` - Bulk analyst rating distributions and consensus ratings
 - `grades(string $symbol, int|null $limit)` - Individual analyst rating actions (upgrade, downgrade, maintain)
 - `gradesHistorical(string $symbol, int|null $limit)` - Monthly snapshots of the analyst rating distribution
+- `gradesNews(string $symbol, int $page, int|null $limit)` - Rating actions with the news they were published in
+- `gradesLatestNews(int $page, int|null $limit)` - Latest rating actions across all symbols
 - `marketRiskPremium()` - Market risk premium by country
 - `treasuryRates()` - US Treasury rates for various maturities
 
@@ -494,13 +538,17 @@ echo "Metrics count: " . count($metrics) . "\n";
 ### Ownership & Insider Activity
 - `insiderTrades(string $symbol, int $page, int|null $limit)` - Insider transactions reported on SEC forms 3, 4 and 5
 - `insiderTradeStatistics(string $symbol)` - Insider transactions aggregated per quarter (counts and volumes of acquisitions and dispositions)
+- `insiderTradesLatest(int $page, int|null $limit, DateTimeImmutable|null $from)` - Latest insider transactions across all symbols
 - `institutionalPositionsSummary(string $symbol, int $year, int $quarter)` - Institutional ownership aggregated from the 13F filings of a quarter
 - `institutionalHolders(string $symbol, int $year, int $quarter, int $page, int|null $limit)` - Institutional holders of a quarter with the change of their position
+- `institutionalOwnershipLatest(int $page, int|null $limit)` - Latest 13F filings of institutional investors
 - `senateTrades(string $symbol, int|null $limit)` - Trades disclosed by U.S. senators
+- `senateTradesLatest(int $page, int|null $limit)` - Latest trades disclosed by U.S. senators across all assets
 
 ### Earning Call Transcripts
 - `earningCallTranscriptDates(string $symbol)` - Quarters with an available transcript
 - `earningCallTranscript(string $symbol, int $year, int $quarter)` - Full transcript of a single earning call
+- `earningCallTranscriptLatest(int $page, int|null $limit)` - Latest earning calls with a transcript across all symbols
 
 ### Search
 - `searchIsin(string $isin)` - Search for stocks by ISIN code

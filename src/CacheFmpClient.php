@@ -36,6 +36,7 @@ use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\Grade;
+use Shredio\FmpClient\Payload\GradeNews;
 use Shredio\FmpClient\Payload\GradesConsensus;
 use Shredio\FmpClient\Payload\GradesHistorical;
 use Shredio\FmpClient\Payload\HistoricalChart;
@@ -50,15 +51,19 @@ use Shredio\FmpClient\Payload\Index;
 use Shredio\FmpClient\Payload\InsiderTrade;
 use Shredio\FmpClient\Payload\InsiderTradeStatistics;
 use Shredio\FmpClient\Payload\InstitutionalHolder;
+use Shredio\FmpClient\Payload\InstitutionalOwnershipFiling;
 use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
+use Shredio\FmpClient\Payload\LatestEarningCallTranscript;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
+use Shredio\FmpClient\Payload\LatestSenateTrade;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\PriceTargetConsensus;
+use Shredio\FmpClient\Payload\PriceTargetNews;
 use Shredio\FmpClient\Payload\PriceTargetSummary;
 use Shredio\FmpClient\Payload\Quote;
 use Shredio\FmpClient\Payload\Ratios;
@@ -724,6 +729,34 @@ final readonly class CacheFmpClient implements FmpClient
 		return $this->client->priceTargetSummaryBulk();
 	}
 
+	/**
+	 * @param int<0, max> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, PriceTargetNews>
+	 */
+	public function priceTargetNews(string $symbol, int $page = 0, ?int $limit = null): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->priceTargetNews($symbol, $page, $limit),
+			sprintf('%s.%d.%s', $symbol, $page, $limit ?? 'all'),
+		);
+	}
+
+	/**
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, PriceTargetNews>
+	 */
+	public function priceTargetLatestNews(int $page = 0, ?int $limit = null): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->priceTargetLatestNews($page, $limit),
+			sprintf('%d.%s', $page, $limit ?? 'all'),
+		);
+	}
+
 	public function discountedCashFlow(string $symbol): ?DiscountedCashFlow
 	{
 		return $this->cachedNullable(__FUNCTION__, fn () => $this->client->discountedCashFlow($symbol), $symbol);
@@ -770,6 +803,34 @@ final readonly class CacheFmpClient implements FmpClient
 
 	/**
 	 * @param int<0, max> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, GradeNews>
+	 */
+	public function gradesNews(string $symbol, int $page = 0, ?int $limit = null): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->gradesNews($symbol, $page, $limit),
+			sprintf('%s.%d.%s', $symbol, $page, $limit ?? 'all'),
+		);
+	}
+
+	/**
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, GradeNews>
+	 */
+	public function gradesLatestNews(int $page = 0, ?int $limit = null): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->gradesLatestNews($page, $limit),
+			sprintf('%d.%s', $page, $limit ?? 'all'),
+		);
+	}
+
+	/**
+	 * @param int<0, max> $page
 	 * @param int<1, 1000>|null $limit
 	 * @return iterable<int, InsiderTrade>
 	 */
@@ -791,6 +852,20 @@ final readonly class CacheFmpClient implements FmpClient
 	}
 
 	/**
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, InsiderTrade>
+	 */
+	public function insiderTradesLatest(int $page = 0, ?int $limit = null, ?DateTimeImmutable $from = null): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->insiderTradesLatest($page, $limit, $from),
+			sprintf('%d.%s.%s', $page, $limit ?? 'all', $from?->format('Y-m-d') ?? 'all'),
+		);
+	}
+
+	/**
 	 * @param int<1, 1000>|null $limit
 	 * @return iterable<int, SenateTrade>
 	 */
@@ -800,6 +875,20 @@ final readonly class CacheFmpClient implements FmpClient
 			__FUNCTION__,
 			fn () => $this->client->senateTrades($symbol, $limit),
 			sprintf('%s.%s', $symbol, $limit ?? 'all'),
+		);
+	}
+
+	/**
+	 * @param int<0, 100> $page
+	 * @param int<1, 250>|null $limit
+	 * @return iterable<int, LatestSenateTrade>
+	 */
+	public function senateTradesLatest(int $page = 0, ?int $limit = null): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->senateTradesLatest($page, $limit),
+			sprintf('%d.%s', $page, $limit ?? 'all'),
 		);
 	}
 
@@ -831,6 +920,20 @@ final readonly class CacheFmpClient implements FmpClient
 	}
 
 	/**
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, InstitutionalOwnershipFiling>
+	 */
+	public function institutionalOwnershipLatest(int $page = 0, ?int $limit = null): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->institutionalOwnershipLatest($page, $limit),
+			sprintf('%d.%s', $page, $limit ?? 'all'),
+		);
+	}
+
+	/**
 	 * @return iterable<int, EarningCallTranscriptDate>
 	 */
 	public function earningCallTranscriptDates(string $symbol): iterable
@@ -847,6 +950,20 @@ final readonly class CacheFmpClient implements FmpClient
 			__FUNCTION__,
 			fn () => $this->client->earningCallTranscript($symbol, $year, $quarter),
 			sprintf('%s.%d.%d', $symbol, $year, $quarter),
+		);
+	}
+
+	/**
+	 * @param int<0, 100> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, LatestEarningCallTranscript>
+	 */
+	public function earningCallTranscriptLatest(int $page = 0, ?int $limit = null): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->earningCallTranscriptLatest($page, $limit),
+			sprintf('%d.%s', $page, $limit ?? 'all'),
 		);
 	}
 

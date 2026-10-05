@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use DateTimeImmutable;
 use Shredio\FmpClient\CacheFmpClient;
 use Shredio\FmpClient\Payload\AvailableExchange;
 use Shredio\FmpClient\Payload\CompanyProfile;
@@ -222,6 +223,36 @@ final class CacheFmpClientTest extends TestCase
 
 		$this->assertFalse($cache->has('fmp-client.v2.availableExchanges'), 'Cache should have expired the key after TTL');
 		$this->assertFalse($cache->has('fmp-client.v2.companyProfile.AAPL'), 'Cache should have expired the key after TTL');
+	}
+
+	public function testLatestFeedIsCachedPerPageLimitAndDate(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/insider-trading-latest.json'),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+
+		// First request
+		$trades = iterator_to_array($client->insiderTradesLatest(limit: 100, from: new DateTimeImmutable('2026-10-02')));
+
+		$this->assertCount(100, $trades);
+		$this->assertTrue($cache->has('fmp-client.v2.insiderTradesLatest.0.100.2026-10-02'), 'Cache should have the key after first request');
+
+		// Second request is served from the cache, the mock client has no response left
+		$this->assertCount(100, iterator_to_array($client->insiderTradesLatest(limit: 100, from: new DateTimeImmutable('2026-10-02'))));
+	}
+
+	public function testNewsOfSymbolIsCachedPerSymbolPageAndLimit(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/price-target-news-aapl.json'),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+
+		$this->assertCount(100, iterator_to_array($client->priceTargetNews('AAPL', limit: 100)));
+		$this->assertTrue($cache->has('fmp-client.v2.priceTargetNews.AAPL.0.100'), 'Cache should have the key after first request');
 	}
 
 }

@@ -1,0 +1,602 @@
+[
+  {
+    "symbol": "7011.T",
+    "period": "Q2",
+    "fiscalYear": 2025,
+    "date": "2026-11-07"
+  },
+  {
+    "symbol": "SKL.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-10-02"
+  },
+  {
+    "symbol": "NKE",
+    "period": "Q1",
+    "fiscalYear": 2027,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "MEX.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "SNI.OL",
+    "period": "Q3",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "SEA.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "WSKEF",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "NAMM",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "CVSGF",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "0OHK.L",
+    "period": "Q3",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "AYI",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "WKEY",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "BSET",
+    "period": "Q3",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "WIHN.SW",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "MKC",
+    "period": "Q3",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "ACN",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "SOIEF",
+    "period": "Q3",
+    "fiscalYear": 2026,
+    "date": "2026-10-01"
+  },
+  {
+    "symbol": "AOTI.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "LORD.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "CALM",
+    "period": "Q1",
+    "fiscalYear": 2027,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "MU",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "BO.CO",
+    "period": "Q1",
+    "fiscalYear": 2027,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "AVCTF",
+    "period": "Q4",
+    "fiscalYear": 2025,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "PLLHF",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "SKIS-B.ST",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "PINWF",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "PRGS",
+    "period": "Q3",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "CPI.JO",
+    "period": "Q2",
+    "fiscalYear": 2027,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "SANN.SW",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "CAG",
+    "period": "Q1",
+    "fiscalYear": 2027,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "BGOUF",
+    "period": "Q1",
+    "fiscalYear": 2027,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "NVYTF",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "ALNOV.PA",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "GML.JO",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "NDVLY",
+    "period": "Q4",
+    "fiscalYear": 2025,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "CKHGY",
+    "period": "Q2",
+    "fiscalYear": 2027,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "DND.TO",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "0017.HK",
+    "period": "Q4",
+    "fiscalYear": 2025,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "WHGPF",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "BAG.L",
+    "period": "Q2",
+    "fiscalYear": 2027,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "GEM.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "YRD",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "NCYT.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "DYNDF",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "FDS",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "JBL",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "SPHDF",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "PINE.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "AVAP.L",
+    "period": "Q4",
+    "fiscalYear": 2025,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "WHS.NZ",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-30"
+  },
+  {
+    "symbol": "MHPSY",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "CARD.L",
+    "period": "Q2",
+    "fiscalYear": 2027,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "HBH.DE",
+    "period": "Q2",
+    "fiscalYear": 2027,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "CRFCF",
+    "period": "Q2",
+    "fiscalYear": 2027,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "SUS.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "AIR",
+    "period": "Q1",
+    "fiscalYear": 2027,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "MHPC.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "CBGPY",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "CCL",
+    "period": "Q3",
+    "fiscalYear": 2026,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "KMX",
+    "period": "Q2",
+    "fiscalYear": 2027,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "UEC",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "HBBHF",
+    "period": "Q2",
+    "fiscalYear": 2027,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "CBG.L",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "CNXC",
+    "period": "Q3",
+    "fiscalYear": 2026,
+    "date": "2026-09-29"
+  },
+  {
+    "symbol": "BTLN",
+    "period": "Q4",
+    "fiscalYear": 2025,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "MTN",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "NTWK",
+    "period": "Q1",
+    "fiscalYear": 2027,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "NTWK",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "SML.NZ",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "IVA",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "ADXN",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "PTN",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "IVEVF",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "POCI",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "TRAK",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "TUWLF",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "TUWOY",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "KNDI",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "ADXN.SW",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "IVA.PA",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "GGRP",
+    "period": "Q4",
+    "fiscalYear": 2025,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "IDT",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "TLW.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-28"
+  },
+  {
+    "symbol": "TBN",
+    "period": "Q1",
+    "fiscalYear": 2027,
+    "date": "2026-09-27"
+  },
+  {
+    "symbol": "SM1.AX",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-27"
+  },
+  {
+    "symbol": "BBRDF",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-27"
+  },
+  {
+    "symbol": "BIRD.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-27"
+  },
+  {
+    "symbol": "SMLKF",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-27"
+  },
+  {
+    "symbol": "TBN.AX",
+    "period": "Q1",
+    "fiscalYear": 2027,
+    "date": "2026-09-27"
+  },
+  {
+    "symbol": "BGO.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-25"
+  },
+  {
+    "symbol": "TBN",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-25"
+  },
+  {
+    "symbol": "FGPR",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-25"
+  },
+  {
+    "symbol": "OGD.TO",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-25"
+  },
+  {
+    "symbol": "KIERF",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-25"
+  },
+  {
+    "symbol": "LIVE.L",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-25"
+  },
+  {
+    "symbol": "BGOPF",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-25"
+  },
+  {
+    "symbol": "PHIL.MI",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-25"
+  },
+  {
+    "symbol": "TBN.AX",
+    "period": "Q4",
+    "fiscalYear": 2026,
+    "date": "2026-09-25"
+  },
+  {
+    "symbol": "SEYMF",
+    "period": "Q2",
+    "fiscalYear": 2026,
+    "date": "2026-09-24"
+  },
+  {
+    "symbol": "ELLAKTOR.AT",
+    "period": "Q3",
+    "fiscalYear": 2026,
+    "date": "2026-09-24"
+  }
+]

@@ -34,6 +34,7 @@ use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\Grade;
+use Shredio\FmpClient\Payload\GradeNews;
 use Shredio\FmpClient\Payload\GradesConsensus;
 use Shredio\FmpClient\Payload\GradesHistorical;
 use Shredio\FmpClient\Payload\HistoricalChart;
@@ -48,15 +49,19 @@ use Shredio\FmpClient\Payload\Index;
 use Shredio\FmpClient\Payload\InsiderTrade;
 use Shredio\FmpClient\Payload\InsiderTradeStatistics;
 use Shredio\FmpClient\Payload\InstitutionalHolder;
+use Shredio\FmpClient\Payload\InstitutionalOwnershipFiling;
 use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
+use Shredio\FmpClient\Payload\LatestEarningCallTranscript;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
+use Shredio\FmpClient\Payload\LatestSenateTrade;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\PriceTargetConsensus;
+use Shredio\FmpClient\Payload\PriceTargetNews;
 use Shredio\FmpClient\Payload\PriceTargetSummary;
 use Shredio\FmpClient\Payload\Quote;
 use Shredio\FmpClient\Payload\Ratios;
@@ -621,6 +626,30 @@ interface FmpClient
 	public function priceTargetSummaryBulk(): iterable;
 
 	/**
+	 * Individual analyst price targets of a symbol together with the news they were published in, ordered from the
+	 * newest to the oldest.
+	 * Only available for US-listed symbols, including ADRs of foreign companies.
+	 *
+	 * @see https://financialmodelingprep.com/stable/price-target-news
+	 * @param int<0, max> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, PriceTargetNews>
+	 */
+	public function priceTargetNews(string $symbol, int $page = 0, ?int $limit = null): iterable;
+
+	/**
+	 * Individual analyst price targets across all symbols together with the news they were published in, ordered from
+	 * the newest to the oldest.
+	 * Covers US-listed symbols only.
+	 *
+	 * @see https://financialmodelingprep.com/stable/price-target-latest-news
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, PriceTargetNews>
+	 */
+	public function priceTargetLatestNews(int $page = 0, ?int $limit = null): iterable;
+
+	/**
 	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/discounted-cash-flow
@@ -665,6 +694,29 @@ interface FmpClient
 	public function gradesHistorical(string $symbol, ?int $limit = null): iterable;
 
 	/**
+	 * Rating actions of a symbol together with the news they were published in, ordered from the newest to the oldest.
+	 * Only available for US-listed symbols, including ADRs of foreign companies.
+	 *
+	 * @see https://financialmodelingprep.com/stable/grades-news
+	 * @param int<0, max> $page
+	 * @param int<1, 100>|null $limit Without a limit the API returns a single record
+	 * @return iterable<int, GradeNews>
+	 */
+	public function gradesNews(string $symbol, int $page = 0, ?int $limit = null): iterable;
+
+	/**
+	 * Rating actions across all symbols together with the news they were published in, ordered from the newest to the
+	 * oldest.
+	 * Covers US-listed symbols only.
+	 *
+	 * @see https://financialmodelingprep.com/stable/grades-latest-news
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, GradeNews>
+	 */
+	public function gradesLatestNews(int $page = 0, ?int $limit = null): iterable;
+
+	/**
 	 * Insider transactions reported to the SEC on forms 3, 4 and 5, ordered from the newest to the oldest.
 	 * Only available for US-listed symbols whose insiders file with the SEC, foreign issuers listed in the US return
 	 * data from 2026 on at best.
@@ -687,6 +739,18 @@ interface FmpClient
 	public function insiderTradeStatistics(string $symbol): iterable;
 
 	/**
+	 * Insider transactions across all symbols, ordered from the newest to the oldest filing.
+	 * Covers US-listed symbols only.
+	 *
+	 * @see https://financialmodelingprep.com/stable/insider-trading/latest
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @param DateTimeImmutable|null $from Return only the transactions filed on this date or later
+	 * @return iterable<int, InsiderTrade>
+	 */
+	public function insiderTradesLatest(int $page = 0, ?int $limit = null, ?DateTimeImmutable $from = null): iterable;
+
+	/**
 	 * Trades disclosed by U.S. senators, ordered from the newest to the oldest disclosure.
 	 * Only available for US-listed symbols, including ADRs of foreign companies.
 	 *
@@ -695,6 +759,17 @@ interface FmpClient
 	 * @return iterable<int, SenateTrade>
 	 */
 	public function senateTrades(string $symbol, ?int $limit = null): iterable;
+
+	/**
+	 * Trades disclosed by U.S. senators across all assets, ordered from the newest to the oldest disclosure.
+	 * Covers US-listed symbols only, an asset without a ticker symbol has an empty symbol.
+	 *
+	 * @see https://financialmodelingprep.com/stable/senate-latest
+	 * @param int<0, 100> $page
+	 * @param int<1, 250>|null $limit
+	 * @return iterable<int, LatestSenateTrade>
+	 */
+	public function senateTradesLatest(int $page = 0, ?int $limit = null): iterable;
 
 	/**
 	 * Institutional ownership of a symbol aggregated from the 13F filings of a single calendar quarter.
@@ -719,6 +794,17 @@ interface FmpClient
 	public function institutionalHolders(string $symbol, int $year, int $quarter, int $page = 0, ?int $limit = null): iterable;
 
 	/**
+	 * 13F filings of institutional investors filed with the SEC, ordered from the newest to the oldest. The filings
+	 * are not specific to a symbol.
+	 *
+	 * @see https://financialmodelingprep.com/stable/institutional-ownership/latest
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, InstitutionalOwnershipFiling>
+	 */
+	public function institutionalOwnershipLatest(int $page = 0, ?int $limit = null): iterable;
+
+	/**
 	 * Quarters for which an earning call transcript is available, ordered from the newest to the oldest.
 	 * Available worldwide.
 	 *
@@ -734,6 +820,17 @@ interface FmpClient
 	 * @param int<1, 4> $quarter
 	 */
 	public function earningCallTranscript(string $symbol, int $year, int $quarter): ?EarningCallTranscript;
+
+	/**
+	 * Earning calls with a transcript across all symbols, ordered from the newest to the oldest call.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/earning-call-transcript-latest
+	 * @param int<0, 100> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, LatestEarningCallTranscript>
+	 */
+	public function earningCallTranscriptLatest(int $page = 0, ?int $limit = null): iterable;
 
 	/**
 	 * @template T

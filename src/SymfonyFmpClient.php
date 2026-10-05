@@ -42,6 +42,7 @@ use Shredio\FmpClient\Mapper\EodQuoteMapper;
 use Shredio\FmpClient\Mapper\ExchangeMarketHoursMapper;
 use Shredio\FmpClient\Mapper\FinancialStatementSymbolMapper;
 use Shredio\FmpClient\Mapper\GradeMapper;
+use Shredio\FmpClient\Mapper\GradeNewsMapper;
 use Shredio\FmpClient\Mapper\GradesConsensusMapper;
 use Shredio\FmpClient\Mapper\GradesHistoricalMapper;
 use Shredio\FmpClient\Mapper\HistoricalChartMapper;
@@ -56,14 +57,18 @@ use Shredio\FmpClient\Mapper\IndexMapper;
 use Shredio\FmpClient\Mapper\InsiderTradeMapper;
 use Shredio\FmpClient\Mapper\InsiderTradeStatisticsMapper;
 use Shredio\FmpClient\Mapper\InstitutionalHolderMapper;
+use Shredio\FmpClient\Mapper\InstitutionalOwnershipFilingMapper;
 use Shredio\FmpClient\Mapper\InstitutionalPositionsSummaryMapper;
 use Shredio\FmpClient\Mapper\IsinSearchResultMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsTtmMapper;
+use Shredio\FmpClient\Mapper\LatestEarningCallTranscriptMapper;
 use Shredio\FmpClient\Mapper\LatestFinancialStatementMapper;
+use Shredio\FmpClient\Mapper\LatestSenateTradeMapper;
 use Shredio\FmpClient\Mapper\MarketRiskPremiumMapper;
 use Shredio\FmpClient\Mapper\PressReleaseMapper;
 use Shredio\FmpClient\Mapper\PriceTargetConsensusMapper;
+use Shredio\FmpClient\Mapper\PriceTargetNewsMapper;
 use Shredio\FmpClient\Mapper\PriceTargetSummaryMapper;
 use Shredio\FmpClient\Mapper\QuoteMapper;
 use Shredio\FmpClient\Mapper\RatiosMapper;
@@ -105,6 +110,7 @@ use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\Grade;
+use Shredio\FmpClient\Payload\GradeNews;
 use Shredio\FmpClient\Payload\GradesConsensus;
 use Shredio\FmpClient\Payload\GradesHistorical;
 use Shredio\FmpClient\Payload\HistoricalChart;
@@ -119,15 +125,19 @@ use Shredio\FmpClient\Payload\Index;
 use Shredio\FmpClient\Payload\InsiderTrade;
 use Shredio\FmpClient\Payload\InsiderTradeStatistics;
 use Shredio\FmpClient\Payload\InstitutionalHolder;
+use Shredio\FmpClient\Payload\InstitutionalOwnershipFiling;
 use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
+use Shredio\FmpClient\Payload\LatestEarningCallTranscript;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
+use Shredio\FmpClient\Payload\LatestSenateTrade;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\PriceTargetConsensus;
+use Shredio\FmpClient\Payload\PriceTargetNews;
 use Shredio\FmpClient\Payload\PriceTargetSummary;
 use Shredio\FmpClient\Payload\Quote;
 use Shredio\FmpClient\Payload\Ratios;
@@ -1663,6 +1673,44 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/price-target-news
+	 * @param int<0, max> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, PriceTargetNews>
+	 */
+	public function priceTargetNews(string $symbol, int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/price-target-news', $query);
+
+		foreach ($this->requestJson('stable/price-target-news', $query) as $item) {
+			$object = $this->map(PriceTargetNews::class, new PriceTargetNewsMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/price-target-latest-news
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, PriceTargetNews>
+	 */
+	public function priceTargetLatestNews(int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/price-target-latest-news', $query);
+
+		foreach ($this->requestJson('stable/price-target-latest-news', $query) as $item) {
+			$object = $this->map(PriceTargetNews::class, new PriceTargetNewsMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/discounted-cash-flow
 	 */
 	public function discountedCashFlow(string $symbol): ?DiscountedCashFlow
@@ -1749,6 +1797,44 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/grades-news
+	 * @param int<0, max> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, GradeNews>
+	 */
+	public function gradesNews(string $symbol, int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/grades-news', $query);
+
+		foreach ($this->requestJson('stable/grades-news', $query) as $item) {
+			$object = $this->map(GradeNews::class, new GradeNewsMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/grades-latest-news
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, GradeNews>
+	 */
+	public function gradesLatestNews(int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/grades-latest-news', $query);
+
+		foreach ($this->requestJson('stable/grades-latest-news', $query) as $item) {
+			$object = $this->map(GradeNews::class, new GradeNewsMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/insider-trading/search
 	 * @param int<0, max> $page
 	 * @param int<1, 1000>|null $limit
@@ -1784,6 +1870,25 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/insider-trading/latest
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, InsiderTrade>
+	 */
+	public function insiderTradesLatest(int $page = 0, ?int $limit = null, ?DateTimeImmutable $from = null): iterable
+	{
+		$query = ['date' => $from?->format('Y-m-d'), 'page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/insider-trading/latest', $query);
+
+		foreach ($this->requestJson('stable/insider-trading/latest', $query) as $item) {
+			$object = $this->map(InsiderTrade::class, new InsiderTradeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/senate-trades
 	 * @param int<1, 1000>|null $limit
 	 * @return iterable<int, SenateTrade>
@@ -1795,6 +1900,25 @@ final readonly class SymfonyFmpClient implements FmpClient
 
 		foreach ($this->requestJson('stable/senate-trades', $query) as $item) {
 			$object = $this->map(SenateTrade::class, new SenateTradeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/senate-latest
+	 * @param int<0, 100> $page
+	 * @param int<1, 250>|null $limit
+	 * @return iterable<int, LatestSenateTrade>
+	 */
+	public function senateTradesLatest(int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/senate-latest', $query);
+
+		foreach ($this->requestJson('stable/senate-latest', $query) as $item) {
+			$object = $this->map(LatestSenateTrade::class, new LatestSenateTradeMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -1841,6 +1965,25 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/institutional-ownership/latest
+	 * @param int<0, 100> $page
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, InstitutionalOwnershipFiling>
+	 */
+	public function institutionalOwnershipLatest(int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/institutional-ownership/latest', $query);
+
+		foreach ($this->requestJson('stable/institutional-ownership/latest', $query) as $item) {
+			$object = $this->map(InstitutionalOwnershipFiling::class, new InstitutionalOwnershipFilingMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/earning-call-transcript-dates
 	 * @return iterable<int, EarningCallTranscriptDate>
 	 */
@@ -1873,6 +2016,25 @@ final readonly class SymfonyFmpClient implements FmpClient
 		}
 
 		return null;
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/earning-call-transcript-latest
+	 * @param int<0, 100> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, LatestEarningCallTranscript>
+	 */
+	public function earningCallTranscriptLatest(int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/earning-call-transcript-latest', $query);
+
+		foreach ($this->requestJson('stable/earning-call-transcript-latest', $query) as $item) {
+			$object = $this->map(LatestEarningCallTranscript::class, new LatestEarningCallTranscriptMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
 	}
 
 	/**

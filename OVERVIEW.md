@@ -1689,6 +1689,50 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 ---
 
+### `priceTargetNews()`
+
+**Purpose:** Retrieve the individual analyst price targets of a specific company together with the news they were published in, ordered from the newest to the oldest. The endpoint is not listed in the FMP docs.
+
+**Availability:** US-listed symbols only, ADRs of foreign companies included
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `page` (int) - Page number, starting at 0
+- `limit` (int|null) - Maximum number of records per page (1-100), `null` uses the API default of 10
+
+**Return Values:** `iterable<PriceTargetNews>`
+- `symbol` - Ticker symbol
+- `publishedDate` - Date and time of publication in UTC (for example `2026-10-05T13:32:00.000Z`)
+- `newsURL` - Link to the news
+- `newsTitle` - Title of the news, `null` for some older records
+- `analystName` - Name of the analyst, empty or `null` when the news does not name the analyst
+- `priceTarget` - Price target as published
+- `adjPriceTarget` - Price target adjusted for later stock splits
+- `priceWhenPosted` - Stock price at the time of publication, adjusted for later stock splits
+- `newsPublisher` - Name of the publisher (for example StreetInsider, TheFly, Benzinga)
+- `newsBaseURL` - Domain of the publisher
+- `analystCompany` - Brokerage or research firm of the analyst
+
+**API endpoint:** `https://financialmodelingprep.com/stable/price-target-news`
+
+---
+
+### `priceTargetLatestNews()`
+
+**Purpose:** Retrieve the individual analyst price targets across all symbols together with the news they were published in, ordered from the newest to the oldest. The endpoint is not listed in the FMP docs.
+
+**Availability:** US-listed symbols only, ADRs of foreign companies included
+
+**Parameters:**
+- `page` (int) - Page number (0-100), a higher page is rejected by the API with HTTP 400
+- `limit` (int|null) - Maximum number of records per page (1-1000), `null` uses the API default of 10
+
+**Return Values:** `iterable<PriceTargetNews>` (same structure as `priceTargetNews()`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/price-target-latest-news`
+
+---
+
 ### `discountedCashFlow()`
 
 **Purpose:** Retrieve the discounted cash flow valuation for a specific company together with the current stock price. Available for companies with financial statements; ETFs and indexes return no data.
@@ -1789,6 +1833,50 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 ---
 
+### `gradesNews()`
+
+**Purpose:** Retrieve the rating actions of a specific company together with the news they were published in, ordered from the newest to the oldest. Unlike `grades()` it carries the link to the news and the stock price at the time of publication. The endpoint is not listed in the FMP docs.
+
+**Availability:** US-listed symbols only, ADRs of foreign companies included
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `page` (int) - Page number, starting at 0
+- `limit` (int|null) - Maximum number of records per page (1-100), `null` uses the API default of a single record
+
+**Return Values:** `iterable<GradeNews>`
+- `symbol` - Ticker symbol
+- `publishedDate` - Date and time of publication in UTC (for example `2026-10-05T14:19:56.000Z`)
+- `newsURL` - Link to the news
+- `newsTitle` - Title of the news
+- `newsBaseURL` - Domain of the publisher
+- `newsPublisher` - Name of the publisher (for example TheFly, StreetInsider)
+- `newGrade` - Rating after the action
+- `previousGrade` - Rating before the action, `null` when the news does not state it (for example for an initiation)
+- `gradingCompany` - Name of the brokerage or research firm
+- `action` - Type of the action (`upgrade`, `downgrade`, `hold`, `initialise`)
+- `priceWhenPosted` - Stock price at the time of publication
+
+**API endpoint:** `https://financialmodelingprep.com/stable/grades-news`
+
+---
+
+### `gradesLatestNews()`
+
+**Purpose:** Retrieve the rating actions across all symbols together with the news they were published in, ordered from the newest to the oldest. The endpoint is not listed in the FMP docs.
+
+**Availability:** US-listed symbols only, ADRs of foreign companies included
+
+**Parameters:**
+- `page` (int) - Page number (0-100), a higher page is rejected by the API with HTTP 400
+- `limit` (int|null) - Maximum number of records per page (1-1000), `null` uses the API default of 10
+
+**Return Values:** `iterable<GradeNews>` (same structure as `gradesNews()`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/grades-latest-news`
+
+---
+
 ## Ownership and Insider Activity
 
 ### `insiderTrades()`
@@ -1852,6 +1940,23 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 ---
 
+### `insiderTradesLatest()`
+
+**Purpose:** Retrieve the insider transactions across all symbols, ordered from the newest to the oldest filing. Use `from` to fetch only the transactions filed since the last run.
+
+**Availability:** US-listed symbols whose insiders file forms 3, 4 and 5 with the SEC
+
+**Parameters:**
+- `page` (int) - Page number (0-100), a higher page is rejected by the API with HTTP 400
+- `limit` (int|null) - Maximum number of records per page (1-1000), `null` uses the API default of 100
+- `from` (DateTimeImmutable|null) - Return only the transactions filed on this date or later, sent to the API as the `date` parameter
+
+**Return Values:** `iterable<InsiderTrade>` (same structure as `insiderTrades()`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/insider-trading/latest`
+
+---
+
 ### `senateTrades()`
 
 **Purpose:** Retrieve trades in a specific company disclosed by U.S. senators, ordered from the newest to the oldest disclosure.
@@ -1881,6 +1986,37 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `capitalGainsOver200USD` - Whether capital gains exceeded 200 USD, returned by the API as the string "True" or "False"
 
 **API endpoint:** `https://financialmodelingprep.com/stable/senate-trades`
+
+---
+
+### `senateTradesLatest()`
+
+**Purpose:** Retrieve the trades disclosed by U.S. senators across all assets, ordered from the newest to the oldest disclosure. Unlike `senateTrades()` the feed also contains assets without a ticker symbol (funds, partnerships, municipal bonds), roughly 3 of 10 sampled records, and does not return the capital gains flag.
+
+**Availability:** US-listed symbols only, ADRs of foreign companies included
+
+**Parameters:**
+- `page` (int) - Page number (0-100), a higher page is rejected by the API with HTTP 400
+- `limit` (int|null) - Maximum number of records per page (1-250), `null` uses the API default of 100
+
+**Return Values:** `iterable<LatestSenateTrade>`
+- `symbol` - Ticker symbol, empty for assets without one
+- `senateID` - Bioguide identifier of the senator
+- `disclosureDate` - Date the transaction was disclosed
+- `transactionDate` - Date of the transaction
+- `firstName` - First name of the senator
+- `lastName` - Last name of the senator
+- `office` - Office name as reported in the disclosure
+- `district` - Two letter state code, may be empty
+- `owner` - Owner of the assets (Self, Spouse, Joint, Child), may be empty
+- `assetDescription` - Description of the traded asset
+- `assetType` - Type of the asset (for example Stock, Stock Option, Other), may be empty
+- `type` - Type of the transaction (for example Purchase, Sale, Sale (Full), Sale (Partial), Exchange)
+- `amount` - Reported value range (for example "$15,001 - $50,000")
+- `comment` - Comment from the disclosure, may be empty
+- `link` - Link to the disclosure on efdsearch.senate.gov
+
+**API endpoint:** `https://financialmodelingprep.com/stable/senate-latest`
 
 ---
 
@@ -1999,6 +2135,30 @@ Properties prefixed with `last` hold the value of the previous quarter, properti
 
 ---
 
+### `institutionalOwnershipLatest()`
+
+**Purpose:** Retrieve the 13F filings of institutional investors filed with the SEC, ordered from the newest to the oldest. Each record is one filing of one investor, the positions it reports are not included. Requires the Ultimate or Enterprise FMP plan.
+
+**Availability:** Not company specific
+
+**Parameters:**
+- `page` (int) - Page number (0-100), a higher page is rejected by the API with HTTP 400
+- `limit` (int|null) - Maximum number of records per page (1-1000), `null` uses the API default of 100
+
+**Return Values:** `iterable<InstitutionalOwnershipFiling>`
+- `cik` - CIK of the institutional investor
+- `name` - Name of the institutional investor
+- `date` - Last day of the reported quarter
+- `filingDate` - Date the filing was filed, with a zeroed time part (for example `2026-10-05 00:00:00`)
+- `acceptedDate` - Date and time the SEC accepted the filing (for example `2026-10-05 10:59:23`)
+- `formType` - Form type (`13F-HR`, `13F-HR/A`, `13F-NT`, `13F-NT/A`)
+- `link` - Index page of the filing on the SEC website
+- `finalLink` - Primary document of the filing on the SEC website
+
+**API endpoint:** `https://financialmodelingprep.com/stable/institutional-ownership/latest`
+
+---
+
 ## Earning Call Transcripts
 
 Requires the Ultimate or Enterprise FMP plan.
@@ -2041,3 +2201,23 @@ Requires the Ultimate or Enterprise FMP plan.
 - `content` - Full transcript text, prepared remarks and Q&A, speakers prefixed with their name
 
 **API endpoint:** `https://financialmodelingprep.com/stable/earning-call-transcript`
+
+---
+
+### `earningCallTranscriptLatest()`
+
+**Purpose:** Retrieve the earning calls with a transcript across all symbols, ordered from the newest to the oldest call. Use it to find new transcripts before calling `earningCallTranscript()`. A few records carry a date in the future.
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `page` (int) - Page number (0-100), a higher page is rejected by the API with HTTP 400
+- `limit` (int|null) - Maximum number of records per page (1-100), `null` uses the API default of 100
+
+**Return Values:** `iterable<LatestEarningCallTranscript>`
+- `symbol` - Ticker symbol
+- `period` - Fiscal period (`Period` enum, `Q1` to `Q4`)
+- `fiscalYear` - Fiscal year
+- `date` - Date of the earning call
+
+**API endpoint:** `https://financialmodelingprep.com/stable/earning-call-transcript-latest`

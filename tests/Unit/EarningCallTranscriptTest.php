@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Payload\EarningCallTranscriptDate;
+use Shredio\FmpClient\Payload\LatestEarningCallTranscript;
 use Tests\TestCase;
 
 final class EarningCallTranscriptTest extends TestCase
@@ -63,6 +64,27 @@ final class EarningCallTranscriptTest extends TestCase
 			date: '2026-07-22',
 			symbol: 'GOOGL',
 		))->toArray(), $dates[0]->toArray());
+	}
+
+	public function testTranscriptLatest(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/earning-call-transcript-latest.json');
+
+		$transcripts = iterator_to_array($client->earningCallTranscriptLatest());
+
+		$this->assertCount(100, $transcripts);
+		$this->assertSame((new LatestEarningCallTranscript(
+			symbol: '7011.T',
+			period: Period::Q2,
+			fiscalYear: 2025,
+			date: '2026-11-07',
+		))->toArray(), $transcripts[0]->toArray());
+		$this->assertSame((new LatestEarningCallTranscript(
+			symbol: 'NKE',
+			period: Period::Q1,
+			fiscalYear: 2027,
+			date: '2026-10-01',
+		))->toArray(), $transcripts[2]->toArray());
 	}
 
 }
