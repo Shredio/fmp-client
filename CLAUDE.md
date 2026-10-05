@@ -12,6 +12,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - Complete FMP API documentation in Markdown: https://site.financialmodelingprep.com/api-docs.md
 - Use it to look up endpoint paths, their parameters and whether an endpoint has a bulk variant.
+- The docs are not complete: `price-target-news`, `price-target-latest-news`, `grades-news` and `grades-latest-news` work although neither documentation lists them. A path that does not exist answers HTTP 404 with `[]`.
 - HTML documentation with the regional availability of every endpoint: https://site.financialmodelingprep.com/developer/docs
 - The site answers HTTP 403 to requests without a browser `User-Agent` (WebFetch and plain `curl` included), so download both with `curl -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) Chrome/129.0 Safari/537.36'`.
 
@@ -57,7 +58,7 @@ This is a PHP 8.4+ client library for the Financial Modeling Prep (FMP) API, des
 
 When implementing new FMP API endpoints:
 
-1. Fetch response to determine structure, save it to the `tests/Unit/fixtures/` directory for future testing.
+1. Fetch response to determine structure, save it to the `tests/Unit/fixtures/` directory for future testing. For a paginated endpoint also fetch older pages and several symbols before typing the payload: older records contain `null` in fields the first page always fills (`analystName` and `newsTitle` of `price-target-news`). Check the default and the maximum `limit` and the maximum `page` too, the latest feeds reject a page above 100 with HTTP 400.
 2. Create payload class in `src/Payload/` (extend from existing patterns)
 3. Run `composer compile` to automatically generate mappers. This command scans all payload classes with `#[CompileObjectMapper]` attribute and generates corresponding mapper classes in `src/Mapper/`. Mappers are generated automatically - do not create them manually.
 4. Add endpoint method signature to `FmpClient` interface with `@see` annotation containing the endpoint URL without an API key (query parameter `apikey`) and with the regional availability sentence (see "Regional availability (US only)"). Implement the method in `SymfonyFmpClient`. Add corresponding cached/delegated method to `CacheFmpClient` (cache per-symbol and list endpoints, delegate bulk and streaming endpoints).
