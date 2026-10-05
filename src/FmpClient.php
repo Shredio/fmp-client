@@ -425,7 +425,8 @@ interface FmpClient
 	public function cashFlowStatementGrowthBulk(int $year, Period $period): iterable;
 
 	/**
-	 * Available for US-listed symbols (with gaps for foreign issuers) and for foreign listings of US companies. Foreign
+	 * Complete only for US-listed symbols (with gaps for foreign issuers). A foreign listing of a US company returns
+	 * nothing or an incomplete, mostly outdated subset, so request the US listing of the company instead. Foreign
 	 * listings of foreign companies return next to no data.
 	 *
 	 * @see https://financialmodelingprep.com/stable/revenue-product-segmentation
@@ -434,7 +435,8 @@ interface FmpClient
 	public function revenueProductSegmentation(string $symbol, PeriodQuery $period = PeriodQuery::Annual): iterable;
 
 	/**
-	 * Available for US-listed symbols (with gaps for foreign issuers) and for foreign listings of US companies. Foreign
+	 * Complete only for US-listed symbols (with gaps for foreign issuers). A foreign listing of a US company returns
+	 * nothing or an incomplete, mostly outdated subset, so request the US listing of the company instead. Foreign
 	 * listings of foreign companies return next to no data.
 	 *
 	 * @see https://financialmodelingprep.com/stable/revenue-geographic-segmentation

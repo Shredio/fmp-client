@@ -2,7 +2,7 @@
 
 This document provides a comprehensive overview of all available endpoints (methods) in the FMP Client library. Each endpoint is described with its purpose and return values.
 
-The **Availability** line of each endpoint is based on the regional flag of the endpoint in the [FMP docs](https://site.financialmodelingprep.com/developer/docs) and, for the endpoints flagged as US only, on requests against the API. The docs speak of "US-based companies", but it is the listing of the symbol that decides, not the country the company is based in: `SAP` (the ADR on NYSE) returns data while `SAP.DE` does not, and Apple requested as `APC.DE` (XETRA) returns nothing. A worldwide endpoint still returns no data for a symbol FMP does not cover.
+The **Availability** line of each endpoint is based on the regional flag of the endpoint in the [FMP docs](https://site.financialmodelingprep.com/developer/docs) and, for the endpoints flagged as US only, on requests against the API. The docs speak of "US-based companies", but it is the listing of the symbol that decides, not the country the company is based in: `SAP` (the ADR on NYSE) returns data while `SAP.DE` does not, and Apple requested as `APC.DE` (XETRA) returns nothing. US-listed means listed on NYSE, NASDAQ, AMEX or CBOE (the last one lists ETFs almost exclusively); symbols traded over the counter (OTC) are covered only sporadically, for example 6 of the 50 largest foreign companies on OTC had a price target and 9 a 13F summary on 2026-10-05. A worldwide endpoint still returns no data for a symbol FMP does not cover.
 
 ## Table of Contents
 
@@ -942,7 +942,7 @@ Contains percentage growth of all cash flow statement items
 
 **Purpose:** Retrieve the revenue breakdown by product line for a company.
 
-**Availability:** US-listed symbols (with gaps for foreign issuers) and foreign listings of US companies (for example MSF.DE). Foreign listings of foreign companies (for example SAP.DE, 7203.T, CEZ.PR) return next to no data. The FMP docs do not state the availability
+**Availability:** Complete only for US-listed symbols (with gaps for foreign issuers). A foreign listing of a US company is not a substitute, request the US listing of the company instead: of 55 such listings sampled on 2026-10-05 whose US listing has data, 38 returned nothing, 11 ended before the latest fiscal year (for example MSF.DE ends with 2025-06-30 while MSFT has 2026-06-30) and 6 returned fewer records. Foreign listings of foreign companies (for example SAP.DE, 7203.T, CEZ.PR) return next to no data. The FMP docs do not state the availability
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -964,7 +964,7 @@ Contains percentage growth of all cash flow statement items
 
 **Purpose:** Retrieve the revenue breakdown by geographic region for a company.
 
-**Availability:** US-listed symbols (with gaps for foreign issuers) and foreign listings of US companies (for example MSF.DE). Foreign listings of foreign companies (for example SAP.DE, 7203.T, CEZ.PR) return next to no data. The FMP docs do not state the availability
+**Availability:** Complete only for US-listed symbols (with gaps for foreign issuers). A foreign listing of a US company is not a substitute, request the US listing of the company instead: of 55 such listings sampled on 2026-10-05 whose US listing has data, 38 returned nothing, 11 ended before the latest fiscal year (for example MSF.DE ends with 2025-06-30 while MSFT has 2026-06-30) and 6 returned fewer records. Foreign listings of foreign companies (for example SAP.DE, 7203.T, CEZ.PR) return next to no data. The FMP docs do not state the availability
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
