@@ -43,6 +43,7 @@ use Shredio\FmpClient\Mapper\ExchangeMarketHoursMapper;
 use Shredio\FmpClient\Mapper\FinancialStatementSymbolMapper;
 use Shredio\FmpClient\Mapper\GradeMapper;
 use Shredio\FmpClient\Mapper\GradesConsensusMapper;
+use Shredio\FmpClient\Mapper\GradesHistoricalMapper;
 use Shredio\FmpClient\Mapper\HistoricalChartMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodLightMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodMapper;
@@ -53,6 +54,9 @@ use Shredio\FmpClient\Mapper\IncomeStatementGrowthMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementMapper;
 use Shredio\FmpClient\Mapper\IndexMapper;
 use Shredio\FmpClient\Mapper\InsiderTradeMapper;
+use Shredio\FmpClient\Mapper\InsiderTradeStatisticsMapper;
+use Shredio\FmpClient\Mapper\InstitutionalHolderMapper;
+use Shredio\FmpClient\Mapper\InstitutionalPositionsSummaryMapper;
 use Shredio\FmpClient\Mapper\IsinSearchResultMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsTtmMapper;
@@ -60,6 +64,7 @@ use Shredio\FmpClient\Mapper\LatestFinancialStatementMapper;
 use Shredio\FmpClient\Mapper\MarketRiskPremiumMapper;
 use Shredio\FmpClient\Mapper\PressReleaseMapper;
 use Shredio\FmpClient\Mapper\PriceTargetConsensusMapper;
+use Shredio\FmpClient\Mapper\PriceTargetSummaryMapper;
 use Shredio\FmpClient\Mapper\QuoteMapper;
 use Shredio\FmpClient\Mapper\RatiosMapper;
 use Shredio\FmpClient\Mapper\RatiosTtmMapper;
@@ -101,6 +106,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\Grade;
 use Shredio\FmpClient\Payload\GradesConsensus;
+use Shredio\FmpClient\Payload\GradesHistorical;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
 use Shredio\FmpClient\Payload\HistoricalPriceEodLight;
@@ -111,6 +117,9 @@ use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
 use Shredio\FmpClient\Payload\Index;
 use Shredio\FmpClient\Payload\InsiderTrade;
+use Shredio\FmpClient\Payload\InsiderTradeStatistics;
+use Shredio\FmpClient\Payload\InstitutionalHolder;
+use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
@@ -119,6 +128,7 @@ use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\PriceTargetConsensus;
+use Shredio\FmpClient\Payload\PriceTargetSummary;
 use Shredio\FmpClient\Payload\Quote;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
@@ -1620,6 +1630,39 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/price-target-summary
+	 */
+	public function priceTargetSummary(string $symbol): ?PriceTargetSummary
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/price-target-summary', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/price-target-summary', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(PriceTargetSummary::class, new PriceTargetSummaryMapper(), $item, $url);
+			if ($object !== null) {
+				return $object;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/price-target-summary-bulk
+	 * @return iterable<int, PriceTargetSummary>
+	 */
+	public function priceTargetSummaryBulk(): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/price-target-summary-bulk');
+
+		foreach ($this->requestCsv('stable/price-target-summary-bulk') as $item) {
+			$object = $this->map(PriceTargetSummary::class, new PriceTargetSummaryMapper(), $item, $url, true);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/discounted-cash-flow
 	 */
 	public function discountedCashFlow(string $symbol): ?DiscountedCashFlow
@@ -1654,6 +1697,22 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/upgrades-downgrades-consensus-bulk
+	 * @return iterable<int, GradesConsensus>
+	 */
+	public function gradesConsensusBulk(): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/upgrades-downgrades-consensus-bulk');
+
+		foreach ($this->requestCsv('stable/upgrades-downgrades-consensus-bulk') as $item) {
+			$object = $this->map(GradesConsensus::class, new GradesConsensusMapper(), $item, $url, true);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/grades
 	 * @param int<1, 1000>|null $limit
 	 * @return iterable<int, Grade>
@@ -1665,6 +1724,24 @@ final readonly class SymfonyFmpClient implements FmpClient
 
 		foreach ($this->requestJson('stable/grades', $query) as $item) {
 			$object = $this->map(Grade::class, new GradeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/grades-historical
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, GradesHistorical>
+	 */
+	public function gradesHistorical(string $symbol, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/grades-historical', $query);
+
+		foreach ($this->requestJson('stable/grades-historical', $query) as $item) {
+			$object = $this->map(GradesHistorical::class, new GradesHistoricalMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -1691,6 +1768,22 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/insider-trading/statistics
+	 * @return iterable<int, InsiderTradeStatistics>
+	 */
+	public function insiderTradeStatistics(string $symbol): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/insider-trading/statistics', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/insider-trading/statistics', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(InsiderTradeStatistics::class, new InsiderTradeStatisticsMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/senate-trades
 	 * @param int<1, 1000>|null $limit
 	 * @return iterable<int, SenateTrade>
@@ -1702,6 +1795,45 @@ final readonly class SymfonyFmpClient implements FmpClient
 
 		foreach ($this->requestJson('stable/senate-trades', $query) as $item) {
 			$object = $this->map(SenateTrade::class, new SenateTradeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/institutional-ownership/symbol-positions-summary
+	 * @param int<1, 4> $quarter
+	 */
+	public function institutionalPositionsSummary(string $symbol, int $year, int $quarter): ?InstitutionalPositionsSummary
+	{
+		$query = ['symbol' => $symbol, 'year' => $year, 'quarter' => $quarter];
+		$url = $this->buildUrlWithoutApiKey('stable/institutional-ownership/symbol-positions-summary', $query);
+
+		foreach ($this->requestJson('stable/institutional-ownership/symbol-positions-summary', $query) as $item) {
+			$object = $this->map(InstitutionalPositionsSummary::class, new InstitutionalPositionsSummaryMapper(), $item, $url);
+			if ($object !== null) {
+				return $object;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/institutional-ownership/extract-analytics/holder
+	 * @param int<1, 4> $quarter
+	 * @param int<0, max> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, InstitutionalHolder>
+	 */
+	public function institutionalHolders(string $symbol, int $year, int $quarter, int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'year' => $year, 'quarter' => $quarter, 'page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/institutional-ownership/extract-analytics/holder', $query);
+
+		foreach ($this->requestJson('stable/institutional-ownership/extract-analytics/holder', $query) as $item) {
+			$object = $this->map(InstitutionalHolder::class, new InstitutionalHolderMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}

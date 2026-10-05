@@ -35,6 +35,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\Grade;
 use Shredio\FmpClient\Payload\GradesConsensus;
+use Shredio\FmpClient\Payload\GradesHistorical;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
 use Shredio\FmpClient\Payload\HistoricalPriceEodLight;
@@ -45,6 +46,9 @@ use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
 use Shredio\FmpClient\Payload\Index;
 use Shredio\FmpClient\Payload\InsiderTrade;
+use Shredio\FmpClient\Payload\InsiderTradeStatistics;
+use Shredio\FmpClient\Payload\InstitutionalHolder;
+use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
@@ -53,6 +57,7 @@ use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\PriceTargetConsensus;
+use Shredio\FmpClient\Payload\PriceTargetSummary;
 use Shredio\FmpClient\Payload\Quote;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
@@ -490,6 +495,19 @@ interface FmpClient
 	public function priceTargetConsensus(string $symbol): ?PriceTargetConsensus;
 
 	/**
+	 * Number and average of the analyst price targets published in the last month, quarter, year and overall.
+	 *
+	 * @see https://financialmodelingprep.com/stable/price-target-summary
+	 */
+	public function priceTargetSummary(string $symbol): ?PriceTargetSummary;
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/price-target-summary-bulk
+	 * @return iterable<int, PriceTargetSummary>
+	 */
+	public function priceTargetSummaryBulk(): iterable;
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/discounted-cash-flow
 	 */
 	public function discountedCashFlow(string $symbol): ?DiscountedCashFlow;
@@ -502,6 +520,14 @@ interface FmpClient
 	public function gradesConsensus(string $symbol): ?GradesConsensus;
 
 	/**
+	 * Bulk variant of the grades consensus, the API serves it under the upgrades-downgrades name.
+	 *
+	 * @see https://financialmodelingprep.com/stable/upgrades-downgrades-consensus-bulk
+	 * @return iterable<int, GradesConsensus>
+	 */
+	public function gradesConsensusBulk(): iterable;
+
+	/**
 	 * Individual rating actions (upgrade, downgrade, maintain) ordered from the newest to the oldest.
 	 *
 	 * @see https://financialmodelingprep.com/stable/grades
@@ -509,6 +535,15 @@ interface FmpClient
 	 * @return iterable<int, Grade>
 	 */
 	public function grades(string $symbol, ?int $limit = null): iterable;
+
+	/**
+	 * Monthly snapshots of the number of analysts per rating bucket, ordered from the newest to the oldest.
+	 *
+	 * @see https://financialmodelingprep.com/stable/grades-historical
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, GradesHistorical>
+	 */
+	public function gradesHistorical(string $symbol, ?int $limit = null): iterable;
 
 	/**
 	 * Insider transactions reported to the SEC on forms 3, 4 and 5, ordered from the newest to the oldest.
@@ -521,6 +556,14 @@ interface FmpClient
 	public function insiderTrades(string $symbol, int $page = 0, ?int $limit = null): iterable;
 
 	/**
+	 * Insider transactions aggregated per quarter, ordered from the newest to the oldest quarter.
+	 *
+	 * @see https://financialmodelingprep.com/stable/insider-trading/statistics
+	 * @return iterable<int, InsiderTradeStatistics>
+	 */
+	public function insiderTradeStatistics(string $symbol): iterable;
+
+	/**
 	 * Trades disclosed by U.S. senators, ordered from the newest to the oldest disclosure.
 	 *
 	 * @see https://financialmodelingprep.com/stable/senate-trades
@@ -528,6 +571,26 @@ interface FmpClient
 	 * @return iterable<int, SenateTrade>
 	 */
 	public function senateTrades(string $symbol, ?int $limit = null): iterable;
+
+	/**
+	 * Institutional ownership of a symbol aggregated from the 13F filings of a single calendar quarter.
+	 *
+	 * @see https://financialmodelingprep.com/stable/institutional-ownership/symbol-positions-summary
+	 * @param int<1, 4> $quarter
+	 */
+	public function institutionalPositionsSummary(string $symbol, int $year, int $quarter): ?InstitutionalPositionsSummary;
+
+	/**
+	 * Institutional holders of a symbol from the 13F filings of a single calendar quarter, ordered from the largest
+	 * number of shares held to the smallest.
+	 *
+	 * @see https://financialmodelingprep.com/stable/institutional-ownership/extract-analytics/holder
+	 * @param int<1, 4> $quarter
+	 * @param int<0, max> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, InstitutionalHolder>
+	 */
+	public function institutionalHolders(string $symbol, int $year, int $quarter, int $page = 0, ?int $limit = null): iterable;
 
 	/**
 	 * Quarters for which an earning call transcript is available, ordered from the newest to the oldest.

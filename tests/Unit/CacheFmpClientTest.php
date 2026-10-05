@@ -135,6 +135,57 @@ final class CacheFmpClientTest extends TestCase
 		$this->assertTrue($cache->has('fmp-client.v2.gradesConsensus.AAPL'), 'Cache should have the key after first request');
 	}
 
+	public function testInstitutionalHoldersAreCachedPerQuarterPageAndLimit(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/institutional-ownership-extract-analytics-holder-aapl-2026-q2.json'),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+
+		// First request
+		$holders = iterator_to_array($client->institutionalHolders('AAPL', 2026, 2, limit: 100));
+
+		$this->assertCount(100, $holders);
+		$this->assertTrue($cache->has('fmp-client.v2.institutionalHolders.AAPL.2026.2.0.100'), 'Cache should have the key after first request');
+
+		// Second request is served from the cache, the mock client has no response left
+		$cachedHolders = iterator_to_array($client->institutionalHolders('AAPL', 2026, 2, limit: 100));
+
+		$this->assertCount(100, $cachedHolders);
+		$this->assertSame($holders[0]->toArray(), $cachedHolders[0]->toArray());
+	}
+
+	public function testInstitutionalPositionsSummaryIsCachedPerQuarter(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/institutional-ownership-symbol-positions-summary-aapl-2026-q2.json'),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+
+		// First request
+		$summary = $client->institutionalPositionsSummary('AAPL', 2026, 2);
+
+		$this->assertNotNull($summary);
+		$this->assertTrue($cache->has('fmp-client.v2.institutionalPositionsSummary.AAPL.2026.2'), 'Cache should have the key after first request');
+
+		// Second request is served from the cache, the mock client has no response left
+		$this->assertSame($summary->toArray(), $client->institutionalPositionsSummary('AAPL', 2026, 2)?->toArray());
+	}
+
+	public function testBulkEndpointIsNotCached(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/upgrades-downgrades-consensus-bulk.csv'),
+			new Psr16Cache($adapter = new ArrayAdapter()),
+			3600,
+		);
+
+		$this->assertNotEmpty(iterator_to_array($client->gradesConsensusBulk()));
+		$this->assertSame([], $adapter->getValues());
+	}
+
 	public function testMissingNullable(): void
 	{
 		$client = new CacheFmpClient(

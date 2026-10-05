@@ -37,6 +37,7 @@ use Shredio\FmpClient\Payload\ExchangeMarketHours;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\Grade;
 use Shredio\FmpClient\Payload\GradesConsensus;
+use Shredio\FmpClient\Payload\GradesHistorical;
 use Shredio\FmpClient\Payload\HistoricalChart;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
 use Shredio\FmpClient\Payload\HistoricalPriceEodLight;
@@ -47,6 +48,9 @@ use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
 use Shredio\FmpClient\Payload\Index;
 use Shredio\FmpClient\Payload\InsiderTrade;
+use Shredio\FmpClient\Payload\InsiderTradeStatistics;
+use Shredio\FmpClient\Payload\InstitutionalHolder;
+use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
@@ -55,6 +59,7 @@ use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
 use Shredio\FmpClient\Payload\PriceTargetConsensus;
+use Shredio\FmpClient\Payload\PriceTargetSummary;
 use Shredio\FmpClient\Payload\Quote;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
@@ -706,6 +711,19 @@ final readonly class CacheFmpClient implements FmpClient
 		return $this->cachedNullable(__FUNCTION__, fn () => $this->client->priceTargetConsensus($symbol), $symbol);
 	}
 
+	public function priceTargetSummary(string $symbol): ?PriceTargetSummary
+	{
+		return $this->cachedNullable(__FUNCTION__, fn () => $this->client->priceTargetSummary($symbol), $symbol);
+	}
+
+	/**
+	 * @return iterable<int, PriceTargetSummary>
+	 */
+	public function priceTargetSummaryBulk(): iterable
+	{
+		return $this->client->priceTargetSummaryBulk();
+	}
+
 	public function discountedCashFlow(string $symbol): ?DiscountedCashFlow
 	{
 		return $this->cachedNullable(__FUNCTION__, fn () => $this->client->discountedCashFlow($symbol), $symbol);
@@ -717,6 +735,14 @@ final readonly class CacheFmpClient implements FmpClient
 	}
 
 	/**
+	 * @return iterable<int, GradesConsensus>
+	 */
+	public function gradesConsensusBulk(): iterable
+	{
+		return $this->client->gradesConsensusBulk();
+	}
+
+	/**
 	 * @param int<1, 1000>|null $limit
 	 * @return iterable<int, Grade>
 	 */
@@ -725,6 +751,19 @@ final readonly class CacheFmpClient implements FmpClient
 		return $this->cached(
 			__FUNCTION__,
 			fn () => $this->client->grades($symbol, $limit),
+			sprintf('%s.%s', $symbol, $limit ?? 'all'),
+		);
+	}
+
+	/**
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, GradesHistorical>
+	 */
+	public function gradesHistorical(string $symbol, ?int $limit = null): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->gradesHistorical($symbol, $limit),
 			sprintf('%s.%s', $symbol, $limit ?? 'all'),
 		);
 	}
@@ -744,6 +783,14 @@ final readonly class CacheFmpClient implements FmpClient
 	}
 
 	/**
+	 * @return iterable<int, InsiderTradeStatistics>
+	 */
+	public function insiderTradeStatistics(string $symbol): iterable
+	{
+		return $this->cached(__FUNCTION__, fn () => $this->client->insiderTradeStatistics($symbol), $symbol);
+	}
+
+	/**
 	 * @param int<1, 1000>|null $limit
 	 * @return iterable<int, SenateTrade>
 	 */
@@ -753,6 +800,33 @@ final readonly class CacheFmpClient implements FmpClient
 			__FUNCTION__,
 			fn () => $this->client->senateTrades($symbol, $limit),
 			sprintf('%s.%s', $symbol, $limit ?? 'all'),
+		);
+	}
+
+	/**
+	 * @param int<1, 4> $quarter
+	 */
+	public function institutionalPositionsSummary(string $symbol, int $year, int $quarter): ?InstitutionalPositionsSummary
+	{
+		return $this->cachedNullable(
+			__FUNCTION__,
+			fn () => $this->client->institutionalPositionsSummary($symbol, $year, $quarter),
+			sprintf('%s.%d.%d', $symbol, $year, $quarter),
+		);
+	}
+
+	/**
+	 * @param int<1, 4> $quarter
+	 * @param int<0, max> $page
+	 * @param int<1, 100>|null $limit
+	 * @return iterable<int, InstitutionalHolder>
+	 */
+	public function institutionalHolders(string $symbol, int $year, int $quarter, int $page = 0, ?int $limit = null): iterable
+	{
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->institutionalHolders($symbol, $year, $quarter, $page, $limit),
+			sprintf('%s.%d.%d.%d.%s', $symbol, $year, $quarter, $page, $limit ?? 'all'),
 		);
 	}
 

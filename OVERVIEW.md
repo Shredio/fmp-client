@@ -1522,6 +1522,41 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 ---
 
+### `priceTargetSummary()`
+
+**Purpose:** Retrieve the number and the average of the analyst price targets published for a specific company in the last month, quarter, year and overall. Only available for symbols with analyst coverage; foreign listings and ETFs typically return no data.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+
+**Return Values:** `PriceTargetSummary|null` (`null` when the symbol has no analyst coverage)
+- `symbol` - Ticker symbol
+- `lastMonthCount` - Number of price targets published in the last month
+- `lastMonthAvgPriceTarget` - Average price target of the last month, 0 when none was published
+- `lastQuarterCount` - Number of price targets published in the last quarter
+- `lastQuarterAvgPriceTarget` - Average price target of the last quarter, 0 when none was published
+- `lastYearCount` - Number of price targets published in the last year
+- `lastYearAvgPriceTarget` - Average price target of the last year, 0 when none was published
+- `allTimeCount` - Number of all recorded price targets
+- `allTimeAvgPriceTarget` - Average of all recorded price targets
+- `publishers` - Names of the news sources the price targets were collected from (`list<non-empty-string>`), may be empty. The API returns it as a JSON document wrapped in a string, the client decodes it
+
+**API endpoint:** `https://financialmodelingprep.com/stable/price-target-summary`
+
+---
+
+### `priceTargetSummaryBulk()`
+
+**Purpose:** Bulk retrieval of price target summaries for all symbols with analyst coverage (about 5 300 symbols).
+
+**Parameters:** None
+
+**Return Values:** `iterable<PriceTargetSummary>` (same structure as `priceTargetSummary()`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/price-target-summary-bulk`
+
+---
+
 ### `discountedCashFlow()`
 
 **Purpose:** Retrieve the discounted cash flow valuation for a specific company together with the current stock price. Available for companies with financial statements; ETFs and indexes return no data.
@@ -1559,6 +1594,18 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 ---
 
+### `gradesConsensusBulk()`
+
+**Purpose:** Bulk retrieval of the analyst rating distribution and the resulting consensus rating for all symbols with analyst coverage (about 13 400 symbols). The API serves the bulk variant of `gradesConsensus()` under the upgrades-downgrades name.
+
+**Parameters:** None
+
+**Return Values:** `iterable<GradesConsensus>` (same structure as `gradesConsensus()`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/upgrades-downgrades-consensus-bulk`
+
+---
+
 ### `grades()`
 
 **Purpose:** Retrieve individual analyst rating actions for a specific company, ordered from the newest to the oldest. Without a limit the endpoint returns the full history (AAPL currently returns 1794 records), so passing a limit is recommended.
@@ -1576,6 +1623,27 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `action` - Type of the action (`maintain`, `upgrade`, `downgrade`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/grades`
+
+---
+
+### `gradesHistorical()`
+
+**Purpose:** Retrieve monthly snapshots of the analyst rating distribution for a specific company, ordered from the newest to the oldest. Without a limit the endpoint returns the full history (AAPL currently returns 94 monthly records back to December 2018).
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null) - Maximum number of records, `null` returns the full history
+
+**Return Values:** `iterable<GradesHistorical>`
+- `symbol` - Ticker symbol
+- `date` - First day of the month the snapshot belongs to
+- `analystRatingsStrongBuy` - Number of strong buy ratings
+- `analystRatingsBuy` - Number of buy ratings
+- `analystRatingsHold` - Number of hold ratings
+- `analystRatingsSell` - Number of sell ratings
+- `analystRatingsStrongSell` - Number of strong sell ratings
+
+**API endpoint:** `https://financialmodelingprep.com/stable/grades-historical`
 
 ---
 
@@ -1612,6 +1680,32 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 ---
 
+### `insiderTradeStatistics()`
+
+**Purpose:** Retrieve insider transactions of a specific company aggregated per calendar quarter, ordered from the newest to the oldest quarter. The endpoint always returns the full history (AAPL currently returns 94 quarters back to 2003). Only available for SEC registrants, foreign listings return no data.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+
+**Return Values:** `iterable<InsiderTradeStatistics>`
+- `symbol` - Ticker symbol
+- `cik` - CIK of the company
+- `year` - Calendar year of the transactions
+- `quarter` - Calendar quarter of the transactions (1-4)
+- `acquiredTransactions` - Number of transactions in which securities were acquired (acquisition code A)
+- `disposedTransactions` - Number of transactions in which securities were disposed of (disposition code D)
+- `acquiredDisposedRatio` - `acquiredTransactions` divided by `disposedTransactions`, 0 when the quarter has no disposition
+- `totalAcquired` - Number of securities acquired, fractional for some filings
+- `totalDisposed` - Number of securities disposed of, fractional for some filings
+- `averageAcquired` - Average number of securities per acquisition
+- `averageDisposed` - Average number of securities per disposition
+- `totalPurchases` - Number of open market purchases (transaction type P-Purchase)
+- `totalSales` - Number of open market sales (transaction type S-Sale)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/insider-trading/statistics`
+
+---
+
 ### `senateTrades()`
 
 **Purpose:** Retrieve trades in a specific company disclosed by U.S. senators, ordered from the newest to the oldest disclosure.
@@ -1639,6 +1733,117 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `capitalGainsOver200USD` - Whether capital gains exceeded 200 USD, returned by the API as the string "True" or "False"
 
 **API endpoint:** `https://financialmodelingprep.com/stable/senate-trades`
+
+---
+
+### `institutionalPositionsSummary()`
+
+**Purpose:** Retrieve the institutional ownership of a specific company aggregated from the 13F filings of a single calendar quarter. Institutions file within 45 days after the end of a quarter, so the latest quarter is empty or incomplete until then. Only available for securities reported on 13F, foreign listings return no data. Requires the Ultimate or Enterprise FMP plan.
+
+Properties prefixed with `last` hold the value of the previous quarter, properties suffixed with `Change` the difference between the two quarters.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `year` (int) - Calendar year
+- `quarter` (int) - Calendar quarter (1-4)
+
+**Return Values:** `InstitutionalPositionsSummary|null` (`null` when no filing covers the given quarter)
+- `symbol` - Ticker symbol
+- `cik` - CIK of the company
+- `date` - Last day of the reported quarter
+- `investorsHolding` - Number of institutions holding the security
+- `lastInvestorsHolding` - Number of institutions holding the security in the previous quarter
+- `investorsHoldingChange` - Change in the number of institutions holding the security
+- `numberOf13Fshares` - Number of shares held by institutions
+- `lastNumberOf13Fshares` - Number of shares held by institutions in the previous quarter
+- `numberOf13FsharesChange` - Change in the number of shares held by institutions
+- `totalInvested` - Market value of the institutional positions
+- `lastTotalInvested` - Market value of the institutional positions in the previous quarter
+- `totalInvestedChange` - Change in the market value of the institutional positions
+- `ownershipPercent` - Share of the company held by institutions in percent
+- `lastOwnershipPercent` - Share of the company held by institutions in the previous quarter in percent
+- `ownershipPercentChange` - Change of the institutional ownership in percentage points
+- `newPositions` - Number of institutions that opened a position
+- `lastNewPositions` - Number of institutions that opened a position in the previous quarter
+- `newPositionsChange` - Change in the number of opened positions
+- `increasedPositions` - Number of institutions that increased their position
+- `lastIncreasedPositions` - Number of institutions that increased their position in the previous quarter
+- `increasedPositionsChange` - Change in the number of increased positions
+- `closedPositions` - Number of institutions that closed their position
+- `lastClosedPositions` - Number of institutions that closed their position in the previous quarter
+- `closedPositionsChange` - Change in the number of closed positions
+- `reducedPositions` - Number of institutions that reduced their position
+- `lastReducedPositions` - Number of institutions that reduced their position in the previous quarter
+- `reducedPositionsChange` - Change in the number of reduced positions
+- `totalCalls` - Number of shares under call option positions
+- `lastTotalCalls` - Number of shares under call option positions in the previous quarter
+- `totalCallsChange` - Change in the number of shares under call option positions
+- `totalPuts` - Number of shares under put option positions
+- `lastTotalPuts` - Number of shares under put option positions in the previous quarter
+- `totalPutsChange` - Change in the number of shares under put option positions
+- `putCallRatio` - `totalPuts` divided by `totalCalls`
+- `lastPutCallRatio` - Put/call ratio of the previous quarter
+- `putCallRatioChange` - Difference between the two put/call ratios multiplied by 100
+
+**API endpoint:** `https://financialmodelingprep.com/stable/institutional-ownership/symbol-positions-summary`
+
+---
+
+### `institutionalHolders()`
+
+**Purpose:** Retrieve the institutional holders of a specific company from the 13F filings of a single calendar quarter, ordered from the largest number of shares held to the smallest. Option positions are returned as separate records next to the stock position of the same holder. Requires the Ultimate or Enterprise FMP plan.
+
+Properties prefixed with `last` hold the value of the previous quarter, properties prefixed with `changeIn` the difference between the two quarters.
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `year` (int) - Calendar year
+- `quarter` (int) - Calendar quarter (1-4)
+- `page` (int) - Page number, starting at 0
+- `limit` (int|null) - Maximum number of records per page (1-100), `null` uses the API default of 10
+
+**Return Values:** `iterable<InstitutionalHolder>`
+- `date` - Last day of the reported quarter
+- `cik` - CIK of the holder
+- `filingDate` - Date the 13F filing was filed
+- `investorName` - Name of the holder
+- `symbol` - Ticker symbol
+- `securityName` - Name of the security as reported in the filing
+- `typeOfSecurity` - Class of the security as reported in the filing (for example COM)
+- `securityCusip` - CUSIP of the security
+- `sharesType` - SH for shares, PRN for a principal amount
+- `putCallShare` - Share for a stock position, PUT or CALL for an option position
+- `investmentDiscretion` - Investment discretion (SOLE, DFND for shared-defined, OTR for other)
+- `industryTitle` - SIC industry of the company, empty for securities without one (for example ETFs)
+- `weight` - Share of the position in the portfolio of the holder in percent
+- `lastWeight` - Portfolio weight in the previous quarter in percent
+- `changeInWeight` - Change of the portfolio weight in percentage points
+- `changeInWeightPercentage` - Relative change of the portfolio weight in percent
+- `marketValue` - Market value of the position
+- `lastMarketValue` - Market value of the position in the previous quarter
+- `changeInMarketValue` - Change of the market value
+- `changeInMarketValuePercentage` - Relative change of the market value in percent
+- `sharesNumber` - Number of shares held
+- `lastSharesNumber` - Number of shares held in the previous quarter
+- `changeInSharesNumber` - Change in the number of shares held
+- `changeInSharesNumberPercentage` - Relative change in the number of shares held in percent
+- `quarterEndPrice` - Price of the security at the end of the quarter
+- `avgPricePaid` - Average price the holder paid for the position
+- `isNew` - Whether the position was opened in the quarter
+- `isSoldOut` - Whether the position was closed in the quarter
+- `ownership` - Share of the company held by the holder in percent
+- `lastOwnership` - Share of the company held in the previous quarter in percent
+- `changeInOwnership` - Change of the ownership in percentage points
+- `changeInOwnershipPercentage` - Relative change of the ownership in percent
+- `holdingPeriod` - Number of quarters the position has been held
+- `firstAdded` - Last day of the quarter the position was first reported in
+- `performance` - Gain or loss of the position over the quarter
+- `performancePercentage` - Gain or loss of the position over the quarter in percent
+- `lastPerformance` - Gain or loss of the position over the previous quarter
+- `changeInPerformance` - Difference between the performance of the two quarters
+- `isCountedForPerformance` - Whether the position is included in the performance of the holder
+
+**API endpoint:** `https://financialmodelingprep.com/stable/institutional-ownership/extract-analytics/holder`
 
 ---
 

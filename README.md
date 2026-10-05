@@ -174,6 +174,16 @@ foreach ($fmpClient->eodBulkQuotes($date) as $quote) {
 foreach ($fmpClient->incomeStatementBulk('2023') as $statement) {
     echo "{$statement->symbol}: Revenue {$statement->revenue}\n";
 }
+
+// Bulk analyst rating consensus
+foreach ($fmpClient->gradesConsensusBulk() as $grades) {
+    echo "{$grades->symbol}: {$grades->consensus}\n";
+}
+
+// Bulk price target summaries
+foreach ($fmpClient->priceTargetSummaryBulk() as $summary) {
+    echo "{$summary->symbol}: {$summary->lastYearCount} targets, average {$summary->lastYearAvgPriceTarget}\n";
+}
 ```
 
 ### Calendar Data
@@ -312,6 +322,17 @@ foreach ($fmpClient->grades('AAPL', limit: 10) as $grade) {
     echo "{$grade->date} {$grade->gradingCompany}: {$grade->previousGrade} -> {$grade->newGrade} ({$grade->action})\n";
 }
 
+// Rating distribution over time (monthly snapshots)
+foreach ($fmpClient->gradesHistorical('AAPL', limit: 12) as $snapshot) {
+    echo "{$snapshot->date}: buy {$snapshot->analystRatingsBuy}, hold {$snapshot->analystRatingsHold}, sell {$snapshot->analystRatingsSell}\n";
+}
+
+// Number and average of the published price targets
+$priceTargetSummary = $fmpClient->priceTargetSummary('AAPL');
+if ($priceTargetSummary !== null) {
+    echo "Last quarter: {$priceTargetSummary->lastQuarterCount} targets, average {$priceTargetSummary->lastQuarterAvgPriceTarget}\n";
+}
+
 // US Treasury rates
 foreach ($fmpClient->treasuryRates() as $rate) {
     echo "Date: {$rate->date}\n";
@@ -328,6 +349,23 @@ foreach ($fmpClient->treasuryRates() as $rate) {
 foreach ($fmpClient->insiderTrades('AAPL', limit: 20) as $trade) {
     echo "{$trade->transactionDate} {$trade->reportingName} ({$trade->typeOfOwner})\n";
     echo "  {$trade->transactionType}: {$trade->securitiesTransacted} @ {$trade->price}\n";
+}
+
+// Insider transactions aggregated per quarter
+foreach ($fmpClient->insiderTradeStatistics('AAPL') as $statistics) {
+    echo "{$statistics->year} Q{$statistics->quarter}: {$statistics->totalPurchases} purchases, {$statistics->totalSales} sales\n";
+}
+
+// Institutional ownership from the 13F filings of a single quarter
+$positions = $fmpClient->institutionalPositionsSummary('AAPL', 2026, 2);
+if ($positions !== null) {
+    echo "{$positions->investorsHolding} institutions hold {$positions->ownershipPercent}%\n";
+    echo "New positions: {$positions->newPositions}, closed positions: {$positions->closedPositions}\n";
+}
+
+// The largest institutional holders of the quarter
+foreach ($fmpClient->institutionalHolders('AAPL', 2026, 2, limit: 20) as $holder) {
+    echo "{$holder->investorName}: {$holder->sharesNumber} shares ({$holder->ownership}%), change {$holder->changeInSharesNumber}\n";
 }
 
 // Trades disclosed by U.S. senators
@@ -434,8 +472,12 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `analystEstimates(string $symbol, string $period, int $page, int $limit)` - Analyst estimates
 - `priceTargetConsensus(string $symbol)` - Consensus analyst price target (high, low, consensus, median)
 - `discountedCashFlow(string $symbol)` - DCF valuation together with the current stock price
+- `priceTargetSummary(string $symbol)` - Number and average of the price targets published in the last month, quarter, year and overall
+- `priceTargetSummaryBulk()` - Bulk price target summaries
 - `gradesConsensus(string $symbol)` - Analyst rating distribution and the resulting consensus rating
+- `gradesConsensusBulk()` - Bulk analyst rating distributions and consensus ratings
 - `grades(string $symbol, int|null $limit)` - Individual analyst rating actions (upgrade, downgrade, maintain)
+- `gradesHistorical(string $symbol, int|null $limit)` - Monthly snapshots of the analyst rating distribution
 - `marketRiskPremium()` - Market risk premium by country
 - `treasuryRates()` - US Treasury rates for various maturities
 
@@ -451,6 +493,9 @@ echo "Metrics count: " . count($metrics) . "\n";
 
 ### Ownership & Insider Activity
 - `insiderTrades(string $symbol, int $page, int|null $limit)` - Insider transactions reported on SEC forms 3, 4 and 5
+- `insiderTradeStatistics(string $symbol)` - Insider transactions aggregated per quarter (counts and volumes of acquisitions and dispositions)
+- `institutionalPositionsSummary(string $symbol, int $year, int $quarter)` - Institutional ownership aggregated from the 13F filings of a quarter
+- `institutionalHolders(string $symbol, int $year, int $quarter, int $page, int|null $limit)` - Institutional holders of a quarter with the change of their position
 - `senateTrades(string $symbol, int|null $limit)` - Trades disclosed by U.S. senators
 
 ### Earning Call Transcripts
