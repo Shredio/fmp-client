@@ -98,18 +98,24 @@ interface FmpClient
 	public function promise(callable $fn): FmpPromise;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/available-exchanges
 	 * @return iterable<int, AvailableExchange>
 	 */
 	public function availableExchanges(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/all-exchange-market-hours
 	 * @return iterable<int, ExchangeMarketHours>
 	 */
 	public function allExchangeMarketHours(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/holidays-by-exchange
 	 * @return iterable<int, HolidayByExchange>
 	 */
@@ -140,36 +146,48 @@ interface FmpClient
 	public function cryptocurrencyList(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/stock-list
 	 * @return iterable<int, Stock>
 	 */
 	public function stockList(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/actively-trading-list
 	 * @return iterable<int, ActivelyTrading>
 	 */
 	public function activelyTradingList(): iterable;
 
 	/**
+	 * Only available for US-based companies.
+	 *
 	 * @see https://financialmodelingprep.com/stable/symbol-change
 	 * @return iterable<int, SymbolChange>
 	 */
 	public function symbolChangeList(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/search-isin
 	 * @return iterable<int, IsinSearchResult>
 	 */
 	public function searchIsin(string $isin): iterable;
 
 	/**
+	 * Only available for US-based companies.
+	 *
 	 * @see https://financialmodelingprep.com/stable/delisted-companies
 	 * @return iterable<int, DelistedCompany>
 	 */
 	public function delistedCompanies(int $limit = 100, int $page = 0): iterable;
 
 	/**
+	 * Only available for US-based companies.
+	 *
 	 * @see https://financialmodelingprep.com/stable/news/press-releases-latest
 	 * @return iterable<int, PressRelease>
 	 */
@@ -183,22 +201,30 @@ interface FmpClient
 	public function stockNewsLatest(int $limit, int $page = 0): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/profile
 	 */
 	public function companyProfile(string $symbol): ?CompanyProfile;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/profile-bulk
 	 * @return iterable<int, CompanyProfile>
 	 */
 	public function companyProfileBulk(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/shares-float
 	 */
 	public function sharesFloat(string $symbol): ?SharesFloat;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/shares-float-all
 	 * @param int<1, 5000> $limit
 	 * @return iterable<int, SharesFloat>
@@ -206,6 +232,8 @@ interface FmpClient
 	public function sharesFloatAll(int $limit = 1000, int $page = 0): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/balance-sheet-statement
 	 * @param int<1, 1000> $limit
 	 * @return iterable<int, BalanceSheetStatement>
@@ -213,24 +241,32 @@ interface FmpClient
 	public function balanceSheetStatement(string $symbol, int $limit = 4, PeriodQuery|Period $period = PeriodQuery::FY): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/balance-sheet-statement-bulk
 	 * @return iterable<int, BalanceSheetStatement>
 	 */
 	public function balanceSheetStatementBulk(int $year, Period $period = Period::FY): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/analyst-estimates
 	 * @return iterable<int, AnalystEstimate>
 	 */
 	public function analystEstimates(string $symbol, string $period = 'annual', int $page = 0, int $limit = 6): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/dividends-calendar
 	 * @return iterable<int, Dividend>
 	 */
 	public function dividendsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/dividends
 	 * @param int<1, 1000>|null $limit
 	 * @return iterable<int, Dividend>
@@ -238,12 +274,16 @@ interface FmpClient
 	public function dividends(string $symbol, ?int $limit = null): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/earnings-calendar
 	 * @return iterable<int, EarningsCalendarItem>
 	 */
 	public function earningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/earnings-calendar?includeReportTimes=true
 	 * @return iterable<int, DetailedEarningsCalendarItem>
 	 */
@@ -252,6 +292,7 @@ interface FmpClient
 	/**
 	 * Returns both upcoming and historical earnings reports for a single symbol, ordered from the newest to the oldest.
 	 * Upcoming reports have null actual values.
+	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/earnings
 	 * @param int<1, 1000>|null $limit
@@ -260,12 +301,16 @@ interface FmpClient
 	public function earnings(string $symbol, ?int $limit = null): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/splits
 	 * @return iterable<int, StockSplit>
 	 */
 	public function splits(string $symbol): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/splits-calendar
 	 * @return iterable<int, StockSplit>
 	 */
@@ -278,6 +323,8 @@ interface FmpClient
 	public function economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/latest-financial-statements
 	 * @param int<0, 100> $page
 	 * @param int<1, 250> $limit
@@ -286,6 +333,8 @@ interface FmpClient
 	public function latestFinancialStatements(int $page = 0, int $limit = 250): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/income-statement
 	 * @param int<1, 1000> $limit
 	 * @return iterable<int, IncomeStatement>
@@ -293,6 +342,8 @@ interface FmpClient
 	public function incomeStatement(string $symbol, int $limit = 4, PeriodQuery|Period $period = PeriodQuery::FY): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/income-statement-bulk
 	 * @return iterable<int, IncomeStatement>
 	 */
@@ -300,6 +351,7 @@ interface FmpClient
 
 	/**
 	 * Returns a historical series of trailing twelve months income statements, ordered from the newest to the oldest.
+	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/income-statement-ttm
 	 * @param int<1, 1000>|null $limit
@@ -308,6 +360,8 @@ interface FmpClient
 	public function incomeStatementTtm(string $symbol, ?int $limit = null): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/cash-flow-statement
 	 * @param int<1, 1000> $limit
 	 * @return iterable<int, CashFlowStatement>
@@ -315,78 +369,104 @@ interface FmpClient
 	public function cashFlowStatement(string $symbol, int $limit = 4, PeriodQuery|Period $period = PeriodQuery::FY): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/cash-flow-statement-bulk
 	 * @return iterable<int, CashFlowStatement>
 	 */
 	public function cashFlowStatementBulk(int $year, Period $period = Period::FY): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/api/v3/income-statement-growth/{symbol}
 	 * @return iterable<int, IncomeStatementGrowth>
 	 */
 	public function incomeStatementGrowth(string $symbol, int|null $limit = null, ?PeriodQuery $period = null): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/api/v3/balance-sheet-statement-growth/{symbol}
 	 * @return iterable<int, BalanceSheetStatementGrowth>
 	 */
 	public function balanceSheetStatementGrowth(string $symbol, int|null $limit = null, ?PeriodQuery $period = null): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/api/v3/cash-flow-statement-growth/{symbol}
 	 * @return iterable<int, CashFlowStatementGrowth>
 	 */
 	public function cashFlowStatementGrowth(string $symbol, int|null $limit = null, ?PeriodQuery $period = null): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/income-statement-growth-bulk
 	 * @return iterable<int, IncomeStatementGrowthBulk>
 	 */
 	public function incomeStatementGrowthBulk(int $year, Period $period): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/balance-sheet-statement-growth-bulk
 	 * @return iterable<int, BalanceSheetStatementGrowthBulk>
 	 */
 	public function balanceSheetStatementGrowthBulk(int $year, Period $period): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/cash-flow-statement-growth-bulk
 	 * @return iterable<int, CashFlowStatementGrowthBulk>
 	 */
 	public function cashFlowStatementGrowthBulk(int $year, Period $period): iterable;
 
 	/**
+	 * The FMP docs do not state the regional availability, foreign listings tested so far returned no data.
+	 *
 	 * @see https://financialmodelingprep.com/stable/revenue-product-segmentation
 	 * @return iterable<int, RevenueProductSegmentation>
 	 */
 	public function revenueProductSegmentation(string $symbol, PeriodQuery $period = PeriodQuery::Annual): iterable;
 
 	/**
+	 * The FMP docs do not state the regional availability, foreign listings tested so far returned no data.
+	 *
 	 * @see https://financialmodelingprep.com/stable/revenue-geographic-segmentation
 	 * @return iterable<int, RevenueGeographicSegmentation>
 	 */
 	public function revenueGeographicSegmentation(string $symbol, PeriodQuery $period = PeriodQuery::Annual): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/eod-bulk
 	 * @return iterable<int, EodQuote>
 	 */
 	public function eodBulkQuotes(DateTimeImmutable $date): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/financial-statement-symbol-list
 	 * @return iterable<int, FinancialStatementSymbol>
 	 */
 	public function financialStatementSymbolList(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/batch-exchange-quote
 	 * @return iterable<int, BatchExchangeQuote>
 	 */
 	public function batchExchangeQuote(string $exchange): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/batch-exchange-quote
 	 * @return iterable<int, BatchExchangeDetailedQuote>
 	 */
@@ -399,12 +479,15 @@ interface FmpClient
 	public function batchForexQuotes(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/quote
 	 */
 	public function quote(string $symbol): ?Quote;
 
 	/**
 	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
+	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/historical-price-eod/full
 	 * @return iterable<int, HistoricalPriceEod>
@@ -413,6 +496,7 @@ interface FmpClient
 
 	/**
 	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
+	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/historical-price-eod/non-split-adjusted
 	 * @return iterable<int, HistoricalPriceEodNonSplitAdjusted>
@@ -421,6 +505,7 @@ interface FmpClient
 
 	/**
 	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
+	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/historical-price-eod/light
 	 * @return iterable<int, HistoricalPriceEodLight>
@@ -428,67 +513,88 @@ interface FmpClient
 	public function historicalPriceEodLight(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/historical-chart
 	 * @return iterable<int, HistoricalChart>
 	 */
 	public function historicalChart(string $symbol, TimeInterval $interval, DateTimeImmutable $from, DateTimeImmutable $to): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/key-metrics
 	 * @return iterable<int, KeyMetrics>
 	 */
 	public function keyMetrics(string $symbol, int $limit = 80, PeriodQuery $period = PeriodQuery::Annual): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/key-metrics-ttm
 	 * @return iterable<int, KeyMetricsTtm>
 	 */
 	public function keyMetricsTtm(string $symbol): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/key-metrics-ttm-bulk
 	 * @return iterable<int, KeyMetricsTtm>
 	 */
 	public function keyMetricsTtmBulk(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/ratios
 	 * @return iterable<int, Ratios>
 	 */
 	public function ratios(string $symbol, int $limit = 80, PeriodQuery $period = PeriodQuery::Annual): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/ratios-ttm
 	 * @return iterable<int, RatiosTtm>
 	 */
 	public function ratiosTtm(string $symbol): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/ratios-ttm-bulk
 	 * @return iterable<int, RatiosTtm>
 	 */
 	public function ratiosTtmBulk(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/financial-scores
 	 * @return iterable<int, Scores>
 	 */
 	public function financialScores(string $symbol): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/scores-bulk
 	 * @return iterable<int, Scores>
 	 */
 	public function scoresBulk(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/peers-bulk
 	 * @return iterable<int, PeersBulk>
 	 */
 	public function peersBulk(): iterable;
 
 	/**
-	 * Analyst price targets aggregated across all covering analysts. Only available for symbols with analyst coverage.
+	 * Analyst price targets aggregated across all covering analysts.
+	 * Only available for US-based companies with analyst coverage.
 	 *
 	 * @see https://financialmodelingprep.com/stable/price-target-consensus
 	 */
@@ -496,24 +602,30 @@ interface FmpClient
 
 	/**
 	 * Number and average of the analyst price targets published in the last month, quarter, year and overall.
+	 * Only available for US-based companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/price-target-summary
 	 */
 	public function priceTargetSummary(string $symbol): ?PriceTargetSummary;
 
 	/**
+	 * Only available for US-based companies.
+	 *
 	 * @see https://financialmodelingprep.com/stable/price-target-summary-bulk
 	 * @return iterable<int, PriceTargetSummary>
 	 */
 	public function priceTargetSummaryBulk(): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/discounted-cash-flow
 	 */
 	public function discountedCashFlow(string $symbol): ?DiscountedCashFlow;
 
 	/**
 	 * Number of analysts per rating bucket together with the resulting consensus rating.
+	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/grades-consensus
 	 */
@@ -521,6 +633,7 @@ interface FmpClient
 
 	/**
 	 * Bulk variant of the grades consensus, the API serves it under the upgrades-downgrades name.
+	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/upgrades-downgrades-consensus-bulk
 	 * @return iterable<int, GradesConsensus>
@@ -529,6 +642,7 @@ interface FmpClient
 
 	/**
 	 * Individual rating actions (upgrade, downgrade, maintain) ordered from the newest to the oldest.
+	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/grades
 	 * @param int<1, 1000>|null $limit
@@ -538,6 +652,7 @@ interface FmpClient
 
 	/**
 	 * Monthly snapshots of the number of analysts per rating bucket, ordered from the newest to the oldest.
+	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/grades-historical
 	 * @param int<1, 1000>|null $limit
@@ -547,6 +662,7 @@ interface FmpClient
 
 	/**
 	 * Insider transactions reported to the SEC on forms 3, 4 and 5, ordered from the newest to the oldest.
+	 * Only available for US-based companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/insider-trading/search
 	 * @param int<0, max> $page
@@ -557,6 +673,7 @@ interface FmpClient
 
 	/**
 	 * Insider transactions aggregated per quarter, ordered from the newest to the oldest quarter.
+	 * Only available for US-based companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/insider-trading/statistics
 	 * @return iterable<int, InsiderTradeStatistics>
@@ -565,6 +682,7 @@ interface FmpClient
 
 	/**
 	 * Trades disclosed by U.S. senators, ordered from the newest to the oldest disclosure.
+	 * Only available for US-based companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/senate-trades
 	 * @param int<1, 1000>|null $limit
@@ -574,6 +692,7 @@ interface FmpClient
 
 	/**
 	 * Institutional ownership of a symbol aggregated from the 13F filings of a single calendar quarter.
+	 * Only available for US-based companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/institutional-ownership/symbol-positions-summary
 	 * @param int<1, 4> $quarter
@@ -583,6 +702,7 @@ interface FmpClient
 	/**
 	 * Institutional holders of a symbol from the 13F filings of a single calendar quarter, ordered from the largest
 	 * number of shares held to the smallest.
+	 * Only available for US-based companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/institutional-ownership/extract-analytics/holder
 	 * @param int<1, 4> $quarter
@@ -594,6 +714,7 @@ interface FmpClient
 
 	/**
 	 * Quarters for which an earning call transcript is available, ordered from the newest to the oldest.
+	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/earning-call-transcript-dates
 	 * @return iterable<int, EarningCallTranscriptDate>
@@ -601,6 +722,8 @@ interface FmpClient
 	public function earningCallTranscriptDates(string $symbol): iterable;
 
 	/**
+	 * Available worldwide.
+	 *
 	 * @see https://financialmodelingprep.com/stable/earning-call-transcript
 	 * @param int<1, 4> $quarter
 	 */

@@ -2,6 +2,8 @@
 
 This document provides a comprehensive overview of all available endpoints (methods) in the FMP Client library. Each endpoint is described with its purpose and return values.
 
+The **Availability** line of each endpoint is taken from the regional flag of the endpoint in the [FMP docs](https://site.financialmodelingprep.com/developer/docs): `US-based companies only` or `Worldwide`. A worldwide endpoint still returns no data for a symbol FMP does not cover.
+
 ## Table of Contents
 
 - [Exchange and Market Information](#exchange-and-market-information)
@@ -25,6 +27,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Retrieve a list of all available exchanges in the FMP system.
 
+**Availability:** Worldwide
+
 **Parameters:** None
 
 **Return Values:** `iterable<AvailableExchange>`
@@ -38,6 +42,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `allExchangeMarketHours()`
 
 **Purpose:** Retrieve trading hours for all exchanges.
+
+**Availability:** Worldwide
 
 **Parameters:** None
 
@@ -56,6 +62,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `holidaysByExchange(string $exchange)`
 
 **Purpose:** Retrieve market holidays and early-close days for a specific exchange.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `$exchange` - Exchange code (e.g. `NASDAQ`)
@@ -77,6 +85,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Retrieve market risk premiums for various countries.
 
+**Availability:** Not company specific
+
 **Parameters:** None
 
 **Return Values:** `iterable<MarketRiskPremium>`
@@ -93,6 +103,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Retrieve current US Treasury rates.
 
+**Availability:** Not company specific
+
 **Parameters:** None
 
 **Return Values:** `iterable<TreasuryRate>`
@@ -108,6 +120,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `indexList()`
 
 **Purpose:** Retrieve a list of all available indices (e.g., S&P 500, NASDAQ).
+
+**Availability:** Not company specific
 
 **Parameters:** None
 
@@ -126,6 +140,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Retrieve a list of all available cryptocurrencies.
 
+**Availability:** Not company specific
+
 **Parameters:** None
 
 **Return Values:** `iterable<Cryptocurrency>`
@@ -142,6 +158,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `stockList()`
 
 **Purpose:** Retrieve a list of all available stocks.
+
+**Availability:** Worldwide
 
 **Parameters:** None
 
@@ -161,6 +179,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Retrieve a list of actively trading stocks.
 
+**Availability:** Worldwide
+
 **Parameters:** None
 
 **Return Values:** `iterable<ActivelyTrading>`
@@ -179,6 +199,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Retrieve a list of symbol changes (e.g., due to mergers or rebranding).
 
+**Availability:** US-based companies only
+
 **Parameters:** None
 
 **Return Values:** `iterable<SymbolChange>`
@@ -194,6 +216,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `searchIsin()`
 
 **Purpose:** Search for stocks by ISIN (International Securities Identification Number) code.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `isin` (string) - ISIN code (e.g., "US0378331005")
@@ -211,6 +235,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `delistedCompanies()`
 
 **Purpose:** Retrieve a list of delisted companies.
+
+**Availability:** US-based companies only
 
 **Parameters:**
 - `limit` (int, default: 100) - Maximum number of records
@@ -231,6 +257,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Retrieve a list of symbols for which financial statements are available.
 
+**Availability:** Worldwide
+
 **Parameters:** None
 
 **Return Values:** `iterable<FinancialStatementSymbol>`
@@ -245,6 +273,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `companyProfile()`
 
 **Purpose:** Retrieve detailed company profile.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -295,6 +325,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Bulk retrieval of company profiles for all companies (streaming large datasets).
 
+**Availability:** Worldwide
+
 **Parameters:** None
 
 **Return Values:** `iterable<CompanyProfile>` (same structure as `companyProfile()`)
@@ -306,6 +338,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `sharesFloat()`
 
 **Purpose:** Retrieve shares float information for a specific symbol.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -326,6 +360,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Retrieve shares float information for all companies (with pagination).
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `limit` (int, default: 1000) - Maximum number of records (1-5000)
 - `page` (int, default: 0) - Page number
@@ -339,6 +375,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `pressReleasesLatest()`
 
 **Purpose:** Retrieve latest press releases from companies.
+
+**Availability:** US-based companies only
 
 **Parameters:**
 - `limit` (int) - Maximum number of records
@@ -357,6 +395,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `stockNewsLatest()`
 
 **Purpose:** Retrieve latest stock news.
+
+**Availability:** Not stated in the FMP docs
 
 **Parameters:**
 - `limit` (int, 1-250) - Maximum number of records
@@ -378,6 +418,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `analystEstimates()`
 
 **Purpose:** Retrieve analyst estimates for a company's financial results.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -417,6 +459,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Retrieve financial scores (ratings) for a specific company.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 
@@ -440,6 +484,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Bulk retrieval of financial scores for all companies.
 
+**Availability:** Worldwide
+
 **Parameters:** None
 
 **Return Values:** `iterable<Scores>` (same structure as `financialScores()`)
@@ -451,6 +497,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `peersBulk()`
 
 **Purpose:** Bulk retrieval of stock peers (companies considered similar by industry, sector and market cap) for all symbols.
+
+**Availability:** Worldwide
 
 **Parameters:** None
 
@@ -467,6 +515,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `balanceSheetStatement()`
 
 **Purpose:** Retrieve balance sheet statement for a specific company.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -544,6 +594,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Bulk retrieval of balance sheets for all companies for a given period.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `year` (int) - Year
 - `period` (Period, default: FY) - Period
@@ -557,6 +609,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `incomeStatement()`
 
 **Purpose:** Retrieve income statement for a specific company.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -612,6 +666,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Bulk retrieval of income statements for all companies for a given period.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `year` (int) - Year
 - `period` (Period, default: FY) - Period
@@ -625,6 +681,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `incomeStatementTtm()`
 
 **Purpose:** Retrieve a historical series of trailing twelve months (TTM) income statements for a specific company, ordered from the newest to the oldest. Unlike `incomeStatement()`, every record aggregates the four quarters ending on `date`, so the endpoint returns a rolling series rather than a single snapshot (AAPL currently returns 50 records reaching back to 2014).
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -678,6 +736,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `cashFlowStatement()`
 
 **Purpose:** Retrieve cash flow statement for a specific company.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -741,6 +801,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Bulk retrieval of cash flow statements for all companies for a given period.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `year` (int) - Year
 - `period` (Period, default: FY) - Period
@@ -754,6 +816,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 ### `latestFinancialStatements()`
 
 **Purpose:** Retrieve latest financial statements across all companies.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `page` (int, default: 0) - Page number (0-100)
@@ -774,6 +838,8 @@ This document provides a comprehensive overview of all available endpoints (meth
 
 **Purpose:** Retrieve year-over-year growth of income statement items.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 - `limit` (int|null, default: null) - Maximum number of records
@@ -790,6 +856,8 @@ Contains percentage growth of all income statement items (e.g., revenue growth, 
 
 **Purpose:** Bulk retrieval of income statement growth for all companies.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `year` (int) - Year
 - `period` (Period) - Period
@@ -803,6 +871,8 @@ Contains percentage growth of all income statement items (e.g., revenue growth, 
 ### `balanceSheetStatementGrowth()`
 
 **Purpose:** Retrieve year-over-year growth of balance sheet items.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -820,6 +890,8 @@ Contains percentage growth of all balance sheet items
 
 **Purpose:** Bulk retrieval of balance sheet growth for all companies.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `year` (int) - Year
 - `period` (Period) - Period
@@ -833,6 +905,8 @@ Contains percentage growth of all balance sheet items
 ### `cashFlowStatementGrowth()`
 
 **Purpose:** Retrieve year-over-year growth of cash flow statement items.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -850,6 +924,8 @@ Contains percentage growth of all cash flow statement items
 
 **Purpose:** Bulk retrieval of cash flow growth for all companies.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `year` (int) - Year
 - `period` (Period) - Period
@@ -865,6 +941,8 @@ Contains percentage growth of all cash flow statement items
 ### `revenueProductSegmentation()`
 
 **Purpose:** Retrieve the revenue breakdown by product line for a company.
+
+**Availability:** Not stated in the FMP docs. The foreign listings tested on 2026-10-05 (SAP.DE, 7203.T, NESN.SW, SHEL.L, CEZ.PR) returned no data
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -885,6 +963,8 @@ Contains percentage growth of all cash flow statement items
 ### `revenueGeographicSegmentation()`
 
 **Purpose:** Retrieve the revenue breakdown by geographic region for a company.
+
+**Availability:** Not stated in the FMP docs. The foreign listings tested on 2026-10-05 (SAP.DE, 7203.T, NESN.SW, SHEL.L, CEZ.PR) returned no data
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -907,6 +987,8 @@ Contains percentage growth of all cash flow statement items
 ### `dividendsCalendar()`
 
 **Purpose:** Retrieve dividend calendar for a given time period.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `from` (DateTimeImmutable) - Start date
@@ -931,6 +1013,8 @@ Contains percentage growth of all cash flow statement items
 
 **Purpose:** Retrieve historical dividends for a specific symbol.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 - `limit` (int|null, default: null) - Maximum number of records (1-1000)
@@ -944,6 +1028,8 @@ Contains percentage growth of all cash flow statement items
 ### `earningsCalendar()`
 
 **Purpose:** Retrieve earnings announcement calendar for a given time period.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `from` (DateTimeImmutable) - Start date
@@ -966,6 +1052,8 @@ Contains percentage growth of all cash flow statement items
 ### `detailedEarningsCalendar()`
 
 **Purpose:** Retrieve the earnings announcement calendar with the additional report-time fields exposed by passing `includeReportTimes=true` to the stable earnings calendar endpoint. Compared to `earningsCalendar()`, each item additionally carries the announcement `time` window (`bmo` = before market open, `amc` = after market close, or `null` when unspecified), the `periodEnding` of the fiscal period being reported, the `fiscalPeriod` and `fiscalYear` being reported, and a `confirmed` flag. Requests are automatically paginated over the date range.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `from` (DateTimeImmutable) - Start date
@@ -994,6 +1082,8 @@ Contains percentage growth of all cash flow statement items
 
 **Purpose:** Retrieve upcoming and historical earnings reports for a single company, ordered from the newest to the oldest. The first record is usually the next scheduled report with `null` actual values, the remaining records provide the beat/miss history.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 - `limit` (int|null) - Maximum number of records, `null` uses the API default
@@ -1015,6 +1105,8 @@ Contains percentage growth of all cash flow statement items
 
 **Purpose:** Retrieve the full historical stock split record for a single symbol.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 
@@ -1032,6 +1124,8 @@ Contains percentage growth of all cash flow statement items
 ### `splitsCalendar()`
 
 **Purpose:** Retrieve stock splits calendar for a given time period.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `from` (DateTimeImmutable) - Start date
@@ -1052,6 +1146,8 @@ Contains percentage growth of all cash flow statement items
 ### `economicCalendar()`
 
 **Purpose:** Retrieve calendar of upcoming and past economic data releases (macroeconomic indicators, central bank speeches, employment data, etc.) for a given time period. Automatically paginated via the standard calendar paginator to handle large result sets.
+
+**Availability:** Not company specific
 
 **Parameters:**
 - `from` (DateTimeImmutable) - Start date
@@ -1080,6 +1176,8 @@ Contains percentage growth of all cash flow statement items
 ### `quote()`
 
 **Purpose:** Retrieve the full quote for a single symbol. Works for stocks, ETFs, indexes, forex pairs and cryptocurrencies.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1110,6 +1208,8 @@ Contains percentage growth of all cash flow statement items
 ### `batchExchangeQuote()`
 
 **Purpose:** Retrieve current quotes for all stocks on a specific exchange (simplified version).
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `exchange` (string) - Exchange name (e.g., "NYSE", "NASDAQ")
@@ -1145,6 +1245,8 @@ Contains percentage growth of all cash flow statement items
 
 **Purpose:** Retrieve detailed quotes for all stocks on a specific exchange (extended version).
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `exchange` (string) - Exchange name
 
@@ -1160,6 +1262,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `batchForexQuotes()`
 
 **Purpose:** Retrieve current quotes for all forex currency pairs.
+
+**Availability:** Not company specific
 
 **Parameters:** None
 
@@ -1195,6 +1299,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve end-of-day quotes for all stocks for a given date.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `date` (DateTimeImmutable) - Date for which to retrieve EOD data
 
@@ -1213,6 +1319,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `historicalPriceEod()`
 
 **Purpose:** Retrieve historical daily prices for a specific symbol in a given time period. The same endpoint also serves forex pairs (e.g. `EURUSD`), which return the identical field structure.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1244,6 +1352,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve historical daily prices without stock split adjustments for a specific symbol in a given time period.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 - `from` (DateTimeImmutable) - Start date
@@ -1268,6 +1378,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve a lightweight variant of historical daily prices (closing price and volume only) for a specific symbol in a given time period. Also works with forex pairs (e.g. `EURUSD`).
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 - `from` (DateTimeImmutable) - Start date
@@ -1288,6 +1400,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `historicalChart()`
 
 **Purpose:** Retrieve historical intraday price data with various time intervals.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1312,6 +1426,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `keyMetrics()`
 
 **Purpose:** Retrieve key financial metrics for a specific company.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1375,6 +1491,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve key metrics TTM (Trailing Twelve Months) for a specific symbol.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 
@@ -1388,6 +1506,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Bulk retrieval of key metrics TTM for all companies.
 
+**Availability:** Worldwide
+
 **Parameters:** None
 
 **Return Values:** `iterable<KeyMetricsTtm>` (same structure as `keyMetrics()`)
@@ -1399,6 +1519,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `ratios()`
 
 **Purpose:** Retrieve financial ratios for a specific company.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1481,6 +1603,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve financial ratios TTM (trailing twelve months) for a specific symbol.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 
@@ -1493,6 +1617,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `ratiosTtmBulk()`
 
 **Purpose:** Bulk retrieval of financial ratios TTM for all companies.
+
+**Availability:** Worldwide
 
 **Parameters:** None
 
@@ -1507,6 +1633,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `priceTargetConsensus()`
 
 **Purpose:** Retrieve the consensus analyst price target for a specific company. Only available for symbols with analyst coverage; foreign listings and ETFs typically return no data.
+
+**Availability:** US-based companies only
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1525,6 +1653,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `priceTargetSummary()`
 
 **Purpose:** Retrieve the number and the average of the analyst price targets published for a specific company in the last month, quarter, year and overall. Only available for symbols with analyst coverage; foreign listings and ETFs typically return no data.
+
+**Availability:** US-based companies only
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1549,6 +1679,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Bulk retrieval of price target summaries for all symbols with analyst coverage (about 5 300 symbols).
 
+**Availability:** US-based companies only
+
 **Parameters:** None
 
 **Return Values:** `iterable<PriceTargetSummary>` (same structure as `priceTargetSummary()`)
@@ -1560,6 +1692,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `discountedCashFlow()`
 
 **Purpose:** Retrieve the discounted cash flow valuation for a specific company together with the current stock price. Available for companies with financial statements; ETFs and indexes return no data.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1577,6 +1711,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `gradesConsensus()`
 
 **Purpose:** Retrieve the distribution of analyst ratings for a specific company together with the resulting consensus rating.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1598,6 +1734,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Bulk retrieval of the analyst rating distribution and the resulting consensus rating for all symbols with analyst coverage (about 13 400 symbols). The API serves the bulk variant of `gradesConsensus()` under the upgrades-downgrades name.
 
+**Availability:** Worldwide
+
 **Parameters:** None
 
 **Return Values:** `iterable<GradesConsensus>` (same structure as `gradesConsensus()`)
@@ -1609,6 +1747,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `grades()`
 
 **Purpose:** Retrieve individual analyst rating actions for a specific company, ordered from the newest to the oldest. Without a limit the endpoint returns the full history (AAPL currently returns 1794 records), so passing a limit is recommended.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1629,6 +1769,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `gradesHistorical()`
 
 **Purpose:** Retrieve monthly snapshots of the analyst rating distribution for a specific company, ordered from the newest to the oldest. Without a limit the endpoint returns the full history (AAPL currently returns 94 monthly records back to December 2018).
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1652,6 +1794,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `insiderTrades()`
 
 **Purpose:** Retrieve insider transactions reported to the SEC on forms 3, 4 and 5 for a specific company, ordered from the newest to the oldest filing. Only available for SEC registrants, foreign listings return no data.
+
+**Availability:** US-based companies only
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1684,6 +1828,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve insider transactions of a specific company aggregated per calendar quarter, ordered from the newest to the oldest quarter. The endpoint always returns the full history (AAPL currently returns 94 quarters back to 2003). Only available for SEC registrants, foreign listings return no data.
 
+**Availability:** US-based companies only
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 
@@ -1709,6 +1855,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `senateTrades()`
 
 **Purpose:** Retrieve trades in a specific company disclosed by U.S. senators, ordered from the newest to the oldest disclosure.
+
+**Availability:** US-based companies only
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1739,6 +1887,8 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 ### `institutionalPositionsSummary()`
 
 **Purpose:** Retrieve the institutional ownership of a specific company aggregated from the 13F filings of a single calendar quarter. Institutions file within 45 days after the end of a quarter, so the latest quarter is empty or incomplete until then. Only available for securities reported on 13F, foreign listings return no data. Requires the Ultimate or Enterprise FMP plan.
+
+**Availability:** US-based companies only
 
 Properties prefixed with `last` hold the value of the previous quarter, properties suffixed with `Change` the difference between the two quarters.
 
@@ -1792,6 +1942,8 @@ Properties prefixed with `last` hold the value of the previous quarter, properti
 ### `institutionalHolders()`
 
 **Purpose:** Retrieve the institutional holders of a specific company from the 13F filings of a single calendar quarter, ordered from the largest number of shares held to the smallest. Option positions are returned as separate records next to the stock position of the same holder. Requires the Ultimate or Enterprise FMP plan.
+
+**Availability:** US-based companies only
 
 Properties prefixed with `last` hold the value of the previous quarter, properties prefixed with `changeIn` the difference between the two quarters.
 
@@ -1855,6 +2007,8 @@ Requires the Ultimate or Enterprise FMP plan.
 
 **Purpose:** Retrieve the quarters for which an earning call transcript is available for a specific company, ordered from the newest to the oldest. Use it to find the latest available transcript before calling `earningCallTranscript()`.
 
+**Availability:** Worldwide
+
 **Parameters:**
 - `symbol` (string) - Ticker symbol
 
@@ -1871,6 +2025,8 @@ Requires the Ultimate or Enterprise FMP plan.
 ### `earningCallTranscript()`
 
 **Purpose:** Retrieve the full transcript of a single earning call.
+
+**Availability:** Worldwide
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
