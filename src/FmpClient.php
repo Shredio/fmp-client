@@ -162,7 +162,7 @@ interface FmpClient
 	public function activelyTradingList(): iterable;
 
 	/**
-	 * Only available for US-based companies.
+	 * Covers US-listed symbols, foreign listings appear only exceptionally.
 	 *
 	 * @see https://financialmodelingprep.com/stable/symbol-change
 	 * @return iterable<int, SymbolChange>
@@ -178,7 +178,7 @@ interface FmpClient
 	public function searchIsin(string $isin): iterable;
 
 	/**
-	 * Only available for US-based companies.
+	 * Covers exchanges worldwide, although the FMP docs flag the endpoint as US only.
 	 *
 	 * @see https://financialmodelingprep.com/stable/delisted-companies
 	 * @return iterable<int, DelistedCompany>
@@ -186,7 +186,7 @@ interface FmpClient
 	public function delistedCompanies(int $limit = 100, int $page = 0): iterable;
 
 	/**
-	 * Only available for US-based companies.
+	 * Covers almost exclusively US-listed symbols.
 	 *
 	 * @see https://financialmodelingprep.com/stable/news/press-releases-latest
 	 * @return iterable<int, PressRelease>
@@ -425,7 +425,8 @@ interface FmpClient
 	public function cashFlowStatementGrowthBulk(int $year, Period $period): iterable;
 
 	/**
-	 * The FMP docs do not state the regional availability, foreign listings tested so far returned no data.
+	 * Available for US-listed symbols (with gaps for foreign issuers) and for foreign listings of US companies. Foreign
+	 * listings of foreign companies return next to no data.
 	 *
 	 * @see https://financialmodelingprep.com/stable/revenue-product-segmentation
 	 * @return iterable<int, RevenueProductSegmentation>
@@ -433,7 +434,8 @@ interface FmpClient
 	public function revenueProductSegmentation(string $symbol, PeriodQuery $period = PeriodQuery::Annual): iterable;
 
 	/**
-	 * The FMP docs do not state the regional availability, foreign listings tested so far returned no data.
+	 * Available for US-listed symbols (with gaps for foreign issuers) and for foreign listings of US companies. Foreign
+	 * listings of foreign companies return next to no data.
 	 *
 	 * @see https://financialmodelingprep.com/stable/revenue-geographic-segmentation
 	 * @return iterable<int, RevenueGeographicSegmentation>
@@ -594,7 +596,7 @@ interface FmpClient
 
 	/**
 	 * Analyst price targets aggregated across all covering analysts.
-	 * Only available for US-based companies with analyst coverage.
+	 * Only available for US-listed symbols with analyst coverage, including ADRs of foreign companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/price-target-consensus
 	 */
@@ -602,14 +604,14 @@ interface FmpClient
 
 	/**
 	 * Number and average of the analyst price targets published in the last month, quarter, year and overall.
-	 * Only available for US-based companies.
+	 * Only available for US-listed symbols, including ADRs of foreign companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/price-target-summary
 	 */
 	public function priceTargetSummary(string $symbol): ?PriceTargetSummary;
 
 	/**
-	 * Only available for US-based companies.
+	 * Only available for US-listed symbols, including ADRs of foreign companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/price-target-summary-bulk
 	 * @return iterable<int, PriceTargetSummary>
@@ -662,7 +664,8 @@ interface FmpClient
 
 	/**
 	 * Insider transactions reported to the SEC on forms 3, 4 and 5, ordered from the newest to the oldest.
-	 * Only available for US-based companies.
+	 * Only available for US-listed symbols whose insiders file with the SEC, foreign issuers listed in the US return
+	 * data from 2026 on at best.
 	 *
 	 * @see https://financialmodelingprep.com/stable/insider-trading/search
 	 * @param int<0, max> $page
@@ -673,7 +676,8 @@ interface FmpClient
 
 	/**
 	 * Insider transactions aggregated per quarter, ordered from the newest to the oldest quarter.
-	 * Only available for US-based companies.
+	 * Only available for US-listed symbols whose insiders file with the SEC, foreign issuers listed in the US return
+	 * data from 2026 on at best.
 	 *
 	 * @see https://financialmodelingprep.com/stable/insider-trading/statistics
 	 * @return iterable<int, InsiderTradeStatistics>
@@ -682,7 +686,7 @@ interface FmpClient
 
 	/**
 	 * Trades disclosed by U.S. senators, ordered from the newest to the oldest disclosure.
-	 * Only available for US-based companies.
+	 * Only available for US-listed symbols, including ADRs of foreign companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/senate-trades
 	 * @param int<1, 1000>|null $limit
@@ -692,7 +696,7 @@ interface FmpClient
 
 	/**
 	 * Institutional ownership of a symbol aggregated from the 13F filings of a single calendar quarter.
-	 * Only available for US-based companies.
+	 * Only available for US-listed symbols, including ADRs of foreign companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/institutional-ownership/symbol-positions-summary
 	 * @param int<1, 4> $quarter
@@ -702,7 +706,7 @@ interface FmpClient
 	/**
 	 * Institutional holders of a symbol from the 13F filings of a single calendar quarter, ordered from the largest
 	 * number of shares held to the smallest.
-	 * Only available for US-based companies.
+	 * Only available for US-listed symbols, including ADRs of foreign companies.
 	 *
 	 * @see https://financialmodelingprep.com/stable/institutional-ownership/extract-analytics/holder
 	 * @param int<1, 4> $quarter

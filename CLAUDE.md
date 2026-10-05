@@ -20,8 +20,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Whether an endpoint is US only must be looked up on the HTML documentation page, the Markdown documentation does not contain it. In the HTML each endpoint heading (`<a ... href="/developer/docs/stable/...">`) is followed by a flag image whose `aria-label` reads either `This endpoint is only available for US-based companies.` or `This endpoint is available for companies worldwide.`.
 
 - A path documented in several sections (`quote`, `historical-price-eod/*`, `historical-chart/*`) carries one flag per section, use the flag of the stock section.
-- Record the result in the docblock of the `FmpClient` method as the sentence `Only available for US-based companies.` or `Available worldwide.`, and in OVERVIEW.md as the `**Availability:**` line (`US-based companies only` or `Worldwide`).
-- An endpoint without a flag gets no sentence in the docblock; in OVERVIEW.md use `Not company specific` (indexes, forex, crypto, macro data) or `Not stated in the FMP docs`. Never guess the availability.
+- "US-based companies" in the docs means **US-listed symbols**: the listing decides, not the country the company is based in. `SAP` (ADR on NYSE) returns data while `SAP.DE` does not, and a US company requested through a foreign listing (`APC.DE`, `MSF.DE`) returns nothing.
+- The flag is only a hint, so verify an endpoint flagged as US only (or a company specific endpoint without a flag) with requests before recording it. Request one symbol of each kind and compare which of them return data:
+  - US company on a US exchange: `AAPL`
+  - foreign company on a US exchange: `SAP`, `TSM`
+  - US company on a foreign exchange: `MSF.DE`, `APC.DE`
+  - foreign company on a foreign exchange: `SAP.DE`, `7203.T`
+  - for list and bulk endpoints check the exchange or the symbol suffix of the returned records instead
+- Record the result in the docblock of the `FmpClient` method as the sentence `Only available for US-listed symbols, including ADRs of foreign companies.` or `Available worldwide.`, and in OVERVIEW.md as the `**Availability:**` line (`US-listed symbols only, ADRs of foreign companies included` or `Worldwide`).
+- When the requests disagree with the flag, describe what the API returns and mention the flag. Known cases: `delisted-companies` is flagged as US only but covers exchanges worldwide, the insider trading endpoints depend on the insiders filing with the SEC, and the revenue segmentation endpoints have no flag although foreign listings of foreign companies return next to no data.
+- An endpoint without a flag that is not company specific (indexes, forex, crypto, macro data) gets no sentence in the docblock and `Not company specific` in OVERVIEW.md. Use `Not stated in the FMP docs` when the availability can be neither read nor verified. Never guess the availability.
 
 ## Architecture Overview
 

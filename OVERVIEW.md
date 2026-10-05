@@ -2,7 +2,7 @@
 
 This document provides a comprehensive overview of all available endpoints (methods) in the FMP Client library. Each endpoint is described with its purpose and return values.
 
-The **Availability** line of each endpoint is taken from the regional flag of the endpoint in the [FMP docs](https://site.financialmodelingprep.com/developer/docs): `US-based companies only` or `Worldwide`. A worldwide endpoint still returns no data for a symbol FMP does not cover.
+The **Availability** line of each endpoint is based on the regional flag of the endpoint in the [FMP docs](https://site.financialmodelingprep.com/developer/docs) and, for the endpoints flagged as US only, on requests against the API. The docs speak of "US-based companies", but it is the listing of the symbol that decides, not the country the company is based in: `SAP` (the ADR on NYSE) returns data while `SAP.DE` does not, and Apple requested as `APC.DE` (XETRA) returns nothing. A worldwide endpoint still returns no data for a symbol FMP does not cover.
 
 ## Table of Contents
 
@@ -199,7 +199,7 @@ The **Availability** line of each endpoint is taken from the regional flag of th
 
 **Purpose:** Retrieve a list of symbol changes (e.g., due to mergers or rebranding).
 
-**Availability:** US-based companies only
+**Availability:** US-listed symbols, foreign listings appear only exceptionally
 
 **Parameters:** None
 
@@ -236,7 +236,7 @@ The **Availability** line of each endpoint is taken from the regional flag of th
 
 **Purpose:** Retrieve a list of delisted companies.
 
-**Availability:** US-based companies only
+**Availability:** Worldwide. The FMP docs flag the endpoint as US only, but 154 of 400 records sampled on 2026-10-05 were delisted from exchanges outside the US
 
 **Parameters:**
 - `limit` (int, default: 100) - Maximum number of records
@@ -376,7 +376,7 @@ The **Availability** line of each endpoint is taken from the regional flag of th
 
 **Purpose:** Retrieve latest press releases from companies.
 
-**Availability:** US-based companies only
+**Availability:** Almost exclusively US-listed symbols, 743 of 750 records sampled on 2026-10-05
 
 **Parameters:**
 - `limit` (int) - Maximum number of records
@@ -942,7 +942,7 @@ Contains percentage growth of all cash flow statement items
 
 **Purpose:** Retrieve the revenue breakdown by product line for a company.
 
-**Availability:** Not stated in the FMP docs. The foreign listings tested on 2026-10-05 (SAP.DE, 7203.T, NESN.SW, SHEL.L, CEZ.PR) returned no data
+**Availability:** US-listed symbols (with gaps for foreign issuers) and foreign listings of US companies (for example MSF.DE). Foreign listings of foreign companies (for example SAP.DE, 7203.T, CEZ.PR) return next to no data. The FMP docs do not state the availability
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -964,7 +964,7 @@ Contains percentage growth of all cash flow statement items
 
 **Purpose:** Retrieve the revenue breakdown by geographic region for a company.
 
-**Availability:** Not stated in the FMP docs. The foreign listings tested on 2026-10-05 (SAP.DE, 7203.T, NESN.SW, SHEL.L, CEZ.PR) returned no data
+**Availability:** US-listed symbols (with gaps for foreign issuers) and foreign listings of US companies (for example MSF.DE). Foreign listings of foreign companies (for example SAP.DE, 7203.T, CEZ.PR) return next to no data. The FMP docs do not state the availability
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1634,7 +1634,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve the consensus analyst price target for a specific company. Only available for symbols with analyst coverage; foreign listings and ETFs typically return no data.
 
-**Availability:** US-based companies only
+**Availability:** US-listed symbols only, ADRs of foreign companies included
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1654,7 +1654,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve the number and the average of the analyst price targets published for a specific company in the last month, quarter, year and overall. Only available for symbols with analyst coverage; foreign listings and ETFs typically return no data.
 
-**Availability:** US-based companies only
+**Availability:** US-listed symbols only, ADRs of foreign companies included
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1679,7 +1679,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Bulk retrieval of price target summaries for all symbols with analyst coverage (about 5 300 symbols).
 
-**Availability:** US-based companies only
+**Availability:** US-listed symbols only, ADRs of foreign companies included
 
 **Parameters:** None
 
@@ -1795,7 +1795,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve insider transactions reported to the SEC on forms 3, 4 and 5 for a specific company, ordered from the newest to the oldest filing. Only available for SEC registrants, foreign listings return no data.
 
-**Availability:** US-based companies only
+**Availability:** US-listed symbols whose insiders file forms 3, 4 and 5 with the SEC. Foreign issuers listed in the US return data from 2026 on (for example TSM, TM, BABA, SPOT) or no data at all (for example ASML, NVO, RY)
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1828,7 +1828,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve insider transactions of a specific company aggregated per calendar quarter, ordered from the newest to the oldest quarter. The endpoint always returns the full history (AAPL currently returns 94 quarters back to 2003). Only available for SEC registrants, foreign listings return no data.
 
-**Availability:** US-based companies only
+**Availability:** US-listed symbols whose insiders file forms 3, 4 and 5 with the SEC. Foreign issuers listed in the US return data from 2026 on (for example TSM, TM, BABA, SPOT) or no data at all (for example ASML, NVO, RY)
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1856,7 +1856,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve trades in a specific company disclosed by U.S. senators, ordered from the newest to the oldest disclosure.
 
-**Availability:** US-based companies only
+**Availability:** US-listed symbols only, ADRs of foreign companies included
 
 **Parameters:**
 - `symbol` (string) - Ticker symbol
@@ -1888,7 +1888,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 **Purpose:** Retrieve the institutional ownership of a specific company aggregated from the 13F filings of a single calendar quarter. Institutions file within 45 days after the end of a quarter, so the latest quarter is empty or incomplete until then. Only available for securities reported on 13F, foreign listings return no data. Requires the Ultimate or Enterprise FMP plan.
 
-**Availability:** US-based companies only
+**Availability:** US-listed symbols only, ADRs of foreign companies included
 
 Properties prefixed with `last` hold the value of the previous quarter, properties suffixed with `Change` the difference between the two quarters.
 
@@ -1943,7 +1943,7 @@ Properties prefixed with `last` hold the value of the previous quarter, properti
 
 **Purpose:** Retrieve the institutional holders of a specific company from the 13F filings of a single calendar quarter, ordered from the largest number of shares held to the smallest. Option positions are returned as separate records next to the stock position of the same holder. Requires the Ultimate or Enterprise FMP plan.
 
-**Availability:** US-based companies only
+**Availability:** US-listed symbols only, ADRs of foreign companies included
 
 Properties prefixed with `last` hold the value of the previous quarter, properties prefixed with `changeIn` the difference between the two quarters.
 
