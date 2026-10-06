@@ -8,3 +8,6 @@ vendor
 .phpunit.result.cache
 
 workspace
+
+CLAUDE.local.md
+ISSUE.md
