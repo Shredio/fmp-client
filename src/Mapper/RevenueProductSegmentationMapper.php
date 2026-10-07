@@ -8,6 +8,7 @@ use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Payload\RevenueProductSegmentation;
+use Shredio\FmpClient\TypeSchema\RevenueSegments;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchema\Result\Failure;
 use Shredio\TypeSchema\Result\WithNotices;
@@ -34,7 +35,7 @@ final readonly class RevenueProductSegmentationMapper extends Type
 			'period' => $ts->mapper(Period::class),
 			'reportedCurrency' => $ts->string(),
 			'date' => $ts->string(),
-			'data' => $ts->optional($ts->array($ts->string(), $ts->float())),
+			'data' => $ts->optional($ts->before(RevenueSegments::castNumericStrings(...), $ts->array($ts->string(), $ts->float()))),
 		],
 			identifier: 'symbol',
 		);

@@ -94,6 +94,32 @@ final class RevenueProductSegmentationTest extends TestCase
 		$this->assertSame(513700000.00000006, $segments[4]->data['Metrology and inspection']);
 	}
 
+	public function testRevenueProductSegmentationWithNumericStrings(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/revenue-product-segmentation-igc.json');
+
+		$segments = iterator_to_array($client->revenueProductSegmentation('IGC'));
+
+		$this->assertCount(12, $segments);
+		$this->assertSame((new RevenueProductSegmentation(
+			symbol: 'IGC',
+			fiscalYear: 2025,
+			period: Period::FY,
+			reportedCurrency: 'USD',
+			date: '2025-03-31',
+			data: [
+				'Tolling White Labeling Service Member' => 1158000.0,
+				'WellnessAndLifestyleMember' => 113000.0,
+			],
+		))->toArray(), $segments[0]->toArray());
+		$this->assertSame([
+			'Construction' => 146000.0,
+			'Rental' => 18000.0,
+			'Tolling White Labeling Service Member' => 228000.0,
+			'WellnessAndLifestyleMember' => 953000.0,
+		], $segments[1]->data);
+	}
+
 	public function testRevenueProductSegmentationInvalidData(): void
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/revenue-product-segmentation-invalid.json');

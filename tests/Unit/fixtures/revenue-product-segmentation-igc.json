@@ -1,0 +1,137 @@
+[
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2025,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2025-03-31",
+    "data": {
+      "Tolling White Labeling Service Member": 1158000,
+      "WellnessAndLifestyleMember": "113000"
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2024,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2024-03-31",
+    "data": {
+      "Construction": 146000,
+      "Rental": "18000",
+      "Tolling White Labeling Service Member": "228000",
+      "WellnessAndLifestyleMember": "953000"
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2023,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2023-03-31",
+    "data": {
+      "Construction": 76000,
+      "Rental": "37000",
+      "WellnessAndLifestyleMember": "416000",
+      "Tolling White Labeling Service Member": "382000"
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2022,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2022-03-31",
+    "data": {
+      "LegacyInfrastructureMember": 1200000
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2021,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2021-03-31",
+    "data": {
+      "LegacyInfrastructureMember": 175000,
+      "PlantAndCannabinoidMember": 723000
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2020,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2020-03-31",
+    "data": {
+      "LegacyInfrastructureMember": 3661000,
+      "PlantAndCannabinoidMember": 411000
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2019,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2019-03-31",
+    "data": {
+      "Legacy Infrastructure": 5091000,
+      "Plant And Cannabinoid": 25000
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2018,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2018-03-31",
+    "data": {
+      "Alternative Therapies": 0,
+      "Legacy Business": 2192590
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2017,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2017-03-31",
+    "data": {
+      "Rental Lease": 367279,
+      "Trading Electronic Component": 213093
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2016,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2016-03-31",
+    "data": {
+      "Rental Lease": 114748,
+      "Trading": 6251802
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2015,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2015-03-31",
+    "data": {
+      "Rental Lease": 70956,
+      "Trading": 7609301
+    }
+  },
+  {
+    "symbol": "IGC",
+    "fiscalYear": 2014,
+    "period": "FY",
+    "reportedCurrency": "USD",
+    "date": "2014-03-31",
+    "data": {
+      "Construction": 69789,
+      "Trading": 2203366
+    }
+  }
+]

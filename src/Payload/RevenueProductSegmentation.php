@@ -3,7 +3,9 @@
 namespace Shredio\FmpClient\Payload;
 
 use Shredio\FmpClient\Enum\Period;
+use Shredio\FmpClient\TypeSchema\RevenueSegments;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
+use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
 
 #[CompileObjectMapper(identifier: 'symbol')]
 final readonly class RevenueProductSegmentation
@@ -19,6 +21,7 @@ final readonly class RevenueProductSegmentation
 		public Period $period,
 		public string $reportedCurrency,
 		public string $date,
+		#[CompilePropertyOptions(before: [RevenueSegments::class, 'castNumericStrings'])]
 		public array $data = [],
 	)
 	{
