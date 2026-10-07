@@ -78,6 +78,33 @@ final class InsiderTradesTest extends TestCase
 		))->toArray(), $trades[61]->toArray());
 	}
 
+	public function testInsiderTradeWithoutSecuritiesOwned(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/insider-trading-search-shwz.json');
+
+		$trades = iterator_to_array($client->insiderTrades('SHWZ', page: 1, limit: 100));
+
+		$this->assertCount(100, $trades);
+		$this->assertSame((new InsiderTrade(
+			symbol: 'SHWZ',
+			filingDate: '2022-12-02',
+			transactionDate: '2022-11-30',
+			reportingCik: '0001956430',
+			companyCik: '0001622879',
+			transactionType: '',
+			securitiesOwned: null,
+			reportingName: 'CRW Capital Holdings II, LLC',
+			typeOfOwner: 'director',
+			acquisitionOrDisposition: 'D',
+			directOrIndirect: null,
+			formType: '3',
+			securitiesTransacted: 10076222,
+			price: 1.2,
+			securityName: 'Right to Buy Series A Cumulative Convertible Preferred Stock',
+			url: 'https://www.sec.gov/Archives/edgar/data/1622879/000110465922124269/0001104659-22-124269-index.htm',
+		))->toArray(), $trades[9]->toArray());
+	}
+
 	public function testInsiderTradesLatest(): void
 	{
 		$response = MockResponse::fromFile(__DIR__ . '/fixtures/insider-trading-latest.json');

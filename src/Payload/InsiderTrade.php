@@ -13,6 +13,7 @@ final readonly class InsiderTrade
 	 * @param non-empty-string $filingDate
 	 * @param non-empty-string $transactionDate
 	 * @param string $transactionType Empty for form 3 (initial statement of ownership)
+	 * @param int|float|null $securitiesOwned Null for some form 3 filings of derivative securities (e.g. convertible notes)
 	 * @param string $acquisitionOrDisposition A for acquisition, D for disposition, empty for form 3
 	 * @param non-empty-string|null $directOrIndirect D for direct, I for indirect ownership, null for some filings without a transaction (e.g. form 3)
 	 */
@@ -23,7 +24,7 @@ final readonly class InsiderTrade
 		public string $reportingCik,
 		public string $companyCik,
 		public string $transactionType,
-		public int|float $securitiesOwned,
+		public int|float|null $securitiesOwned,
 		public string $reportingName,
 		public string $typeOfOwner,
 		public string $acquisitionOrDisposition,
@@ -45,7 +46,7 @@ final readonly class InsiderTrade
 	 *     reportingCik: string,
 	 *     companyCik: string,
 	 *     transactionType: string,
-	 *     securitiesOwned: int|float,
+	 *     securitiesOwned: int|float|null,
 	 *     reportingName: string,
 	 *     typeOfOwner: string,
 	 *     acquisitionOrDisposition: string,

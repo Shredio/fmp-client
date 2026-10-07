@@ -34,7 +34,7 @@ final readonly class InsiderTradeMapper extends Type
 			'reportingCik' => $ts->string(),
 			'companyCik' => $ts->string(),
 			'transactionType' => $ts->string(),
-			'securitiesOwned' => $ts->union([$ts->int(), $ts->float()]),
+			'securitiesOwned' => $ts->nullable($ts->union([$ts->int(), $ts->float()])),
 			'reportingName' => $ts->string(),
 			'typeOfOwner' => $ts->string(),
 			'acquisitionOrDisposition' => $ts->string(),

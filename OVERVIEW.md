@@ -1897,7 +1897,7 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `reportingCik` - CIK of the reporting insider
 - `companyCik` - CIK of the company
 - `transactionType` - Transaction code (for example S-Sale, A-Award, M-Exempt, F-InKind, G-Gift, C-Conversion, J-Other), empty for form 3
-- `securitiesOwned` - Securities owned after the transaction
+- `securitiesOwned` - Securities owned after the transaction, `null` for some form 3 filings of derivative securities (e.g. convertible notes)
 - `reportingName` - Name of the reporting insider
 - `typeOfOwner` - Relationship to the company (for example "officer: CFO", "director")
 - `acquisitionOrDisposition` - A for acquisition, D for disposition, empty for form 3
