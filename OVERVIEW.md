@@ -18,6 +18,7 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 - [Valuation and Analyst Sentiment](#valuation-and-analyst-sentiment)
 - [Ownership and Insider Activity](#ownership-and-insider-activity)
 - [Earning Call Transcripts](#earning-call-transcripts)
+- [ETFs and Funds](#etfs-and-funds)
 
 ---
 
@@ -133,6 +134,53 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 - `exchangeShortName` - Exchange short name
 
 **API endpoint:** `https://financialmodelingprep.com/stable/index-list`
+
+---
+
+### `indexConstituents()`
+
+**Purpose:** Retrieve the current constituents of the S&P 500, the Nasdaq 100 or the Dow Jones Industrial Average. The Nasdaq 100 returns 101 records, both share classes of Alphabet are members.
+
+**Availability:** Not company specific
+
+**Parameters:**
+- `index` (StockIndex) - Index (`Sp500`, `Nasdaq`, `DowJones`)
+
+**Return Values:** `iterable<IndexConstituent>`
+- `symbol` - Ticker symbol
+- `name` - Company name
+- `sector` - Sector
+- `subSector` - Industry
+- `headQuarter` - City and state of the headquarters
+- `dateFirstAdded` - Date the company was first added to the index, `null` when unknown
+- `cik` - CIK identifier
+- `founded` - Year or date the company was founded, the format is not uniform (for example `1976` or `1998-09-04`)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/sp500-constituent`, `https://financialmodelingprep.com/stable/nasdaq-constituent`, `https://financialmodelingprep.com/stable/dowjones-constituent`
+
+---
+
+### `historicalIndexConstituents()`
+
+**Purpose:** Retrieve the companies added to and removed from the S&P 500, the Nasdaq 100 or the Dow Jones Industrial Average, ordered from the newest to the oldest change. The S&P 500 reaches back to 1957, the Nasdaq 100 to 1985 and the Dow Jones to 1994.
+
+**Availability:** Not company specific
+
+**Parameters:**
+- `index` (StockIndex) - Index (`Sp500`, `Nasdaq`, `DowJones`)
+
+**Return Values:** `iterable<HistoricalIndexConstituent>`
+- `dateAdded` - Date of the change in words (for example "October 06, 2026")
+- `addedSecurity` - Name of the added company, empty or `null` for a removal
+- `removedTicker` - Ticker symbol of the removed company, empty for an addition
+- `removedSecurity` - Name of the removed company, empty for an addition
+- `date` - Date of the change in the `Y-m-d` format
+- `symbol` - Ticker symbol of the added company, of the removed one for a removal
+- `reason` - Reason of the change, may be empty
+- `changeType` - Type of the change (`addition`, `removal`, `replacement`)
+- `addedTicker` - Ticker symbol of the added company, empty for a removal
+
+**API endpoint:** `https://financialmodelingprep.com/stable/historical-sp500-constituent`, `https://financialmodelingprep.com/stable/historical-nasdaq-constituent`, `https://financialmodelingprep.com/stable/historical-dowjones-constituent`
 
 ---
 
@@ -335,6 +383,29 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 
 ---
 
+### `keyExecutives()`
+
+**Purpose:** Retrieve the executives of a company. ETFs and other symbols without a management return no data. The compensation is filled for less than half of the executives (120 of the 274 sampled ones).
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+
+**Return Values:** `iterable<KeyExecutive>`
+- `title` - Title of the executive
+- `name` - Name of the executive
+- `pay` - Annual compensation, `null` when not disclosed
+- `currencyPay` - Currency of the compensation
+- `gender` - Gender (`male`, `female`), `null` when unknown
+- `yearBorn` - Year of birth, `null` when unknown
+- `titleSince` - Always `null` in the sampled responses, the type of a filled value is unknown
+- `active` - Whether the executive is in office
+
+**API endpoint:** `https://financialmodelingprep.com/stable/key-executives`
+
+---
+
 ### `sharesFloat()`
 
 **Purpose:** Retrieve shares float information for a specific symbol.
@@ -494,6 +565,29 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 
 ---
 
+### `ratingBulk()`
+
+**Purpose:** Bulk retrieval of the rating FMP computes from the fundamentals of every company. It is not an analyst rating, for those see `gradesConsensus()`.
+
+**Availability:** Worldwide
+
+**Parameters:** None
+
+**Return Values:** `iterable<Rating>`
+- `symbol` - Ticker symbol
+- `date` - Date of the rating
+- `rating` - Letter grade from `S+` (best) through `A`, `B` and `C` down to `D`, with an optional `+` or `-`
+- `discountedCashFlowScore` - Score of the discounted cash flow valuation, from 1 (worst) to 5 (best)
+- `returnOnEquityScore` - Score of the return on equity (1-5)
+- `returnOnAssetsScore` - Score of the return on assets (1-5)
+- `debtToEquityScore` - Score of the debt to equity ratio (1-5)
+- `priceToEarningsScore` - Score of the price to earnings ratio (1-5)
+- `priceToBookScore` - Score of the price to book ratio (1-5)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/rating-bulk`
+
+---
+
 ### `peersBulk()`
 
 **Purpose:** Bulk retrieval of stock peers (companies considered similar by industry, sector and market cap) for all symbols.
@@ -603,6 +697,83 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 **Return Values:** `iterable<BalanceSheetStatement>` (same structure as `balanceSheetStatement()`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/balance-sheet-statement-bulk`
+
+---
+
+### `balanceSheetStatementTtm()`
+
+**Purpose:** Retrieve the balance sheets as of the end of every quarter, ordered from the newest to the oldest. A balance sheet is a snapshot, so unlike the other TTM endpoints nothing is summed: every record equals the quarterly balance sheet of the same date. AAPL returns 152 records reaching back to 1985.
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null) - Maximum number of records (1-1000), `null` uses the API default of 5
+
+**Return Values:** `iterable<BalanceSheetStatement>` (same structure as `balanceSheetStatement()`)
+- `symbol` - Ticker symbol
+- `date` - Statement date
+- `reportedCurrency` - Reporting currency
+- `cik` - CIK number
+- `filingDate` - Filing date (null when the API has not published it yet)
+- `acceptedDate` - Acceptance date
+- `fiscalYear` - Fiscal year
+- `period` - Period
+- `cashAndCashEquivalents` - Cash and cash equivalents
+- `shortTermInvestments` - Short-term investments
+- `cashAndShortTermInvestments` - Cash and short-term investments
+- `netReceivables` - Net receivables
+- `accountsReceivables` - Accounts receivables
+- `otherReceivables` - Other receivables
+- `inventory` - Inventory
+- `prepaids` - Prepaid expenses
+- `otherCurrentAssets` - Other current assets
+- `totalCurrentAssets` - Total current assets
+- `propertyPlantEquipmentNet` - Property, plant and equipment (net)
+- `goodwill` - Goodwill
+- `intangibleAssets` - Intangible assets
+- `goodwillAndIntangibleAssets` - Goodwill and intangible assets
+- `longTermInvestments` - Long-term investments
+- `taxAssets` - Tax assets
+- `otherNonCurrentAssets` - Other non-current assets
+- `totalNonCurrentAssets` - Total non-current assets
+- `otherAssets` - Other assets
+- `totalAssets` - Total assets
+- `totalPayables` - Total payables
+- `accountPayables` - Account payables
+- `otherPayables` - Other payables
+- `accruedExpenses` - Accrued expenses
+- `shortTermDebt` - Short-term debt
+- `capitalLeaseObligationsCurrent` - Current capital lease obligations
+- `taxPayables` - Tax payables
+- `deferredRevenue` - Deferred revenue
+- `otherCurrentLiabilities` - Other current liabilities
+- `totalCurrentLiabilities` - Total current liabilities
+- `longTermDebt` - Long-term debt
+- `capitalLeaseObligationsNonCurrent` - Non-current capital lease obligations, always 0 here because the API leaves the field out of this endpoint
+- `deferredRevenueNonCurrent` - Non-current deferred revenue
+- `deferredTaxLiabilitiesNonCurrent` - Non-current deferred tax liabilities
+- `otherNonCurrentLiabilities` - Other non-current liabilities
+- `totalNonCurrentLiabilities` - Total non-current liabilities
+- `otherLiabilities` - Other liabilities
+- `capitalLeaseObligations` - Capital lease obligations
+- `totalLiabilities` - Total liabilities
+- `treasuryStock` - Treasury stock
+- `preferredStock` - Preferred stock
+- `commonStock` - Common stock
+- `retainedEarnings` - Retained earnings
+- `additionalPaidInCapital` - Additional paid-in capital
+- `accumulatedOtherComprehensiveIncomeLoss` - Accumulated other comprehensive income/loss
+- `otherTotalStockholdersEquity` - Other total stockholders equity
+- `totalStockholdersEquity` - Total stockholders equity
+- `totalEquity` - Total equity
+- `minorityInterest` - Minority interest
+- `totalLiabilitiesAndTotalEquity` - Total liabilities and total equity
+- `totalInvestments` - Total investments
+- `totalDebt` - Total debt
+- `netDebt` - Net debt
+
+**API endpoint:** `https://financialmodelingprep.com/stable/balance-sheet-statement-ttm`
 
 ---
 
@@ -813,6 +984,69 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 
 ---
 
+### `cashFlowStatementTtm()`
+
+**Purpose:** Retrieve a historical series of trailing twelve months (TTM) cash flow statements for a specific company, ordered from the newest to the oldest. Every record sums the four quarters ending on `date`; `cashAtBeginningOfPeriod` is the cash at the start of the first of them and `cashAtEndOfPeriod` the cash at the end of the last one. AAPL returns 147 records reaching back to 1989.
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null) - Maximum number of records (1-1000), `null` uses the API default of 5
+
+**Return Values:** `iterable<CashFlowStatement>` (same structure as `cashFlowStatement()`)
+- `symbol` - Ticker symbol
+- `date` - Statement date
+- `reportedCurrency` - Reporting currency
+- `cik` - CIK number
+- `filingDate` - Filing date (null when the API has not published it yet)
+- `acceptedDate` - Acceptance date
+- `fiscalYear` - Fiscal year
+- `period` - Period
+- `netIncome` - Net income
+- `depreciationAndAmortization` - Depreciation and amortization
+- `deferredIncomeTax` - Deferred income tax
+- `stockBasedCompensation` - Stock-based compensation
+- `changeInWorkingCapital` - Change in working capital
+- `accountsReceivables` - Accounts receivables
+- `inventory` - Inventory
+- `accountsPayables` - Accounts payables
+- `otherWorkingCapital` - Other working capital
+- `otherNonCashItems` - Other non-cash items
+- `netCashProvidedByOperatingActivities` - Net cash provided by operating activities
+- `investmentsInPropertyPlantAndEquipment` - Investments in property, plant and equipment
+- `acquisitionsNet` - Acquisitions (net)
+- `purchasesOfInvestments` - Purchases of investments
+- `salesMaturitiesOfInvestments` - Sales/maturities of investments
+- `otherInvestingActivities` - Other investing activities
+- `netCashProvidedByInvestingActivities` - Net cash provided by investing activities
+- `netDebtIssuance` - Net debt issuance
+- `longTermNetDebtIssuance` - Long-term net debt issuance
+- `shortTermNetDebtIssuance` - Short-term net debt issuance
+- `netStockIssuance` - Net stock issuance
+- `netCommonStockIssuance` - Net common stock issuance
+- `commonStockIssuance` - Common stock issuance
+- `commonStockRepurchased` - Common stock repurchased
+- `netPreferredStockIssuance` - Net preferred stock issuance
+- `netDividendsPaid` - Net dividends paid
+- `commonDividendsPaid` - Common dividends paid
+- `preferredDividendsPaid` - Preferred dividends paid
+- `otherFinancingActivities` - Other financing activities
+- `netCashProvidedByFinancingActivities` - Net cash provided by financing activities
+- `effectOfForexChangesOnCash` - Effect of forex changes on cash
+- `netChangeInCash` - Net change in cash
+- `cashAtEndOfPeriod` - Cash at end of period
+- `cashAtBeginningOfPeriod` - Cash at beginning of period
+- `operatingCashFlow` - Operating cash flow
+- `capitalExpenditure` - Capital expenditure
+- `freeCashFlow` - Free cash flow
+- `incomeTaxesPaid` - Income taxes paid
+- `interestPaid` - Interest paid
+
+**API endpoint:** `https://financialmodelingprep.com/stable/cash-flow-statement-ttm`
+
+---
+
 ### `latestFinancialStatements()`
 
 **Purpose:** Retrieve latest financial statements across all companies.
@@ -933,6 +1167,67 @@ Contains percentage growth of all cash flow statement items
 **Return Values:** `iterable<CashFlowStatementGrowthBulk>`
 
 **API endpoint:** `https://financialmodelingprep.com/stable/cash-flow-statement-growth-bulk`
+
+---
+
+### `financialGrowth()`
+
+**Purpose:** Retrieve the growth of the key figures of the income statement, balance sheet and cash flow statement of a company, ordered from the newest to the oldest period. The growth rates are fractions (0.064 stands for 6.4 %) measured against the previous period: the previous fiscal year for an annual record, the previous quarter for a quarterly one. The values over three, five and ten years are total, not annualized, growth.
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `limit` (int|null) - Maximum number of records (1-1000), `null` uses the API default of 5
+- `period` (PeriodQuery|null) - Period (FY/annual, Q1-Q4, quarter), `null` uses the API default of fiscal years
+
+**Return Values:** `iterable<FinancialGrowth>`
+- `symbol` - Ticker symbol
+- `date` - Last day of the fiscal period
+- `fiscalYear` - Fiscal year
+- `period` - Fiscal period (`Period` enum)
+- `reportedCurrency` - Reporting currency
+- `revenueGrowth` - Growth of revenue
+- `grossProfitGrowth` - Growth of gross profit
+- `ebitgrowth` - Growth of EBIT
+- `operatingIncomeGrowth` - Growth of operating income
+- `netIncomeGrowth` - Growth of net income
+- `epsgrowth` - Growth of earnings per share
+- `epsdilutedGrowth` - Growth of diluted earnings per share
+- `weightedAverageSharesGrowth` - Growth of the weighted average number of shares outstanding
+- `weightedAverageSharesDilutedGrowth` - Growth of the diluted weighted average number of shares outstanding
+- `dividendsPerShareGrowth` - Growth of dividends per share
+- `operatingCashFlowGrowth` - Growth of operating cash flow
+- `receivablesGrowth` - Growth of receivables
+- `inventoryGrowth` - Growth of inventory
+- `assetGrowth` - Growth of total assets
+- `bookValueperShareGrowth` - Growth of book value per share
+- `debtGrowth` - Growth of total debt
+- `rdexpenseGrowth` - Growth of research and development expenses
+- `sgaexpensesGrowth` - Growth of selling, general and administrative expenses
+- `freeCashFlowGrowth` - Growth of free cash flow
+- `tenYRevenueGrowthPerShare` - Total growth of revenue per share over ten years
+- `fiveYRevenueGrowthPerShare` - Total growth of revenue per share over five years
+- `threeYRevenueGrowthPerShare` - Total growth of revenue per share over three years
+- `tenYOperatingCFGrowthPerShare` - Total growth of operating cash flow per share over ten years
+- `fiveYOperatingCFGrowthPerShare` - Total growth of operating cash flow per share over five years
+- `threeYOperatingCFGrowthPerShare` - Total growth of operating cash flow per share over three years
+- `tenYNetIncomeGrowthPerShare` - Total growth of net income per share over ten years
+- `fiveYNetIncomeGrowthPerShare` - Total growth of net income per share over five years
+- `threeYNetIncomeGrowthPerShare` - Total growth of net income per share over three years
+- `tenYShareholdersEquityGrowthPerShare` - Total growth of shareholders equity per share over ten years
+- `fiveYShareholdersEquityGrowthPerShare` - Total growth of shareholders equity per share over five years
+- `threeYShareholdersEquityGrowthPerShare` - Total growth of shareholders equity per share over three years
+- `tenYDividendperShareGrowthPerShare` - Total growth of dividends per share over ten years
+- `fiveYDividendperShareGrowthPerShare` - Total growth of dividends per share over five years
+- `threeYDividendperShareGrowthPerShare` - Total growth of dividends per share over three years
+- `ebitdaGrowth` - Growth of EBITDA
+- `growthCapitalExpenditure` - Growth of capital expenditure
+- `tenYBottomLineNetIncomeGrowthPerShare` - Total growth of bottom line net income per share over ten years
+- `fiveYBottomLineNetIncomeGrowthPerShare` - Total growth of bottom line net income per share over five years
+- `threeYBottomLineNetIncomeGrowthPerShare` - Total growth of bottom line net income per share over three years
+
+**API endpoint:** `https://financialmodelingprep.com/stable/financial-growth`
 
 ---
 
@@ -1101,6 +1396,26 @@ Contains percentage growth of all cash flow statement items
 
 ---
 
+### `earningsSurprisesBulk()`
+
+**Purpose:** Bulk retrieval of the reported and estimated earnings per share of every earnings report dated in the given year, for all companies. Only reports that already took place are returned (51 225 rows for 2026 on 2026-10-13, 66 751 rows for 2025).
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `year` (int) - Year of the reports, required by the API
+
+**Return Values:** `iterable<EarningsSurprise>`
+- `symbol` - Ticker symbol
+- `date` - Date of the earnings report
+- `epsActual` - Reported earnings per share, `null` in rare cases
+- `epsEstimated` - Estimated earnings per share
+- `lastUpdated` - Date the record was last updated
+
+**API endpoint:** `https://financialmodelingprep.com/stable/earnings-surprises-bulk`
+
+---
+
 ### `splits()`
 
 **Purpose:** Retrieve the full historical stock split record for a single symbol.
@@ -1140,6 +1455,33 @@ Contains percentage growth of all cash flow statement items
 - `splitType` - Type of split (`stock-split`, `stock-dividend`, or `null`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/splits-calendar`
+
+---
+
+### `iposCalendar()`
+
+**Purpose:** Retrieve the calendar of expected and priced initial public offerings for a given time period. Automatically paginated via the standard calendar paginator, the API fills at most about 90 days before `to` per request.
+
+**Availability:** Flagged as worldwide in the FMP docs and foreign exchanges made up about half of the records in the sampled quarters of 2023 and 2024, but their share fell to a few percent by the end of 2025 and the records dated April 2026 or later are IPOs on NYSE and NASDAQ only (observed on 2026-10-13)
+
+**Parameters:**
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
+- `logger` (LoggerInterface|null, default: null) - Optional logger
+
+**Return Values:** `iterable<IpoCalendarItem>`
+- `symbol` - Ticker symbol
+- `date` - Date of the IPO in the `Y-m-d` format
+- `daa` - The date as an ISO 8601 timestamp in UTC, it may fall on the day after `date`
+- `company` - Company name
+- `exchange` - Exchange code (for example NASDAQ, NYSE, HKSE), `null` in rare cases
+- `actions` - Status of the IPO (`Expected`, `Priced`, `Filed`, `Amended`), older records use lower case
+- `shares` - Number of shares offered, `null` when unknown
+- `priceRange` - Price range (for example "17.00 - 19.00"), a single price for a priced IPO, `null` when unknown
+- `dealSize` - Size of the offering in the currency of the listing, rounded to a whole number, `null` when unknown
+- `marketCap` - Market capitalization in the currency of the listing, rounded to a whole number, `null` when unknown
+
+**API endpoint:** `https://financialmodelingprep.com/stable/ipos-calendar`
 
 ---
 
@@ -1202,6 +1544,38 @@ Contains percentage growth of all cash flow statement items
 - `timestamp` - Unix timestamp of the quote
 
 **API endpoint:** `https://financialmodelingprep.com/stable/quote`
+
+---
+
+### `batchQuote()`
+
+**Purpose:** Retrieve the full quotes of several symbols at once. Stocks, ETFs, indexes, cryptocurrencies, forex pairs and commodities can be mixed in one list. A symbol unknown to the API is left out of the result. The API answers at most 1000 symbols per request and silently drops the rest, so the client splits a longer list into several requests automatically. An empty list sends no request.
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbols` (list<string>) - Ticker symbols
+
+**Return Values:** `iterable<Quote>` (same structure as `quote()`, delisted symbols return `null` in some of the price fields)
+- `symbol` - Ticker symbol
+- `name` - Instrument name
+- `exchange` - Exchange code (for example NASDAQ, XETRA, FOREX, CRYPTO, INDEX)
+- `price` - Current price
+- `changePercentage` - Price change in percent
+- `change` - Absolute price change
+- `volume` - Traded volume (float for cryptocurrencies)
+- `dayLow` - Lowest price of the day
+- `dayHigh` - Highest price of the day
+- `yearHigh` - 52 week high
+- `yearLow` - 52 week low
+- `marketCap` - Market capitalization, `null` for forex pairs and 0 for indexes
+- `priceAvg50` - 50 day moving average
+- `priceAvg200` - 200 day moving average
+- `open` - Opening price
+- `previousClose` - Previous closing price
+- `timestamp` - Unix timestamp of the quote
+
+**API endpoint:** `https://financialmodelingprep.com/stable/batch-quote`
 
 ---
 
@@ -1418,6 +1792,46 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 - `volume` - Trading volume (float for cryptocurrencies and some intraday bars)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/historical-chart/{interval}`
+
+---
+
+### `historicalMarketCapitalization()`
+
+**Purpose:** Retrieve the daily market capitalization of a symbol in a given time period, ordered from the newest to the oldest day. Works for stocks, ETFs and cryptocurrencies.
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `from` (DateTimeImmutable) - Start date
+- `to` (DateTimeImmutable) - End date
+
+**Return Values:** `iterable<MarketCapitalization>`
+- `symbol` - Ticker symbol
+- `date` - Date
+- `marketCap` - Market capitalization in the currency the symbol is traded in
+
+**Note:** The API returns at most 5000 records per request; the client automatically issues follow-up requests to cover the entire date range.
+
+**API endpoint:** `https://financialmodelingprep.com/stable/historical-market-capitalization`
+
+---
+
+### `marketCapitalizationBatch()`
+
+**Purpose:** Retrieve the latest market capitalization of several symbols at once. A symbol unknown to the API is left out of the result. The client splits a long list into several requests automatically, an empty list sends no request.
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbols` (list<string>) - Ticker symbols
+
+**Return Values:** `iterable<MarketCapitalization>`
+- `symbol` - Ticker symbol
+- `date` - Date of the market capitalization
+- `marketCap` - Market capitalization in the currency the symbol is traded in, 0 for indexes
+
+**API endpoint:** `https://financialmodelingprep.com/stable/market-capitalization-batch`
 
 ---
 
@@ -1752,6 +2166,24 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 ---
 
+### `discountedCashFlowBulk()`
+
+**Purpose:** Bulk retrieval of the discounted cash flow valuations for all companies. About 5 % of the rows have no valuation (`dcf` is `null`), nearly all of them are dated 2025 or earlier.
+
+**Availability:** Worldwide
+
+**Parameters:** None
+
+**Return Values:** `iterable<DiscountedCashFlow>` (same structure as `discountedCashFlow()`)
+- `symbol` - Ticker symbol
+- `date` - Valuation date
+- `dcf` - Discounted cash flow value per share, `null` when no valuation is available
+- `stockPrice` - Current stock price (returned by the API under the `Stock Price` key)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/dcf-bulk`
+
+---
+
 ### `gradesConsensus()`
 
 **Purpose:** Retrieve the distribution of analyst ratings for a specific company together with the resulting consensus rating.
@@ -2020,6 +2452,71 @@ Contains all data from `BatchExchangeQuote` plus additional information:
 
 ---
 
+### `houseTrades()`
+
+**Purpose:** Retrieve trades in a specific company disclosed by members of the U.S. House of Representatives, ordered from the newest to the oldest disclosure.
+
+**Availability:** US-listed symbols only, ADRs of foreign companies included
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol
+- `page` (int) - Page number (0-100), a higher page is rejected by the API with HTTP 400
+- `limit` (int|null) - Maximum number of records per page (1-250), `null` uses the API default of 100
+
+**Return Values:** `iterable<HouseTrade>`
+- `symbol` - Ticker symbol
+- `senateID` - Bioguide identifier of the representative, the API reuses the field name of the Senate endpoints
+- `disclosureDate` - Date the transaction was disclosed
+- `transactionDate` - Date of the transaction
+- `firstName` - First name of the representative
+- `lastName` - Last name of the representative
+- `office` - Office name as reported in the disclosure
+- `district` - State code followed by the number of the district (for example CA17), may be empty
+- `owner` - Owner of the assets (Self, Spouse, Joint, Dependent), may be empty
+- `assetDescription` - Description of the traded asset
+- `assetType` - Type of the asset (for example Stock, Stock Option)
+- `type` - Type of the transaction (for example Purchase, Sale, Sale (Full), Sale (Partial), Exchange)
+- `amount` - Reported value range (for example "$15,001 - $50,000")
+- `capitalGainsOver200USD` - Whether capital gains exceeded 200 USD, returned by the API as the string "True" or "False"
+- `comment` - Comment from the disclosure, mostly empty
+- `link` - Link to the disclosure on disclosures-clerk.house.gov
+
+**API endpoint:** `https://financialmodelingprep.com/stable/house-trades`
+
+---
+
+### `houseTradesLatest()`
+
+**Purpose:** Retrieve the trades disclosed by members of the U.S. House of Representatives across all assets, ordered from the newest to the oldest disclosure. Unlike `houseTrades()` the feed also contains assets without a ticker symbol (government securities, corporate bonds, municipal securities and other assets), 60 of the 1000 sampled records.
+
+**Availability:** US-listed symbols only, ADRs of foreign companies included
+
+**Parameters:**
+- `page` (int) - Page number (0-100), a higher page is rejected by the API with HTTP 400
+- `limit` (int|null) - Maximum number of records per page (1-250), `null` uses the API default of 100
+
+**Return Values:** `iterable<LatestHouseTrade>`
+- `symbol` - Ticker symbol, empty for assets without one
+- `senateID` - Bioguide identifier of the representative, the API reuses the field name of the Senate endpoints
+- `disclosureDate` - Date the transaction was disclosed
+- `transactionDate` - Date of the transaction
+- `firstName` - First name of the representative
+- `lastName` - Last name of the representative
+- `office` - Office name as reported in the disclosure
+- `district` - State code followed by the number of the district (for example CA17), may be empty
+- `owner` - Owner of the assets (Self, Spouse, Joint, Dependent), may be empty
+- `assetDescription` - Description of the traded asset
+- `assetType` - Type of the asset (for example Stock, Stock Option, REIT, Government Securities, Corporate Bond), may be empty
+- `type` - Type of the transaction (for example Purchase, Sale, Sale (Full), Sale (Partial), Exchange)
+- `amount` - Reported value range (for example "$15,001 - $50,000")
+- `capitalGainsOver200USD` - Whether capital gains exceeded 200 USD, returned by the API as the string "True" or "False"
+- `comment` - Comment from the disclosure, mostly empty
+- `link` - Link to the disclosure on disclosures-clerk.house.gov
+
+**API endpoint:** `https://financialmodelingprep.com/stable/house-latest`
+
+---
+
 ### `institutionalPositionsSummary()`
 
 **Purpose:** Retrieve the institutional ownership of a specific company aggregated from the 13F filings of a single calendar quarter. Institutions file within 45 days after the end of a quarter, so the latest quarter is empty or incomplete until then. Only available for securities reported on 13F, foreign listings return no data. Requires the Ultimate or Enterprise FMP plan.
@@ -2221,3 +2718,114 @@ Requires the Ultimate or Enterprise FMP plan.
 - `date` - Date of the earning call
 
 **API endpoint:** `https://financialmodelingprep.com/stable/earning-call-transcript-latest`
+
+---
+
+## ETFs and Funds
+
+### `etfList()`
+
+**Purpose:** Retrieve the symbols and names of the ETFs covered by the API (15 684 records on 2026-10-13, about half of them listed outside the US).
+
+**Availability:** Worldwide
+
+**Parameters:** None
+
+**Return Values:** `iterable<Etf>`
+- `symbol` - Ticker symbol
+- `name` - Name of the fund
+
+**API endpoint:** `https://financialmodelingprep.com/stable/etf-list`
+
+---
+
+### `etfInfo()`
+
+**Purpose:** Retrieve the profile of an ETF or a mutual fund. Funds that are no longer traded keep only a part of the record, the rest of it is `null`. Not every mutual fund is covered (VTSAX returns a profile, FXAIX does not).
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol of the fund
+
+**Return Values:** `EtfInfo|null` (`null` when the symbol is not a covered fund)
+- `symbol` - Ticker symbol
+- `name` - Name of the fund
+- `description` - Description of the fund, `null` or empty when not available
+- `isin` - ISIN, `null` or empty when not available
+- `assetClass` - Asset class (for example Equity, Fixed Income, Commodities), may be empty
+- `securityCusip` - CUSIP, `null` or empty when not available
+- `domicile` - Two letter country code of the domicile, `null` or empty when not available
+- `website` - Website of the fund, `null` or empty when not available
+- `etfCompany` - Issuer of the fund, `null` when not available
+- `expenseRatio` - Expense ratio in percent (0.09 stands for 0.09 %), `null` when not available
+- `assetsUnderManagement` - Assets under management in the currency of the net asset value, rounded to a whole number, `null` when not available
+- `avgVolume` - Average daily volume
+- `inceptionDate` - Inception date in the `Y-m-d` format, `null` when not available
+- `nav` - Net asset value per share, `null` when not available
+- `navCurrency` - Currency of the net asset value
+- `holdingsCount` - Number of holdings, `null` when not available
+- `isActivelyTrading` - Whether the fund is actively traded
+- `updatedAt` - Date and time of the last update as an ISO 8601 timestamp
+- `sectorsList` - Sector breakdown (`list<EtfSectorExposure>`), empty for funds without one, e.g. bond or commodity funds; every item holds `industry` (name of the sector) and `exposure` (share of the fund in percent)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/etf/info`
+
+---
+
+### `etfHoldings()`
+
+**Purpose:** Retrieve the assets held by an ETF or a mutual fund, ordered from the largest to the smallest position. A broad bond fund returns thousands of records (BND over 16 000).
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol of the fund
+
+**Return Values:** `iterable<EtfHolding>`
+- `symbol` - Ticker symbol of the fund
+- `asset` - Ticker symbol of the held asset, empty for assets without one, e.g. bonds or cash
+- `name` - Name of the held asset
+- `isin` - ISIN of the held asset, may be empty
+- `securityCusip` - CUSIP of the held asset, may be empty
+- `sharesNumber` - Number of shares held, the principal amount for bonds
+- `weightPercentage` - Share of the fund in percent
+- `marketValue` - Market value of the position in the currency of the fund
+- `updatedAt` - Date and time of the last update in the `Y-m-d H:i:s` format
+
+**API endpoint:** `https://financialmodelingprep.com/stable/etf/holdings`
+
+---
+
+### `etfSectorWeightings()`
+
+**Purpose:** Retrieve the share of every sector in an ETF or a mutual fund. About a quarter of the sampled funds return no data.
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol of the fund
+
+**Return Values:** `iterable<EtfSectorWeighting>`
+- `symbol` - Ticker symbol of the fund
+- `sector` - Name of the sector, `Cash & Others` for the remainder
+- `weightPercentage` - Share of the fund in percent
+
+**API endpoint:** `https://financialmodelingprep.com/stable/etf/sector-weightings`
+
+---
+
+### `etfCountryWeightings()`
+
+**Purpose:** Retrieve the share of every country in an ETF or a mutual fund. About a quarter of the sampled funds return no data. The API does not return the symbol of the fund.
+
+**Availability:** Worldwide
+
+**Parameters:**
+- `symbol` (string) - Ticker symbol of the fund
+
+**Return Values:** `iterable<EtfCountryWeighting>`
+- `country` - Name of the country, `Other` for the remainder
+- `weightPercentage` - Share of the fund in percent as a number, the API sends it as a string such as "97.7%"
+
+**API endpoint:** `https://financialmodelingprep.com/stable/etf/country-weightings`

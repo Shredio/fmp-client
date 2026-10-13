@@ -1,0 +1,72 @@
+[
+  {
+    "symbol": "SPY",
+    "name": "State Street SPDR S&P 500 ETF",
+    "description": "SPY is the best-recognized and oldest US listed ETF and typically tops rankings for largest AUM and greatest trading volume. The fund tracks the massively popular US index, the S&P 500. Few realize that S&P's index committee chooses 500 securities to represent the US large-cap space - not necessarily the 500 largest by market cap, which can lead to some omissions of single names. Still, the index offers outstanding exposure to the US large-cap space. It's important to note, SPY is a unit investment trust, an older but entirely viable structure. As a UIT, SPY must fully replicate its index (it probably would anyway) and forgo the small risk and reward of securities lending. It also can`t reinvest portfolio dividends between distributions, the resulting cash drag will slightly hurt performance in up markets and help in downtrends. SPY is a favored vanilla trading vehicle.",
+    "isin": "US78462F1030",
+    "assetClass": "Equity",
+    "securityCusip": "78462F103",
+    "domicile": "US",
+    "website": "https://www.ssga.com/us/en/institutional/etfs/state-street-spdr-sp-500-etf-trust-spy",
+    "etfCompany": "SPDR",
+    "expenseRatio": 0.09,
+    "assetsUnderManagement": 821678530000,
+    "avgVolume": 47955083,
+    "inceptionDate": "1993-01-22",
+    "nav": 778.45,
+    "navCurrency": "USD",
+    "holdingsCount": 504,
+    "isActivelyTrading": true,
+    "updatedAt": "2026-10-13T00:45:00.075Z",
+    "sectorsList": [
+      {
+        "industry": "Technology",
+        "exposure": 40.521748525421046
+      },
+      {
+        "industry": "Financial Services",
+        "exposure": 11.202262718765407
+      },
+      {
+        "industry": "Communication Services",
+        "exposure": 9.679881455159519
+      },
+      {
+        "industry": "Healthcare",
+        "exposure": 9.027732966625294
+      },
+      {
+        "industry": "Consumer Cyclical",
+        "exposure": 8.673836422237091
+      },
+      {
+        "industry": "Industrials",
+        "exposure": 7.309433658065359
+      },
+      {
+        "industry": "Consumer Defensive",
+        "exposure": 4.421783535410661
+      },
+      {
+        "industry": "Energy",
+        "exposure": 3.5685324063217836
+      },
+      {
+        "industry": "Utilities",
+        "exposure": 1.92325447482935
+      },
+      {
+        "industry": "Basic Materials",
+        "exposure": 1.7327794570117931
+      },
+      {
+        "industry": "Real Estate",
+        "exposure": 1.6612298425522316
+      },
+      {
+        "industry": "Cash & Others",
+        "exposure": 0.2775245376003763
+      }
+    ]
+  }
+]

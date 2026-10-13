@@ -30,4 +30,33 @@ final class DiscountedCashFlowTest extends TestCase
 		$this->assertNull($client->discountedCashFlow('SPY'));
 	}
 
+	public function testDiscountedCashFlowBulk(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/dcf-bulk.csv');
+
+		$valuations = iterator_to_array($client->discountedCashFlowBulk());
+
+		$this->assertNotEmpty($valuations);
+		$this->assertSame((new DiscountedCashFlow(
+			symbol: '000006.SZ',
+			date: '2026-10-13',
+			dcf: 2.7887209944052156,
+			stockPrice: 7.19,
+		))->toArray(), $valuations[0]->toArray());
+	}
+
+	public function testDiscountedCashFlowBulkWithoutValuation(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/dcf-bulk.csv');
+
+		$valuations = iterator_to_array($client->discountedCashFlowBulk());
+
+		$this->assertSame((new DiscountedCashFlow(
+			symbol: '000023.SZ',
+			date: '2024-07-29',
+			dcf: null,
+			stockPrice: 1.72,
+		))->toArray(), $valuations[6]->toArray());
+	}
+
 }

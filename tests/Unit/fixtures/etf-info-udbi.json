@@ -1,0 +1,23 @@
+[
+  {
+    "symbol": "UDBI",
+    "name": "Legg Mason US Diversified Core ETF",
+    "description": null,
+    "isin": "US52468L3078",
+    "assetClass": "Equity",
+    "securityCusip": "52468L307",
+    "domicile": "US",
+    "website": null,
+    "etfCompany": null,
+    "expenseRatio": null,
+    "assetsUnderManagement": null,
+    "avgVolume": 64,
+    "inceptionDate": "2015-12-29",
+    "nav": null,
+    "navCurrency": "USD",
+    "holdingsCount": null,
+    "isActivelyTrading": false,
+    "updatedAt": "2025-02-07T14:39:53.161Z",
+    "sectorsList": []
+  }
+]

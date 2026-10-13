@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use DateTimeImmutable;
 use Shredio\FmpClient\CacheFmpClient;
+use Shredio\FmpClient\Enum\StockIndex;
 use Shredio\FmpClient\Payload\AvailableExchange;
 use Shredio\FmpClient\Payload\CompanyProfile;
 use Symfony\Component\Cache\Adapter\ArrayAdapter;
@@ -253,6 +254,95 @@ final class CacheFmpClientTest extends TestCase
 
 		$this->assertCount(100, iterator_to_array($client->priceTargetNews('AAPL', limit: 100)));
 		$this->assertTrue($cache->has('fmp-client.v2.priceTargetNews.AAPL.0.100'), 'Cache should have the key after first request');
+	}
+
+	public function testBatchQuoteIsCachedPerListOfSymbols(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/batch-quote-delisted.json'),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+
+		// First request
+		$quotes = iterator_to_array($client->batchQuote(['MTOR', 'MRO', 'RVI']));
+
+		$this->assertCount(3, $quotes);
+		// the key holds a hash of the list, a caret of an index symbol or a long list would not make a valid key
+		$this->assertTrue(
+			$cache->has(sprintf('fmp-client.v2.batchQuote.%s', hash('xxh128', 'MTOR,MRO,RVI'))),
+			'Cache should have the key after first request',
+		);
+
+		// Second request is served from the cache, the mock client has no response left
+		$cachedQuotes = iterator_to_array($client->batchQuote(['MTOR', 'MRO', 'RVI']));
+
+		$this->assertCount(3, $cachedQuotes);
+		$this->assertSame($quotes[2]->toArray(), $cachedQuotes[2]->toArray());
+	}
+
+	public function testHouseTradesAreCachedPerSymbolPageAndLimit(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/house-trades-aapl.json'),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+
+		$this->assertCount(250, iterator_to_array($client->houseTrades('AAPL', limit: 250)));
+		$this->assertTrue($cache->has('fmp-client.v2.houseTrades.AAPL.0.250'), 'Cache should have the key after first request');
+
+		// Second request is served from the cache, the mock client has no response left
+		$this->assertCount(250, iterator_to_array($client->houseTrades('AAPL', limit: 250)));
+	}
+
+	public function testEtfInfoIsCachedPerSymbol(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/etf-info-spy.json'),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+
+		// First request
+		$info = $client->etfInfo('SPY');
+
+		$this->assertNotNull($info);
+		$this->assertTrue($cache->has('fmp-client.v2.etfInfo.SPY'), 'Cache should have the key after first request');
+
+		// Second request is served from the cache with the nested sector exposures, the mock client has no response left
+		$this->assertSame($info->toArray(), $client->etfInfo('SPY')?->toArray());
+	}
+
+	public function testIndexConstituentsAreCachedPerIndex(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/dowjones-constituent.json'),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+
+		$this->assertCount(30, iterator_to_array($client->indexConstituents(StockIndex::DowJones)));
+		$this->assertTrue($cache->has('fmp-client.v2.indexConstituents.dowjones'), 'Cache should have the key after first request');
+		$this->assertFalse($cache->has('fmp-client.v2.indexConstituents.sp500'));
+	}
+
+	public function testCalendarAndNewBulkEndpointsAreNotCached(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/rating-bulk.csv', responses: [
+				MockResponse::fromFile(__DIR__ . '/fixtures/ipos-calendar-2026-10-01-to-2026-10-31.json'),
+			]),
+			new Psr16Cache($adapter = new ArrayAdapter()),
+			3600,
+		);
+
+		$this->assertNotEmpty(iterator_to_array($client->ratingBulk()));
+		$this->assertCount(39, iterator_to_array(
+			$client->iposCalendar(new DateTimeImmutable('2026-10-01'), new DateTimeImmutable('2026-10-31')),
+			false,
+		));
+		$this->assertSame([], $adapter->getValues());
 	}
 
 }

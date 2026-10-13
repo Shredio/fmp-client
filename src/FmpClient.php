@@ -7,6 +7,7 @@ use Psr\Log\LoggerInterface;
 use Shredio\FmpClient\Config\HttpClientRetryConfiguration;
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Enum\PeriodQuery;
+use Shredio\FmpClient\Enum\StockIndex;
 use Shredio\FmpClient\Enum\TimeInterval;
 use Shredio\FmpClient\Payload\ActivelyTrading;
 use Shredio\FmpClient\Payload\AnalystEstimate;
@@ -29,34 +30,48 @@ use Shredio\FmpClient\Payload\Dividend;
 use Shredio\FmpClient\Payload\EarningCallTranscript;
 use Shredio\FmpClient\Payload\EarningCallTranscriptDate;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
+use Shredio\FmpClient\Payload\EarningsSurprise;
 use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
+use Shredio\FmpClient\Payload\Etf;
+use Shredio\FmpClient\Payload\EtfCountryWeighting;
+use Shredio\FmpClient\Payload\EtfHolding;
+use Shredio\FmpClient\Payload\EtfInfo;
+use Shredio\FmpClient\Payload\EtfSectorWeighting;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
+use Shredio\FmpClient\Payload\FinancialGrowth;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\Grade;
 use Shredio\FmpClient\Payload\GradeNews;
 use Shredio\FmpClient\Payload\GradesConsensus;
 use Shredio\FmpClient\Payload\GradesHistorical;
 use Shredio\FmpClient\Payload\HistoricalChart;
+use Shredio\FmpClient\Payload\HistoricalIndexConstituent;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
 use Shredio\FmpClient\Payload\HistoricalPriceEodLight;
 use Shredio\FmpClient\Payload\HistoricalPriceEodNonSplitAdjusted;
 use Shredio\FmpClient\Payload\HolidayByExchange;
+use Shredio\FmpClient\Payload\HouseTrade;
 use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
 use Shredio\FmpClient\Payload\Index;
+use Shredio\FmpClient\Payload\IndexConstituent;
 use Shredio\FmpClient\Payload\InsiderTrade;
 use Shredio\FmpClient\Payload\InsiderTradeStatistics;
 use Shredio\FmpClient\Payload\InstitutionalHolder;
 use Shredio\FmpClient\Payload\InstitutionalOwnershipFiling;
 use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
+use Shredio\FmpClient\Payload\IpoCalendarItem;
 use Shredio\FmpClient\Payload\IsinSearchResult;
+use Shredio\FmpClient\Payload\KeyExecutive;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestEarningCallTranscript;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
+use Shredio\FmpClient\Payload\LatestHouseTrade;
 use Shredio\FmpClient\Payload\LatestSenateTrade;
+use Shredio\FmpClient\Payload\MarketCapitalization;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
@@ -64,6 +79,7 @@ use Shredio\FmpClient\Payload\PriceTargetConsensus;
 use Shredio\FmpClient\Payload\PriceTargetNews;
 use Shredio\FmpClient\Payload\PriceTargetSummary;
 use Shredio\FmpClient\Payload\Quote;
+use Shredio\FmpClient\Payload\Rating;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\RevenueGeographicSegmentation;
@@ -85,6 +101,8 @@ interface FmpClient
 	public const int MaxDividendsLimit = 1000;
 	public const int MaxStockNewsLimit = 250;
 	public const int MaxHistoricalPriceEodRecordsPerRequest = 5000;
+	public const int MaxHistoricalMarketCapitalizationRecordsPerRequest = 5000;
+	public const int MaxBatchSymbolsPerRequest = 1000;
 
 	public function withStrictMode(bool $strictMode): FmpClient;
 
@@ -143,6 +161,27 @@ interface FmpClient
 	 * @return iterable<int, Index>
 	 */
 	public function indexList(): iterable;
+
+	/**
+	 * Current constituents of the S&P 500, the Nasdaq 100 or the Dow Jones Industrial Average.
+	 *
+	 * @see https://financialmodelingprep.com/stable/sp500-constituent
+	 * @see https://financialmodelingprep.com/stable/nasdaq-constituent
+	 * @see https://financialmodelingprep.com/stable/dowjones-constituent
+	 * @return iterable<int, IndexConstituent>
+	 */
+	public function indexConstituents(StockIndex $index): iterable;
+
+	/**
+	 * Companies added to and removed from the S&P 500, the Nasdaq 100 or the Dow Jones Industrial Average, ordered
+	 * from the newest to the oldest change.
+	 *
+	 * @see https://financialmodelingprep.com/stable/historical-sp500-constituent
+	 * @see https://financialmodelingprep.com/stable/historical-nasdaq-constituent
+	 * @see https://financialmodelingprep.com/stable/historical-dowjones-constituent
+	 * @return iterable<int, HistoricalIndexConstituent>
+	 */
+	public function historicalIndexConstituents(StockIndex $index): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/cryptocurrency-list
@@ -221,6 +260,15 @@ interface FmpClient
 	public function companyProfileBulk(): iterable;
 
 	/**
+	 * Executives of a company with their title, compensation, gender and year of birth.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/key-executives
+	 * @return iterable<int, KeyExecutive>
+	 */
+	public function keyExecutives(string $symbol): iterable;
+
+	/**
 	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/shares-float
@@ -252,6 +300,17 @@ interface FmpClient
 	 * @return iterable<int, BalanceSheetStatement>
 	 */
 	public function balanceSheetStatementBulk(int $year, Period $period = Period::FY): iterable;
+
+	/**
+	 * Returns the balance sheets as of the end of every quarter, ordered from the newest to the oldest. A balance sheet
+	 * is a snapshot, so every record equals the quarterly balance sheet of the same date.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/balance-sheet-statement-ttm
+	 * @param int<1, 1000>|null $limit Without a limit the API returns the 5 newest records
+	 * @return iterable<int, BalanceSheetStatement>
+	 */
+	public function balanceSheetStatementTtm(string $symbol, ?int $limit = null): iterable;
 
 	/**
 	 * Available worldwide.
@@ -306,6 +365,15 @@ interface FmpClient
 	public function earnings(string $symbol, ?int $limit = null): iterable;
 
 	/**
+	 * Reported and estimated earnings per share of every earnings report dated in the given year.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/earnings-surprises-bulk
+	 * @return iterable<int, EarningsSurprise>
+	 */
+	public function earningsSurprisesBulk(int $year): iterable;
+
+	/**
 	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/splits
@@ -320,6 +388,16 @@ interface FmpClient
 	 * @return iterable<int, StockSplit>
 	 */
 	public function splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
+
+	/**
+	 * Upcoming and past initial public offerings.
+	 * Covers exchanges worldwide for the past, as the FMP docs flag it, but the records dated April 2026 or later are
+	 * IPOs on NYSE and NASDAQ only (observed on 2026-10-13).
+	 *
+	 * @see https://financialmodelingprep.com/stable/ipos-calendar
+	 * @return iterable<int, IpoCalendarItem>
+	 */
+	public function iposCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/economic-calendar
@@ -382,6 +460,17 @@ interface FmpClient
 	public function cashFlowStatementBulk(int $year, Period $period = Period::FY): iterable;
 
 	/**
+	 * Returns a historical series of trailing twelve months cash flow statements, ordered from the newest to the
+	 * oldest.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/cash-flow-statement-ttm
+	 * @param int<1, 1000>|null $limit Without a limit the API returns the 5 newest records
+	 * @return iterable<int, CashFlowStatement>
+	 */
+	public function cashFlowStatementTtm(string $symbol, ?int $limit = null): iterable;
+
+	/**
 	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/api/v3/income-statement-growth/{symbol}
@@ -428,6 +517,18 @@ interface FmpClient
 	 * @return iterable<int, CashFlowStatementGrowthBulk>
 	 */
 	public function cashFlowStatementGrowthBulk(int $year, Period $period): iterable;
+
+	/**
+	 * Growth of the key figures of the financial statements together with the growth per share over three, five and
+	 * ten years, ordered from the newest to the oldest period.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/financial-growth
+	 * @param int<1, 1000>|null $limit Without a limit the API returns the 5 newest records
+	 * @param PeriodQuery|null $period Without a period the API returns fiscal years
+	 * @return iterable<int, FinancialGrowth>
+	 */
+	public function financialGrowth(string $symbol, ?int $limit = null, ?PeriodQuery $period = null): iterable;
 
 	/**
 	 * Complete only for US-listed symbols (with gaps for foreign issuers). A foreign listing of a US company returns
@@ -495,6 +596,18 @@ interface FmpClient
 	public function quote(string $symbol): ?Quote;
 
 	/**
+	 * Quotes of several symbols at once, stocks, ETFs, indexes, cryptocurrencies, forex pairs and commodities can be
+	 * mixed. A symbol unknown to the API is left out of the result. The API answers at most 1000 symbols per request,
+	 * a longer list is split into several requests automatically.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/batch-quote
+	 * @param list<non-empty-string> $symbols
+	 * @return iterable<int, Quote>
+	 */
+	public function batchQuote(array $symbols): iterable;
+
+	/**
 	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
 	 * Available worldwide.
 	 *
@@ -528,6 +641,27 @@ interface FmpClient
 	 * @return iterable<int, HistoricalChart>
 	 */
 	public function historicalChart(string $symbol, TimeInterval $interval, DateTimeImmutable $from, DateTimeImmutable $to): iterable;
+
+	/**
+	 * Daily market capitalization, ordered from the newest to the oldest day. Ranges exceeding the API limit of 5000
+	 * records per request are fetched in multiple requests automatically.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/historical-market-capitalization
+	 * @return iterable<int, MarketCapitalization>
+	 */
+	public function historicalMarketCapitalization(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable;
+
+	/**
+	 * Latest market capitalization of several symbols at once. A symbol unknown to the API is left out of the result,
+	 * a long list is split into several requests automatically.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/market-capitalization-batch
+	 * @param list<non-empty-string> $symbols
+	 * @return iterable<int, MarketCapitalization>
+	 */
+	public function marketCapitalizationBatch(array $symbols): iterable;
 
 	/**
 	 * Available worldwide.
@@ -594,6 +728,15 @@ interface FmpClient
 	public function scoresBulk(): iterable;
 
 	/**
+	 * Rating and scores FMP computes from the fundamentals of every company, it is not an analyst rating.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/rating-bulk
+	 * @return iterable<int, Rating>
+	 */
+	public function ratingBulk(): iterable;
+
+	/**
 	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/peers-bulk
@@ -655,6 +798,14 @@ interface FmpClient
 	 * @see https://financialmodelingprep.com/stable/discounted-cash-flow
 	 */
 	public function discountedCashFlow(string $symbol): ?DiscountedCashFlow;
+
+	/**
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/dcf-bulk
+	 * @return iterable<int, DiscountedCashFlow>
+	 */
+	public function discountedCashFlowBulk(): iterable;
 
 	/**
 	 * Number of analysts per rating bucket together with the resulting consensus rating.
@@ -772,6 +923,30 @@ interface FmpClient
 	public function senateTradesLatest(int $page = 0, ?int $limit = null): iterable;
 
 	/**
+	 * Trades disclosed by members of the U.S. House of Representatives, ordered from the newest to the oldest
+	 * disclosure.
+	 * Only available for US-listed symbols, including ADRs of foreign companies.
+	 *
+	 * @see https://financialmodelingprep.com/stable/house-trades
+	 * @param int<0, 100> $page
+	 * @param int<1, 250>|null $limit Without a limit the API returns 100 records
+	 * @return iterable<int, HouseTrade>
+	 */
+	public function houseTrades(string $symbol, int $page = 0, ?int $limit = null): iterable;
+
+	/**
+	 * Trades disclosed by members of the U.S. House of Representatives across all assets, ordered from the newest to
+	 * the oldest disclosure.
+	 * Covers US-listed symbols only, an asset without a ticker symbol has an empty symbol.
+	 *
+	 * @see https://financialmodelingprep.com/stable/house-latest
+	 * @param int<0, 100> $page
+	 * @param int<1, 250>|null $limit Without a limit the API returns 100 records
+	 * @return iterable<int, LatestHouseTrade>
+	 */
+	public function houseTradesLatest(int $page = 0, ?int $limit = null): iterable;
+
+	/**
 	 * Institutional ownership of a symbol aggregated from the 13F filings of a single calendar quarter.
 	 * Only available for US-listed symbols, including ADRs of foreign companies.
 	 *
@@ -831,6 +1006,51 @@ interface FmpClient
 	 * @return iterable<int, LatestEarningCallTranscript>
 	 */
 	public function earningCallTranscriptLatest(int $page = 0, ?int $limit = null): iterable;
+
+	/**
+	 * Symbols and names of the ETFs covered by the API.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/etf-list
+	 * @return iterable<int, Etf>
+	 */
+	public function etfList(): iterable;
+
+	/**
+	 * Profile of an ETF or a mutual fund: issuer, expense ratio, assets under management, net asset value and sector
+	 * breakdown.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/etf/info
+	 */
+	public function etfInfo(string $symbol): ?EtfInfo;
+
+	/**
+	 * Assets held by an ETF or a mutual fund, ordered from the largest to the smallest position.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/etf/holdings
+	 * @return iterable<int, EtfHolding>
+	 */
+	public function etfHoldings(string $symbol): iterable;
+
+	/**
+	 * Share of every sector in an ETF or a mutual fund.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/etf/sector-weightings
+	 * @return iterable<int, EtfSectorWeighting>
+	 */
+	public function etfSectorWeightings(string $symbol): iterable;
+
+	/**
+	 * Share of every country in an ETF or a mutual fund.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/etf/country-weightings
+	 * @return iterable<int, EtfCountryWeighting>
+	 */
+	public function etfCountryWeightings(string $symbol): iterable;
 
 	/**
 	 * @template T

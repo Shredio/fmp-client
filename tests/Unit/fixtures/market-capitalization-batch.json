@@ -1,0 +1,42 @@
+[
+  {
+    "symbol": "AAPL",
+    "date": "2026-10-12",
+    "marketCap": 5007947775320
+  },
+  {
+    "symbol": "MSFT",
+    "date": "2026-10-12",
+    "marketCap": 4018336382500
+  },
+  {
+    "symbol": "SAP.DE",
+    "date": "2026-10-13",
+    "marketCap": 224977497283
+  },
+  {
+    "symbol": "7203.T",
+    "date": "2026-10-13",
+    "marketCap": 35333700600320
+  },
+  {
+    "symbol": "NSRGY",
+    "date": "2026-10-12",
+    "marketCap": 235049463600
+  },
+  {
+    "symbol": "SPY",
+    "date": "2026-10-12",
+    "marketCap": 828861863651
+  },
+  {
+    "symbol": "BTCUSD",
+    "date": "2026-10-13",
+    "marketCap": 1663542386289
+  },
+  {
+    "symbol": "^GSPC",
+    "date": "2026-10-12",
+    "marketCap": 0
+  }
+]

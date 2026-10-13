@@ -14,6 +14,7 @@ use Shredio\FmpClient\Converter\LenientAndEmptyNumberConverter;
 use Shredio\FmpClient\Converter\RepresentableNumberConverter;
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Enum\PeriodQuery;
+use Shredio\FmpClient\Enum\StockIndex;
 use Shredio\FmpClient\Enum\TimeInterval;
 use Shredio\FmpClient\Exception\UnexpectedResponseContentExceptionHandler;
 use Shredio\FmpClient\Mapper\ActivelyTradingMapper;
@@ -37,40 +38,55 @@ use Shredio\FmpClient\Mapper\DiscountedCashFlowMapper;
 use Shredio\FmpClient\Mapper\EarningCallTranscriptDateMapper;
 use Shredio\FmpClient\Mapper\EarningCallTranscriptMapper;
 use Shredio\FmpClient\Mapper\EarningsCalendarItemMapper;
+use Shredio\FmpClient\Mapper\EarningsSurpriseMapper;
 use Shredio\FmpClient\Mapper\EconomicCalendarItemMapper;
 use Shredio\FmpClient\Mapper\EodQuoteMapper;
+use Shredio\FmpClient\Mapper\EtfCountryWeightingMapper;
+use Shredio\FmpClient\Mapper\EtfHoldingMapper;
+use Shredio\FmpClient\Mapper\EtfInfoMapper;
+use Shredio\FmpClient\Mapper\EtfMapper;
+use Shredio\FmpClient\Mapper\EtfSectorWeightingMapper;
 use Shredio\FmpClient\Mapper\ExchangeMarketHoursMapper;
+use Shredio\FmpClient\Mapper\FinancialGrowthMapper;
 use Shredio\FmpClient\Mapper\FinancialStatementSymbolMapper;
 use Shredio\FmpClient\Mapper\GradeMapper;
 use Shredio\FmpClient\Mapper\GradeNewsMapper;
 use Shredio\FmpClient\Mapper\GradesConsensusMapper;
 use Shredio\FmpClient\Mapper\GradesHistoricalMapper;
 use Shredio\FmpClient\Mapper\HistoricalChartMapper;
+use Shredio\FmpClient\Mapper\HistoricalIndexConstituentMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodLightMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodMapper;
 use Shredio\FmpClient\Mapper\HistoricalPriceEodNonSplitAdjustedMapper;
 use Shredio\FmpClient\Mapper\HolidayByExchangeMapper;
+use Shredio\FmpClient\Mapper\HouseTradeMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementGrowthBulkMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementGrowthMapper;
 use Shredio\FmpClient\Mapper\IncomeStatementMapper;
+use Shredio\FmpClient\Mapper\IndexConstituentMapper;
 use Shredio\FmpClient\Mapper\IndexMapper;
 use Shredio\FmpClient\Mapper\InsiderTradeMapper;
 use Shredio\FmpClient\Mapper\InsiderTradeStatisticsMapper;
 use Shredio\FmpClient\Mapper\InstitutionalHolderMapper;
 use Shredio\FmpClient\Mapper\InstitutionalOwnershipFilingMapper;
 use Shredio\FmpClient\Mapper\InstitutionalPositionsSummaryMapper;
+use Shredio\FmpClient\Mapper\IpoCalendarItemMapper;
 use Shredio\FmpClient\Mapper\IsinSearchResultMapper;
+use Shredio\FmpClient\Mapper\KeyExecutiveMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsTtmMapper;
 use Shredio\FmpClient\Mapper\LatestEarningCallTranscriptMapper;
 use Shredio\FmpClient\Mapper\LatestFinancialStatementMapper;
+use Shredio\FmpClient\Mapper\LatestHouseTradeMapper;
 use Shredio\FmpClient\Mapper\LatestSenateTradeMapper;
+use Shredio\FmpClient\Mapper\MarketCapitalizationMapper;
 use Shredio\FmpClient\Mapper\MarketRiskPremiumMapper;
 use Shredio\FmpClient\Mapper\PressReleaseMapper;
 use Shredio\FmpClient\Mapper\PriceTargetConsensusMapper;
 use Shredio\FmpClient\Mapper\PriceTargetNewsMapper;
 use Shredio\FmpClient\Mapper\PriceTargetSummaryMapper;
 use Shredio\FmpClient\Mapper\QuoteMapper;
+use Shredio\FmpClient\Mapper\RatingMapper;
 use Shredio\FmpClient\Mapper\RatiosMapper;
 use Shredio\FmpClient\Mapper\RatiosTtmMapper;
 use Shredio\FmpClient\Mapper\RevenueGeographicSegmentationMapper;
@@ -105,34 +121,48 @@ use Shredio\FmpClient\Payload\Dividend;
 use Shredio\FmpClient\Payload\EarningCallTranscript;
 use Shredio\FmpClient\Payload\EarningCallTranscriptDate;
 use Shredio\FmpClient\Payload\EarningsCalendarItem;
+use Shredio\FmpClient\Payload\EarningsSurprise;
 use Shredio\FmpClient\Payload\EconomicCalendarItem;
 use Shredio\FmpClient\Payload\EodQuote;
+use Shredio\FmpClient\Payload\Etf;
+use Shredio\FmpClient\Payload\EtfCountryWeighting;
+use Shredio\FmpClient\Payload\EtfHolding;
+use Shredio\FmpClient\Payload\EtfInfo;
+use Shredio\FmpClient\Payload\EtfSectorWeighting;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
+use Shredio\FmpClient\Payload\FinancialGrowth;
 use Shredio\FmpClient\Payload\FinancialStatementSymbol;
 use Shredio\FmpClient\Payload\Grade;
 use Shredio\FmpClient\Payload\GradeNews;
 use Shredio\FmpClient\Payload\GradesConsensus;
 use Shredio\FmpClient\Payload\GradesHistorical;
 use Shredio\FmpClient\Payload\HistoricalChart;
+use Shredio\FmpClient\Payload\HistoricalIndexConstituent;
 use Shredio\FmpClient\Payload\HistoricalPriceEod;
 use Shredio\FmpClient\Payload\HistoricalPriceEodLight;
 use Shredio\FmpClient\Payload\HistoricalPriceEodNonSplitAdjusted;
 use Shredio\FmpClient\Payload\HolidayByExchange;
+use Shredio\FmpClient\Payload\HouseTrade;
 use Shredio\FmpClient\Payload\IncomeStatement;
 use Shredio\FmpClient\Payload\IncomeStatementGrowth;
 use Shredio\FmpClient\Payload\IncomeStatementGrowthBulk;
 use Shredio\FmpClient\Payload\Index;
+use Shredio\FmpClient\Payload\IndexConstituent;
 use Shredio\FmpClient\Payload\InsiderTrade;
 use Shredio\FmpClient\Payload\InsiderTradeStatistics;
 use Shredio\FmpClient\Payload\InstitutionalHolder;
 use Shredio\FmpClient\Payload\InstitutionalOwnershipFiling;
 use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
+use Shredio\FmpClient\Payload\IpoCalendarItem;
 use Shredio\FmpClient\Payload\IsinSearchResult;
+use Shredio\FmpClient\Payload\KeyExecutive;
 use Shredio\FmpClient\Payload\KeyMetrics;
 use Shredio\FmpClient\Payload\KeyMetricsTtm;
 use Shredio\FmpClient\Payload\LatestEarningCallTranscript;
 use Shredio\FmpClient\Payload\LatestFinancialStatement;
+use Shredio\FmpClient\Payload\LatestHouseTrade;
 use Shredio\FmpClient\Payload\LatestSenateTrade;
+use Shredio\FmpClient\Payload\MarketCapitalization;
 use Shredio\FmpClient\Payload\MarketRiskPremium;
 use Shredio\FmpClient\Payload\PeersBulk;
 use Shredio\FmpClient\Payload\PressRelease;
@@ -140,6 +170,7 @@ use Shredio\FmpClient\Payload\PriceTargetConsensus;
 use Shredio\FmpClient\Payload\PriceTargetNews;
 use Shredio\FmpClient\Payload\PriceTargetSummary;
 use Shredio\FmpClient\Payload\Quote;
+use Shredio\FmpClient\Payload\Rating;
 use Shredio\FmpClient\Payload\Ratios;
 use Shredio\FmpClient\Payload\RatiosTtm;
 use Shredio\FmpClient\Payload\RevenueGeographicSegmentation;
@@ -178,6 +209,12 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final readonly class SymfonyFmpClient implements FmpClient
 {
+
+	/**
+	 * Longest list of symbols, as encoded in the query string, sent in one batch request. The API rejects a URL of
+	 * 10 kB with HTTP 414, a URL of 8 kB still passes.
+	 */
+	private const int MaxBatchSymbolsQueryLength = 7500;
 
 	private Parser\LargeResponseParser $largeResponseParser;
 
@@ -372,6 +409,44 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/sp500-constituent
+	 * @see https://financialmodelingprep.com/stable/nasdaq-constituent
+	 * @see https://financialmodelingprep.com/stable/dowjones-constituent
+	 * @return iterable<int, IndexConstituent>
+	 */
+	public function indexConstituents(StockIndex $index): iterable
+	{
+		$path = sprintf('stable/%s-constituent', $index->value);
+		$url = $this->buildUrlWithoutApiKey($path);
+
+		foreach ($this->requestJson($path) as $item) {
+			$object = $this->map(IndexConstituent::class, new IndexConstituentMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/historical-sp500-constituent
+	 * @see https://financialmodelingprep.com/stable/historical-nasdaq-constituent
+	 * @see https://financialmodelingprep.com/stable/historical-dowjones-constituent
+	 * @return iterable<int, HistoricalIndexConstituent>
+	 */
+	public function historicalIndexConstituents(StockIndex $index): iterable
+	{
+		$path = sprintf('stable/historical-%s-constituent', $index->value);
+		$url = $this->buildUrlWithoutApiKey($path);
+
+		foreach ($this->requestJson($path) as $item) {
+			$object = $this->map(HistoricalIndexConstituent::class, new HistoricalIndexConstituentMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/cryptocurrency-list
 	 * @return iterable<int, Cryptocurrency>
 	 */
@@ -546,6 +621,22 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/key-executives
+	 * @return iterable<int, KeyExecutive>
+	 */
+	public function keyExecutives(string $symbol): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/key-executives', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/key-executives', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(KeyExecutive::class, new KeyExecutiveMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/shares-float
 	 */
 	public function sharesFloat(string $symbol): ?SharesFloat
@@ -619,6 +710,26 @@ final readonly class SymfonyFmpClient implements FmpClient
 		$config = $this->createTypeConfigForStatements();
 		foreach ($this->requestCsv('stable/balance-sheet-statement-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
 			$object = $this->map(BalanceSheetStatement::class, new BalanceSheetStatementMapper(), $item, $url, true, $config);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/balance-sheet-statement-ttm
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, BalanceSheetStatement>
+	 */
+	public function balanceSheetStatementTtm(string $symbol, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/balance-sheet-statement-ttm', $query);
+
+		$config = $this->createJsonTypeConfigForStatements();
+
+		foreach ($this->requestJson('stable/balance-sheet-statement-ttm', $query) as $item) {
+			$object = $this->map(BalanceSheetStatement::class, new BalanceSheetStatementMapper(), $item, $url, config: $config);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -785,6 +896,22 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/earnings-surprises-bulk
+	 * @return iterable<int, EarningsSurprise>
+	 */
+	public function earningsSurprisesBulk(int $year): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/earnings-surprises-bulk', ['year' => $year]);
+
+		foreach ($this->requestCsv('stable/earnings-surprises-bulk', ['year' => $year]) as $item) {
+			$object = $this->map(EarningsSurprise::class, new EarningsSurpriseMapper(), $item, $url, true);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/splits
 	 * @return iterable<int, StockSplit>
 	 */
@@ -823,6 +950,38 @@ final readonly class SymfonyFmpClient implements FmpClient
 
 			foreach ($values as $item) {
 				$object = $this->map(StockSplit::class, new StockSplitMapper(), $item, $url);
+				if ($object !== null) {
+					$lastStringDate = $object->date;
+					$count++;
+					yield $object;
+				}
+			}
+		} while ($paginator->next($count, $lastStringDate, $logger));
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/ipos-calendar
+	 * @return iterable<int, IpoCalendarItem>
+	 */
+	public function iposCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
+	{
+		$paginator = new FmpCalendarPaginator($from, $to);
+
+		do {
+			$values = $this->requestJson('stable/ipos-calendar', [
+				'from' => $paginator->getFrom()->format('Y-m-d'),
+				'to' => $paginator->getTo()->format('Y-m-d'),
+			]);
+			$lastStringDate = null;
+			$count = 0;
+
+			$url = $this->buildUrlWithoutApiKey('stable/ipos-calendar', [
+				'from' => $paginator->getFrom()->format('Y-m-d'),
+				'to' => $paginator->getTo()->format('Y-m-d'),
+			]);
+
+			foreach ($values as $item) {
+				$object = $this->map(IpoCalendarItem::class, new IpoCalendarItemMapper(), $item, $url);
 				if ($object !== null) {
 					$lastStringDate = $object->date;
 					$count++;
@@ -974,6 +1133,26 @@ final readonly class SymfonyFmpClient implements FmpClient
 		$config = $this->createTypeConfigForStatements();
 		foreach ($this->requestCsv('stable/cash-flow-statement-bulk', ['year' => $year, 'period' => $period->value]) as $item) {
 			$object = $this->map(CashFlowStatement::class, new CashFlowStatementMapper(), $item, $url, true, $config);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/cash-flow-statement-ttm
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, CashFlowStatement>
+	 */
+	public function cashFlowStatementTtm(string $symbol, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/cash-flow-statement-ttm', $query);
+
+		$config = $this->createJsonTypeConfigForStatements();
+
+		foreach ($this->requestJson('stable/cash-flow-statement-ttm', $query) as $item) {
+			$object = $this->map(CashFlowStatement::class, new CashFlowStatementMapper(), $item, $url, config: $config);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -1157,6 +1336,24 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/financial-growth
+	 * @param int<1, 1000>|null $limit
+	 * @return iterable<int, FinancialGrowth>
+	 */
+	public function financialGrowth(string $symbol, ?int $limit = null, ?PeriodQuery $period = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'limit' => $limit, 'period' => $period?->value];
+		$url = $this->buildUrlWithoutApiKey('stable/financial-growth', $query);
+
+		foreach ($this->requestJson('stable/financial-growth', $query) as $item) {
+			$object = $this->map(FinancialGrowth::class, new FinancialGrowthMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/revenue-product-segmentation
 	 * @return iterable<int, RevenueProductSegmentation>
 	 */
@@ -1285,6 +1482,26 @@ final readonly class SymfonyFmpClient implements FmpClient
 		}
 
 		return null;
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/batch-quote
+	 * @param list<non-empty-string> $symbols
+	 * @return iterable<int, Quote>
+	 */
+	public function batchQuote(array $symbols): iterable
+	{
+		foreach ($this->chunkSymbols($symbols) as $chunk) {
+			$query = ['symbols' => implode(',', $chunk)];
+			$url = $this->buildUrlWithoutApiKey('stable/batch-quote', $query);
+
+			foreach ($this->requestJson('stable/batch-quote', $query) as $item) {
+				$object = $this->map(Quote::class, new QuoteMapper(), $item, $url);
+				if ($object !== null) {
+					yield $object;
+				}
+			}
+		}
 	}
 
 	/**
@@ -1453,6 +1670,73 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * Ranges exceeding the API limit of 5000 records per request are fetched in multiple requests automatically.
+	 *
+	 * @see https://financialmodelingprep.com/stable/historical-market-capitalization
+	 * @return iterable<int, MarketCapitalization>
+	 */
+	public function historicalMarketCapitalization(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to): iterable
+	{
+		$currentTo = $to;
+
+		while (true) {
+			$query = [
+				'symbol' => $symbol,
+				'from' => $from->format('Y-m-d'),
+				'to' => $currentTo->format('Y-m-d'),
+			];
+			$url = $this->buildUrlWithoutApiKey('stable/historical-market-capitalization', $query);
+
+			$recordCount = 0;
+			$oldestDate = null;
+
+			foreach ($this->requestJson('stable/historical-market-capitalization', $query) as $item) {
+				$recordCount++;
+
+				$object = $this->map(MarketCapitalization::class, new MarketCapitalizationMapper(), $item, $url);
+				if ($object !== null) {
+					if ($oldestDate === null || $object->date < $oldestDate) {
+						$oldestDate = $object->date;
+					}
+
+					yield $object;
+				}
+			}
+
+			if ($recordCount < self::MaxHistoricalMarketCapitalizationRecordsPerRequest || $oldestDate === null) {
+				return;
+			}
+
+			$nextTo = (new DateTimeImmutable($oldestDate))->sub(new DateInterval('P1D'));
+			if ($nextTo >= $currentTo || $nextTo < $from) {
+				return;
+			}
+
+			$currentTo = $nextTo;
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/market-capitalization-batch
+	 * @param list<non-empty-string> $symbols
+	 * @return iterable<int, MarketCapitalization>
+	 */
+	public function marketCapitalizationBatch(array $symbols): iterable
+	{
+		foreach ($this->chunkSymbols($symbols) as $chunk) {
+			$query = ['symbols' => implode(',', $chunk)];
+			$url = $this->buildUrlWithoutApiKey('stable/market-capitalization-batch', $query);
+
+			foreach ($this->requestJson('stable/market-capitalization-batch', $query) as $item) {
+				$object = $this->map(MarketCapitalization::class, new MarketCapitalizationMapper(), $item, $url);
+				if ($object !== null) {
+					yield $object;
+				}
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/key-metrics
 	 * @return iterable<int, KeyMetrics>
 	 */
@@ -1601,6 +1885,22 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/rating-bulk
+	 * @return iterable<int, Rating>
+	 */
+	public function ratingBulk(): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/rating-bulk');
+
+		foreach ($this->requestCsv('stable/rating-bulk') as $item) {
+			$object = $this->map(Rating::class, new RatingMapper(), $item, $url, true);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/peers-bulk
 	 * @return iterable<int, PeersBulk>
 	 */
@@ -1725,6 +2025,22 @@ final readonly class SymfonyFmpClient implements FmpClient
 		}
 
 		return null;
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/dcf-bulk
+	 * @return iterable<int, DiscountedCashFlow>
+	 */
+	public function discountedCashFlowBulk(): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/dcf-bulk');
+
+		foreach ($this->requestCsv('stable/dcf-bulk') as $item) {
+			$object = $this->map(DiscountedCashFlow::class, new DiscountedCashFlowMapper(), $item, $url, true);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
 	}
 
 	/**
@@ -1926,6 +2242,44 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * @see https://financialmodelingprep.com/stable/house-trades
+	 * @param int<0, 100> $page
+	 * @param int<1, 250>|null $limit
+	 * @return iterable<int, HouseTrade>
+	 */
+	public function houseTrades(string $symbol, int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['symbol' => $symbol, 'page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/house-trades', $query);
+
+		foreach ($this->requestJson('stable/house-trades', $query) as $item) {
+			$object = $this->map(HouseTrade::class, new HouseTradeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/house-latest
+	 * @param int<0, 100> $page
+	 * @param int<1, 250>|null $limit
+	 * @return iterable<int, LatestHouseTrade>
+	 */
+	public function houseTradesLatest(int $page = 0, ?int $limit = null): iterable
+	{
+		$query = ['page' => $page, 'limit' => $limit];
+		$url = $this->buildUrlWithoutApiKey('stable/house-latest', $query);
+
+		foreach ($this->requestJson('stable/house-latest', $query) as $item) {
+			$object = $this->map(LatestHouseTrade::class, new LatestHouseTradeMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
 	 * @see https://financialmodelingprep.com/stable/institutional-ownership/symbol-positions-summary
 	 * @param int<1, 4> $quarter
 	 */
@@ -2031,6 +2385,87 @@ final readonly class SymfonyFmpClient implements FmpClient
 
 		foreach ($this->requestJson('stable/earning-call-transcript-latest', $query) as $item) {
 			$object = $this->map(LatestEarningCallTranscript::class, new LatestEarningCallTranscriptMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/etf-list
+	 * @return iterable<int, Etf>
+	 */
+	public function etfList(): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/etf-list');
+
+		foreach ($this->requestJson('stable/etf-list') as $item) {
+			$object = $this->map(Etf::class, new EtfMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/etf/info
+	 */
+	public function etfInfo(string $symbol): ?EtfInfo
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/etf/info', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/etf/info', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(EtfInfo::class, new EtfInfoMapper(), $item, $url);
+			if ($object !== null) {
+				return $object;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/etf/holdings
+	 * @return iterable<int, EtfHolding>
+	 */
+	public function etfHoldings(string $symbol): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/etf/holdings', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/etf/holdings', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(EtfHolding::class, new EtfHoldingMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/etf/sector-weightings
+	 * @return iterable<int, EtfSectorWeighting>
+	 */
+	public function etfSectorWeightings(string $symbol): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/etf/sector-weightings', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/etf/sector-weightings', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(EtfSectorWeighting::class, new EtfSectorWeightingMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/etf/country-weightings
+	 * @return iterable<int, EtfCountryWeighting>
+	 */
+	public function etfCountryWeightings(string $symbol): iterable
+	{
+		$url = $this->buildUrlWithoutApiKey('stable/etf/country-weightings', ['symbol' => $symbol]);
+
+		foreach ($this->requestJson('stable/etf/country-weightings', ['symbol' => $symbol]) as $item) {
+			$object = $this->map(EtfCountryWeighting::class, new EtfCountryWeightingMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
 			}
@@ -2229,6 +2664,37 @@ final readonly class SymfonyFmpClient implements FmpClient
 		}
 
 		return $url;
+	}
+
+	/**
+	 * Splits a list of symbols into chunks a single batch request can carry.
+	 *
+	 * @param list<non-empty-string> $symbols
+	 * @return iterable<int, non-empty-list<non-empty-string>>
+	 */
+	private function chunkSymbols(array $symbols): iterable
+	{
+		$chunk = [];
+		$queryLength = 0;
+
+		foreach ($symbols as $symbol) {
+			// the comma separating the symbols is sent as %2C
+			$symbolLength = strlen(rawurlencode($symbol)) + 3;
+
+			if ($chunk !== [] && (count($chunk) === self::MaxBatchSymbolsPerRequest || $queryLength + $symbolLength > self::MaxBatchSymbolsQueryLength)) {
+				yield $chunk;
+
+				$chunk = [];
+				$queryLength = 0;
+			}
+
+			$chunk[] = $symbol;
+			$queryLength += $symbolLength;
+		}
+
+		if ($chunk !== []) {
+			yield $chunk;
+		}
 	}
 
 	private function removeTtmSuffix(mixed $item): mixed

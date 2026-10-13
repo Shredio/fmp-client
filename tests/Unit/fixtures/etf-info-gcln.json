@@ -1,0 +1,44 @@
+[
+  {
+    "symbol": "GCLN",
+    "name": "Goldman Sachs Bloomberg Clean Energy Equity ETF",
+    "description": "The fund seeks to achieve its investment objective by investing at least 80% of its assets in securities included in its underlying index, in depositary receipts representing securities included in its underlying index and in underlying stocks in respect of depositary receipts included in its underlying index. The index is designed to deliver exposure to companies that are expected to have a significant impact on energy decarbonization through their exposure to clean energy.",
+    "isin": "US38149W7544",
+    "assetClass": "Equity",
+    "securityCusip": "38149W754",
+    "domicile": "US",
+    "website": "https://am.gs.com/en-us/individual/funds/detail/PV104158/38149W754/goldman-sachs-bloomberg-clean-energy-equity-etf",
+    "etfCompany": "Goldman",
+    "expenseRatio": 0.45,
+    "assetsUnderManagement": 10196463.71,
+    "avgVolume": 1466,
+    "inceptionDate": "2022-02-08",
+    "nav": 33.99,
+    "navCurrency": "USD",
+    "holdingsCount": 22,
+    "isActivelyTrading": false,
+    "updatedAt": "2025-11-06T14:56:12.719Z",
+    "sectorsList": [
+      {
+        "industry": "Financial Services",
+        "exposure": 57.56
+      },
+      {
+        "industry": "Cash & Others",
+        "exposure": 37.46000000000001
+      },
+      {
+        "industry": "Technology",
+        "exposure": 3.3000000000000003
+      },
+      {
+        "industry": "Energy",
+        "exposure": 1.6399999999999997
+      },
+      {
+        "industry": "Real Estate",
+        "exposure": 0.04
+      }
+    ]
+  }
+]

@@ -184,6 +184,19 @@ foreach ($fmpClient->gradesConsensusBulk() as $grades) {
 foreach ($fmpClient->priceTargetSummaryBulk() as $summary) {
     echo "{$summary->symbol}: {$summary->lastYearCount} targets, average {$summary->lastYearAvgPriceTarget}\n";
 }
+
+// Bulk DCF valuations, FMP ratings and the earnings surprises of a year
+foreach ($fmpClient->discountedCashFlowBulk() as $valuation) {
+    echo "{$valuation->symbol}: DCF {$valuation->dcf}, price {$valuation->stockPrice}\n";
+}
+
+foreach ($fmpClient->ratingBulk() as $rating) {
+    echo "{$rating->symbol}: {$rating->rating}\n";
+}
+
+foreach ($fmpClient->earningsSurprisesBulk(2026) as $surprise) {
+    echo "{$surprise->symbol} {$surprise->date}: actual {$surprise->epsActual}, estimated {$surprise->epsEstimated}\n";
+}
 ```
 
 ### Calendar Data
@@ -229,9 +242,14 @@ foreach ($fmpClient->economicCalendar($from, $to, $logger) as $event) {
     echo "{$event->date} [{$event->country}] {$event->event} (impact: {$event->impact})\n";
     echo "  Previous: {$event->previous}, Estimate: {$event->estimate}, Actual: {$event->actual}\n";
 }
+
+// IPO calendar (expected and priced initial public offerings)
+foreach ($fmpClient->iposCalendar($from, $to, $logger) as $ipo) {
+    echo "{$ipo->date} {$ipo->symbol} ({$ipo->exchange}): {$ipo->company} - {$ipo->actions}, {$ipo->priceRange}\n";
+}
 ```
 
-The calendar endpoints (`earningsCalendar`, `detailedEarningsCalendar`, `dividendsCalendar`, `splitsCalendar`, `economicCalendar`) accept any window: the client walks it backwards from `to` page by page. FMP silently narrows every request to roughly the last 90 days before `to`, so an empty page is not the end of the window - the walk steps 90 days back and continues until it passes `from`. A window ending a year ahead therefore still returns everything announced in between, even when its tail holds nothing yet.
+The calendar endpoints (`earningsCalendar`, `detailedEarningsCalendar`, `dividendsCalendar`, `splitsCalendar`, `iposCalendar`, `economicCalendar`) accept any window: the client walks it backwards from `to` page by page. FMP silently narrows every request to roughly the last 90 days before `to`, so an empty page is not the end of the window - the walk steps 90 days back and continues until it passes `from`. A window ending a year ahead therefore still returns everything announced in between, even when its tail holds nothing yet.
 
 ### Historical Data
 
@@ -374,6 +392,12 @@ foreach ($fmpClient->senateTrades('AAPL', limit: 20) as $trade) {
     echo "  {$trade->type}: {$trade->amount}\n";
 }
 
+// Trades disclosed by members of the U.S. House of Representatives
+foreach ($fmpClient->houseTrades('AAPL', limit: 20) as $trade) {
+    echo "{$trade->transactionDate} {$trade->firstName} {$trade->lastName} ({$trade->district})\n";
+    echo "  {$trade->type}: {$trade->amount}\n";
+}
+
 // Upcoming and historical earnings reports for a single symbol
 foreach ($fmpClient->earnings('AAPL', limit: 8) as $report) {
     echo "{$report->date}: actual {$report->epsActual}, estimated {$report->epsEstimated}\n";
@@ -417,7 +441,7 @@ foreach ($fmpClient->priceTargetNews('AAPL', limit: 20) as $news) {
     echo "{$news->publishedDate}: {$news->priceTarget} ({$news->newsTitle})\n";
 }
 
-// 13F filings, senate disclosures and earning call transcripts
+// 13F filings, congress disclosures and earning call transcripts
 foreach ($fmpClient->institutionalOwnershipLatest(limit: 100) as $filing) {
     echo "{$filing->acceptedDate} {$filing->name}: {$filing->formType} for {$filing->date}\n";
 }
@@ -426,8 +450,72 @@ foreach ($fmpClient->senateTradesLatest(limit: 100) as $trade) {
     echo "{$trade->disclosureDate} {$trade->firstName} {$trade->lastName}: {$trade->type} {$trade->assetDescription}\n";
 }
 
+foreach ($fmpClient->houseTradesLatest(limit: 100) as $trade) {
+    echo "{$trade->disclosureDate} {$trade->firstName} {$trade->lastName}: {$trade->type} {$trade->assetDescription}\n";
+}
+
 foreach ($fmpClient->earningCallTranscriptLatest() as $transcript) {
     echo "{$transcript->date} {$transcript->symbol} {$transcript->period->value} {$transcript->fiscalYear}\n";
+}
+```
+
+### ETFs, Index Constituents and Batch Requests
+
+```php
+use DateTimeImmutable;
+use Shredio\FmpClient\Enum\StockIndex;
+
+// Profile of an ETF with its sector breakdown
+$info = $fmpClient->etfInfo('VWCE.DE');
+if ($info !== null) {
+    echo "{$info->name} by {$info->etfCompany}, expense ratio {$info->expenseRatio}%\n";
+
+    foreach ($info->sectorsList as $sector) {
+        echo "  {$sector->industry}: {$sector->exposure}%\n";
+    }
+}
+
+// Holdings, ordered from the largest to the smallest position
+foreach ($fmpClient->etfHoldings('SPY') as $holding) {
+    echo "{$holding->asset} {$holding->name}: {$holding->weightPercentage}%\n";
+}
+
+// Sector and country allocation
+foreach ($fmpClient->etfSectorWeightings('SPY') as $weighting) {
+    echo "{$weighting->sector}: {$weighting->weightPercentage}%\n";
+}
+
+foreach ($fmpClient->etfCountryWeightings('VWCE.DE') as $weighting) {
+    echo "{$weighting->country}: {$weighting->weightPercentage}%\n";
+}
+
+// Current members of an index and the changes of its composition
+foreach ($fmpClient->indexConstituents(StockIndex::Sp500) as $constituent) {
+    echo "{$constituent->symbol} {$constituent->name} ({$constituent->sector})\n";
+}
+
+foreach ($fmpClient->historicalIndexConstituents(StockIndex::Nasdaq) as $change) {
+    echo "{$change->date} {$change->changeType}: +{$change->addedTicker} -{$change->removedTicker}\n";
+}
+
+// Quotes and market capitalizations of many symbols in one call, lists of any length are split into requests automatically
+foreach ($fmpClient->batchQuote(['AAPL', 'SAP.DE', '^GSPC', 'BTCUSD', 'EURUSD']) as $quote) {
+    echo "{$quote->symbol}: {$quote->price} ({$quote->changePercentage}%)\n";
+}
+
+foreach ($fmpClient->marketCapitalizationBatch(['AAPL', 'MSFT', 'SAP.DE']) as $capitalization) {
+    echo "{$capitalization->symbol}: {$capitalization->marketCap}\n";
+}
+
+// Daily market capitalization, ranges over 5000 records are fetched in multiple requests automatically
+$history = $fmpClient->historicalMarketCapitalization('AAPL', new DateTimeImmutable('2000-01-01'), new DateTimeImmutable());
+foreach ($history as $capitalization) {
+    echo "{$capitalization->date}: {$capitalization->marketCap}\n";
+}
+
+// Executives of a company
+foreach ($fmpClient->keyExecutives('AAPL') as $executive) {
+    echo "{$executive->name}, {$executive->title}\n";
 }
 ```
 
@@ -465,6 +553,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `companyProfileBulk()` - Bulk company profiles (streaming)
 - `peersBulk()` - Bulk stock peers (companies grouped by industry/sector similarity)
 - `sharesFloat(string $symbol)` - Shares float information (free float, float shares, outstanding shares)
+- `keyExecutives(string $symbol)` - Executives of a company with their title, compensation, gender and year of birth
 - `availableExchanges()` - Available stock exchanges
 - `allExchangeMarketHours()` - Market hours for all exchanges
 - `holidaysByExchange(string $exchange)` - Market holidays and early-close days for an exchange
@@ -472,6 +561,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 ### Financial Statements
 - `balanceSheetStatement(string $symbol)` - Balance sheet data
 - `balanceSheetStatementBulk(string $year, Period $period)` - Bulk balance sheets
+- `balanceSheetStatementTtm(string $symbol, int|null $limit)` - Historical series of quarter-end balance sheets served by the TTM endpoint
 - `balanceSheetStatementGrowth(string $symbol, int|null $limit, PeriodQuery|null $period)` - Balance sheet growth metrics
 - `balanceSheetStatementGrowthBulk(int $year, Period $period)` - Bulk balance sheet growth metrics
 - `incomeStatement(string $symbol)` - Income statement data
@@ -481,14 +571,18 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `incomeStatementGrowthBulk(int $year, Period $period)` - Bulk income statement growth metrics
 - `cashFlowStatement(string $symbol)` - Cash flow data
 - `cashFlowStatementBulk(string $year, Period $period)` - Bulk cash flow statements
+- `cashFlowStatementTtm(string $symbol, int|null $limit)` - Historical series of trailing twelve months cash flow statements
 - `cashFlowStatementGrowth(string $symbol, int|null $limit, PeriodQuery|null $period)` - Cash flow growth metrics
 - `cashFlowStatementGrowthBulk(int $year, Period $period)` - Bulk cash flow growth metrics
+- `financialGrowth(string $symbol, int|null $limit, PeriodQuery|null $period)` - Growth of the key figures of all three statements, including the growth per share over 3, 5 and 10 years
 - `revenueProductSegmentation(string $symbol, PeriodQuery $period)` - Revenue breakdown by product line
 - `revenueGeographicSegmentation(string $symbol, PeriodQuery $period)` - Revenue breakdown by geographic region
 - `latestFinancialStatements(int $page, int $limit)` - Latest financial statements
 
 ### Market Data & Quotes
 - `quote(string $symbol)` - Full quote for a single symbol (stocks, ETFs, indexes, forex, crypto)
+- `batchQuote(array $symbols)` - Full quotes for a list of symbols, split into requests of at most 1000 symbols automatically
+- `marketCapitalizationBatch(array $symbols)` - Latest market capitalization for a list of symbols
 - `eodBulkQuotes(DateTimeImmutable $date)` - End of day bulk quotes
 - `batchExchangeQuote(string $exchange)` - Exchange quotes
 - `batchExchangeQuoteDetailed(string $exchange)` - Detailed exchange quotes
@@ -499,6 +593,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `historicalPriceEodLight(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical prices, lightweight (date, price, volume only)
 - `historicalPriceEodNonSplitAdjusted(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical prices without split adjustments
 - `historicalChart(string $symbol, TimeInterval $interval, DateTimeImmutable $from, DateTimeImmutable $to)` - Historical chart data
+- `historicalMarketCapitalization(string $symbol, DateTimeImmutable $from, DateTimeImmutable $to)` - Daily market capitalization
 
 ### Analytics & Metrics
 - `keyMetrics(string $symbol, int $limit, PeriodQuery $period)` - Key financial metrics
@@ -509,9 +604,11 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `ratiosTtmBulk()` - Bulk TTM ratios
 - `financialScores(string $symbol)` - Financial scores
 - `scoresBulk()` - Bulk financial scores
+- `ratingBulk()` - Bulk ratings and scores computed by FMP from the fundamentals (not analyst ratings)
 - `analystEstimates(string $symbol, string $period, int $page, int $limit)` - Analyst estimates
 - `priceTargetConsensus(string $symbol)` - Consensus analyst price target (high, low, consensus, median)
 - `discountedCashFlow(string $symbol)` - DCF valuation together with the current stock price
+- `discountedCashFlowBulk()` - Bulk DCF valuations
 - `priceTargetSummary(string $symbol)` - Number and average of the price targets published in the last month, quarter, year and overall
 - `priceTargetSummaryBulk()` - Bulk price target summaries
 - `priceTargetNews(string $symbol, int $page, int|null $limit)` - Individual analyst price targets with the news they were published in
@@ -530,9 +627,11 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `detailedEarningsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Earnings calendar with report time (bmo/amc), period ending, fiscal period/year and confirmation flag
 - `dividendsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Dividends calendar
 - `splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Stock splits calendar
+- `iposCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Calendar of expected and priced initial public offerings
 - `economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Economic data releases calendar
 - `dividends(string $symbol)` - Company dividend history
 - `earnings(string $symbol, int|null $limit)` - Upcoming and historical earnings reports for a single symbol
+- `earningsSurprisesBulk(int $year)` - Bulk reported and estimated earnings per share of a year
 - `splits(string $symbol)` - Company stock split history
 
 ### Ownership & Insider Activity
@@ -544,11 +643,20 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `institutionalOwnershipLatest(int $page, int|null $limit)` - Latest 13F filings of institutional investors
 - `senateTrades(string $symbol, int|null $limit)` - Trades disclosed by U.S. senators
 - `senateTradesLatest(int $page, int|null $limit)` - Latest trades disclosed by U.S. senators across all assets
+- `houseTrades(string $symbol, int $page, int|null $limit)` - Trades disclosed by members of the U.S. House of Representatives
+- `houseTradesLatest(int $page, int|null $limit)` - Latest trades disclosed by members of the U.S. House of Representatives across all assets
 
 ### Earning Call Transcripts
 - `earningCallTranscriptDates(string $symbol)` - Quarters with an available transcript
 - `earningCallTranscript(string $symbol, int $year, int $quarter)` - Full transcript of a single earning call
 - `earningCallTranscriptLatest(int $page, int|null $limit)` - Latest earning calls with a transcript across all symbols
+
+### ETFs & Funds
+- `etfList()` - Symbols and names of the covered ETFs
+- `etfInfo(string $symbol)` - Profile of an ETF or a mutual fund (issuer, expense ratio, assets under management, NAV, sector breakdown)
+- `etfHoldings(string $symbol)` - Assets held by an ETF or a mutual fund
+- `etfSectorWeightings(string $symbol)` - Share of every sector in a fund
+- `etfCountryWeightings(string $symbol)` - Share of every country in a fund
 
 ### Search
 - `searchIsin(string $isin)` - Search for stocks by ISIN code
@@ -556,6 +664,8 @@ echo "Metrics count: " . count($metrics) . "\n";
 ### Other Data
 - `cryptocurrencyList()` - Available cryptocurrencies
 - `indexList()` - Available market indices
+- `indexConstituents(StockIndex $index)` - Current constituents of the S&P 500, Nasdaq 100 or Dow Jones Industrial Average
+- `historicalIndexConstituents(StockIndex $index)` - Companies added to and removed from one of the three indexes
 - `financialStatementSymbolList()` - Symbols with financial statements
 
 ## Data Types
