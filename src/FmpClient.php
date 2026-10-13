@@ -36,6 +36,7 @@ use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\Etf;
 use Shredio\FmpClient\Payload\EtfCountryWeighting;
 use Shredio\FmpClient\Payload\EtfHolding;
+use Shredio\FmpClient\Payload\EtfHoldingBulk;
 use Shredio\FmpClient\Payload\EtfInfo;
 use Shredio\FmpClient\Payload\EtfSectorWeighting;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
@@ -1033,6 +1034,16 @@ interface FmpClient
 	 * @return iterable<int, EtfHolding>
 	 */
 	public function etfHoldings(string $symbol): iterable;
+
+	/**
+	 * Assets held by every ETF and mutual fund at once, the bulk variant of the ETF holdings. The API splits the data
+	 * into parts of several hundred megabytes, which are requested one after another until the API rejects a part.
+	 * Available worldwide.
+	 *
+	 * @see https://financialmodelingprep.com/stable/etf-holder-bulk
+	 * @return iterable<int, EtfHoldingBulk>
+	 */
+	public function etfHoldingsBulk(): iterable;
 
 	/**
 	 * Share of every sector in an ETF or a mutual fund.

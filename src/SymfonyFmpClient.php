@@ -42,6 +42,7 @@ use Shredio\FmpClient\Mapper\EarningsSurpriseMapper;
 use Shredio\FmpClient\Mapper\EconomicCalendarItemMapper;
 use Shredio\FmpClient\Mapper\EodQuoteMapper;
 use Shredio\FmpClient\Mapper\EtfCountryWeightingMapper;
+use Shredio\FmpClient\Mapper\EtfHoldingBulkMapper;
 use Shredio\FmpClient\Mapper\EtfHoldingMapper;
 use Shredio\FmpClient\Mapper\EtfInfoMapper;
 use Shredio\FmpClient\Mapper\EtfMapper;
@@ -127,6 +128,7 @@ use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\Etf;
 use Shredio\FmpClient\Payload\EtfCountryWeighting;
 use Shredio\FmpClient\Payload\EtfHolding;
+use Shredio\FmpClient\Payload\EtfHoldingBulk;
 use Shredio\FmpClient\Payload\EtfInfo;
 use Shredio\FmpClient\Payload\EtfSectorWeighting;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
@@ -2437,6 +2439,34 @@ final readonly class SymfonyFmpClient implements FmpClient
 			if ($object !== null) {
 				yield $object;
 			}
+		}
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/etf-holder-bulk
+	 * @return iterable<int, EtfHoldingBulk>
+	 */
+	public function etfHoldingsBulk(): iterable
+	{
+		for ($part = 0; $part < 100; $part++) {
+			$response = $this->request('stable/etf-holder-bulk', ['part' => $part]);
+
+			if ($response->getStatusCode() === 400) {
+				return;
+			}
+
+			$url = $this->buildUrlWithoutApiKey('stable/etf-holder-bulk', ['part' => $part]);
+
+			foreach ($this->processCsvResponse($response) as $item) {
+				$object = $this->map(EtfHoldingBulk::class, new EtfHoldingBulkMapper(), $item, $url, true);
+				if ($object !== null) {
+					yield $object;
+				}
+			}
+		}
+
+		if ($part === 100) {
+			throw new LogicException('Reached maximum number of parts for ETF holdings bulk request.');
 		}
 	}
 

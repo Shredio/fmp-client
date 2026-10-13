@@ -2,16 +2,19 @@
 
 namespace Tests\Unit;
 
+use Shredio\FmpClient\Exception\UnexpectedHttpCodeException;
 use Shredio\FmpClient\Exception\UnexpectedResponseContentException;
 use Shredio\FmpClient\Payload\Etf;
 use Shredio\FmpClient\Payload\EtfCountryWeighting;
 use Shredio\FmpClient\Payload\EtfHolding;
+use Shredio\FmpClient\Payload\EtfHoldingBulk;
 use Shredio\FmpClient\Payload\EtfInfo;
 use Shredio\FmpClient\Payload\EtfSectorExposure;
 use Shredio\FmpClient\Payload\EtfSectorWeighting;
 use Shredio\FmpClient\SymfonyFmpClient;
 use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
+use Tests\Mock\TestUnexpectedResponseContentExceptionHandler;
 use Tests\TestCase;
 
 final class EtfTest extends TestCase
@@ -197,6 +200,241 @@ final class EtfTest extends TestCase
 		$this->assertSame([], iterator_to_array($client->etfHoldings('AAPL')));
 	}
 
+	public function testEtfHoldingsBulk(): void
+	{
+		$part = MockResponse::fromFile(__DIR__ . '/fixtures/etf-holder-bulk-part-0-excerpt.csv');
+		$end = $this->createEndOfBulkPartsResponse();
+		$client = new SymfonyFmpClient(new MockHttpClient([$part, $end]), 'SECRET', null, strictMode: true);
+
+		$holdings = iterator_to_array($client->etfHoldingsBulk(), false);
+
+		$this->assertCount(306, $holdings);
+		$this->assertSame('https://financialmodelingprep.com/stable/etf-holder-bulk?part=0&apikey=SECRET', $part->getRequestUrl());
+		$this->assertSame('https://financialmodelingprep.com/stable/etf-holder-bulk?part=1&apikey=SECRET', $end->getRequestUrl());
+		$this->assertSame((new EtfHoldingBulk(
+			symbol: 'DIA',
+			asset: 'NKE',
+			name: 'NIKE INC  CL B',
+			isin: 'US6541061031',
+			cusip: '654106103',
+			sharesNumber: 5167201.0,
+			weightPercentage: 0.405001,
+			marketValue: 181659310.0,
+			lastUpdated: '2026-10-13',
+		))->toArray(), $holdings[275]->toArray());
+		$this->assertSame((new EtfHoldingBulk(
+			symbol: 'DIA',
+			asset: 'CAT',
+			name: 'CATERPILLAR INC',
+			isin: 'US1491231015',
+			cusip: '149123101',
+			sharesNumber: 5167201.0,
+			weightPercentage: 9.158289,
+			marketValue: 4107862611.0,
+			lastUpdated: '2026-10-13',
+		))->toArray(), $holdings[305]->toArray());
+	}
+
+	public function testEtfHoldingsBulkKeepsThePositionsOfAFundTogether(): void
+	{
+		$client = $this->createEtfHoldingsBulkClient();
+
+		$positionsPerFund = [];
+		foreach ($client->etfHoldingsBulk() as $holding) {
+			$positionsPerFund[$holding->symbol] = ($positionsPerFund[$holding->symbol] ?? 0) + 1;
+		}
+
+		// the first fund of the response really carries a placeholder instead of a symbol
+		$this->assertSame([
+			' -- ' => 26,
+			'020Y.L' => 52,
+			'0P0000WUU2.L' => 145,
+			'ARKK' => 46,
+			'BBIP' => 2,
+			'BTCX-B.TO' => 2,
+			'CEZ' => 2,
+			'DIA' => 31,
+		], $positionsPerFund);
+	}
+
+	public function testEtfHoldingsBulkRequestsPartsUntilTheApiRejectsOne(): void
+	{
+		$firstPart = MockResponse::fromFile(__DIR__ . '/fixtures/etf-holder-bulk-part-0-excerpt.csv');
+		$secondPart = MockResponse::fromFile(__DIR__ . '/fixtures/etf-holder-bulk-part-0-excerpt.csv');
+		$end = $this->createEndOfBulkPartsResponse();
+		$httpClient = new MockHttpClient([$firstPart, $secondPart, $end]);
+		$client = new SymfonyFmpClient($httpClient, 'SECRET', null, strictMode: true);
+
+		$holdings = iterator_to_array($client->etfHoldingsBulk(), false);
+
+		$this->assertCount(612, $holdings);
+		$this->assertSame(3, $httpClient->getRequestsCount());
+		$this->assertSame('https://financialmodelingprep.com/stable/etf-holder-bulk?part=0&apikey=SECRET', $firstPart->getRequestUrl());
+		$this->assertSame('https://financialmodelingprep.com/stable/etf-holder-bulk?part=1&apikey=SECRET', $secondPart->getRequestUrl());
+		$this->assertSame('https://financialmodelingprep.com/stable/etf-holder-bulk?part=2&apikey=SECRET', $end->getRequestUrl());
+	}
+
+	public function testEtfHoldingsBulkWithoutSharesNumberAndMarketValue(): void
+	{
+		$holdings = iterator_to_array($this->createEtfHoldingsBulkClient()->etfHoldingsBulk(), false);
+
+		// the response holds NaN in both columns, the per-symbol endpoint sends null for the same position
+		$this->assertSame((new EtfHoldingBulk(
+			symbol: 'CEZ',
+			asset: 'PHOR.LN',
+			name: '',
+			isin: '',
+			cusip: '',
+			sharesNumber: null,
+			weightPercentage: 0.32,
+			marketValue: null,
+			lastUpdated: '2023-04-17',
+		))->toArray(), $holdings[273]->toArray());
+		$this->assertSame((new EtfHoldingBulk(
+			symbol: 'CEZ',
+			asset: 'FIVE',
+			name: 'Five Below, Inc.',
+			isin: 'US33829M1018',
+			cusip: '33829M101',
+			sharesNumber: null,
+			weightPercentage: 0.21,
+			marketValue: null,
+			lastUpdated: '2023-04-17',
+		))->toArray(), $holdings[274]->toArray());
+	}
+
+	public function testEtfHoldingsBulkWithoutWeight(): void
+	{
+		$holdings = iterator_to_array($this->createEtfHoldingsBulkClient()->etfHoldingsBulk(), false);
+
+		// the header of the issuer's file ended up among the positions, its weight is NaN in the response
+		$this->assertSame((new EtfHoldingBulk(
+			symbol: 'BBIP',
+			asset: 'Ticker',
+			name: 'Security Description',
+			isin: '',
+			cusip: '',
+			sharesNumber: 0.0,
+			weightPercentage: null,
+			marketValue: 0.0,
+			lastUpdated: '2024-10-26',
+		))->toArray(), $holdings[269]->toArray());
+	}
+
+	public function testEtfHoldingsBulkWithNegativePosition(): void
+	{
+		$holdings = iterator_to_array($this->createEtfHoldingsBulkClient()->etfHoldingsBulk(), false);
+
+		$this->assertSame((new EtfHoldingBulk(
+			symbol: '020Y.L',
+			asset: '',
+			name: 'EUR CASH',
+			isin: '',
+			cusip: '',
+			sharesNumber: -20877.0,
+			weightPercentage: -0.00698,
+			marketValue: -20877.49,
+			lastUpdated: '2026-10-13',
+		))->toArray(), $holdings[49]->toArray());
+	}
+
+	public function testEtfHoldingsBulkWithWeightInScientificNotation(): void
+	{
+		$holdings = iterator_to_array($this->createEtfHoldingsBulkClient()->etfHoldingsBulk(), false);
+
+		// weightPercentage is 7.389684594716715e-7 in the response
+		$this->assertSame((new EtfHoldingBulk(
+			symbol: '0P0000WUU2.L',
+			asset: 'UBG.L',
+			name: 'UNBOUND GROUP',
+			isin: 'GB0003085445',
+			cusip: '',
+			sharesNumber: 0.0,
+			weightPercentage: 7.389684594716715e-7,
+			marketValue: 0.0,
+			lastUpdated: '2026-10-13',
+		))->toArray(), $holdings[135]->toArray());
+	}
+
+	public function testEtfHoldingsBulkWithAssetSentAsJson(): void
+	{
+		$holdings = iterator_to_array($this->createEtfHoldingsBulkClient()->etfHoldingsBulk(), false);
+
+		// the API occasionally fills the asset with a JSON object instead of a ticker symbol
+		$this->assertSame((new EtfHoldingBulk(
+			symbol: 'BTCX-B.TO',
+			asset: '{"symbol":"QBTC.TO","isin":"CA09175G1046","cusip":"09175G104"}',
+			name: 'BITCOIN 1 XBT IN USD',
+			isin: '',
+			cusip: '',
+			sharesNumber: 0.0,
+			weightPercentage: 100.23,
+			marketValue: 925714257.0,
+			lastUpdated: '2026-10-13',
+		))->toArray(), $holdings[272]->toArray());
+	}
+
+	public function testEtfHoldingsBulkWithoutAnyPart(): void
+	{
+		$client = new SymfonyFmpClient(new MockHttpClient([$this->createEndOfBulkPartsResponse()]), 'SECRET', null, strictMode: true);
+
+		$this->assertSame([], iterator_to_array($client->etfHoldingsBulk(), false));
+	}
+
+	public function testEtfHoldingsBulkRejectedByTheRateLimit(): void
+	{
+		$client = new SymfonyFmpClient(new MockHttpClient([
+			MockResponse::fromFile(__DIR__ . '/fixtures/etf-holder-bulk-part-0-excerpt.csv'),
+			new MockResponse('{"Error Message": "Limit Reach."}', ['http_code' => 429]),
+		]), 'SECRET', null, strictMode: true, retryConfiguration: null);
+
+		$holdings = [];
+
+		try {
+			foreach ($client->etfHoldingsBulk() as $holding) {
+				$holdings[] = $holding;
+			}
+
+			$this->fail('A part rejected by the rate limit must throw.');
+		} catch (UnexpectedHttpCodeException $exception) {
+			$this->assertSame(429, $exception->statusCode);
+		}
+
+		// the positions of the parts received before the rejected one are still delivered
+		$this->assertCount(306, $holdings);
+	}
+
+	public function testEtfHoldingBulkWithInvalidWeightIsRejected(): void
+	{
+		$response = new MockResponse(
+			"\"symbol\",\"name\",\"sharesNumber\",\"asset\",\"weightPercentage\",\"cusip\",\"isin\",\"marketValue\",\"lastUpdated\"\n"
+			. "\"DIA\",\"3M CO\",5167201,\"MMM\",n/a,\"88579Y101\",\"US88579Y1010\",826793622,\"2026-10-13\"",
+		);
+		$client = new SymfonyFmpClient(new MockHttpClient([$response]), 'SECRET', null, strictMode: true);
+
+		$this->expectException(UnexpectedResponseContentException::class);
+
+		iterator_to_array($client->etfHoldingsBulk(), false);
+	}
+
+	public function testEtfHoldingBulkWithInvalidWeightIsSkippedOutsideStrictMode(): void
+	{
+		$response = new MockResponse(
+			"\"symbol\",\"name\",\"sharesNumber\",\"asset\",\"weightPercentage\",\"cusip\",\"isin\",\"marketValue\",\"lastUpdated\"\n"
+			. "\"DIA\",\"3M CO\",5167201,\"MMM\",n/a,\"88579Y101\",\"US88579Y1010\",826793622,\"2026-10-13\"\n"
+			. "\"DIA\",\"BOEING CO/THE\",5167201,\"BA\",2.17108,\"097023105\",\"US0970231058\",973817091,\"2026-10-13\"",
+		);
+		$handler = new TestUnexpectedResponseContentExceptionHandler();
+		$client = new SymfonyFmpClient(new MockHttpClient([$response, $this->createEndOfBulkPartsResponse()]), 'SECRET', $handler);
+
+		$holdings = iterator_to_array($client->etfHoldingsBulk(), false);
+
+		$this->assertCount(1, $holdings);
+		$this->assertSame('BA', $holdings[0]->asset);
+		$this->assertCount(1, $handler->exceptions);
+		$this->assertSame('https://financialmodelingprep.com/stable/etf-holder-bulk?part=0', $handler->exceptions[0]->url);
+	}
+
 	public function testEtfSectorWeightings(): void
 	{
 		$response = MockResponse::fromFile(__DIR__ . '/fixtures/etf-sector-weightings-spy.json');
@@ -264,6 +502,22 @@ final class EtfTest extends TestCase
 		$this->expectException(UnexpectedResponseContentException::class);
 
 		iterator_to_array($client->etfCountryWeightings('SPY'));
+	}
+
+	private function createEtfHoldingsBulkClient(): SymfonyFmpClient
+	{
+		return new SymfonyFmpClient(new MockHttpClient([
+			MockResponse::fromFile(__DIR__ . '/fixtures/etf-holder-bulk-part-0-excerpt.csv'),
+			$this->createEndOfBulkPartsResponse(),
+		]), 'SECRET', null, strictMode: true);
+	}
+
+	/**
+	 * The API answers a part behind the last one with HTTP 400.
+	 */
+	private function createEndOfBulkPartsResponse(): MockResponse
+	{
+		return new MockResponse('Query Error: Invalid or missing query parameter - part', ['http_code' => 400]);
 	}
 
 }

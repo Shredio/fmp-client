@@ -188,6 +188,22 @@ final class CacheFmpClientTest extends TestCase
 		$this->assertSame([], $adapter->getValues());
 	}
 
+	public function testBulkEndpointSplitIntoPartsIsNotCached(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/etf-holder-bulk-part-0-excerpt.csv', responses: [
+				new MockResponse('', [
+					'http_code' => 400,
+				]),
+			]),
+			new Psr16Cache($adapter = new ArrayAdapter()),
+			3600,
+		);
+
+		$this->assertNotEmpty(iterator_to_array($client->etfHoldingsBulk(), false));
+		$this->assertSame([], $adapter->getValues());
+	}
+
 	public function testMissingNullable(): void
 	{
 		$client = new CacheFmpClient(

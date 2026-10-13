@@ -2797,6 +2797,29 @@ Requires the Ultimate or Enterprise FMP plan.
 
 ---
 
+### `etfHoldingsBulk()`
+
+**Purpose:** Bulk retrieval of the assets held by every ETF and mutual fund (streaming large datasets). The API splits the data into parts, the client requests them one after another (`part=0`, `part=1`, ...) until the API rejects a part with HTTP 400. On 2026-10-13 the data had 4 parts of 190 to 397 MB (1.21 GB in total) with 10 856 748 positions of 21 984 funds, 5 496 funds in every part. The positions match the ones `etfHoldings()` returns for the same fund, but the positions of a fund are not ordered by weight. The positions of one fund follow each other, a fund is never split between two parts and the funds come roughly in the alphabetical order of their symbols. Funds whose holdings were last updated years ago are included (`lastUpdated` reaches back to 2023), and some records are malformed: 352 funds carry a symbol in a notation `etfList()` does not use (a placeholder such as ` -- `, a ticker written as `VWRA SW` or `CSPXx.CHI`), and 10 funds list the header of the issuer's file (`Security Description`, `Ticker`) as a position. Every part is a separate request to the bulk endpoints, which are rate limited and answer HTTP 429 when called too often, so one run costs five of them (the four parts and the rejected fifth one).
+
+**Availability:** Worldwide
+
+**Parameters:** None
+
+**Return Values:** `iterable<EtfHoldingBulk>`
+- `symbol` - Ticker symbol of the fund
+- `asset` - Ticker symbol of the held asset, empty for assets without one, e.g. bonds or cash; occasionally a JSON object such as `{"symbol":"QBTC.TO","isin":"CA09175G1046","cusip":"09175G104"}`
+- `name` - Name of the held asset, may be empty
+- `isin` - ISIN of the held asset, may be empty; a few thousand positions hold another identifier, e.g. a CUSIP
+- `cusip` - CUSIP of the held asset, may be empty (`securityCusip` of `etfHoldings()`); a few thousand positions hold another identifier, e.g. an ISIN or a SEDOL
+- `sharesNumber` - Number of shares held, the principal amount for bonds, `null` when the API does not know it (`NaN` in the response)
+- `weightPercentage` - Share of the fund in percent, `null` when the API does not know it (`NaN` in the response)
+- `marketValue` - Market value of the position in the currency of the fund, `null` when the API does not know it (`NaN` in the response)
+- `lastUpdated` - Date of the last update in the `Y-m-d` format (`updatedAt` of `etfHoldings()`, without the time)
+
+**API endpoint:** `https://financialmodelingprep.com/stable/etf-holder-bulk`
+
+---
+
 ### `etfSectorWeightings()`
 
 **Purpose:** Retrieve the share of every sector in an ETF or a mutual fund. About a quarter of the sampled funds return no data.

@@ -38,6 +38,7 @@ use Shredio\FmpClient\Payload\EodQuote;
 use Shredio\FmpClient\Payload\Etf;
 use Shredio\FmpClient\Payload\EtfCountryWeighting;
 use Shredio\FmpClient\Payload\EtfHolding;
+use Shredio\FmpClient\Payload\EtfHoldingBulk;
 use Shredio\FmpClient\Payload\EtfInfo;
 use Shredio\FmpClient\Payload\EtfSectorWeighting;
 use Shredio\FmpClient\Payload\ExchangeMarketHours;
@@ -1155,6 +1156,14 @@ final readonly class CacheFmpClient implements FmpClient
 	public function etfHoldings(string $symbol): iterable
 	{
 		return $this->cached(__FUNCTION__, fn () => $this->client->etfHoldings($symbol), $symbol);
+	}
+
+	/**
+	 * @return iterable<int, EtfHoldingBulk>
+	 */
+	public function etfHoldingsBulk(): iterable
+	{
+		return $this->client->etfHoldingsBulk();
 	}
 
 	/**

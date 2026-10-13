@@ -480,6 +480,11 @@ foreach ($fmpClient->etfHoldings('SPY') as $holding) {
     echo "{$holding->asset} {$holding->name}: {$holding->weightPercentage}%\n";
 }
 
+// Holdings of every fund at once, streamed part by part (several hundred megabytes each)
+foreach ($fmpClient->etfHoldingsBulk() as $holding) {
+    echo "{$holding->symbol}: {$holding->asset} {$holding->name} {$holding->weightPercentage}%\n";
+}
+
 // Sector and country allocation
 foreach ($fmpClient->etfSectorWeightings('SPY') as $weighting) {
     echo "{$weighting->sector}: {$weighting->weightPercentage}%\n";
@@ -655,6 +660,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `etfList()` - Symbols and names of the covered ETFs
 - `etfInfo(string $symbol)` - Profile of an ETF or a mutual fund (issuer, expense ratio, assets under management, NAV, sector breakdown)
 - `etfHoldings(string $symbol)` - Assets held by an ETF or a mutual fund
+- `etfHoldingsBulk()` - Assets held by every ETF and mutual fund at once (streaming)
 - `etfSectorWeightings(string $symbol)` - Share of every sector in a fund
 - `etfCountryWeightings(string $symbol)` - Share of every country in a fund
 
