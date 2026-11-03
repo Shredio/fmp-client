@@ -72,6 +72,7 @@ use Shredio\FmpClient\Mapper\InstitutionalHolderMapper;
 use Shredio\FmpClient\Mapper\InstitutionalOwnershipFilingMapper;
 use Shredio\FmpClient\Mapper\InstitutionalPositionsSummaryMapper;
 use Shredio\FmpClient\Mapper\IpoCalendarItemMapper;
+use Shredio\FmpClient\Mapper\IpoProspectusMapper;
 use Shredio\FmpClient\Mapper\IsinSearchResultMapper;
 use Shredio\FmpClient\Mapper\KeyExecutiveMapper;
 use Shredio\FmpClient\Mapper\KeyMetricsMapper;
@@ -156,6 +157,7 @@ use Shredio\FmpClient\Payload\InstitutionalHolder;
 use Shredio\FmpClient\Payload\InstitutionalOwnershipFiling;
 use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
 use Shredio\FmpClient\Payload\IpoCalendarItem;
+use Shredio\FmpClient\Payload\IpoProspectus;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyExecutive;
 use Shredio\FmpClient\Payload\KeyMetrics;
@@ -991,6 +993,27 @@ final readonly class SymfonyFmpClient implements FmpClient
 				}
 			}
 		} while ($paginator->next($count, $lastStringDate, $logger));
+	}
+
+	/**
+	 * @see https://financialmodelingprep.com/stable/ipos-prospectus
+	 * @return iterable<int, IpoProspectus>
+	 */
+	public function iposProspectus(DateTimeImmutable $from, DateTimeImmutable $to): iterable
+	{
+		$parameters = [
+			'from' => $from->format('Y-m-d'),
+			'to' => $to->format('Y-m-d'),
+		];
+		$values = $this->requestJson('stable/ipos-prospectus', $parameters);
+		$url = $this->buildUrlWithoutApiKey('stable/ipos-prospectus', $parameters);
+
+		foreach ($values as $item) {
+			$object = $this->map(IpoProspectus::class, new IpoProspectusMapper(), $item, $url);
+			if ($object !== null) {
+				yield $object;
+			}
+		}
 	}
 
 	/**

@@ -348,6 +348,7 @@ final class CacheFmpClientTest extends TestCase
 		$client = new CacheFmpClient(
 			$this->createClient(__DIR__ . '/fixtures/rating-bulk.csv', responses: [
 				MockResponse::fromFile(__DIR__ . '/fixtures/ipos-calendar-2026-10-01-to-2026-10-31.json'),
+				MockResponse::fromFile(__DIR__ . '/fixtures/ipos-prospectus-2026-10-01-to-2026-10-30.json'),
 			]),
 			new Psr16Cache($adapter = new ArrayAdapter()),
 			3600,
@@ -356,6 +357,10 @@ final class CacheFmpClientTest extends TestCase
 		$this->assertNotEmpty(iterator_to_array($client->ratingBulk()));
 		$this->assertCount(39, iterator_to_array(
 			$client->iposCalendar(new DateTimeImmutable('2026-10-01'), new DateTimeImmutable('2026-10-31')),
+			false,
+		));
+		$this->assertCount(82, iterator_to_array(
+			$client->iposProspectus(new DateTimeImmutable('2026-10-01'), new DateTimeImmutable('2026-10-30')),
 			false,
 		));
 		$this->assertSame([], $adapter->getValues());

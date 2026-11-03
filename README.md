@@ -247,6 +247,11 @@ foreach ($fmpClient->economicCalendar($from, $to, $logger) as $event) {
 foreach ($fmpClient->iposCalendar($from, $to, $logger) as $ipo) {
     echo "{$ipo->date} {$ipo->symbol} ({$ipo->exchange}): {$ipo->company} - {$ipo->actions}, {$ipo->priceRange}\n";
 }
+
+// IPO prospectuses (S-1, F-1, their amendments and the final 424B4 filed with the SEC; one request per window)
+foreach ($fmpClient->iposProspectus($from, $to) as $prospectus) {
+    echo "{$prospectus->acceptedDate} {$prospectus->symbol} {$prospectus->form}: {$prospectus->pricePublicPerShare} USD per share - {$prospectus->url}\n";
+}
 ```
 
 The calendar endpoints (`earningsCalendar`, `detailedEarningsCalendar`, `dividendsCalendar`, `splitsCalendar`, `iposCalendar`, `economicCalendar`) accept any window: the client walks it backwards from `to` page by page. FMP silently narrows every request to roughly the last 90 days before `to`, so an empty page is not the end of the window - the walk steps 90 days back and continues until it passes `from`. A window ending a year ahead therefore still returns everything announced in between, even when its tail holds nothing yet.
@@ -633,6 +638,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `dividendsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Dividends calendar
 - `splitsCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Stock splits calendar
 - `iposCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Calendar of expected and priced initial public offerings
+- `iposProspectus(DateTimeImmutable $from, DateTimeImmutable $to)` - Registration statements and prospectuses of offerings filed with the SEC, with the offering price of the final `424B4`
 - `economicCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger)` - Economic data releases calendar
 - `dividends(string $symbol)` - Company dividend history
 - `earnings(string $symbol, int|null $limit)` - Upcoming and historical earnings reports for a single symbol

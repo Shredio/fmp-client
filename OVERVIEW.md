@@ -1485,6 +1485,35 @@ Contains percentage growth of all cash flow statement items
 
 ---
 
+### `iposProspectus()`
+
+**Purpose:** Retrieve the registration statements and prospectuses of offerings filed with the SEC (`S-1`, `F-1`, their `/A` amendments and the final `424B4`) that the SEC accepted in a given time period, newest acceptance first. Not paginated: one request answers the whole window (4 940 records for 2024-01-01 to 2026-10-30, observed on 2026-10-30); without `from` and `to` the API answers the last three months. The feed carries listed companies' resale and shelf registrations too, so a filing alone does not mean an upcoming IPO (only 19 of the 100 symbols filed in September and October 2026 were in the IPO calendar).
+
+**Availability:** Not stated in the FMP docs; the records are filings with the SEC, so they cover offerings on US exchanges
+
+**Parameters:**
+- `from` (DateTimeImmutable) - Start date of the acceptance
+- `to` (DateTimeImmutable) - End date of the acceptance
+
+**Return Values:** `iterable<IpoProspectus>`
+- `symbol` - Ticker symbol
+- `acceptedDate` - Date the SEC accepted the filing in the `Y-m-d` format
+- `filingDate` - Filing date in the `Y-m-d` format, it may fall on the day after `acceptedDate`
+- `ipoDate` - IPO date in the `Y-m-d` format, often long before the filing for a listed company's registration
+- `cik` - Central index key of the company, zero-padded to ten digits
+- `pricePublicPerShare` - Offering price per share in US dollars (the final price in a `424B4`)
+- `pricePublicTotal` - Gross proceeds in US dollars, rounded to a whole number
+- `discountsAndCommissionsPerShare` - Underwriting discount per share in US dollars, `null` in rare cases
+- `discountsAndCommissionsTotal` - Underwriting discount in US dollars as sent, rounded to a whole number, `null` in rare cases (a few records carry the per-share figure here)
+- `proceedsBeforeExpensesPerShare` - Proceeds per share after the discount in US dollars
+- `proceedsBeforeExpensesTotal` - Proceeds after the discount in US dollars, rounded to a whole number
+- `form` - Form type (`S-1`, `S-1/A`, `F-1`, `F-1/A`, `424B4`)
+- `url` - Link to the filing on sec.gov
+
+**API endpoint:** `https://financialmodelingprep.com/stable/ipos-prospectus`
+
+---
+
 ### `economicCalendar()`
 
 **Purpose:** Retrieve calendar of upcoming and past economic data releases (macroeconomic indicators, central bank speeches, employment data, etc.) for a given time period. Automatically paginated via the standard calendar paginator to handle large result sets.

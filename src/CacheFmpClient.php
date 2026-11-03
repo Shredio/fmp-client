@@ -66,6 +66,7 @@ use Shredio\FmpClient\Payload\InstitutionalHolder;
 use Shredio\FmpClient\Payload\InstitutionalOwnershipFiling;
 use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
 use Shredio\FmpClient\Payload\IpoCalendarItem;
+use Shredio\FmpClient\Payload\IpoProspectus;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyExecutive;
 use Shredio\FmpClient\Payload\KeyMetrics;
@@ -428,6 +429,14 @@ final readonly class CacheFmpClient implements FmpClient
 	public function iposCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable
 	{
 		return $this->client->iposCalendar($from, $to, $logger);
+	}
+
+	/**
+	 * @return iterable<int, IpoProspectus>
+	 */
+	public function iposProspectus(DateTimeImmutable $from, DateTimeImmutable $to): iterable
+	{
+		return $this->client->iposProspectus($from, $to);
 	}
 
 	/**

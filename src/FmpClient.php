@@ -64,6 +64,7 @@ use Shredio\FmpClient\Payload\InstitutionalHolder;
 use Shredio\FmpClient\Payload\InstitutionalOwnershipFiling;
 use Shredio\FmpClient\Payload\InstitutionalPositionsSummary;
 use Shredio\FmpClient\Payload\IpoCalendarItem;
+use Shredio\FmpClient\Payload\IpoProspectus;
 use Shredio\FmpClient\Payload\IsinSearchResult;
 use Shredio\FmpClient\Payload\KeyExecutive;
 use Shredio\FmpClient\Payload\KeyMetrics;
@@ -399,6 +400,17 @@ interface FmpClient
 	 * @return iterable<int, IpoCalendarItem>
 	 */
 	public function iposCalendar(DateTimeImmutable $from, DateTimeImmutable $to, ?LoggerInterface $logger = null): iterable;
+
+	/**
+	 * Registration statements and prospectuses of offerings filed with the SEC (`S-1`, `F-1`, their amendments and
+	 * the final `424B4`) accepted in the window, newest acceptance first. One request answers the whole window -
+	 * 4 940 records for 2024-01-01 to 2026-10-30, observed on 2026-10-30 - so it is not paginated. The feed carries
+	 * listed companies' resale and shelf registrations too: a filing alone does not mean an upcoming IPO.
+	 *
+	 * @see https://financialmodelingprep.com/stable/ipos-prospectus
+	 * @return iterable<int, IpoProspectus>
+	 */
+	public function iposProspectus(DateTimeImmutable $from, DateTimeImmutable $to): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/economic-calendar
