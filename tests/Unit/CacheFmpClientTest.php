@@ -343,6 +343,33 @@ final class CacheFmpClientTest extends TestCase
 		$this->assertFalse($cache->has('fmp-client.v2.indexConstituents.sp500'));
 	}
 
+	public function testHolidaysAreCachedPerExchangeAndRange(): void
+	{
+		$client = new CacheFmpClient(
+			$this->createClient(__DIR__ . '/fixtures/holidays-by-exchange-upcoming.json', responses: [
+				MockResponse::fromFile(__DIR__ . '/fixtures/holidays-by-exchange.json'),
+			]),
+			$cache = new Psr16Cache(new ArrayAdapter()),
+			3600,
+		);
+		$from = new DateTimeImmutable('2026-11-04');
+		$to = new DateTimeImmutable('2027-11-04');
+
+		$upcoming = iterator_to_array($client->holidaysByExchange('NASDAQ', $from, $to));
+		$default = iterator_to_array($client->holidaysByExchange('NASDAQ'));
+
+		$this->assertTrue($cache->has('fmp-client.v2.holidaysByExchange.NASDAQ.2026-11-04.2027-11-04'));
+		$this->assertTrue($cache->has('fmp-client.v2.holidaysByExchange.NASDAQ.default.default'));
+		$this->assertSame('2027-09-06', $upcoming[0]->date);
+		$this->assertSame('2026-05-25', $default[0]->date);
+
+		// Third request is served from the cache, the mock client has no response left
+		$this->assertSame(
+			$upcoming[0]->toArray(),
+			iterator_to_array($client->holidaysByExchange('NASDAQ', $from, $to))[0]->toArray(),
+		);
+	}
+
 	public function testCalendarAndNewBulkEndpointsAreNotCached(): void
 	{
 		$client = new CacheFmpClient(

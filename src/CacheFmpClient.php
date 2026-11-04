@@ -175,9 +175,17 @@ final readonly class CacheFmpClient implements FmpClient
 	/**
 	 * @return iterable<int, HolidayByExchange>
 	 */
-	public function holidaysByExchange(string $exchange): iterable
+	public function holidaysByExchange(
+		string $exchange,
+		?DateTimeImmutable $from = null,
+		?DateTimeImmutable $to = null,
+	): iterable
 	{
-		return $this->cached(__FUNCTION__, fn () => $this->client->holidaysByExchange($exchange), $exchange);
+		return $this->cached(
+			__FUNCTION__,
+			fn () => $this->client->holidaysByExchange($exchange, $from, $to),
+			sprintf('%s.%s.%s', $exchange, $from?->format('Y-m-d') ?? 'default', $to?->format('Y-m-d') ?? 'default'),
+		);
 	}
 
 	/**

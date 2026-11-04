@@ -60,14 +60,16 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 
 ---
 
-### `holidaysByExchange(string $exchange)`
+### `holidaysByExchange(string $exchange, ?DateTimeImmutable $from = null, ?DateTimeImmutable $to = null)`
 
-**Purpose:** Retrieve market holidays and early-close days for a specific exchange.
+**Purpose:** Retrieve market holidays and early-close days for a specific exchange, ordered from the newest to the oldest.
 
 **Availability:** Worldwide
 
 **Parameters:**
 - `$exchange` - Exchange code (e.g. `NASDAQ`)
+- `$from` - Start of the range, **exclusive** (a holiday on `$from` itself is not returned); the API defaults it to a year before today
+- `$to` - End of the range, inclusive; the API defaults it to today, so without it no upcoming holiday is returned
 
 **Return Values:** `iterable<HolidayByExchange>`
 - `exchange` - Exchange code

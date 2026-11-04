@@ -566,7 +566,7 @@ echo "Metrics count: " . count($metrics) . "\n";
 - `keyExecutives(string $symbol)` - Executives of a company with their title, compensation, gender and year of birth
 - `availableExchanges()` - Available stock exchanges
 - `allExchangeMarketHours()` - Market hours for all exchanges
-- `holidaysByExchange(string $exchange)` - Market holidays and early-close days for an exchange
+- `holidaysByExchange(string $exchange, DateTimeImmutable|null $from, DateTimeImmutable|null $to)` - Market holidays and early-close days for an exchange (without `$to` none upcoming)
 
 ### Financial Statements
 - `balanceSheetStatement(string $symbol)` - Balance sheet data

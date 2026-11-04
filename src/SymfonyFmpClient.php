@@ -352,11 +352,20 @@ final readonly class SymfonyFmpClient implements FmpClient
 	 * @see https://financialmodelingprep.com/stable/holidays-by-exchange
 	 * @return iterable<int, HolidayByExchange>
 	 */
-	public function holidaysByExchange(string $exchange): iterable
+	public function holidaysByExchange(
+		string $exchange,
+		?DateTimeImmutable $from = null,
+		?DateTimeImmutable $to = null,
+	): iterable
 	{
-		$url = $this->buildUrlWithoutApiKey('stable/holidays-by-exchange', ['exchange' => $exchange]);
+		$query = [
+			'exchange' => $exchange,
+			'from' => $from?->format('Y-m-d'),
+			'to' => $to?->format('Y-m-d'),
+		];
+		$url = $this->buildUrlWithoutApiKey('stable/holidays-by-exchange', $query);
 
-		foreach ($this->requestJson('stable/holidays-by-exchange', ['exchange' => $exchange]) as $item) {
+		foreach ($this->requestJson('stable/holidays-by-exchange', $query) as $item) {
 			$object = $this->map(HolidayByExchange::class, new HolidayByExchangeMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;

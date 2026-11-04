@@ -139,12 +139,21 @@ interface FmpClient
 	public function allExchangeMarketHours(): iterable;
 
 	/**
+	 * Returns the holidays and early-close days of the exchange dated after `$from` up to and including `$to`, ordered
+	 * from the newest to the oldest: the API excludes `$from` itself (`from=2026-11-26&to=2026-11-27` answers only
+	 * 2026-11-27), so pass the day before the first wanted one. It defaults `$from` to a year before today and `$to`
+	 * to today, so a request without `$to` never returns an upcoming holiday.
+	 *
 	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/holidays-by-exchange
 	 * @return iterable<int, HolidayByExchange>
 	 */
-	public function holidaysByExchange(string $exchange): iterable;
+	public function holidaysByExchange(
+		string $exchange,
+		?DateTimeImmutable $from = null,
+		?DateTimeImmutable $to = null,
+	): iterable;
 
 	/**
 	 * @see https://financialmodelingprep.com/stable/market-risk-premium

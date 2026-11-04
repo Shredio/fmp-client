@@ -1,0 +1,100 @@
+[
+  {
+    "exchange": "NASDAQ",
+    "date": "2027-09-06",
+    "name": "Labor Day",
+    "isClosed": true,
+    "adjOpenTime": null,
+    "adjCloseTime": null
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2027-07-05",
+    "name": "Independence Day",
+    "isClosed": true,
+    "adjOpenTime": null,
+    "adjCloseTime": null
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2027-06-18",
+    "name": "Juneteenth",
+    "isClosed": true,
+    "adjOpenTime": null,
+    "adjCloseTime": null
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2027-05-31",
+    "name": "Memorial Day",
+    "isClosed": true,
+    "adjOpenTime": null,
+    "adjCloseTime": null
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2027-03-26",
+    "name": "Good Friday",
+    "isClosed": true,
+    "adjOpenTime": null,
+    "adjCloseTime": null
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2027-02-15",
+    "name": "Presidents' Day",
+    "isClosed": true,
+    "adjOpenTime": null,
+    "adjCloseTime": null
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2027-01-18",
+    "name": "Martin Luther King, Jr. Day",
+    "isClosed": true,
+    "adjOpenTime": null,
+    "adjCloseTime": null
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2027-01-01",
+    "name": "New Year's Day",
+    "isClosed": true,
+    "adjOpenTime": null,
+    "adjCloseTime": null
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2026-12-25",
+    "name": "Christmas",
+    "isClosed": true,
+    "adjOpenTime": null,
+    "adjCloseTime": null
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2026-12-24",
+    "name": "Christmas",
+    "isClosed": null,
+    "adjOpenTime": null,
+    "adjCloseTime": "13:00",
+    "isFullyClosed": false
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2026-11-27",
+    "name": "Thanksgiving Day",
+    "isClosed": null,
+    "adjOpenTime": null,
+    "adjCloseTime": "13:00",
+    "isFullyClosed": false
+  },
+  {
+    "exchange": "NASDAQ",
+    "date": "2026-11-26",
+    "name": "Thanksgiving Day",
+    "isClosed": true,
+    "adjOpenTime": null,
+    "adjCloseTime": null
+  }
+]
