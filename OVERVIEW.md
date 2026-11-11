@@ -1572,7 +1572,7 @@ Contains percentage growth of all cash flow statement items
 - `priceAvg200` - 200 day moving average
 - `open` - Opening price
 - `previousClose` - Previous closing price
-- `timestamp` - Unix timestamp of the quote
+- `timestamp` - Unix timestamp of the quote in whole seconds; FMP sends some with milliseconds as a float (KZMS.ME, 2026-11-11), which are cut to the second
 
 **API endpoint:** `https://financialmodelingprep.com/stable/quote`
 
@@ -1604,7 +1604,7 @@ Contains percentage growth of all cash flow statement items
 - `priceAvg200` - 200 day moving average
 - `open` - Opening price
 - `previousClose` - Previous closing price
-- `timestamp` - Unix timestamp of the quote
+- `timestamp` - Unix timestamp of the quote in whole seconds; FMP sends some with milliseconds as a float (KZMS.ME, 2026-11-11), which are cut to the second
 
 **API endpoint:** `https://financialmodelingprep.com/stable/batch-quote`
 
@@ -1672,7 +1672,7 @@ Contains percentage growth of all cash flow statement items
 - `priceAvg200` - 200 day moving average
 - `open` - Opening price
 - `previousClose` - Previous closing price
-- `timestamp` - Unix timestamp of the quote, years old for a record that no longer trades
+- `timestamp` - Unix timestamp of the quote in whole seconds, years old for a record that no longer trades; FMP sends some with milliseconds as a float (on 2026-11-11 19 records on BSE, 2 on MCX and 3 on OTC), which are cut to the second
 
 **API endpoint:** `https://financialmodelingprep.com/stable/batch-exchange-quote`
 

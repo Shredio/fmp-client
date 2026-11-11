@@ -77,6 +77,35 @@ final class QuoteTest extends TestCase
 		))->toArray(), $quote->toArray());
 	}
 
+	public function testQuoteWithFractionalTimestamp(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/quote-kzms-me.json');
+
+		$quote = $client->quote('KZMS.ME');
+
+		$this->assertNotNull($quote);
+		// timestamp is 1794420487.293 in the response
+		$this->assertSame((new Quote(
+			symbol: 'KZMS.ME',
+			name: 'The Open Joint Stock Company Krasnokamsk Metal Mesh Works',
+			exchange: 'MCX',
+			price: 226.0,
+			changePercentage: 0.0,
+			change: 0.0,
+			volume: 0,
+			dayLow: 226.0,
+			dayHigh: 226.0,
+			yearHigh: 1552.0,
+			yearLow: 226.0,
+			marketCap: 199955760,
+			priceAvg50: 408.68,
+			priceAvg200: 412.78,
+			open: 226.0,
+			previousClose: 226.0,
+			timestamp: 1794420487,
+		))->toArray(), $quote->toArray());
+	}
+
 	public function testQuoteNotFound(): void
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/empty-response.json');

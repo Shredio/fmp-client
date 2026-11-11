@@ -104,4 +104,56 @@ final class BatchExchangeQuoteTest extends TestCase
 		], array_map(static fn (BatchExchangeDetailedQuote $quote): array => $quote->toArray(), $quotes));
 	}
 
+	/**
+	 * On 2026-11-11 BSE, MCX and OTC sent the timestamp of some records with milliseconds as a float (KZMS.ME on
+	 * MCX). The fixture keeps that record and one regular record of the same response.
+	 */
+	public function testBatchExchangeQuoteDetailedWithFractionalTimestamp(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/batch-exchange-quote-detailed-fractional-timestamp.json');
+
+		$quotes = iterator_to_array($client->batchExchangeQuoteDetailed('MCX'));
+
+		$this->assertSame([
+			(new BatchExchangeDetailedQuote(
+				symbol: 'KZMS.ME',
+				name: 'The Open Joint Stock Company Krasnokamsk Metal Mesh Works',
+				exchange: 'MCX',
+				price: 226.0,
+				changePercentage: 0.0,
+				change: 0.0,
+				volume: 0,
+				dayLow: 226.0,
+				dayHigh: 226.0,
+				yearHigh: 1552.0,
+				yearLow: 226.0,
+				marketCap: 199955760,
+				priceAvg50: 408.68,
+				priceAvg200: 412.78,
+				open: 226.0,
+				previousClose: 226.0,
+				timestamp: 1794420487,
+			))->toArray(),
+			(new BatchExchangeDetailedQuote(
+				symbol: 'ABRD.ME',
+				name: 'Public Joint Stock Company Abrau-Durso',
+				exchange: 'MCX',
+				price: 129.4,
+				changePercentage: 1.41066,
+				change: 1.8,
+				volume: 30,
+				dayLow: 126.0,
+				dayHigh: 131.0,
+				yearHigh: 187.8,
+				yearLow: 98.2,
+				marketCap: 12681225880,
+				priceAvg50: 179.0,
+				priceAvg200: 179.0,
+				open: 127.6,
+				previousClose: 127.6,
+				timestamp: 1794419512,
+			))->toArray(),
+		], array_map(static fn (BatchExchangeDetailedQuote $quote): array => $quote->toArray(), $quotes));
+	}
+
 }

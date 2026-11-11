@@ -8,6 +8,7 @@ use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
 use PHPStan\PhpDocParser\Ast\Type\TypeNode;
 use Shredio\FmpClient\Payload\BatchExchangeDetailedQuote;
 use Shredio\FmpClient\TypeSchema\MoneyAmount;
+use Shredio\FmpClient\TypeSchema\UnixTimestamp;
 use Shredio\TypeSchema\Context\TypeContext;
 use Shredio\TypeSchema\Result\Failure;
 use Shredio\TypeSchema\Result\WithNotices;
@@ -45,7 +46,7 @@ final readonly class BatchExchangeDetailedQuoteMapper extends Type
 			'priceAvg200' => $ts->optional($ts->nullable($ts->float())),
 			'open' => $ts->optional($ts->nullable($ts->float())),
 			'previousClose' => $ts->optional($ts->nullable($ts->float())),
-			'timestamp' => $ts->optional($ts->nullable($ts->int())),
+			'timestamp' => $ts->optional($ts->before(UnixTimestamp::toWholeSeconds(...), $ts->nullable($ts->int()))),
 		],
 			identifier: 'symbol',
 		);

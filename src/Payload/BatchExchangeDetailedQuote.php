@@ -3,6 +3,7 @@
 namespace Shredio\FmpClient\Payload;
 
 use Shredio\FmpClient\TypeSchema\MoneyAmount;
+use Shredio\FmpClient\TypeSchema\UnixTimestamp;
 use Shredio\TypeSchemaCompiler\Attribute\CompileObjectMapper;
 use Shredio\TypeSchemaCompiler\Attribute\CompilePropertyOptions;
 
@@ -31,6 +32,7 @@ final readonly class BatchExchangeDetailedQuote
 		public float|null $priceAvg200 = null,
 		public float|null $open = null,
 		public float|null $previousClose = null,
+		#[CompilePropertyOptions(before: [UnixTimestamp::class, 'toWholeSeconds'])]
 		public int|null $timestamp = null,
 	)
 	{
