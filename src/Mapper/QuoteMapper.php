@@ -31,7 +31,7 @@ final readonly class QuoteMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'name' => $ts->string(),
-			'exchange' => $ts->string(),
+			'exchange' => $ts->nullable($ts->string()),
 			'price' => $ts->optional($ts->nullable($ts->float())),
 			'changePercentage' => $ts->optional($ts->nullable($ts->float())),
 			'change' => $ts->optional($ts->nullable($ts->float())),

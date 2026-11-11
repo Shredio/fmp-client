@@ -52,4 +52,56 @@ final class BatchExchangeQuoteTest extends TestCase
 		))->toArray(), $quotes[0]->toArray());
 	}
 
+	/**
+	 * On 2026-11-11 AMEX, NYSE and NASDAQ each carried one record last quoted in 2019 with a null exchange (SNDS on
+	 * AMEX). The fixture keeps that record and one regular record of the same response.
+	 */
+	public function testBatchExchangeQuoteDetailedWithoutExchange(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/batch-exchange-quote-detailed-without-exchange.json');
+
+		$quotes = iterator_to_array($client->batchExchangeQuoteDetailed('AMEX'));
+
+		$this->assertSame([
+			(new BatchExchangeDetailedQuote(
+				symbol: 'SNDS',
+				name: 'YieldShares High Income ETF',
+				exchange: null,
+				price: 21.83,
+				changePercentage: -1.7865,
+				change: -0.39,
+				volume: 18128,
+				dayLow: 21.83,
+				dayHigh: 22.43,
+				yearHigh: 28.83,
+				yearLow: 19.65,
+				marketCap: 0,
+				priceAvg50: 23.34,
+				priceAvg200: 22.82,
+				open: 22.22,
+				previousClose: 21.83,
+				timestamp: 1561759658,
+			))->toArray(),
+			(new BatchExchangeDetailedQuote(
+				symbol: 'SPY',
+				name: 'State Street SPDR S&P 500 ETF',
+				exchange: 'AMEX',
+				price: 760.89,
+				changePercentage: 1.46282,
+				change: 10.97,
+				volume: 13407552,
+				dayLow: 754.91,
+				dayHigh: 761.15002,
+				yearHigh: 781.62,
+				yearLow: 629.28,
+				marketCap: 800514406670,
+				priceAvg50: 765.004,
+				priceAvg200: 730.9858,
+				open: 756.8,
+				previousClose: 749.92,
+				timestamp: 1794417913,
+			))->toArray(),
+		], array_map(static fn (BatchExchangeDetailedQuote $quote): array => $quote->toArray(), $quotes));
+	}
+
 }

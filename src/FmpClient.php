@@ -597,6 +597,8 @@ interface FmpClient
 	public function batchExchangeQuote(string $exchange): iterable;
 
 	/**
+	 * The list includes a few stale records last quoted years ago whose exchange is null (on 2026-11-11 one each on
+	 * AMEX, NYSE and NASDAQ, all dated 2019-06-28).
 	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/batch-exchange-quote
@@ -611,6 +613,7 @@ interface FmpClient
 	public function batchForexQuotes(): iterable;
 
 	/**
+	 * The exchange is null for a few stale records last quoted years ago (SNDS on 2026-11-11).
 	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/quote

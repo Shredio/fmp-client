@@ -1,0 +1,21 @@
+[
+  {
+    "symbol": "SNDS",
+    "name": "YieldShares High Income ETF",
+    "price": 21.83,
+    "changePercentage": -1.7865,
+    "change": -0.39,
+    "volume": 18128,
+    "dayLow": 21.83,
+    "dayHigh": 22.43,
+    "yearHigh": 28.83,
+    "yearLow": 19.65,
+    "marketCap": 0,
+    "priceAvg50": 23.34,
+    "priceAvg200": 22.82,
+    "exchange": null,
+    "open": 22.22,
+    "previousClose": 21.83,
+    "timestamp": 1561759658
+  }
+]

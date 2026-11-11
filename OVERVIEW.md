@@ -1558,7 +1558,7 @@ Contains percentage growth of all cash flow statement items
 **Return Values:** `Quote|null` (`null` when the symbol is unknown)
 - `symbol` - Ticker symbol
 - `name` - Instrument name
-- `exchange` - Exchange code (for example NASDAQ, XETRA, FOREX, CRYPTO, INDEX)
+- `exchange` - Exchange code (for example NASDAQ, XETRA, FOREX, CRYPTO, INDEX), `null` for a few stale records last quoted years ago (SNDS, 2026-11-11)
 - `price` - Current price
 - `changePercentage` - Price change in percent
 - `change` - Absolute price change
@@ -1590,7 +1590,7 @@ Contains percentage growth of all cash flow statement items
 **Return Values:** `iterable<Quote>` (same structure as `quote()`, delisted symbols return `null` in some of the price fields)
 - `symbol` - Ticker symbol
 - `name` - Instrument name
-- `exchange` - Exchange code (for example NASDAQ, XETRA, FOREX, CRYPTO, INDEX)
+- `exchange` - Exchange code (for example NASDAQ, XETRA, FOREX, CRYPTO, INDEX), `null` for a few stale records last quoted years ago (SNDS, 2026-11-11)
 - `price` - Current price
 - `changePercentage` - Price change in percent
 - `change` - Absolute price change
@@ -1656,9 +1656,23 @@ Contains percentage growth of all cash flow statement items
 - `exchange` (string) - Exchange name
 
 **Return Values:** `iterable<BatchExchangeDetailedQuote>`
-Contains all data from `BatchExchangeQuote` plus additional information:
-- `earningsAnnouncement` - Earnings announcement date
-- `timestamp` - Timestamp
+- `symbol` - Ticker symbol
+- `name` - Instrument name
+- `exchange` - Exchange code, `null` for a few stale records last quoted years ago: on 2026-11-11 AMEX, NYSE and NASDAQ each carried one (SNDS, BGF, FUSVX), all with the timestamp of 2019-06-28 and `isActivelyTrading: false` in their profile
+- `price` - Current price
+- `changePercentage` - Price change in percent
+- `change` - Absolute price change
+- `volume` - Traded volume (float for cryptocurrencies)
+- `dayLow` - Lowest price of the day
+- `dayHigh` - Highest price of the day
+- `yearHigh` - 52 week high
+- `yearLow` - 52 week low
+- `marketCap` - Market capitalization
+- `priceAvg50` - 50 day moving average
+- `priceAvg200` - 200 day moving average
+- `open` - Opening price
+- `previousClose` - Previous closing price
+- `timestamp` - Unix timestamp of the quote, years old for a record that no longer trades
 
 **API endpoint:** `https://financialmodelingprep.com/stable/batch-exchange-quote`
 

@@ -49,6 +49,34 @@ final class QuoteTest extends TestCase
 		$this->assertSame(1.162, $quote->price);
 	}
 
+	public function testQuoteWithoutExchange(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/quote-snds.json');
+
+		$quote = $client->quote('SNDS');
+
+		$this->assertNotNull($quote);
+		$this->assertSame((new Quote(
+			symbol: 'SNDS',
+			name: 'YieldShares High Income ETF',
+			exchange: null,
+			price: 21.83,
+			changePercentage: -1.7865,
+			change: -0.39,
+			volume: 18128,
+			dayLow: 21.83,
+			dayHigh: 22.43,
+			yearHigh: 28.83,
+			yearLow: 19.65,
+			marketCap: 0,
+			priceAvg50: 23.34,
+			priceAvg200: 22.82,
+			open: 22.22,
+			previousClose: 21.83,
+			timestamp: 1561759658,
+		))->toArray(), $quote->toArray());
+	}
+
 	public function testQuoteNotFound(): void
 	{
 		$client = $this->createClient(__DIR__ . '/fixtures/empty-response.json');

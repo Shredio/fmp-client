@@ -16,7 +16,7 @@ final readonly class BatchExchangeDetailedQuote
 	public function __construct(
 		public string $symbol,
 		public string $name,
-		public string $exchange,
+		public string|null $exchange, // null for a few stale records that stopped trading years ago
 		public float|null $price = null,
 		public float|null $changePercentage = null,
 		public float|null $change = null,
@@ -37,7 +37,7 @@ final readonly class BatchExchangeDetailedQuote
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, name: string, exchange: string, price: float|null, changePercentage: float|null, change: float|null, volume: int|float|null, dayLow: float|null, dayHigh: float|null, yearHigh: float|null, yearLow: float|null, marketCap: int|null, priceAvg50: float|null, priceAvg200: float|null, open: float|null, previousClose: float|null, timestamp: int|null}
+	 * @return array{symbol: non-empty-string, name: string, exchange: string|null, price: float|null, changePercentage: float|null, change: float|null, volume: int|float|null, dayLow: float|null, dayHigh: float|null, yearHigh: float|null, yearLow: float|null, marketCap: int|null, priceAvg50: float|null, priceAvg200: float|null, open: float|null, previousClose: float|null, timestamp: int|null}
 	 */
 	public function toArray(): array
 	{
