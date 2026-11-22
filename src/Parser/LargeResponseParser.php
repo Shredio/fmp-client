@@ -67,26 +67,28 @@ final readonly class LargeResponseParser
 			), $statusCode);
 		}
 
-		$parser = static function (ResponseInterface $response) use ($client): iterable {
-			if ($response instanceof StreamableInterface) {
-				return Items::fromStream($response->toStream(), [
-					'decoder' => new ExtJsonDecoder(true),
-				]);
-			}
+		if ($response instanceof StreamableInterface) {
+			$stream = $response->toStream();
 
+			try {
+				foreach (Items::fromStream($stream, ['decoder' => new ExtJsonDecoder(true)]) as $value) {
+					yield $value;
+				}
+			} finally {
+				// the JsonMachine parser holds itself in a reference cycle, closing the stream releases the response
+				// (and its buffered body) right away instead of on the next garbage collection
+				fclose($stream);
+			}
+		} else {
 			$toChunks = static function (ResponseStreamInterface $stream): iterable {
 				foreach ($stream as $chunk) {
 					yield $chunk->getContent();
 				}
 			};
 
-			return Items::fromIterable($toChunks($client->stream($response)), [
-				'decoder' => new ExtJsonDecoder(true),
-			]);
-		};
-
-		foreach ($parser($response) as $value) {
-			yield $value;
+			foreach (Items::fromIterable($toChunks($client->stream($response)), ['decoder' => new ExtJsonDecoder(true)]) as $value) {
+				yield $value;
+			}
 		}
 
 		$response->cancel();

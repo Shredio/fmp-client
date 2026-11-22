@@ -222,6 +222,8 @@ final readonly class SymfonyFmpClient implements FmpClient
 
 	private Parser\LargeResponseParser $largeResponseParser;
 
+	private Parser\SmallResponseParser $smallResponseParser;
+
 	private TypeSchemaProcessor $schemaProcessor;
 
 	private TypeConfig $csvTypeConfig;
@@ -251,6 +253,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 		}
 
 		$this->largeResponseParser = new Parser\LargeResponseParser();
+		$this->smallResponseParser = new Parser\SmallResponseParser();
 		$this->schemaProcessor = TypeSchemaProcessor::createDefault();
 		$this->csvTypeConfig = new TypeConfig(ConversionStrategyFactory::lenient(), options: [
 			SourceFormat::class => new SourceFormat('csv'),
@@ -467,7 +470,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/cryptocurrency-list');
 
-		foreach ($this->requestJson('stable/cryptocurrency-list') as $item) {
+		foreach ($this->requestLargeJson('stable/cryptocurrency-list') as $item) {
 			$object = $this->map(Cryptocurrency::class, new CryptocurrencyMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -483,7 +486,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/stock-list');
 
-		foreach ($this->requestJson('stable/stock-list') as $item) {
+		foreach ($this->requestLargeJson('stable/stock-list') as $item) {
 			$object = $this->map(Stock::class, new StockMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -499,7 +502,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/actively-trading-list');
 
-		foreach ($this->requestJson('stable/actively-trading-list') as $item) {
+		foreach ($this->requestLargeJson('stable/actively-trading-list') as $item) {
 			$object = $this->map(ActivelyTrading::class, new ActivelyTradingMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -682,7 +685,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/shares-float-all', ['page' => $page, 'limit' => $limit]);
 
-		foreach ($this->requestJson('stable/shares-float-all', ['page' => $page, 'limit' => $limit]) as $item) {
+		foreach ($this->requestLargeJson('stable/shares-float-all', ['page' => $page, 'limit' => $limit]) as $item) {
 			$object = $this->map(SharesFloat::class, new SharesFloatMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -784,7 +787,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 		$paginator = new FmpCalendarPaginator($from, $to);
 
 		do {
-			$values = $this->requestJson('stable/dividends-calendar', [
+			$values = $this->requestLargeJson('stable/dividends-calendar', [
 				'from' => $paginator->getFrom()->format('Y-m-d'),
 				'to' => $paginator->getTo()->format('Y-m-d'),
 			]);
@@ -833,7 +836,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 		$paginator = new FmpCalendarPaginator($from, $to);
 
 		do {
-			$values = $this->requestJson('stable/earnings-calendar', [
+			$values = $this->requestLargeJson('stable/earnings-calendar', [
 				'from' => $paginator->getFrom()->format('Y-m-d'),
 				'to' => $paginator->getTo()->format('Y-m-d'),
 			]);
@@ -865,7 +868,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 		$paginator = new FmpCalendarPaginator($from, $to);
 
 		do {
-			$values = $this->requestJson('stable/earnings-calendar', [
+			$values = $this->requestLargeJson('stable/earnings-calendar', [
 				'from' => $paginator->getFrom()->format('Y-m-d'),
 				'to' => $paginator->getTo()->format('Y-m-d'),
 				'includeReportTimes' => 'true',
@@ -949,7 +952,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 		$paginator = new FmpCalendarPaginator($from, $to);
 
 		do {
-			$values = $this->requestJson('stable/splits-calendar', [
+			$values = $this->requestLargeJson('stable/splits-calendar', [
 				'from' => $paginator->getFrom()->format('Y-m-d'),
 				'to' => $paginator->getTo()->format('Y-m-d'),
 			]);
@@ -981,7 +984,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 		$paginator = new FmpCalendarPaginator($from, $to);
 
 		do {
-			$values = $this->requestJson('stable/ipos-calendar', [
+			$values = $this->requestLargeJson('stable/ipos-calendar', [
 				'from' => $paginator->getFrom()->format('Y-m-d'),
 				'to' => $paginator->getTo()->format('Y-m-d'),
 			]);
@@ -1014,7 +1017,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 			'from' => $from->format('Y-m-d'),
 			'to' => $to->format('Y-m-d'),
 		];
-		$values = $this->requestJson('stable/ipos-prospectus', $parameters);
+		$values = $this->requestLargeJson('stable/ipos-prospectus', $parameters);
 		$url = $this->buildUrlWithoutApiKey('stable/ipos-prospectus', $parameters);
 
 		foreach ($values as $item) {
@@ -1034,7 +1037,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 		$paginator = new FmpCalendarPaginator($from, $to);
 
 		do {
-			$values = $this->requestJson('stable/economic-calendar', [
+			$values = $this->requestLargeJson('stable/economic-calendar', [
 				'from' => $paginator->getFrom()->format('Y-m-d'),
 				'to' => $paginator->getTo()->format('Y-m-d'),
 			]);
@@ -1445,7 +1448,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/financial-statement-symbol-list');
 
-		foreach ($this->requestJson('stable/financial-statement-symbol-list') as $item) {
+		foreach ($this->requestLargeJson('stable/financial-statement-symbol-list') as $item) {
 			$object = $this->map(FinancialStatementSymbol::class, new FinancialStatementSymbolMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -1461,7 +1464,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/batch-exchange-quote', ['exchange' => $exchange]);
 
-		foreach ($this->requestJson('stable/batch-exchange-quote', ['exchange' => $exchange]) as $item) {
+		foreach ($this->requestLargeJson('stable/batch-exchange-quote', ['exchange' => $exchange]) as $item) {
 			$object = $this->map(BatchExchangeQuote::class, new BatchExchangeQuoteMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -1477,7 +1480,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/batch-exchange-quote', ['exchange' => $exchange, 'short' => 'false']);
 
-		foreach ($this->requestJson('stable/batch-exchange-quote', ['exchange' => $exchange, 'short' => 'false']) as $item) {
+		foreach ($this->requestLargeJson('stable/batch-exchange-quote', ['exchange' => $exchange, 'short' => 'false']) as $item) {
 			$object = $this->map(BatchExchangeDetailedQuote::class, new BatchExchangeDetailedQuoteMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -1559,7 +1562,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 			$recordCount = 0;
 			$oldestDate = null;
 
-			foreach ($this->requestJson('stable/historical-price-eod/full', $query) as $item) {
+			foreach ($this->requestLargeJson('stable/historical-price-eod/full', $query) as $item) {
 				$recordCount++;
 
 				$object = $this->map(HistoricalPriceEod::class, new HistoricalPriceEodMapper(), $item, $url);
@@ -1606,7 +1609,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 			$recordCount = 0;
 			$oldestDate = null;
 
-			foreach ($this->requestJson('stable/historical-price-eod/non-split-adjusted', $query) as $item) {
+			foreach ($this->requestLargeJson('stable/historical-price-eod/non-split-adjusted', $query) as $item) {
 				$recordCount++;
 
 				$object = $this->map(HistoricalPriceEodNonSplitAdjusted::class, new HistoricalPriceEodNonSplitAdjustedMapper(), $item, $url);
@@ -1653,7 +1656,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 			$recordCount = 0;
 			$oldestDate = null;
 
-			foreach ($this->requestJson('stable/historical-price-eod/light', $query) as $item) {
+			foreach ($this->requestLargeJson('stable/historical-price-eod/light', $query) as $item) {
 				$recordCount++;
 
 				$object = $this->map(HistoricalPriceEodLight::class, new HistoricalPriceEodLightMapper(), $item, $url);
@@ -1724,7 +1727,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 			$recordCount = 0;
 			$oldestDate = null;
 
-			foreach ($this->requestJson('stable/historical-market-capitalization', $query) as $item) {
+			foreach ($this->requestLargeJson('stable/historical-market-capitalization', $query) as $item) {
 				$recordCount++;
 
 				$object = $this->map(MarketCapitalization::class, new MarketCapitalizationMapper(), $item, $url);
@@ -2433,7 +2436,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/etf-list');
 
-		foreach ($this->requestJson('stable/etf-list') as $item) {
+		foreach ($this->requestLargeJson('stable/etf-list') as $item) {
 			$object = $this->map(Etf::class, new EtfMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -2466,7 +2469,7 @@ final readonly class SymfonyFmpClient implements FmpClient
 	{
 		$url = $this->buildUrlWithoutApiKey('stable/etf/holdings', ['symbol' => $symbol]);
 
-		foreach ($this->requestJson('stable/etf/holdings', ['symbol' => $symbol]) as $item) {
+		foreach ($this->requestLargeJson('stable/etf/holdings', ['symbol' => $symbol]) as $item) {
 			$object = $this->map(EtfHolding::class, new EtfHoldingMapper(), $item, $url);
 			if ($object !== null) {
 				yield $object;
@@ -2653,6 +2656,9 @@ final readonly class SymfonyFmpClient implements FmpClient
 	}
 
 	/**
+	 * Decodes the whole response at once with json_decode. Meant for responses that stay below about 1 MB: per-symbol
+	 * endpoints and pages of at most 1000 records. Larger responses go through requestLargeJson().
+	 *
 	 * @param array<string, scalar|null> $query
 	 * @return iterable<array-key, mixed>
 	 */
@@ -2662,12 +2668,30 @@ final readonly class SymfonyFmpClient implements FmpClient
 
 		FmpPromise::wait();
 
-		if (!$this->builtInJsonParser) {
-			foreach ($this->largeResponseParser->parseJson($this->httpClient, $response) as $item) {
-				yield $item;
-			}
+		yield from $this->smallResponseParser->parseJson($response);
+
+		$response->cancel();
+	}
+
+	/**
+	 * Streams the response item by item through JsonMachine. Meant for responses that can reach megabytes: whole-market
+	 * lists, histories and pages of thousands of records, date-range feeds across all companies, ETF holdings. Its
+	 * memory stays constant while json_decode needs 6 to 8 times the body size, at the cost of a parser about 8 times
+	 * slower, which the download time hides. With builtInJsonParser the response is decoded at once like in requestJson().
+	 *
+	 * @param array<string, scalar|null> $query
+	 * @return iterable<array-key, mixed>
+	 */
+	private function requestLargeJson(string $path, array $query = []): iterable
+	{
+		$response = $this->request($path, $query);
+
+		FmpPromise::wait();
+
+		if ($this->builtInJsonParser) {
+			yield from $this->smallResponseParser->parseJson($response);
 		} else {
-			yield from $response->toArray();
+			yield from $this->largeResponseParser->parseJson($this->httpClient, $response);
 		}
 
 		$response->cancel();

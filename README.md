@@ -4,7 +4,7 @@ A high-performance PHP client library for the [Financial Modeling Prep (FMP) API
 
 ## Key Features
 
-- **Memory Efficient**: Large JSON/CSV responses are streamed using JsonMachine and League CSV, not loaded entirely into memory
+- **Memory Efficient**: Large JSON/CSV responses (whole-market lists, long histories, calendars, bulk files) are streamed using JsonMachine and League CSV, not loaded entirely into memory, while small per-symbol responses are decoded at once with the faster `json_decode`
 - **Async Support**: Non-blocking concurrent API requests using PHP Fibers via FmpPromise
 - **Strong Typing**: All data structures use readonly classes with comprehensive type hints
 - **Immutable Payloads**: All payload objects are immutable with readonly properties
@@ -725,7 +725,7 @@ The library includes comprehensive tests with real API response fixtures and use
 
 The library follows these key design principles:
 
-- **Memory Efficiency**: Uses streaming parsers (JsonMachine, League CSV) to handle large responses without loading entire datasets into memory
+- **Memory Efficiency**: Uses streaming parsers (JsonMachine, League CSV) to handle large responses without loading entire datasets into memory, and `json_decode` for small responses, where it is several times faster
 - **Async Processing**: Leverages PHP Fibers through FmpPromise for concurrent request handling
 - **Immutable Data**: All payload objects are readonly and immutable
 - **Strong Typing**: Comprehensive type hints throughout the codebase
@@ -735,7 +735,8 @@ The library follows these key design principles:
 
 - **FmpClient** - Main entry point with all API methods
 - **FmpPromise** - Async operations using PHP Fibers
-- **LargeResponseParser** - Memory-efficient streaming parser
+- **LargeResponseParser** - Memory-efficient streaming parser for large responses
+- **SmallResponseParser** - Decodes small JSON responses at once with `json_decode`
 - **FmpPayloadMapper** - Maps API responses to typed objects
 - **FmpValidator** - Data validation layer
 

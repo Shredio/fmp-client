@@ -45,10 +45,11 @@ This is a PHP 8.4+ client library for the Financial Modeling Prep (FMP) API, des
 - **CacheFmpClient** (`src/CacheFmpClient.php`) - Caching decorator wrapping any `FmpClient` implementation via `PSR-16 SimpleCache`. Caches per-symbol and list endpoints; delegates bulk, calendar, and streaming endpoints directly to the inner client
 - **FmpPromise** - Async operations using PHP Fibers for concurrent API calls
 - **LargeResponseParser** - Memory-efficient streaming parser using JsonMachine and League CSV
+- **SmallResponseParser** - Decodes a small JSON response at once with `json_decode`
 
 ### Key Design Principles
 
-1. **Memory Efficiency**: Large JSON/CSV responses are streamed, not loaded entirely into memory
+1. **Memory Efficiency**: Responses that can reach megabytes (JSON and CSV) are streamed, not loaded entirely into memory, small JSON responses are decoded at once (see "JSON parsing")
 2. **Async Support**: Uses PHP Fibers for non-blocking concurrent API requests
 3. **Strong Typing**: All data structures use readonly classes with comprehensive type hints
 4. **Immutability**: Payload objects are immutable with readonly properties
@@ -58,10 +59,10 @@ This is a PHP 8.4+ client library for the Financial Modeling Prep (FMP) API, des
 
 When implementing new FMP API endpoints:
 
-1. Fetch response to determine structure, save it to the `tests/Unit/fixtures/` directory for future testing. For a paginated endpoint also fetch older pages and several symbols before typing the payload: older records contain `null` in fields the first page always fills (`analystName` and `newsTitle` of `price-target-news`). Check the default and the maximum `limit` and the maximum `page` too, the latest feeds reject a page above 100 with HTTP 400.
+1. Fetch response to determine structure, save it to the `tests/Unit/fixtures/` directory for future testing. For a paginated endpoint also fetch older pages and several symbols before typing the payload: older records contain `null` in fields the first page always fills (`analystName` and `newsTitle` of `price-target-news`). Check the default and the maximum `limit` and the maximum `page` too, the latest feeds reject a page above 100 with HTTP 400. Note the size of the largest response a single request can return (maximum `limit`, longest date range, the symbol with the most records), it decides the JSON parser (see "JSON parsing").
 2. Create payload class in `src/Payload/` (extend from existing patterns)
 3. Run `composer compile` to automatically generate mappers. This command scans all payload classes with `#[CompileObjectMapper]` attribute and generates corresponding mapper classes in `src/Mapper/`. Mappers are generated automatically - do not create them manually.
-4. Add endpoint method signature to `FmpClient` interface with `@see` annotation containing the endpoint URL without an API key (query parameter `apikey`) and with the regional availability sentence (see "Regional availability (US only)"). Implement the method in `SymfonyFmpClient`. Add corresponding cached/delegated method to `CacheFmpClient` (cache per-symbol and list endpoints, delegate bulk and streaming endpoints).
+4. Add endpoint method signature to `FmpClient` interface with `@see` annotation containing the endpoint URL without an API key (query parameter `apikey`) and with the regional availability sentence (see "Regional availability (US only)"). Implement the method in `SymfonyFmpClient`, reading a JSON response through `requestJson()` or `requestLargeJson()` (see "JSON parsing"). Add corresponding cached/delegated method to `CacheFmpClient` (cache per-symbol and list endpoints, delegate bulk and streaming endpoints).
 5. Create test fixtures in `tests/Unit/fixtures/`, save **full** response body from the API to the `tests/Unit/fixtures`.
 6. Write comprehensive tests covering both success and error cases
 7. Update README.md with the new endpoint documentation
@@ -71,6 +72,24 @@ When implementing new FMP API endpoints:
    - Add the `**Availability:**` line right below the purpose (see "Regional availability (US only)")
    - List all return value fields with their descriptions (do not use "and many others" or similar shortcuts)
    - Add API endpoint URL without the API key parameter
+
+### JSON parsing
+
+`SymfonyFmpClient` reads a JSON response in one of two ways. Choose per endpoint by the largest response one request can return: FMP sends the body gzipped without `Content-Length`, so the size is not known before parsing.
+
+- `requestJson()` (`SmallResponseParser`, `json_decode` of the whole body) - the default, for responses that stay below about 1 MB: per-symbol endpoints (quote, profile, statements, metrics, ratios, grades, dividends, transcripts, ...), pages of at most 1000 records, small lists (`symbol-change`, `batch-forex-quotes`, `index-list`, index constituents).
+- `requestLargeJson()` (`LargeResponseParser`, JsonMachine streaming) - for responses that can reach megabytes or thousands of records: whole-market lists (`stock-list` 8 MB, `financial-statement-symbol-list` 10 MB, `batch-exchange-quote` 6.5 MB for NASDAQ, `actively-trading-list` 5.6 MB, `etf-list`, `cryptocurrency-list`), histories capped at 5000 records (`historical-price-eod/*`, `historical-market-capitalization`), pages of up to 5000 records (`shares-float-all`), date-range feeds across all companies (the calendars with pages of 4000 records and more, `ipos-prospectus`) and `etf/holdings` (BND: 4.6 MB, 16 000 holdings).
+- When in doubt, fetch the largest response and decide by its size.
+
+Measured on 2026-11-22 (real FMP responses, PHP 8.5 without JIT, every configuration in its own process):
+
+- `json_decode` parses about 170 to 200 MB/s, JsonMachine 17 to 25 MB/s (5 to 10 times slower).
+- The peak memory of `json_decode` is 6 to 8 times the body size (`stock-list`: 8.1 MB body, 62 MB peak). JsonMachine stays at about 150 kB, plus up to 2 MB of the body that Symfony buffers in `php://temp`. If the caller collects every payload, streaming still saves 60 to 80 % (`stock-list`: 64 MB against 19 MB).
+- In the client the mapping into payloads dominates, so streaming is only 1.3 to 2.9 times slower end to end (`stock-list` 310 ms against 680 ms from a local server). Against the real API the difference was lost in the network noise: every request waits about 0.5 s for the first byte and JsonMachine parses while the body downloads.
+- Below about 10 kB JsonMachine is slower and needs more memory than `json_decode`. The memory savings start to matter from about 1 MB.
+- JsonMachine keeps its parser in a reference cycle (`Parser` and `Tokens` store their own generator). `LargeResponseParser` closes the stream after parsing, so the cycle does not keep the response and its buffered body alive until the next garbage collection. Keep that `fclose()`: without it every call left 40 to 95 kB behind and 1000 calls of `quote()` held 20 MB.
+- `SmallResponseParser` uses the `json_decode` flags of the JsonMachine `ExtJsonDecoder` (no `JSON_BIGINT_AS_STRING`) and throws the same `UnexpectedHttpCodeException`, so both parsers return the same values. Do not replace it with `ResponseInterface::toArray()`, which throws Symfony exceptions on HTTP errors, returns big integers as strings and caches the decoded array on the response.
+- The constructor flag `builtInJsonParser` makes `requestLargeJson()` decode at once too.
 
 ### Payload Classes
 
