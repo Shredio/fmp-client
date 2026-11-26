@@ -10,20 +10,22 @@ final readonly class StockSplit
 
 	/**
 	 * @param non-empty-string $symbol
+	 * @param int|float $numerator Usually an integer, a float for ratios FMP sends with decimals (RYAAY 2.49:1)
+	 * @param int|float $denominator Usually an integer, a float for ratios FMP sends with decimals (USCMF 1:2.5)
 	 * @param non-empty-string|null $splitType
 	 */
 	public function __construct(
 		public string $symbol,
 		public string $date,
-		public int $numerator,
-		public int $denominator,
+		public int|float $numerator,
+		public int|float $denominator,
 		public ?string $splitType,
 	)
 	{
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: string, numerator: int, denominator: int, splitType: non-empty-string|null}
+	 * @return array{symbol: non-empty-string, date: string, numerator: int|float, denominator: int|float, splitType: non-empty-string|null}
 	 */
 	public function toArray(): array
 	{

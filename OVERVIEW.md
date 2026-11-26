@@ -1420,7 +1420,7 @@ Contains percentage growth of all cash flow statement items
 
 ### `splits()`
 
-**Purpose:** Retrieve the full historical stock split record for a single symbol.
+**Purpose:** Retrieve the full historical stock split record for a single symbol. The ratio is not always made of integers: FMP sends a few numerators and denominators with decimals (`2.49:1` for the ADR ratio change of RYAAY, `1:2.5` for the reverse split of USCMF), 7 of the 7 021 splits between 2024-09-13 and 2026-11-26.
 
 **Availability:** Worldwide
 
@@ -1430,9 +1430,9 @@ Contains percentage growth of all cash flow statement items
 **Return Values:** `iterable<StockSplit>`
 - `symbol` - Ticker symbol
 - `date` - Split date
-- `numerator` - Split ratio numerator
-- `denominator` - Split ratio denominator
-- `splitType` - Type of split (`stock-split`, `stock-dividend`, or `null`)
+- `numerator` - Split ratio numerator (`int`, or `float` when FMP sends it with decimals)
+- `denominator` - Split ratio denominator (`int`, or `float` when FMP sends it with decimals)
+- `splitType` - Type of split (`stock-split`, `stock-dividend`, `bonus-issue`, `spin-off`, `adr-change`, `rights-issue`, or `null`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/splits`
 
@@ -1440,7 +1440,7 @@ Contains percentage growth of all cash flow statement items
 
 ### `splitsCalendar()`
 
-**Purpose:** Retrieve stock splits calendar for a given time period.
+**Purpose:** Retrieve stock splits calendar for a given time period. The ratio is not always made of integers: FMP sends a few numerators and denominators with decimals (`2.49:1` for the ADR ratio change of RYAAY, `1:2.5` for the reverse split of USCMF), 7 of the 7 021 splits between 2024-09-13 and 2026-11-26.
 
 **Availability:** Worldwide
 
@@ -1452,9 +1452,9 @@ Contains percentage growth of all cash flow statement items
 **Return Values:** `iterable<StockSplit>`
 - `symbol` - Ticker symbol
 - `date` - Split date
-- `numerator` - Split ratio numerator
-- `denominator` - Split ratio denominator
-- `splitType` - Type of split (`stock-split`, `stock-dividend`, or `null`)
+- `numerator` - Split ratio numerator (`int`, or `float` when FMP sends it with decimals)
+- `denominator` - Split ratio denominator (`int`, or `float` when FMP sends it with decimals)
+- `splitType` - Type of split (`stock-split`, `stock-dividend`, `bonus-issue`, `spin-off`, `adr-change`, `rights-issue`, or `null`)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/splits-calendar`
 

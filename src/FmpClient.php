@@ -385,6 +385,8 @@ interface FmpClient
 	public function earningsSurprisesBulk(int $year): iterable;
 
 	/**
+	 * The numerator and the denominator are integers except for a few ratios FMP sends with decimals (2.49:1, 1:2.5).
+	 *
 	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/splits
@@ -393,6 +395,8 @@ interface FmpClient
 	public function splits(string $symbol): iterable;
 
 	/**
+	 * The numerator and the denominator are integers except for a few ratios FMP sends with decimals (2.49:1, 1:2.5).
+	 *
 	 * Available worldwide.
 	 *
 	 * @see https://financialmodelingprep.com/stable/splits-calendar

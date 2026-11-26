@@ -1,0 +1,4062 @@
+[
+  {
+    "symbol": "1909.HK",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "2477.HK",
+    "date": "2025-03-31",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "603050.SS",
+    "date": "2025-03-31",
+    "numerator": 37,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AGMRF",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AGMR.TO",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AGMR.V",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AREB",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AUUD",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 17,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CETXP",
+    "date": "2025-03-31",
+    "numerator": 21,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "FXHO",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GWMO.L",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 200,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HUBC",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NXU",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SEZL",
+    "date": "2025-03-31",
+    "numerator": 6,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VMAR",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WTO",
+    "date": "2025-03-31",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0727.HK",
+    "date": "2025-03-28",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "1736.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "1822.T",
+    "date": "2025-03-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "1979.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "2802.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "2805.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "2871.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3002.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3092.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3231.T",
+    "date": "2025-03-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3350.T",
+    "date": "2025-03-28",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3486.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3837.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3964.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "4112.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "4681.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "4832.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "4972.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5161.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5247.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5464.T",
+    "date": "2025-03-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5532.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5821.T",
+    "date": "2025-03-28",
+    "numerator": 21,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5858.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "6040.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "6137.T",
+    "date": "2025-03-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "6258.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "6331.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "6701.T",
+    "date": "2025-03-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "6797.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "7042.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "7164.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "7369.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "7638.T",
+    "date": "2025-03-28",
+    "numerator": 11,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "7914.T",
+    "date": "2025-03-28",
+    "numerator": 4,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8043.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8075.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8117.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8424.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8750.T",
+    "date": "2025-03-28",
+    "numerator": 4,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9249.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9368.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9433.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9564.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9644.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9679.T",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9882.T",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9889.T",
+    "date": "2025-03-28",
+    "numerator": 4,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ACON",
+    "date": "2025-03-28",
+    "numerator": 1,
+    "denominator": 27,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AJINF",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "DCNSF",
+    "date": "2025-03-28",
+    "numerator": 4,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "EDVA",
+    "date": "2025-03-28",
+    "numerator": 1,
+    "denominator": 40,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JFEYF",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KDDIF",
+    "date": "2025-03-28",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KVM.CN",
+    "date": "2025-03-28",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MIZUF",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NIPNF",
+    "date": "2025-03-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NMEHF",
+    "date": "2025-03-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SATLF",
+    "date": "2025-03-28",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SBEV",
+    "date": "2025-03-28",
+    "numerator": 1,
+    "denominator": 40,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SONALIS.BO",
+    "date": "2025-03-28",
+    "numerator": 509,
+    "denominator": 500,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "1327.HK",
+    "date": "2025-03-27",
+    "numerator": 1041,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ELI.BR",
+    "date": "2025-03-27",
+    "numerator": 211,
+    "denominator": 200,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VRSSF",
+    "date": "2025-03-27",
+    "numerator": 1,
+    "denominator": 9,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WHLR",
+    "date": "2025-03-27",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "6128.HK",
+    "date": "2025-03-26",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8456.HK",
+    "date": "2025-03-26",
+    "numerator": 1,
+    "denominator": 8,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9587.SR",
+    "date": "2025-03-26",
+    "numerator": 3,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CRIV.CN",
+    "date": "2025-03-26",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "DHANROTO.BO",
+    "date": "2025-03-26",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "FLUI.ST",
+    "date": "2025-03-26",
+    "numerator": 1,
+    "denominator": 350,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GRFX",
+    "date": "2025-03-26",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GRFXF",
+    "date": "2025-03-26",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LGHL",
+    "date": "2025-03-26",
+    "numerator": 1,
+    "denominator": 50,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MET1.L",
+    "date": "2025-03-26",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CMCXF",
+    "date": "2025-03-25",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ETR.AX",
+    "date": "2025-03-25",
+    "numerator": 1,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RNT.AX",
+    "date": "2025-03-25",
+    "numerator": 63,
+    "denominator": 62,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "USCMF",
+    "date": "2025-03-25",
+    "numerator": 1,
+    "denominator": 2.5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "XELB",
+    "date": "2025-03-25",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "1628.HK",
+    "date": "2025-03-24",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ANGI",
+    "date": "2025-03-24",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ISENF",
+    "date": "2025-03-24",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JAGX",
+    "date": "2025-03-24",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NIRV.CN",
+    "date": "2025-03-24",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SHFS",
+    "date": "2025-03-24",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SNEX",
+    "date": "2025-03-24",
+    "numerator": 3,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SNMCY",
+    "date": "2025-03-24",
+    "numerator": 851,
+    "denominator": 1000,
+    "splitType": "stock-dividend"
+  },
+  {
+    "symbol": "UPC",
+    "date": "2025-03-24",
+    "numerator": 1,
+    "denominator": 40,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "URU.L",
+    "date": "2025-03-24",
+    "numerator": 25,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "YUZHF",
+    "date": "2025-03-24",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ZCAR",
+    "date": "2025-03-24",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TWR.AX",
+    "date": "2025-03-23",
+    "numerator": 9,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0R02.L",
+    "date": "2025-03-21",
+    "numerator": 83333,
+    "denominator": 1000000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GREENLAM.NS",
+    "date": "2025-03-21",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GRXXF",
+    "date": "2025-03-21",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LASTMILE.BO",
+    "date": "2025-03-21",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LUXFF",
+    "date": "2025-03-21",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LUXX.CN",
+    "date": "2025-03-21",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NNSCF",
+    "date": "2025-03-21",
+    "numerator": 1,
+    "denominator": 49000000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ONVO",
+    "date": "2025-03-21",
+    "numerator": 1,
+    "denominator": 12,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RONI.BO",
+    "date": "2025-03-21",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SHUKRAPHAR.BO",
+    "date": "2025-03-21",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SOFTRAKV.BO",
+    "date": "2025-03-21",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VIVS",
+    "date": "2025-03-21",
+    "numerator": 1,
+    "denominator": 12,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VRPX",
+    "date": "2025-03-21",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5314.TWO",
+    "date": "2025-03-20",
+    "numerator": 20,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CHM.AX",
+    "date": "2025-03-20",
+    "numerator": 21,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "DCL.AX",
+    "date": "2025-03-20",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NC.BK",
+    "date": "2025-03-20",
+    "numerator": 51,
+    "denominator": 50,
+    "splitType": "stock-dividend"
+  },
+  {
+    "symbol": "OM",
+    "date": "2025-03-20",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "STSFF",
+    "date": "2025-03-20",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0261.HK",
+    "date": "2025-03-19",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0274.HK",
+    "date": "2025-03-19",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ITUB",
+    "date": "2025-03-19",
+    "numerator": 11,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RALYH.IS",
+    "date": "2025-03-19",
+    "numerator": 1057,
+    "denominator": 200,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8448.HK",
+    "date": "2025-03-18",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HEPA",
+    "date": "2025-03-18",
+    "numerator": 1,
+    "denominator": 50,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ITUB3.SA",
+    "date": "2025-03-18",
+    "numerator": 11,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ITUB4.SA",
+    "date": "2025-03-18",
+    "numerator": 11,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IVF",
+    "date": "2025-03-18",
+    "numerator": 1,
+    "denominator": 12,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NAYA",
+    "date": "2025-03-18",
+    "numerator": 1,
+    "denominator": 12,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NONEF",
+    "date": "2025-03-18",
+    "numerator": 1,
+    "denominator": 15908000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PADAMCO.BO",
+    "date": "2025-03-18",
+    "numerator": 5,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ULY",
+    "date": "2025-03-18",
+    "numerator": 1,
+    "denominator": 12,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WKSP",
+    "date": "2025-03-18",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "300803.SZ",
+    "date": "2025-03-17",
+    "numerator": 29,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ADTX",
+    "date": "2025-03-17",
+    "numerator": 1,
+    "denominator": 250,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BHAT",
+    "date": "2025-03-17",
+    "numerator": 1,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CBSU",
+    "date": "2025-03-17",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "FAMI",
+    "date": "2025-03-17",
+    "numerator": 1,
+    "denominator": 12,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NWTG",
+    "date": "2025-03-17",
+    "numerator": 1,
+    "denominator": 30,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SAIH",
+    "date": "2025-03-17",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SIKA.BO",
+    "date": "2025-03-17",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SPGC",
+    "date": "2025-03-17",
+    "numerator": 1,
+    "denominator": 30,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WKHS",
+    "date": "2025-03-17",
+    "numerator": 2,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WLDS",
+    "date": "2025-03-17",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "APDN",
+    "date": "2025-03-14",
+    "numerator": 1,
+    "denominator": 50,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BMOOF",
+    "date": "2025-03-14",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BNBX",
+    "date": "2025-03-14",
+    "numerator": 1,
+    "denominator": 50,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CSSI",
+    "date": "2025-03-14",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "FEED",
+    "date": "2025-03-14",
+    "numerator": 1,
+    "denominator": 11,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HILL.JK",
+    "date": "2025-03-14",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MOON.V",
+    "date": "2025-03-14",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NAOV",
+    "date": "2025-03-14",
+    "numerator": 1,
+    "denominator": 11,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "QXL",
+    "date": "2025-03-14",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TUTH",
+    "date": "2025-03-14",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VBIX",
+    "date": "2025-03-14",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "000640.KS",
+    "date": "2025-03-13",
+    "numerator": 103,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "002647.SZ",
+    "date": "2025-03-13",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "170900.KS",
+    "date": "2025-03-13",
+    "numerator": 51,
+    "denominator": 50,
+    "splitType": "stock-dividend"
+  },
+  {
+    "symbol": "4377.T",
+    "date": "2025-03-13",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ACCON.ST",
+    "date": "2025-03-13",
+    "numerator": 509,
+    "denominator": 500,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ENERY.IS",
+    "date": "2025-03-13",
+    "numerator": 62069,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IGRD.QA",
+    "date": "2025-03-13",
+    "numerator": 11,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "INV.L",
+    "date": "2025-03-13",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IPDN",
+    "date": "2025-03-13",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JUGRF",
+    "date": "2025-03-13",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JUGR.V",
+    "date": "2025-03-13",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KUKE",
+    "date": "2025-03-13",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KUKEY",
+    "date": "2025-03-13",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MEHAI.BO",
+    "date": "2025-03-13",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NTSC.BK",
+    "date": "2025-03-13",
+    "numerator": 4,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SBDCF",
+    "date": "2025-03-13",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SBD.CN",
+    "date": "2025-03-13",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SHANGAR.BO",
+    "date": "2025-03-13",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TWP.BK",
+    "date": "2025-03-13",
+    "numerator": 18,
+    "denominator": 17,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "4130.SR",
+    "date": "2025-03-12",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BCUCY",
+    "date": "2025-03-12",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BLNE",
+    "date": "2025-03-12",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IDXAF",
+    "date": "2025-03-12",
+    "numerator": 1709,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0755.HK",
+    "date": "2025-03-11",
+    "numerator": 1,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5610.T",
+    "date": "2025-03-11",
+    "numerator": 1,
+    "denominator": 145346,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CV.BK",
+    "date": "2025-03-11",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IOLCP.BO",
+    "date": "2025-03-11",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IOLCP.NS",
+    "date": "2025-03-11",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0497.HK",
+    "date": "2025-03-10",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ABTS",
+    "date": "2025-03-10",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BLDN.QA",
+    "date": "2025-03-10",
+    "numerator": 20,
+    "denominator": 19,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ELAB",
+    "date": "2025-03-10",
+    "numerator": 1,
+    "denominator": 7,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MNDR",
+    "date": "2025-03-10",
+    "numerator": 1,
+    "denominator": 8,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "OMH",
+    "date": "2025-03-10",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SBC.BO",
+    "date": "2025-03-10",
+    "numerator": 3,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SBC.NS",
+    "date": "2025-03-10",
+    "numerator": 3,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "007690.KS",
+    "date": "2025-03-07",
+    "numerator": 103,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PADEL.ST",
+    "date": "2025-03-07",
+    "numerator": 1,
+    "denominator": 1250,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PRADHIN.BO",
+    "date": "2025-03-07",
+    "numerator": 30,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RETO",
+    "date": "2025-03-07",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TIVC",
+    "date": "2025-03-07",
+    "numerator": 1,
+    "denominator": 17,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WPH.BK",
+    "date": "2025-03-07",
+    "numerator": 26,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "688005.SS",
+    "date": "2025-03-06",
+    "numerator": 149,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "APC.AX",
+    "date": "2025-03-06",
+    "numerator": 10,
+    "denominator": 7,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "STMGF",
+    "date": "2025-03-06",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3466.TWO",
+    "date": "2025-03-05",
+    "numerator": 1029,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8237.HK",
+    "date": "2025-03-05",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ANANDRATHI.BO",
+    "date": "2025-03-05",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ANANDRATHI.NS",
+    "date": "2025-03-05",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BIT.AX",
+    "date": "2025-03-05",
+    "numerator": 8,
+    "denominator": 7,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TR",
+    "date": "2025-03-05",
+    "numerator": 103,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TROLB",
+    "date": "2025-03-05",
+    "numerator": 103,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VKAL.BO",
+    "date": "2025-03-05",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WBGR-B.ST",
+    "date": "2025-03-05",
+    "numerator": 593,
+    "denominator": 500,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3390.TWO",
+    "date": "2025-03-04",
+    "numerator": 1023,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9532.SR",
+    "date": "2025-03-04",
+    "numerator": 20,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ARCT.ST",
+    "date": "2025-03-04",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "COASTCORP.BO",
+    "date": "2025-03-04",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "COASTCORP.NS",
+    "date": "2025-03-04",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "DOHOME.BK",
+    "date": "2025-03-04",
+    "numerator": 22,
+    "denominator": 21,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HYDRO.BK",
+    "date": "2025-03-04",
+    "numerator": 1,
+    "denominator": 8,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MGEL.NS",
+    "date": "2025-03-04",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VERO",
+    "date": "2025-03-04",
+    "numerator": 1,
+    "denominator": 11,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CLEU",
+    "date": "2025-03-03",
+    "numerator": 1,
+    "denominator": 80,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "EDBL",
+    "date": "2025-03-03",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GBML.V",
+    "date": "2025-03-03",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LICN",
+    "date": "2025-03-03",
+    "numerator": 1,
+    "denominator": 200,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "REZZF",
+    "date": "2025-03-03",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "STBX",
+    "date": "2025-03-03",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VTI.CN",
+    "date": "2025-03-03",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PTX.TA",
+    "date": "2025-03-02",
+    "numerator": 1,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CHKKF",
+    "date": "2025-02-28",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CMPO",
+    "date": "2025-02-28",
+    "numerator": 301,
+    "denominator": 250,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "FNRN",
+    "date": "2025-02-28",
+    "numerator": 21,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GPGI",
+    "date": "2025-02-28",
+    "numerator": 301,
+    "denominator": 250,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IX",
+    "date": "2025-02-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JINDWORLD.BO",
+    "date": "2025-02-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JINDWORLD.NS",
+    "date": "2025-02-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "METC",
+    "date": "2025-02-28",
+    "numerator": 507,
+    "denominator": 500,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "OASISEC.BO",
+    "date": "2025-02-28",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PDGR3.SA",
+    "date": "2025-02-28",
+    "numerator": 1,
+    "denominator": 125,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PERU.V",
+    "date": "2025-02-28",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RDBIPL.BO",
+    "date": "2025-02-28",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RDBRIL.BO",
+    "date": "2025-02-28",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SST.L",
+    "date": "2025-02-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "STLNF",
+    "date": "2025-02-28",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WELSPLSOL.BO",
+    "date": "2025-02-28",
+    "numerator": 53,
+    "denominator": 50,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "086520.KQ",
+    "date": "2025-02-27",
+    "numerator": 51,
+    "denominator": 50,
+    "splitType": "stock-dividend"
+  },
+  {
+    "symbol": "1793.T",
+    "date": "2025-02-27",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3226.T",
+    "date": "2025-02-27",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3481.T",
+    "date": "2025-02-27",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3501.T",
+    "date": "2025-02-27",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5535.T",
+    "date": "2025-02-27",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5967.T",
+    "date": "2025-02-27",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "6086.T",
+    "date": "2025-02-27",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8194.T",
+    "date": "2025-02-27",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9235.T",
+    "date": "2025-02-27",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GLOBAL.BK",
+    "date": "2025-02-27",
+    "numerator": 27,
+    "denominator": 26,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GLOBAL-R.BK",
+    "date": "2025-02-27",
+    "numerator": 27,
+    "denominator": 26,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NIPPF",
+    "date": "2025-02-27",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NTVO.L",
+    "date": "2025-02-27",
+    "numerator": 1,
+    "denominator": 1500,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5EA.AX",
+    "date": "2025-02-26",
+    "numerator": 1,
+    "denominator": 23,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8215.T",
+    "date": "2025-02-26",
+    "numerator": 1,
+    "denominator": 85000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AEON",
+    "date": "2025-02-26",
+    "numerator": 1,
+    "denominator": 72,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "APS.TO",
+    "date": "2025-02-26",
+    "numerator": 1,
+    "denominator": 30,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "APTO",
+    "date": "2025-02-26",
+    "numerator": 1,
+    "denominator": 30,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KPTI",
+    "date": "2025-02-26",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LODE",
+    "date": "2025-02-25",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SARS.ST",
+    "date": "2025-02-25",
+    "numerator": 87,
+    "denominator": 50,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SXTC",
+    "date": "2025-02-25",
+    "numerator": 1,
+    "denominator": 8,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "010130.KS",
+    "date": "2025-02-24",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "5236.KL",
+    "date": "2025-02-24",
+    "numerator": 3,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "7106.KL",
+    "date": "2025-02-24",
+    "numerator": 6,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ACDX.CN",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AVW.AX",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "EMH.DE",
+    "date": "2025-02-24",
+    "numerator": 316,
+    "denominator": 305,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ESYN",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GRI",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 17,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HWH",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RYCIX",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RYCPX",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RYHBX",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RYHIX",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RYMBX",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RYPDX",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RYPMX",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SAGGF",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SOAR",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SPMXF",
+    "date": "2025-02-24",
+    "numerator": 6,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SXTP",
+    "date": "2025-02-24",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WDC",
+    "date": "2025-02-24",
+    "numerator": 827,
+    "denominator": 625,
+    "splitType": "spin-off"
+  },
+  {
+    "symbol": "CNBS",
+    "date": "2025-02-21",
+    "numerator": 1,
+    "denominator": 12,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CNSP",
+    "date": "2025-02-21",
+    "numerator": 1,
+    "denominator": 50,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "DHBUF",
+    "date": "2025-02-21",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "DHB.V",
+    "date": "2025-02-21",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MBECL.NS",
+    "date": "2025-02-21",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MJ",
+    "date": "2025-02-21",
+    "numerator": 1,
+    "denominator": 12,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "QQQH",
+    "date": "2025-02-21",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SVRE",
+    "date": "2025-02-21",
+    "numerator": 1,
+    "denominator": 13,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WINT",
+    "date": "2025-02-21",
+    "numerator": 1,
+    "denominator": 50,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0167.HK",
+    "date": "2025-02-20",
+    "numerator": 1,
+    "denominator": 60,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0788.HK",
+    "date": "2025-02-20",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8283.HK",
+    "date": "2025-02-20",
+    "numerator": 1,
+    "denominator": 50,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CHWRF",
+    "date": "2025-02-20",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SLTQY",
+    "date": "2025-02-20",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "2699.HK",
+    "date": "2025-02-19",
+    "numerator": 1,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8125.HK",
+    "date": "2025-02-19",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "DM.V",
+    "date": "2025-02-19",
+    "numerator": 1,
+    "denominator": 30,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "DTMXF",
+    "date": "2025-02-19",
+    "numerator": 1,
+    "denominator": 30,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HTHIY",
+    "date": "2025-02-19",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KNW",
+    "date": "2025-02-19",
+    "numerator": 1,
+    "denominator": 40,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KNWN",
+    "date": "2025-02-19",
+    "numerator": 1,
+    "denominator": 40,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "USBC",
+    "date": "2025-02-19",
+    "numerator": 1,
+    "denominator": 40,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BINI",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 60,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BOXL",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BPC.CN",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 6,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CONART.BO",
+    "date": "2025-02-18",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CYN",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 150,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "FEAM",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 23,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GBU.V",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GUJTLRM.BO",
+    "date": "2025-02-18",
+    "numerator": 6,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KOTHARIPRO.NS",
+    "date": "2025-02-18",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MEGL",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MULN",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 60,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NEXN",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "OTLY",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PNGA.CN",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 6,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PNGAF",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 6,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SNMYF",
+    "date": "2025-02-18",
+    "numerator": 851,
+    "denominator": 1000,
+    "splitType": "stock-dividend"
+  },
+  {
+    "symbol": "TTTPF",
+    "date": "2025-02-18",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CIFL.BO",
+    "date": "2025-02-17",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NEXN.L",
+    "date": "2025-02-17",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SUN.AX",
+    "date": "2025-02-16",
+    "numerator": 851,
+    "denominator": 1000,
+    "splitType": "stock-dividend"
+  },
+  {
+    "symbol": "012170.KS",
+    "date": "2025-02-14",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3822.HK",
+    "date": "2025-02-14",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "6920.TWO",
+    "date": "2025-02-14",
+    "numerator": 5589319,
+    "denominator": 10000000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8007.HK",
+    "date": "2025-02-14",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HGGCF",
+    "date": "2025-02-14",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HODL",
+    "date": "2025-02-14",
+    "numerator": 4,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LFBE",
+    "date": "2025-02-14",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LFDR",
+    "date": "2025-02-14",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LIBD",
+    "date": "2025-02-14",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MANTEX.ST",
+    "date": "2025-02-14",
+    "numerator": 1,
+    "denominator": 400,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RFSL.BO",
+    "date": "2025-02-14",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TARIL.NS",
+    "date": "2025-02-14",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "4061.SR",
+    "date": "2025-02-13",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "9577.SR",
+    "date": "2025-02-13",
+    "numerator": 20,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "EPAZ",
+    "date": "2025-02-13",
+    "numerator": 1,
+    "denominator": 2500,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HYFM",
+    "date": "2025-02-13",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LFAW",
+    "date": "2025-02-13",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LIAU",
+    "date": "2025-02-13",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TANH",
+    "date": "2025-02-13",
+    "numerator": 1,
+    "denominator": 40,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CATI",
+    "date": "2025-02-12",
+    "numerator": 1,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GDG.AX",
+    "date": "2025-02-12",
+    "numerator": 1013,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TTL.BO",
+    "date": "2025-02-12",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TTL.NS",
+    "date": "2025-02-12",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0L8B.L",
+    "date": "2025-02-11",
+    "numerator": 28780,
+    "denominator": 30299,
+    "splitType": "stock-dividend"
+  },
+  {
+    "symbol": "1400.HK",
+    "date": "2025-02-11",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ATS.WA",
+    "date": "2025-02-11",
+    "numerator": 30,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "EFCIL.BO",
+    "date": "2025-02-11",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "EFCIL.NS",
+    "date": "2025-02-11",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "FFPP",
+    "date": "2025-02-11",
+    "numerator": 1,
+    "denominator": 40,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GOAI",
+    "date": "2025-02-11",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GSAT",
+    "date": "2025-02-11",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LEXT.CN",
+    "date": "2025-02-11",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LFAO",
+    "date": "2025-02-11",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LIAM",
+    "date": "2025-02-11",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NIVF",
+    "date": "2025-02-11",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SAMPO.HE",
+    "date": "2025-02-11",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SAMPO-SDB.ST",
+    "date": "2025-02-11",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SAXPF",
+    "date": "2025-02-11",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TCRRF",
+    "date": "2025-02-11",
+    "numerator": 1,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "222810.KQ",
+    "date": "2025-02-10",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BTAI",
+    "date": "2025-02-10",
+    "numerator": 1,
+    "denominator": 16,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BTAIQ",
+    "date": "2025-02-10",
+    "numerator": 1,
+    "denominator": 16,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CHRRF",
+    "date": "2025-02-10",
+    "numerator": 1,
+    "denominator": 7,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CHR.TO",
+    "date": "2025-02-10",
+    "numerator": 1,
+    "denominator": 7,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KORU",
+    "date": "2025-02-10",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NCV",
+    "date": "2025-02-10",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NCZ",
+    "date": "2025-02-10",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RIME",
+    "date": "2025-02-10",
+    "numerator": 1,
+    "denominator": 200,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TCBP",
+    "date": "2025-02-10",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AGIIL.BO",
+    "date": "2025-02-07",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ALADO.PA",
+    "date": "2025-02-07",
+    "numerator": 1,
+    "denominator": 5000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ECORF",
+    "date": "2025-02-07",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ERA.V",
+    "date": "2025-02-07",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "FTLF",
+    "date": "2025-02-07",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LFAI",
+    "date": "2025-02-07",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LIAE",
+    "date": "2025-02-07",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RAMAPHO.BO",
+    "date": "2025-02-07",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RAMAPHO.NS",
+    "date": "2025-02-07",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SANGAMFIN.BO",
+    "date": "2025-02-07",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WAK.AX",
+    "date": "2025-02-07",
+    "numerator": 28,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "3115.TWO",
+    "date": "2025-02-06",
+    "numerator": 184207,
+    "denominator": 250000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CVKMD.IS",
+    "date": "2025-02-06",
+    "numerator": 100,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "EVX",
+    "date": "2025-02-06",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KSOLVES.BO",
+    "date": "2025-02-06",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KSOLVES.NS",
+    "date": "2025-02-06",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MINOLTAF.BO",
+    "date": "2025-02-06",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PANDY",
+    "date": "2025-02-06",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PNDRY",
+    "date": "2025-02-06",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SAMF.JK",
+    "date": "2025-02-06",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TRSI",
+    "date": "2025-02-06",
+    "numerator": 1,
+    "denominator": 250,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VN8.AX",
+    "date": "2025-02-06",
+    "numerator": 76,
+    "denominator": 75,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "2025.TW",
+    "date": "2025-02-05",
+    "numerator": 383803,
+    "denominator": 625000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "DIA.MC",
+    "date": "2025-02-05",
+    "numerator": 1,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MCA.AX",
+    "date": "2025-02-05",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SPIFF.ST",
+    "date": "2025-02-05",
+    "numerator": 1,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SVG.AX",
+    "date": "2025-02-05",
+    "numerator": 8,
+    "denominator": 7,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "THINKINK.BO",
+    "date": "2025-02-05",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TNXP",
+    "date": "2025-02-05",
+    "numerator": 1,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NPS.TO",
+    "date": "2025-02-04",
+    "numerator": 23,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "REDTAPE.BO",
+    "date": "2025-02-04",
+    "numerator": 4,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "REDTAPE.NS",
+    "date": "2025-02-04",
+    "numerator": 4,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RR.CN",
+    "date": "2025-02-04",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TUKAS.IS",
+    "date": "2025-02-04",
+    "numerator": 382,
+    "denominator": 125,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BESS",
+    "date": "2025-02-03",
+    "numerator": 1,
+    "denominator": 140,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "EYEN",
+    "date": "2025-02-03",
+    "numerator": 1,
+    "denominator": 80,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HYPD",
+    "date": "2025-02-03",
+    "numerator": 1,
+    "denominator": 80,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "FCUV",
+    "date": "2025-01-31",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IGL.BO",
+    "date": "2025-01-31",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IGL.NS",
+    "date": "2025-01-31",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JBMA.BO",
+    "date": "2025-01-31",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JBMA.NS",
+    "date": "2025-01-31",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KIDUJA.BO",
+    "date": "2025-01-31",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MOHITE.BO",
+    "date": "2025-01-31",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SENCO.BO",
+    "date": "2025-01-31",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "UUU.CN",
+    "date": "2025-01-31",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "1450.T",
+    "date": "2025-01-30",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "2217.T",
+    "date": "2025-01-30",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "2323.T",
+    "date": "2025-01-30",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8967.T",
+    "date": "2025-01-30",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ACON",
+    "date": "2025-01-30",
+    "numerator": 1,
+    "denominator": 335,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ADZZF",
+    "date": "2025-01-30",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BLRX",
+    "date": "2025-01-30",
+    "numerator": 1,
+    "denominator": 40,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BURNPUR.BO",
+    "date": "2025-01-30",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BURNPUR.NS",
+    "date": "2025-01-30",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CRKN",
+    "date": "2025-01-30",
+    "numerator": 1,
+    "denominator": 150,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HDLY.OL",
+    "date": "2025-01-30",
+    "numerator": 1,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "6050.SR",
+    "date": "2025-01-29",
+    "numerator": 4023,
+    "denominator": 24023,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ANL.AX",
+    "date": "2025-01-29",
+    "numerator": 1,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BCT.TO",
+    "date": "2025-01-29",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BCTX",
+    "date": "2025-01-29",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MCDIF",
+    "date": "2025-01-29",
+    "numerator": 1,
+    "denominator": 125,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MSIF",
+    "date": "2025-01-29",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PPCB",
+    "date": "2025-01-29",
+    "numerator": 1,
+    "denominator": 60000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PRMO",
+    "date": "2025-01-29",
+    "numerator": 1,
+    "denominator": 3200,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "QGEN",
+    "date": "2025-01-29",
+    "numerator": 35,
+    "denominator": 36,
+    "splitType": "stock-dividend"
+  },
+  {
+    "symbol": "QIA.DE",
+    "date": "2025-01-29",
+    "numerator": 35,
+    "denominator": 36,
+    "splitType": "stock-dividend"
+  },
+  {
+    "symbol": "CNCT",
+    "date": "2025-01-28",
+    "numerator": 1,
+    "denominator": 100000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "INKT",
+    "date": "2025-01-28",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LEXTF",
+    "date": "2025-01-28",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MAZDA.NS",
+    "date": "2025-01-28",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "REVB",
+    "date": "2025-01-28",
+    "numerator": 1,
+    "denominator": 16,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VINC",
+    "date": "2025-01-28",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WHLR",
+    "date": "2025-01-28",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0GHX.L",
+    "date": "2025-01-27",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BNGO",
+    "date": "2025-01-27",
+    "numerator": 1,
+    "denominator": 60,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CDT",
+    "date": "2025-01-27",
+    "numerator": 1,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CLIME-B.ST",
+    "date": "2025-01-27",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CLMOF",
+    "date": "2025-01-27",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GGAL.BA",
+    "date": "2025-01-27",
+    "numerator": 1011,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GITS",
+    "date": "2025-01-27",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "HAO",
+    "date": "2025-01-27",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IVP",
+    "date": "2025-01-27",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IVPR",
+    "date": "2025-01-27",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SHRADDHA.BO",
+    "date": "2025-01-27",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "064960.KS",
+    "date": "2025-01-24",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BNRSEC.BO",
+    "date": "2025-01-24",
+    "numerator": 4,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "INA.BO",
+    "date": "2025-01-24",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NMLSF",
+    "date": "2025-01-24",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BDPT",
+    "date": "2025-01-23",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NOHAL.OL",
+    "date": "2025-01-23",
+    "numerator": 509,
+    "denominator": 500,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NRO",
+    "date": "2025-01-23",
+    "numerator": 131,
+    "denominator": 125,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PEX.V",
+    "date": "2025-01-23",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PEXZF",
+    "date": "2025-01-23",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AASZF",
+    "date": "2025-01-22",
+    "numerator": 1,
+    "denominator": 200,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ASA.OL",
+    "date": "2025-01-22",
+    "numerator": 1,
+    "denominator": 200,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BQ",
+    "date": "2025-01-21",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CAMZF",
+    "date": "2025-01-21",
+    "numerator": 1,
+    "denominator": 6,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CNTC.TA",
+    "date": "2025-01-21",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "LEN",
+    "date": "2025-01-21",
+    "numerator": 1033,
+    "denominator": 1000,
+    "splitType": "spin-off"
+  },
+  {
+    "symbol": "OPN.AX",
+    "date": "2025-01-21",
+    "numerator": 1,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PSRX.TA",
+    "date": "2025-01-21",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SCPX",
+    "date": "2025-01-21",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SONG",
+    "date": "2025-01-21",
+    "numerator": 1,
+    "denominator": 2500,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "INDLMETER.NS",
+    "date": "2025-01-20",
+    "numerator": 23.64,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NAVA.BO",
+    "date": "2025-01-20",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NAVA.NS",
+    "date": "2025-01-20",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8482.HK",
+    "date": "2025-01-17",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ALDRV.PA",
+    "date": "2025-01-17",
+    "numerator": 209,
+    "denominator": 200,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JAIBALAJI.BO",
+    "date": "2025-01-17",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JAIBALAJI.NS",
+    "date": "2025-01-17",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KITEX.NS",
+    "date": "2025-01-17",
+    "numerator": 3,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "OUT",
+    "date": "2025-01-17",
+    "numerator": 122,
+    "denominator": 125,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "XIORF",
+    "date": "2025-01-17",
+    "numerator": 32,
+    "denominator": 31,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ALVR",
+    "date": "2025-01-16",
+    "numerator": 1,
+    "denominator": 23,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "FON.WA",
+    "date": "2025-01-16",
+    "numerator": 25,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KLRS",
+    "date": "2025-01-16",
+    "numerator": 1,
+    "denominator": 23,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MBIO",
+    "date": "2025-01-16",
+    "numerator": 1,
+    "denominator": 50,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RLI",
+    "date": "2025-01-16",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ULTRACAB.BO",
+    "date": "2025-01-16",
+    "numerator": 1027,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WEST3.SA",
+    "date": "2025-01-16",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "0GFE.L",
+    "date": "2025-01-15",
+    "numerator": 166667,
+    "denominator": 1000000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BRSGF",
+    "date": "2025-01-15",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CALSOFT.BO",
+    "date": "2025-01-15",
+    "numerator": 171,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CALSOFT.NS",
+    "date": "2025-01-15",
+    "numerator": 171,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CORE.DE",
+    "date": "2025-01-15",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "EMBRAC-B.ST",
+    "date": "2025-01-15",
+    "numerator": 1,
+    "denominator": 6,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ENRT",
+    "date": "2025-01-15",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ODTC",
+    "date": "2025-01-15",
+    "numerator": 1,
+    "denominator": 8,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "QRC.TO",
+    "date": "2025-01-15",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SMX",
+    "date": "2025-01-15",
+    "numerator": 2,
+    "denominator": 57,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SVMHW",
+    "date": "2025-01-15",
+    "numerator": 50,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VIPRF",
+    "date": "2025-01-15",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VIPR.V",
+    "date": "2025-01-15",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "VNTA",
+    "date": "2025-01-15",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "115450.KQ",
+    "date": "2025-01-14",
+    "numerator": 21,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BTCIM.IS",
+    "date": "2025-01-14",
+    "numerator": 31,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "EVAX",
+    "date": "2025-01-14",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "NFGAB.ST",
+    "date": "2025-01-14",
+    "numerator": 1,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BACTIQ.CO",
+    "date": "2025-01-13",
+    "numerator": 28,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "OBT",
+    "date": "2025-01-13",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SHARDUL.BO",
+    "date": "2025-01-13",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "THCH",
+    "date": "2025-01-13",
+    "numerator": 1,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TSDD",
+    "date": "2025-01-13",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "XTIA",
+    "date": "2025-01-10",
+    "numerator": 1,
+    "denominator": 250,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "1316.TW",
+    "date": "2025-01-09",
+    "numerator": 513,
+    "denominator": 500,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "2200.SR",
+    "date": "2025-01-09",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ILYDA.AT",
+    "date": "2025-01-09",
+    "numerator": 3,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CERO",
+    "date": "2025-01-08",
+    "numerator": 1,
+    "denominator": 100,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JAGSNPHARM.BO",
+    "date": "2025-01-08",
+    "numerator": 5,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JAGSNPHARM.NS",
+    "date": "2025-01-08",
+    "numerator": 5,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "JXG",
+    "date": "2025-01-08",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8072.T",
+    "date": "2025-01-07",
+    "numerator": 1,
+    "denominator": 10000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "8367.HK",
+    "date": "2025-01-07",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "BLU.L",
+    "date": "2025-01-07",
+    "numerator": 1,
+    "denominator": 200,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "TCBP",
+    "date": "2025-01-07",
+    "numerator": 5,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CMCT",
+    "date": "2025-01-06",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CMCT.TA",
+    "date": "2025-01-06",
+    "numerator": 1,
+    "denominator": 10,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "IDAI",
+    "date": "2025-01-06",
+    "numerator": 1,
+    "denominator": 15,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ODC",
+    "date": "2025-01-06",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RGF",
+    "date": "2025-01-06",
+    "numerator": 1,
+    "denominator": 12,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "RGFC",
+    "date": "2025-01-06",
+    "numerator": 1,
+    "denominator": 12,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SEVCF",
+    "date": "2025-01-06",
+    "numerator": 1,
+    "denominator": 75,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SSM",
+    "date": "2025-01-06",
+    "numerator": 1,
+    "denominator": 75,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "4220.SR",
+    "date": "2025-01-05",
+    "numerator": 461,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AMD.AX",
+    "date": "2025-01-05",
+    "numerator": 1,
+    "denominator": 20,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "216080.KQ",
+    "date": "2025-01-03",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ALUR",
+    "date": "2025-01-03",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ALURD",
+    "date": "2025-01-03",
+    "numerator": 1,
+    "denominator": 25,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CEENIK.BO",
+    "date": "2025-01-03",
+    "numerator": 6,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GARFIBRES.BO",
+    "date": "2025-01-03",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GARFIBRES.NS",
+    "date": "2025-01-03",
+    "numerator": 5,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KPIGREEN.BO",
+    "date": "2025-01-03",
+    "numerator": 3,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KPIGREEN.NS",
+    "date": "2025-01-03",
+    "numerator": 3,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "MTH",
+    "date": "2025-01-03",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "PTRO.JK",
+    "date": "2025-01-03",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "W.BK",
+    "date": "2025-01-03",
+    "numerator": 1049,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "XBIO.BK",
+    "date": "2025-01-03",
+    "numerator": 1049,
+    "denominator": 1000,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "18P0.F",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "18P.F",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AMM.DE",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AMMN.DE",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 2,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ATCH",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 60,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "AVTS.V",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 6,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CISS",
+    "date": "2025-01-02",
+    "numerator": 2,
+    "denominator": 5,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "CVLG",
+    "date": "2025-01-02",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ELBM",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "ELBM.V",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 4,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "GETALONG.BO",
+    "date": "2025-01-02",
+    "numerator": 10,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "KLIP",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 3,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WED.V",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 6,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "WEDXF",
+    "date": "2025-01-02",
+    "numerator": 1,
+    "denominator": 6,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SURYAROSNI.BO",
+    "date": "2025-01-01",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  },
+  {
+    "symbol": "SURYAROSNI.NS",
+    "date": "2025-01-01",
+    "numerator": 2,
+    "denominator": 1,
+    "splitType": "stock-split"
+  }
+]

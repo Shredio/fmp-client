@@ -228,6 +228,7 @@ foreach ($fmpClient->dividendsCalendar($from, $to, $logger) as $dividend) {
 }
 
 // Historical stock splits for a single symbol
+// The numerator and the denominator are int, or float for the few ratios FMP sends with decimals (RYAAY 2.49:1)
 foreach ($fmpClient->splits('AAPL') as $split) {
     echo "{$split->symbol}: {$split->numerator}:{$split->denominator} on {$split->date}\n";
 }

@@ -30,8 +30,8 @@ final readonly class StockSplitMapper extends Type
 			[
 			'symbol' => $ts->nonEmptyString(),
 			'date' => $ts->string(),
-			'numerator' => $ts->int(),
-			'denominator' => $ts->int(),
+			'numerator' => $ts->union([$ts->int(), $ts->float()]),
+			'denominator' => $ts->union([$ts->int(), $ts->float()]),
 			'splitType' => $ts->nullable($ts->nonEmptyString()),
 		],
 			identifier: 'symbol',

@@ -65,6 +65,35 @@ final class SplitsCalendarTest extends TestCase
 		$this->assertSame($expectedLastSplit->toArray(), $splits[21]->toArray());
 	}
 
+	public function testSplitsCalendarWithDecimalRatios(): void
+	{
+		$client = $this->createClient(__DIR__ . '/fixtures/splits-calendar-2025-01-01-to-2025-03-31.json');
+
+		$splits = iterator_to_array(
+			$client->splitsCalendar(new DateTimeImmutable('2025-01-01'), new DateTimeImmutable('2025-03-31')),
+			false,
+		);
+
+		// no record is dropped because of a decimal numerator or denominator
+		$this->assertCount(580, $splits);
+
+		$this->assertSame((new StockSplit(
+			symbol: 'USCMF',
+			date: '2025-03-25',
+			numerator: 1,
+			denominator: 2.5,
+			splitType: 'stock-split',
+		))->toArray(), $splits[94]->toArray());
+
+		$this->assertSame((new StockSplit(
+			symbol: 'INDLMETER.NS',
+			date: '2025-01-20',
+			numerator: 23.64,
+			denominator: 100,
+			splitType: 'stock-split',
+		))->toArray(), $splits[490]->toArray());
+	}
+
 	public function testSplitsCalendarWalksPastAnEmptyTailOfTheWindow(): void
 	{
 		// FMP fills at most ~90 days before `to`, so a window ending far ahead answers with an empty first page;
