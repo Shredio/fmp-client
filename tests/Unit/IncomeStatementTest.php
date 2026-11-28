@@ -392,4 +392,17 @@ final class IncomeStatementTest extends TestCase
 		))->toArray(), $statements[1]->toArray());
 	}
 
+	public function testIncomeStatementWithoutFilingIdentifiers(): void
+	{
+		// CRH: acceptedDate null
+		$client = $this->createClient(__DIR__ . '/fixtures/income-statement-without-filing-identifiers.json');
+		$expected = iterator_to_array($this->createClient(__DIR__ . '/fixtures/income-statement-aapl.json')->incomeStatement('AAPL'))[0]->toArray();
+		$expected['cik'] = null;
+		$expected['acceptedDate'] = null;
+
+		$statements = iterator_to_array($client->incomeStatement('AAPL'));
+
+		$this->assertSame([$expected], array_map(static fn (IncomeStatement $statement): array => $statement->toArray(), $statements));
+	}
+
 }

@@ -31,7 +31,7 @@ final readonly class GradeMapper extends Type
 			'symbol' => $ts->nonEmptyString(),
 			'date' => $ts->nonEmptyString(),
 			'gradingCompany' => $ts->string(),
-			'previousGrade' => $ts->string(),
+			'previousGrade' => $ts->nullable($ts->string()),
 			'newGrade' => $ts->string(),
 			'action' => $ts->string(),
 		],

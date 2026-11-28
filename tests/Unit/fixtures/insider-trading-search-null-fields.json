@@ -1,0 +1,38 @@
+[
+    {
+        "symbol": "AAPL",
+        "filingDate": "2026-09-03",
+        "transactionDate": "2026-09-01",
+        "reportingCik": "0001780525",
+        "companyCik": "0000320193",
+        "transactionType": "S-Sale",
+        "securitiesOwned": 35790,
+        "reportingName": "Newstead Jennifer",
+        "typeOfOwner": null,
+        "acquisitionOrDisposition": null,
+        "directOrIndirect": "D",
+        "formType": "4",
+        "securitiesTransacted": null,
+        "price": null,
+        "securityName": null,
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035636/0001140361-26-035636-index.htm"
+    },
+    {
+        "symbol": "AAPL",
+        "filingDate": "2026-09-03",
+        "transactionDate": "2026-09-01",
+        "reportingCik": "0001780525",
+        "companyCik": "0000320193",
+        "transactionType": "S-Sale",
+        "securitiesOwned": 35790,
+        "reportingName": "Newstead Jennifer",
+        "typeOfOwner": "officer: SVP, GC and Government Affairs",
+        "acquisitionOrDisposition": "D",
+        "directOrIndirect": "D",
+        "formType": "4",
+        "securitiesTransacted": 1439,
+        "price": null,
+        "securityName": "Common Stock",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035636/0001140361-26-035636-index.htm"
+    }
+]

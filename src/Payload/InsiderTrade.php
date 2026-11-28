@@ -14,7 +14,7 @@ final readonly class InsiderTrade
 	 * @param non-empty-string $transactionDate
 	 * @param string $transactionType Empty for form 3 (initial statement of ownership)
 	 * @param int|float|null $securitiesOwned Null for some form 3 filings of derivative securities (e.g. convertible notes)
-	 * @param string $acquisitionOrDisposition A for acquisition, D for disposition, empty for form 3
+	 * @param string|null $acquisitionOrDisposition A for acquisition, D for disposition, empty for form 3, null like the other transaction fields of a filing FMP sends without them (GETYQ, ARCC)
 	 * @param non-empty-string|null $directOrIndirect D for direct, I for indirect ownership, null for some filings without a transaction (e.g. form 3)
 	 */
 	public function __construct(
@@ -26,13 +26,13 @@ final readonly class InsiderTrade
 		public string $transactionType,
 		public int|float|null $securitiesOwned,
 		public string $reportingName,
-		public string $typeOfOwner,
-		public string $acquisitionOrDisposition,
+		public string|null $typeOfOwner,
+		public string|null $acquisitionOrDisposition,
 		public string|null $directOrIndirect,
 		public string $formType,
-		public int|float $securitiesTransacted,
-		public float $price,
-		public string $securityName,
+		public int|float|null $securitiesTransacted,
+		public float|null $price,
+		public string|null $securityName,
 		public string $url,
 	)
 	{
@@ -48,13 +48,13 @@ final readonly class InsiderTrade
 	 *     transactionType: string,
 	 *     securitiesOwned: int|float|null,
 	 *     reportingName: string,
-	 *     typeOfOwner: string,
-	 *     acquisitionOrDisposition: string,
+	 *     typeOfOwner: string|null,
+	 *     acquisitionOrDisposition: string|null,
 	 *     directOrIndirect: non-empty-string|null,
 	 *     formType: string,
-	 *     securitiesTransacted: int|float,
-	 *     price: float,
-	 *     securityName: string,
+	 *     securitiesTransacted: int|float|null,
+	 *     price: float|null,
+	 *     securityName: string|null,
 	 *     url: string
 	 * }
 	 */

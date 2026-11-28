@@ -12,19 +12,20 @@ final readonly class EarningCallTranscript
 	/**
 	 * @param non-empty-string $symbol
 	 * @param non-empty-string $date
+	 * @param string|null $content Null when FMP lists the call without its text
 	 */
 	public function __construct(
 		public string $symbol,
 		public Period $period,
 		public int $year,
 		public string $date,
-		public string $content,
+		public string|null $content,
 	)
 	{
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, period: value-of<Period>, year: int, date: non-empty-string, content: string}
+	 * @return array{symbol: non-empty-string, period: value-of<Period>, year: int, date: non-empty-string, content: string|null}
 	 */
 	public function toArray(): array
 	{

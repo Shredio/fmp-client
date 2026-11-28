@@ -623,9 +623,9 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 - `symbol` - Ticker symbol
 - `date` - Statement date
 - `reportedCurrency` - Reporting currency
-- `cik` - CIK number
+- `cik` - CIK number, `null` when FMP sends none
 - `filingDate` - Filing date (null when the API has not published it yet)
-- `acceptedDate` - Acceptance date
+- `acceptedDate` - Acceptance date, `null` when FMP sends none
 - `fiscalYear` - Fiscal year
 - `period` - Period
 - `cashAndCashEquivalents` - Cash and cash equivalents
@@ -716,9 +716,9 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 - `symbol` - Ticker symbol
 - `date` - Statement date
 - `reportedCurrency` - Reporting currency
-- `cik` - CIK number
+- `cik` - CIK number, `null` when FMP sends none
 - `filingDate` - Filing date (null when the API has not published it yet)
-- `acceptedDate` - Acceptance date
+- `acceptedDate` - Acceptance date, `null` when FMP sends none
 - `fiscalYear` - Fiscal year
 - `period` - Period
 - `cashAndCashEquivalents` - Cash and cash equivalents
@@ -794,9 +794,9 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 - `symbol` - Ticker symbol
 - `date` - Statement date
 - `reportedCurrency` - Reporting currency
-- `cik` - CIK number
+- `cik` - CIK number, `null` when FMP sends none
 - `filingDate` - Filing date (null when the API has not published it yet)
-- `acceptedDate` - Acceptance date
+- `acceptedDate` - Acceptance date, `null` when FMP sends none
 - `fiscalYear` - Fiscal year
 - `period` - Period
 - `revenue` - Revenue
@@ -865,9 +865,9 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 - `symbol` - Ticker symbol
 - `date` - End date of the trailing twelve months period
 - `reportedCurrency` - Reporting currency
-- `cik` - CIK identifier
+- `cik` - CIK identifier, `null` when FMP sends none
 - `filingDate` - Filing date
-- `acceptedDate` - Date and time the filing was accepted
+- `acceptedDate` - Date and time the filing was accepted, `null` when FMP sends none
 - `fiscalYear` - Fiscal year of the last included quarter
 - `period` - Fiscal period of the last included quarter (`Period` enum)
 - `revenue` - Revenue
@@ -921,9 +921,9 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 - `symbol` - Ticker symbol
 - `date` - Statement date
 - `reportedCurrency` - Reporting currency
-- `cik` - CIK number
+- `cik` - CIK number, `null` when FMP sends none
 - `filingDate` - Filing date (null when the API has not published it yet)
-- `acceptedDate` - Acceptance date
+- `acceptedDate` - Acceptance date, `null` when FMP sends none
 - `fiscalYear` - Fiscal year
 - `period` - Period
 - `netIncome` - Net income
@@ -1000,9 +1000,9 @@ The **Availability** line of each endpoint is based on the regional flag of the 
 - `symbol` - Ticker symbol
 - `date` - Statement date
 - `reportedCurrency` - Reporting currency
-- `cik` - CIK number
+- `cik` - CIK number, `null` when FMP sends none
 - `filingDate` - Filing date (null when the API has not published it yet)
-- `acceptedDate` - Acceptance date
+- `acceptedDate` - Acceptance date, `null` when FMP sends none
 - `fiscalYear` - Fiscal year
 - `period` - Period
 - `netIncome` - Net income
@@ -1913,7 +1913,7 @@ Contains percentage growth of all cash flow statement items
 - `taxBurden` - Tax burden
 - `interestBurden` - Interest burden
 - `workingCapital` - Working capital
-- `investedCapital` - Invested capital
+- `investedCapital` - Invested capital, rounded to a whole number (FMP computes it with a fraction for some symbols, NXE)
 - `returnOnAssets` - Return on assets (ROA)
 - `operatingReturnOnAssets` - Operating return on assets
 - `returnOnTangibleAssets` - Return on tangible assets
@@ -1939,7 +1939,7 @@ Contains percentage growth of all cash flow statement items
 - `cashConversionCycle` - Cash conversion cycle
 - `freeCashFlowToEquity` - Free cash flow to equity
 - `freeCashFlowToFirm` - Free cash flow to firm
-- `tangibleAssetValue` - Tangible asset value
+- `tangibleAssetValue` - Tangible asset value, rounded to a whole number (FMP computes it with a fraction for some symbols, NXE)
 - `netCurrentAssetValue` - Net current asset value
 
 **API endpoint:** `https://financialmodelingprep.com/stable/key-metrics`
@@ -2279,7 +2279,7 @@ Contains percentage growth of all cash flow statement items
 - `symbol` - Ticker symbol
 - `date` - Date of the rating action
 - `gradingCompany` - Name of the brokerage or research firm
-- `previousGrade` - Rating before the action
+- `previousGrade` - Rating before the action, `null` when FMP sends none (META, November 2026)
 - `newGrade` - Rating after the action
 - `action` - Type of the action (`maintain`, `upgrade`, `downgrade`)
 
@@ -2376,13 +2376,13 @@ Contains percentage growth of all cash flow statement items
 - `transactionType` - Transaction code (for example S-Sale, A-Award, M-Exempt, F-InKind, G-Gift, C-Conversion, J-Other), empty for form 3
 - `securitiesOwned` - Securities owned after the transaction, `null` for some form 3 filings of derivative securities (e.g. convertible notes)
 - `reportingName` - Name of the reporting insider
-- `typeOfOwner` - Relationship to the company (for example "officer: CFO", "director")
-- `acquisitionOrDisposition` - A for acquisition, D for disposition, empty for form 3
+- `typeOfOwner` - Relationship to the company (for example "officer: CFO", "director"), `null` for a filing FMP sends without its transaction fields (GETYQ, ARCC)
+- `acquisitionOrDisposition` - A for acquisition, D for disposition, empty for form 3, `null` for a filing FMP sends without its transaction fields (GETYQ, ARCC)
 - `directOrIndirect` - D for direct, I for indirect ownership, `null` for some filings without a transaction (e.g. form 3)
 - `formType` - SEC form type (3, 4, 5)
-- `securitiesTransacted` - Number of securities transacted
-- `price` - Transaction price per security, 0 for awards and gifts
-- `securityName` - Name of the security (for example Common Stock, Restricted Stock Unit)
+- `securitiesTransacted` - Number of securities transacted, `null` for a filing FMP sends without its transaction fields (GETYQ, ARCC)
+- `price` - Transaction price per security, 0 for awards and gifts, `null` for a filing FMP sends without a price (RDNW) or without its transaction fields
+- `securityName` - Name of the security (for example Common Stock, Restricted Stock Unit), `null` for a filing FMP sends without its transaction fields (GETYQ, ARCC)
 - `url` - Link to the filing on the SEC website
 
 **API endpoint:** `https://financialmodelingprep.com/stable/insider-trading/search`
@@ -2740,7 +2740,7 @@ Requires the Ultimate or Enterprise FMP plan.
 - `period` - Fiscal period (`Period` enum)
 - `year` - Fiscal year
 - `date` - Date of the earning call
-- `content` - Full transcript text, prepared remarks and Q&A, speakers prefixed with their name
+- `content` - Full transcript text, prepared remarks and Q&A, speakers prefixed with their name, `null` when FMP lists the call without its text (UCTT, November 2026)
 
 **API endpoint:** `https://financialmodelingprep.com/stable/earning-call-transcript`
 

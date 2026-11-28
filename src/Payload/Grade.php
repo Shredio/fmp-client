@@ -11,12 +11,13 @@ final readonly class Grade
 	/**
 	 * @param non-empty-string $symbol
 	 * @param non-empty-string $date
+	 * @param string|null $previousGrade Null when FMP sends none (META, November 2026)
 	 */
 	public function __construct(
 		public string $symbol,
 		public string $date,
 		public string $gradingCompany,
-		public string $previousGrade,
+		public string|null $previousGrade,
 		public string $newGrade,
 		public string $action,
 	)
@@ -24,7 +25,7 @@ final readonly class Grade
 	}
 
 	/**
-	 * @return array{symbol: non-empty-string, date: non-empty-string, gradingCompany: string, previousGrade: string, newGrade: string, action: string}
+	 * @return array{symbol: non-empty-string, date: non-empty-string, gradingCompany: string, previousGrade: string|null, newGrade: string, action: string}
 	 */
 	public function toArray(): array
 	{

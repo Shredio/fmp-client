@@ -345,4 +345,17 @@ final class CashFlowStatementTest extends TestCase
 		))->toArray(), $statements[2]->toArray());
 	}
 
+	public function testCashFlowStatementWithoutFilingIdentifiers(): void
+	{
+		// KDP and YUM: acceptedDate null, LHX: cik null, F-PC: both
+		$client = $this->createClient(__DIR__ . '/fixtures/cash-flow-statement-without-filing-identifiers.json');
+		$expected = iterator_to_array($this->createClient(__DIR__ . '/fixtures/cash-flow-statement-aapl.json')->cashFlowStatement('AAPL'))[0]->toArray();
+		$expected['cik'] = null;
+		$expected['acceptedDate'] = null;
+
+		$statements = iterator_to_array($client->cashFlowStatement('AAPL'));
+
+		$this->assertSame([$expected], array_map(static fn (CashFlowStatement $statement): array => $statement->toArray(), $statements));
+	}
+
 }

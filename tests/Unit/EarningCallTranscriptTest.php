@@ -5,6 +5,7 @@ namespace Tests\Unit;
 use Shredio\FmpClient\Enum\Period;
 use Shredio\FmpClient\Payload\EarningCallTranscriptDate;
 use Shredio\FmpClient\Payload\LatestEarningCallTranscript;
+use Shredio\FmpClient\Payload\EarningCallTranscript;
 use Tests\TestCase;
 
 final class EarningCallTranscriptTest extends TestCase
@@ -85,6 +86,22 @@ final class EarningCallTranscriptTest extends TestCase
 			fiscalYear: 2027,
 			date: '2026-10-01',
 		))->toArray(), $transcripts[2]->toArray());
+	}
+
+	public function testTranscriptWithoutContent(): void
+	{
+		// UCTT in November 2026: the call is listed with content null
+		$client = $this->createClient(__DIR__ . '/fixtures/earning-call-transcript-without-content.json');
+
+		$transcript = $client->earningCallTranscript('AAPL', 2026, 3);
+
+		$this->assertSame((new EarningCallTranscript(
+			symbol: 'AAPL',
+			period: Period::Q3,
+			year: 2026,
+			date: '2026-07-30',
+			content: null,
+		))->toArray(), $transcript?->toArray());
 	}
 
 }

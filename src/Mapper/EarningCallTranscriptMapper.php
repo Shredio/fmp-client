@@ -33,7 +33,7 @@ final readonly class EarningCallTranscriptMapper extends Type
 			'period' => $ts->mapper(Period::class),
 			'year' => $ts->int(),
 			'date' => $ts->nonEmptyString(),
-			'content' => $ts->string(),
+			'content' => $ts->nullable($ts->string()),
 		],
 			identifier: 'symbol',
 		);

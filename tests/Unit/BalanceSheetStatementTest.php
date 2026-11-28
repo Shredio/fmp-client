@@ -475,4 +475,17 @@ final class BalanceSheetStatementTest extends TestCase
 		))->toArray(), $statements[2]->toArray());
 	}
 
+	public function testBalanceSheetStatementWithoutFilingIdentifiers(): void
+	{
+		// the same fields as the income and the cash flow statements
+		$client = $this->createClient(__DIR__ . '/fixtures/balance-sheet-statement-without-filing-identifiers.json');
+		$expected = iterator_to_array($this->createClient(__DIR__ . '/fixtures/balance-sheet-statement-aapl.json')->balanceSheetStatement('AAPL'))[0]->toArray();
+		$expected['cik'] = null;
+		$expected['acceptedDate'] = null;
+
+		$statements = iterator_to_array($client->balanceSheetStatement('AAPL'));
+
+		$this->assertSame([$expected], array_map(static fn (BalanceSheetStatement $statement): array => $statement->toArray(), $statements));
+	}
+
 }

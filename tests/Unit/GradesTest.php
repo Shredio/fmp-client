@@ -122,4 +122,21 @@ final class GradesTest extends TestCase
 		$this->assertSame([], iterator_to_array($client->gradesHistorical('SPY')));
 	}
 
+	public function testGradeWithoutPreviousGrade(): void
+	{
+		// META in November 2026: a grade arrives with previousGrade null
+		$client = $this->createClient(__DIR__ . '/fixtures/grades-without-previous-grade.json');
+
+		$grades = iterator_to_array($client->grades('AAPL'));
+
+		$this->assertSame([(new Grade(
+			symbol: 'AAPL',
+			date: '2026-09-02',
+			gradingCompany: 'DA Davidson',
+			previousGrade: null,
+			newGrade: 'Neutral',
+			action: 'maintain',
+		))->toArray()], array_map(static fn (Grade $grade): array => $grade->toArray(), $grades));
+	}
+
 }

@@ -36,6 +36,7 @@ final readonly class KeyMetrics
 		public float|null $taxBurden = null,
 		public float|null $interestBurden = null,
 		public int|null $workingCapital = null,
+		#[CompilePropertyOptions(before: [MoneyAmount::class, 'roundToInt'])]
 		public int|null $investedCapital = null,
 		public float|null $returnOnAssets = null,
 		public float|null $operatingReturnOnAssets = null,
@@ -62,6 +63,7 @@ final readonly class KeyMetrics
 		public float|null $cashConversionCycle = null,
 		public float|null $freeCashFlowToEquity = null,
 		public float|null $freeCashFlowToFirm = null,
+		#[CompilePropertyOptions(before: [MoneyAmount::class, 'roundToInt'])]
 		public int|null $tangibleAssetValue = null,
 		public int|null $netCurrentAssetValue = null,
 	)

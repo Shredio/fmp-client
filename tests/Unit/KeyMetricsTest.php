@@ -273,4 +273,19 @@ final class KeyMetricsTest extends TestCase
 		));
 	}
 
+	public function testKeyMetricsWithFractionalInvestedCapitalAndTangibleAssetValue(): void
+	{
+		// NXE in November 2026: investedCapital 319835874.882 and tangibleAssetValue 181926256.11799997
+		$client = $this->createClient(__DIR__ . '/fixtures/key-metrics-fractional-money.json');
+		$expected = iterator_to_array($this->createClient(__DIR__ . '/fixtures/key-metrics.json')->keyMetrics('AAPL'))[0]->toArray();
+		$expected['symbol'] = 'NXE';
+		$expected['reportedCurrency'] = 'CAD';
+		$expected['investedCapital'] = 319835875;
+		$expected['tangibleAssetValue'] = 181926256;
+
+		$metrics = iterator_to_array($client->keyMetrics('NXE'));
+
+		$this->assertSame([$expected], array_map(static fn (KeyMetrics $metric): array => $metric->toArray(), $metrics));
+	}
+
 }

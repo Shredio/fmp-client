@@ -150,4 +150,27 @@ final class InsiderTradesTest extends TestCase
 		);
 	}
 
+	public function testInsiderTradeWithoutTransactionFields(): void
+	{
+		// GETYQ and ARCC: a filing without any transaction field; RDNW: a filing without a price
+		$client = $this->createClient(__DIR__ . '/fixtures/insider-trading-search-null-fields.json');
+		$complete = iterator_to_array($this->createClient(__DIR__ . '/fixtures/insider-trading-search-aapl.json')->insiderTrades('AAPL'))[0]->toArray();
+
+		$trades = iterator_to_array($client->insiderTrades('AAPL'));
+
+		$this->assertSame(
+			[
+				array_merge($complete, [
+					'typeOfOwner' => null,
+					'acquisitionOrDisposition' => null,
+					'securitiesTransacted' => null,
+					'price' => null,
+					'securityName' => null,
+				]),
+				array_merge($complete, ['price' => null]),
+			],
+			array_map(static fn (InsiderTrade $trade): array => $trade->toArray(), $trades),
+		);
+	}
+
 }
